@@ -1,0 +1,160 @@
+<p>SDL Trados does not support the general TBX format for term bases. Instead, SDL Trados uses the XML format with a TBX schema. Importing this XML format into a Memsource TB is supported. However, not all attributes can be imported.</p>
+<p>The imported attributes will be:</p>
+<ul>
+<li>Source</li>
+<li>Target</li>
+<li>Synonyms</li>
+<li>Date of Creation</li>
+<li>Date of Modification</li>
+<li>Names of Author and Reviewer: These will be imported only if the name is the same as the username of an existing Memsource user. You can either edit the names in the TBX.xml or add the users to Memsource.</li>
+<li>Customized Attributes: These will be imported into the term’s <em>Note</em>. Every attribute will have a separate line starting with the attribute’s name. For example:
+<ul>
+<li>Origin: Wikipedia</li>
+<li>Theme: Law</li>
+<li>Status: New</li>
+</ul>
+</li>
+<li>Please note that attributes specified for the whole term concept will be added to every individual term's <em>Note</em> (each language, each synonym, etc.)</li>
+</ul>
+<h2><span id="Editing_the_tbx.xml_before_import" class="mw-headline">Editing the TBX.XML Before Import</span></h2>
+<p>In order to make the best use of your data, you can edit your TBX.XML file before importing it to Memsource. To edit the file, you will have to open it in a text editor that can handle <a class="external text" href="http://stackoverflow.com/questions/13934430/notepad-multiline-regex" rel="nofollow">Multiline Regex</a> (such as Notepad++) and that can use regular expressions in <em>Search and Replace </em>features.</p>
+<h3><span id="Editing_Note.2C_Usage_and_Status" class="mw-headline">Editing Note, Usage and Status</span></h3>
+<p>All the customized attributes in TBX.XML files have the following format (Note: The actual names of the attributes will be different since they are not standardized):</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="nt">&lt;descripGrp&gt;</span>
+<span class="nt">&lt;descrip</span> <span class="na">type=</span><span class="s">"Comment"</span><span class="nt">&gt;</span>term =API= should not be translated<span class="nt">&lt;/descrip&gt;</span>
+<span class="nt">&lt;/descripGrp&gt;</span>
+<span class="nt">&lt;descripGrp&gt;</span>
+<span class="nt">&lt;descrip</span> <span class="na">type=</span><span class="s">"Definition"</span><span class="nt">&gt;</span>API = application programming interface<span class="nt">&lt;/descrip&gt;</span>
+<span class="nt">&lt;/descripGrp&gt;</span>
+<span class="nt">&lt;descripGrp&gt;</span>
+<span class="nt">&lt;descrip</span> <span class="na">type=</span><span class="s">"Example"</span><span class="nt">&gt;</span>Memsource offers a set of API calls.<span class="nt">&lt;/descrip&gt;</span>
+<span class="nt">&lt;/descripGrp&gt;</span>
+<span class="nt">&lt;descripGrp&gt;</span>
+<span class="nt">&lt;descrip</span> <span class="na">type=</span><span class="s">"Status"</span><span class="nt">&gt;</span>confirmed<span class="nt">&lt;/descrip&gt;</span>
+<span class="nt">&lt;/descripGrp&gt;</span>
+</pre>
+</div>
+<p>These attributes will be automatically imported into the <em>Note </em>in Memsource:</p>
+<ul>
+<li>Comment: term =API= should not be translated</li>
+<li>Definition: API = application programming interface</li>
+<li>Example: Memsource offers a set of API calls</li>
+<li>Status: confirmed</li>
+</ul>
+<p>If you want to change this behavior and import, for example, only the "Comment" as a Memsource Note, "Example" as Usage, the Status as <em>Approved</em> or <em>New</em> (Memsource supports only those two options) and don't need to import "Definition", you can edit your TBX.XML file to fit the standard of the Memsource format for TBX files:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="nt">&lt;termNote</span> <span class="na">type=</span><span class="s">"Note"</span><span class="nt">&gt;</span>term =API= should not be translated<span class="nt">&lt;/termNote&gt;</span>
+<span class="nt">&lt;termNote</span> <span class="na">type=</span><span class="s">"usageNote"</span><span class="nt">&gt;</span>Memsource offers a set of API calls.<span class="nt">&lt;/termNote&gt;</span>
+<span class="nt">&lt;termNote</span> <span class="na">type=</span><span class="s">"status"</span><span class="nt">&gt;</span>Approved<span class="nt">&lt;/termNote&gt;</span>
+</pre>
+</div>
+<p>Open the file in a text editor that can handle <a class="external text" href="http://stackoverflow.com/questions/13934430/notepad-multiline-regex" rel="nofollow">Multiline Regex</a> (such as Notepad++) and can use regular expressions in <em>Search and Replace </em>features.</p>
+<p><strong>Changing "Comment" to "Note"'</strong></p>
+<p>Search:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="o">&lt;</span><span class="nx">descripGrp</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;</span><span class="nx">descrip</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"Comment"</span><span class="o">&gt;</span><span class="p">([</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+</span><span class="p">)</span><span class="o">&lt;/</span><span class="nx">descrip</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;/</span><span class="nx">descripGrp</span><span class="o">&gt;</span>
+</pre>
+</div>
+<p>Replace:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="o">&lt;</span><span class="nx">termNote</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"Note"</span><span class="o">&gt;</span><span class="nx">\1</span><span class="o">&lt;/</span><span class="nx">termNote</span><span class="o">&gt;</span>
+</pre>
+</div>
+<p><strong>Changing "Example" to "Usage"</strong></p>
+<p>Search:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="o">&lt;</span><span class="nx">descripGrp</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;</span><span class="nx">descrip</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"Example"</span><span class="o">&gt;</span><span class="p">([</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+</span><span class="p">)</span><span class="o">&lt;/</span><span class="nx">descrip</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;/</span><span class="nx">descripGrp</span><span class="o">&gt;</span>
+</pre>
+</div>
+<p>Replace:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="o">&lt;</span><span class="nx">termNote</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"usageNote"</span><span class="o">&gt;</span><span class="nx">\1</span><span class="o">&lt;/</span><span class="nx">termNote</span><span class="o">&gt;</span>
+</pre>
+</div>
+<p><strong>Setting "Status" to "Approved"</strong> Search:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="o">&lt;</span><span class="nx">descripGrp</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;</span><span class="nx">descrip</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"Status"</span><span class="o">&gt;</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;/</span><span class="nx">descrip</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;/</span><span class="nx">descripGrp</span><span class="o">&gt;</span>
+</pre>
+</div>
+<p>Replace:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="o">&lt;</span><span class="nx">termNote</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"status"</span><span class="o">&gt;</span><span class="nx">Approved</span><span class="o">&lt;/</span><span class="nx">termNote</span><span class="o">&gt;</span>
+</pre>
+</div>
+<p><strong>Deleting "Definition"</strong></p>
+<p>Search:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="o">&lt;</span><span class="nx">descripGrp</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;</span><span class="nx">descrip</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"Definition"</span><span class="o">&gt;</span><span class="p">([</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+</span><span class="p">)</span><span class="o">&lt;/</span><span class="nx">descrip</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;/</span><span class="nx">descripGrp</span><span class="o">&gt;</span>
+</pre>
+</div>
+<p>Replace with an empty field.</p>
+<h3><span id="Importing_Usernames_to_Memsource" class="mw-headline">Importing Usernames to Memsource</span></h3>
+<p>Memsource only supports the importing of <strong>Memsource usernames</strong> to term bases due to the displaying or hiding of Linguist names and usernames in Editor, etc. If you need to keep the names connected to a term, there are two ways of doing it:</p>
+<ol>
+<li>Create a new user in Memsource, using the same username as is in the TBX.</li>
+<li>Add the usernames to the term's <em>Note</em> (the fields for "Created by" and "Edited by" in Memsource TB will be empty). For how to do this, see the instructions below:</li>
+</ol>
+<h3><span id="Adding_Author_to_Note" class="mw-headline">Adding an Author to Note</span></h3>
+<p>You will need to remove the author from the &lt;transacGrp / origination&gt; element and add it to the &lt;descript&gt; element.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="nt">&lt;transacGrp&gt;</span>
+<span class="nt">&lt;transac</span> <span class="na">type=</span><span class="s">"terminologyManagementTransactions"</span><span class="nt">&gt;</span>origination<span class="nt">&lt;/transac&gt;</span>
+<span class="nt">&lt;date&gt;</span>2006-09-27T11:25:19<span class="nt">&lt;/date&gt;</span>
+<span class="nt">&lt;transacNote</span> <span class="na">type=</span><span class="s">"responsibility"</span><span class="nt">&gt;</span>MikeS<span class="nt">&lt;/transacNote&gt;</span>
+<span class="nt">&lt;/transacGrp&gt;</span>
+</pre>
+</div>
+<p>should be replaced by:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="nt">&lt;transacGrp&gt;</span>
+<span class="nt">&lt;transac</span> <span class="na">type=</span><span class="s">"terminologyManagementTransactions"</span><span class="nt">&gt;</span>origination<span class="nt">&lt;/transac&gt;</span>
+<span class="nt">&lt;date&gt;</span>2006-09-27T11:25:19<span class="nt">&lt;/date&gt;</span>
+<span class="nt">&lt;/transacGrp&gt;</span>
+<span class="nt">&lt;descripGrp&gt;</span>
+<span class="nt">&lt;descrip</span> <span class="na">type=</span><span class="s">"author"</span><span class="nt">&gt;</span>MikeS<span class="nt">&lt;/descrip&gt;</span>
+<span class="nt">&lt;/descripGrp&gt;</span>
+</pre>
+</div>
+<p>The regular expression will be:</p>
+<p>Search:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="p">(</span><span class="nx">origination</span><span class="o">&lt;/</span><span class="nx">transac</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;</span><span class="nb">date</span><span class="o">&gt;</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;/</span><span class="nb">date</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+</span><span class="p">)</span><span class="o">&lt;</span><span class="nx">transacNote</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"responsibility"</span><span class="o">&gt;</span><span class="p">([</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+</span><span class="p">)</span><span class="o">&lt;/</span><span class="nx">transacNote</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;/</span><span class="nx">transacGrp</span><span class="o">&gt;</span>
+</pre>
+</div>
+<p>Replace:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="nx">\1</span><span class="o">&lt;/</span><span class="nx">transacGrp</span><span class="o">&gt;</span><span class="nx">\r\n</span><span class="o">&lt;</span><span class="nx">descripGrp</span><span class="o">&gt;</span><span class="nx">\r\n</span><span class="o">&lt;</span><span class="nx">descrip</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"author"</span><span class="o">&gt;</span><span class="nx">\2</span><span class="o">&lt;/</span><span class="nx">descrip</span><span class="o">&gt;</span><span class="nx">\r\n</span><span class="o">&lt;/</span><span class="nx">descripGrp</span><span class="o">&gt;</span></pre>
+</div>
+<h3><span id="Adding_Edited_by_to_Note" class="mw-headline">Adding Edited by to a Note</span></h3>
+<p>To add <em>Edited by </em>to a <em>Note, </em>you will need to remove the Editor from the &lt;transacGrp / modification&gt; element and add it to the &lt;descript&gt; element.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="nt">&lt;transacGrp&gt;</span>
+<span class="nt">&lt;transac</span> <span class="na">type=</span><span class="s">"terminologyManagementTransactions"</span><span class="nt">&gt;</span>modification<span class="nt">&lt;/transac&gt;</span>
+<span class="nt">&lt;date&gt;</span>2006-09-27T11:25:19<span class="nt">&lt;/date&gt;</span>
+<span class="nt">&lt;transacNote</span> <span class="na">type=</span><span class="s">"responsibility"</span><span class="nt">&gt;</span>lauraB<span class="nt">&lt;/transacNote&gt;</span>
+<span class="nt">&lt;/transacGrp&gt;</span>
+</pre>
+</div>
+<p>should be replaced by:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="nt">&lt;transacGrp&gt;</span>
+<span class="nt">&lt;transac</span> <span class="na">type=</span><span class="s">"terminologyManagementTransactions"</span><span class="nt">&gt;</span>modification<span class="nt">&lt;/transac&gt;</span>
+<span class="nt">&lt;date&gt;</span>2006-09-27T11:25:19<span class="nt">&lt;/date&gt;</span>
+<span class="nt">&lt;/transacGrp&gt;</span>
+<span class="nt">&lt;descripGrp&gt;</span>
+<span class="nt">&lt;descrip</span> <span class="na">type=</span><span class="s">"Edited by"</span><span class="nt">&gt;</span>lauraB<span class="nt">&lt;/descrip&gt;</span>
+<span class="nt">&lt;/descripGrp&gt;</span>
+</pre>
+</div>
+<p>The regular expression will be:</p>
+<p>Search:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="p">(</span><span class="nx">modification</span><span class="o">&lt;/</span><span class="nx">transac</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;</span><span class="nb">date</span><span class="o">&gt;</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;/</span><span class="nb">date</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+</span><span class="p">)</span><span class="o">&lt;</span><span class="nx">transacNote</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"responsibility"</span><span class="o">&gt;</span><span class="p">([</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+</span><span class="p">)</span><span class="o">&lt;/</span><span class="nx">transacNote</span><span class="o">&gt;.</span><span class="p">[</span><span class="o">^</span><span class="nx">\</span><span class="o">&lt;</span><span class="p">]</span><span class="o">+&lt;/</span><span class="nx">transacGrp</span><span class="o">&gt;</span>
+</pre>
+</div>
+<p>Replace:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="nx">\1</span><span class="o">&lt;/</span><span class="nx">transacGrp</span><span class="o">&gt;</span><span class="nx">\r\n</span><span class="o">&lt;</span><span class="nx">descripGrp</span><span class="o">&gt;</span><span class="nx">\r\n</span><span class="o">&lt;</span><span class="nx">descrip</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"edited by"</span><span class="o">&gt;</span><span class="nx">\2</span><span class="o">&lt;/</span><span class="nx">descrip</span><span class="o">&gt;</span><span class="nx">\r\n</span><span class="o">&lt;/</span><span class="nx">descripGrp</span><span class="o">&gt;</span>
+</pre>
+</div>

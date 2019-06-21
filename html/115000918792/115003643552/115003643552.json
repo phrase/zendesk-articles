@@ -1,0 +1,30 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2017-12-23T18:26:40Z",
+    "draft": false,
+    "edited_at": "2019-05-14T11:04:09Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003643552-Editor-Panes",
+    "id": 115003643552,
+    "label_names": [
+        "web editor",
+        "editor",
+        "_RWD",
+        "_addIMG"
+    ],
+    "locale": "en-us",
+    "name": "Editor Panes",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 2,
+    "promoted": false,
+    "section_id": 115000918792,
+    "source_locale": "en-us",
+    "title": "Editor Panes",
+    "updated_at": "2019-05-14T11:04:09Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003643552-Editor-Panes.json",
+    "user_segment_id": null,
+    "vote_count": 1,
+    "vote_sum": 1
+}

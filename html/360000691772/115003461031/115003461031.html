@@ -1,0 +1,62 @@
+<p>The Memsource Translation Plugin for AEM 6.2 and AEM 6.3 enables users of Memsource to link their Memsource accounts to Multilingual Sites created using the <a href="https://www.adobe.com/marketing/experience-manager-sites/web-content-management.html" target="_self">AEM CMS system</a>. The sections below will cover the essentials of configuring the plugin and how to work with it. To find more information about Translating Content for Multilingual Sites, please visit the <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation.html">Adobe documentation</a> (especially the sections concerning <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-tic.html">Configuring the Translation Framework</a>, <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-prep.html">Preparing Content for Translation</a>, <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-rules.html">Identifying Content to Translate</a>, and <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-manage.html">Managing Translation Projects</a>).</p>
+<h2>Memsource Configuration</h2>
+<p>The plugin uses the Memsource <a href="https://help.memsource.com/hc/en-us/articles/115003941812-Automation-Widget">Automation Widget</a> functionality to create a project in Memsource and send the files from AEM to Memsource. Once the jobs are translated, the Project Manager sets the project to <em>Completed,</em> and the translated files are sent back to AEM.</p>
+<p>To successfully link Memsource with AEM, you will need the following:</p>
+<ul>
+<li>
+<strong>A Memsource account:</strong> If you already have a Memsource account yourself, you can use it to link AEM to it. If you plan to order a translation from an LSP, their account can be used instead. </li>
+<li>
+<strong>Service: </strong> You can find more information on our dedicated <a href="https://wiki.memsource.com/wiki/Your_Services">Services</a> page of the documentation.</li>
+<li>
+<strong>Automation Widget:</strong> All the necessary information can be found in our Support Center article dedicated to the <a href="https://help.memsource.com/hc/en-us/articles/115003941812-Automation-Widget">Automation Widget</a>.</li>
+<li>
+<strong>Price list (optional):</strong> If you plan to be using Scopes in AEM for price calculation.</li>
+</ul>
+<h2>Adobe Experience Manager Configuration</h2>
+<p>Within Adobe Experience Manager, navigate to <strong>Deployment,</strong> click on<strong> Cloud Services,</strong> and select<strong> Memsource Translation Plugin for AEM</strong>. Use the <strong>Configure New</strong> option to set up a new configuration for the translation of content using Memsource.</p>
+<ul>
+<li>Fill in the required information to establish a connection:
+<ul>
+<li>
+<strong>Memsource Home URL:</strong> The default URL is <a href="https://cloud.memsource.com/web/">https://cloud.memsource.com/web/</a> but can be different if you or the LSP is using a Custom URL.</li>
+<li><strong>Username</strong></li>
+<li><strong>Password</strong></li>
+<li>
+<strong>Automation Widget:</strong> Select the Automation Widget you have prepared for use in AEM. If you wish to use multiple Automation Widgets for different scenarios, you will need to set up multiple configurations. </li>
+<li>
+<strong>Service:</strong> Select the service that will govern the language setup of projects (orders) in Memsource as well as the Workflow setup of these Memsource projects. If you wish to use multiple language and Workflow options, you will need to create multiple configurations.</li>
+<li>
+<strong>AutoComplete Project:</strong> This should be ticked if you would like the AEM projects to reflect the statuses of projects in Memsource.</li>
+<li>
+<strong>AEM URL:</strong> This is the URL of the site where content for translation is located.</li>
+</ul>
+</li>
+</ul>
+<h2>Setting up the Translation Integration</h2>
+<p>When using the Memsource Translation Plugin for AEM, it is important to keep in mind that all files in the translation jobs will be submitted for translation and thus returned from Memsource. Using the project <em>Translation Integration</em><strong> </strong>configuration, you will be able to prevent non-translatable assets or reference materials from being included in the projects.</p>
+<ul>
+<li>In <strong>Deployment,</strong> click on<strong> Cloud Services,</strong> and select<strong> Translation Integration. </strong>You can create a new configuration specifically for translation in Memsource.
+<ul>
+<li>Make sure <strong>Translate Component Strings </strong>and <strong>Translate Tags</strong> are both unchecked.</li>
+<li>
+<em>Translate page assets</em><strong> </strong>should be set to <strong>Do not translate.</strong>
+</li>
+<li>On the<strong><em> </em></strong><em>Assets</em><strong> </strong>Tab, you can also set the <em>Translation Workflow</em><strong> </strong>to <strong>Do not translate.</strong>
+</li>
+</ul>
+</li>
+<li>If your project still contains non-translatable assets or reference materials, you can simply mark and <strong>Delete</strong> them directly in Memsource.</li>
+</ul>
+<h2>Applying Translation Integration to Content</h2>
+<ul>
+<li>Navigate to the root of the content you wish to translate in Memsource, select it and click <strong>View Properties</strong>.</li>
+<li>On the <em>Cloud Services</em> Tab, select your newly created configuration as the <strong>Translation Integration Configuration reference.</strong>
+</li>
+<li>Click on the plus <strong>(+)</strong> button to add a new configuration and select the <strong>Memsource Translation Plugin for AEM.</strong> This will display a dropdown menu with previously created configurations. Select the one you'd like to use for this content.
+<ul>
+<li>By default, all child pages will inherit these settings. However, you can adjust any page to use a different cloud configuration if needed.</li>
+</ul>
+</li>
+</ul>
+<p>When you add content from these pages, only the translatable content will be added. If you create a project from the <em>References</em> Panel, it will be automatically set up to use the cloud configuration you choose.</p>
+<p>For more details on creating translation projects using the <em>References</em> Panel, please see the <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-manage.html">Managing Translation Projects</a> section of the <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation.html">Adobe documentation</a>.</p>

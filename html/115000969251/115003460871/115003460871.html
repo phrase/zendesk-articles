@@ -1,0 +1,46 @@
+<p>Memsource allows users to modify TMs directly in the UI itself. However, performing large-scale editing and modifications to the TM can only be done outside the Memsource UI. The sections below provide guidelines for updating TMs using Microsoft Excel.</p>
+<h2>Exportation of TMs</h2>
+<ul>
+<li>In your Memsource account, click on the <em>Translation Memories</em> section and open the translation memory you wish to update.</li>
+<li>Once in the TM, scroll down to the <em>Import/Export </em>section and select <strong>Export.</strong>
+</li>
+<li>Select <strong>XLSX</strong> as the format for the export.</li>
+<li>In the dialog window, you can specify what information the exported XLSX file should contain. Each box you check will create a column containing that information.</li>
+<li>Select <strong>Export </strong>and download the XLSX file.<br><img src="https://help.memsource.com/hc/article_attachments/360022368291/mceclip0.png" width="423" height="435">
+</li>
+</ul>
+<h2>MS Excel Preparation</h2>
+<p><strong>Note:</strong> If you want to update your translation memory with content processed in MS Excel, you will need to make sure that the file is <a href="https://help.memsource.com/hc/en-us/articles/360011103391-Import-content-to-Translation-Memory#XLS_Import" target="_self">formatted correctly</a>.</p>
+<p>Below, you'll find an easy way to add <em>"update"</em> to the translation unit IDs in the entire document, which can then be used to update the translation memory in Memsource. This procedure can also be used to delete the translation units completely—in this case, by using <em>"delete"</em> instead of <em>"update"</em>.</p>
+<p><img style="width: 392px; height: 180px; float: right;" src="https://help.memsource.com/hc/article_attachments/115004125752/import-762127.jpg" alt=""></p>
+<ul>
+<li>Insert 2 additional columns between<strong> *ID* </strong>and the first language column.</li>
+<li>Move the <strong>*ID*</strong> header right next to the 2nd newly created column. Keep the rest of the information in Column A.</li>
+<li>Fill the 1st empty column (Column B) with the word <em>update</em>.</li>
+<li>Next, you'll insert a formula into the new <strong>*ID* </strong>column. Highlight the cell in Column A (with the translation unit's ID) and the cell in Column B (with the word <em>update).</em>
+</li>
+<li>With the cells in Columns A and B still highlighted, enter </li>
+<li>Insert the formulate below into the new *<strong>ID* </strong>column. 
+<ul>
+<li><strong>=(CELL1&amp;"|"&amp;CELL2)</strong></li>
+<li>Make sure you are selecting the correct columns (the column with <strong>translation unit IDs</strong> needs to be selected in place of CELL1, the column containing the word <strong>update</strong> should be selected in place of CELL2).</li>
+<li>You can also specify the location of the cells manually using your mouse.</li>
+</ul>
+</li>
+<li>Once the formula is completed, press <strong>Enter</strong>.</li>
+<li>The first line of the column <strong>*ID*</strong> now contains the correct attribute added to the end of the ID.</li>
+<li>Drag the corner of this cell to the rest of the file to pre-fill the entire column with the same formula results.</li>
+<li>The segments in the file are now ready to update your TM in Memsource.</li>
+<li>Once all the edits are done, <strong>Save</strong> the file.</li>
+</ul>
+<p><img src="https://help.memsource.com/hc/article_attachments/115004125772/import-762134.jpg"></p>
+<h2>Updating the TM</h2>
+<p>The updated file can now be imported back into Memsource and used to update the original translation memory.</p>
+<ul>
+<li>In your Memsource Account, navigate back to the translation memory from which this XLSX was downloaded.</li>
+<li>Use the <strong>Import</strong> button and select the updated XLSX file.</li>
+<li>Once selected, click <strong>Import</strong>.</li>
+<li>The XLSX file will be imported. However, instead of creating new segments, the segments in the document will update the content of your translation memory. Segments that were changed will replace the older versions. Unchanged segments will remain intact.</li>
+</ul>
+<h2>Video</h2>
+<p>Click below to see a short video detailing this process:<br> <iframe src="https://www.youtube.com/embed/b9swXk5ae4s" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>  </p>

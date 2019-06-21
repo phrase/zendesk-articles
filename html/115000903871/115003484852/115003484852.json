@@ -1,0 +1,30 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2017-12-15T15:45:54Z",
+    "draft": false,
+    "edited_at": "2019-03-28T12:00:42Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003484852-Installing-the-Desktop-Editor-on-a-Mac-or-Ubuntu",
+    "id": 115003484852,
+    "label_names": [
+        "_RWD",
+        "Unbutu",
+        "Mac",
+        "_NoIMG"
+    ],
+    "locale": "en-us",
+    "name": "Installing the Desktop Editor on a Mac or Ubuntu",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 26,
+    "promoted": false,
+    "section_id": 115000903871,
+    "source_locale": "en-us",
+    "title": "Installing the Desktop Editor on a Mac or Ubuntu",
+    "updated_at": "2019-03-28T12:00:42Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003484852-Installing-the-Desktop-Editor-on-a-Mac-or-Ubuntu.json",
+    "user_segment_id": null,
+    "vote_count": 1,
+    "vote_sum": -1
+}

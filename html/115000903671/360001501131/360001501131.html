@@ -1,0 +1,92 @@
+<h2><span id="Introduction" class="mw-headline">Introduction</span></h2>
+<p>The XML file filter by default imports files with the following extensions:</p>
+<ul>
+<li>.xml</li>
+</ul>
+<h2><span id="Default_XML_Settings" class="mw-headline">Default XML Settings</span></h2>
+<p>The XML file format has not been primarily designed for translation. That is why it is at times necessary to provide additional settings for XML files. This will ensure that appropriate content is extracted for translation.</p>
+<p>XML file settings can be modified when adding a new job for translation into a project. Memsource XML import options, as described below, provide ample options for configuring the Memsource XML import filter.</p>
+<p>The default settings, (which have an asterisk in the <em>Element </em>Field) will import all XML elements for translation. If you would like to import these files using something other than the default behavior, this can be done via the two options below:</p>
+<ul>
+<li>Plain import rules</li>
+<li>XPath</li>
+</ul>
+<h2><span id="Plain_Import_Rules" class="mw-headline">Plain Import Rules</span></h2>
+<p>This method gives you a simple way of specifying which elements and attributes should be extracted for translation. You can customize these rules using the following options:</p>
+<ul>
+<li>
+<strong>Elements:</strong> Only the selected elements (<tt><em>name, title, para</em>)</tt> will be imported. Use an asterisk (<tt>*)</tt> to import all elements.</li>
+<li>
+<strong>Attributes:</strong> A <em><tt>note</tt> </em>will be imported for translation. Use an asterisk (<tt>*)</tt> to import all attributes.</li>
+<li>
+<strong>Translatable inline elements:</strong> If the <em><tt>Identify inline elements automatically</tt> </em>option is selected, Memsource will import all elements in the translatable text as <em>Translatable inline elements</em>.</li>
+<li>
+<strong>Non-translatable inline elements:</strong> The selected inline element <em><tt>productname</tt> </em>will be converted into Memsource tags and its content will not be translatable.</li>
+<li>
+<strong>Identify inline elements automatically:</strong> With this option enabled, elements that are neighbors of text nodes will be automatically converted to inline tags.</li>
+<li>
+<strong>Elements (processed as HTML):</strong> The selected element <tt>code</tt> will be processed as HTML. Please note that <a title="HTML" href="https://help.memsource.com/hc/en-us/articles/360004658671">HTML Import Settings</a> such as <em>Preserve Whitespace</em> or <em>Break segment on </em><br> <em>tag</em> can be used for these elements.</li>
+<li>
+<strong>Locked elements:</strong> The selected elements will be imported as <em>Locked</em>.</li>
+<li>
+<strong>Locked attributes:</strong> The selected attributes will be imported as <em>Locked</em>.</li>
+<li>
+<strong>Import XML entities</strong>: When selected, XML entities in <a class="external text" href="http://www.w3schools.com/xml/xml_dtd.asp" rel="nofollow">DTP Declaration</a> will be included for translation.</li>
+<li>
+<strong>A line break creates a new segment</strong>: This option should be used rarely. Normally, a new line in an XML file should not create a new segment.</li>
+<li>
+<strong>Segment XML</strong>: Unselect this option if segmentation is not desired.</li>
+<li>
+<strong>Convert to Memsource tags (use regexp):</strong> Use a <em>regular expression</em> to convert specific text to tags.</li>
+<li>
+<strong>Convert to character entities:</strong> Enter a list of character references (separated by commas) into the output file. For example, when you want quotes ("), they would be represented as <tt>&amp;quot;</tt> and the character Σ would be represented as <tt>&amp;#x3A3;</tt> use <tt>&amp;quot;,&amp;#x3A3;</tt>. Please note that &amp; and &lt; are always exported as &amp;amp; and &amp;lt; respectively.</li>
+</ul>
+<p><img class="img450" src="https://www.dropbox.com/s/qazg1tv3sh6ntyn/Custom-xml-setting.png?raw=1"></p>
+<h2><span id="XML_Settings_Using_XPath" class="mw-headline">XML Settings Using XPath</span></h2>
+<p>Translatable content can also be defined using the XPath query language. This method allows for the creation of complex import rules and some additional features that the Plain Import feature lacks. However, the user must be familiar with XPath:</p>
+<ul>
+<li>
+<strong>Context key:</strong> This is the value that constitutes TM context (101% matches) if applicable.</li>
+<li>
+<strong>Context note:</strong> Import elements or context attributes for each element.</li>
+<li>
+<strong>Max. target length:</strong> Import elements or the maximum target length for each element.</li>
+<li>
+<strong>Preserve whitespaces:</strong> Keep this empty to preserve whitespaces in elements&gt; Using xml:whitespace='preserve'. //* will preserve all whitespaces in all elements, or you can use an arbitrary XPath expression.</li>
+<li>
+<strong>Convert character entities:</strong> Enter a list of character references (such as &amp;quot; or &amp;#x3A3;) that are required in the output file. Each item in this list will be separated by a comma. Please note that &amp; and &lt; are always exported as &amp;amp; and &amp;lt; respectively.</li>
+</ul>
+<p>A subset of XPath 1.0 is accepted with the following limitations:</p>
+<ul>
+<li>Axis in step
+<ul>
+<li>
+<strong>Supported:</strong> ancestor, ancestor-or-self, attribute, child, descendant, descendant-or-self</li>
+<li>
+<strong>Not supported:</strong> following, preceding, following-sibling, preceding-sibling, namespace</li>
+</ul>
+</li>
+<li>Predicate
+<ul>
+<li>
+<strong>Supported:</strong> conditions on the current node or ancestor nodes and their properties (attributes, namespaces)</li>
+<li>
+<strong>Not supported:</strong> For example: position number, axis child::, descendant::, descendant-or-self::, following::, preceding::, following-sibling::, preceding-sibling::, function last()</li>
+</ul>
+</li>
+</ul>
+<p>Please note that the XPath expression should define the elements and/or attributes whose text/value should be translated and not the actual text node. See our article on <a title="XPath" href="https://help.memsource.com/hc/en-us/articles/360001569871-XPath">XPath</a> for more information.</p>
+<p><img class="img450" src="https://www.dropbox.com/s/8ke4bpqs67k4nrz/Custom-xml-setting2.png?raw=1"></p>
+<h2>HTML Preview with XSLT stylesheet</h2>
+<p>XSLT language (Extensible Stylesheet Language Transformations) can be used to transform XML documents into HTML format for in-context preview purposes. Memsource currently supports <strong>XSLT 2.0</strong>.</p>
+<p>To import the XML file with a stylesheet (XSL or XSLT), navigate to the bottom of the XML import settings and choose <strong>XSLT file.</strong> When you import an XML with a stylesheet, the Preview Translation feature (found the Editor by clicking on <strong>Document</strong> and selecting <strong>Preview Translation</strong>) will generate an HTML preview instead of an XML one. (Please see this <a class="external text" href="https://www.youtube.com/watch?v=tjBSLM3wxbQ" rel="nofollow">video</a> for more information.) Once used for file import, XSLT can also be downloaded from the <em>File Import Settings</em> page.</p>
+<p><img class="img450" src="https://www.dropbox.com/s/anbwq41j5m9gqvg/XSLT-768x517.png?raw=1"></p>
+<p><img class="img450" src="https://www.dropbox.com/s/zs1k5p97tkoflzg/Download_xslt.png?raw=1"></p>
+<h2>CDATA in XML file</h2>
+<p><span class="ILfuVd"><span class="e24Kjd">The term <strong>CDATA</strong> means, Character Data. <strong>CDATA</strong> is defined as blocks of text that are not parsed by the parser but are otherwise recognized as markup. The predefined entities such as &amp;lt;, &amp;gt;, and &amp;amp; require typing and are generally difficult to read in the markup. In such cases, the <strong>CDATA</strong> section can be used.</span></span></p>
+<p><span class="ILfuVd">If the source file contains CDATA and if you use option "Segment XML" then Memsource will add CDATA to every segment in the Completed file.</span></p>
+<p><span class="ILfuVd">Source:</span></p>
+<pre>&lt;text&gt;&lt;![CDATA[Translatable text A. Translatable text B.]]&gt;&lt;/text&gt;</pre>
+<p>Target: </p>
+<pre>&lt;text&gt;&lt;![CDATA[Translatable text A.]]&gt;&lt;![CDATA[ ]]&gt;&lt;![CDATA[Translatable text B.]]&gt;&lt;/text&gt;</pre>
+<p>This is the correct behavior. The Completed file is valid XML and the XML viewer will display the text correctly as "Translatable text A. Translatable text B."</p>

@@ -1,0 +1,102 @@
+<h3><span id="Get_Asynchronous_Request" class="mw-headline">Get Asynchronous Request</span></h3>
+<pre><strong>action: api/v2/async/getAsyncRequest</strong>
+    token                       string
+    asyncRequest                domain(AsyncRequest)
+
+<strong>response: JSON</strong>
+    {
+      "id":1415,
+      "createdBy":{
+        "id":1,
+        "lastName":"test",
+        "email":"test@test.com",
+        "userName":"admin",
+        "role":"ADMIN",
+        "active":true,
+        "firstName":"admin"
+      },
+      "asyncResponse":{
+        "error":{
+          "code":"foo",
+          "description":"bar"
+        },
+        "dateCreated":"2014-11-03T16:12:13Z"
+      },
+      "action":"PRE_ANALYSE",
+      "dateCreated":"2014-11-03T16:12:05Z"
+      "children": [
+        {
+          "id":1416,
+          "createdBy":{
+            "id":1,
+            "lastName":"test",
+            "email":"test@test.com",
+            "userName":"admin",
+            "role":"ADMIN",
+            "active":true,
+            "firstName":"admin"
+          },
+          "asyncResponse":{
+            "error":{
+              "code":"foo",
+              "description":"bar"
+            },
+            "dateCreated":"2014-11-03T16:12:13Z"
+          },
+          "action":"PRE_ANALYSE",
+          "dateCreated":"2014-11-03T16:12:05Z"           
+          "children": [], // always empty list
+          "project": { ... },
+          "jobParts": [ { ... } ]
+        }
+      ]
+      "project": { ... },
+      "jobParts": // always empty list
+    }
+</pre>
+<h3><span id="List_Pending_Requests" class="mw-headline">List Pending Requests</span></h3>
+<pre><strong>action: api/v2/async/listPendingRequests</strong>
+    token                       string
+    all                         boolean           O(false)   // can only be set by ADMINs
+
+<strong>response: JSON</strong>
+    [
+      {
+        "id":1,
+        "createdBy":{
+          "id":1,
+          "lastName":"test",
+          "email":"test@test.com",
+          "userName":"admin",
+          "role":"ADMIN",
+          "active":true,
+          "firstName":"admin"
+        },
+        "asyncResponse":null,
+        "action":"PRE_ANALYSE",
+        "dateCreated":"2015-01-06T16:07:56Z"
+        "children": [
+          {
+            "id":1416,
+            "createdBy":{
+              "id":1,
+              "lastName":"test",
+              "email":"test@test.com",
+              "userName":"admin",
+              "role":"ADMIN",
+              "active":true,
+              "firstName":"admin"
+            },
+            "asyncResponse": null,
+            "action":"PRE_ANALYSE",
+            "dateCreated":"2014-11-03T16:12:05Z"           
+            "children": [], // always empty list
+            "project": { ... },
+            "jobParts": [] // always empty list
+          }
+        ],
+        "project": { ... },
+        "jobParts": [ { ... } ]
+      }
+    ]
+</pre>

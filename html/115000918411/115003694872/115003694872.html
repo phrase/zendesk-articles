@@ -1,0 +1,133 @@
+<p>Memsource APIs are all client-server based, where Memsource is the <em>server</em> and third-party software or an editor is the <em>client</em>. HTTPS protocol is used as a transport media for communication between the client and the server, using either the GET or POST method.</p>
+<p>The API parameters are encoded using<em> <tt>multipart/form-data</tt></em> or <em><tt>application/x-www-form-urlencoded</tt> </em>when submitting parameters in an HTTP body. This is a preferred way of passing parameters due to security reasons. Alternatively, you can pass parameters in a query string, but it is not recommended. Please note that files cannot be uploaded by passing parameters in a query string.</p>
+<p>Memsource accepts only UTF-8 encoded characters in the API calls, and search/filter is not case sensitive.</p>
+<p>The server responses are sent to the client as JSON data structures. Both HTTPS and JSON are plain, but robust and straightforward protocols. HTTPS/JSON are well-supported on a variety of environments including command-line programs written in C, enterprise systems written in Java, and modern web sites written in Python, Ruby, or Groovy.</p>
+<h2><span id="API_Example" class="mw-headline">API Example</span></h2>
+<p>The complete API reference can be found below. This is only an example of how to read the reference.</p>
+<div class="alert alert-green">
+<table style="width: 482.889px;">
+<tbody>
+<tr style="height: 20px;">
+<td style="width: 211px; height: 20px;"><strong>action: project/create</strong></td>
+<td style="width: 192px; height: 20px;"> </td>
+<td style="width: 108.889px; height: 20px;"> </td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 211px; height: 20px;">token</td>
+<td style="width: 192px; height: 20px;">string</td>
+<td style="width: 108.889px; height: 20px;"> </td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 211px; height: 20px;">name</td>
+<td style="width: 192px; height: 20px;">string</td>
+<td style="width: 108.889px; height: 20px;"> </td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 211px; height: 20px;">sourceLang</td>
+<td style="width: 192px; height: 20px;">lang</td>
+<td style="width: 108.889px; height: 20px;"> </td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 211px; height: 20px;">targetLang</td>
+<td style="width: 192px; height: 20px;">list(lang)</td>
+<td style="width: 108.889px; height: 20px;"> </td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 211px; height: 20px;">client</td>
+<td style="width: 192px; height: 20px;">string</td>
+<td style="width: 108.889px; height: 20px;">O</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 211px; height: 20px;">domain</td>
+<td style="width: 192px; height: 20px;">string</td>
+<td style="width: 108.889px; height: 20px;">O</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 211px; height: 20px;">due </td>
+<td style="width: 192px; height: 20px;">datetime</td>
+<td style="width: 108.889px; height: 20px;">O</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 211px; height: 20px;">machineTranslationType</td>
+<td style="width: 192px; height: 20px;">enum(MachineTranslationType)</td>
+<td style="width: 108.889px; height: 20px;">O(Google)</td>
+</tr>
+<tr>
+<td style="width: 211px;"><strong>response: JSON</strong></td>
+<td style="width: 192px;"> </td>
+<td style="width: 108.889px;"> </td>
+</tr>
+<tr>
+<td style="width: 211px;">{</td>
+<td style="width: 192px;"> </td>
+<td style="width: 108.889px;"> </td>
+</tr>
+<tr>
+<td style="width: 211px;"> "id": 238</td>
+<td style="width: 192px;"> // id of the project</td>
+<td style="width: 108.889px;"> </td>
+</tr>
+<tr>
+<td style="width: 211px;">}</td>
+<td style="width: 192px;"> </td>
+<td style="width: 108.889px;"> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>When making an HTTP request, you have to append the action name to the base URL which has the form of <em><tt>https://cloud.memsource.com/web/api/VERSION_NUMBER</tt></em>, where <em><tt>VERSION_NUMBER</tt></em> is replaced with <tt>v2</tt>, <tt>v3</tt>, etc. The table below the action name describes the list of parameters for the action. The first column contains the names of the parameters. The second column specifies <a title="API Data Types" href="https://wiki.memsource.com/wiki/API_Data_Types">data types</a>, and the third column may contain additional flags describing a parameter:</p>
+<ul>
+<li>
+<strong><code>M(value)</code> -</strong> only for lists, the maximum number of items that can be passed in the list</li>
+<li>
+<code><strong>N</strong></code><strong> -</strong> "null" can be used to explicitly set the data to null (useful in edit API calls)</li>
+<li>
+<code><strong>O</strong></code><strong> -</strong> optional parameter</li>
+<li>
+<code><strong>O(value)</strong></code><strong> -</strong> an optional parameter with the default value</li>
+</ul>
+<p>The URL and parameters may look like the following:</p>
+<div class="alert alert-green">
+<table style="height: 63px;" width="611">
+<tbody>
+<tr>
+<td style="width: 606.889px;">https://cloud.memsource.com/web/api/v2/project/create</td>
+</tr>
+<tr>
+<td style="width: 606.889px;">token=30-d987eb187ecf4282049dd7e830c14f57&amp;name=My%20Project&amp;sourceLang<br> =en&amp;targetLang=de&amp;targetLang=ru&amp;client=My%20Client</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>When all the parameters are correct and the user is authorized to make the call, the 200 code is returned in the HTTP status code, and some additional data are usually returned. In this case, it will be a JSON structure. In other API calls, it may be the binary data of a downloaded file.</p>
+<h2><span id="Error_Handling" class="mw-headline">Error Handling</span></h2>
+<p>If there is a problem when handling an API request, the following JSON structure will be returned. The <a title="API Error Codes" href="https://help.memsource.com/hc/en-us/articles/360001418551-Memsource-Legacy-API-Error-Codes">error code</a> will always be present; the detailed description may be null.</p>
+<div class="alert alert-green">
+<table style="height: 35px;" width="619">
+<tbody>
+<tr>
+<td style="width: 614.889px;">{</td>
+</tr>
+<tr>
+<td style="width: 614.889px;"> "errorCode": "InvalidArguments",</td>
+</tr>
+<tr>
+<td style="width: 614.889px;">"errorDescription": "Required argument \"password\" of type \"string\" is missing."</td>
+</tr>
+<tr>
+<td style="width: 614.889px;">}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>An error response can be detected by reading the HTTP status code of the response. If an error occurs, it will never be set to 200. The status code is 400 for wrong or missing parameters, and 401 or 403 for authentication or authorization problems. See the list of <a style="background-color: #ffffff;" title="API Error Codes" href="https://wiki.memsource.com/wiki/API_Error_Codes">error codes</a> for more details.</p>
+<h3><span id="Reporting_problems_to_Memsource_support" class="mw-headline">Reporting problems to Memsource support</span></h3>
+<p>When reporting problem to Memsource support, please make sure your report includes:</p>
+<ul>
+<li>the API endpoint</li>
+<li>parameters</li>
+<li>time (and timezone)</li>
+<li>the response</li>
+<li>the Memsource-Action-Id of the response</li>
+</ul>
+<p>Memsource also has a REST API. To find out more, see our <a href="https://help.memsource.com/hc/en-us/articles/115003694732-Introduction-to-Memsource-REST-API">Introduction to Memsource REST API</a> and <a href="https://help.memsource.com/hc/en-us/articles/360001398672-Memsource-REST-API-Authentication">Memsource REST API - Authentication</a>.</p>

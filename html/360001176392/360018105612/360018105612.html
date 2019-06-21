@@ -1,0 +1,47 @@
+<h2 id="New_features_and_Improvements">New Features and Improvements</h2>
+<p><strong>Importing Hyperlink Target from IDML Files</strong></p>
+<p>Similar to MS Word, it is now possible to import the target of hyperlinks from imported IDML files. This allows translators to localize the links that will be exported into the translated documents (e.g. if the link leading to an English page should lead to a French page in the French translation).</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360013670891/Hyperlink_target.png" alt="Hyperlink_target.png" width="606" height="496"></p>
+<p> </p>
+<p><strong>Async Request Response Errors Returned in REST API</strong></p>
+<p>Performing operations like <strong>Analyze</strong> or <strong>Import Job</strong> can result in an error message that was returned only in the UI, but for API users this error was not accessible.</p>
+<p>The <strong>Get Asynchronous Request </strong>API call will now include such error messages in the response for the following API calls:</p>
+<ul>
+<li>Alignment Asynchronous</li>
+<li>Analysis Asynchronous</li>
+<li>Job Asynchronous (Create)</li>
+<li>Job Asynchronous (Pre-translate)</li>
+<li>Translation Memory Asynchronous (Export by Query)</li>
+</ul>
+<p> </p>
+<p><strong>Editing Project Templates via API</strong></p>
+<p>It is now possible to edit a Project Template via the APIs. The <strong>Edit Project Template</strong> API call can be used to edit the Source and Target languages, metadata (domain, subdomain, etc.), Workflow Steps, assigned providers, and more.</p>
+<p>To see the API call and parameters that can be adjusted, please see our <a href="https://cloud.memsource.com/web/docs/api">REST API documentation</a>.</p>
+<p> </p>
+<p><strong>Assigning Translation Memories and Term Bases to Project Templates via API</strong></p>
+<p>Similar to Project APIs, the Translation Memories and Term Bases can be added or modified with their respective API calls. </p>
+<p>You can find the actual API calls and their parameters in our <a href="https://cloud.memsource.com/web/docs/api">REST API documentation</a>.</p>
+<p> </p>
+<p><strong>Target Segmentation Rule configurable via the APIs</strong></p>
+<p>An option (parameter) to set the segmentation rule for the target language has now been added to the following REST API calls:</p>
+<ul>
+<li>Create Import Settings</li>
+<li>Get Import Settings</li>
+</ul>
+<p> </p>
+<p><strong>Characters for Microsoft Custom Translator Can Now be Purchased via Memsource</strong></p>
+<p>Similar to Microsoft Translator and Microsoft Translator Hub MT engines, it is now possible to <a href="https://help.memsource.com/hc/en-us/articles/360015239132-Manage-Machine-Translation-via-Memsource">manage your Microsoft Custom Translator MT engine via Memsource</a>. You will receive 2 million free characters each month, and you can purchase additional characters directly through Memsource.</p>
+<p> </p>
+<p><strong>TM ID Included in alt-trans Element in MXLIFF Files</strong></p>
+<p>Each alt-trans element in MXLIFF will now contain the ID of the TM it originated from (applies only to segments where alt-trans element originates from a TM).</p>
+<h2>Fixed Bugs</h2>
+<ul>
+<li>Linguist users that do not have any other jobs assigned will now be automatically deactivated and unassigned if they decline a job offer.</li>
+<li>Displaying non-translatables in the editors caused Guest users to be automatically signed out when accessing such jobs. This bug has now been fixed.</li>
+<li>Users suggested for jobs were different when accessed via API than via the UI. The API should now return the same results as the UI.</li>
+<li>Disabling the MT for a Linguist user did not prevent them from receiving MT suggestions in the editors. This has now been fixed.</li>
+<li>Using the Email button caused the collapsed Jobs section to break visually. This bug has now been fixed.</li>
+</ul>
+<p> </p>
+<p><strong>Have you come across any other bugs?</strong></p>
+<p>Thank you for letting our <a href="https://help.memsource.com/hc/en-us/requests/new" target="_blank" rel="noopener">Support team</a> know.</p>

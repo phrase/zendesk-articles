@@ -1,0 +1,427 @@
+<div class="alert-short alert-blue">
+<p><strong>Memsource Legacy API is being deprecated. </strong><br> <strong>If you are developing a new integration, you'll need to use <a href="https://help.memsource.com/hc/en-us/articles/115003694732-Introduction-to-Memsource-REST-API">Memsource REST API </a>instead.</strong></p>
+</div>
+<h3><span id="Assign_Vendor" class="mw-headline">Assign a Vendor</span></h3>
+<pre><strong>action: api/v4/project/assignVendor</strong>
+    token                       string
+    project                     domain(Project)
+    vendor                      domain(Vendor)
+    dateDue                     datetime                           O
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Create_New_Project" class="mw-headline">Create a New Project</span></h3>
+<pre><strong>action: api/v4/project/create</strong>
+    token                       string
+    name                        string                             
+    sourceLang                  locale
+    targetLang                  list(locale)
+    client                      domain(Client)                     O
+    businessUnit                domain(BusinessUnit)               O
+    domain                      domain(Domain)                     O
+    subDomain                   domain(SubDomain)                  O
+    dateDue                     datetime                           O
+    note                        string                             O
+    machineTranslateSettings    domain(MachineTranslateSettings)   O
+    workflowStep                list(domain(WorkflowStep))         O
+    useDefaultProjectSettings   boolean                            O(false)
+
+<strong>response: JSON</strong>
+    {
+      "id": 238                 // id of the new project
+    }
+</pre>
+<h3><span id="Create_New_Project_From_Template" class="mw-headline">Create a New Project From Template</span></h3>
+<pre><strong>action: api/v4/project/createFromTemplate</strong>
+    token                       string
+    template                    domain(ProjectTemplate)
+    name                        string                             
+    dateDue                     datetime                           O
+    note                        string                             O
+    sourceLang                  string                             O   // overrides template data
+    targetLang                  list(string)                       O   // overrides template data
+    workflowStep                list(domain(WorkflowStep))         O   // overrides template data
+
+<strong>response: JSON</strong>
+    {
+      "id": 238                 // id of the new project
+    }
+</pre>
+<h3><span id="Clone_Project" class="mw-headline">Clone a Project</span></h3>
+<pre><strong>action: api/v4/project/clone</strong>
+    token                       string
+    project                     domain(Project)
+    name                        string                             
+
+<strong>response: JSON</strong>
+    {
+      "id": 238                 // id of the new project
+    }
+</pre>
+<h3><span id="Edit_Project" class="mw-headline">Edit a Project</span></h3>
+<pre><strong>action: api/v4/project/edit</strong>
+    token                       string
+    project                     domain(Project)
+    name                        string                                          O
+    status                      enum(ProjectStatus)                             O
+    targetLang                  list(locale)                                    O    // adds target languages (existing cannot be removed)
+    client                      domain(Client)                                  O N
+    businessUnit                domain(BusinessUnit)                            O N
+    domain                      domain(Domain)                                  O N
+    subDomain                   domain(SubDomain)                               O N
+    dateDue                     datetime                                        O N
+    note                        string                                          O N
+    machineTranslateSettings    domain(MachineTranslateSettings)                O N
+    workflowStep                list(domain(WorkflowStep))                      O   // adds workflow steps (existing cannot be removed)
+    owner                       domain(User)                                    O
+    mtSettingsPerLanguage       map(locale, domain(MachineTranslateSettings))   O
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Delete_Project" class="mw-headline">Delete a Project</span></h3>
+<pre><strong>action: api/v4/project/delete</strong>
+    token                       string
+    project                     domain(Project)
+    purge                       boolean             O(false)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Project_Info" class="mw-headline">Get Project Info</span></h3>
+<pre><strong>action: api/v4/project/get</strong>
+    token                       string
+    project                     domain(Project)
+
+<strong>response: JSON</strong>
+    {
+      "id":129,
+      "internalId":5,
+      "name":"set completed (1)",
+      "status":"NEW",
+      "sourceLang":"en",
+      "targetLangs":[
+        "cs",
+        "de"
+      ],
+      "dateDue":null,
+      "dateCreated":"2016-03-10T14:22:10+0000",
+      "createdBy": {
+         "id": 501,
+         "userName": "admin",
+         "email": "support@memsource.com"
+      }
+      "note":null,
+      "machineTranslateSettings":null,
+      "workflowSteps":[
+        {
+          "abbr":"T",
+          "id":1,
+          "level":1,
+          "name":"Translation"
+        },
+        {
+          "abbr":"R",
+          "id":2,
+          "level":2,
+          "name":"Revision"
+        }
+      ],
+      "client":null,
+      "businessUnit": {
+         "id":5,
+         "name":"BU Name"
+      }
+      "domain":null,
+      "subDomain":null,
+      "langSettings":[
+        {
+          "targetLang":"cs",
+          "machineTranslateSettings":{
+            "id":2,
+            "name":"Microsoft with Feedback",
+            "type":"MicrosoftTranslatorWithFeedback",
+            "default":false
+          }
+        },
+        {
+          "targetLang":"de",
+          "machineTranslateSettings":{
+            "id":8,
+            "name":"apert",
+            "type":"Apertium",
+            "default":true
+          }
+        }
+      ],
+      "qualityAssuranceSettings": {
+        "emptyTranslation":true,
+        "inconsistentTranslation":true,
+        "joinTags":true,
+        "missingNumbers":true,
+        "segmentNotConfirmed":true,
+        "terminology":true,
+        "multipleSpaces":true,
+        "trailingSpace":true,
+        "trailingPunctuation":false,
+        "targetLength": {
+          "enabled": true,
+          "max": 1000
+        },
+        "formatting":true,
+        "unresolvedComment":true,
+        "emptyPairTags":true,
+        "strictJobStatus":false,
+        "forbiddenStrings": {
+          "enabled": false,
+          "list": []
+        },
+        "excludeLockedSegments":false,
+        "ignoreNotApprovedTerms":false,
+        "spellCheck":true,
+        "repeatedWords":true,
+        "inconsistentTagContent":true,
+        "emptyTagContent":true,
+        "xliffTags":true,
+        "forbiddenTerms":false,
+        "targetLengthPercent" {
+          "enabled": false,
+          "max": 120.0
+        },
+        "targetLengthPerSegment":true,
+        "newerAtPrecedingWorkflowStep":true,
+        "leadingAndTrailingSpaces":true
+      },
+      "accessSettings: {
+        "downloadEnabled":true,
+        "webEditorEnabledForLinguists":true,
+        "showUserDataToLinguists":true,
+        "emailNotifications":true,
+        "strictWorkflowFinish":false,
+        "useVendors":false
+      }      
+    }
+</pre>
+<h3><span id="Set_Status" class="mw-headline">Set Status</span></h3>
+<pre><strong>action: api/v4/project/setStatus</strong>
+    token                       string
+    project                     domain(Project)
+    status                      enum(ProjectStatus)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Set_Translation_Memories" class="mw-headline">Set Translation Memories</span></h3>
+<pre><strong>action: api/v4/project/setTransMemories</strong>
+    token                       string
+    project                     domain(Project)
+    readTransMemory             list(domain(TransMemory))  O
+    writeTransMemory            list(domain(TransMemory))  O    // write translation memory must be included in the read translation memories, too; max 2 write TMs allowed
+    penalty                     list(double)               O    // a list of penalties for each read translation memory
+    targetLang                  locale                     O    // set translation memories only for the specific project target language
+    workflowStep                domain(WorkflowStep)       O    // set translation memories only for the specific workflow step
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Translation_Memories" class="mw-headline">Get Translation Memories</span></h3>
+<pre><strong>action: api/v4/project/getTransMemories</strong>
+    token                       string
+    project                     domain(Project)
+
+<strong>response: JSON</strong>
+   [
+     {
+       "writeMode":true,
+       "transMemory":{
+         "id":1,
+         "targetLangs":[
+           "de"
+         ],
+         "sourceLang":"en",
+         "name":"transMem"
+       },
+       "targetLang":"de",
+       "penalty":0,
+       "readMode":true,
+       "workflowStep":null
+     }
+   ]
+</pre>
+<h3><span id="Set_Term_Bases" class="mw-headline">Set Term Bases</span></h3>
+<pre><strong>action: api/v4/project/setTermBases</strong>
+    token                       string
+    project                     domain(Project)
+    readTermBase                list(domain(TermBase))     O
+    writeTermBase               domain(TermBase)           O    // write term base must be included in the read term bases
+    qualityAssuranceTermBase    list(domain(TermBase))     O    // QA term bases must be included in the read term bases
+    targetLang                  locale                     O    // set term bases only for the specific project target language
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Term_Bases" class="mw-headline">Get Term Bases</span></h3>
+<pre><strong>action: api/v4/project/getTermBases</strong>
+    token                       string
+    project                     domain(Project)
+
+<strong>response: JSON</strong>
+   [
+     {
+       "writeMode":true,
+       "termBase":{
+         "id":1,
+         "langs":[
+           "de", "en"
+         ],
+         "name":"termBase"
+       },
+       "targetLang":"de",
+       "readMode":true,
+       "workflowStep":null
+     }
+   ]
+</pre>
+<h3><span id="List_Projects" class="mw-headline">List Projects</span></h3>
+<p>This method requires a JSON request:</p>
+<pre><strong>action: api/v4/project/list</strong>
+    token                       string                          // as GET parameter
+    page                        integer                    O(0)
+    name                        string                     O
+    clientId                    domain(Client)             O
+    client                      string                     O
+    businessUnit                string                     O
+    statuses                    list(enum(ProjectStatus))  O
+    targetLangs                 list(locale)               O
+    domain                      string                     O
+    subDomain                   string                     O
+    costCenter                  string                     O
+    dueInHours                  integer                    O
+    createdInLastHours          integer                    O
+    sourceLangs                 list(locale)               O
+    ownerId                     domain(User)               O
+    jobStatuses                 list(enum(JobStatus))      O
+    jobStatusGroup              string                     O    //valid values are "NEW", "ASSIGNED", "COMPLETED_BY_LINGUIST"; this parameter can only be used for filtering projects when this API is called by a linguist user.
+
+<strong>JSON request example</strong>
+    {
+        "name":"Project 1",
+        "clientId":2,
+        "targetLangs":["de","en","cs"]
+    } 
+
+<strong>response: JSON</strong>
+    {
+    "page": 0,
+    "totalCount": 1,
+    "projects": [
+       {
+         // PM + ADMIN + LINGUIST
+          "uid": "ZoOzDtS3slUq8BHJsjFdB2",
+          "id" : 1,
+          "innerId": 1,
+          "name": "Project 1",
+          "dateCreated": "2017-02-28T16:30:35+0000",
+          "domain": {
+            "id": 1,
+            "name": "Domain1 Org1"
+          },
+          "subDomain": {
+            "id": 1,
+            "name": "Subdomain1 Org1"
+          },
+          "owner": {
+            "id": 3,
+            "firstName": "John",
+            "lastName": "Doe",
+            "userName": "admin",
+            "email": "john.doe@email.com",
+            "role": "ADMIN",
+            "timezone": "Europe/London",
+            "active": true,
+            "deleted": false,
+            "terminologist": false,
+            "dateCreated": "2017-02-23T16:07:29+0000"
+          },
+          "sourceLang": "cs",
+          "targetLangs": [
+            "de",
+            "en",
+            "es"
+          ],
+      
+          // PM + ADMIN
+          "shared": true,
+          "progress": {
+            "totalCount": 3,
+            "finishedCount": 2,
+            "overdueCount": 0
+          },
+          "client": {
+            "id": 1,
+            "name": "Client org1",
+            "externalId": ""
+          },
+          "costCenter": {
+            "id": 1,
+            "name": "Cost center org1"
+          },
+          "businessUnit": {
+            "id": 1,
+            "name": "BU org 1"
+          },
+          "dateDue": null,
+          "status": "ACCEPTED_BY_VENDOR",
+          "purchaseOrder": null,
+          "jobBoard": false,
+          "note": null
+       }
+     ]
+    }
+</pre>
+<h3><span id="Edit_Access_.26_Security_Settings" class="mw-headline">Edit Access &amp; Security Settings</span></h3>
+<pre><strong>action: api/v4/project/editAccessSettings</strong>
+    token                                 string
+    project                               domain(Project)
+    translationMemoryDownloadEnabled      boolean          O
+    webEditorEnabledForLinguists          boolean          O
+    showUserDataToLinguists               boolean          O
+    emailNotifications                    boolean          O
+    linguistsMayEditLockedSegments        boolean          O
+    linguistsMayEditSource                boolean          O
+ <strong>response: empty</strong>
+</pre>
+<h3><span id="Edit_Quality_Assurance_Settings" class="mw-headline">Edit Quality Assurance Settings</span></h3>
+<pre><strong>action: api/v4/project/editQualityAssuranceSettings</strong>
+    token                                 string
+    project                               domain(Project)
+    emptyTranslation                      boolean          O
+    inconsistentTranslation               boolean          O
+    joinTags                              boolean          O
+    missingNumbers                        boolean          O
+    segmentNotConfirmed                   boolean          O
+    terminology                           boolean          O
+    multipleSpaces                        boolean          O
+    trailingSpace                         boolean          O
+    trailingPunctuation                   boolean          O
+    targetLengthMax                       integer          O
+    formatting                            boolean          O
+    unresolvedComment                     boolean          O
+    emptyPairTags                         boolean          O
+    strictJobStatus                       boolean          O    // linguists may not set jobs with unresolved QA warnings to Completed
+    forbiddenString                       list(string)     O
+    excludeLockedSegments                 boolean          O
+    ignoreNotApprovedTerms                boolean          O
+    spellCheck                            boolean          O
+    repeatedWords                         boolean          O
+    inconsistentTagContent                boolean          O
+    emptyTagContent                       boolean          O
+    xliffTags                             boolean          O
+    forbiddenTerms                        boolean          O
+    targetLengthPercent                   double           O
+    targetLengthPerSegment                boolean          O
+    newerAtPrecedingWorkflowStep          boolean          O
+    leadingAndTrailingSpaces              boolean          O
+    moravia.enabled                       boolean          O
+    moravia.profile                       string           O
+    regexp.rules[0].description           string           O // indexes [1], [2], etc. can be used to add more rules
+    regexp.rules[0].sourceRegexp          string           O
+    regexp.rules[0].targetRegexp          string           O
+    targetSourceIdentical                 boolean          O<br>    ignoreInAllWorkflowSteps              boolean          O<br>    extraNumbers                          boolean          O<br>    nestedTags                            boolean          O<br>    <br>
+<strong>response: empty</strong>
+</pre>

@@ -1,0 +1,134 @@
+<div class="alert-short alert-blue">
+<p><strong>Memsource Legacy API is being deprecated. </strong><br> <strong>If you are developing a new integration, you'll need to use <a href="https://help.memsource.com/hc/en-us/articles/115003694732-Introduction-to-Memsource-REST-API">Memsource REST API </a>instead.</strong></p>
+</div>
+<h3><span id="List_Connectors" class="mw-headline">List Connectors</span></h3>
+<pre><strong>action: /api2/v1/connectors</strong>
+    token                       string
+                                // method <strong>GET</strong> needs to be used
+
+   
+<strong>response: JSON</strong>
+
+{
+   "totalCount": 1,
+   "connectors": [
+       {
+           "type": "DRUPAL",
+           "createdAt": "2017-03-20T12:28:28+0000",
+           "createdBy": {
+               "id": "164885",
+               "name": "Memsourcetutorials"
+           },
+           "id": "ZGyuB2Tgx6W1iWS0aTUkG9",
+           "localToken": "909c94bd-59e5-4205-ae61-2a50a72f61fd",
+           "automatedProjectSettings": null,
+           "name": "Drupal Connector",
+           "organization": {
+               "id": "36214",
+               "name": "Memsource Tutorials"
+           }
+       }
+   ]
+}
+</pre>
+<h3><span id="Get_Connector_Info" class="mw-headline">Get Connector Info</span></h3>
+<pre><strong>action: /api2/v1/connectors/{connectorId}</strong>
+                           
+                           // method <strong>GET</strong> needs to be used
+                           // the entire {connectorId} section needs to be replaced with the actual Id
+  
+<strong>response: JSON</strong>
+  
+{
+   "type": "DRUPAL",
+   "createdAt": "2017-03-20T12:28:28+0000",
+   "createdBy": {
+       "id": "164885",
+       "name": "Memsourcetutorials"
+   },
+   "id": "ZGyuB2Tgx6W1iWS0aTUkG9",
+   "localToken": "909c94bd-59e5-4205-ae61-2a50a72f61fd",
+   "automatedProjectSettings": [],
+   "name": "Drupal Connector",
+   "organization": {
+       "id": "36214",
+       "name": "Memsource Tutorials"
+   }
+}
+</pre>
+<h3><span id="Export_to_Online_Repository" class="mw-headline">Export to Online Repository</span></h3>
+<pre><strong>action: /api2/v1/connectors/{connectorId}/folders/{encodedName}</strong>
+                          
+                           // method <strong>POST</strong> needs to be used
+                           // multipart/form-data is required as a Content-Type
+                           // <strong>boundary</strong> needs to be correctly set in both header and body to process the request
+
+<strong>sample body</strong>
+
+--uBPJE!%vdZ*leTfePa%Rro&amp;6
+Content-Disposition: form-data; name="file"; filename="testfile2.txt"
+Content-Type: application/octet-stream
+
+&lt;title&gt;A post with "quotes"&lt;/title&gt;Something.
+--uBPJE!%vdZ*leTfePa%Rro&amp;6--
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="List_Folders_.28Root.29" class="mw-headline">List Folders (Root)</span></h3>
+<pre><strong>action: /api2/v1/connectors/{connectorId}/folders</strong>
+                           
+                           // method <strong>GET</strong> needs to be used
+
+<strong>response: JSON</strong>
+{
+   "lastChangedFiles": [],
+   "rootFolder": true,
+   "currentFolder": "/",
+   "files": [
+       {
+           "size": {},
+           "name": "Sample Folder",
+           "encodedName": "2f416d6573746f20576562696e6172",
+           "id": "id:AcSEvwTyTwkAAAAAAAAHHQ",
+           "lastModified": {},
+           "contentType": {},
+           "directory": true,
+           "selected": false
+       }
+    ],
+    "encodedCurrentFolder": "2f"
+ }
+</pre>
+<h3><span id="List_Files_in_a_Folder" class="mw-headline">List Files in a Folder</span></h3>
+<pre><strong>action: /api2/v1/connectors/{connectorId}/folders/{encodedName}</strong>
+
+                           // method <strong>GET</strong> needs to be used
+
+<strong>response: JSON</strong>
+
+{
+   "lastChangedFiles": [],
+   "rootFolder": false,
+   "currentFolder": "/Sample Folder",
+   "files": [
+       {
+           "size": 22522,
+           "name": "Sample file.xlsx",
+           "encodedName": "416d6573746f2d4d656d736f7572636520776562696e6172205126412e786c7378",
+           "id": "id:AcSEvwTyTwkAAAAAAAAHHg",
+           "lastModified": 1505817115000,
+           "contentType": {},
+           "directory": false,
+           "selected": false
+       }
+    ],
+    "encodedCurrentFolder": "2f416d6573746f20576562696e6172"
+ }
+</pre>
+<h3><span id="Download_from_Online_Repository" class="mw-headline">Download from Online Repository</span></h3>
+<pre><strong>action: /api2/v1/connectors/{connectorId}/folders/{encodedName}/files/{encodedName}</strong>
+
+                           // method <strong>GET</strong> needs to be used
+
+<strong>response: binary</strong>
+</pre>

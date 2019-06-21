@@ -1,0 +1,49 @@
+<h3>Create a New Business Unit</h3>
+<pre><strong>action: api/v2/businessUnit/create</strong>
+    token                       string
+    name                        string                         
+
+<strong>response: JSON</strong>
+    {
+      "id": 239                 // id of the new business unit
+    }
+</pre>
+<h3>Get a Business Unit</h3>
+<pre><strong>action: api/v2/businessUnit/get</strong>
+    token                       string
+    businessUnit                domain(BusinessUnit)
+
+<strong>response: JSON</strong>
+   {
+     "id":4,
+     "name":"BU Name"
+   }
+</pre>
+<h3>List Business Units</h3>
+<pre><strong>action: api/v2/businessUnit/list</strong>
+    token                       string
+    page                        integer            O(0)
+    name                        string             O
+
+<strong>response: JSON</strong>
+   [
+     {
+       "id":3,
+       "name":"BU Name"
+     }
+   ]
+</pre>
+<h3>Edit a Business Unit</h3>
+<pre><strong>action: api/v2/businessUnit/edit</strong>
+    token                       string
+    businessUnit                domain(BusinessUnit)
+    name                        string             0
+
+<strong>response: empty</strong>
+</pre>
+<h3>Delete a Business Unit</h3>
+<pre><strong>action: api/v2/businessUnit/delete</strong>
+    token                       string
+    businessUnit                domain(BusinessUnit)
+
+<strong>response: empty</strong></pre>

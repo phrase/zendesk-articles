@@ -1,0 +1,58 @@
+<h3><span id="About" class="mw-headline">About</span></h3>
+<p>The following APIs allow you to upload files using various techniques. After the file is uploaded, a handle (<tt>uid</tt>) is returned and can be used in other APIs that accept <tt>exfile files</tt>.</p>
+<h3><span id="Upload_File_in_Request_Body" class="mw-headline">Upload a File in Request Body</span></h3>
+<pre><strong>action: api/v2/file/uploadRequestBody</strong>
+    token                       string
+    name                        string
+
+<strong>request body</strong>: binary file data
+
+<strong>response: JSON</strong>
+  {
+    "uid": "1u7uhaVplPQngyAADXV1lf",
+    "name": "notice.txt",
+    "type": "text/plain",
+    "size": 486
+  }
+</pre>
+<h3><span id="Upload_File_in_Multipart_Form_Data" class="mw-headline">Upload a File in Multipart Form Data</span></h3>
+<pre><strong>action: api/v2/file/uploadMultipartFormData</strong>
+    token                       string
+    file                        file
+
+<strong>response: JSON</strong>
+  {
+    "uid": "1u7uhaVplPQngyAADXV1lf",
+    "name": "notice.txt",
+    "type": "text/plain",
+    "size": 486
+  }
+</pre>
+<h3><span id="Upload_File_from_URL" class="mw-headline">Upload a File from a URL</span></h3>
+<pre><strong>action: api/v2/file/uploadUrl</strong>
+    token                       string
+    url                         string
+    name                        string
+
+<strong>response: JSON</strong>
+  {
+    "uid": "1u7uhaVplPQngyAADXV1lf",
+    "name": "notice.txt",
+    "type": "text/plain",
+    "size": 486
+  }
+</pre>
+<h3><span id="Delete_File" class="mw-headline">Delete a File</span></h3>
+<pre><strong>action: api/v2/file/delete</strong>
+    token                       string
+    uploadedFile                domain(UploadedFile)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Download_File" class="mw-headline">Download a File</span></h3>
+<pre><strong>action: api/v2/file/download</strong>
+    token                       string
+    uploadedFile                domain(UploadedFile)
+
+<strong>response: binary</strong>
+</pre>

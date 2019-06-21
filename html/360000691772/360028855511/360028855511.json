@@ -1,0 +1,27 @@
+{
+    "author_id": 373846258851,
+    "comments_disabled": false,
+    "created_at": "2019-05-28T14:12:45Z",
+    "draft": true,
+    "edited_at": "2019-06-17T12:30:51Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/360028855511-Salesforce-Knowledge-Connector",
+    "id": 360028855511,
+    "label_names": [
+        "4_SR"
+    ],
+    "locale": "en-us",
+    "name": "Salesforce Knowledge Connector",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592352,
+    "position": 0,
+    "promoted": false,
+    "section_id": 360000691772,
+    "source_locale": "en-us",
+    "title": "Salesforce Knowledge Connector",
+    "updated_at": "2019-06-17T14:47:21Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360028855511-Salesforce-Knowledge-Connector.json",
+    "user_segment_id": 124451,
+    "vote_count": 0,
+    "vote_sum": 0
+}

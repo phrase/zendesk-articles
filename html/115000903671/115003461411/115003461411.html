@@ -1,0 +1,88 @@
+<div style="text-align: justify;">The Analyze feature makes it possible to calculate character/word count in the selected files as well as establish the number of repetitions, non-translatables, <a href="https://www.memsource.com/en/translation-memory-software">translation memory</a> matches, machine translation usage (in the <a title="Post-editing Analysis" href="https://help.memsource.com/hc/en-us/articles/115003942912-Post-editing-Analysis">post-editing analysis</a>) or revisions made by reviewer (<a href="http://wiki.memsource.com/wiki/Memsource_Cloud_User_Manual/#Compare_Analysis">Compare</a> analysis).<br> <br> An analysis can be <a href="https://help.memsource.com/hc/en-us/community/posts/115003343351-How-can-I-assign-the-related-analysis-to-a-linguist-?input_string=How%20to%20assign%20an%20analysis%20to%20a%20linguist%3F">assigned to a linguist</a> and in that way it will get displayed to the linguist in the <a title="Linguist Portal" href="https://help.memsource.com/hc/en-us/articles/115003944792-Linguist-Portal">linguist portal</a>.<br> <br> Since different billing units are used in different countries, Memsource provides the following in each analysis:</div>
+<ul>
+<li style="text-align: justify;">Characters (without spaces)</li>
+<li style="text-align: justify;">Words (for languages using spaces between words - this exclude Chinese, Japanese and Thai)</li>
+<li style="text-align: justify;">Pages (1800 characters with spaces - unrelated to the actual number of pages in a file) - the number of pages is calculated by adding the number of words to the number of characters, divided by 1800. </li>
+</ul>
+<div style="text-align: justify;">
+<br> Memsource supports three types of analyses:</div>
+<div>
+<ul>
+<li style="text-align: justify;">
+<a style="line-height: 1.6;" href="http://wiki.memsource.com/wiki/Memsource_Cloud_User_Manual/#Default_Analysis">Default</a>
+<ul>
+<li style="text-align: justify;"><span style="line-height: 1.6;">Launched before translation</span></li>
+<li style="text-align: justify;"><span style="line-height: 1.6;">Gives basic segments / words / characters count</span></li>
+<li style="text-align: justify;"><span style="line-height: 1.6;">Gives matches with Translation memory (if used in project)</span></li>
+<li style="text-align: justify;">Produce a quote for a client</li>
+<li style="text-align: justify;">Determine the word/character and a <a href="http://support.memsource.com/topic/what-is-a-net-rate">net rate</a> for a linguist if there is just a single linguist translating all files in a project</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<a href="http://wiki.memsource.com/wiki/Post-editing_Analysis">Post-editing</a>
+<ul>
+<li>Launched during or after translation</li>
+<li>Analyzes the actual effort of the translator. It compares the offered TM matches and the machine translation output with the final post-edited translation (if Translation memory and / or Machine translation is used in a project).</li>
+<li>Determine the word/character and a <a href="http://support.memsource.com/topic/what-is-a-net-rate">net rate</a> for a linguist if there are multiple linguists in a project, sharing the same translation memory</li>
+</ul>
+</li>
+<li>
+<a href="http://wiki.memsource.com/wiki/Memsource_Cloud_User_Manual/#Compare_Analysis">Compare</a>
+<ul>
+<li>For project with workflow steps only (Team and Ultimate editions)</li>
+<li>Launched after the step is completed</li>
+<li>Makes it possible to compare two versions of a file in different <a title="MemSource Cloud User Manual" href="http://wiki.memsource.com/wiki/MemSource_Cloud_User_Manual#Workflow">workflow steps</a>. For example comparing Translation and Review steps gives the actual effort of the reviewer (how much was the translation changed in the Review step).</li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="text-align: justify;">
+<a href="http://wiki.memsource.com/wiki/Memsource_Cloud_User_Manual/#Analysis_Settings">Analysis Settings</a> are almost identical for the first two types, Compare analysis has a bit more limited setting options.</div>
+<p> </p>
+<h2 style="text-align: justify;">Net Rate Schemes</h2>
+<div style="text-align: justify;">Since many clients have come to know the benefits of using CAT tools, providing CAT discounts has become a common practice among language services providers. A discount granted to a client needs to be balanced by a discount required from a linguist. The idea of CAT discounts/net rates is that repetitions and TM matches should make linguists’ work easier and reduce the time invested in the actual translation process. And that’s where Net Rate Schemes come in.<br> <br> Generally, there are four main discounted categories:<img style="width: 200px; float: right; height: 219px; margin-left: 5px; margin-right: 5px;" src="https://help.memsource.com/hc/article_attachments/115004126292/import-582433.jpg" alt="Create Net Rate Scheme">
+</div>
+<ul>
+<li style="text-align: justify;">Repetitions – Only first occurrence needs to be translated, hence the 85% discount.</li>
+<li style="text-align: justify;">In-context matches – 101% matches don’t need to be checked by linguists therefore 100% discount can be applied.</li>
+<li style="text-align: justify;">100% matches – These matches could require a slight modification or at least checking, hence the 90% discount.</li>
+<li style="text-align: justify;">Fuzzy matches – Discounts vary according to fuzzy match value (the smaller the match, the smaller the discount). Fuzzy matches below a 75% match rate are often referred to as "new words"; i.e. they need to be translated from scratch.</li>
+</ul>
+<div style="text-align: justify;">Memsource Cloud allows calculating translation memory <a href="http://wiki.memsource.com/wiki/Translation_Discount_Scheme">net rates</a> as well as machine translation net rates. First, you need to create new net rate scheme. You will find that option under your account setup.<br> Once you have the scheme, open an analysis, select the scheme and click on Apply Net Rate. Memsource will calculate the discounted number of words based on the Net Rate Scheme you have selected. This action will add the line "Net Rate" to your analysis which you can further use without making any extra calculating on your own.<br> Net rates can be applied to both Default and Post-editing analysis.</div>
+<h2 style="text-align: justify;">
+<br> Analyzing multiple files</h2>
+<ul>
+<li style="text-align: justify;">
+<strong>Analyzing multiple files in one go</strong> – In this case you will select all the files you want to analyze and then click on the Analyze button in your project. This will produce an analysis that will include a summary for all the files at the top and then details for each of the files below. It is important to realize that in this case the files are analyzed also against each other and any repetitions and fuzzy matches between file B and file A will be included in the analysis.</li>
+<li style="text-align: justify;">
+<strong>Analyzing multiple files one by one</strong> – In this case the analysis will match the file against translation memories that are selected for your project including any <a href="http://support.memsource.com/topic/what-are-repetitions">repetitions </a>and <a href="http://support.memsource.com/topic/what-are-fuzzy-repetitions">fuzzy repetitions</a> inside the file.</li>
+</ul>
+<div style="text-align: justify;">
+<strong>Which to use when</strong><br> Analyzing multiple files in a single analysis is recommended when you need to prepare a quote for your customer. Or when all files will be translated by a single linguist.<br> However, if you have 5 files and each of them will be translated by a different linguist, you should create 5 separate analysis - for two reasons:</div>
+<ol>
+<li style="text-align: justify;">You can <a href="http://support.memsource.com/topic/how-to-assign-an-analysis-to-a-linguist">assign an analysis</a> to just a single linguist, so you would not be able to assign an analysis of 5 files to 5 different linguists</li>
+<li style="text-align: justify;">Because the files are analyzed against each other (see above), the analysis result may overrepresent repetitions for a specific file and may not be fair to a translator. (Actually, the fairest analysis is the <a href="http://support.memsource.com/topic/what-is-the-difference-between-a-normal-and-a-post-editing-analysis">post-editing analysis</a> (see below) - and it is certainly recommended to use the post-editing analysis for projects where multiple linguists are involved).</li>
+</ol>
+<h2 style="text-align: justify;">
+<img style="width: 600px; height: 123px;" src="https://help.memsource.com/hc/article_attachments/115004106451/import-582437.jpg" alt="Post-editing analysis"><br> <br> Analyzing large files</h2>
+<div style="text-align: justify;">If you launch a <a href="http://wiki.memsource.com/wiki/MemSource_Cloud_User_Manual#Default_Analysis">default analysis</a> that would require to analyze more than 100 thousand segments per target language, Memsource will analyze a representative sample of the segments (limited to 100 thousand segments) and will provide an estimate of the translation memory matches in the analysis. The character/word count will be precise.<br> Without this approach, analyses of very large files would take too long. However, you can still get a precise TM analysis for very large files by launching the <a href="http://wiki.memsource.com/wiki/Post-editing_Analysis">post-editing analysis</a> after the translation has been completed.<br>  </div>
+<h2 style="text-align: justify;">Analyze by Linguist / Analyze by Language</h2>
+<p>These two options exclude one another and both serve to make work with larger projects easier.<br> <br> <strong>Analyze by Linguist</strong><br> If you have projects with many jobs assigned to various linguists or vendors, this option will do in one step what you would need to otherwise do manually step by step, i.e.:</p>
+<ul>
+<li>Create separate analyses containing files assigned to individual linguists or vendors</li>
+<li>Assign these analyses to the providers in question (as described above, this will make the analyses visible to the linguists/vendors in question)</li>
+</ul>
+<p><strong>Analyze by Language</strong><br> For projects with multiple target languages, e.g. English into French, German, Spanish and Italian, if you select all files and then tick this option in the Default Analysis settings window, Memsource will generate separate analyses for each language combination, i.e. will create four analyses in this case.<br>  </p>
+<h2><strong>Download Analysis</strong></h2>
+<div>An analysis can also be downloaded in a CSV or LOG file format via the Download button. These files can be imported into most of the leading project management software.<br> However, there is a very easy way in which you can comfortably save/view Memsource analysis in MS Excel:</div>
+<ol>
+<li>Open the analysis on Cloud.</li>
+<li>Open MS Excel, go to Data tab and click on Get Data From Web</li>
+<li>Copy paste the analysis link into New Web Query dialog box and enter your Memsource credentials</li>
+<li>Go to Options… and tick option Disable date recognition (Note: This is a recommended action which would prevent MS Excel from interpreting decimal numbers as dates.)</li>
+<li>Click Import.</li>
+</ol>
+<p><img style="height: 369px; width: 500px;" src="https://help.memsource.com/hc/article_attachments/115004126312/import-582422.jpg" alt="Memsource analysis imported to Excel"></p>
+<div> </div>

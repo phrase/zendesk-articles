@@ -1,0 +1,17 @@
+<p>In this article you will find a list of API calls or parameters which are not supported and some solutions or workarounds.<br>  </p>
+<ul>
+<li>
+<strong>API Call returns Web API returns AuthApiDisabled</strong><br> This happens when your Memsource edition does not support API calls. The only edition that does not support API calls is the Personal edition. <br>  </li>
+<li>
+<strong>Get file by name</strong><br> Unfortunately this is not possible - the file can be uploaded to several worksteps so it would be impossible to identify the right one. Only jobPart is supported in GetJob API.<br>  </li>
+<li>
+<strong>Create or Edit  WorkflowStep</strong><br> this call is not available. The work flow steps need to be created and edited manually in Cloud. That includes order of WorkFlow steps. Only List is available via API.<br>  </li>
+<li>
+<strong>API for deleting multiple domains</strong><br> This API is not available.<br>  </li>
+<li>
+<strong>Assign linguist to multiple task in one call</strong><br> not available. You have to call each task in EditJob API individually.<br>  </li>
+<li>
+<strong>File size limit in createJob</strong><br> File size limit for API is the same as for Cloud: 1GB per file or 200MB for zip.<br>  </li>
+<li>
+<strong>Delete multiple projects</strong><br> It is not possible to delete multiple project in one API call. <a href="http://wiki.memsource.com/wiki/Project_API_v3#Delete_Project" target="_blank" rel="noopener">Delete</a> project must be called individually.<br>  </li>
+</ul>

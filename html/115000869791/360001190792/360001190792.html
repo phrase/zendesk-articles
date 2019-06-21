@@ -1,0 +1,45 @@
+<div class="zd-comment">
+<p dir="auto"> </p>
+<p dir="auto"><strong>Note:</strong> This is a third party solution. Memsource cannot guarantee it is 100% compatible with Memsource and the Memsource Editor. Use at your own risk.</p>
+<p dir="auto"> </p>
+<p dir="auto">Provided courtesy of Marek Pawelec.</p>
+<p dir="auto">If for whatever reason, you need to consider the use of a translation editor other than Memsource, Marek has offered a way to process MXLIFF files in MemoQ. The following extract is taken from his website at <a href="http://wasaty.pl/blog/" rel="noreferrer">http://wasaty.pl/blog/</a>:</p>
+<p dir="auto"> </p>
+<p dir="auto"><em>To do so, I’m running pre-translation with a relatively low threshold, downloading project files and opening them in memoQ with another copy in Memsource for concordance and TB checks. After translation, I open the files in Memsource Editor and use the upload functionality to synchronize files with the server.</em><br><br> <em>Memsource and MemoQ are not 100% synchronized when it comes to how certain features should be implemented in the XLIFF, so things like match rate and translation status are not imported by default and need some tinkering. I have created a template that can be used to import Memsource files in a bit more comfortable way.</em></p>
+<p dir="auto"><em>The template works by performing automated actions—the files are edited with regex-based Find and Replace rules to insert additional attributes for match rate and segment states (regex rules are included in .xml configuration files). Subsequently, a customized XLIFF filter is used, configured to recognize the introduced attributes, and regex-based tagging is run to convert Memsource tags into memoQ tags.</em></p>
+<p dir="auto"><em>To use the template, you need to follow the instructions below for import and setup. When everything is configured correctly, you can create a project from a template and work with Memsource files more comfortably. But always remember to <strong>back up your files in case something goes wrong</strong>. Also, while the conversions and template were tested by two people without any issues (at the time of publication), I can’t predict every possible case and setup, so you are doing this at your own risk—if something goes wrong, I may try to help, but I won’t be held responsible.</em></p>
+<p dir="auto"><em><strong>Before you start</strong>: the template will work only with <strong>memoQ 8.x</strong> and <strong>7.8</strong>, not older. However, the executable file “FindAndReplace.exe” is only installed with memoQ version 8.1 and newer. If you have an older version, you need to <a href="http://wasaty.pl/Stuff/findandreplace.zip" rel="noreferrer"><strong>download</strong></a> it separately (see below).</em></p>
+<p dir="auto"><em>The Template <strong>Memsource</strong> does the following:</em></p>
+<ul type="disc">
+<li type="disc"><em>Match rate will be visible in memoQ</em></li>
+<li type="disc"><em>The locked status will be kept (segments locked in Memsource will be locked in memoQ)</em></li>
+<li type="disc"><em>The “Translated” status will be kept</em></li>
+<li type="disc"><em>Segments populated with machine translation will have “MT” status in memoQ</em></li>
+<li type="disc"><em>Memsource tags will be converted into memoQ tags</em></li>
+</ul>
+<h3><em>Preparation</em></h3>
+<p dir="auto"><em>1. memoQ version 8.1 and newer: none</em><br><br> <em>2. memoQ version 7.8: download and unzip the executable <a href="http://wasaty.pl/Stuff/findandreplace.zip" rel="noreferrer"><strong> FindAndReplace</strong></a> (Alternatively, download and install the newest memoQ version. You can still use 7.8, but FindAndReplace will be installed in the default path).</em></p>
+<h3><em>Installation</em></h3>
+<ol type="1">
+<li><em>Download this file:  <a href="http://wasaty.pl/Stuff/memsource_updated.zip" rel="noreferrer"><strong>memsource_updated.zip</strong></a></em></li>
+<li><em>Unzip the content (remember where you unzipped it).</em></li>
+<li><em>Start memoQ, and open the <strong>Resource console</strong>.</em></li>
+<li><em>Select <strong>Filter configurations</strong>.</em></li>
+<li><em>Select <strong>Import new</strong> and import: <strong>ChainedConverter#memsource-tagged.mqres</strong></em></li>
+<li><em>Select <strong>Project templates.</strong></em></li>
+<li>
+<em>Select <strong>Import new</strong> &gt; <strong>Memsource.mqres</strong></em><br> <em><br></em><em>The template contains a hard-coded path for the configuration file: <strong>C:\memoQ\FindAndReplace\memsource.xml</strong>. If you don’t want to edit the template, create this folder and put “_memsource</em>.xml” in this path. Alternatively, you can edit the template:<br> <em>Select <strong>Resource console</strong> &gt; <strong>Templates</strong> &gt; <strong>Memsource with states</strong> &gt; <strong>Edit</strong> &gt; <strong>Automated actions</strong> &gt; <strong>Script before import</strong> and edit the path in the <strong>Command line arguments</strong> field. Then click <strong>Update</strong>.</em><br><br><a href="http://wasaty.pl/blog/wp-content/uploads/2018/01/memsource.png" rel="noreferrer"><img src="http://wasaty.pl/blog/wp-content/uploads/2018/01/memsource-300x229.png" alt="" width="412" height="315"><br></a><br>You can now create a template project and import Memsource files.<br><br> <a href="http://wasaty.pl/blog/wp-content/uploads/2018/01/Tags_and_states.png" rel="noreferrer"> <img src="http://wasaty.pl/blog/wp-content/uploads/2018/01/Tags_and_states-300x136.png" alt="" width="406" height="184"><br> </a>
+</li>
+</ol>
+<p dir="auto"><em>The tagging mechanism will create empty (single) tags for numbers enclosed in curly brackets ( {1} ), opening (left) tags for any content starting with a left curly bracket and closed by a “greater than” sign (e.g. {1&gt; or {i&gt; ), and closing (right) tags for any content starting with a “less than” sign and closed by a right curly bracket (e.g. &lt;1} or &lt;i} ). However, it is unlikely but possible that incorrect content will be tagged. In such a case please contact me.</em></p>
+<p dir="auto"><em><strong>Please note</strong>: the templates reference the <strong>FindAndReplace.exe</strong> file, which should be available in the <strong>C:\Program Files (x86)\Kilgray\FindAndReplace Tool</strong> folder (for memoQ 8.1 and up). If you have a non-standard memoQ installation path, you need to edit the .exe</em> configuration in <strong>Template Settings</strong> (see below). If you have a <em>memoQ</em> version older than 8.1, you need to <a href="http://wasaty.pl/Stuff/findandreplace.zip" rel="noreferrer">download</a> the file separately and edit the path in Template Settings:</p>
+<ol type="1">
+<li>
+<em>Select <strong>Resource console</strong> &gt; <strong>Templates</strong> &gt; <strong>Memsource with states</strong> &gt; <strong>Edit</strong> &gt; <strong>Automated actions</strong> &gt; <strong>Script before import</strong> &gt; Select <strong>findandreplace.exe</strong> and click <strong>Delete</strong>.</em><br> <a href="http://wasaty.pl/blog/wp-content/uploads/2018/01/findandreplace.png" rel="noreferrer"> <img src="http://wasaty.pl/blog/wp-content/uploads/2018/01/findandreplace-300x180.png" alt=""><br><br> </a>
+</li>
+<li><em>Click <strong>Add files…</strong>, browse to and select <strong>FindAndReplace.exe</strong>.</em></li>
+<li><em>Click <strong>Update</strong>.</em></li>
+</ol>
+<p dir="auto">The template can be further customized with your default languages, TMs, light resources, etc. Also note that when you export translated .mxliff files, they will still contain extra content introduced in pre-processing, but the desktop editor will strip all unrecognized content so you can simply open the files in the desktop editor and either upload or save and upload online.</p>
+<p dir="auto"><em>Additional help for templates with Find and Replace scripts can be found here:  <a href="https://help.memoq.com/8-3/en/index.html?edit-template-find-and-replace.html" rel="noreferrer">https://help.memoq.com/8-3/en/index.html?edit-template-find-and-replace.html</a></em><br><br><em>The template configuration file (the actual find and replace commands) is commented and you can customize it any way you like.</em></p>
+</div>

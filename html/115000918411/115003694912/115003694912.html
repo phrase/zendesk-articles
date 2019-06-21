@@ -1,0 +1,13 @@
+<p>Most of the API calls require an authenticated Memsource user. The APIs do not use any special user accounts. Each API can be called on behalf of any existing user (using their username and password). Before calling any API that requires an authenticated user, you have to call <a title="Authentication API v3" href="https://wiki.memsource.com/wiki/Authentication_API_v3">auth/login</a> API to obtain an authentication token. Such a token is valid for 24 hours and can be used for all subsequent calls (please, do not acquire a new token for every call). Use the obtained token as the query parameter 'token' in following API calls. See the <a title="Memsource API" href="https://help.memsource.com/hc/en-us/articles/115003694992-Memsource-Legacy-API-API-Reference">reference</a> for more details about the authentication.</p>
+<h2><span id="OAuth_2.0" class="mw-headline">oAuth 2.0</span></h2>
+<p>oAuth 2.0 can be <a href="https://help.memsource.com/hc/en-us/articles/115003461011-How-to-setup-oAuth-authentication-in-Memsource" target="_self">set and managed</a> in Memsource by clicking on <strong>Setup </strong>and going to the <em>Integrations </em>section.</p>
+<p>Auth URL:</p>
+<div class="alert alert-green">
+<pre>/web/oauth/authorize
+</pre>
+</div>
+<p>Token URL:</p>
+<div class="alert alert-green">
+<pre>/web/oauth/token</pre>
+</div>
+<p><br> Memsource also has a REST API. To find out more, see <a href="https://help.memsource.com/hc/en-us/articles/115003694732-Introduction-to-Memsource-REST-API">Introduction to Memsource REST API</a> and <a href="https://help.memsource.com/hc/en-us/articles/360001398332-Memsource-REST-API-Technology">Memsource REST API - Technology</a>.</p>

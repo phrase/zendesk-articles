@@ -1,0 +1,70 @@
+<p>Memsource offers two different plugins for Drupal:</p>
+<ul>
+<li>
+<strong>Memsource Translation Plugin for Drupal</strong> (Drupal 8 only)</li>
+<li>
+<strong>Memsource Translation Plugin for TMGMT</strong> (Drupal 7 and 8 with TMGMT module)</li>
+</ul>
+<p>Older versions of Drupal are not supported.</p>
+<h2>Memsource Translation Plugin for Drupal</h2>
+<p>The Memsource Translation Plugin for Drupal 8 and the <a title="Connectors" href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors" target="_self">Connector</a> feature allow content managers to import Drupal posts, pages, and any text set as "translatable" in the Drupal 8 settings into Memsource for translation. The content can be imported manually via the <a title="Connectors" href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors#Creating_New_Jobs_from_Online_Repositories" target="_self">Add from Online Repository</a> button or automatically using the <a title="Automated Project Creation" href="https://help.memsource.com/hc/en-us/articles/115003460931-How-to-setup-and-use-the-Automated-Project-Creation" target="_self">Automated Project Creation</a> feature.</p>
+<h3><span id="Setting_languages_and_translatable_content_types_on_Drupal_site" class="mw-headline">Setting Languages and Translatable Content Types</span></h3>
+<ol>
+<li>Go to your Drupal server and select <strong>Admin, Configuration,</strong> and <strong>Regional and Language. </strong>Select the <em>Languages </em>page.</li>
+<li>Add all of the languages you want to use, and set one of them as <strong>Default</strong> (this is equivalent to the source language in Memsource and will be probably the same as the main language of your Drupal site).</li>
+<li>Go to <strong>Admin, Configuration, </strong>and<strong> Regional and Language.</strong> Select the<strong> </strong><em>Content language and translation </em>page.</li>
+<li>Select the translatable <strong>content types</strong>. Memsource currently supports <em>Content</em> and its subtypes (<em>Article</em> and <em>Basic page</em>).</li>
+</ol>
+<h3>Adding the Memsource Plugin to the Drupal site</h3>
+<ol>
+<li>Go to the <strong>Downloads</strong> section on <a href="https://www.drupal.org/project/memsource_connector" rel="nofollow">https://www.drupal.org/project/memsource_connector</a> and copy the link address of the version you would like to install.</li>
+<li>Go to <strong>Admin, </strong><strong>Extend,</strong> and <strong>Install new module.</strong>
+</li>
+<li>Paste the URL copied in Step 1 into the <strong>Install from a URL</strong> field, and install the module.</li>
+<li>Go back to the <em>Admin / Extend </em>page. Find <em>“Memsource Connector”</em> in the <em>MULTILINGUAL</em> category. Select the checkbox and click <strong>Install.</strong>
+</li>
+<li>Go to <strong>Admin, Configuration, Regional and Language,</strong> and <strong>Memsource Connector.</strong> Copy the value of the <em>Memsource Connector authentication token</em> field to the clipboard.</li>
+</ol>
+<p>On this page, you can also select which posts should be translatable based on their statuses (only Published posts, only Unpublished posts, or both). You can also set the status of translated posts (Published or Unpublished).</p>
+<h3>Setting up the Drupal Connector in Memsource</h3>
+<ol>
+<li>Go to <strong>Setup, Integrations,</strong> <strong>Connectors</strong>, and click on <strong>New</strong> to set up a new connector.</li>
+<li>Select the <strong>Drupal</strong> option.</li>
+<li>Add your Drupal site URL.</li>
+<li>Paste the copied authentication token to the <em>Memsource Drupal plugin token</em> field.</li>
+<li>Click <strong>Test connection.</strong> Memsource should connect to your Drupal site and display a list of languages configured on the <em>Languages </em>page.</li>
+<li>If everything is OK, save the connector.</li>
+</ol>
+<h2>Memsource Translation Plugin for TMGMT</h2>
+<p>The Memsource Translation Plugin for TMGMT supports both <strong>Drupal 7</strong> and <strong>Drupal 8</strong>. It can be used to translate all Drupal text elements supported by the TMGMT module.</p>
+<p>To use M<span id="Using_TMGMT_with_Memsource" class="mw-headline">emsource with <a href="https://www.drupal.org/project/tmgmt" target="_blank" rel="noopener">TMGMT</a> you need to have the TMGMT module installed on your Drupal site. Then </span>you will need to install the Memsource Translation Plugin for TMGMT available here: <a href="https://www.drupal.org/project/tmgmt_memsource" target="_blank" rel="noopener">https://www.drupal.org/project/tmgmt_memsource</a>.</p>
+<p>Once installed, the Memsource Plugin will be available in the list of providers, and you will be able to carry out the following steps.</p>
+<h3>Add Memsource as a Translation Provider</h3>
+<ol>
+<li>Log into your Drupal account which has the TMGMT plugin installed.</li>
+<li>Navigate to <strong>Translation. </strong>Go to <strong>Providers</strong> and click on <strong>Add provider</strong>.</li>
+<li>Add a label name and description.</li>
+<li>Under <strong>Provider Plugin,</strong> select <strong>Memsource</strong> to activate the correct settings.</li>
+<li>In the <strong>Memsource API endpoint </strong>field, insert the following URL: <em>https://cloud.memsource.com/web/api</em>
+</li>
+<li>Enter your Memsource user name and password.</li>
+<li>Click <strong>Connect</strong>.</li>
+<li>Once the connection is established, you will be asked to specify the <strong>Remote Language Mappings.</strong> This allows you to map the Memsource languages with the ones you have available on your site.</li>
+<li>Click <strong>Save</strong> to create the Translation Provider.</li>
+</ol>
+<h3><span id="Translate_your_content_in_Memsource" class="mw-headline">Translate your Content in Memsource</span></h3>
+<ol>
+<li>In your Drupal account, click on the <strong>Translation</strong> tab and select <strong>Sources</strong>.</li>
+<li>Check the tickbox next to the content you wish to translate.</li>
+<li>In the dropdown list, under <em>Operations</em>, select <strong>Translate</strong>.</li>
+<li>Choose the target languages you wish to order and click <strong>Request translation.</strong> You will automatically be taken to the Translation Cart. (To select more content to translate, click <strong>Add to cart.</strong>)</li>
+<li>In the Translation Cart, select the target language(s) and click <strong>Request translation.</strong> You will be taken to the <em>Job overview</em> page.</li>
+<li>To check out the job, select <strong>Memsource</strong> (or the other name you specified under <em>Label</em>) as the Provider.</li>
+<li>In the Checkout Settings, you can specify the <strong>Project Template</strong> that should be used (if any) and the <strong>Due Date.</strong>
+</li>
+<li>To order the translation, click <strong>Submit to Provider.</strong>
+</li>
+<li>After the Project has been completed, you can go to <strong>Translation</strong> and <strong>Jobs</strong> to select the post that has been completed.</li>
+<li>Click on <strong>Manage</strong> to be able to <strong>Pull translations</strong> back from Memsource and <strong>Review</strong> if necessary.</li>
+<li>After the review, you can publish your translations directly.</li>
+</ol>

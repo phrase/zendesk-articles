@@ -1,0 +1,28 @@
+{
+    "author_id": 116602510771,
+    "comments_disabled": false,
+    "created_at": "2018-11-05T12:29:15Z",
+    "draft": false,
+    "edited_at": "2019-05-14T09:34:32Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/360019080011-Translation-Memory-API-v2",
+    "id": 360019080011,
+    "label_names": [
+        "_RWD",
+        "_NoIMG"
+    ],
+    "locale": "en-us",
+    "name": "Translation Memory API v2",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592352,
+    "position": 2,
+    "promoted": false,
+    "section_id": 115000869951,
+    "source_locale": "en-us",
+    "title": "Translation Memory API v2",
+    "updated_at": "2019-05-14T09:34:32Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360019080011-Translation-Memory-API-v2.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

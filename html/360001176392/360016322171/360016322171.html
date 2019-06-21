@@ -1,0 +1,48 @@
+<h2 id="New_features_and_Improvements">New Features and Improvements</h2>
+<p><strong>Continuous Job Launched </strong></p>
+<p>We are very pleased to announce the launch of Continuous Job, our latest continuous localization feature.</p>
+<p>Up until now, we offered a more project-centric approach to continuous localization with our <a href="https://help.memsource.com/hc/en-us/articles/115003460931-How-to-setup-and-use-Automated-Project-Creation">automated project creation</a> feature; new projects and jobs within those projects were created every time new content was added to a repository. Now, with Continuous Job, when a file in a repository is updated, the corresponding job in Memsource will be updated within the existing project.</p>
+<p>This is particularly useful for software localization. When new strings are added to a file in a repository, the modified source strings are updated, and any deleted source strings are removed. Unchanged strings that are already translated are copied to the updated version of the job.</p>
+<p>This feature is powered by our connectors. See a <a href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors">full list</a> of the connectors we offer.</p>
+<p>This feature is available for our Team, Ultimate, and Enterprise edition users.</p>
+<h2 id="Fixed_Bugs">Fixed Bugs</h2>
+<p>There are lots this week as we've just finished a bug-fixing sprint. </p>
+<ul>
+<li>Incorrectly displayed dates in the Japanese UI have been fixed in this version. <br><br>
+</li>
+<li>TM matches were not correctly displayed for segments containing &lt; and &gt; in combination with numbers. These segments will now correctly show TM results.<br><br>
+</li>
+<li>The progress bar on certain mobile devices caused the Memsource UI to become distorted. The issue has now been fixed.<br><br>
+</li>
+<li>When importing MS Excel files, some texts were not properly extracted for translation. This behavior has been fixed.<br><br>
+</li>
+<li>If a ZIP file containing a folder structure was imported for translation, the MXLIFFs (if downloaded not as joined, but in a ZIP) did not follow the folder structure, and therefore files may have been overwritten. This issue is now fixed.<br><br>
+</li>
+<li>Certain SDLXLIFF files could not be opened in SDL Trados after new lines were converted to spaces when processed in Memsource. This issue has now been resolved.<br><br>
+</li>
+<li>It was sometimes not possible to deselect a provider that was assigned from a template, but this problem was resolved in this release.<br><br>
+</li>
+<li>Pre-translation from TMs was sometimes not available if projects contained multiple languages while the TMs matched only some of them. This has now been fixed.<br> </li>
+<li>A processed subfolder was not correctly created in a Dropbox repository if Automated Project Creation had the root folder selected. The issue was resolved in this version, and the subfolder will now be correctly created.<br><br>
+</li>
+<li>Deleted projects remained available in the Linguist's view despite the fact that they were no longer accessible. They will no longer be displayed. <br><br>
+</li>
+<li>Documents containing XML inline elements or XML entities in HTML elements will now be rejected when imported as multilingual XML files with the HTML subfilter enabled. <br><br>
+</li>
+<li>It was not possible to download certain Excel files if Data validation for table names was specified. The names will now be checked to prevent similar issues in the future.<br><br>
+</li>
+<li>PSD files containing a forward slash (/) in specific places were not correctly imported due to the processing of special codes. These will now be correctly imported.<br><br>
+</li>
+<li>The <em>Identify inline elements automatically</em> option will now be enabled even if users insert some elements into the respective fields.<br><br>
+</li>
+<li>For a temporary period of time, some of the Git repositories could not be initialized. This issue has been resolved and connectors to Git repositories should be initialized correctly.<br><br>
+</li>
+<li>During job creation, incorrect email templates were sometimes selected, thus sending the wrong email messages to assigned Linguists or Vendors. This has now been fixed.<br><br>
+</li>
+<li>Due to limitations of the Google APIs, importing Docs, Sheets, and Slides via the Google Drive connector can result in an internal error. Such documents should be downloaded as DOCX, XLSX or PPTX and imported outside of the Connector feature.<br><br>
+</li>
+<li>When processing DOCX Templates, background motifs were sometimes lost when exported. This has now been fixed. </li>
+</ul>
+<p> </p>
+<p><strong>Have you come across any other bugs?</strong></p>
+<p>Thank you for letting our <a href="https://help.memsource.com/hc/en-us/requests/new" rel="noopener">Support team</a> know.</p>

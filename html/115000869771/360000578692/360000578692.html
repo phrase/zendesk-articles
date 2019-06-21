@@ -1,0 +1,217 @@
+<p>This is a list of the file formats supported in Memsource.</p>
+<p> </p>
+<h2>Word and other Text documents</h2>
+<p>Memsource supports the following text document formats:</p>
+<table style="height: 102px;" width="504">
+<tbody>
+<tr>
+<td style="width: 248px;">.doc</td>
+<td style="width: 249px;">.dotcm</td>
+</tr>
+<tr>
+<td style="width: 248px;">.docx</td>
+<td style="width: 249px;">.dotm</td>
+</tr>
+<tr>
+<td style="width: 248px;">.dot</td>
+<td style="width: 249px;">.rtf</td>
+</tr>
+<tr>
+<td style="width: 248px;">.dotx</td>
+<td style="width: 249px;"> </td>
+</tr>
+</tbody>
+</table>
+<p>The <em>MS Word File Filter</em> by default imports files with the following extensions:</p>
+<ul>
+<li>.doc</li>
+<li>.docx</li>
+<li>.rtf</li>
+</ul>
+<div class="card-body">The <em>File import</em> options that can be selected when creating a new job are:
+<ul>
+<li>Import index entries</li>
+<li>Import comments</li>
+<li>Import hyperlink target (This lets you change where the link leads. For example, it would allow you to change <em>http://google.com</em> to <em>http://google.de</em> when translating to German.)</li>
+<li>Minimize the number of tags (This will ignore smaller formatting differences in, for example, scanned documents.)</li>
+<li>Import document properties</li>
+<li>Import hidden text</li>
+<li>Target font (Allows you to specify the font of the text in the Completed document.)</li>
+<li>Convert to Memsource tags (Use regular expressions for converting specific text to tags— see our <a href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp">Regexp</a> manual for more information.)</li>
+</ul>
+<p><img src="https://relianta.sirv.com/Supported%20File%20Formats/Ms-word-file-import-options.png" alt="" width="591" height="235"></p>
+<p> </p>
+<p>Please note that hidden content does not get imported. This means that if some content should not be imported for translation, you can mark it <em>hidden</em> in the MS Word file.</p>
+<p>Should your document contain any embedded objects (for example, other files linked with your document), the following warning will be displayed: <em>There are embedded objects within the document which have not been imported</em>. The embedded objects can be other office documents, images or videos—these objects will not be translated. See the instructions on How to import embedded objects into Memsource.</p>
+<p> </p>
+<h2>PowerPoint and Slide Show Formats</h2>
+<p>For PowerPoint, Memsource supports these formats:</p>
+<table style="height: 71px;" width="480">
+<tbody>
+<tr>
+<td style="width: 236px;">.ppt</td>
+<td style="width: 237px;">.potx</td>
+</tr>
+<tr>
+<td style="width: 236px;">.pptx</td>
+<td style="width: 237px;">.pptm</td>
+</tr>
+<tr>
+<td style="width: 236px;">.pot</td>
+<td style="width: 237px;">.potm</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+The <em>MS PowerPoint File Filter</em> by default imports files with the following extensions:</div>
+<ul>
+<li>.ppt</li>
+<li>.pptx</li>
+</ul>
+<p>The file import options that can be selected when creating a new job are:</p>
+<ul>
+<li>Import notes</li>
+<li>Import master slides</li>
+<li>Import hidden slides</li>
+</ul>
+<p><img src="https://relianta.sirv.com/Supported%20File%20Formats/Ms-powerpoint-file-import-options.png" alt="" width="370" height="164"></p>
+<p> </p>
+<h2>Excel Files</h2>
+<p>The MS Excel file filter by default imports files with the following extensions:</p>
+<ul>
+<li>.xls</li>
+<li>.xlsx</li>
+</ul>
+<p> </p>
+<p>File import options that can be selected when creating a new job:</p>
+<ul>
+<li>Cell Flow:
+<ul>
+<li>Columns, left to right (the default option)</li>
+<li>Rows, left to right (Select whether or not the content flows by rows, as it would in a Word document.)</li>
+<li>Columns, right to left (This is an alternative to the first option and should be used for right-to-left languages, such as Arabic or Hebrew.)</li>
+<li>Rows, right to left (This is an alternative to the second option and should be used for right-to-left languages, such as Arabic or Hebrew.)</li>
+</ul>
+</li>
+<li>Import comments</li>
+<li>Import sheet names</li>
+<li>Import editable texts from drawings</li>
+<li>Import hidden columns, hidden rows, and hidden sheets (Please note: Hidden content does not get imported by default. If some content should not be imported for translation, mark it <em>Hidden</em> in the MS Excel file.)</li>
+<li>Process HTML code (if your .xlsx file contains HTML tags such as &lt;b&gt;, &lt;span&gt;,  etc.):
+<ul>
+<li>Only the option <em>Convert to Memsource tags (use regexp)</em> is available; all other options are disabled.</li>
+</ul>
+</li>
+<li>Convert to Memsource tags (use regexp):
+<ul>
+<li>If you need to convert special text into tags use the regular expression \{[^\}]+\}</li>
+<li>This can be used to convert a {variable} for example.</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<h2 class="mb-0">Google Docs, Sheets, and Slides</h2>
+<p>Memsource is able to read documents from Google Drive, including Google Documents. Memsource supports Docs (an equivalent to .docx), Sheets (.xlsx) and Presentations (.pptx). For more information on how to translate files stored in your Google drive, please see our <a href="https://help.memsource.com/hc/en-us/articles/360022071332-Google-Drive-Connector">Google Drive Connector</a> page.</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360021700551/mceclip0.png" width="566" height="211"></p>
+<p> </p>
+<h4 class="mb-0"> </h4>
+<h2>Htm, Html</h2>
+<p>Here are the file import settings for HTML files that can be selected when creating a new job:</p>
+<ul>
+<li>Break tags to create a new segment</li>
+<li>Convert non-HTML tags to Memsource tags</li>
+<li>Import comments (This lets you import standalone comments as tags. Inline comments—comments inside a paragraph—will always be imported as tags.)</li>
+<li>Preserve whitespaces</li>
+<li>Exclude elements (An example of an element you might want to exclude would be a list of HTML tags separated by commas.)</li>
+<li>Convert to Memsource tags (use Regexp)</li>
+<li>Character entities to Memsource tags</li>
+<li>Translatable meta tags (These use regular expressions to specify attributes in a tag to import their content. Please note that this is available only with attribute name="description" or name="keywords".)</li>
+</ul>
+<p><img src="https://relianta.sirv.com/Supported%20File%20Formats/Html-settings.png" alt="" width="507" height="336"></p>
+<p> </p>
+<h3>Tag Content Visualized</h3>
+<p>The tag content of the source HTML file can be visualized via clicking <strong>Edit.</strong> These tags can be edited by pressing <em>F2</em> in Memsource Editor.</p>
+<p> </p>
+<h2>Other File Formats</h2>
+<p>Memsource also supports .idml, .indd, .icml, .mif (version 8 and above only), .psd, and .svg files. File import options for Adobe InDesign files that can be selected when creating a new job are:</p>
+<ul>
+<li>Extract notes</li>
+<li>Simplify codes (simplifies formatting tags)</li>
+<li>Extract master spreads</li>
+<li>Extract locked layers</li>
+<li>Extract invisible layers</li>
+<li>Extract hidden conditional text</li>
+<li>Keep kerning*</li>
+<li>Keep tracking*</li>
+<li>Replace font</li>
+<li>Remove XML elements</li>
+<li>Target font
+<ul>
+<li>A font name can be entered by the user. If no font name is entered, default fonts for the following languages will be used:
+<ul>
+<li>Chinese (Taiwan) - PMingLiu</li>
+<li>Chinese - SimSun</li>
+<li>Arabic - Arial</li>
+<li>Thai - Tahoma</li>
+<li>Hebrew - Arial</li>
+<li>Vietnamese - Arial</li>
+<li>Japanese - MS Mincho</li>
+<li>Korean - Arial Unicode MS</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre>* You can find more information about kerning and tracking on the <a class="external text" href="https://helpx.adobe.com/indesign/using/kerning-tracking.html" rel="nofollow">Adobe help page</a>.
+</pre>
+<p><img src="https://relianta.sirv.com/Supported%20File%20Formats/Indesign-file-import-options.png" alt="" width="373" height="297"></p>
+<p> </p>
+<p><strong><span id="Notes:" class="mw-headline">Notes:</span></strong></p>
+<p>Index pages for translation are placed at the end of the imported document. In order to have a translated index page in the completed IDML file, it is necessary to open the document in Adobe InDesign and generate the index page again.</p>
+<p>The IDML format is directly supported. INDD will be automatically converted to IDML when imported (courtesy of our partner <a href="https://frontlab.com/">Frontlab</a>) and will always be exported in IDML format.</p>
+<p>It is possible to Preview a PDF of the IDML files in Memsource Editor, but only with <a class="external text" href="http://wiki.memsource.com/wiki/Memsource_Cloud_User_Manual#Frontlab" rel="nofollow">Frontlab Integration</a>.</p>
+<p> </p>
+<p><span class="wysiwyg-font-size-large wysiwyg-font-size-medium">.mif (version 8 and above only) Adobe FrameMaker</span></p>
+<p>The <em>Adobe FrameMaker File Filter</em> by default imports files with the .mif extension. FrameMaker files version 8 and above are supported.</p>
+<p>File import options that can be selected when creating a new job are:</p>
+<ul>
+<li>Extract body pages</li>
+<li>Extract reference pages (pages with HTML, Headings, and MasterPageMaps page tags)</li>
+<li>Extract custom reference pages</li>
+<li>Extract default reference pages (pages with page tag TOC, Reference, and IX)</li>
+<li>Extract master pages</li>
+<li>Extract hidden pages</li>
+<li>Extract hidden conditional text</li>
+<li>Extract variables</li>
+<li>Extract used variables</li>
+<li>Extract index markers</li>
+<li>Extract links</li>
+<li>Extract text from XRefDef</li>
+<li>Extract text from PgfNumFormat</li>
+</ul>
+<p> </p>
+<p>For the following languages, the target font is automatically changed:</p>
+<ul>
+<li>Chinese (Taiwan) - ZH_TW: PMingLiu</li>
+<li>Chinese - ZH: SimSun</li>
+<li>Japanese - JA: MS Mincho</li>
+<li>Korean - KO: Arial Unicode MS</li>
+<li>Thai - TH: Tahoma</li>
+</ul>
+<p><img src="https://relianta.sirv.com/Supported%20File%20Formats/Framemaker-file-import-options.png" alt="" width="382" height="455"><br> <span class="wysiwyg-font-size-small"><em>FrameMaker default import settings</em></span></p>
+<div class="collapse" data-parent="#accordion">
+<p> </p>
+<h3><span class="wysiwyg-font-size-large wysiwyg-font-size-medium">Adobe Photoshop</span></h3>
+<p>The Adobe Photoshop file filter, by default, imports files with the .psd extension.</p>
+<p><strong style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">File Import Settings</strong></p>
+<p>The following import settings can be adjusted for Photoshop files:</p>
+<ul>
+<li>Import hidden layers</li>
+<li>Import locked layers</li>
+</ul>
+<p><img src="https://relianta.sirv.com/Supported%20File%20Formats/Photoshop.png" alt="" width="307" height="124"><br> <span class="wysiwyg-font-size-small"><em>Photoshop Import Rules</em></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+</div>

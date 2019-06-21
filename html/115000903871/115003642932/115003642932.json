@@ -1,0 +1,32 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2017-12-23T16:09:25Z",
+    "draft": false,
+    "edited_at": "2019-03-08T15:49:20Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003642932-Find-and-Replace",
+    "id": 115003642932,
+    "label_names": [
+        "desktop editor",
+        "replace",
+        "find and replace",
+        "search and replace",
+        "_RWD",
+        "_addIMG"
+    ],
+    "locale": "en-us",
+    "name": "Find and Replace",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 17,
+    "promoted": false,
+    "section_id": 115000903871,
+    "source_locale": "en-us",
+    "title": "Find and Replace",
+    "updated_at": "2019-03-08T15:49:20Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003642932-Find-and-Replace.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

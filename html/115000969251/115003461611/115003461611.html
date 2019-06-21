@@ -1,0 +1,17 @@
+<div id="position-1">
+<div class="threadpost">
+<div class="post">This is an example of an SRX file where all "inner" segmentation rules are removed and only the basic segmentation of the whole paragraph, element, or Excel Cell is applied. This segmentation rule can be applied to every file type (MS Word, XML, HTML, Excel, etc.).</div>
+<div class="post">Find out more about what segmentation is and how it can be customized in <a href="https://help.memsource.com/hc/en-us/articles/115003483972-Segmentation" target="_blank" rel="noopener">this article</a>.</div>
+<h3 class="post">Example</h3>
+<div class="post"><img class="img250" src="https://help.memsource.com/hc/article_attachments/360013876931/segmentation_excel_example.png" alt="segmentation_excel_example.png"></div>
+<div class="post"> </div>
+<div class="post">The above Excel file imported with default segmentation will have 3 segments: "Peter!", "Wait!", and "Hello".</div>
+<div class="post">If all the inner segmentation is removed, (leaving only the basic segmentation based on the Cell) then there will be only two segments: "Peter! Wait!" and "Hello".</div>
+<h2>Editing the SRX file</h2>
+<p>To remove all the default segmentation, you need to edit the SRX file (see <a href="https://help.memsource.com/hc/en-us/articles/115003483972#Customizing_the_segmentation_rules" target="_blank" rel="noopener">Customizing the Segmentation Rules</a>) and remove all the code between  &lt;!-- break rules --&gt; and &lt;/language rules&gt;.</p>
+<p>Default SRX file:</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360022693731/mceclip0.png"></p>
+<p>Customized SRX file with the segmentation rules removed:</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360022666492/mceclip1.png"></p>
+</div>
+</div>

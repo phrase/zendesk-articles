@@ -1,0 +1,19 @@
+<h3><span id="Change_Subscription" class="mw-headline">Change Subscription</span></h3>
+<pre><strong>action: api/v2/payment/changeSubscription</strong>
+    token                    string                             
+    extraProjectManagers     integer
+    name                     string                   O
+    email                    string
+    firstName                string                   O
+    lastName                 string                   O
+    street                   string                   O
+    city                     string                   O
+    zip                      string                   O
+    country                  string                      // ISO 3166-3 (3-letter country code, e.g. "cze")
+    state                    string                   O
+    phone                    string                   O
+    vatNumber                string                   O
+    currency                 enum(PriceList.Currency)     
+
+<strong>response: empty</strong>
+</pre>

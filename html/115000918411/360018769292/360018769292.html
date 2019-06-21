@@ -1,0 +1,126 @@
+<h3><span id="Check" class="mw-headline">Check</span></h3>
+<pre><strong>action: api/v2/spellCheck/check</strong>
+    token                    string
+    lang                     locale
+    checkText                string                     M
+    referenceText            string                     M O
+
+<strong>response: JSON</strong>
+   [
+     {
+       "text":"hello",
+       "misspelledWords":[]
+     },
+     {
+       "text":"World",
+       "misspelledWords":[]
+     },
+     {
+       "text":"foox hella",
+       "misspelledWords":[
+         {
+           "word":"foox",
+           "offset":0
+         },
+         {
+           "word":"hella",
+           "offset":5
+         }
+       ]
+     }
+   ]
+</pre>
+<h3><span id="Suggest" class="mw-headline">Suggest</span></h3>
+<pre><strong>action: api/v2/spellCheck/suggest</strong>
+    token                    string
+    lang                     locale
+    word                     string                     M
+    referenceText            string                     M O
+
+<strong>response: JSON</strong>
+   [
+     {
+       "word":"hella",
+       "suggestions":[
+         {
+           "word":"hello",
+           "distance":1
+         },
+         {
+           "word":"Vella",
+           "distance":1
+         },
+         {
+           "word":"hells",
+           "distance":1
+         },
+         {
+           "word":"Sella",
+           "distance":1
+         },
+         {
+           "word":"hell",
+           "distance":1
+         },
+         {
+           "word":"Bella",
+           "distance":1
+         },
+         {
+           "word":"Mella",
+           "distance":1
+         },
+         {
+           "word":"hell a",
+           "distance":1
+         },
+         {
+           "word":"Della",
+           "distance":1
+         },
+         {
+           "word":"fella",
+           "distance":1
+         },
+         {
+           "word":"Heall",
+           "distance":3
+         }
+       ]
+     },
+     {
+       "word":"Warld",
+       "suggestions":[
+         {
+           "word":"Wared",
+           "distance":1
+         },
+         {
+           "word":"Ward",
+           "distance":1
+         },
+         {
+           "word":"Wald",
+           "distance":1
+         },
+         {
+           "word":"World",
+           "distance":1
+         },
+         {
+           "word":"Warlord",
+           "distance":2
+         }
+       ]
+     }
+   ]
+</pre>
+<h3><span id="Add_Word" class="mw-headline">Add Word</span></h3>
+<pre><strong>action: api/v2/spellCheck/addWord</strong>
+    token                    string
+    lang                     locale
+    word                     string
+    forbidden                boolean                O(false)
+
+<strong>response: empty</strong>
+</pre>

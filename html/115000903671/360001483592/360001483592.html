@@ -1,0 +1,80 @@
+<h2><span id="Introduction" class="mw-headline">Introduction</span></h2>
+<p>Memsource only supports XML files that have both source and target elements present for all paragraphs (even if the target is empty). The individual language elements must all be descendants of the same trans-unit element and one language cannot be contained in the other (see the example below).</p>
+<p><a href="https://help.memsource.com/hc/en-us/articles/360001483592-Multilingual-XML#File_Type_1">File Type</a> must be specified in order to distinguish <a class="external text" href="https://www.memsource.com/en/multilingual-marketers" rel="nofollow">multilingual</a> XML from monolingual XML.</p>
+<p>When the source and target segmentation are different, the source segmentation is determining.</p>
+<h2><span id="Multilingual_XML_Sample" class="mw-headline">Multilingual XML Sample</span></h2>
+<p>Sample of partially translated text from English to German and French. Note that all &lt;tuv lang="en"&gt;, &lt;tuv lang="de"&gt; and &lt;tuv lang="fr"&gt; are children of the same &lt;tu&gt; element.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;root&gt;</span>
+Not translatable text.
+<span class="nt">&lt;tu</span> <span class="na">note=</span><span class="s">"context note"</span> <span class="na">key=</span><span class="s">"ID 254"</span> <span class="na">maxlen=</span><span class="s">"16"</span><span class="nt">&gt;</span> 
+  <span class="nt">&lt;tuv</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;seg&gt;</span>First segment.<span class="nt">&lt;/seg&gt;</span>
+  <span class="nt">&lt;/tuv&gt;</span>
+  <span class="nt">&lt;tuv</span> <span class="na">lang=</span><span class="s">"de"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;seg&gt;</span>Erste segment<span class="nt">&lt;/seg&gt;</span>
+  <span class="nt">&lt;/tuv&gt;</span>
+  <span class="nt">&lt;tuv</span> <span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;seg&gt;&lt;/seg&gt;</span>
+  <span class="nt">&lt;/tuv&gt;</span>
+<span class="nt">&lt;/tu&gt;</span>
+<span class="nt">&lt;tu</span> <span class="na">note=</span><span class="s">"another context note"</span> <span class="na">key=</span><span class="s">"ID 255"</span> <span class="na">maxlen=</span><span class="s">"18"</span><span class="nt">&gt;</span> 
+  <span class="nt">&lt;tuv</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;seg&gt;</span>Second segment.<span class="nt">&lt;/seg&gt;</span>
+  <span class="nt">&lt;/tuv&gt;</span>
+  <span class="nt">&lt;tuv</span> <span class="na">lang=</span><span class="s">"de"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;seg&gt;&lt;/seg&gt;</span>
+  <span class="nt">&lt;/tuv&gt;</span>
+  <span class="nt">&lt;tuv</span> <span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;seg&gt;&lt;/seg&gt;</span>
+  <span class="nt">&lt;/tuv&gt;</span>
+<span class="nt">&lt;/tu&gt;</span>
+<span class="nt">&lt;/root&gt;</span>
+</pre>
+</div>
+<h2><span id="Multilingual_XML_Import_Settings" class="mw-headline">Multilingual XML Import Settings</span></h2>
+<div class="thumb tright"> For the import of Multilingual XML files, the XPath query language must be used.</div>
+<p>See the sample Multilingual XML above and its import settings on the screenshot.</p>
+<ul>
+<li>Elements containing source and target sub-elements: <strong>//tu</strong>
+</li>
+<li>Elements containing source text: <strong>tuv[@lang='en']/seg</strong> (in relation to the parent element //tu)*</li>
+<li>Elements containing target text (de): <strong>tuv[@lang='de']/seg</strong> (in relation to the parent element //tu)*</li>
+<li>Elements containing target text (fr): <strong>tuv[@lang='fr']/seg</strong> (in relation to the parent element //tu)*</li>
+<li>Non-translatable inline elements: (all elements in source or target are considered Translatable inline elements unless specified here as Non-translatable inline elements)*</li>
+<li>Convert to Memsource tags (use regexp): (see our <a title="Regexp" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp">Regexp</a> page for help)</li>
+<li>Context key - value that constitutes TM context (101% match) if applicable*</li>
+<li>Context note - import element or attribute of context for each element*</li>
+<li>Max. target length - import element or attribute of max. target length for each element*</li>
+<li>Convert to character entities - enter a comma separated list of character references required in the output file. For example when you want quotes " represented as &amp;quot; and character Σ represented as &amp;#x3A3; use &amp;quot;,&amp;#x3A3;. Please note that &amp; and &lt; are always exported as &amp;amp; and &amp;lt;.</li>
+</ul>
+<div class="alert alert-blue">*Xpath is relative to "Elements containing source and target sub-elements:" and only sub-elements in this parent element are evaluated.</div>
+<p><span class="wysiwyg-font-size-small"><em><img src="https://help.memsource.com/hc/article_attachments/360001867432/mceclip0.png" width="411" height="315"> </em></span><br><em><span class="wysiwyg-font-size-small">Multilingual XML Import Rules</span></em></p>
+<p><br>Please note that the XPath expression should define the elements which text/value should be translated and not the actual text node.</p>
+<p>See more information on <a title="XPath" href="https://help.memsource.com/hc/en-us/articles/360001569871-XPath">XPath</a>.</p>
+<h2><span id="HTML_Subfilter" class="mw-headline">HTML Subfilter</span></h2>
+<div class="thumb tright">XML files with html tags (such as &amp;lt;p&amp;gt;) can be imported with option <strong>HTML Subfilter</strong>. In this case it is possible to set additional setting in the HTML (such as <strong>Break tag (&lt;br/&gt;) creates new segment</strong>).</div>
+<p>Please note that paragraph tags (such as &amp;lt;p&amp;gt;) will create a new segments even if the <strong>Segment Multilingual XML</strong> is unselected.</p>
+<p>It is important that target (unless is empty) has the same HTML structure as source, otherwise it can result in different segmentation of source and target and can cause troubles (target paragraph might be replaced with source paragraph).</p>
+<p><img class="img350" src="https://www.dropbox.com/s/spfp6iqp6mrp8iv/Html_xml.png?raw=1"> <br><em><span class="wysiwyg-font-size-small">HTML settings </span></em></p>
+<h2><span id="File_Type" class="mw-headline">File Type</span></h2>
+<div class="thumb tright"> The Multilingual XML file filter will imports files <strong>only</strong> when it is specifically selected in Import Settings:</div>
+<ul>
+<li>
+<strong>File Type</strong>: Multilingual XML</li>
+</ul>
+<p><img class="img350" src="https://www.dropbox.com/s/tbw4uvoxtoq3byz/MultiXML_filetype.png?raw=1">  <br><span class="wysiwyg-font-size-small"><em>File Type</em></span></p>
+<h2><span id="Jobs_in_Project" class="mw-headline">Jobs in Project</span></h2>
+<div class="thumb tright">Multilingual jobs have a slightly different icon then general XML jobs so they are easily distinguished from monolingual jobs.</div>
+<p>If the file was imported as multilingual into several target languages, the Completed file will be always composed from all the target languages.</p>
+<p><img class="img350" src="https://www.dropbox.com/s/h51xiyc8hny87et/MultilingXML_jobs.png?raw=1">  <br><span class="wysiwyg-font-size-small"><em>File Type</em></span></p>
+<h2>HTML Preview with XSLT stylesheet</h2>
+<p><img src="https://help.memsource.com/hc/article_attachments/360009051032/Multilingual_XML_preview.png" alt="Multilingual_XML_preview.png" width="500" height="380"></p>
+<p><span class="wysiwyg-font-size-small"><em>XSLT Preview File</em></span></p>
+<p>XSLT language (Extensible Stylesheet Language Transformations) can be used to transform XML documents into HTML format for in-context preview purposes. Memsource currently supports <strong>XSLT 2.0</strong>.</p>
+<p>To import the Multilingual XML file with a stylesheet (XSL or XSLT), simply navigate to the bottom of the Multilingual XML import settings and choose an XSLT file. When you import an XML with a stylesheet, the <strong>Preview Translation</strong> (Document -&gt; Preview Translation) in <strong>Memsource Desktop Editor</strong> will generate an HTML preview instead of an XML one (<a class="external text" href="https://www.youtube.com/watch?v=tjBSLM3wxbQ" rel="nofollow">video</a>). Once used for file import, XSLT can also be downloaded from the file import settings page.</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360009051152/Download_XSLT.png" alt="Download_XSLT.png"></p>
+<p><span class="wysiwyg-font-size-small"><em>Download XSLT Preview File</em></span></p>
+<h2><span id="Tag_Content_Visualized" class="mw-headline">Tag Content Visualized</span></h2>
+<p>The tag content of the source XML file can be visualized via Edit - Expand Tags and edited via F2 in MemSource Editor.</p>

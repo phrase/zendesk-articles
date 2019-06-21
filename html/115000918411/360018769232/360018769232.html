@@ -1,0 +1,71 @@
+<h3><span id="Create_New_Segmentation_Rule" class="mw-headline">Create a New Segmentation Rule</span></h3>
+<pre><strong>action: api/v2/segRule/create</strong>
+    token                       string
+    name                        string
+    locale                      locale
+    primary                     boolean                        O(false)
+    file                        exfile                         
+
+<strong>response: JSON</strong>
+    {
+      "id": 39                 // id of the new segmentation rule
+    }
+</pre>
+<h3><span id="Get_Segmentation_Rule" class="mw-headline">Get a Segmentation Rule</span></h3>
+<pre><strong>action: api/v2/segRule/get</strong>
+    token                       string
+    segmentationRule            domain(SegRule)
+  
+<strong>response: JSON</strong>
+    {
+       "id":1,
+       "filename":"en.srx",
+       "dateCreated":"2016-05-10T19:05:39+0000",
+       "createdBy":
+          {
+             "id":1
+          },
+       "name":"Seg. Rule Test",
+       "locale":"en",
+       "primary":true
+    }
+</pre>
+<h3><span id="List_Segmentation_Rules" class="mw-headline">List Segmentation Rules</span></h3>
+<pre><strong>action: api/v2/segRule/list</strong>
+    token                       string
+    page                        integer            O(0)
+    name                        string             O
+
+<strong>response: JSON</strong>
+   [
+      {
+         "id":1,
+         "filename":"en.srx",
+         "dateCreated":"2016-05-10T19:40:04+0000",
+         "createdBy":
+            {
+               "id":1
+            },
+         "name":"Seg. Rule Test",
+         "locale":"en",
+         "primary":true
+      }
+   ]
+</pre>
+<h3><span id="Edit_Segmentation_Rule" class="mw-headline">Edit a Segmentation Rule</span></h3>
+<pre><strong>action: api/v2/segRule/edit</strong>
+    token                       string
+    segmentationRule            domain(SegRule)
+    name                        string
+    locale                      locale
+    primary                     boolean                        O(false)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Delete_Segmentation_Rule" class="mw-headline">Delete a Segmentation Rule</span></h3>
+<pre><strong>action: api/v2/segRule/delete</strong>
+    token                       string
+    segmentationRule            domain(SegRule)
+
+<strong>response: empty</strong>
+</pre>

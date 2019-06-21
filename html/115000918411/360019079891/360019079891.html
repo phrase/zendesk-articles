@@ -1,0 +1,50 @@
+<h3><span id="Create_New_Subdomain" class="mw-headline">Create a New Subdomain</span></h3>
+<pre><strong>action: api/v2/subDomain/create</strong>
+    token                       string
+    name                        string                             
+
+<strong>response: JSON</strong>
+    {
+      "id": 238                 // id of the new subdomain
+    }
+</pre>
+<h3><span id="Get_Subdomain" class="mw-headline">Get a Subdomain</span></h3>
+<pre><strong>action: api/v2/subDomain/get</strong>
+    token                       string
+    subDomain                   domain(SubDomain)
+
+<strong>response: JSON</strong>
+   {
+     "id":3,
+     "name":"subDomain"
+   }
+</pre>
+<h3><span id="List_Subdomains" class="mw-headline">List Subdomains</span></h3>
+<pre><strong>action: api/v2/subDomain/list</strong>
+    token                       string
+    page                        integer            O(0)
+    name                        string             O
+
+<strong>response: JSON</strong>
+   [
+     {
+       "id":3,
+       "name":"subDomain"
+     }
+   ]
+</pre>
+<h3><span id="Edit_Subdomain" class="mw-headline">Edit a Subdomain</span></h3>
+<pre><strong>action: api/v2/subDomain/edit</strong>
+    token                       string
+    subDomain                   domain(SubDomain)
+    name                        string
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Delete_Subdomain" class="mw-headline">Delete a Subdomain</span></h3>
+<pre><strong>action: api/v2/subDomain/delete</strong>
+    token                       string
+    subDomain                   domain(SubDomain)
+
+<strong>response: empty</strong>
+</pre>

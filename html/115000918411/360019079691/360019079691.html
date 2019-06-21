@@ -1,0 +1,287 @@
+<h3><span id="List_of_Checks" class="mw-headline">List of Checks</span></h3>
+<table class="wikitable">
+<tbody>
+<tr>
+<th>Type of Check</th>
+<th>Additional Data (JSON)</th>
+</tr>
+<tr>
+<td>EmptyPairTags</td>
+<td> </td>
+</tr>
+<tr>
+<td>EmptyTagContent</td>
+<td> </td>
+</tr>
+<tr>
+<td>EmptyTranslation</td>
+<td> </td>
+</tr>
+<tr>
+<td>ExtraNumbers</td>
+<td>
+<pre>{
+  "extraNumbers": [ "12", "50" ]
+}
+</pre>
+</td>
+</tr>
+<tr>
+<td>Formatting</td>
+<td> </td>
+</tr>
+<tr>
+<td>ForbiddenStrings</td>
+<td>
+<pre>{
+  "strings": ["agreement", "firm"]
+}
+</pre>
+</td>
+</tr>
+<tr>
+<td>ForbiddenTerms</td>
+<td>
+<pre>{
+  "forbiddenTerms": ["contract"]
+}
+</pre>
+</td>
+</tr>
+<tr>
+<td>InconsistentTagContent</td>
+<td> </td>
+</tr>
+<tr>
+<td>InconsistentTranslationSourceTarget</td>
+<td>
+<pre>{
+  "segmentId": "1OzJaVQcwBsPgA7E0:0"
+}
+</pre>
+</td>
+</tr>
+<tr>
+<td>InconsistentTranslationTargetSource</td>
+<td>
+<pre>{
+  "segmentId": "1OzJaVQcwBsPgA7E0:0"
+}
+</pre>
+</td>
+</tr>
+<tr>
+<td>JoinTags</td>
+<td>
+<pre>{
+  "sourceTagsCount": 2,
+  "translationTagsCount": 3
+}
+</pre>
+</td>
+</tr>
+<tr>
+<td>Malformed</td>
+<td>
+<pre>{
+  "message" : "..."
+} 
+</pre>
+</td>
+</tr>
+<tr>
+<td>LeadingAndTrailingSpaces</td>
+<td> </td>
+</tr>
+<tr>
+<td>MissingNumbers</td>
+<td>
+<pre>{
+  "missingNumbers" : [ "2", "3.14" ]
+}
+</pre>
+</td>
+</tr>
+<tr>
+<td>MultipleSpaces</td>
+<td> </td>
+</tr>
+<tr>
+<td>NewerAtLowerLevel</td>
+<td> </td>
+</tr>
+<tr>
+<td>NotConfirmed</td>
+<td> </td>
+</tr>
+<tr>
+<td>RepeatedWords</td>
+<td>
+<pre>{
+  "repeatedWords" : [ "and" ]
+}
+</pre>
+</td>
+</tr>
+<tr>
+<td>SourceOrTargetRegexp</td>
+<td>
+<pre>{
+  "descriptions": [
+    "desc1",
+    "desc2"
+  ]
+}
+</pre>
+</td>
+</tr>
+<tr>
+<td>SpellCheck</td>
+<td>
+<pre>{
+  "misspelledWords": [
+    {
+      "offset": 6,
+      "word": "barx"
+    }
+  ]
+}
+</pre>
+</td>
+</tr>
+<tr>
+<td>Terminology</td>
+<td>
+<pre>{
+  "missingTerms": ["agreement"],
+  "forbiddenTerms": ["contract"]
+}
+</pre>
+</td>
+</tr>
+<tr>
+<td>TargetSourceIdentical</td>
+<td> </td>
+</tr>
+<tr>
+<td>TrailingSpace</td>
+<td> </td>
+</tr>
+<tr>
+<td>TrailingPunctuation</td>
+<td> </td>
+</tr>
+<tr>
+<td>TranslationLength</td>
+<td> </td>
+</tr>
+<tr>
+<td>UnmodifiedFuzzyTranslation</td>
+<td> </td>
+</tr>
+<tr>
+<td>UnresolvedComment</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<h3><span id="Update_Ignored_Checks" class="mw-headline">Update Ignored Checks</span></h3>
+<pre><strong>action: api/v3/qualityAssurance/updateIgnoredChecks</strong>
+    token                       string
+    task                        task
+    segmentId                   string
+    workflowLevel               integer
+    check                       list(string)            list of types from the table above
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Run_Quality_Assurance" class="mw-headline">Run Quality Assurance</span></h3>
+<pre><strong>action: api/v3/qualityAssurance/run</strong>
+    token                       string
+    bilingualFile               file                                  // only MXLIFF files are allowed
+    initialSegmentId            string                    O
+    unlimitedIgnoredWarnings    boolean                   O(true)
+    maxWarningsCount            integer                   O(100)
+    warningType                 list(enum(WarningType))   O           // see the list above for possible values
+
+<strong>response: JSON</strong>
+{
+  "finished":true,
+  "segmentWarnings":[
+    {
+      "ignoredChecks":[
+        "NotConfirmed"
+      ],
+      "segmentId":"1OzJaVQcwBsPgA7E0:0",
+      "warnings":[
+        {
+          "type":"EmptyTranslation"
+        },
+      ]
+    },
+    {
+      "ignoredChecks":null,
+      "segmentId":"1OzJaVQcwBsPgA7E0:2",
+      "warnings":[
+        {
+          "type":"EmptyTranslation"
+        },
+        {
+          "missingNumbers":[
+            "1"
+          ],
+          "type":"MissingNumbers"
+        },
+        {
+          "type":"NotConfirmed"
+        }
+      ]
+    }
+  ]
+}
+</pre>
+<h3><span id="Run_Quality_Assurance_By_Job_Part.28s.29" class="mw-headline">Run Quality Assurance By Job Part(s)</span></h3>
+<pre><strong>action: api/v3/qualityAssurance/runByJobPart</strong>
+    token                       string
+    jobPart                     list(domain(JobPart))
+    initialSegmentId            string                    O
+    unlimitedIgnoredWarnings    boolean                   O(true)
+    maxWarningsCount            integer                   O(100)
+    warningType                 list(enum(WarningType))   O           // see the list above for possible values
+
+<strong>response: JSON</strong>
+{
+  "finished":true,
+  "segmentWarnings":[
+    {
+      "ignoredChecks":[
+        "NotConfirmed"
+      ],
+      "segmentId":"1OzJaVQcwBsPgA7E0:0",
+      "warnings":[
+        {
+          "type":"EmptyTranslation"
+        },
+      ]
+    },
+    {
+      "ignoredChecks":null,
+      "segmentId":"1OzJaVQcwBsPgA7E0:2",
+      "warnings":[
+        {
+          "type":"EmptyTranslation"
+        },
+        {
+          "missingNumbers":[
+            "1"
+          ],
+          "type":"MissingNumbers"
+        },
+        {
+          "type":"NotConfirmed"
+        }
+      ]
+    }
+  ]
+}
+</pre>

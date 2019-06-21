@@ -1,0 +1,61 @@
+<p>Our REST API sees application entities (projects, jobs, settings) as resources that can be retrieved, created, modified, and deleted. Every HTTP method represents an action:</p>
+<ul>
+<li>
+<strong>GET:</strong> retrieves a resource, never changing the resource</li>
+<li>
+<strong>POST:</strong> creates a resource. POST is also used for operations that don’t fit into any of the four operations or have long or complex input—like searching translation memories or creating jobs.</li>
+<li>
+<strong>PUT: </strong>updates the resource. Please note that the <strong>whole entity is required</strong> with all of its fields, not only those changed; not including it means it should be set to null.</li>
+<li>
+<strong>DELETE:</strong> deletes the resource.</li>
+</ul>
+<p><br> <strong>Important</strong>: The<strong> input and output data</strong> are usually in <strong>JSON</strong> format, UTF-8 encoded. For a file as request body content type application/octet-stream or multipart/form-data is used.</p>
+<p>In order to keep the API simple and responding quickly, the entities use a flat structure when possible. Instead of including whole child objects in answers, we only contain references that contain the ID, UID, and a few attributes. In requests, we expect either IDReference or UidReference objects to refer to related entities.</p>
+<p>All response lists are paged. Use the parameters pageNumber and pageSize to retrieve the requested data. The maximum page size is 50.</p>
+<h2>OpenAPI 3.0 Documentation</h2>
+<p>We use OpanAPI 3.0 for API documentation. For client development, we recommend <a href="https://generator.swagger.io/" target="_self">Swagger code generators</a>.<br> <br> For more information, please see our <a href="https://cloud.memsource.com/web/docs/api" target="_self">Human-readable documentation</a><br> <br> Raw documentation file:<br> <a href="https://cloud.memsource.com/web/api/docs/json">https://cloud.memsource.com/web/api/docs/json</a><br> <a href="https://cloud.memsource.com/web/api/docs/json">https://cloud.memsource.com/web/api/docs/yaml</a></p>
+<h2>API Example</h2>
+<p><strong>Get list of all translation memories</strong></p>
+<p>GET /web/api2/v1/transMemories<br> Response: 200</p>
+<div class="alert alert-green">
+<pre>{<br>    "pageNumber": 0,<br>    "content": [<br>        {<br>            "internalId": 1,<br>            "createdBy": {<br>                "userName": "admin",<br>                "id": "3",<br>                "firstName": "Jan",<br>                "lastName": "Janocko",<br>                "role": "ADMIN",<br>                "email": "jan.janocko@memsource.com"<br>            },<br>            "client": null,<br>            "note": "not necessary to use in TM",<br>            "dateCreated": "2018-01-09T14:07:46+0000",<br>            "id": "1",<br>            "targetLangs": [<br>                "es",<br>                "it"<br>            ],<br>            "subDomain": null,<br>            "businessUnit": {<br>                "id": "1",<br>                "name": "First BU"<br>            },<br>            "sourceLang": "en",<br>            "domain": null,<br>            "name": "My new TM"<br>        }<br>    ],<br>    "numberOfElements": 1,<br>    "totalElements": 1,<br>    "pageSize": 50,<br>    "totalPages": 1<br>}</pre>
+</div>
+<p><strong>Create new a translation memory</strong><br> <br> POST /web/api2/v1/transMemories</p>
+<div class="alert alert-green">
+<pre>{{<br>"name": "My new TM",<br>"sourceLang": "en",<br>"targetLangs": [<br>"es", "it-IT"<br>],<br>"businessUnit": {<br>"id": "1"<br>},<br>"note": "not necessary to use in TM"<br>}</pre>
+</div>
+<p>Response: 201</p>
+<div class="alert alert-green">
+<pre>{<br>    "internalId": 1,<br>    "createdBy": {<br>        "userName": "admin",<br>        "id": "3",<br>        "firstName": "J",<br>        "lastName": "Jan",<br>        "role": "ADMIN",<br>        "email": "jan.j@memsource.com"<br>    },<br>    "client": null,<br>    "note": "not necessary to use in TM",<br>    "dateCreated": "2018-01-09T14:07:46+0000",<br>    "id": "1",<br>    "targetLangs": [<br>        "es",<br>        "it"<br>    ],<br>    "subDomain": null,<br>    "businessUnit": {<br>        "id": "1",<br>        "name": "First BU"<br>    },<br>    "sourceLang": "en",<br>    "domain": null,<br>    "name": "My new TM"<br>}</pre>
+</div>
+<h2>Error Handling</h2>
+<p>If there is a problem when handling an API request, the following JSON structure will be returned. The <a href="https://wiki.memsource.com/wiki/API_Error_Codes">error code</a> will always be present; the detailed description may be null.</p>
+<div class="alert alert-blue">
+<table style="height: 35px;" width="619">
+<tbody>
+<tr>
+<td style="width: 614.889px;">{</td>
+</tr>
+<tr>
+<td style="width: 614.889px;"> "errorCode": "InvalidArguments",</td>
+</tr>
+<tr>
+<td style="width: 614.889px;">"errorDescription": "Required argument \"password\" of type \"string\" is missing."</td>
+</tr>
+<tr>
+<td style="width: 614.889px;">}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>An error response can be detected by reading the HTTP status code of the response. If an error occurs, it will never be set to 2xx. The status code is 400 bad request, 401 or 403 for authentication or authorization problems. See the list of <a href="https://help.memsource.com/hc/en-us/articles/360001418551-Memsource-Legacy-API-Error-Codes">error codes</a> for more details.</p>
+<h2>Reporting problems to Memsource support</h2>
+<p>When reporting problem to Memsource support, please make sure your report includes the following:</p>
+<ul>
+<li>API endpoint</li>
+<li>Request</li>
+<li>Time (and timezone)</li>
+<li>Response</li>
+<li>Memsource-Action-ID of the response</li>
+</ul>
+<p>For an overview of the Memsource REST API, see <a href="https://help.memsource.com/hc/en-us/articles/115003694732-Introduction-to-Memsource-API">this introductory article</a>.</p>

@@ -1,0 +1,39 @@
+<p>A <tt>file's</tt> data type is used to post binary data into various API calls. Every API call that contains at least one argument of type <tt>file</tt> has to meet the following requirements:</p>
+<ul>
+<li>HTTP POST method must be used</li>
+<li>Multipart/form-data request as described in <a class="external text" href="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.2" rel="nofollow">HTML specs</a> must be formed</li>
+</ul>
+<h3><span id="Examples" class="mw-headline">Examples</span></h3>
+<h4><span id="Java_HttpClient_Example" class="mw-headline">Java HttpClient Example</span></h4>
+<pre>HttpClient httpclient = new DefaultHttpClient(); 
+HttpPost httpPost = new HttpPost(webServerUrl);
+MultipartEntity reqEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE, null, Charset.forName("UTF-8"));
+StringBody taskPart;
+StringBody formatPart;
+StringBody saveToTransMemoryPart;
+StringBody setCompletedPart;
+ByteArrayBody fileContentPart;
+// ... fill variables with data ... //
+
+reqEntity.addPart("task", taskPart);
+reqEntity.addPart("format", formatPart);
+reqEntity.addPart("saveToTransMemory", saveToTransMemoryPart);
+reqEntity.addPart("setCompleted", setCompletedPart);
+reqEntity.addPart("bilingualFile", fileContentPart);
+httpPost.setEntity(reqEntity);
+</pre>
+<h4><span id="C.2B.2B_Qt_Example" class="mw-headline">C++ Qt Example</span></h4>
+<pre>QHttpMultiPart* multiPartData = new QHttpMultiPart( QHttpMultiPart::FormDataType );
+QBuffer* buffer = new QBuffer( multiPartData );
+buffer-&gt;open( QIODevice::WriteOnly );
+// ... fill buffer with data ... //
+writer.writeTo( buffer );
+buffer-&gt;close();
+
+QHttpPart filePart;
+filePart.setHeader( QNetworkRequest::ContentTypeHeader, QVariant( "application/octet-stream" ) );
+filePart.setHeader( QNetworkRequest::ContentDispositionHeader, QVariant( QString( "form-data; name=\"bilingualFile\"; filename=\"" ) + model-&gt;getFileInfos()[0].original + "\"" ) );
+buffer-&gt;open( QIODevice::ReadOnly );
+filePart.setBodyDevice( buffer );
+multiPartData-&gt;append( filePart );
+</pre>

@@ -1,0 +1,72 @@
+<p>The CAT Pane in Memsource displays the source text alongside matches from translation memories, term bases, and machine translations for each segment. It also displays any non-translatable matches.</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360019821771/mceclip0.png" width="643" height="466"></p>
+<div class="thumb tright">
+<div class="thumbinner">
+<div class="thumbcaption"> </div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner">
+<div class="thumbcaption">There are several categories that the segments can fall into:</div>
+</div>
+</div>
+<ul>
+<li>
+<strong>101% -</strong> an in-context translation memory match. It is greater than a 100% match since the <a href="https://help.memsource.com/hc/en-us/articles/360017460212">context also matches</a> what is saved in the TM.</li>
+<li>
+<strong>100%</strong> - an exact translation memory match.</li>
+<li>
+<strong>78%</strong> is a fuzzy translation memory match (anything below 100%).</li>
+<li>
+<strong>MT</strong> stands for machine translation. (This will only be shown if it was previously enabled by a Project Manager.)</li>
+<li>
+<strong>TB</strong> is a suggested term from a term base.</li>
+<li>
+<strong>S</strong> is a subsegment match. These are somewhat similar to terms from a TB, except that they are automatically generated from the translation memory.</li>
+</ul>
+<p>In addition to what's noted above, there are some additional features you might see:</p>
+<ul>
+<li>An asterisk on a term notifies users that a Note or Usage Information is available.</li>
+<li>The letters <em>TB</em> being greyed-out indicates a "New" term that has not yet been approved.</li>
+<li>A term in red term indicates a rejected term that should not be used during translation.</li>
+</ul>
+<h2>Non-translatable Matches</h2>
+<p>An underlined score of <span class="wysiwyg-underline">100%</span> or <span class="wysiwyg-underline">99%</span> can be a Non-Translatable match or an MTQE (<a href="https://help.memsource.com/hc/en-us/articles/360016450971" target="_blank" rel="noopener">Machine translation Quality Estimation</a>) match. Hover your mouse over the underlined score to see the details. You can also see the details in the CAT pane when you click on the match there. Both 99% and 100% matches are likely to be segments that probably do not require translation but that should still be checked by a translator.</p>
+<p><span class="wysiwyg-color-black">If the <em>Display non-translatables in Memsource Editor</em> optio</span>n is enabled, segments identified as non-translatable are displayed in the Memsource Editor’s CAT pane. When an NT match is hovered over, a tooltip will indicate whether the match is AI or rule-based. This information is also visible at the bottom of the CAT pane when an NT match is selected.</p>
+<h2>MTQE Matches</h2>
+<p>The Memsource MTQE feature enables users to analyze a job and provides a percentage score for machine translation suggestions at the segment level before any post-editing is done. (In order to do this, <span class="wysiwyg-color-black">MTQA must be enabled in the MT Engine settings</span>.)</p>
+<ul>
+<li>
+<strong>100%:</strong> Perfect MT output—probably no post-editing required</li>
+<li>
+<strong>99%:</strong> Near-perfect MT output—possibly minor post-editing required, mostly for formatting or punctuation issues</li>
+<li>
+<strong>75%:</strong> <span class="wysiwyg-color-black">Good MT match, but likely to require some human post-editing</span>
+</li>
+<li><span class="wysiwyg-color-black"><span style="font-weight: 400;"><strong>No score:</strong> This means MTQE cannot confidently identify the quality (it may be high or low), so the output needs to be checked by a Linguist.</span></span></li>
+</ul>
+<h2><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">The Order of CAT Pane Results</span></h2>
+<p>The results given in the CAT pane will be displayed in the following order:</p>
+<ol>
+<li>Best translation memory or non-translateable match, based on the score.</li>
+<li>Term base items (If there is a preferred term, it will be shown on the top.)</li>
+<li>Translation memory, non-translateable, or MTQE. This is based on the scores.</li>
+<li>Machine translations (with no MTQE score)</li>
+<li>Sub-segment TM (marked by a pink “S”)</li>
+</ol>
+<h2><span id="Displaying_Differences_for_Fuzzy_Matches" class="mw-headline">Displaying Differences for Fuzzy Matches</span></h2>
+<p>When a fuzzy match is selected in the CAT pane, the differences between the source segment and the fuzzy match get displayed.</p>
+<p><img class="img450" src="https://www.dropbox.com/s/0m1qwvdjiusaox4/CatPane_difference_in_TMmatch.png?raw=1"></p>
+<h2><span id="Displaying_Additional_Information_for_Terms" class="mw-headline">Displaying Additional Information for Matches</span></h2>
+<p><span class="mw-headline">When any match is selected in the CAT pane, the additional information (who translated the segment first, who edited it last, the TM, etc.) is displayed at the bottom window of the CAT pane. Further details are displayed if you hover your mouse over the window.</span></p>
+<h2><span id="Displaying_Additional_Information_for_Terms" class="mw-headline">Displaying Additional Information for Terms</span></h2>
+<p>When a term is selected in the CAT pane, additional information is displayed:</p>
+<ul>
+<li>The name of the term base</li>
+<li>The date when the term was created and/or edited</li>
+<li>the name of the user (unless restricted by user rights)</li>
+<li>Links to edit the source and target terms (unless restricted by user rights)</li>
+<li>Additional parameters of the target term, such as Note, Usage, Gender,  etc.</li>
+</ul>
+<p>The presence of the additional parameters Note or Usage is indicated by an asterisk attached to the term in the CAT pane.</p>
+<p><img class="img350" src="https://www.dropbox.com/s/pakgsy4vww1ppkt/CatPane_TargetTermDetails.png?raw=1"></p>

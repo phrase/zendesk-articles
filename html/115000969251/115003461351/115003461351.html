@@ -1,0 +1,71 @@
+<div style="text-align: justify;">
+<p> A <a href="https://www.memsource.com/en/translation-memory-software" target="_blank" rel="noopener">Translation Memory</a> (TM) is a database made up of segments of original, source text and its translation. These segments can be sentences, paragraphs, headings etc. A pair of source and translated segments is called a translation unit (TU).</p>
+<p>Using TMs has several benefits. Translators can reuse translations which speeds up the translation process and reduces costs. TMs also help to ensure that translations are consistent, especially when, for example, different translators are working on the same project for a specific client.  </p>
+</div>
+<h2 id="menu">Creating and populating your TM</h2>
+<div style="text-align: justify;">To be able to add translation units into a TM, you need to <a href="https://help.memsource.com/hc/en-us/articles/360010849432" target="_blank" rel="noopener">create one first</a>. Once you have created your translation memory, there are three ways how to add translation units to it:</div>
+<ol>
+<li style="text-align: justify;">Add the translated segments directly from within Memsource Editor when translating: Assign the TM to your project and then be sure to confirm every translated segment in the Editor (Editor must be online).</li>
+<li style="text-align: justify;">
+<a href="https://help.memsource.com/hc/en-us/articles/360011103391" target="_blank" rel="noopener">Import content to Translation Memory</a> from other translation tools (in TMX format) or from MS Excel or from the bilingual Memsource file used in the Memsource Desktop Editor (mxliff)</li>
+<li style="text-align: justify;">
+<a href="https://help.memsource.com/hc/en-us/articles/115003483672-What-is-Alignment-">Align</a> previously translated documents and <a href="https://help.memsource.com/hc/en-us/articles/115003692212-Translation-Memories#XLS_Import_1">import them as XLS</a> into your Translation Memory.</li>
+</ol>
+<div style="text-align: justify;">
+<br>Consistent segmentation is crucial for retrieving the best TM match. Segmentation rules in Memsource Cloud correspond with specifics of each supported language and can be <a href="https://help.memsource.com/hc/en-us/articles/115003483972-Customized-Segmentation">customized</a> if needed. However, keep in mind that importing Jobs with poor segmentation (e.g. poorly formatted Word files) or applying customized segmentation can affect retrieved TM match value. Such example can be seen on the picture below. The sentence in the second and third segment was manually broken into two lines. As you can see, the CAT pane shows only 63% match exactly because the second half of the sentence is missing in segment no. 2.<br> <br> <img style="width: 600px; height: 241px;" src="https://help.memsource.com/hc/article_attachments/115004126192/import-576002.jpg" alt="Bad segmentation">
+</div>
+<p> </p>
+<h2 id="menu2">Assigning a TM</h2>
+<div style="text-align: justify;">There are two ways of <a href="https://help.memsource.com/hc/en-us/articles/115003683511-Create-Your-First-Project#New_TM_and_TB_1">selecting a translation memory for a project</a>. You can either create a new one or select an existing one. One project can have up to ten TMs assigned, however only two TMs can be set to the <a href="https://help.memsource.com/hc/en-us/articles/115003680771-Projects#Selecting_Translation_Memories_for_Projects_1">Write mode</a>. Memsource Cloud allows selecting TMs that have reverse source-target language as opposed to the project's languages. E.g. a TM en -&gt; de can be selected for a de -&gt; en project. Reverse TMs can only be selected in the read mode for a project.<br>There can be up to 10 TMs assigned to each language pair - it means for project with two target languages you can have 20 different TMs. However large quantity of large TMs can slow down Analysis and Pre-translation process.<br> <br> <strong>Language locales</strong><br>Memsource allows you to add <a href="https://www.memsource.com/en/translation-memory-software">TM</a> to project with the <a href="https://help.memsource.com/hc/en-us/articles/115003680771-Projects#Selecting_Term_Bases_for_Projects_1">same language but different locale</a>. Generally all languages with the same prefix can be added (en, en_gb, en_uk...). For example, if you create DE_EN TM, you can assign it to both DE-en-GB and DE-en-US projects. Keep in mind that all TUs will be stored as EN only with no distinction between US and GB, therefore using this TM for strictly GB or US projects might be inaccurate.<br> <br> <strong>TM for workflow steps</strong><br>When selecting TMs for projects with workflow, the user can decide whether the same translation memories should be selected for all of the project's workflow steps, or whether each workflow step should have its own TM setup.<br>If you are using proofreading on regular basis, it is recommended to:</div>
+<ol>
+<li>Create TM for proofreaders only, where only reviewed translation will be stored (TM_REV) and always assign it as READ to Translation step and WRITE in Revision step.</li>
+<li>Create TM for translation only (TM_TRA) and assign as WRITE to Translation step and READ in Revision step.</li>
+<li>You can even set 2% penalty to TM_TRA, so the matches from TM_REV have always priority (101% matches from TM_TRA will be shown as 99% matches - see "Setting Penalties" bellow.)</li>
+<li>After project is completed and all translation is reviewed and saved in TM_REV, you can delete the TM_TRA.</li>
+</ol>
+<div style="text-align: justify;">
+<br>Please note, that you can select a TM for all workflow steps and all languages. Afterwards, you can select one specific TM to one step and one language (if needed). However, it does not work in the reverse order. You cannot select a TM for a specific step and language, and afterwards select a TM for all steps and all languages.<br> </div>
+<h2 id="menu3">Setting Penalties for Translation Memories</h2>
+<div>If you assign multiple TMs to a project and need to prefer matches only from one (or few selected TMs), you need to <a href="https://help.memsource.com/hc/en-us/articles/360014635732-Assign-Translation-Memory-to-a-project">set a penalty</a>. As many as ten TMs can be added to a project for each language pair and each can have a different penalty. These settings will impact pre-translation and analysis.</div>
+<div> </div>
+<div><span style="font-weight: 400;">As well as applying penalties to an entire TM, you can apply a 1% penalty to 101% (in-context) matches within a TM. This option can be selected from the penalties section when you select TMs for a project. This option is useful, for example, if you would like a linguist to decide which 101% match from different TMs should be used in a translation. The penalty will mean that none of the in-context matches are inserted automatically into the target segment if the text is pre-translated. </span></div>
+<div>
+<br><img src="https://help.memsource.com/hc/article_attachments/360005675392/mceclip2.png" width="928" height="183">
+</div>
+<div> </div>
+<div>
+<br>In the Editors CAT pane, the penalized matches will be displayed in a new order (101% match penalized by 2% will become 99% match), with a little arrow indicating the penalization.<br> <img style="width: 400px; height: 339px;" src="https://help.memsource.com/hc/article_attachments/115004106311/import-762325.jpg" alt="CAT pane penalized match"><br> </div>
+<h2 id="menu4">Matches in Memsource</h2>
+<p><img style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; text-align: justify;" src="https://help.memsource.com/hc/article_attachments/360007442911/Desktop-Editor-CAT-pane.png" alt="CAT pane showing matches" width="559" height="412"></p>
+<ul>
+<li style="text-align: justify;"><strong>101% match – In-context match </strong></li>
+</ul>
+<div style="text-align: justify;">An in-context match is a segment, which exactly matches a segment already stored in translation<br>memory, including the context. These 101% will be always overwritten in TM, when the segment is confirmed in the editor. There are 3 types of In-context match, which can be set for jobs (see <a href="https://help.memsource.com/hc/en-us/articles/360017460212" target="_blank" rel="noopener">TM Match Context and Optimization</a>):</div>
+<ol>
+<li style="text-align: justify;">
+<strong>Preceding and following segment</strong> - default settings.</li>
+<li style="text-align: justify;">
+<strong>ID context</strong> - based on segment's key, available for specific file formats only).</li>
+<li style="text-align: justify;">
+<strong>No context</strong> - only the source and target will be searched and saved in TM.</li>
+</ol>
+<div style="text-align: justify;">In-c<span style="line-height: 1.6;">ontext matches get displayed in Memsource as 101% matches. </span><span style="line-height: 1.6;">To speed up translation, it is advisable to pre-translate 101% matches and even have them marked as confirmed. If you can rely on your translation memory, 101% do not have to be checked any more by a translator.</span>
+</div>
+<div style="text-align: justify;"><span style="line-height: 1.6;">When working with <strong>Previous and Next</strong> context matches, the first segment of a document will have its Previous segment saved as empty (as it does not exist). The same applies to the Next segment and the last segment of your document. </span></div>
+<div>
+<ul>
+<li style="text-align: justify;"><strong>100% match</strong></li>
+</ul>
+<div style="text-align: justify;">A 100% match on the other hand exactly matches a segment already stored in translation memory but not its context. It is advisable to have them checked by a translator since they might require a slight change due to different context.</div>
+<ul>
+<li style="text-align: justify;"><strong>Fuzzy matches</strong></li>
+</ul>
+<div style="text-align: justify;">A Fuzzy match can be any match between 99% and 1%. However, low value matches might have an inapplicable content. Minimum match value shown in the CAT pane is called Fuzzy match threshold. Memsource default setting is 60% (e.g. 59% - 1% matches are not shown). If needed, minimum match rate can be changed in both editors. Go to Tools -&gt; Preferences.<br> <br>Differences between source segment and TM match are shown in the CAT pane as well. </div>
+<ul>
+<li style="text-align: justify;"><strong>Subsegment matches - S</strong></li>
+</ul>
+<div style="text-align: justify;">Our subsegment feature is relatively simple, it is based on 100% matches appearing inside larger segments. If you have a word or phrase inside a segment, it will appear as a subsegment only if it has been previously translated as a separate segment. For example, a translator has previously translated a segment containing only “ZUSATZABKOMMEN”. Such segment would be a Subsegment match to a segment “ZUSATZABKOMMEN zum Abkommen zwischen der …”<br> <br> <img style="line-height: 20.8px; width: 600px; height: 361px;" src="https://help.memsource.com/hc/article_attachments/115004106351/import-576009.jpg" alt="Differences in fuzzy matches">
+</div>
+<div style="text-align: justify;"> </div>
+<div style="text-align: justify;">To find out more, see the knowledge base article on <a href="https://help.memsource.com/hc/en-us/articles/115003692212-Translation-Memories">Translation Memory</a>. </div>
+</div>

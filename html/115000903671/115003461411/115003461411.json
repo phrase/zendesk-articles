@@ -1,0 +1,27 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2017-12-15T15:35:09Z",
+    "draft": true,
+    "edited_at": "2018-10-15T22:54:45Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003461411-Analysis",
+    "id": 115003461411,
+    "label_names": [
+        "Duplication"
+    ],
+    "locale": "en-us",
+    "name": "Analysis",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 13,
+    "promoted": false,
+    "section_id": 115000903671,
+    "source_locale": "en-us",
+    "title": "Analysis",
+    "updated_at": "2019-03-29T14:13:58Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003461411-Analysis.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

@@ -1,0 +1,17 @@
+<p>Unlike <a href="https://help.memsource.com/hc/en-us/articles/115003484352-Error-messages-in-Memsource-Cloud">errors</a>, warnings do not prevent the actual translation from taking place, but not taking warnings into account may prevent the successful export of the target document or cause the completed file to become corrupted. Below are some of the most common errors.</p>
+<ul>
+<li>
+<strong>The imported file contains fields.<br></strong>Some difficulties can arise when importing Word documents that contain fields. To translate them, replace the fields with text and re-import the file into Memsource. Please see the article on <a href="https://help.memsource.com/hc/en-us/articles/115003460851-The-imported-file-contains-fields-warning-for-Word-documents" rel="noopener">field warnings</a> for more information.<br> </li>
+<li>
+<strong>There are embedded objects within the document that have not been imported. </strong>Please see our article on <a href="https://help.memsource.com/hc/en-us/articles/115003461511-Embedded-objects-warning" rel="noopener">embedded object warnings</a> for details.<br> </li>
+<li>
+<strong>Job(s) ## exported with a warning (Marks reordered). Click here to download.</strong><br>In the course of translation, the document has become invalid (that is, MXLIFF marks are present in the target document). In order to generate a correct document, the marks were replaced with marks from the source. Please check the final document to make sure no errors have been introduced to your target file.<br> </li>
+<li>
+<strong>The file contains incorrectly locked tags. Modifying/adding locked tags may result in the SDLXLIFF becoming invalid. </strong><br>SDL Studio allows users to lock segments and tags to prevent any changes to them. The internal handling of these tags is a property of SDL. Thus, we are not aware of the technical process that takes place when opening files in the Studio. This warning has been added to notify users not to modify or add these tags into the translation at all. Please note that these files are best translated in the Studio—importing and translating them in Memsource is at the user’s own risk. If a user decides to translate the files in Memsource (despite the warning), tags should not be inserted into the translation.
+<ul>
+<li>
+<strong>How to fix a file already corrupted by the insertion of tags:</strong><br>A Quality Assurance check is in place to inform users about such malformed tags. In the segments, these can be identified visually with the <em>Expand Tags</em> option turned on. Removing these tags from the translation and exporting the file again should allow the Studio to open it correctly (without the locked tags present).</li>
+</ul>
+</li>
+</ul>
+<p> </p>

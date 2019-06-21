@@ -1,0 +1,29 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2017-12-23T18:09:26Z",
+    "draft": false,
+    "edited_at": "2019-05-14T11:06:01Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003633071-Segment-Sorting-and-Filters",
+    "id": 115003633071,
+    "label_names": [
+        "web editor",
+        "_RWD",
+        "_addIMG"
+    ],
+    "locale": "en-us",
+    "name": "Segment Sorting and Filters",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 8,
+    "promoted": false,
+    "section_id": 115000918792,
+    "source_locale": "en-us",
+    "title": "Segment Sorting and Filters",
+    "updated_at": "2019-05-14T11:06:01Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003633071-Segment-Sorting-and-Filters.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

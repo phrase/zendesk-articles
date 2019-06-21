@@ -1,0 +1,97 @@
+<h3>Create a Webhook</h3>
+<pre><strong>action: api2/v1/webhooks</strong>
+    method                      POST   // Requires JSON payload in body
+    token                       string
+    url                         string
+    event                       enum(event)              
+    hidden                      boolean                  O                    
+
+<strong>sample payload:</strong> 
+
+{
+   "url": "webhook.memsource.com",
+   "event": "JOB_STATUS_CHANGED",
+   "hidden": "true"
+}
+ 
+<strong>response: JSON</strong> 
+
+{
+   "id": 37,
+   "hidden": true,
+   "event": "JOB_STATUS_CHANGED",
+   "url": "webhook.memsource.com"
+}
+</pre>
+<h3><span id="Edit_Webhook" class="mw-headline">Edit a Webhook</span></h3>
+<pre><strong>action: api2/v1/webhooks/{webHookId}</strong>
+                                                         // {webHookId} needs to be replaced with the ID of specific webhook
+    method                      PUT                      // Requires JSON payload in body
+    token                       string
+    url                         string                   O
+    event                       enum(event)              O
+    hidden                      boolean                  O
+
+<strong>sample payload:</strong> 
+
+{
+   "url": "webhook.memsource.com",
+   "event": "JOB_ASSIGNED",
+   "hidden": "false"
+}
+
+<strong>response: JSON</strong>
+
+{
+   "id": 37,
+   "hidden": false,
+   "event": "JOB_ASSIGNED",
+   "url": "webhook.memsource.com"
+}
+</pre>
+<h3><span id="List_Webhooks" class="mw-headline">List Webhooks</span></h3>
+<pre><strong>action: api2/v1/webhooks</strong>
+    method                      GET
+    token                       string
+
+<strong>response: JSON</strong>
+
+{
+   "pageNumber": 0,
+   "content": [
+       {
+           "id": 31,
+           "hidden": false,
+           "event": "JOB_STATUS_CHANGED",
+           "url": "webhook.memsource.com"
+       }
+   ],
+   "numberOfElements": 5,
+   "totalElements": 5,
+   "pageSize": 50,
+   "totalPages": 1
+}
+</pre>
+<h3><span id="Get_Webhook" class="mw-headline">Get a Webhook</span></h3>
+<pre><strong>action: api2/v1/webhooks/{webHookId}</strong>
+                                                         // {webHookId} needs to be replaced with the ID of specific webhook
+    method                       GET
+    token                        string
+
+<strong>response: JSON</strong>
+
+{
+   "id": 37,
+   "hidden": false,
+   "event": "JOB_ASSIGNED",
+   "url": "webhook.memsource.com"
+}
+</pre>
+<h3><span id="Delete_Webhook" class="mw-headline">Delete a Webhook</span></h3>
+<pre><strong>action: api2/v1/webhooks/{webHookId}</strong>
+                                                         // {webHookId} needs to be replaced with the ID of specific webhook
+    method                       delete
+    token                        string
+
+<strong>response: empty</strong>
+</pre>

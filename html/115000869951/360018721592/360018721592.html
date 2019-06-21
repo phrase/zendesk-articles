@@ -1,0 +1,29 @@
+<h3><span id="Login" class="mw-headline">Login</span></h3>
+<p>Most of the APIs require an authenticated user who is identified by a <em>token</em>. To get a token, call the following API, and use the returned value in all subsequent calls. Each token is valid for 24 hours.</p>
+<pre><strong>action: api/v2/auth/login</strong>
+    username                    string                             
+    password                    string
+
+<strong>response: JSON</strong>
+    {
+      "id":30,
+      "role":"Admin",                                 // Admin, Linguist, ProjectManager
+      "token":"30-a3bf70333f8f1316cb7841cd774c9ce8"
+    }
+</pre>
+<h3><span id="Who_Am_I" class="mw-headline">Who Am I</span></h3>
+<p>This API call can be used to test if the previous <strong>auth/login</strong> call went ok. This API does not bring any essential functionality. Still, it may useful during development.</p>
+<pre><strong>action: api/v2/auth/whoAmI</strong>
+    token                      string
+
+<strong>response: JSON</strong>
+    {
+      "username": "alice"
+    }
+</pre>
+<h3><span id="Logout" class="mw-headline">Logout</span></h3>
+<pre><strong>action: api/v2/auth/logout</strong>
+    token                      string
+
+<strong>response: empty</strong>
+</pre>

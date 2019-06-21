@@ -1,0 +1,63 @@
+<h3><span id="Get_Asynchronous_Request" class="mw-headline">Get Asynchronous Request</span></h3>
+<pre><strong>action: api/v3/async/getAsyncRequest</strong>
+    token                       string
+    asyncRequest                domain(AsyncRequest)
+
+<strong>response: JSON</strong>
+    {
+      "id":1415,
+      "createdBy":{
+        "id":1
+      },
+      "asyncResponse":{
+        "error":{
+          "code":"foo",
+          "description":"bar"
+        },
+        "dateCreated":"2014-11-03T16:12:13Z"
+      },
+      "action":"PRE_ANALYSE",
+      "dateCreated":"2014-11-03T16:12:05Z",
+      "project": { 
+        "id": 2411 
+      },
+      "parent": { 
+        "id": 278211 
+      }
+    }
+</pre>
+<h3><span id="List_Pending_Requests" class="mw-headline">List Pending Requests</span></h3>
+<pre><strong>action: api/v3/async/listPendingRequests</strong>
+    token                       string
+    all                         boolean           O(false)   // can only be set by ADMINs
+
+<strong>response: JSON</strong>
+    [
+      {
+        "id":1415,
+        "createdBy":{
+          "id":1
+        },
+        "asyncResponse":{
+          "error":{
+            "code":"foo",
+            "description":"bar"
+          },
+          "dateCreated":"2014-11-03T16:12:13Z"
+        },
+        "action":"PRE_ANALYSE",
+        "dateCreated":"2014-11-03T16:12:05Z",
+        "project": { 
+          "id": 2411 
+        },
+        "parent": { 
+          "id": 278211 
+        },
+        "children": {
+        "total": 100,
+        "finished": 67
+        }
+      }
+    ]
+</pre>
+<p>Note: A maximum of 1000 pending requests are returned.</p>

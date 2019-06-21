@@ -1,0 +1,30 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2017-12-15T15:46:06Z",
+    "draft": false,
+    "edited_at": "2019-05-14T11:06:31Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003462151-Web-Editor-Input-Methods-for-CJK-Languages",
+    "id": 115003462151,
+    "label_names": [
+        "web editor",
+        "_RWD",
+        "troubleshooting",
+        "_NoIMG"
+    ],
+    "locale": "en-us",
+    "name": "Web Editor: Input Methods for CJK Languages",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 10,
+    "promoted": false,
+    "section_id": 115000918792,
+    "source_locale": "en-us",
+    "title": "Web Editor: Input Methods for CJK Languages",
+    "updated_at": "2019-05-14T11:06:31Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003462151-Web-Editor-Input-Methods-for-CJK-Languages.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

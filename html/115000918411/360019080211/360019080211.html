@@ -1,0 +1,168 @@
+<h3>Create a New User</h3>
+<pre><strong>action: api/v3/user/create</strong>
+    token                       string
+    userName                    string                             
+    email                       string
+    firstName                   string
+    lastName                    string
+    password                    string
+    role                        enum(UserRole)
+    timezone                    string                             O 
+    note                        string                             O
+    terminologist               boolean                            O
+    sourceLang                  list(locale)                       O
+    targetLang                  list(locale)                       O
+    workflowStep                list(domain(WorkflowStep))         O
+    client                      list(domain(Client))               O
+    projectBusinessUnits        list(domain(BusinessUnit))         O
+    domain                      list(domain(Domain))               O
+    subDomain                   list(domain(SubDomain))            O
+
+<strong>response: JSON</strong>
+    {
+      "id": 238                 // id of the new user
+    }
+</pre>
+<h3><span id="Edit_User" class="mw-headline">Edit a User</span></h3>
+<pre><strong>action: api/v3/user/edit</strong>
+    token                       string
+    user                        domain(User)
+    userName                    string                             O 
+    email                       string                             O
+    firstName                   string                             O
+    lastName                    string                             O
+    password                    string                             O
+    role                        enum(UserRole)                     O
+    timezone                    string                             O
+    note                        string                             O
+    active                      boolean                            O
+    terminologist               boolean                            O
+    sourceLang                  list(locale)                       O
+    targetLang                  list(locale)                       O
+    workflowStep                list(domain(WorkflowStep))         O
+    client                      list(domain(Client))               O
+    projectBusinessUnits        list(domain(BusinessUnit))         O
+    domain                      list(domain(Domain))               O
+    subDomain                   list(domain(SubDomain))            O
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Delete_User" class="mw-headline">Delete a User</span></h3>
+<pre><strong>action: api/v3/user/delete</strong>
+    token                       string
+    user                        domain(User)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Undelete_User" class="mw-headline">Undelete a User</span></h3>
+<pre><strong>action: api/v3/user/undelete</strong>
+    token                       string
+    user                        domain(User)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Limits" class="mw-headline">Get Limits</span></h3>
+<pre><strong>action: api/v3/user/getLimits</strong>
+    token                       string
+
+<strong>response: JSON</strong>
+   {
+     "userCounts":{
+       "PROJECT_MANAGER":{
+           "max":10,
+           "used":7
+       },
+       "LINGUIST":{
+           "max":100,
+           "used":91
+       },
+       "GUEST":{
+           "max":0,
+           "used":0
+       }
+     }
+   }
+</pre>
+<h3><span id="Get_User" class="mw-headline">Get a User</span></h3>
+<pre><strong>action: api/v3/user/get</strong>
+    token                       string
+    user                        domain(User)
+
+<strong>response: JSON</strong>
+   {
+     "id":3,
+     "lastName":"bar",
+     "email": "foo@bar.com",
+     "targetLangs":[
+       "en",
+       "de",
+       "cs"
+     ],
+     "userName":"foobar_1363963932291",
+     "role":"LINGUIST",
+     "timezone":"Europe/Prague",
+     "active":true,
+     "activeJobsCount": 0,
+     "sourceLangs":[
+       "en",
+       "de"
+     ],
+     "firstName":"foo",
+     "dateCreated":"2015-08-25T15:44:36Z",
+     "login": {
+       "lastLoginDate":"2015-12-25T15:44:36Z"
+     },
+     "workflowSteps":[
+       {
+         "id":1,
+         "name":"Translation",
+         "abbr":"T"
+       }
+     ],
+     "accessSettings": {
+        "editorMachineTranslateEnabled": true,
+        "project": {
+           "businessUnits": [
+              {
+                 "id":5,
+                 "name":"BU Name"
+              }
+           ]
+        }
+     }
+     "clients": [],
+     "domains": [],
+     "subDomains": []
+   }
+</pre>
+<h3><span id="Get_By_User_Name" class="mw-headline">Get By User Name</span></h3>
+<pre><strong>action: api/v3/user/getByUserName</strong>
+    token                       string
+    userName                    string
+
+<strong>response: JSON</strong>
+ see user/get above
+</pre>
+<h3><span id="List_Users" class="mw-headline">List Users</span></h3>
+<pre><strong>action: api/v3/user/list</strong>
+    token                       string
+    page                        integer                              O(0)
+    user                        list(domain(User))                   O
+    includeDeleted              boolean                              O(false)
+    userName                    string                               O
+    email                       string                               O
+
+<strong>response: JSON</strong>
+   [
+     {
+        ...       // see user/get API
+     }
+   ]
+</pre>
+<h3><span id="Send_Login_Info" class="mw-headline">Send Login Info</span></h3>
+<pre><strong>action: api/v3/user/sendLoginInfo</strong>
+    token                       string
+    user                        domain(User)
+
+<strong>response: empty</strong>
+</pre>

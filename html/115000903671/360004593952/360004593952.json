@@ -1,0 +1,29 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2018-06-07T12:42:11Z",
+    "draft": false,
+    "edited_at": "2019-05-14T07:51:12Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/360004593952-Markdown-Files",
+    "id": 360004593952,
+    "label_names": [
+        "MD",
+        "markdown",
+        "_RWD"
+    ],
+    "locale": "en-us",
+    "name": "Markdown Files",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 97,
+    "promoted": false,
+    "section_id": 115000903671,
+    "source_locale": "en-us",
+    "title": "Markdown Files",
+    "updated_at": "2019-05-14T07:51:12Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360004593952-Markdown-Files.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

@@ -1,0 +1,14 @@
+<p>API returns a paging info in following form: "paging": { "total": 1, "page": 0, "pages": 1 }</p>
+<div class="customer_history_ticket_qna_answer a-ticket-meat">
+<p>The result says that there is a total of "1 page" and that the results shown apply to page 0 in this case.</p>
+<p><br> So "page" is where you are and "pages" is the total number of pages.<br> The results are always shown by 50 items, so you can see something like:</p>
+<div class="alert alert-green">
+<pre>{<br>
+    "paging": {<br>
+    "total": 100000,<br>
+    "page": 0,<br>
+    "pages": 2000<br>
+    },</pre>
+</div>
+</div>
+<div class="a-ticket-footer">"Total" means total items or entries, not total pages.</div>

@@ -1,0 +1,61 @@
+<p>Here you can find some frequently asked questions and a few tips to help you with our API calls.<br> You can <a href="https://cloud1.memsource.com/web/organization/signup?e=DEVELOPER" target="_blank" rel="noopener">sign up</a> for our free <a href="http://wiki.memsource.com/wiki/Memsource_Editions#Developer_Edition" target="_blank" rel="noopener">Developer edition</a> to test our API.<br> <br> API call can be sent directly from webrowser as URL:<br> <span style="font-size: 11px;">https://cloud.memsource.com/web/api/v2/project/create?token=30-d987&amp;name=NewProject&amp;sourceLang=en&amp;targetLang=de&amp;targetLang=en</span><br> Or you can use one of the free tools offered on the internet - for example <a href="https://chrome.google.com/webstore/search/postman?hl=en" target="_blank" rel="noopener">Chrome Postman</a>.</p>
+<h4><strong>API documentation</strong></h4>
+<p>You can find the documentation <a href="https://wiki.memsource.com/wiki/Memsource_API" target="_blank" rel="noopener">here</a>.Please pay attention to <a href="https://wiki.memsource.com/wiki/Memsource_API#Synchronous_APIs" target="_blank" rel="noopener">Synchronous</a> and <a href="https://wiki.memsource.com/wiki/Memsource_API#Asynchronous_APIs" target="_blank" rel="noopener">Asynchronous</a> calls. Check out the <a href="https://wiki.memsource.com/wiki/Memsource_API#Data_Types" target="_blank" rel="noopener">Data types</a> and <a href="https://wiki.memsource.com/wiki/API_Error_Codes" target="_blank" rel="noopener">Error codes</a>.<br> <br> Optional parameters are marked with "O". Default values are in ( ) brackets:</p>
+<p>page  O (0)</p>
+<p>parameter page is optional and if not used, the page 0 (the first page) will be used.</p>
+<h4><strong>API versions</strong></h4>
+<p>Whenever a new version of API is added, the old version is still valid and available. The APIs are marked (v1, v2). Even deprecated APIs are still supported. However it is recommended to update your code from time to time.<br>  </p>
+<h4><strong>Authentication</strong></h4>
+<p>API uses tokens, which are sent with every API call. Tokens are valid 24 hours. The same login (username and password) can be used for API and for working directly on Cloud (via web browser). OAuth 2.0 is also supported.<br>  </p>
+<h4><strong>How to Pre-translate non-empty and locked segments</strong></h4>
+<p>As a default, the <a href="http://wiki.memsource.com/wiki/Job_API_v6#Pre-translate" target="_blank" rel="noopener">Pre-translate API call</a> only translate empty segments. If you need to translate segments which have some content in target, are confirmed or even locked, you have to use parameter 'overwrite' (for translating non-empty, but not locked segments) and for locked segment you need to also use parameter 'segmentFilter'. So to pre-translate all segments in job, including already translated, confirmed and locked segments, the parameters would be: <strong>overwrite=1&amp;segmentFilter=LOCKED&amp;segmentFilter=NOT_LOCKED</strong><br>  </p>
+<h4><strong>File parameter in CreateJob API</strong></h4>
+<p>The file data type is used to post binary data - see <a href="http://wiki.memsource.com/wiki/File_Data_Type" target="_blank" rel="noopener">more details</a> in our documentation. Only one file can be uploaded in one call, but you can use ZIP file to upload more jobs.The best practice for creating jobs:</p>
+<ol>
+<li>You should always call the Memsource job/create API for just a single file</li>
+<li>Then you should wait for Memsource to return a response (multiple JobPart IDs can be returned if multiple job parts are created - for example in project with workflow steps).</li>
+<li>After Memsource responds with a success message, you can be sure the file got imported.</li>
+<li>At this point you can launch any operation with the file (e.g. analyze the file, pre-translate the file...) or you can go ahead to import another file.<br>  </li>
+</ol>
+<h4><strong>Importing, pre-translating and analyzing large quantity of files</strong></h4>
+<p>This is best done with our <a href="http://wiki.memsource.com/wiki/Memsource_API#Asynchronous_APIs" target="_blank" rel="noopener">Asynchronous API.</a></p>
+<ol>
+<li>Create jobs,</li>
+<li>Keep checking the status of Asynchronous Request until you get the "OK" response - first after 5 seconds and then increase each interval by 1.5 times</li>
+<li>Run Analyse</li>
+<li>Call repeatedly Asynchronous Request for "OK" response</li>
+<li>Run pre-translate</li>
+<li>Call repeatedly Asynchronous Request for "OK" response<br>  </li>
+</ol>
+<h4> <strong>Query parameter in <a href="https://www.memsource.com/en/translation-memory-software">Translation Memory</a> API</strong>
+</h4>
+<p>Query is any string you want to search the TM for. No special syntax is supported, regular expressions are not supported. Tags in the query are written simply as {1&gt; or {1}.<br>  </p>
+<h4><strong>Parameters in Spellcheck API</strong></h4>
+<p>referenceText is the text of the source segment, suggestions are the suggested spelling alternatives of a misspelled word.<br>  </p>
+<h4><strong>Task versus JobPart</strong></h4>
+<p>A <strong>task </strong>represents one file in one target language. Jobs in different workflow level will have the same <strong>task </strong>id but different <strong>jobPart</strong> id. Jobs split into more jobs will again have the same <strong>task</strong> id but different <strong>jobPart </strong>id. See more details in our <a href="http://wiki.memsource.com/wiki/API_Data_Types#Task_vs._Job_Part" target="_blank" rel="noopener">API Documentation</a>.<br>  </p>
+<h4>
+<strong>Search in TM calls</strong>  </h4>
+<ul>
+<li>
+<strong>Search</strong> is used when you know the TM ID.</li>
+<li>
+<strong>Search by Task</strong> is used in Memsource Editor to get TM results for the CAT pane.</li>
+<li>
+<strong>Search Segment By Task</strong> is used when searching for a segment and when you know the preceding and the following segment.</li>
+<li>Response <strong>order</strong> - the first match in the response is the best match.</li>
+<li>Search <strong>encoding</strong> has to always be UTF-8<br>  </li>
+</ul>
+<h4><strong>Assign job with workflow</strong></h4>
+<p>One job has different jobTask ID in different workflow step. In in ListByProject there is workflowLevel integer O(1) and that specifies which workflow step will be listed.<br>  </p>
+<h4><strong>UploadBilingualFile</strong></h4>
+<p>This API call will not only upload the file, but also save confirmed segments into TM. Can be used in a sense of "update segment" via API.<br>  </p>
+<h4><strong>JobPart ID</strong></h4>
+<p>the ID in JSON response for Job APIs is always ID of JobPart.<br>  </p>
+<h4><strong>WorkflowStep field returned by getTransMemories</strong></h4>
+<p>There are three different scenarios:  </p>
+<ul>
+<li>Project has no workflow steps - workflowStep is <strong>null</strong>.</li>
+<li>Project has workflow steps and a TM is selected for all workflow steps - workflowStep is <strong>null</strong>.</li>
+<li>Project has workflow steps and a TM is selected for one or more workflow steps - workflowStep is<strong> not null</strong>. If the same TM is used in multiple workflow steps, the TM will be listed multiple times in the response.</li>
+</ul>

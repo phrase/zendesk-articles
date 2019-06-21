@@ -1,0 +1,27 @@
+<h2>New Features and Improvements</h2>
+<p><strong>New Shared Project Icon</strong></p>
+<p>Shared Projects can now be distinguished by a reworked icon (both in the project and in the list of projects). </p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360018073811/New_Shared_Projects_Icon.png" alt="New_Shared_Projects_Icon.png"></p>
+<p> </p>
+<p><strong>API Call To Retrieve Default File Import Settings</strong></p>
+<p>The <strong>File Import Settings</strong> defined under <em>Project Settings </em>in<strong> Setup</strong> can be considered the default ones for any project not created via a Project Template. It is now possible to retrieve these settings using the Import Settings REST API. To find out more, please refer to our <a href="https://cloud.memsource.com/web/docs/api#operation/getImportSettings_1">REST API Documentation</a>.</p>
+<p> </p>
+<p><strong>Profile UUID in Systran PNMT Settings</strong></p>
+<p>Using the <em>Profile</em> field, users of Systran PNMT can now select a specialized engine to be used in Memsource.</p>
+<h2>Fixed Bugs</h2>
+<ul>
+<li>Using a Hindi spellchecker caused the Hindi font to break. This issue has now been fixed.</li>
+<li>We have resolved a bug where participants in a shared scenario saw their organizations' usernames displayed for actions performed by other members of the supply chain. This has now been fixed and the appropriate user (the one who has performed the action) is now displayed. If the user belongs to a different organization, an ID is displayed instead. </li>
+<li>Jobs created by a Job Owner were incorrectly displayed in the Project Owner's profile. This bug has now been fixed.</li>
+<li>Importing a ZIP file via the REST APIs will no longer result in a <em>500 Internal Error</em> being returned to the requestor. </li>
+<li>When sending the login information using the <strong>Email Login</strong> button, users set as CC or BCC did not receive these notifications. This bug has now been fixed.</li>
+<li>If <strong>Ignore Tag Metadata </strong>was used in combination with <strong>Penalize multiple 101% matches</strong>, an incorrect pre-translation index was given to these segments during pre-translation. These segments will no longer be pre-translated if the threshold is set to 101%. </li>
+<li>Due to a bug, it was not possible to assign TMs for language variations of the same parent language (e.g. for EN_GB and EN_US). This bug has now been fixed.</li>
+<li>A font change in the Email window has been reverted back to the normal weight.</li>
+<li>It was not possible to save REGEXP QA settings. This has now been fixed.</li>
+<li>Automatic Email with Login Credentials is now correctly sent even for users imported from an XLSX table.</li>
+<li>Automatic notifications to Linguists were sometimes sent even when the Linguist was assigned later or the status changed from <em>Completed</em>. This has now been resolved. </li>
+</ul>
+<p> </p>
+<p><strong>Have you come across any other bugs?</strong></p>
+<p>Thank you for letting our <a href="https://help.memsource.com/hc/en-us/requests/new" rel="noopener">Support team</a> know.</p>

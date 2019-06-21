@@ -1,0 +1,39 @@
+<p>Sitecore is a web content management service that helps users build and manage their websites. Using this connector, you'll be able to import specific fields into Memsource for translation either by using <a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation" target="_self">Automatic Project Creation</a> or by importing content manually.</p>
+<h2>Supported Field Types (Translatable by Memsource):</h2>
+<p>Memsource supports the following Sitecore field types:</p>
+<ul>
+<li>Single-Line Text</li>
+<li>Rich text</li>
+<li>Multi-Line Text</li>
+<li>HTML</li>
+<li>text</li>
+<li>Name Value List</li>
+<li>General Link</li>
+<li>Image</li>
+<li>Checklist (referenced items are included in the job if not translated)</li>
+<li>Multilist (referenced items are included in the job if not translated)</li>
+<li>Treelist (referenced items are included in the job if not translated)</li>
+</ul>
+<p><strong>Note:</strong> The <em>Default Language</em> set in your Sitecore server has to be the same language as the source language in your Memsource account.</p>
+<h2>Set up the Connector in Sitecore</h2>
+<p>In order to set up the connector, you'll need to have your Sitecore Administrator <a href="https://doc.sitecore.com/developers/91/platform-administration-and-architecture/en/enable-https-for-core-roles.html" target="_self">enable SSL</a> and enable Rest API.</p>
+<p>To enable Rest API, you'll need to do the following:</p>
+<p>In the file <code>{SITECORE_ROOT}Website\App_Config\Include\Sitecore.ItemWebApi.config</code> (e.g.: <code>C:\inetpub\wwwroot\SiteCore\Website\App_Config\Include\Sitecore.ItemWebApi.config</code>) set <code>itemwebapi.mode</code> and <code>itemwebapi.access</code>.</p>
+<p>After this, restart the server/service:</p>
+<pre>&lt;site name="website"&gt;
+    &lt;patch:attribute name="itemwebapi.mode"&gt;StandardSecurity&lt;/patch:attribute&gt;
+    &lt;patch:attribute name="itemwebapi.access"&gt;ReadWrite&lt;/patch:attribute&gt;
+    &lt;patch:attribute name="itemwebapi.allowanonymousaccess"&gt;false&lt;/patch:attribute&gt;
+&lt;/site&gt;
+</pre>
+<p>After setting up the Rest API, you'll need to set the security policies. You'll do this in the following way:</p>
+<p>In the file <code>C:\inetpub\wwwroot\SiteCore\Website\App_Config\Include\Sitecore.Services.Client.config</code></p>
+<p>set the value <code>Sitecore.Services.SecurityPolicy</code></p>
+<p>from <code>Sitecore.Services.Infrastructure.Web.Http.Security.ServicesLocalOnlyPolicy, Sitecore.Services.Infrastructure</code></p>
+<p>to <code>Sitecore.Services.Infrastructure.Web.Http.Security.ServicesOnPolicy, Sitecore.Services.Infrastructure</code>.</p>
+<p>Once you've done this, log in to Memsource.</p>
+<h2>Set up the Connector in Memsource</h2>
+<p>In Memsource, navigate to Setup and scroll down to the <em>Integrations </em>section. Click on <strong>Connectors. </strong>After clicking on <strong>New,</strong> you can choose the connector you wish to create. Give it a name and change the Type to <em>Sitecore.</em> </p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360029518371/mceclip0.png" alt="mceclip0.png"></p>
+<p>In the <em>Sitecore URL </em>field, enter the URL you see at the top of the page when you log into Sitecore. Enter your Sitecore user name and Sitecore password in the <em>User name </em>and <em>Password </em>fields, respectively. Then, change the source language. Remember that this has to be the same as the <em>Default language </em>in your Sitecore account.</p>
+<p>Click on <strong>Test connection. </strong>If you've entered your information correctly, you will see a small check mark appear next to the <strong>Test connection </strong>button.<strong> </strong>Then, click <strong>Save.</strong> </p>

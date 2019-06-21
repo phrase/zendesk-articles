@@ -1,0 +1,146 @@
+<h3><span id="Create_New_Project" class="mw-headline">Create a New Project</span></h3>
+<pre><strong>action: api/v2/project/create</strong>
+    token                       string
+    name                        string                             
+    sourceLang                  locale
+    targetLang                  list(locale)
+    client                      string                             O
+    domain                      string                             O
+    due                         datetime                           O
+    machineTranslateSettings    domain(MachineTranslateSettings)   O
+    workflowStep                list(domain(WorkflowStep))         O
+
+<strong>response: JSON</strong>
+    {
+      "id": 238                 // id of the new project
+    }
+</pre>
+<h3><span id="Delete_Project" class="mw-headline">Delete Project</span></h3>
+<pre><strong>action: api/v2/project/delete</strong>
+    token                       string
+    project                     domain(Project)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Project_Info" class="mw-headline">Get Project Info</span></h3>
+<pre><strong>action: api/v2/project/get</strong>
+    token                       string
+    project                     domain(Project)
+
+<strong>response: JSON</strong>
+    {
+      "id": 238,
+      "status": "Completed",
+      "sourceLang": "en",
+      "targetLangs": [ "de", "fr" ]
+    }
+</pre>
+<h3><span id="Set_Status" class="mw-headline">Set Status</span></h3>
+<pre><strong>action: api/v2/project/setStatus</strong>
+    token                       string
+    project                     domain(Project)
+    status                      enum(ProjectStatus)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Set_Translation_Memories" class="mw-headline">Set Translation Memories</span></h3>
+<pre><strong>action: api/v2/project/setTransMemories</strong>
+    token                       string
+    project                     domain(Project)
+    readTransMemory             list(domain(TransMemory))
+    writeTransMemory            domain(TransMemory)             // write translation memory must be included in the read translation memories, too
+    penalty                     list(double)               O    // a list of penalties for each read translation memory
+    targetLang                  locale                     O    // set translation memories only for the specific project target language
+    workflowStep                domain(WorkflowStep)       O    // set translation memories only for the specific workflow step
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Translation_Memories" class="mw-headline">Get Translation Memories</span></h3>
+<pre><strong>action: api/v2/project/getTransMemories</strong>
+    token                       string
+    project                     domain(Project)
+
+<strong>response: JSON</strong>
+   [
+     {
+       "writeMode":true,
+       "transMemory":{
+         "id":1,
+         "targetLangs":[
+           "de"
+         ],
+         "sourceLang":"en",
+         "name":"transMem"
+       },
+       "targetLang":"de",
+       "penalty":0,
+       "readMode":true,
+       "workflowStep":null
+     }
+   ]
+</pre>
+<h3><span id="Set_Term_Bases" class="mw-headline">Set Term Bases</span></h3>
+<pre><strong>action: api/v2/project/setTermBases</strong>
+    token                       string
+    project                     domain(Project)
+    readTermBase                list(domain(TermBase))
+    writeTermBase               domain(TermBase)                // write term base must be included in the read term bases, too
+    targetLang                  locale                     O    // set term bases only for the specific project target language
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Term_Bases" class="mw-headline">Get Term Bases</span></h3>
+<pre><strong>action: api/v2/project/getTermBases</strong>
+    token                       string
+    project                     domain(Project)
+
+<strong>response: JSON</strong>
+   [
+     {
+       "writeMode":true,
+       "termBase":{
+         "id":1,
+         "langs":[
+           "de", "en"
+         ],
+         "name":"termBase"
+       },
+       "targetLang":"de",
+       "readMode":true,
+       "workflowStep":null
+     }
+   ]
+</pre>
+<h3><span id="List_Projects" class="mw-headline">List Projects</span></h3>
+<pre><strong>action: api/v2/project/list</strong>
+    token                       string
+    page                        integer           O(0)
+
+<strong>response: JSON</strong>
+ [
+   {
+     "id":1,
+     "name":"en -&gt; cs",
+     "status":"NEW",
+     "sourceLang":"en",
+     "targetLangs":[
+       "cs"
+     ],
+     "dateDue":null,
+     "dateCreated":"2013-05-10T15:31:31Z",
+     "note":""
+   }
+ ]
+</pre>
+<h3><span id="Edit_Access_.26_Security_Settings" class="mw-headline">Edit Access &amp; Security Settings</span></h3>
+<pre><strong>action: api/v2/project/editAccessSettings</strong>
+    token                                 string
+    project                               domain(Project)
+    translationMemoryDownloadEnabled      boolean          O
+    webEditorEnabled                      boolean          O
+    webEditorEnabledForLinguists          boolean          O
+    showUserDataToLinguists               boolean          O
+    emailNotifications                    boolean          O
+
+<strong>response: empty</strong>
+</pre>

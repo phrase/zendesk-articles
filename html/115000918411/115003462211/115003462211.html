@@ -1,0 +1,84 @@
+<p>The article below will provide a simple API scenario with sample API calls and how to chain them together to complete a simple action using only Memsource APIs.</p>
+<p>Each section includes a link to the precise API call where additional information can be found, as well as a sample API call to illustrate a simple scenario. However, the options that can be set via the APIs are quite extensive. Please consult the respective sections of <a href="https://wiki.memsource.com/wiki/Memsource_API">our API documentation</a> to find more about all the possible options available.</p>
+<p>All sample responses include only the information relevant for this scenario. For the complete Responses and the range of information they can contain, please refer to our documentation.<br>To test this scenario, you can use the Google Chrome extension called <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en">Postman</a> (or a separate application).</p>
+<h2>Description</h2>
+<p>The scenario discussed in this article will cover the following process:<br>The user will authenticate himself to be able to perform the following action (the API equivalent of logging in). The next step will be the creation of a simple project, uploading of jobs, and assignment of a Linguist, including sending an email notification. The actual translation work will be performed outside of the API scenario (in any of the Editors). Once the assignment is finished (marked as <em>Completed by Linguist</em>), the scenario will continue by changing the project's status to <em>Completed</em> and downloading of the finished document from the project.</p>
+<h2>Method</h2>
+<p>Both GET and POST methods are supported in Memsource calls; you can choose what is more suitable for you—see the general <a href="https://help.memsource.com/hc/en-us/articles/115003462211-Memsource-Legacy-API-How-to-use-Memsource-APIs" target="_blank" rel="noopener">Memsource API User manual</a> for more information.</p>
+<p>You can use either of the following and send the parameters in the body.</p>
+<p>GET <a href="https://cloud.memsource.com/web/api/v3/project/list?token=lJtc9C8srT...">https://cloud.memsource.com/web/api/v3/project/list?token=lJtc9C8srT...</a><br>POST <a href="https://cloud.memsource.com/web/api/v3/project/list">https://cloud.memsource.com/web/api/v3/project/list</a></p>
+<p> </p>
+<p><strong>Note:</strong> The Post method can combine parameters in the URL and the body. For example, the token can be part of the URL and other parameters can be sent in the body.<br> <img src="https://help.memsource.com/hc/article_attachments/360023102952/mceclip1.png" width="602" height="267"></p>
+<p>Please be aware that, for example, <em>"create job"</em> needs the POST method to send the file in the body (This is not available with the GET method).</p>
+<h2>How to Use Postman to Test APIs</h2>
+<p>The screenshot below demonstrates how to orient yourself in the Postman environment and how to use it to test the API scenario described in this article.</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360023102932/mceclip0.png" width="603" height="340"></p>
+<h2>Step 1: Authentication</h2>
+<p>There are 2 possible ways to authenticate: </p>
+<ol>
+<li>
+<strong>Authentication API call:</strong> this call generates an authentication token that is valid for 24 hours. The token then needs to be inserted into all the following APIs. This validates the users and allows them to perform any other actions in the account.</li>
+<li>
+<strong>oAuth 2.0: </strong><a href="https://help.memsource.com/hc/en-us/articles/360001398672-Memsource-REST-API-Authentication#OAuth_2.0">oAuth 2.0</a> allows users to validate a certain application in Memsource, which consequently allows its continuous communication with Memsource (without the need for further authentication).</li>
+</ol>
+<p>In the scenario we're discussing here, we will be using the first option—that is, using the authentication token. This token is necessary for all the following API calls and will not be listed in the example parameters.<br> <br>To authenticate yourself, use the <a href="https://wiki.memsource.com/wiki/Authentication_API_v3#Login">api/v3/auth/login</a> API call with appropriate parameters (in this case username and password).</p>
+<ul>
+<li>
+<strong>Example Call:</strong> https://cloud.memsource.com/web/api/v3/auth/login?userName=USERNAME&amp;password=PASSWORD</li>
+<li>
+<strong>Response: </strong>Authentication token.</li>
+</ul>
+<h2>Step 2: Project Creation, Import, and Assignment</h2>
+<p>Projects are created using the <a href="https://wiki.memsource.com/wiki/Project_API_v3#Create_New_Project">api/v3/project/create</a> API call, with the mandatory parameters of <strong>name, sourceLang, </strong>and<strong> targetLang.</strong></p>
+<ul>
+<li>
+<strong>Example Call:</strong> https://cloud.memsource.com/web/api/v3/project/create?token=AUTHENTICATION TOKEN&amp;name=PROJECT&amp;sourceLang=ja&amp;targetLang=en</li>
+<li>
+<strong>Response:</strong> Project UID (e.g. KmtNyVlz1skQd2aMVEipp7)</li>
+</ul>
+<p>With the UID obtained in the previous call, it is now possible to add new jobs directly into this newly created project using <a href="https://wiki.memsource.com/wiki/Job_API_v8#Create_New_Job">api/v8/job/create</a> with the mandatory parameters of <strong>project, targetLang,</strong> and <strong>file</strong>. When importing a file into a project with the api/v8/job/create endpoint, you don't need to set the source language; it will be automatically set according to the source language set in the project. You will only need to specify the <strong>targetLang</strong>.</p>
+<p>This call can also include <strong>linguist</strong> as an optional parameter (as used in the example). If this parameter is not included, a separate call (<a href="https://wiki.memsource.com/wiki/Job_API_v8#Edit_Job">api/v8/job/edit</a>) needs to be used for the purpose of task assignment. The ID of the Linguist that is inserted in the call can be obtained in multiple ways:</p>
+<ol>
+<li>While in Memsource, go to <strong>Users </strong>and click on the name of the Linguist you wish to assign via the API. The ID will be a part of the URL displayed in the address bar (e.g. https://cloud.memsource.com/web/user/show/<strong>94573</strong>).</li>
+<li>Use the <a href="https://wiki.memsource.com/wiki/User_API_v3#List_Users">api/v3/user/getByUserName</a> API call, with the parameter <strong>username</strong>.</li>
+<li>Use the <a href="https://wiki.memsource.com/wiki/User_API_v3#List_Users">api/v3/user/list</a> API call. This API call does not require any specific parameters, and it will return a list of all users in the account. The response contains both usernames and IDs.</li>
+</ol>
+<ul>
+<li>
+<strong>Example Call:</strong> https://cloud.memsource.com/web/api/v8/job/create?token=AUTHENTICATION TOKEN&amp;targetLang=en&amp;project=KmtNyVlz1skQd2aMVEipp7&amp;linguist=94573</li>
+<li>
+<strong>Response:</strong> JobPart ID (e.g. 62399196)</li>
+</ul>
+<p>The JobPart ID is then used in <a href="https://wiki.memsource.com/wiki/Job_API_v8#Notify_Assigned_Linguist">api/v8/job/notifyAssignedLinguist</a>, along with the <strong>emailTemplate</strong> parameter, which represents the ID of the email template that should be used. This can be obtained from the Memsource UI or using <a href="https://wiki.memsource.com/wiki/Email_Template_API_v2">api/v2/emailTemplate/list</a>.</p>
+<ul>
+<li>
+<strong>Example Call:</strong> token=AUTHENTICATION TOKEN&amp;jobPart=62399196&amp;emailTemplate=7303</li>
+<li>
+<strong>Response:</strong> Empty</li>
+</ul>
+<p>This is where the translator would start to work in his/her account, in the same way as if the Memsource UI was used. After the job is finished, the PM in charge would receive a notification and the 3rd part of the scenario can be initiated. It is also possible to wait for a callback (please see more details about <a href="https://help.memsource.com/hc/en-us/articles/115003695152-Memsource-Legacy-API-Webhooks">webhooks</a>) and initiate the 3rd part automatically, but we are listing only a simple example scenario.</p>
+<h3>Importing Multiple Jobs:</h3>
+<p>The fastest way to import multiple jobs is to use <a href="https://help.memsource.com/hc/en-us/articles/115003694992-API-Reference#Asynchronous_APIs_1" rel="nofollow noreferrer"><strong>asynchronous calls</strong>.</a></p>
+<ol>
+<li>Create your jobs.</li>
+<li>Keep checking the status of <strong>Asynchronous Request</strong> until you get the "OK" response. The first check will be after 5 seconds, and then the interval will increase by 1.5 each time.</li>
+<li>Run <strong>Analyse</strong>.</li>
+<li>Repeatedly call <strong>Asynchronous Request</strong> for the "OK" response.</li>
+<li>Run <strong>Pre-translate</strong>.</li>
+<li>Again, repeatedly call <strong>Asynchronous Request</strong> for the "OK" response.</li>
+</ol>
+<h2>Part 3: Project Completion and Download</h2>
+<p>Once the job (in this case the only one in the project) is completed, it is possible to use <a href="https://wiki.memsource.com/wiki/Project_API_v3#Set_Status">api/v3/project/setStatus</a> with the mandatory parameters <strong>project </strong>and<strong> status</strong> to change the status of the entire project to <em>Completed</em>. This change is a manual one. However, if <a href="https://help.memsource.com/hc/en-us/articles/115003680771-Projects#Project_Status_Automation_1">Project Status Automation</a> is used, the status will be changed automatically. It is also possible to wait for a <a href="https://help.memsource.com/hc/en-us/articles/115003695152-Memsource-Legacy-API-Webhooks">webhook</a>, and initiate other actions based on the callback received.</p>
+<ul>
+<li>
+<strong>Example Call:</strong> https://cloud.memsource.com/web/api/v3/project/setStatus?token=AUTHENTICATION TOKEN&amp;project=KmtNyVlz1skQd2aMVEipp7&amp;status=COMPLETED</li>
+<li>
+<strong>Response:</strong> Empty</li>
+</ul>
+<p>Once the project is completed (or even before), the API call <a href="https://wiki.memsource.com/wiki/Job_API_v8#Get_Completed_File">api/v8/job/getCompletedFile</a> with the parameter j<strong>obPart </strong>can be used to retrieve the translated content.</p>
+<ul>
+<li>
+<strong>Example Call:</strong> https://cloud.memsource.com/web/api/v8/job/getCompletedFile?token=AUTHENTICATION TOKEN&amp;jobPart=62399196</li>
+<li>
+<strong>Response:</strong> Binary response with the completed file itself</li>
+</ul>

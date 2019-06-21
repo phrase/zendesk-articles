@@ -1,0 +1,48 @@
+<p>When working with 101% matches from a TM, it is possible to choose what context will be saved with each term.</p>
+<p>Generally, the previous and next segments are saved with the translated segment. However, in some file formats, the Segment key is more important than context (YAML, JSON, etc.). When importing these formats, you can select <em>Automatic</em> or <em>Segment key</em> to change the <strong>Context Type</strong> setting. Or, you can select <strong>No context. </strong>If you select <strong>No context, </strong>you will always have only one translation of the source, regardless of the context. It is also possible to optimize the TM matching feature when default settings are not sufficient.</p>
+<h3>File Import Settings</h3>
+<p>The <strong>Context and Optimization</strong> feature is set for each file imported as a new job in the <strong>File Import Settings</strong>. Please see our article on <a href="https://help.memsource.com/hc/en-us/articles/360002825692" rel="noopener">Creating a new job</a> for more details.</p>
+<p><img class="img350" title="TM Match Context and Optimization" src="https://www.dropbox.com/s/urasvkcx8qb9k8p/FIS_TM_Match_Context.png?raw=1" alt="FIS_TM_Match_Context.png"></p>
+<h3>Context Type</h3>
+<p><img class="img350" title="types of TM Match Context" src="https://www.dropbox.com/s/29q2nzv7ep8rosc/FIS_TM_Match_ContextType.png?raw=1" alt="FIS_TM_Match_ContextType.png"></p>
+<ul>
+<li>
+<strong>Automatic:</strong> The context type will be selected based on the file type.</li>
+<ul>
+<li>Files imported with the context type "Segment Key": ANDROID_STRING, CHROME_JSON, DESKTOP_ENTRY, DTD, JAVA PROPERTIES, JOOMLA_INI, JSON, MAC_STRINGS, MOZILLA_PROPERTIES, PHP, PLIST, RESJSON, RESX, TS, XML_PROPERTIES, YAML</li>
+<li>Files imported with the context type "No context": PO</li>
+<li>Other formats will be imported with the context type "Previous and next segment"</li>
+</ul>
+<li>
+<strong>Previous and next:</strong> Both the previous and next segment will be saved as context.</li>
+<li>
+<strong>Segment key:</strong> The segment key or the segment ID will be saved as context. This can be specified for the above mentioned "Segment key" file formats and also customized for:</li>
+<ul>
+<li>CSV, XML, Multilingual XML and Multilingual MS Excel files.</li>
+</ul>
+<li>
+<strong>No context: </strong>No context will be saved and translation will be always overwritten by the newest version.</li>
+</ul>
+<h3>TM Matching Optimization</h3>
+<p><img class="img350" title="TM Match Optimization" src="https://www.dropbox.com/s/ch11l4i13nlqfy2/FIS_TM_MatchOptimization.png?raw=1" alt="FIS_TM_MatchOptimization.png"></p>
+<ul>
+<li>
+<strong>P</strong><strong>revious O</strong><strong>R next segment context as 101%</strong>
+</li>
+<ul>
+<li>Regardless of the context type, if a match with the TM context has the same previous or next segment, it will be offered as 101% match. This will be especially useful when transferring from "Previous and next" context type to "Segment key".</li>
+</ul>
+<li>
+<strong>Ignore tag metadata </strong>(enabled by default)</li>
+<ul>
+<li>This option has also been set as the default for all existing projects and project templates to provide the best possible matching rate for segments.</li>
+</ul>
+<li><strong>Penalize multiple 101% TM matches by 1%</strong></li>
+<ul>
+<li>Generally, the newest 101% match is found and displayed, but with this option, when more then one 101% with a different target (translation) is found, then all 101% matches are displayed as 100% with an arrow signaling the penalization.</li>
+<li>
+<strong>In Pre-translate:</strong> when the Pre-translation threshold is set to 101%, segments with multiple matches will not be pre-translated.</li>
+<li>
+<strong>In Analysis:</strong> segments with multiple 101% matches will be counted as 100% matches.</li>
+</ul>
+</ul>

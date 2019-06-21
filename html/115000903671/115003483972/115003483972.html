@@ -1,0 +1,59 @@
+<h2>What is Segmentation?</h2>
+<p>The segmentation process will split the original text into smaller parts—such as sentences or titles—to make it easier to retrieve the previously translated text from a translation memory. The default segmentation rules in Memsource correspond with specifics of each supported language and can be customized if needed.</p>
+<p>Importing Jobs with poor segmentation (e.g. poorly formatted Word files) or applying customized segmentation can affect retrieved TM match values. Such an example can be seen in the picture below. The sentence in the second and third segments was manually broken into two lines. As you can see, the <em>CAT</em> Pane shows only a 63% match because the second half of the sentence is missing in the second segment.</p>
+<p><img class="img350" src="https://help.memsource.com/hc/article_attachments/360013750931/segmentation_match.jpg" alt="segmentation_match.jpg"></p>
+<h2>Customizing the Segmentation Rules</h2>
+<p>There are two types of segmentation rules: <em>abbreviations </em>to the XLSX file and the <em>regular expression </em>of SRX files.</p>
+<p>To edit the segmentation rules, you need to download the default rules into an external file, edit it, and upload the file as new rules. You can then use these new rules to new jobs.</p>
+<h3>Download the Default Segmentation Rules</h3>
+<p>In the main <strong>Setup, </strong>go to the<strong> </strong><em>Project Settings section </em>and select<strong> Segmentation.</strong> Download the default segmentation rules for the specific language (either as an abbreviation list in XLSX or as regular expression rules in an SRX file).</p>
+<p><img class="img250" src="https://help.memsource.com/hc/article_attachments/360013736412/segmentation_setup.png" alt="segmentation_setup.png"></p>
+<h3>Edit the Downloaded Files</h3>
+<p>Once you have the file downloaded, you'll be able to edit it. This will be done in two different ways, depending on whether you downloaded an XLSX file or an SRX file.</p>
+<h4>Editing Abbreviations in an XLSX File</h4>
+<p>This option allows you to specify abbreviations for individual languages, after which a new segment should not be created. The XLSX file must have 2 columns with no heading:</p>
+<ul>
+<li>The first column in the XLSX file specifies an abbreviation.</li>
+<li>The second column further specifies the segmentation behavior:</li>
+<ul>
+<li>
+<strong>ABBR_UPPER_NUM</strong> means that a new segment will <em>not</em> be created if the abbreviation is followed by whitespace and then by a number or word with the first letter in the upper case or a symbol (math symbols, currency signs, dingbats, box-drawing characters, etc.).</li>
+<li>
+<strong>ABBR_NUM</strong> means that a new segment will <em>not</em> be created if the abbreviation is followed by whitespace and then by a number.</li>
+</ul>
+<li>Once you've made the desired changes, save the edited XLSX.</li>
+</ul>
+<p><img class="img250" src="https://help.memsource.com/hc/article_attachments/360013736252/Segmentation_abbrv.png" alt="Segmentation_abbrv.png"></p>
+<h4>Editing Regular Expressions in an SRX File</h4>
+<p>Editing SRX files is a complex process suitable only for users experienced in using <a href="http://wiki.memsource.com/wiki/Regexp#Segmentation_rules" target="_blank" rel="noopener">Regular Expressions</a>. There are several rules that can be changed in an SRX file. You can, for example:</p>
+<ul>
+<li>Import text from Excel without segmentation. Here, one cell is equal to one segment.</li>
+<li>Import text with a new line in order to split one segment into two.</li>
+<li>Use a colon (or any other character) as a segment separator.</li>
+<li>Forbid the use of a semicolon (or any other character) as a segment separator.</li>
+<li>Removing an abbreviation from the list (the text will be segmented).</li>
+</ul>
+<p>Note that these rules are "character-based", meaning that only a single character can be used as segment separator. That is, a group of characters (for example &lt;p&gt;) cannot be used as segment separator.</p>
+<h4>Edit the SRX file:</h4>
+<ol>
+<li>Open the file in a text editor (for example Notepad ++ which is <a href="https://notepad-plus-plus.org/download/v6.9.2.html" target="_blank" rel="noopener">free for download</a>).</li>
+<li>Edit using <a href="http://wiki.memsource.com/wiki/Regexp#Segmentation_rules" target="_blank" rel="noopener">regular expressions</a> or remove the inner segmentation completely (see <a href="https://help.memsource.com/hc/en-us/articles/115003461611">this example</a>).<br> <img style="width: 500px; height: 221px;" src="https://help.memsource.com/hc/article_attachments/115004126152/import-680897.jpg" alt="">
+<ul>
+<li>&lt;rule break="no"&gt; is the list of rules, where the segment will not be broken. I.E. a list of abbreviations</li>
+<li>&lt;rule&gt; &lt;beforebreak&gt; is a regular expression for a character before a break (for example, at the end of a sentence ". ? ! :"). If you, for example, don't want segment text after a colon, simply delete : from every &lt;rule&gt; &lt;beforebreak&gt; code.</li>
+<li> &lt;rule&gt; &lt;afterbreak&gt; is a regular expression for a character after a break (for example, at the start of a new sentence—a space and capital letter).</li>
+</ul>
+</li>
+<li>Save the modified SRX file.</li>
+</ol>
+<h3>Upload the New Segmentation Rules to Memsource</h3>
+<ol>
+<li>Go to <strong>Setup</strong> and click <strong>Segmentation</strong> in the <em>Project Settings </em>section. Then, hit the <strong>New</strong> button.</li>
+<li>Select the <strong>Language,</strong> and assign a <strong>Name</strong> (e.g. "New Segment after Semicolon"). Then, choose the modified SRX file. Check the <strong>Primary</strong> checkbox only if you want to make the custom segmentation your primary segmentation for the language. Hit the <strong>Create</strong> button.</li>
+<li>If everything goes well, the message "The segmentation file has been uploaded successfully" will appear, and the new file will get listed on the Segmentation page.</li>
+</ol>
+<h2>Use New Segmentation Rules for Job Import</h2>
+<p>In order to use your new segmentation rules, go to your project and select the <strong>New </strong>button to create a new job. In <em>File Import Settings,</em> expand <em>Segmentation</em> and select your custom segmentation rule. Hit the <strong>Create</strong> button to add job(s) to your project, segmented with your custom segmentation rules.</p>
+<p> <img class="img350" src="https://help.memsource.com/hc/article_attachments/115004106211/import-680895.jpg" alt=""></p>
+<h2>Setting the Custom Segmentation as Default</h2>
+<p>If you set the new segmentation rule as <strong>Primary</strong> (in <strong>Setup</strong>), it will be automatically selected by default for all new jobs that will be imported for the source language in question. See details on <a href="https://help.memsource.com/hc/en-us/articles/360002825692-Creating-a-new-job#File_Import_Settings_1">File Import Settings</a> for more information. You can also set specific segmentation rules for specific projects by creating <a href="https://help.memsource.com/hc/en-us/articles/115003483952-Project-Templates">Project Templates</a>.</p>

@@ -1,0 +1,29 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2017-12-15T15:44:56Z",
+    "draft": false,
+    "edited_at": "2019-05-01T15:01:56Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003484772-Desktop-Editor-Error-Messages",
+    "id": 115003484772,
+    "label_names": [
+        "_RWD",
+        "troubleshooting",
+        "_addIMG"
+    ],
+    "locale": "en-us",
+    "name": "Desktop Editor Error Messages",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 23,
+    "promoted": false,
+    "section_id": 115000903871,
+    "source_locale": "en-us",
+    "title": "Desktop Editor Error Messages",
+    "updated_at": "2019-05-01T15:01:56Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003484772-Desktop-Editor-Error-Messages.json",
+    "user_segment_id": null,
+    "vote_count": 1,
+    "vote_sum": -1
+}

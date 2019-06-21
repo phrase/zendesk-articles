@@ -1,0 +1,56 @@
+<h3><span id="Create" class="mw-headline">Create</span></h3>
+<pre><strong>action: api/v2/projectTemplate/create</strong>
+    token                       string
+    project                     domain(Project)
+    name                        string
+
+<strong>response: JSON</strong>
+    {
+      "id": 145                 // id of the new template
+    }
+</pre>
+<h3><span id="List" class="mw-headline">List</span></h3>
+<pre><strong>action: api/v2/projectTemplate/list</strong>
+    token                       string
+    page                        integer           O(0)
+
+<strong>response: JSON</strong>
+    [
+      {
+        "targetLangs":[
+          "cs",
+          "de"
+        ],
+        "client":null,
+        "sourceLang":"en",
+        "subDomain":null,
+        "workflowSteps":[
+    
+        ],
+        "id":1,
+        "createdBy":{
+          "id":1,
+          "lastName":"test",
+          "email":"test@test.com",
+          "userName":"admin",
+          "role":"ADMIN",
+          "active":true,
+          "firstName":"admin"
+        },
+        "name":"project",
+        "owner":null,
+        "domain":null,
+        "dateCreated":"2014-09-22T08:05:25+0000",
+        "note":null,
+        "templateName":"template1"
+      }
+    ]
+</pre>
+<h3><span id="Delete_Project_Template" class="mw-headline">Delete a Project Template</span></h3>
+<pre><strong>action: api/v2/projectTemplate/delete</strong>
+    token                       string
+    template                    domain(ProjectTemplate)
+    purge                       boolean
+
+<strong>response: empty</strong>
+</pre>

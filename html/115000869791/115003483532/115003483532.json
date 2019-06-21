@@ -1,0 +1,29 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2017-12-15T15:31:14Z",
+    "draft": false,
+    "edited_at": "2019-05-14T10:58:16Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003483532-Should-I-Always-Pre-Translate-a-File-Before-a-Translator-Starts-Translating-It-",
+    "id": 115003483532,
+    "label_names": [
+        "pre-translate",
+        "_RWD",
+        "_NoIMG"
+    ],
+    "locale": "en-us",
+    "name": "Should I Always Pre-Translate a File Before a Translator Starts Translating It?",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 7,
+    "promoted": false,
+    "section_id": 115000869791,
+    "source_locale": "en-us",
+    "title": "Should I Always Pre-Translate a File Before a Translator Starts Translating It?",
+    "updated_at": "2019-05-14T10:58:16Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003483532-Should-I-Always-Pre-Translate-a-File-Before-a-Translator-Starts-Translating-It-.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

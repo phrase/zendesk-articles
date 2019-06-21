@@ -1,0 +1,46 @@
+<p> <span id="List_Providers" class="mw-headline">List Providers</span></p>
+<pre><strong>action: api/v2/provider/list</strong>
+    token                       string
+    project                     domain(Project)
+    jobPart                     domain(JobPart)
+
+<strong>response: JSON</strong>
+ {
+   "providers": {
+     "all": [
+       {  // user
+         "id": 8,
+         "firstName": "English",
+         "lastName": "Linguist",
+         "userName": "plinguist",
+         "email": "p.l.@dummy.org",
+         "role": "LINGUIST",
+         "timezone": "Europe/London",
+         "active": true,
+         "deleted": false,
+         "terminologist": false,
+         "dateCreated": "2017-05-04T08:41:15+0000"
+       },
+       {
+         "id": 6,
+         "firstName": "Admin",
+         "lastName": "Organizatorov I",
+         "userName": "orgadmin1",
+         "email": "cestmir.ruzicka@memsource.com",
+         "role": "ADMIN",
+         "timezone": "Europe/London",
+         "active": true,
+         "deleted": false,
+         "terminologist": false,
+         "dateCreated": "2017-04-28T14:58:10+0000"
+       },
+       {  // vendor
+         "id": 7,
+         "name": "Vendor Organization",
+         "approved": true,
+         "discovered": false
+       }
+     ],
+     "discovered": [ ... ],  // these sections contain same data model as `all`
+     "relevant": [ ... ]
+   }</pre>

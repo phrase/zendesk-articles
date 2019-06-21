@@ -1,0 +1,40 @@
+<h3><span id="List" class="mw-headline">List</span></h3>
+<pre><strong>action: api/v2/emailTemplate/list</strong>
+    token                    string                             
+    type                     enum(EmailTemplateType)       O
+
+<strong>response: JSON</strong>
+   [
+     {
+       "id":1,
+       "body":"Dear {linguist.firstName},\n\nWe have new work for you:\n\n{jobInfo}\nFile: ...",
+       "ccAddress":null,
+       "subject":"New Work",
+       "name":"New Work (en)",
+       "type":"JobAssigned"
+     },
+     {
+       "id":2,
+       "body":"Dear {recipient.firstName},\n\nYour linguist user {linguist.firstName} {linguist.lastName} ...",
+       "ccAddress":null,
+       "subject":"Project {project.name}: {jobs.count} Job(s) {jobs.newStatus}",
+       "name":"Job Status Changed (en)",
+       "type":"JobStatusChanged"
+     }
+   ]
+</pre>
+<h3><span id="Get" class="mw-headline">Get</span></h3>
+<pre><strong>action: api/v2/emailTemplate/get</strong>
+    token                    string                             
+    template                 domain(EmailTemplate)
+
+<strong>response: JSON</strong>
+   {
+     "id":1,
+     "body":"Dear user,\n\nWe have new work for you:\n\n ...",
+     "ccAddress":null,
+     "subject":"New Work",
+     "name":"New Work (en)",
+     "type":"JobAssigned"
+   }
+</pre>

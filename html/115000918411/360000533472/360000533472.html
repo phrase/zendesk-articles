@@ -1,0 +1,798 @@
+<h2><span id="Deep-Dive_Introduction" class="mw-headline">Deep-Dive Introduction</span></h2>
+<p>Let's start right away with an example of how to run a simple analytics aggregation—getting the total number of jobs you have in your organization:</p>
+<ul>
+<li>Open up your favorite tool for running HTTP requests (we will use Postman here).</li>
+<li>Login to Memsource through your PM or Admin account, and obtain your login token using one of the login APIs.</li>
+<li>POST a request to "api/v3/analytics/jobPart?token=&lt;your_login_token&gt;" with the following JSON body:</li>
+</ul>
+<pre>{
+  "aggregations": {
+    "data": {
+      "children": {
+        "type": "jobPartType"
+      }
+    }
+  }
+}
+</pre>
+<ul>
+<li>You should get a response looking like this:</li>
+</ul>
+<pre>{
+  "hits": {
+    "total": 359
+  },
+  "aggregations": {
+    "data": {
+      "doc_count": 14417
+    }
+  }
+}
+</pre>
+<ul>
+<li>For us, the interesting part of the response is under the "aggregations" field, where an aggregation named "data" responded that it has found 14,417 matching documents—shown in the "doc_count" field. That is how many jobs have been created in our example organization.</li>
+</ul>
+<h3><span id="Total_number_of_source_words" class="mw-headline">Total Number of Source Words</span></h3>
+<ul>
+<li>Let's build on the previous example, and try to obtain the total number of source words in all jobs from our organization.</li>
+<li>We POST to the same URL as before, but the body will look like this:</li>
+</ul>
+<pre>{
+  "aggregations": {
+    "data": {
+      "children": {
+        "type": "jobPartType"
+      },
+      "aggs": {
+        "wordCount": {
+          "sum": {
+            "field": "data.volume.words"
+          }
+        }
+      }
+    }
+  }
+}
+</pre>
+<ul>
+<li>The result will look something like this:</li>
+</ul>
+<pre>{
+  "hits": {
+    "total": 359
+  },
+  "aggregations": {
+    "data": {
+      "doc_count": 14417,
+      "wordCount": {
+        "value": 6893067
+      }
+    }
+  }
+}
+</pre>
+<ul>
+<li>We can see that some pattern in the query and response is beginning to appear. Let's look at a few more examples, and then try to explain the different parts of what we see.</li>
+</ul>
+<h3><span id="Total_number_of_source_words_divided_by_target_language" class="mw-headline">Total Number of Source Words Divided by Target Language</span></h3>
+<ul>
+<li>Query:</li>
+</ul>
+<pre>{
+  "aggregations": {
+    "data": {
+      "children": {
+        "type": "jobPartType"
+      },
+      "aggs": {
+        "byTargetLanguage": {
+          "terms": {
+            "field": "job.targetLanguage",
+            "size": 3
+          },
+          "aggs": {
+            "wordCount": {
+              "sum": {
+                "field": "data.volume.words"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</pre>
+<ul>
+<li>Result:</li>
+</ul>
+<pre>{
+  "hits": {
+    "total": 359
+  },
+  "aggregations": {
+    "data": {
+      "byTargetLanguage": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 10071,
+        "buckets": [
+          {
+            "doc_count": 1835,
+            "wordCount": {
+              "value": 702721
+            },
+            "key": "cs"
+          },
+          {
+            "doc_count": 1491,
+            "wordCount": {
+              "value": 2602529
+            },
+            "key": "de"
+          },
+          {
+            "doc_count": 1020,
+            "wordCount": {
+              "value": 92676
+            },
+            "key": "fi"
+          }
+        ]
+      },
+      "doc_count": 14417
+    }
+  }
+}
+</pre>
+<ul>
+<li>Here we can see a new entity in the response—buckets. When we ask the analytics module to split the data by some category, the result is represented as a list of buckets. Each bucket contains a key that defines what data this bucket represents (in our case a target language) and a value (other aggregations) specific just to this part of the data set.</li>
+</ul>
+<h3><span id="Total_number_of_jobs_divided_by_project_status" class="mw-headline">Total Number of Jobs Divided by Project Status</span></h3>
+<ul>
+<li>Query:</li>
+</ul>
+<pre>{
+  "aggregations": {
+    "projectStatus": {
+      "terms": {
+        "field": "project.status"
+      },
+      "aggs": {
+        "data": {
+          "children": {
+            "type": "jobPartType"
+          }
+        }
+      }
+    }
+  }
+}
+</pre>
+<ul>
+<li>Result:</li>
+</ul>
+<pre>{
+  "hits": {
+    "total": 359
+  },
+  "aggregations": {
+    "projectStatus": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "doc_count": 326,
+          "data": {
+            "doc_count": 14318
+          },
+          "key": "NEW"
+        },
+        {
+          "doc_count": 31,
+          "data": {
+            "doc_count": 89
+          },
+          "key": "COMPLETED"
+        },
+        {
+          "doc_count": 1,
+          "data": {
+            "doc_count": 4
+          },
+          "key": "ASSIGNED"
+        },
+        {
+          "doc_count": 1,
+          "data": {
+            "doc_count": 6
+          },
+          "key": "DECLINED_BY_VENDOR"
+        }
+      ]
+    }
+  }
+}
+</pre>
+<ul>
+<li>This query is a little bit different than the ones before. The part that tells the Analytics module to split the data by project status is before the ever-present "data" aggregation. We will discuss the reason for this later.</li>
+</ul>
+<h3><span id="Total_number_of_jobs_from_NEW_projects" class="mw-headline">Total Number of Jobs From New Projects</span></h3>
+<ul>
+<li>Query:</li>
+</ul>
+<pre>{
+  "filter": {
+    "term": {
+      "project.status": "NEW"
+    }
+  },
+  "aggregations": {
+    "data": {
+      "children": {
+        "type": "jobPartType"
+      }
+    }
+  }
+}
+</pre>
+<ul>
+<li>Response:</li>
+</ul>
+<pre>{
+  "hits": {
+    "total": 326
+  },
+  "aggregations": {
+    "data": {
+      "doc_count": 14318
+    }
+  }
+}
+</pre>
+<ul>
+<li>Here, we have introduced a new field in the query—"filter". We use this to first narrow down the data we are interested in before doing the aggregations.</li>
+</ul>
+<h2><span id="Analytics_User_Manual" class="mw-headline">Analytics User Manual</span></h2>
+<h3><span id="Memsource_Analytics_are_based_on_Elasticsearch" class="mw-headline">Memsource Analytics are based on Elasticsearch</span></h3>
+<p>The datastore running all the aggregation queries is built on top of <a class="external text" href="https://www.elastic.co/products/elasticsearch" rel="nofollow">Elasticsearch</a> (currently version 1.7.x). Elasticsearch provides very powerful, real-time searches and aggregation capabilities—our Analytics API forms only a thin, security-enhanced layer on top of it. This means that that the query language we have used in the examples above is actually the query and aggregation language of the Elasticsearch itself.</p>
+<ul>
+<li>The language used in the "filter" field of the query JSON is fully described in the <a class="external text" href="https://www.elastic.co/guide/en/elasticsearch/reference/1.7/query-dsl-filters.html" rel="nofollow">Elasticsearch Query DSL</a> documentation.</li>
+<li>The language used in the "aggregations" field of the query JSON is fully described in the <a class="external text" href="https://www.elastic.co/guide/en/elasticsearch/reference/1.7/search-aggregations.html" rel="nofollow">Elasticsearch Aggregations</a> documentation.</li>
+</ul>
+<h3><span id="Indexes" class="mw-headline">Indexes</span></h3>
+<p>Different types of data live in different indexes. For example, job data lives in the "jobPart" index, and costs data lives in the "costs" index. You can specify which data you want to work with by specifying the index in the aggregation API endpoint URL (see <a title="Analytics API v3" href="https://wiki.memsource.com/wiki/Analytics_API_v3">Analytics Api V3</a>). The reference manual below describes the data model of each index in more detail.</p>
+<h3><span id="Parent-child_documents" class="mw-headline">Parent-Child Documents</span></h3>
+<p>Throughout the deep-dive examples, we have been consistently using an aggregation called "data". The reason for this is because parts of the information about a job live in two different documents in the Elasticsearch DB. These documents are in a relationship called a "parent-child" relationship in the jargon of Elasticsearch. For example, information about a job's project lives in the parent document, while information about the job itself lives in the child document. Depending on the information we are interested in, we put our aggregations either before the data parent-child aggregation or after it. But the data aggregation itself should be present in all our queries. Keep in mind that for each index, the data aggregation will look a little bit different. This is documented in the reference manual below.</p>
+<h2><span id="Analytics_Reference_Manual" class="mw-headline">Analytics Reference Manual</span></h2>
+<p>The last piece of the puzzle is the actual data model in each of the indexes. We need to know what fields of the documents we need to reference in the queries and which of the documents (parent or child) hold what information. The documents will be described using typed JSON. We will start with common JSON snippets used throughout the indexes and then define the indexes themselves. When a field in a JSON description is described by another JSON description, we use "&lt;...&gt;" notation to refer to it. For each index, we will define the data aggregation, parent document, and child document. This should give you all the information you need to run your own queries.</p>
+<h3><span id="Common_Data" class="mw-headline">Common Data</span></h3>
+<h4><span id="Analysis" class="mw-headline">Analysis</span></h4>
+<pre>{
+  "id": string,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "innerId": number,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean,
+  "trashedBy": &lt;User&gt;,
+  "type": string
+}
+</pre>
+<h4><span id="Assignment" class="mw-headline">Assignment</span></h4>
+<pre>{
+  "name": string,
+  "linguist": &lt;User&gt;,
+  "vendor": &lt;Vendor&gt;
+}
+</pre>
+<h4><span id="AutomationWidget" class="mw-headline">Automation Widget</span></h4>
+<pre>{
+  "id": string,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean,
+  "urlId": string
+}
+</pre>
+<h4><span id="Buyer" class="mw-headline">Buyer</span></h4>
+<pre>{
+  "id": string,
+  "name": string
+}
+</pre>
+<h4><span id="Client" class="mw-headline">Client</span></h4>
+<pre>{
+  "id": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "externalId": string,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean,
+}
+</pre>
+<h4><span id="CostCenter" class="mw-headline">CostCenter</span></h4>
+<pre>{
+  "id": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean,
+}
+</pre>
+<h4><span id="Domain" class="mw-headline">Domain</span></h4>
+<pre>{
+  "id": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean
+}
+</pre>
+<h4><span id="Job" class="mw-headline">Job</span></h4>
+<pre>{
+  "id": string,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "extension": string,
+  "fileName": string,
+  "groupCount": number,
+  "innerId": "1",
+  "languagePair": string,
+  "lastModified": Date,
+  "localePair": string,
+  "sourceLanguage": string,
+  "sourceLocale": string,
+  "tags": string[],
+  "targetLanguage": string,
+  "targetLocale": string",
+  "taskId": string,
+  "trashed": boolean,
+  "trashedBy": &lt;User&gt;,
+  "uid": string
+}
+</pre>
+<h4><span id="JobPart" class="mw-headline">JobPart</span></h4>
+<pre>{
+  "id": "19",
+  "assignedTo": &lt;Assignment&gt;,
+  "beginIndex": number,
+  "buyer": &lt;Buyer&gt;,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDue": Date,
+  "endIndex": number,
+  "groupCount": number,
+  "innerId": string,
+  "lastModified": Date,
+  "level": number,
+  "status": string,
+  "tags": [],
+  "uid": string,
+  "workflowStep": &lt;WorkflowStep&gt;
+}
+</pre>
+<h4><span id="MtEngine" class="mw-headline">MtEngine</span></h4>
+<pre>{
+  "id": string,
+  "deleted": boolean,
+  "default_: boolean,
+  "includeTags": boolean,
+  "name": string,
+  "tags": string[],
+  "type": string,
+}
+</pre>
+<h4><span id="NetRateScheme" class="mw-headline">NetRateScheme</span></h4>
+<pre>{
+  "id": string,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "default_": boolean,
+  "deleted": boolean,
+  "externalId": string,
+  "name": string,
+  "tags": string[],
+}
+</pre>
+<h4><span id="PriceList" class="mw-headline">PriceList</span></h4>
+<pre>{
+  "id": string,
+  "createdBy": &lt;User&gt;,
+  "currency": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "default_": boolean,
+  "deleted": boolean,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean,
+  "unit": string
+}
+</pre>
+<h4><span id="Project" class="mw-headline">Project</span></h4>
+<pre>{
+  "id": string,
+  "buyer": &lt;Buyer&gt;,
+  "client": &lt;Client&gt;,
+  "costCenter": &lt;CostCenter&gt;,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateDue": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "domain": &lt;Domain&gt;,
+  "innerId": number,
+  "languagePairs": string[],
+  "localePairs": string[],
+  "mtEngine": &lt;MtEngine&gt;,
+  "name": string,
+  "note": string,
+  "owner": &lt;User&gt;,
+  "sourceLanguage": string,
+  "sourceLocale": string,
+  "status": string,
+  "subDomain": &lt;SubDomain&gt;,
+  "tags": string[],
+  "targetLanguages": string[],
+  "targetLocales": string[],
+  "trashed": boolean,
+  "trashedBy": &lt;User&gt;,
+  "uid": string,
+  "vendor": &lt;Vendor&gt;
+}
+</pre>
+<h4><span id="Quote" class="mw-headline">Quote</span></h4>
+<pre>{
+  "id": string,
+  "createdBy: &lt;User&gt;,
+  "currency": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "innerId": string,
+  "name": string,
+  "status": string,
+  "tags": string[],
+  "trashed": boolean,
+  "trashedBy": &lt;User&gt;,
+  "unit": string
+}
+</pre>
+<h4><span id="Service" class="mw-headline">Service</span></h4>
+<pre>{
+  "id": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "name": string,
+  "publicName": string,
+  "tags": string[],
+  "trashed": boolean,
+  "type": string
+}
+</pre>
+<h4><span id="SubDomain" class="mw-headline">SubDomain</span></h4>
+<pre>{
+  "id": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean
+}
+</pre>
+<h4><span id="User" class="mw-headline">User</span></h4>
+<pre>{
+  "id": number,
+  "active": boolean,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "email": string,
+  "firstName": string,
+  "fullName": string,
+  "innerId": number,
+  "jobTitle": string,
+  "lastName": string,
+  "locale": string,
+  "note": string,
+  "role": string,
+  "tags": string[],
+  "timeZone": string,
+  "trashed": boolean,
+  "userName": string
+}
+</pre>
+<h4><span id="Vendor" class="mw-headline">Vendor</span></h4>
+<pre>{
+  "id": string,
+  "candidate": boolean,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "tags": string[],
+  "token": string,
+  "trashed": boolean
+}
+</pre>
+<h4><span id="WorkflowStep" class="mw-headline">WorkflowStep</span></h4>
+<pre>{
+  "id": string,
+  "abbreviation": string,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "name": string,
+  "order": number,
+  "tags": string[],
+  "trashed": boolean
+}
+</pre>
+<h3><span id=".22analysis.22_index" class="mw-headline">Analysis Index</span></h3>
+<h4><span id=".22data.22_aggregation" class="mw-headline">Data Aggregation</span></h4>
+<pre>"data": {
+  "children": {
+    "type": "analysisType"
+  }
+}
+</pre>
+<h4><span id="Parent_document" class="mw-headline">Parent Document</span></h4>
+<pre>{
+  "automationWidget": &lt;AutomationWidget&gt;,
+  "project": &lt;Project&gt;,
+  "service": &lt;Service&gt;
+}
+</pre>
+<h4><span id="Child_document" class="mw-headline">Child Document</span></h4>
+<pre>{
+  "analysis": &lt;Analysis&gt;,
+  "jobPart": &lt;JobPart&gt;,
+  "job": &lt;Job&gt;,
+  "netRateScheme": &lt;NetRateScheme&gt;,
+
+  "priority": number,
+  "data": {
+    "mt": {
+      "match0": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match100": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match50": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match75": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match85": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match95": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      }
+    },
+    "repetitions": {
+      "characters": number,
+      "pages": number,
+      "percent": number,
+      "segments": number,
+      "words": number
+    },
+    "tm": {
+      "match0": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match100": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match101": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match50": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match75": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match85": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match95": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      }
+    },
+    "total": {
+      "characters": number,
+      "pages": number,
+      "percent": number,
+      "segments": number,
+      "words": number
+    }
+  }
+}
+</pre>
+<h3><span id=".22api.22_index" class="mw-headline">API Index</span></h3>
+<h4><span id=".22data.22_aggregation_2" class="mw-headline">Data Aggregation</span></h4>
+<pre>"data": {
+  "children": {
+    "type": "apiType"
+  }
+}
+</pre>
+<h4><span id="Parent_document_2" class="mw-headline">Parent Document</span></h4>
+<pre>{
+  "user": &lt;User&gt;
+}
+</pre>
+<h4><span id="Child_document_2" class="mw-headline">Child Document</span></h4>
+<pre>{
+  "request": {
+    "date": Date,
+    "host": string,
+    "ipv4": string,
+    "ipv6": string,
+    "location": string,
+    "method": string
+  },
+  "response": {
+    "date": Date,
+    "duration": number,
+    "status": number
+  },
+  "api": {
+    "action": string,
+    "asynch": boolean,
+    "type": string,
+    "uri": string,
+    "ver": string
+  }
+}
+</pre>
+<h3><span id=".22costs.22_index" class="mw-headline">Costs Index</span></h3>
+<h4><span id=".22data.22_aggregation_3" class="mw-headline">Data Aggregation</span></h4>
+<pre>"data": {
+  "children": {
+    "type": "costsType"
+  }
+}
+</pre>
+<h4><span id="Parent_document_3" class="mw-headline">Parent Document</span></h4>
+<pre>{
+  "automationWidget": &lt;AutomationWidget&gt;,
+  "project": &lt;Project&gt;,
+  "service": &lt;Service&gt;
+}
+</pre>
+<h4><span id="Child_document_3" class="mw-headline">Child Document</span></h4>
+<pre>{
+  "analysis": &lt;Analysis&gt;,
+  "job": &lt;Job&gt;,
+  "jobPart": &lt;JobPart&gt;,
+  "netRateScheme": &lt;NetRateScheme&gt;,
+  "priceList": &lt;PriceList&gt;,
+  "quote": &lt;Quote&gt;,
+  "workflowStep": &lt;WorkflowStep&gt;,
+  
+  "priority": number,
+  "data": {
+    "mt": {
+      "match0": number,
+      "match100": number,
+      "match50": number,
+      "match75": number,
+      "match85": number,
+      "match95": number
+    },
+    "repetitions": number,
+    "tm": {
+      "match0": number,
+      "match100": number,
+      "match101": number,
+      "match50": number,
+      "match75": number,
+      "match85": number,
+      "match95": number
+    },
+    "total": number
+  }
+}
+</pre>
+<h3><span id=".22jobPart.22_index" class="mw-headline">jobPart Index</span></h3>
+<h4><span id=".22data.22_aggregation_4" class="mw-headline">Data Aggregation</span></h4>
+<pre>"data": {
+  "children": {
+    "type": "jobPartType"
+  }
+}
+</pre>
+<h4><span id="Parent_document_4" class="mw-headline">Parent Document</span></h4>
+<pre>{
+  "automationWidget": &lt;AutomationWidget&gt;,
+  "project": &lt;Project&gt;,
+  "service": &lt;Service&gt;
+}
+</pre>
+<h4><span id="Child_document_4" class="mw-headline">Child Document</span></h4>
+<pre>{<br>  "job": &lt;Job&gt;,<br>  "jobPart": &lt;JobPart&gt;<br><br>  "data": {<br>    "counts": {<br>      "chars": {<br>      "total": number,<br>      "confirmed": number,<br>      "notConfirmed": number,<br>      "locked": number,<br>      "notLocked": number,<br>      "confirmedAndLocked": number,<br>      "notConfirmedAndLocked": number,<br>      "completed": number,<br>      "notCompleted": number<br>    },<br>    "groups": {<br>      "total": number<br>    },<br>    "segments": {<br>      "total": number,<br>      "confirmed": number,<br>      "notConfirmed": number,<br>      "locked": number,<br>      "notLocked": number,<br>      "confirmedAndLocked": number,<br>      "notConfirmedAndLocked": number,<br>      "completed": number,<br>      "notCompleted": number,<br>      "mt": {<br>        "postEdited": number,<br>        "relevant": number,<br>        "notRelevant": number<br>      },<br>      "qa": {<br>        "checked": number,<br>        "notChecked": number<br>      }<br>    },<br>    "words": {<br>      "total": number,<br>      "confirmed": number,<br>      "notConfirmed": number,<br>      "locked": number,<br>      "notLocked": number,<br>      "confirmedAndLocked": number,<br>      "notConfirmedAndLocked": number,<br>      "completed": number,<br>      "notCompleted": number<br>    },<br>    "qa": {<br>      "warnings": number,<br>      "ignoredWarnings": number,<br>      "notIgnoredWarnings": number<br>    }<br>  }<br>}</pre>

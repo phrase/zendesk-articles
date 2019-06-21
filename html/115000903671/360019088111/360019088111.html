@@ -1,0 +1,38 @@
+<p>Type:</p>
+<pre>Next step ready
+</pre>
+<p>Suggested name:</p>
+<pre>Next step ready (en)
+</pre>
+<p>Suggested subject:</p>
+<pre>Project {project.name}: Job(s) Ready, You Can Start
+</pre>
+<p>Suggested body:</p>
+<pre>Dear {recipient.firstName},
+
+You have been assigned work in the {workflow.name} workflow step.
+We would like to let you know that you can start now.
+
+The linguist who was in charge of the preceding workflow step ({previousWorkflow.name})
+has just changed status to Completed for the following job(s):
+
+Project: {project.url}
+{jobInfo}
+File: {job.name}
+Changed to: {previousWorkflow.name} - {job.status}
+Language: {job.sourceLang} -&gt; {job.targetLang}
+Due: {job.dateDue}
+{/jobInfo}
+
+Job in the preceding workflow step still not completed? Read more:
+<a class="external free" href="http://support.memsource.com/topic/preceding-workflow-step-not-completed" rel="nofollow">http://support.memsource.com/topic/preceding-workflow-step-not-completed</a>
+
+Let me know, if you have any questions.
+
+Best regards,
+
+{sender.firstName} {sender.lastName}
+{sender.email}
+
+P.S. This email was generated automatically.
+</pre>

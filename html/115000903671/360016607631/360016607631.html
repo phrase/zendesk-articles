@@ -1,0 +1,40 @@
+<p>Please see our main article about <a href="https://help.memsource.com/hc/en-us/articles/360002826872">Analysis</a> for general information.</p>
+<p>The Default Analysis is the standard analysis run before translation. It provides a breakdown of the segments/words/character counts, shows matches with the translation memory (if used in a project), displays non-translatable matches and Machine Translation Quality Estimation (if enabled), and can produce a quote for a client. </p>
+<p>The Default Analysis is always working with the source text—comparing the original file with the content of the translation memory, calculating repetitions, etc.</p>
+<p> </p>
+<p><strong>Note:</strong> Launching this type of analysis after the job is translated can give you false results.</p>
+<p> </p>
+<p>To run an analysis, open the project, select one or multiple jobs and click on the <strong>Analyze</strong> button. Once you do, you'll see the following options:</p>
+<ul>
+<li><span style="font-weight: 400;"><strong>Type</strong> (Select <em>Default</em>)</span></li>
+<li>
+<span style="font-weight: 400;"><strong>Name</strong> - </span><span style="font-weight: 400;">If left empty, it will be automatically named "Analysis #1", etc. <a href="https://help.memsource.com/hc/en-us/articles/360002921512">Renaming macros</a> can be used to generate names automatically.<br></span>
+</li>
+<li>
+<strong>Include internal fuzzies</strong> - Segments in selected documents are compared with one another and when similar segments are identified, they are included in the analysis as fuzzy matches, depending on the similarity.</li>
+<li>
+<strong>Include non-translatables</strong> - Segments are analyzed for non-translatables. Non-translatables are anything that doesn’t necessarily need to be translated. Examples of these include names, numbers, email addresses, URLs, symbols, and codes. If non-translatables are identified, they are included in the analysis. The AI-powered non-translatables can have a score of 100% or 99%.</li>
+<li>
+<strong>Include machine translation matches (Beta)</strong> - <span style="font-weight: 400;">With the <a href="https://help.memsource.com/hc/en-us/articles/360016450971" target="_blank" rel="noopener">MTQE</a> feature enabled, you can run a default analysis that includes the MT scores. </span>
+</li>
+<li><strong>Exclude confirmed segments</strong></li>
+<li><strong>Exclude locked segments</strong></li>
+<li><strong>Exclude numbers</strong></li>
+<li>
+<strong>Analyze by linguist</strong> - When multiple jobs are selected, they will be grouped by the assigned linguist and analyzed together. The Analysis will be assigned to the linguist and will be visible to them.</li>
+<li>
+<strong>Analyze by language</strong> - When multiple jobs are selected, they will be grouped by language combinations and analyzed together.</li>
+<li>
+<strong>Count units of the: Source</strong> or <strong>Target</strong> - Generally, users should always use <em>Source</em> to get the right results since the target of some segments will most likely be empty.</li>
+</ul>
+<p><img class="img350" src="https://help.memsource.com/hc/article_attachments/360012552531/analysis_default.png" alt="analysis_default.png"></p>
+<p><strong>The results can show</strong>: </p>
+<ul>
+<li>Net rate discount</li>
+<li>Repetitions (If the repetition is also a 100% or a 101% TM match, it will be listed in the respective TM match row.)</li>
+<li>Translation memory matches 101% - 0%</li>
+<li>Non-tranlatable matches 100% - 75%</li>
+<li>
+<a href="https://help.memsource.com/hc/en-us/articles/360016450971" target="_blank" rel="noopener">Machine Translation Quality estimation</a> 100% - 75%</li>
+</ul>
+<p><img src="https://help.memsource.com/hc/article_attachments/360019685751/Analysis.png" alt="Analysis.png"></p>

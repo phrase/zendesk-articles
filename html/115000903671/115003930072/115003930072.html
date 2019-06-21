@@ -1,0 +1,330 @@
+<p id="firstHeading" class="firstHeading" lang="en">The regular expression (abbreviated regex or regexp) is a sequence of characters that form a search pattern, mainly for use in pattern-matching with strings or string-matching. That is, it functions similar to "find and replace" operations. You can find more details on <a class="external text" style="background-color: #ffffff;" href="http://en.wikipedia.org/wiki/Regular_expression" rel="nofollow">Wikipedia Regexp.</a> </p>
+<p>Regexps can be used in the <em>Search and Replace </em>fields in the Memsource Editor and in the general <strong>Setup </strong>page of Memsource by scrolling down to the <em>Project Settings </em>section and clicking on <strong>File Import Settings</strong>.<strong> </strong> They can also be used for customizing the segmentation rules (see chapters below).</p>
+<h2><span id="Basic_special_characters:" class="mw-headline">Basic Special Characters and General Examples:<br></span></h2>
+<table class="table1">
+<tbody>
+<tr>
+<th>Character</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>\</td>
+<td style="widtd: 530px;">Escaping the above-mentioned metacharacters allows you to search the literal meaning instead of its special meaning. That is, \[ will search for the [ bracket.</td>
+</tr>
+<tr>
+<td>.</td>
+<td style="widtd: 530px;">Matches any single character.</td>
+</tr>
+<tr>
+<td>[ ]</td>
+<td style="widtd: 530px;">A bracket expression; matches a single character that is contained within the brackets.</td>
+</tr>
+<tr>
+<td>[^ ]</td>
+<td style="widtd: 530px;">Matches a single character that is not contained within the brackets.</td>
+</tr>
+<tr>
+<td>*</td>
+<td style="widtd: 530px;">Matches the preceding element zero or more times.</td>
+</tr>
+<tr>
+<td>?</td>
+<td style="widtd: 530px;">Matches the preceding element zero or one time.</td>
+</tr>
+<tr>
+<td>+</td>
+<td style="widtd: 530px;">Matches the preceding element one or more times.</td>
+</tr>
+<tr>
+<td>|</td>
+<td style="widtd: 530px;">The choice operator OR. Matches the first or second condition. Is used for combining several regexps together. For example, &lt;[^&gt;]+&gt;|\{[^\}]+\} will match all &lt;html&gt; code and all {variables}</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td style="widtd: 530px;">The AND operator matches the expression before and the expression after the operator.</td>
+</tr>
+<tr>
+<td>{ }</td>
+<td style="widtd: 530px;">Range quantifiers.</td>
+</tr>
+<tr>
+<td>( )</td>
+<td style="widtd: 530px;">Grouping of expressions.</td>
+</tr>
+<tr>
+<td>&lt; &gt;</td>
+<td style="widtd: 530px;">Anchors that specify a left or right word boundary.</td>
+</tr>
+<tr>
+<td>-</td>
+<td style="widtd: 530px;">Range in a character class (for example [A-Z])</td>
+</tr>
+<tr>
+<td>$</td>
+<td style="widtd: 530px;">End of a line.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>The following are some examples for converting text into tags when importing files and also for using regexp in the Memsource Editor for <em>Search and Replace</em> functions:</p>
+<table class="table1" style="width: 649px;">
+<tbody>
+<tr>
+<th style="width: 155px;">Example</th>
+<th style="width: 488px;">Description</th>
+</tr>
+<tr>
+<td style="width: 155px;">&lt;[^&gt;]+&gt;</td>
+<td style="width: 488px;">represents &lt;html_tag&gt;</td>
+</tr>
+<tr>
+<td style="width: 155px;">\{[^\}]+\}</td>
+<td style="width: 488px;">represents {variable},</td>
+</tr>
+<tr>
+<td style="width: 155px;">\[[^\]]+\]</td>
+<td style="width: 488px;">represents [variable],</td>
+</tr>
+<tr>
+<td style="width: 155px;">\[\[.+?\]\]</td>
+<td style="width: 488px;">represents [[aa[11]bb]].</td>
+</tr>
+<tr>
+<td style="width: 155px;">\$[^\$]+\$</td>
+<td style="width: 488px;">represents $operator_Name1$.</td>
+</tr>
+<tr>
+<td style="width: 155px;">\d+</td>
+<td style="width: 488px;">represents numbers. Also, [0-9]+</td>
+</tr>
+<tr>
+<td style="width: 155px;">[A-Za-z0-9]</td>
+<td style="width: 488px;">represents any alphanumeric character.</td>
+</tr>
+<tr>
+<td style="width: 155px;">.+\@.+\..+</td>
+<td style="width: 488px;">email address name@domain.com</td>
+</tr>
+<tr>
+<td style="width: 155px;">\d{4}[-]\d{2}[-]\d{2}</td>
+<td style="width: 488px;">the date 2018-08-01</td>
+</tr>
+<tr>
+<td style="width: 155px;">\s$</td>
+<td style="width: 488px;">a whitespace at the end of the segment</td>
+</tr>
+<tr>
+<td style="width: 155px;">^\s</td>
+<td style="width: 488px;">a whitespace at the beginning of the segment</td>
+</tr>
+<tr>
+<td style="width: 155px;">\s\s</td>
+<td style="width: 488px;">a double whitespace</td>
+</tr>
+<tr>
+<td style="width: 155px;">^\d</td>
+<td style="width: 488px;">a digit at the beginning of the segment</td>
+</tr>
+<tr>
+<td style="width: 155px;">\w+\s\s\w+</td>
+<td style="width: 488px;">a double whitespace between words</td>
+</tr>
+<tr>
+<td style="width: 155px;">\s\n</td>
+<td style="width: 488px;">a newline preceded by any whitespace character</td>
+</tr>
+<tr>
+<td style="width: 155px;">\S\n</td>
+<td style="width: 488px;">a newline preceded by any non-whitespace character</td>
+</tr>
+<tr>
+<td style="width: 155px;">&lt;[^&gt;]+&gt;|\$[^=]+=</td>
+<td style="width: 488px;">converts php variables and html code ($svariable['name'] =)</td>
+</tr>
+<tr>
+<td style="width: 155px;">^\s*\'[^:]+:</td>
+<td style="width: 488px;">converts javascript's field key with added whitespaces at the beginning of the line ( 'key' :)</td>
+</tr>
+</tbody>
+</table>
+<p>See more details and examples on <a class="external text" href="https://en.wikipedia.org/wiki/Regular_expression#Examples" rel="nofollow">Wikipedia</a>.</p>
+<p> </p>
+<p><strong>Important:</strong> Memsource supports <a class="external text" href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html" rel="nofollow">Java</a> regexp, but rejects complex regular expressions to protect our system from overloading. Complex regexps are those with quantifiers (except possessives) on groups which contain other quantifiers (except possessives).</p>
+<h2><span id="Converting_into_tags" class="mw-headline">Convert to Memsource tags<br></span></h2>
+<p><span class="mw-headline">This feature is available in many <em>File Import</em> settings (MS Word, TXT, etc.) It allows converting a special text—for example {variable}, to non-translatable tags. Please note that only "stand-alone" tags can be created. Paired tags are not available.</span></p>
+<h2><span id="TXT_Import" class="mw-headline">TXT Import</span></h2>
+<p>Examples of error messages when importing only the specific text:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<ol>
+<li>
+<em>## ErrorMessage ##1## The number must be higher then 0. ##Z##</em><br>To import text between ##1## and ##Z## use regexp: <strong>(?&lt;=##1## ).*(?= ##Z##)<br><br></strong>
+</li>
+<li>
+<em>ErrorMessage ("The number must be higher then 0.")</em><br>To import text between (" and ") use regexp: <strong>(?&lt;=\(").*(?="\))<br><br></strong>
+</li>
+<li>
+<em>'errorMessage' = 'The number must be higher than 0.'</em><br>To import text after the = sign and between ' and ' use regexp: <strong>(?&lt;=\= ').*(?=')<br><br></strong>
+</li>
+<li>
+<em>msgstr ("The number must be higher than 0.")</em> <br>To import msgstr strings in so-called monolingual PO files using a TXT filter, use regexp: <strong>(?&lt;=msgstr ").*(?=")<br><br></strong>
+</li>
+<li>
+<em># Note: This is a note<br></em>To exclude lines starting with # use regexp <strong>(^[^#].*)</strong><em><br></em>
+</li>
+</ol>
+</div>
+<h2><span id="JSON_Import" class="mw-headline">JSON Import</span></h2>
+<p>If the JSON structure is:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>{
+"list": {
+		"id": "1",
+		"value": "text 1 for translation."
+	},
+"text": {
+		"id": "2",
+		"value": "text 2 for translation."
+	},
+"menu": {
+		"id": "3",
+		"value": "text 3 for translation."
+	     }
+}
+</pre>
+</div>
+<ul>
+<li>for importing every value regardless of the level, use: <strong>(^|.*/)value</strong>
+</li>
+<li>for importing only one value from a list use: <strong>list/value</strong>
+</li>
+<li>for importing a value from a list and/or menu use, the | (OR) operator: <strong>list/value|menu/value</strong>
+</li>
+<li>for importing only the first instance of a value from a menu, use: <strong>menu\[1\]/value</strong>
+</li>
+<li>for importing the content of a JSON array following a certain key, use <strong>(^|.*/)key\[.*\]</strong>.</li>
+</ul>
+<h2><span id="Yaml_Import" class="mw-headline">Yaml Import</span></h2>
+<p>Yaml file example:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>title: A
+text: translate A
+categories:
+  title: B
+  text: translate B
+categories:
+  title: C
+  text: translate C
+categories:
+  content:
+      title: D
+      text: translate D
+</pre>
+</div>
+<p>regexp for importing:</p>
+<ul>
+<li>only 'translate A' : <strong>text</strong>
+</li>
+<li>only 'translate C': <strong>categories\[2\]/text</strong>
+</li>
+<li>only 'translate D': <strong>categories\[\d+\]/content[\1\]/text</strong>
+</li>
+<li>all text: <strong>text|categories\[\d+\]/text|categories\[\d+\]/content[\d+\]/text</strong>
+</li>
+</ul>
+<h2><span id="Segmentation_rules" class="mw-headline">Segmentation Rules</span></h2>
+<p>For segmentation rules in SRX files, we use regexp <a class="external text" href="http://okapi.sourceforge.net/Release/Shared/Help/regex.htm" rel="nofollow">Okapi</a>, <a class="external text" href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html" rel="nofollow">Java</a>, and <a class="external text" href="http://www.regular-expressions.info/unicode.html" rel="nofollow">Unicode</a>.</p>
+<p>Working with regexp in an SRX file is complex and requires at least basic knowledge of regular expressions.</p>
+<p>There are Nobreak rules (Abbreviations etc.) and Break rules (End of the sentence with a dot, etc) in the SRX file.</p>
+<table class="table1">
+<tbody>
+<tr>
+<th>Example</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>[\p{C}]</td>
+<td style="width: 526px;">Invisible control character.</td>
+</tr>
+<tr>
+<td>[\p{Z}]</td>
+<td style="width: 526px;">Whitespace</td>
+</tr>
+<tr>
+<td>[\p{Lu}]</td>
+<td style="width: 526px;">An uppercase letter that has a lowercase variant.</td>
+</tr>
+<tr>
+<td>[\p{N}]</td>
+<td style="width: 526px;">Any kind of numeric character.</td>
+</tr>
+<tr>
+<td>\Q ... \E</td>
+<td style="width: 526px;">Start and end of a quotation - (\QApprox.\E). This is used for Abbreviations.</td>
+</tr>
+<tr>
+<td>\t</td>
+<td style="width: 526px;">Tabulator</td>
+</tr>
+<tr>
+<td>\n</td>
+<td style="width: 526px;">Newline</td>
+</tr>
+<tr>
+<td>\u2029</td>
+<td style="width: 526px;">Paragraph separator</td>
+</tr>
+<tr>
+<td>\u200B</td>
+<td style="width: 526px;">Zero-width space</td>
+</tr>
+<tr>
+<td>\u3002</td>
+<td style="width: 526px;">Ideographic full stop</td>
+</tr>
+<tr>
+<td>\ufe52</td>
+<td style="width: 526px;">Small full stop</td>
+</tr>
+<tr>
+<td>\uff0e</td>
+<td style="width: 526px;">Fullwidth full stop</td>
+</tr>
+<tr>
+<td>\uff61</td>
+<td style="width: 526px;">Halfwidth ideographic full stop</td>
+</tr>
+<tr>
+<td>\ufe56</td>
+<td style="width: 526px;">Small question mark</td>
+</tr>
+<tr>
+<td>\uff1f</td>
+<td style="width: 526px;">Fullwidth question mark</td>
+</tr>
+<tr>
+<td>\u203c</td>
+<td style="width: 526px;">Double exclamation mark</td>
+</tr>
+<tr>
+<td>\u2048</td>
+<td style="width: 526px;">Question exclamation mark</td>
+</tr>
+<tr>
+<td>\u2762</td>
+<td style="width: 526px;">Heavy exclamation mark ornament</td>
+</tr>
+<tr>
+<td>\u2763</td>
+<td style="width: 526px;">Heavy heart exclamation mark ornament</td>
+</tr>
+<tr>
+<td>\ufe57</td>
+<td style="width: 526px;">Small exclamation mark</td>
+</tr>
+<tr>
+<td>\uff01</td>
+<td style="width: 526px;">Fullwidth exclamation mark</td>
+</tr>
+</tbody>
+</table>
+<p> </p>

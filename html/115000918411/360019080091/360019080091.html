@@ -1,0 +1,73 @@
+<h3><span id="Export_By_Query" class="mw-headline">Export By Query</span></h3>
+<pre><strong>action: api/async/v2/transMemory/exportByQuery</strong>
+    token                    string
+    transMemory              domain(TransMemory)
+    exportTargetLang         list(locale) 
+    query                    string                       (up to 255 long)
+    queryLang                list(locale)
+    createdAtMin             datetime                     O
+    createdAtMax             datetime                     O
+    modifiedAtMin            datetime                     O
+    modifiedAtMax            datetime                     O
+    createdBy                domain(User)                 O
+    modifiedBy               domain(User)                 O
+    filename                 string                       O
+    project                  domain(Project)              O
+
+<strong>response: JSON</strong>
+{
+  "asyncRequest":{
+     "id":717691,
+     "createdBy":{
+        "id":225
+     },
+     "dateCreated":"2016-01-13T10:41:33+0000",
+     "action":"EXPORT_TMX_BY_QUERY",
+     "asyncResponse":{
+     },
+     "parent":null,
+     "project":null
+  },
+  "asyncExport":{
+     "transMemory":{
+        "id":2782
+     },
+     "exportTargetLangs":[
+        "en"
+     ],
+     "queries":[
+        {
+           "query":"english text",
+           "lang":"en"
+        }
+     ],
+     "asyncRequest":{
+        "id":717691
+     }
+  }
+}
+</pre>
+<pre><strong>Note for query (string):</strong>
+* text is case insensitive
+* you can use wildcards - *, ?, example: OneDriv?, OneDr*
+* search specific phrase in double quotes ", example: "blue car"
+* boolean operators:
+   - the following word must not be present
+   + the following word must be present
+   AND (alternative &amp;&amp;) - case sensitive
+   OR (alternative ||) - case sensitive
+   NOT (alternative !) - case sensitive 
+* grouping clauses in parentheses, example: (red OR green) AND car
+* reserved characters: + - &amp;&amp; || ! ( ) " * ? \, can be escaped with \
+</pre>
+<h3><span id="Download_Export" class="mw-headline">Download Export</span></h3>
+<pre><strong>action: api/async/v2/transMemory/downloadExport</strong>
+    token                string
+    asyncRequest         domain(AsyncRequest)
+    format               enum(TransMemory.Format)     O(TMX)
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+</pre>

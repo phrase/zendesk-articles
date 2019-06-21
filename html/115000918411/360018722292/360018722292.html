@@ -1,0 +1,50 @@
+<h3><span id="Create_New_Domain" class="mw-headline">Create a New Domain</span></h3>
+<pre><strong>action: api/v2/domain/create</strong>
+    token                       string
+    name                        string                             
+
+<strong>response: JSON</strong>
+    {
+      "id": 238                 // id of the new domain
+    }
+</pre>
+<h3><span id="Get_Domain" class="mw-headline">Get Domain</span></h3>
+<pre><strong>action: api/v2/domain/get</strong>
+    token                       string
+    domain                      domain(Domain)
+
+<strong>response: JSON</strong>
+   {
+     "id":3,
+     "name":"domain"
+   }
+</pre>
+<h3><span id="List_Domains" class="mw-headline">List Domains</span></h3>
+<pre><strong>action: api/v2/domain/list</strong>
+    token                       string
+    page                        integer            O(0)
+    name                        string             O
+
+<strong>response: JSON</strong>
+   [
+     {
+       "id":3,
+       "name":"domain"
+     }
+   ]
+</pre>
+<h3><span id="Edit_Domain" class="mw-headline">Edit Domain</span></h3>
+<pre><strong>action: api/v2/domain/edit</strong>
+    token                       string
+    domain                      domain(Domain)
+    name                        string
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Delete_Domain" class="mw-headline">Delete Domain</span></h3>
+<pre><strong>action: api/v2/domain/delete</strong>
+    token                       string
+    domain                      domain(Domain)
+
+<strong>response: empty</strong>
+</pre>

@@ -1,0 +1,232 @@
+<div id="content" class="mw-body">
+<div id="bodyContent" class="mw-body-content">
+<h2><span id="Request_Parameters" class="mw-headline">Request Parameters</span></h2>
+<table class="wikitable" style="border-color: #0000;">
+<tbody>
+<tr>
+<th>Data Type</th>
+<th>Sample Value</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>charset</td>
+<td>windows-1250</td>
+<td>Any <a title="Supported Character Sets" href="https://wiki.memsource.com/wiki/Supported_Character_Sets">supported character set</a>.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>EUR</td>
+<td>Any <a title="Supported Currencies" href="https://wiki.memsource.com/wiki/Supported_Currencies">supported currency</a>.</td>
+</tr>
+<tr>
+<td>datetime</td>
+<td>2012-07-30 17:30</td>
+<td>Date and time in <tt>yyyy-MM-dd HH:mm</tt> format. The <a class="extiw" title="wikipedia:Coordinated Universal Time" href="http://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a> timezone is always used when reading the date.</td>
+</tr>
+<tr>
+<td>domain(type)</td>
+<td>348</td>
+<td>Identifier ( <font face="monospace">ID</font> property) of a domain object of the specified type. For example, when creating a project, <tt>id</tt> (e.g., 348) is returned in the JSON structure. This identifier can be later used to change the status of the project by setting the <em><tt>project=348</tt> </em>parameter.</td>
+</tr>
+<tr>
+<td>enum(name)</td>
+<td> </td>
+<td>A value from a fixed set of values. Each set of values (enum) has a name—see below. Enums are always case-insensitive.</td>
+</tr>
+<tr>
+<td>file</td>
+<td> </td>
+<td>Binary data. The whole request has to be sent in <a class="external text" href="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.2" rel="nofollow">multipart/form-data</a> format. See <a title="File Data Type" href="https://wiki.memsource.com/wiki/File_Data_Type">examples</a> of code in Java and C++.</td>
+</tr>
+<tr>
+<td>exfile</td>
+<td> </td>
+<td>Compatible with the <tt>file</tt> type. It also accepts handles from <a title="File API v2" href="https://wiki.memsource.com/wiki/File_API_v2">File API</a>.</td>
+</tr>
+<tr>
+<td>jsonObject(type)</td>
+<td>{ 'id': 'xyz' }</td>
+<td>An object of the specified type (represented using JSON notation). See below for a description of particular types.</td>
+</tr>
+<tr>
+<td>jsonObjectList(type)</td>
+<td>[{ 'id': 'xyz' }]</td>
+<td>A list of objects of the specified type (represented using JSON notation). See below for a description of particular types.</td>
+</tr>
+<tr>
+<td>lang</td>
+<td>en</td>
+<td>Any <a title="Supported Languages" href="https://wiki.memsource.com/wiki/Supported_Languages">supported language code</a>.</td>
+</tr>
+<tr>
+<td>list(type)</td>
+<td> </td>
+<td>A list of values of another type. When calling an API action, the list is defined using the same parameter name multiple times (e.g., <tt>param=value1&amp;param=value2</tt>).</td>
+</tr>
+<tr>
+<td>string</td>
+<td>My Project</td>
+<td>The sequence of characters (UTF-8 encoded).</td>
+</tr>
+<tr>
+<td>task</td>
+<td>RiYnxBD0xBY1lwhf1</td>
+<td>An identifier of a translation task. More job parts (if they were created by splitting the parent job part) may share the same task.</td>
+</tr>
+<tr>
+<td>map(type, type)</td>
+<td> </td>
+<td>A map of keys and values of a given type. When calling an API action, the map is defined using the same parameter name multiple times (e.g., <tt>map.key1=value1&amp;map.key2=value2</tt>).</td>
+</tr>
+</tbody>
+</table>
+<h2><span id="Response" class="mw-headline">Response</span></h2>
+<p>The body of an HTTP may contain these data types:</p>
+<ul>
+<li>
+<strong>JSON</strong> - data structure (UTF-8 encoded). Each API call returning JSON contains an example of a response.</li>
+<li>
+<strong>binary</strong> - binary data.</li>
+</ul>
+<h2><span id="Task_vs._Job_Part" class="mw-headline">Task vs. Job Part</span></h2>
+<dl>
+<dt>Task</dt>
+<dd>A task represents one translation job (i.e. file to be translated) in one target language. If one job is uploaded in more target languages, an independent task is created for every target language.</dd>
+<dd>If a job is translated in multiple workflows, each workflow shares the same task but differs in workflow level. (This is the reason why some API calls have two arguments for task and level.) A task identifier is composed of alphanumeric characters (e.g., RiYnxBD0xBY1lwhf1) while a level is identified by an integer (usually 1-10). The first level in each project that uses workflows always has identifier 1.</dd>
+<dd></dd>
+<dd></dd>
+<dd></dd>
+<dd></dd>
+<dd>Jobs split into multiple parts will have the same task ID, and the parameter "isParentJobSplit" will be "true".</dd>
+<dd></dd>
+</dl>
+<dl>
+<dt>Job Part</dt>
+<dd>A jobPart represents a job per target language(s) and workflow steps. For instance, a single file imported to a project with 2 Workflow Steps and 3 target languages will result in 6 jobParts. Each jobPart can be assigned to a different Linguist or have a different due date or status.</dd>
+<dd>Each jobPart can be also split into multiple jobParts which will get their own jobPart ID. A jobPart is always unique.</dd>
+<dd></dd>
+<dd></dd>
+</dl>
+<h2><span id="Enums" class="mw-headline">Enums</span></h2>
+<table class="wikitable" style="border-color: #e6e6e6; background-color: #fafafa;" border="1">
+<tbody>
+<tr style="background-color: #6e6e6e;">
+<th style="width: 208.4px;"><span class="wysiwyg-color-black10">Name</span></th>
+<th style="width: 434.8px;"><span class="wysiwyg-color-black10">Values</span></th>
+</tr>
+<tr>
+<td style="width: 208.4px;">AnalyseType</td>
+<td style="width: 434.8px;">PreAnalyse, PostAnalyse, Compare</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">AnalyseFormat</td>
+<td style="width: 434.8px;">CSV, LOG, CSV_EXTENDED</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">AnalyticsIndex</td>
+<td style="width: 434.8px;">analysis, api, costs, jobPart</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">BilingualFormat</td>
+<td style="width: 434.8px;">Mxlf, Docx, Tmx</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">BillingUnit</td>
+<td style="width: 434.8px;">Character, Word, Page</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">Concept.Term.Status</td>
+<td style="width: 434.8px;">New, Approved</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">ContextType</td>
+<td style="width: 434.8px;">AUTO, PREV_AND_NEXT_SEGMENT, SEGMENT_KEY, NO_CONTEXT</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">CsvDelimiter</td>
+<td style="width: 434.8px;">TAB, COMMA, SEMICOLON, OTHER</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">EmailTemplateType</td>
+<td style="width: 434.8px;">JobAssigned, JobStatusChanged, NextWorkflowStep, LoginInfo</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">GengoTranslateSettings.Level</td>
+<td style="width: 434.8px;">PRO, STANDARD</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">JobStatus *</td>
+<td style="width: 434.8px;">New, Emailed, Assigned, Declined_By_Linguist, Completed_By_Linguist, Completed, Cancelled</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">JobFilter.Status *</td>
+<td style="width: 434.8px;">NEW, EMAILED, ASSIGNED, DECLINED_BY_LINGUIST, COMPLETED_BY_LINGUIST, COMPLETED, PRECEDING_COMPLETED, PRECEDING_NOT_COMPLETED, CANCELLED, REJECTED_BY_LINGUIST</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">MachineTranslator</td>
+<td style="width: 434.8px;">GoogleTranslate, MicrosoftTranslator, MicrosoftTranslatorHub, MicrosoftTranslatorWithFeedback, Systran</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">PreviewFormat</td>
+<td style="width: 434.8px;">ORIGINAL, PDF</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">PriceList.Currency</td>
+<td style="width: 434.8px;">CZK, EUR, USD</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">ProjectStatus</td>
+<td style="width: 434.8px;">New, Assigned, Completed, Cancelled</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">SegmentFilter</td>
+<td style="width: 434.8px;">LOCKED, NOT_LOCKED</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">TermBaseFormat</td>
+<td style="width: 434.8px;">Tbx, Xlsx</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">TransMemory.Format</td>
+<td style="width: 434.8px;">TMX, XLSX</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">TransMemSave</td>
+<td style="width: 434.8px;">All, Confirmed, None</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">UserRole</td>
+<td style="width: 434.8px;">Admin, ProjectManager, Linguist, Guest</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">XlsCellFlow</td>
+<td style="width: 434.8px;">DownRight, RightDown, DownLeft, LeftDown</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">XmlRulesFormat</td>
+<td style="width: 434.8px;">PLAIN, XPATH</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">fileFormat</td>
+<td style="width: 434.8px;">see <a title="API File Type List" href="https://wiki.memsource.com/wiki/API_File_Type_List">API File Type List</a>
+</td>
+</tr>
+<tr>
+<td style="width: 208.4px;">event</td>
+<td style="width: 434.8px;">JOB_STATUS_CHANGED, JOB_CREATED, JOB_ASSIGNED</td>
+</tr>
+</tbody>
+</table>
+<pre>* to work with job status 'Accepted', use value 'Assigned'
+</pre>
+<h2><span id="Object_Types_.28used_in_JSON_parameters.29" class="mw-headline">Object Types (used in JSON parameters)</span></h2>
+<div class="alert alert-green">
+<pre><strong>TagMetadata</strong> {
+  string id
+  string type
+  string content
+  string transAttributes
+}</pre>
+</div>
+</div>
+</div>

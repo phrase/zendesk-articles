@@ -1,0 +1,30 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2017-12-15T15:32:53Z",
+    "draft": false,
+    "edited_at": "2019-05-14T10:37:56Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003461031-Memsource-Translation-Plugin-for-Adobe-Experience-Manager-AEM-",
+    "id": 115003461031,
+    "label_names": [
+        "_RWD",
+        "connectors",
+        "connector",
+        "_NoIMG"
+    ],
+    "locale": "en-us",
+    "name": "Memsource Translation Plugin for Adobe Experience Manager (AEM)",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592352,
+    "position": 9,
+    "promoted": false,
+    "section_id": 360000691772,
+    "source_locale": "en-us",
+    "title": "Memsource Translation Plugin for Adobe Experience Manager (AEM)",
+    "updated_at": "2019-05-14T10:37:56Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003461031-Memsource-Translation-Plugin-for-Adobe-Experience-Manager-AEM-.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

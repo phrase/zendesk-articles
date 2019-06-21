@@ -1,0 +1,27 @@
+<h2><span id="Create_New_Analysis" class="mw-headline">Create New Analysis</span></h2>
+<pre><strong>action: api/async/v2/analyse/create</strong>
+  parameters: see <a title="Analysis API v2" href="https://wiki.memsource.com/wiki/Analysis_API_v2">Analysis API v2</a>
+              callbackUrl              string           O
+
+<strong>response: JSON</strong>
+    {
+      "asyncRequest":{
+        "id":1415,
+        "createdBy":{
+          "id":1,
+          "lastName":"test",
+          "email":"test@test.com",
+          "userName":"admin",
+          "role":"ADMIN",
+          "active":true,
+          "firstName":"admin"
+        },
+        "asyncResponse":null,
+        "action":"PRE_ANALYSE",
+        "dateCreated":"2014-11-03T16:03:11Z"
+      },
+      "analyse":{
+        "id":7412
+      }
+    }
+d</pre>

@@ -1,0 +1,30 @@
+{
+    "author_id": 373846258851,
+    "comments_disabled": false,
+    "created_at": "2019-02-12T09:51:03Z",
+    "draft": false,
+    "edited_at": "2019-05-28T11:58:49Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/360023241191-The-Magento-2-Connector",
+    "id": 360023241191,
+    "label_names": [
+        "_RWD",
+        "connectors",
+        "connector",
+        "_addIMG"
+    ],
+    "locale": "en-us",
+    "name": "The Magento 2 Connector",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592352,
+    "position": 0,
+    "promoted": false,
+    "section_id": 360000691772,
+    "source_locale": "en-us",
+    "title": "The Magento 2 Connector",
+    "updated_at": "2019-05-28T11:58:49Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360023241191-The-Magento-2-Connector.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

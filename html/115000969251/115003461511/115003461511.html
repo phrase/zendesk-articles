@@ -1,0 +1,17 @@
+<p>When you try to import an Office document (.docx, .xlsx, .pptx, etc.) with embedded objects, a yellow triangle with an exclamation mark is displayed. Hover your mouse over it, and you will see the warning<strong> </strong><em>There are embedded objects within the document that have not been imported</em>.<br> <img style="width: 564px; height: 132px;" src="https://help.memsource.com/hc/article_attachments/115004126392/import-396372.jpg" alt=""></p>
+<p> </p>
+<p>The purpose of this message is to draw your attention to the fact that there are objects embedded in the file you have just uploaded that have not been processed. This means that these objects will not be included in the text that is extracted for translation. Typically, these will be Excel tables or charts, or various PowerPoint objects. Embedded objects can also be images or videos.</p>
+<p>You can open the file in Microsoft Word and check the embedded objects. Search for all fields (including embedded objects) by pressing <em>F11.</em> You can switch between the field code and field content by pressing <em>Alt+F9</em>.</p>
+<p>If you don't want to translate embedded objects, you can proceed with translating the file. The completed file will contain all the embedded objects just like the original file (albeit not translated).</p>
+<p>An easy way to check what will be imported and translated is to <a href="https://help.memsource.com/hc/en-us/articles/360002841231-Pre-translate-jobs#Pseudo-translate_1" target="_blank" rel="noopener">Pseudo-translate</a> (for Team and higher editions) or to <a href="https://help.memsource.com/hc/en-us/articles/360002841231-Pre-translate-jobs" target="_blank" rel="noopener">Pre-translate</a> it from Machine Translation and then check the completed file.</p>
+<h2>Importing Embedded Objects</h2>
+<p>If you wish to import the texts from these objects and translate them using Memsource, the simplest way is to locate them in the source file, copy the contents to a new document, and then import this document as a separate job. After the translation is done, copy the translated "embedded" files back. </p>
+<p><strong>Note:</strong> This method is ideal if you only have one file and know where the embedded objects are.</p>
+<p>If there are numerous embedded objects or you aren't sure where they are, there is an alternative solution: take the embedded files from the .docx structure.</p>
+<p><strong>Step 1: </strong>First, save a copy of your document.</p>
+<p><strong>Step 2: </strong>Rename the *.docx, *.xlsx or *.pptx file to *.zip</p>
+<p><strong>Step 3: </strong>Using Windows 7 or higher, right-click on the ZIP file and open it using Windows Explorer. <strong>Important: </strong>Using ZIP tools of any kind risks corruption by changing the compression ratios.</p>
+<p><strong>Step 4: </strong>Find the <em>Embeddings</em> folder inside the ZIP structure (in Word, it will most likely be "\word\embeddings\"). Copy this elsewhere and use it as the source for translation;t will contain all the embedded objects as single files.</p>
+<p><strong>Step 5: </strong>Proceed to translate the job as normal. Once it's finished, copy the translated content back into the embeddings folder in the ZIP structure.</p>
+<p><strong>Step 6: </strong>Rename the ZIP file with its original extension.</p>
+<p><strong>Step 7: </strong>Open the file and refresh each embedded object (which will initially appear not to have been translated) by right-clicking and opening it from the context menu or by running a macro to do that for you.</p>

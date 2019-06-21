@@ -1,0 +1,29 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2017-12-15T15:36:13Z",
+    "draft": false,
+    "edited_at": "2019-05-13T12:30:04Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003461611-Change-Segmentation-for-Excel-1-Cell-1-Segment-",
+    "id": 115003461611,
+    "label_names": [
+        "remove segmentation",
+        "_RWD",
+        "_addIMG"
+    ],
+    "locale": "en-us",
+    "name": "Change Segmentation for Excel (1 Cell = 1 Segment)",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 13,
+    "promoted": false,
+    "section_id": 115000969251,
+    "source_locale": "en-us",
+    "title": "Change Segmentation for Excel (1 Cell = 1 Segment)",
+    "updated_at": "2019-05-13T12:30:04Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003461611-Change-Segmentation-for-Excel-1-Cell-1-Segment-.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

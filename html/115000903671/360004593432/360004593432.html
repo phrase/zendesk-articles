@@ -1,0 +1,31 @@
+<div id="bodyContent" class="mw-body-content">
+<div id="mw-content-text" class="mw-content-ltr" dir="ltr" lang="en">
+<p>TTX is a Trados bilingual file format supported by Memsource. Below, you'll find information on how to work with these file types in Memsource.</p>
+<h2><span id="Pre-segmenting_TTX_Files" class="mw-headline">Pre-segmenting TTX Files</span></h2>
+<p>Memsource will only import those segments from a TTX file that have been pre-segmented in Trados. Therefore, it is necessary to first pre-segment the TTX file and then import it into Memsource. You can pre-segment your file by following these steps:</p>
+<ol>
+<li>Open SDL Trados Translator's Workbench.</li>
+<li>Go to <strong>File, </strong><strong>New, </strong>and <strong>Create...</strong> and create a translation memory.</li>
+<li>Click on <strong>Tools</strong> and select <strong>Translate...</strong> Use the <strong>Add...</strong> button to add the TTX file you wish to pre-segment.</li>
+<li>Make sure that the option <strong>Segment unknown sentences</strong> is selected.</li>
+<li>Hit the <strong>Translate</strong> button.</li>
+<li>Import the pre-segmented TTX file into a Memsource project.</li>
+</ol>
+<p><strong>Note:</strong> If there is a <em><tt>trados.ini</tt> </em>file attached, make sure it is in the same directory as your TTX file during pre-segmentation.</p>
+<h2><span id="Respecting_TTX_Language_Specification" class="mw-headline">Respecting the TTX Language Specification</span></h2>
+<p>Make sure that you exactly match the language codes of the TTX file with the language codes of your Memsource Project. For example, if your TTX file has "EN-US" as the target language, you must select "English-United States" in Memsource as the project's target language (not just "English"). If you fail to do so, your existing translations in the TTX file may fail to import into Memsource.</p>
+<h2><span id="Existing_Translations" class="mw-headline">Existing Translations</span></h2>
+<p>A segmented TTX is a bilingual file format, and it may already include translations with a corresponding match percentage. If that is the case, the translations are treated in the following way by Memsource:</p>
+<ul>
+<li>All translations get carried over to the Memsource XLIFF (MXLIFF) bilingual file format.</li>
+<li>101% matches coming from the TTX are displayed as 101% matches in Memsource, and the segment status is set to confirmed.</li>
+<li>100% matches coming from the TTX are displayed as 100% matches in Memsource, and the segment status is set to not confirmed.</li>
+<li>Fuzzy matches (anything below 100%) coming from the TTX are displayed as fuzzy matches in Memsource with the corresponding match percentage, and the segment status is set to not confirmed.</li>
+</ul>
+<h2><span id="Saving_Confirmed_Segments_to_TM" class="mw-headline">Saving Confirmed Segments to TM</span></h2>
+<p>By selecting the option <strong>Save confirmed segments to TM on import,</strong> all segments that get imported to Memsource as <em>Confirmed</em> will be saved to the project's <a title="Memsource Cloud User Manual" href="https://help.memsource.com/hc/en-us/articles/115003461351">translation memory</a> in <em>Write </em>mode.</p>
+<h2><span id="Important_Notice_on_Translating_TTX_Files_in_Memsource" class="mw-headline">Important Notice on Translating TTX Files in Memsource</span></h2>
+<p>While TTX files can be imported into a Memsource project, we typically do not advise our customers to translate these formats in Memsource as their standard practice. The reason is that these formats are proprietary and can be best translated by SDL software that has been designed for it. There may always be minor or even major incompatibilities when translating Trados bilingual files in non-Trados software.</p>
+<p>There are also important benefits that a user has to give up when translating TTX files instead of the actual source files in Memsource. When a user imports a file for translation (e.g. an MS Word file) into a Memsource project, Memsource automatically pseudo-translates the file in the background and checks if it can be correctly exported and opened in the MS Word application. If this test fails, the file is disabled for translation until the problem has been fixed. In this way, we can provide a guarantee to our users that the files they import into Memsource can also be exported back and opened in their native applications. We cannot provide this kind of guarantee with TTX files.</p>
+</div>
+</div>

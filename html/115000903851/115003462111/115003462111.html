@@ -1,0 +1,40 @@
+<p>Tags represent formatting information in a segment. They are generally not used for bold, italics, underlines, superscript and subscript formatting, which are represented visually. However, for all other types of formatting, tags are used. Because tags represent formatting information in a segment, it is important to also include tags in the target, so that the formatting is preserved correctly in the exported target file.</p>
+<p>For most file formats, you can display the content of the tags by expanding them (by pressing <em>Ctrl+Shift+E</em> or going to the <strong>Edit </strong>menu, clicking on <strong>Tags </strong>and <strong>Expand Tags</strong>).</p>
+<p><img src="/hc//article_attachments/115004107631/824a578a1b32375effb4ae2ae47ab5486c9b6a18caaea3b8638dcfe54ed04206.png" alt=""></p>
+<h2>Tag Types</h2>
+<p>There are two types of tags—paired and unpaired tags:</p>
+<ol>
+<li>
+<strong>Paired tags</strong> come in a pair and represent formatting that spans across a section of text. For instance, a section of text in a segment might be in a different font than the rest, or a section of text is highlighted, etc. Paired tags can be inserted via selecting the text around which the paired tags should be inserted and hitting <em>F8</em>.<br><img src="https://help.memsource.com/hc/article_attachments/115004107591/import-604181.jpg">
+</li>
+<li>
+<strong>Unpaired tags</strong> can represent, for instance, the position of a footnote in a segment or can indicate a joined segment. Unpaired tags are also inserted via <em>F8</em> in the Memsource Editor.<br><img src="https://help.memsource.com/hc/article_attachments/115004107611/import-604182.jpg">
+</li>
+</ol>
+<p> <strong>Joined Segments tags</strong> are a special kind of unpaired tag—every time you join two segments together, the {j} tag will appear in the source and in the target, indicating where the segments were joined. It is important to keep those tags in the segment to ensure that the translated file will have the correct formatting. The {j} in the target can be placed anywhere in the translated text. The resulting text will then be formatted accordingly.<br> <br>For example, if you have two lines separated by a "soft enter" (by pressing <em>Shift+Enter) </em>in a Word document, it would look like this:</p>
+<p><span style="font-family: courier new,courier,monospace;">first line<br>second line</span><br> <br>You can join the segments and shift the soft enter to the end of the text by shifting the {j} tag:</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360020248591/mceclip4.png"> can be changed into <img src="https://help.memsource.com/hc/article_attachments/360020249151/mceclip5.png"></p>
+<p>If you do this, the translated file will then be:<br> <span style="font-family: courier new,courier,monospace;">first line second line</span><br> <span style="font-size: 10px;"><span style="font-family: courier new,courier,monospace;">(second line empty)</span></span><br> <br> If tags are missing in the target, Memsource will do its best to auto-complete them in the background when the completed target file is being generated. But this is not always possible, so you should always add tags manually.</p>
+<h2>Quality Assurance</h2>
+<p>To check whether tags have been properly placed in all target segments, use the <a href="https://help.memsource.com/hc/en-us/articles/115003643072-Quality-Assurance-Pane" target="_blank" rel="noopener">Quality Assurance</a> feature in the Memsource Editor and make sure the <a href="https://help.memsource.com/hc/en-us/articles/115003484052-Quality-Assurance" target="_blank" rel="noopener">Quality Assurance Settings</a> in your Memsource project have been set up to check tags <em>(Tags/Formatting</em> and <em>Join tags {j}</em> must be selected).<br> <br>Missing or incorrect tags can prevent Memsource from exporting a valid translated document. The error will be displayed on the project page. If this happens, open the editor, run the QA check, and fix all <em>Tags/Formatting</em> errors.</p>
+<h3>The Importance of Keeping Tags</h3>
+<p>It is advisable to insert tags. They should be inserted in such a way that their position and order correspond to the source as much as possible.<br> <br>It is not advisable to remove tags. If tags are not inserted (or the user forgets to insert them), Memsource will insert them automatically in the background when exporting the completed target file (it will not, however, save them to the MXLIFF file). This means that Memsource will try to guess where the missing tags should be placed and will place them there automatically. The result will probably not be as good as if a human inserted the tags and so it may result in incorrect formatting in some cases. In some extreme cases, it could result in loss of some content in the translated file.</p>
+<p> </p>
+<p><strong>Note:</strong> There is a QA check that helps identify any tag-related problems quickly (e.g. missing or misplaced tags). </p>
+<h2>Convert to Memsource Tags</h2>
+<p>In most file types, users can use the <strong>Convert to Memsource Tags</strong> option to convert certain parts of texts that should not be translated, such as [codes in square brackets], {variables}, codes containing numbers and letters (specified using regular expressions), any proper names, etc. to Memsource tags<strong>.</strong></p>
+<p>In this case, these will be replaced with non-paired tags, and thus, protected from translation.<br>Translators can use the <em>Ctrl+Shift+E</em> keyboard shortcut to display the content of tags in the Memsource Editor for better context.</p>
+<h2>Escaping Tags</h2>
+<p>If a number is in curly brackets, for example {1},  and needs to be kept as such and not be automatically converted into an MXLIFF tag in the Editor, it needs to be escaped: \{1\} </p>
+<h3>Editing a Tag's Content</h3>
+<p>Sometimes, you may need to edit the content of a tag (such as the <em>href</em> attributes in anchor tags).</p>
+<p><strong>Step 1:</strong> Press <em>CTRL+SHIFT+E</em> or click on <strong>Edit, </strong><strong>Tags, </strong>then <strong>Expand Tags</strong> to <a href="https://www.dropbox.com/s/9hh8kaoe109qrfa/Tags-expanded.png?raw=1" target="_blank" rel="noopener">visualize tag content</a>.</p>
+<p><strong>Step 2:</strong> In the Memsource Editor for the web, click on the tag you want to edit and start editing. In the desktop editor, click on the tag and then hit <em>F2</em> to edit it.</p>
+<p>The edited tag will be displayed in yellow color to indicate it is different from the source tag.</p>
+<h3>Shortcuts for Inserting Tags into a Target Segment </h3>
+<p>There are two options for quickly inserting tags.</p>
+<p><strong>Step 1:</strong> Specify the tag number and position of the tag in the target segment using the shortcut <em>CTRL+ALT+Tag Number</em> (or <em>Cmd+Option+Tag Number</em> on a Mac). The tags can be added in any order. To insert a paired tag, you can insert them one after another, or highlight the section that should be within the paired tags and then press the keyboard shortcut together with the appropriate tag number.</p>
+<p><strong>Step 2:</strong> Use the shortcut <em>CTRL+comma</em> (for both Windows and Mac) and select tags from a list. </p>
+<h2>Custom Tags</h2>
+<p>A user can add a custom tag or custom paired tags into the target. In the Editor's menu, select <strong>Edit, Tags,</strong> and choose <strong>Create Custom Tag</strong> or <strong>Create Custom Paired Tag</strong> and then edit the content of the tag as needed. A custom tag will be displayed as a yellow number (instead of the standard blue number).</p>
+<p><strong>Note:</strong> The adding of custom tags is available only for formats supporting tags in the completed file (such as HTML).</p>

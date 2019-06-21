@@ -1,0 +1,39 @@
+<h2 id="New_features_and_Improvements">New Features and Improvements</h2>
+<p><strong>Marking QA Warnings as Unignorable</strong></p>
+<p>It has always been possible for translators to ignore any warning presented in the QA check. However, this could have caused problems reported by end customers, more work for Project Managers, or overall failure to download the completed file altogether.</p>
+<p>Project Managers can now specify which QA warnings cannot be ignored and therefore need to be resolved before a QA check is completed. This option (combined with the <em>Linguists may not set jobs with QA warnings to Completed</em> option) can help increase the quality of translations as well as decrease the unnecessary errors introduced during translation.</p>
+<p> </p>
+<p><strong>"Created By" Shown for Project Templates</strong></p>
+<p>In the list of Project Templates, users can now choose to display a column showing the name of the person who created any particular template.</p>
+<p> </p>
+<p><strong>Downloaded Analyses Showing Split File Names</strong></p>
+<p>Previously, jobs split in Memsource were displayed with the same name in the downloaded CSV or LOG files. These will now show the same name as in the Analysis UI (to indicate individual parts). </p>
+<p> </p>
+<p><strong>New Email Template Macros</strong></p>
+<p>The following macros have been added to the Email Templates:</p>
+<ul>
+<li>{workflow.abbr}</li>
+<li>{recipient.timezone}</li>
+</ul>
+<p> </p>
+<p><strong>Tooltip Redesign and Improvements</strong></p>
+<p>The tooltips in the system have been improved and redesigned to provide a better overall user experience.</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360015449432/New_Tooltips.png" alt="New_Tooltips.png" width="621" height="237"></p>
+<p> </p>
+<p><strong>API Call to Get Segment Count</strong></p>
+<p>In the previous legacy version of the APIs, users were able to easily get the progress of their jobs (percentage) by using the <strong>Get Segment Count</strong> API Call. This call has now been added to the REST API as well.</p>
+<p> </p>
+<p><strong>Support for Google Auto ML</strong></p>
+<p>It is now possible to establish a connection to the Google Auto MT engine.  </p>
+<h2>Fixed Bugs</h2>
+<ul>
+<li>Intervals set for email notification when assigning Linguists to jobs are now respected by the mobile app, as well as notifying the Linguists at the set interval.</li>
+<li>Translated COTI packages were not correctly exported to target folders inside Microsoft Connectors. This bug is now fixed.</li>
+<li>Using a primary segmentation rule in Job Creation sometimes caused the System Default rule to be used. This has now been resolved.</li>
+<li>The REST API call to List jobs provided only the general language code instead of the specific locale code. The bug is now fixed and correct codes are returned in the response.</li>
+<li>Enabling <strong>Ignore Tag Metadata</strong> could have caused tags to be inserted incorrectly when importing bilingual DOCX files back into the system. This issue is now fixed.</li>
+<li>Assigning a TM in a Workflow scenario could lead to TMs being unassigned from the project. The bug has now been fixed. </li>
+</ul>
+<p> </p>
+<p><strong>Have you come across any other bugs?</strong></p>
+<p>Thank you for letting our <a href="https://help.memsource.com/hc/en-us/requests/new" target="_blank" rel="noopener">Support team</a> know.</p>

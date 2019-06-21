@@ -1,0 +1,64 @@
+<h3><span id="Login" class="mw-headline">Login</span></h3>
+<p>Most APIs require an authenticated user who is identified by a <em>token</em>. To obtain a token, call the following API and use the returned value in all subsequent calls. Each token is valid for 24 hours.</p>
+<p>When 2-factor authentication is enabled and a <code>code</code> parameter is missing or invalid, the server returns the following error: <code>AuthAccountTwoFactorProtected</code>.</p>
+<pre><strong>action: api/v3/auth/login</strong>
+    userName                    string                             
+    password                    string
+    code                        string                   O                  // if 2-factor authentication is enabled
+
+<strong>response: JSON</strong>
+    {
+      "user": {
+        "id":30,
+        "firstName": "Admin",
+        "lastName": "Istrator",
+        "userName": "admin",
+        "role":"Admin",                                 // ADMIN, LINGUIST, PROJECT_MANAGER
+      }
+      "token":"30-a3bf70333f8f1316cb7841cd774c9ce8",
+      "expires":"2014-12-12T16:55:02Z"
+    }
+</pre>
+<h3><span id="Login_Another_User" class="mw-headline">Login Another User</span></h3>
+<p>This creates a token for a user within your organization; only Admins may use this API call.</p>
+<p>The token can be used to log the user in to the Web User Interface using the following URL. After the token is used in <tt>authByToken</tt>, it is deleted and cannot be used any longer.</p>
+<pre>https://cloud.memsource.com/web/login/authByToken?token=&lt;token&gt;&amp;url=&lt;url&gt;
+</pre>
+<pre><strong>action: api/v3/auth/loginOther</strong>
+    token                      string
+    userName                   string
+
+<strong>response: JSON</strong>
+    {
+      "user": {
+        "id":35,
+        "firstName": "Linguist",
+        "lastName": "Lingo",
+        "userName": "linguist",
+        "role":"Linguist",                                 // ADMIN, LINGUIST, PROJECT_MANAGER
+      }
+      "token":"35-a3bf70333f8f1316cb7841cd774c9ce8",
+      "expires":"2014-12-12T16:55:02+0000"
+    }
+</pre>
+<h3><span id="Logout" class="mw-headline">Logout</span></h3>
+<pre><strong>action: api/v3/auth/logout</strong>
+    token                      string
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Who_Am_I" class="mw-headline">Who Am I</span></h3>
+<p>This API call can be used to test if the previous <strong>auth/login</strong> call went ok. Although this API does not provide any essential functionality, it may still be useful during development.</p>
+<pre><strong>action: api/v3/auth/whoAmI</strong>
+    token                      string
+
+<strong>response: JSON</strong>
+    {
+      "user": {
+        "id":30,
+        "firstName": "Admin",
+        "lastName": "Istrator",
+        "userName": "admin",
+        "role":"Admin",                                 // ADMIN, LINGUIST, PROJECT_MANAGER
+      }
+    }</pre>

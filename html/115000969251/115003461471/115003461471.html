@@ -1,0 +1,20 @@
+<p>There are times when the translation of a specific word is changed after part of a job (or even after all jobs in a project) are already translated. Sometimes, you can change this new term with a simple <em>Search and Replace</em>, but if there are a lot of changes, or a lot of jobs, using some automation would make this process much easier. You can use automation both when you want to keep the same translation for all of the source segments and for when, due to the context, you want to use different translations for your source segments. We'll explore both scenarios below:</p>
+<h2>Using the Same Translation for all Source Segments</h2>
+<p>If you want to always use the same translation for the source segment, regardless of the context, you can follow these steps below:</p>
+<p><strong>Step 1:</strong> Make sure all of your "old" translation is saved in your "old" TM.<strong> </strong></p>
+<p><strong>Step 2: </strong>Export this TM as an XLSX file, making sure you only select <strong>Text </strong>(you can also check the <strong>ID </strong>box). That is, make sure you deselect <strong>Previous </strong>and <strong>Next.</strong> </p>
+<p><img src="https://help.memsource.com/hc/article_attachments/115004106511/import-812016.jpg"></p>
+<p><strong>Step 3: </strong>Open Excel and <a style="background-color: #ffffff;" href="http://www.excel-easy.com/examples/remove-duplicates.html" target="_blank" rel="noopener">remove the duplicates</a>.</p>
+<p><strong>Step 4: </strong>Edit the pieces that you need to change, and then save the XLSX file.</p>
+<p><strong>Step 5: </strong>Create a new TM.</p>
+<p><strong>Step 6: </strong>Import your new XLSX file to the new TM.</p>
+<p><strong>Step 7: </strong>Remove your old TM from your project, but don't delete it just yet—keep it as a backup.</p>
+<p><strong>Step 8: </strong>Once you're sure all of your original segments are saved in your old TM, select all the translated jobs that you want to update. Click on <strong>Pre-translate</strong> and then select <strong>Delete All Translations.</strong></p>
+<p><strong>Step 9: </strong>Select all your (now empty) jobs. In <strong>Pre-translate,</strong> select <strong>Pre-translate Where Empty.</strong> Set the <strong>Pre-translation threshold</strong> to 100% and let all 100% matches be confirmed.</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360022693332/mceclip0.png" width="294" height="435"></p>
+<h2>Using Different Translations for Your Source Segments</h2>
+<p>You can also use different translations for your source segments. This is especially useful for places with different context. Doing this is very similar to the steps you'll take to change all segments as outlined above, but with two exceptions:</p>
+<ul>
+<li>In Step 2, select the <strong>Previous</strong> and <strong>Next</strong> checkboxes for export.</li>
+<li>In Step 3, don't remove the duplicates.</li>
+</ul>

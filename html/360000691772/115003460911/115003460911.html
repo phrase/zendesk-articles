@@ -1,0 +1,29 @@
+<p>Memsource enables integrations with several Content Management Systems (CMSs) and online repositories. This feature allows users to directly connect their Memsource account with these systems and draw content directly from them into Memsource for translations. It can also be used to automate project creation.<br> <br>The Memsource Translation Connector for Git provides advanced features which allow for more effective <a href="https://help.memsource.com/hc/en-us/articles/115003483692-Continuous-Localization-through-Memsource-Translation-Connector-for-Git">continuous localization</a>.</p>
+<h2>Available Connectors</h2>
+<p>Users can currently integrate their accounts with the following systems:</p>
+<p><strong>Online Repositories</strong><br>FTP, SFTP, Google Drive, Dropbox, Box, Bitbucket Cloud, Bitbucket Server, Git, GitLab, GitHub, Microsoft SharePoint, Microsoft OneDrive, and Microsoft Azure</p>
+<p><strong>CMS</strong><br>Zendesk, Help Scout, Marketo, HubSpot, Salesforce Knowledge, and Sitecore. </p>
+<p><strong>CMS for Multilingual Websites</strong><br>Adobe Experience Manager<br>Wordpress<br>Drupal<br>TYPO3</p>
+<p>Please visit our <a href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors">Connectors documentation</a> for details about the availability of individual connectors in specific Memsource editions.</p>
+<h2>Setting up the Connector</h2>
+<p>The connectors themselves have different authentication methods used to connect them to Memsource. Once these are used, the connection can be tested either manually (by pressing <strong>Test connection</strong>) or by the system automatically (e.g. Google Drive).</p>
+<h3>Authentication via pop-up</h3>
+<p>Some connectors use a <strong>Connect to...</strong> button which brings up a pop-up window where users need to fill in their credentials for the desired account. Please note that other security measures for the given repository (like 2-factor authentication) would still apply and would need to be verified as well.</p>
+<h3>Credentials</h3>
+<p>FTP and SFTP require users to fill in a form specifying all the necessary means of connecting to the FTP environment (username, password, host, etc.).</p>
+<h3>
+<img style="width: 300px; height: 102px; float: right;" src="https://help.memsource.com/hc/article_attachments/115004105791/import-811601.jpg" alt="">Memsource Plugins</h3>
+<p>Wordpress and Drupal can be connected to Memsource using a dedicated Memsource Plugin that needs to be installed into the respective sites. The plugin is free of charge and can be directly downloaded from the official plugin sites for these content management systems.</p>
+<p>Once the plugin is installed, users need to generate a verification token in the plugin itself. This token can then be used (along with the site URL) to connect Memsource to the given website.</p>
+<h2>Creating Projects</h2>
+<p>For most of the repositories (except for Github), Memsource allows both manual and automatic project creation.</p>
+<h3>Manual Project Creation</h3>
+<p>Jobs can now be imported into any existing project directly from the online repository or CMS via the <strong>Add from Online Repository</strong> option. This brings up an interface with all the Connectors available in the account. This interface can then be used to directly browse all these repositories to identify the content to be imported. Please note that for sites using Memsource Plugins, languages of the project need to match the languages of the site in order to be able to import content.</p>
+<h3>Automatic Project Creation</h3>
+<p>It is possible to create projects automatically using <a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation" target="_self">Automated Project Creation</a>. Memsource will monitor a dedicated folder in any of the online repositories (with the exception of Github) and once new or updated content is identified, it will automatically create a new project. This feature can be extended by the use of <a href="https://help.memsource.com/hc/en-us/articles/115003483952-Project-Templates">Project Templates</a> to achieve full automation (similar to the  <a href="https://help.memsource.com/hc/en-us/articles/115003461331-Automation-Widget">Automation Widget</a>).</p>
+<h2>Delivery of Translated Content</h2>
+<p>Depending on how the project was created, completed content can be uploaded back into the online repositories either manually or automatically.</p>
+<h3>Manual Delivery</h3>
+<p>If the project was created manually, the completed translations need to be delivered into the online repository by using <strong>Download</strong> and clicking on <strong>Export to Online Repository</strong>. This will create a separate folder for each of the target languages in the folder where the original file was taken from. </p>
+<h3>Automatic Delivery</h3>
+<p>Automatically created projects make use of the <strong>Project Status</strong> to determine when the content needs to be imported back into the repository. Once the project reaches the status of <strong>Completed</strong> (either manually set by the Project Manager or automatically via <a href="https://help.memsource.com/hc/en-us/articles/115003680771-Projects#Project_Status_Automation_1">Project Status Automation</a>).</p>

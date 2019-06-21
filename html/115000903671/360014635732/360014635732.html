@@ -1,0 +1,64 @@
+<p>In order to use a translation memory for analysis, pre-translation, or for the actual translation in the Memsource Editor, the TM must be assigned to a project first. Multiple TMs can be assigned to one project, and one TM can be assigned to multiple projects.</p>
+<h2>Translation Memories in your project</h2>
+<p>Open your project and scroll down to a section labeled <em>Translation Memories</em>. The assigned TMs are listed there, including the target languages and the TM's settings.</p>
+<p><img class="img450" title="TMs assigned to a project" src="https://www.dropbox.com/s/sb6n8xyuhcs9ofm/PR_assignedTMs.png?raw=1"></p>
+<p>There are two options there:</p>
+<ol>
+<li>Click the <strong>Create New </strong>button to <a href="https://help.memsource.com/hc/en-us/articles/360010849432-Create-Translation-Memory">create a new translation memory</a> that will automatically be assigned to this project.</li>
+<li>Or, you can click <strong>Select</strong> and assign a previously created TM. You can also use this button to unassign any TMs that is already assigned to the project.</li>
+</ol><ul>
+<li>For project with multiple target languages, you can either choose one language or you can use "all" (only TMs containing all languages will be then listed in the TM selection)</li>
+<li>For projects with Workflow, you can either choose one step or all steps (see details below).</li>
+</ul>
+<li>click <strong>Continue. </strong>
+</li>
+<li>You will then see a list of all the TMs available for your project.</li>
+
+<h2>Selecting the TMs for a Project</h2>
+<p>There are several different options for each TM that you can use:</p>
+<ul>
+<li>
+<strong>Read:</strong> The Analysis, Pre-translate and the Editor will be able to access the content of the TM selected as <em>Read</em>. Unchecking the <em>Read</em> checkbox will unassign the TM from the project. TM with the reverse source and target languages can be assigned as Read-only (see <a href="https://help.memsource.com/hc/en-us/articles/360014635732#Languages_and_Locales">Languages and Locales</a>). </li>
+<li>
+<strong>Write: </strong>With this feature checked, any segments confirmed in the Memsource Editor or uploaded via "Tools &gt; Upload job" with will be saved into the TM. There must be at least one Write TM among the selected TMs.</li>
+<li>
+<strong>Source Language: </strong>This is where the source language of your saved TMs is displayed.</li>
+<li>
+<strong>Target Langues: </strong>This section shows the all target languages each TM has, regardless of which languages are in your current project.</li>
+<li>
+<strong>Penalty (%): </strong>Here you can set the penalty percentage for TM matches for your Analysis, Pre-translate and the Memsource Editor. See the <em>Setting Penalties </em>section<em> </em>below for more information.</li>
+</ul>
+<p><img class="img450" title="Assign TM to a project" src="https://www.dropbox.com/s/y66dqffywwesgqi/PR_TM_AssignTM_select_page.png?raw=1" alt="Assign TM to project"></p>
+<p>There are a few important things to note:</p>
+<ul>
+<li>At least <strong>one TM must be set for <em><strong>Write</strong></em></strong>. (The maximum is two <em>"Write" </em>TMs per language and Workflow step in a project).</li>
+<li>There can be <strong>up to 10 TMs</strong> assigned to each project (per language and Workflow step).</li>
+<li>
+<strong>Relevant TMs</strong> are displayed first. Relevant TMs are determined based on the <em>Client, Domain, Subdomain</em> and user rights of the Project Manager.</li>
+<li>
+<strong>A filter</strong> is available as shown in the picture above. You can use it to search for TMs by name, their ID number (on the far left side), or by the client's name.</li>
+<li>
+<strong>The first selected TM</strong> will be automatically selected for <em>Write</em> mode. You can change this if you select a different TM to be designated for <em>Write </em>mode.</li>
+</ul>
+<h2>Languages and Locales</h2>
+<p>As mentioned above, the source and target languages of your TM must be the same as the languages in your project. However, Memsource allows the selecting of TMs that have the reverse source-target combinations. For example, a TM that has English as the source and German as the target can be used for a project with German as the source and English as the target as shown below. These TMs will be read-only in the project.</p>
+<p><img class="img350" title="Assign TM with switched source and target languages" src="https://www.dropbox.com/s/nkz8kfkk27ci3zn/PR_TM_AssignTM_swap_locales.png?raw=1" alt="Assign TM with switched source and target languages"></p>
+<p>Memsource also allows you to add a TM to a project with the same language but a different locale.<br>Generally, all languages with the same prefix can be added (EN, EN_GB, EN_UK, etc.). For example, if you create a TM with German and English as your languages, you can assign TMs that use both DE and DE_CH as well as EN_GB and EN_US. (It also does not matter which is the source language and which is the target). However, keep in mind that all translation units will be stored as EN only with no distinction between US and GB. Therefore, using this TM for strictly GB or US projects might be inaccurate.</p>
+<p>Note that for certain languages, the code has a different prefix. For example, Norwegian has the code "NO" and Norwegian (Bokmål) has code "nb-NO”—these two languages cannot be mixed.</p>
+<h2>TM for Workflow Steps</h2>
+<p>When selecting TMs for projects with Workflow steps, you can decide whether the same translation memories should be selected for all of the project's Workflow steps or whether each Workflow step should have its own TM set up.</p>
+<p><img class="img350" title="Assign TM to all WF steps" src="https://www.dropbox.com/s/s31or80vz28u4os/PR_TM_AssignTM_select-allWF.png?raw=1" alt="Assign TM to all WF steps"></p>
+<p><strong>Note:</strong> You can select a TM for all Workflow steps and all languages. Afterwards, you can assign one specific TM to one step and one language (if needed). However, this does not work in the reverse order; you cannot select a TM for a specific step and language, and afterwards select a TM for all of the rest of the steps and languages.</p>
+<h3>Recommendations for Workflow steps</h3>
+<p>If you are using proofreading on a regular basis, we recommended that you do the following:</p>
+<ul>
+<li>Create a TM for proofreaders only, where only reviewed translations will be stored (for example, TM_REV) and always assign it as <em>Read </em>for the translation step and as <em>Write</em> for the revision step.</li>
+<li>Create a TM for translation only (for example, TM_TRA) and assign it as <em>Write </em>for the translation step and READ in the revision step.</li>
+<li>You can even set a 2% penalty to TM_TRA so that the matches from TM_REV always have priority. This would mean that 101% matches from TM_TRA will be shown as 99% matches in T_REV. For more information on this, see <em>Setting Penalties</em> below.</li>
+<li>After a project is completed and all translation is reviewed and saved in TM_REV, you can then delete TM_TRA.</li>
+</ul>
+<h2>Setting Penalties for Translation Memories</h2>
+<p>If you assign multiple TMs to a project but want to prefer matches from only one (or a few selected TMs), you can set a penalty for any of the selected TMs, as shown below. These settings will impact the pre-translation, analysis, and the matches offered to the Linguists in the Memsource Editor.</p>
+<p>In addition to applying penalties to an entire TM, you can also apply a 1% penalty to 101% (in-context) matches within a TM. This option is useful, for example, if you would like a Linguist to decide which 101% match from different TMs should be used in a translation. The penalty will mean that none of the in-context matches are inserted automatically into the target segment if the text is pre-translated.</p>
+<p><img class="img450" title="Assign TM to a project with a penalty" src="https://www.dropbox.com/s/thlx3r5p3d89l2g/PR_TM_AssignTM_penalty101.png?raw=1" alt="Assign TM to a project with a penalty"></p>
+<p>If you do decide to penalize 101% matches, the penalized matches will be displayed in a new order in the CAT Pane. That is, a 101% match penalized by 2% will become a 99% match. A little arrow indicating the penalization will be shown next to the percentage number.<br> <img class="img350" title="CAT pane with penalized match" src="https://www.dropbox.com/s/jd6amnffe08522v/ED_CAT_pane_penalized_results.png?raw=1" alt="CAT pane with penalized match"></p>

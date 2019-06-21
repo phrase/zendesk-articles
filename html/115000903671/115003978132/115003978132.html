@@ -1,0 +1,61 @@
+<p id="firstHeading" class="firstHeading" lang="en"><span style="font-weight: 400;">In Memsource, it is possible to calculate net rates for translation memories, machine translation, and non-translatables (NT). A Project Manager can set up one or more net rate schemes by </span>going to <strong>Setup</strong> and clicking on <strong>Net Rate Schemes </strong>in the <em>Financials </em>section. The net rates work independently of any financial information. The number of units for translation (pages, words, or characters) simply gets decreased based on the selected net rate scheme.</p>
+<div id="bodyContent" class="mw-body-content">
+<div id="mw-content-text" class="mw-content-ltr" dir="ltr" lang="en">
+<div class="thumb tright">
+<div class="thumbinner">
+<img src="https://relianta.sirv.com/AI-powered%20NTs/AI-NTs_Post-Editing_analysis.png" alt="" width="655" height="387">
+<div class="thumbcaption"><em><span class="wysiwyg-font-size-small">Applying a Net Rate Scheme</span></em></div>
+<div class="thumbcaption"> </div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner">
+<img src="https://help.memsource.com/hc/article_attachments/360002688091/mceclip0.png"><br>
+<div class="thumbcaption"><em><span class="wysiwyg-font-size-small">Setting up a Net Rate Scheme</span></em></div>
+</div>
+</div>
+<h2><span id="Translation_Memory_Net_Rates" class="mw-headline">Translation Memory Net Rates</span></h2>
+<p>Translation memory net rate schemes are well established in the translation industry. These are the main categories:</p>
+<ul>
+<li>
+<strong>Repetition:</strong> A segment which gets repeated in a document.</li>
+<li>
+<strong>In-context match:</strong> A segment which matches a segment already stored in the translation memory, including its context. That is, the preceding and following segments or context keys match.</li>
+<li>
+<strong>100% match:</strong> A segment which matches a segment already stored in the translation memory.</li>
+<li>
+<strong>Fuzzy match:</strong> A segment which partially matches a segment already stored in the translation memory. Fuzzy matches can range from 99% down to zero. However, fuzzy matches below a 75% match rate are often referred to as "new words". That is, they need to be translated from scratch.</li>
+</ul>
+<h2>Non-translatables Net Rates <span style="font-weight: 400;"> </span>
+</h2>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>100% match:</strong> A segment which Memsource has identified as content that is very unlikely to require translation, but may need to be checked by a translator.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>99% match:</strong> A segment which Memsource has identified as content that probably does not require translation, but should be checked by a translator.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Fuzzy match:</strong> For the default analysis, NTs would fall only into one of the categories mentioned above. If these are post-edited, they can fall into the fuzzy ranges in terms of Post-editing analysis.</span></li>
+</ul>
+<h2>Working with Net Rate Schemes</h2>
+<p><span style="font-weight: 400;">When a document for translation is imported into a project, it can be analyzed (by carrying out a </span><strong>Default analysis</strong><span style="font-weight: 400;">) against the project's translation memories and to identify non-translatables. After opening the analysis, a net rate scheme can be selected, and the pages/words/characters will get recalculated. The results will be displayed in the </span><strong>Net Rate </strong>line<span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Typically, the </span><strong>Default</strong><span style="font-weight: 400;"><strong> analysis</strong> is generated before the translation.</span></p>
+<h2><span id="Machine_Translation_Net_Rates" class="mw-headline">Machine Translation Net Rates</span></h2>
+<p>Memsource makes it possible to measure machine translation quality by comparing machine translation and its final post-edited version at a segment level. The match score is counted in just the same way as for translation memory matches. To analyze the post-edited translation against the initial machine translation, launch the <a title="Post-editing Analysis" href="https://wiki.memsource.com/wiki/Post-editing_Analysis">Post-editing analysis</a> via the <strong>Analyze</strong> button under <em>Project</em>.</p>
+<p>After opening a post-editing analysis, a net rate scheme can be selected and the pages/words/characters will get recalculated. The results will get displayed in the <strong>Net Rate </strong>line.</p>
+<p>The <strong>post-editing analysis</strong> gets typically generated after the translation.</p>
+<h2>Net Rate calculation example</h2>
+<p>In this example we will work only with TM matches and see how it affects the number of analyzed words.</p>
+<p>Net Rate Scheme settings:</p>
+<ul>
+<li>0% for 101% TM match</li>
+<li>10% for 100% TM match</li>
+<li>100% for less then 50% TM match</li>
+</ul>
+<p><img class="img350" title="Net Rate Scheme example" src="https://www.dropbox.com/s/ntjvor4oyylurn3/NetRateScheme_calculationExample.png?raw=1"></p>
+<p> Our analyzed job has these matches:</p>
+<ul>
+<li>15 words in 101% TM match</li>
+<li>10 words in 100% TM match</li>
+<li>5 words in less then 50% TM match</li>
+</ul>
+<p>The calculation of number of word and the Net Rate percentage: <strong>15 * 0 + 10 * 0.1 + 5 * 1 = 6</strong></p>
+<p><img class="img350" title="Analysis with Net Rate Scheme example" src="https://www.dropbox.com/s/akffngsfh7obg6t/PR_analysis_NetRateExample.png?raw=1"></p>
+</div>
+</div>

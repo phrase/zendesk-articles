@@ -1,0 +1,579 @@
+<h3><span id="Create_New_Term_Base" class="mw-headline">Create a New Term Base</span></h3>
+<pre><strong>action: api/v2/termBase/create</strong>
+    token                       string
+    name                        string
+    lang                        list(locale)
+    client                      domain(Client)                 O
+    businessUnit                domain(BusinessUnit)           O
+    domain                      domain(Domain)                 O
+    subDomain                   domain(SubDomain)              O
+    note                        string                         O
+
+<strong>response: JSON</strong>
+    {
+      "id": 1954              // id of the new term base
+    }
+</pre>
+<h3><span id="Edit_Term_Base" class="mw-headline">Edit a Term Base</span></h3>
+<pre><strong>action: api/v2/termBase/edit</strong>
+    token                       string
+    termBase                    domain(TermBase)
+    name                        string                         O
+    lang                        list(locale)                   O
+    client                      domain(Client)                 O N
+    businessUnit                domain(BusinessUnit)           O N
+    domain                      domain(Domain)                 O N
+    subDomain                   domain(SubDomain)              O N
+    note                        string                         O N
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Term_Base" class="mw-headline">Get a Term Base</span></h3>
+<pre><strong>action: api/v2/termBase/get</strong>
+    token                       string
+    termBase                    domain(TermBase)
+
+<strong>response: JSON</strong>
+    {
+      "id":1,
+      "internalId":1,
+      "name":"TB",
+      "langs":[
+        "de",
+        "en"
+      ]
+      "dateCreated":"2016-03-01T13:36:21+0000",
+      "createdBy": {
+         "id": 501,
+         "userName": "admin",
+         "email": "support@memsource.com"
+      }
+      "client":null,
+      "businessUnit": {
+         "id":5,
+         "name":"BU Name"
+      }
+      "domain":null,
+      "subDomain":null,
+      "note":null
+    }
+</pre>
+<h3><span id="Delete_Term_Base" class="mw-headline">Delete a Term Base</span></h3>
+<pre><strong>action: api/v2/termBase/delete</strong>
+    token                       string
+    termBase                    domain(TermBase)
+    purge                       boolean               O(false)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="List_Term_Bases" class="mw-headline">List Term Bases</span></h3>
+<pre><strong>action: api/v2/termBase/list</strong>
+    token                       string
+    page                        integer               O(0)
+    name                        string                O
+    lang                        list(locale)          O
+    client                      domain(Client)        O
+    domain                      domain(Domain)        O
+    subDomain                   domain(SubDomain)     O
+
+<strong>response: JSON</strong>
+   [
+     {
+       "id":1,
+       "name":"termBase",
+       "langs":[
+         "de",
+         "en"
+       ]
+     }
+   ]
+</pre>
+<h3><span id="Import_Data" class="mw-headline">Import Data</span></h3>
+<pre><strong>action: api/v2/termBase/import</strong>
+    token                       string
+    termBase                    domain(TermBase)
+    file                        file                              // TBX or XLSX file
+    charset                     string                O(UTF-8)
+    strictLangMatching          boolean               O(false)
+    updateTerms                 boolean               O(true)
+
+<strong>response: JSON</strong>
+    {
+      "langs": ["en", "de"],
+      "createdTermsCount": 5,
+      "updatedTermsCount": 3
+    }
+</pre>
+<h3><span id="Export_Data" class="mw-headline">Export Data</span></h3>
+<pre><strong>action: api/v2/termBase/export</strong>
+    token                       string
+    termBase                    domain(TermBase)
+    format                      enum(TermBaseFormat)  O(Tbx)
+    charset                     string                O(UTF-8)
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+</pre>
+<h3><span id="Browse_Terms" class="mw-headline">Browse Terms</span></h3>
+<pre><strong>action: api/v2/termBase/browseTerms</strong>
+    token                       string
+    termBase                    domain(TermBase)
+    queryLang                   string                          O
+    query                       string                          O
+    status                      enum(Concept.Term.Status)       O
+    page                        integer               O(0)
+
+<strong>response: JSON</strong>
+    [
+      {
+        "id":"MXEGKRh60Aj4UB8wqYwQZq4w1",
+        "writable":true,
+        "terms":[
+          [
+            {
+              "text":"Hallo",
+              "rtl":false,
+              "modifiedAt":1345021894443,
+              "status":"New",
+              "modifiedBy":{
+                "id":0,
+                "lastName":null,
+                "email":null,
+                "userName":"null",
+                "role":null,
+                "active":false,
+                "firstName":null
+              },
+              "writable":true,
+              "caseSensitive":false,
+              "lang":"de",
+              "id":"v3rAqVBD02P4AS88Hn14NLG51",
+              "exactMatch":false,
+              "createdBy":{
+                "id":0,
+                "lastName":null,
+                "email":null,
+                "userName":"null",
+                "role":null,
+                "active":false,
+                "firstName":null
+              },
+              "createdAt":1344873944496,
+              "conceptId":"MXEGKRh60Aj4UB8wqYwQZq4w1",
+              "usage":null,
+              "forbidden":false,
+              "note":null
+            }
+          ],
+          [
+            {
+              "text":"hello",
+              "rtl":false,
+              "modifiedAt":1345021900124,
+              "status":"New",
+              "modifiedBy":{
+                "id":0,
+                "lastName":null,
+                "email":null,
+                "userName":"null",
+                "role":null,
+                "active":false,
+                "firstName":null
+              },
+              "writable":true,
+              "caseSensitive":false,
+              "lang":"en",
+              "id":"DYS3UmGqMdM21o9Enww8N9R00",
+              "exactMatch":false,
+              "createdBy":{
+                "id":0,
+                "lastName":null,
+                "email":null,
+                "userName":"null",
+                "role":null,
+                "active":false,
+                "firstName":null
+              },
+              "createdAt":1344873944525,
+              "conceptId":"MXEGKRh60Aj4UB8wqYwQZq4w1",
+              "usage":null,
+              "forbidden":false,
+              "note":null
+            }
+          ]
+        ]
+      }
+    ]
+</pre>
+<h3><span id="Create_New_Term" class="mw-headline">Create a New Term</span></h3>
+<pre><strong>action: api/v2/termBase/createTerm</strong>
+    token                       string
+    termBase                    domain(TermBase)
+    conceptId                   string                          O
+    text                        string
+    lang                        locale
+    status                      enum(Concept.Term.Status)       O(New)
+    forbidden                   boolean                         O(false)
+    exactMatch                  boolean                         O(false)
+    caseSensitive               boolean                         O(false)
+    usage                       string                          O
+    note                        string                          O
+
+<strong>response: JSON</strong>
+    {
+      "caseSensitive":false,
+      "conceptId":"GSfUgFiiMMS2uJ442sgyfFfO",
+      "createdAt":1346410660597,
+      "createdBy":{
+        "firstName":"admin",
+        "id":1,
+        "lastName":"test",
+        "userName":"admin"
+      },
+      "exactMatch":false,
+      "forbidden":false,
+      "id":"NglDdn6C0Cg5IT98o3xgspxn0",
+      "lang":"en",
+      "modifiedAt":1346410660597,
+      "modifiedBy":null,
+      "note":null,
+      "rtl":false,
+      "status":"New",
+      "text":"agreement",
+      "usage":null
+    }
+</pre>
+<h3><span id="Get_Term" class="mw-headline">Get a Term</span></h3>
+<pre><strong>action: api/v2/termBase/getTerm</strong>
+    token                       string
+    termBase                    domain(TermBase)
+    termId                      long
+
+<strong>response: JSON</strong>
+    // same as in Create New Term
+</pre>
+<h3><span id="List_Terms_Of_Concept" class="mw-headline">List Terms Of Concept</span></h3>
+<pre><strong>action: api/v2/termBase/listTermsOfConcept</strong>
+    token                       string
+    termBase                    domain(TermBase)
+    conceptId                   string
+
+<strong>response: JSON</strong>
+    {
+      "conceptId":"GSfUgFiiMMS2uJ442sgyfFfO",
+      "termsPerLang": [
+        {
+          "lang":"en",
+          "terms": [
+            ... // same as in Create New Term
+          ]
+        }
+      ]
+    }
+    // same as in Create New Term
+</pre>
+<h3><span id="Update_Term" class="mw-headline">Update a Term</span></h3>
+<pre><strong>action: api/v2/termBase/updateTerm</strong>
+    token                       string
+    termBase                    domain(TermBase)
+    termId                      string
+    text                        string
+    lang                        locale
+    status                      enum(Concept.Term.Status)       O
+    forbidden                   boolean                         O
+    exactMatch                  boolean                         O
+    caseSensitive               boolean                         O
+    usage                       string                          O
+    note                        string                          O
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Delete_Term" class="mw-headline">Delete a Term</span></h3>
+<pre><strong>action: api/v2/termBase/deleteTerm</strong>
+    token                       string
+    termBase                    domain(TermBase)
+    termId                      string
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Delete_Concept" class="mw-headline">Delete a Concept</span></h3>
+<pre><strong>action: api/v2/termBase/deleteConcept</strong>
+    token                       string
+    termBase                    domain(TermBase)
+    conceptId                   string
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Search_Terms_In_Text_By_Task" class="mw-headline">Search Terms In Text By Task</span></h3>
+<pre><strong>action: api/v2/termBase/searchTermsInTextByTask</strong>
+    token                       string
+    task                        task
+    text                        string
+    reverse                     boolean              O(false)
+    zeroLengthSeparator         string               O
+
+<strong>response: JSON</strong>
+   [
+     {
+       "conceptId":"GSfUgFiiMMS2uJ442sgyfFfO",
+       "matches":[
+         {
+           "text":"World",
+           "beginIndex":7
+         }
+       ],
+       "subTerm":false,
+       "sourceTerm":{
+         "caseSensitive":false,
+         "conceptId":"GSfUgFiiMMS2uJ442sgyfFfO",
+         "createdAt":1344869104360,
+         "createdBy":{
+           "firstName":null,
+           "id":0,
+           "lastName":null,
+           "userName":"admin"
+         },
+         "exactMatch":false,
+         "forbidden":true,
+         "id":"NglDdn6C0Cg5IT98o3xgspxn0",
+         "lang":"en",
+         "modifiedAt":1345623087380,
+         "modifiedBy":{
+           "firstName":"administrator",
+           "id":30,
+           "lastName":"admin",
+           "userName":"admin"
+         },
+         "note":"",
+         "rtl":false,
+         "status":"New",
+         "text":"world",
+         "usage":"",
+         "writable":true
+       },
+       "termBase":{
+         "id":23,
+         "name":"linguist access"
+       },
+       "translationTerms":[
+         {
+           "caseSensitive":false,
+           "conceptId":"GSfUgFiiMMS2uJ442sgyfFfO",
+           "createdAt":1344869104326,
+           "createdBy":{
+             "firstName":null,
+             "id":0,
+             "lastName":null,
+             "userName":"admin"
+           },
+           "exactMatch":false,
+           "forbidden":false,
+           "id":"NglDdn6C0Cg5IT98o3xgspxn1",
+           "lang":"de",
+           "modifiedAt":1345118781404,
+           "modifiedBy":{
+             "firstName":"administrator",
+             "id":30,
+             "lastName":"admin",
+             "userName":"admin"
+           },
+           "note":"",
+           "rtl":false,
+           "status":"New",
+           "text":"Welt",
+           "usage":"",
+           "writable":true
+         }
+       ]
+     }
+   ]
+
+<strong>error codes</strong>
+      TermBaseNotSelected                                   no term base is selected for the task
+</pre>
+<h3><span id="Search_Terms_By_Task" class="mw-headline">Search Terms By Task</span></h3>
+<pre><strong>action: api/v2/termBase/searchTermsByTask</strong>
+    token                       string
+    task                        task
+    query                       string
+    reverse                     boolean              O(false)
+
+<strong>response: JSON</strong>
+   [
+     {
+       "conceptId":"GSfUgFiiMMS2uJ442sgyfFfO",
+       "sourceTerm":{
+         "caseSensitive":false,
+         "conceptId":1,
+         "createdAt":1344869104360,
+         "createdBy":{
+           "firstName":null,
+           "id":0,
+           "lastName":null,
+           "userName":"admin"
+         },
+         "exactMatch":false,
+         "forbidden":true,
+         "id":"NglDdn6C0Cg5IT98o3xgspxn0",
+         "lang":"en",
+         "modifiedAt":1345623087380,
+         "modifiedBy":{
+           "firstName":"administrator",
+           "id":30,
+           "lastName":"admin",
+           "userName":"admin"
+         },
+         "note":"",
+         "rtl":false,
+         "status":"New",
+         "text":"world",
+         "usage":"",
+         "writable":true
+       },
+       "termBase":{
+         "id":23,
+         "name":"linguist access"
+       },
+       "translationTerms":[
+         {
+           "caseSensitive":false,
+           "conceptId":"GSfUgFiiMMS2uJ442sgyfFfO",
+           "createdAt":1344869104326,
+           "createdBy":{
+             "firstName":null,
+             "id":0,
+             "lastName":null,
+             "userName":"admin"
+           },
+           "exactMatch":false,
+           "forbidden":false,
+           "id":"NglDdn6C0Cg5IT98o3xgspxn1",
+           "lang":"de",
+           "modifiedAt":1345118781404,
+           "modifiedBy":{
+             "firstName":"administrator",
+             "id":30,
+             "lastName":"admin",
+             "userName":"admin"
+           },
+           "note":"",
+           "rtl":false,
+           "status":"New",
+           "text":"Welt",
+           "usage":"",
+           "writable":true
+         }
+       ]
+     }
+   ]
+
+<strong>error codes</strong>
+      TermBaseNotSelected                                   no term base is selected for the task
+</pre>
+<h3><span id="Search" class="mw-headline">Search</span></h3>
+<p><span id="Search" class="mw-headline">Note: This returns only 20 results. In order to browse the TB, see <a href="https://help.memsource.com/hc/en-us/articles/360019079911-Term-Base-API-v2#Browse_Terms">Browse Terms</a><br></span></p>
+<pre><strong>action: api/v2/termBase/search</strong>
+    token                       string
+    termBase                    list(domain(TermBase))
+    sourceLang                  locale
+    targetLang                  list(locale)
+    query                       string
+    status                      enum(Concept.Term.Status)        O
+
+<strong>response: JSON</strong>
+     see termBase/searchTermsByTask above
+</pre>
+<h3><span id="Create_Term_By_Task" class="mw-headline">Create a Term By Task</span></h3>
+<pre><strong>action: api/v2/termBase/createTermByTask</strong>
+    token                       string
+    task                        task
+    sourceText                  string
+    sourceForbidden             boolean              O(false)
+    sourceExactMatch            boolean              O(false)
+    sourceCaseSensitive         boolean              O(false)
+    sourceUsage                 string               O
+    sourceNote                  string               O
+    targetText                  string
+    targetForbidden             boolean              O(false)
+    targetExactMatch            boolean              O(false)
+    targetCaseSensitive         boolean              O(false)
+    targetUsage                 string               O
+    targetNote                  string               O
+
+<strong>response: JSON</strong>
+   {
+     "sourceTerm":{
+       "text":"dog",
+       "rtl":false,
+       "modifiedAt":1364382523388,
+       "status":"Approved",
+       "modifiedBy":null,
+       "writable":true,
+       "caseSensitive":false,
+       "lang":"en",
+       "id":"NglDdn6C0Cg5IT98o3xgspxn0",
+       "exactMatch":false,
+       "createdBy":{
+         "id":1,
+         "lastName":"test",
+         "email":"foo@bar.com",
+         "userName":"admin",
+         "role":"LINGUIST",
+         "firstName":"admin"
+       },
+       "createdAt":1364382523388,
+       "conceptId":"GSfUgFiiMMS2uJ442sgyfFfO",
+       "usage":null,
+       "forbidden":false,
+       "note":null
+     },
+     "targetTerm":{
+       "text":"Hund",
+       "rtl":false,
+       "modifiedAt":1364382524193,
+       "status":"Approved",
+       "modifiedBy":null,
+       "writable":true,
+       "caseSensitive":false,
+       "lang":"de",
+       "id":"NglDdn6C0Cg5IT98o3xgspxn1",
+       "exactMatch":false,
+       "createdBy":{
+         "id":1,
+         "lastName":"test",
+         "email":"foo@bar.com",
+         "userName":"admin",
+         "role":"LINGUIST",
+         "firstName":"admin"
+       },
+       "createdAt":1364382524193,
+       "conceptId":"GSfUgFiiMMS2uJ442sgyfFfO",
+       "usage":null,
+       "forbidden":false,
+       "note":null
+     }
+   }
+
+<strong>error codes</strong>
+      TermBaseNotSelected                                   no term base is selected for the task
+</pre>
+<h3><span id="Clear_Data" class="mw-headline">Clear Data</span></h3>
+<pre><strong>action: api/v2/termBase/clear</strong>
+    token                       string
+    termBase                    domain(TermBase)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Metadata" class="mw-headline">Get Metadata</span></h3>
+<pre><strong>action: api/v2/termBase/getMetadata</strong>
+    token                       string
+    termBase                    domain(TermBase)
+
+<strong>response: JSON</strong>
+    {
+      "languages": [ "en", "de" ]
+      "termsCount": 38
+    }
+</pre>

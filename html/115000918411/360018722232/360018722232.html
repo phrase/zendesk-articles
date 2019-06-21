@@ -1,0 +1,37 @@
+<h3><span id="List_Net_Rate_Schemes" class="mw-headline">List Net Rate Schemes</span></h3>
+<pre><strong>action: api/v2/discountScheme/list</strong>
+    token                       string
+
+<strong>response: JSON</strong>
+    [
+      {
+        "id":1,
+        "name":"Predefined"
+        "netRates":{
+          "transMemory":{
+            "match75":100,
+            "match50":100,
+            "match100":10,
+            "match101":10,
+            "match0":100,
+            "match95":33,
+            "match85":66
+          },
+          "machineTrans":{
+            "match75":100,
+            "match50":100,
+            "match100":30,
+            "match0":100,
+            "match95":40,
+            "match85":70
+          },
+          "repetition":10
+          },
+          "nonTranslatables":{
+           "match100":10,
+           "match99":33
+         }
+        }
+      }
+    ]
+</pre>

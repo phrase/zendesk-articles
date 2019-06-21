@@ -1,0 +1,36 @@
+<p>Most of the API calls require an authenticated Memsource user. The APIs do not use any special user accounts. Each API can be called on behalf of any existing user (using their username and password).</p>
+<h2>Token</h2>
+<p>Before calling any API that requires an authenticated user, you can call the <a href="https://cloud.memsource.com/web/docs/api#operation/login">auth/login</a> API to obtain an authentication token. Such a token is valid for 24 hours and can be used for all subsequent calls (please, do not create a new token for every call). You can then use the obtained token as the query parameter 'token' in your API calls.</p>
+<pre class="alert alert-green">https://cloud.memsource.com/web/api2/v1/auth/whoAmI?token=VrMkqzV4mVPWQelC51Cc5</pre>
+<h2>OAuth 2.0</h2>
+<p>You can use the OAuth 2.0 in your application instead of sending the above mentioned token with each of your call.<br>The OAuth 2.0 can be set and managed in Memsource by going to <a href="https://help.memsource.com/hc/en-us/articles/115003692532#Integrations_1">Setup &gt; Integration</a></p>
+<p>Auth URL:</p>
+<pre class="alert alert-green">/web/oauth/authorize
+</pre>
+<p>Token URL:</p>
+<pre class="alert alert-green">/web/oauth/token</pre>
+<h2>Asynchronous APIs</h2>
+<p>Asynchronous APIs should always be preferred to their synchronous counterparts. If you call synchronous APIs, there is a chance of receiving <em>timeout expired</em> responses when processing large batches of files or even a single huge file. Because of this, synchronous APIs should only be used for small files and small scale integration with Memsource.</p>
+<h3>Polling</h3>
+<p>After you call an asynchronous API, you will receive an instant response including the identifier request. You will use this identifier to check the status of the request by calling <a href="https://cloud.memsource.com/web/docs/api#tag/Async-Request">getAsyncRequest</a> and checking the asyncResponse field. This polling approach can lead to a number of getAsyncRequest calls before you actually receive an asyncResponse that is not null.</p>
+<h3>Callbacks</h3>
+<p>As a response to the drawbacks of the polling approach to asynchronous requests, we have introduced support for callbacks in all asynchronous APIs. When calling an asynchronous request, you specify a URL (in callbackUrl parameter) that will be requested from our side just after the work initiated by the asynchronous request is finished.</p>
+<p>Callbacks are requested via HTTP POST calls and the data is passed on in the body encoded as JSON. The JSON object always contains</p>
+<ul>
+<li>information about the asynchronous request (the same as when calling getAsyncRequest),</li>
+<li>detailed information about the result of the action (for example a full analysis or the jobs' details).</li>
+</ul>
+<div class="alert alert-green">
+<pre>{
+   "asyncRequest": {
+       ...
+  }
+ "analyse": {   
+   ...
+  }
+}
+</pre>
+</div>
+<p>If the callback URL is not accessible, the request will be repeated from our side after 2 minutes, then 4 minutes, 8 minutes, 16 minutes, and then after 30, minutes up to a total number of 10 retries.</p>
+<p>Your callback URL must respond with the 200 OK HTTP status code to be considered successful on our side.</p>
+<p>For an overview of the Memsource REST API, see <a href="https://help.memsource.com/hc/en-us/articles/115003694732-Introduction-to-Memsource-API">this introductory article</a>.</p>

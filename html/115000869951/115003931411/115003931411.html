@@ -1,0 +1,1311 @@
+<h3><span id="Create_New_Job" class="mw-headline">Create a New Job</span></h3>
+<pre><strong>action: api/v7/job/create</strong>
+    token                                                string
+    project                                              domain(Project)
+    file                                                 file
+    path                                                 string                   O         // destination directory  
+    targetLang                                           list(locale)
+    due                                                  datetime                 O
+    linguist                                             list(domain(User))       O         // list is used to assign different linguists to different target languages
+                                                                                            // ex: targetLang=de&amp;targetLang=fr&amp;linguist=1&amp;linguist=2, 
+                                                                                                   "de" jobs will be assigned to 1, "fr" jobs will be assigned to 2
+    segmentationRule                                     domain(SegRule)          O
+    tableOfContents                                      boolean                  O(false)
+    notes                                                boolean                  O(false)
+    masterSlides                                         boolean                  O(false)
+    useProjectFileImportSettings                         boolean                  O(false)
+
+    idml.extractNotes                                    boolean                  O(false)
+    idml.simplifyCodes                                   boolean                  O(true)
+    idml.extractMasterSpreads                            boolean                  O(true)
+    idml.extractLockedLayers                             boolean                  O(true)
+    idml.extractInvisibleLayers                          boolean                  O(false)
+    idml.extractHiddenConditionalText                    boolean                  O(false)
+    idml.keepKerning                                     boolean                  O(false)
+    idml.keepTracking                                    boolean                  O(false)
+    idml.targetFont                                      string                   O
+    idml.replaceFont                                     boolean                  O(true)
+    idml.removeXmlElements                               boolean                  O(false)
+    
+    mifExtractBodyPages                                  boolean                  O(true)
+    mifExtractReferencePages                             boolean                  O(false)
+    mifExtractMasterPages                                boolean                  O(true)
+    mifExtractHiddenPages                                boolean                  O(false)
+    mifExtractVariables                                  boolean                  O(false)
+    mifExtractIndexMarkers                               boolean                  O(true)
+    mifExtractLinks                                      boolean                  O(false)
+    mifExtractXRefDef                                    boolean                  O(false)
+    mifExtractPgfNumFormat                               boolean                  O(true)
+    mifExtractCustomReferencePages                       boolean                  O(true)
+    mifExtractDefaultReferencePages                      boolean                  O(false)
+    mifExtractUsedVariables                              boolean                  O(true)
+    mifExtractHiddenCondText                             boolean                  O(false)
+    mifExtractUsedXRefDef                                boolean                  O(true)
+    mifExtractUsedPgfNumFormat                           boolean                  O(true)
+
+    xls.sheetNames                                       boolean                  O(false)
+    xls.hidden                                           boolean                  O(false)
+    xls.commens                                          boolean                  O(false)
+    xls.other                                            boolean                  O(false)
+    xls.cellFlow                                         enum(XlsCellFlow)        O(DownRight)
+    xls.htmlSubfilter                                    boolean                  O(false)
+    xls.tagRegexp                                        string                   O
+
+    bilingualXlsSourceColumn                             string                   O
+    bilingualXlsTargetColumn                             string                   O
+    bilingualXlsContextColumn                            string                   O
+    bilingualXlsMaxLenColumn                             string                   O
+    bilingualXlsTagRegexp                                string                   O
+    bilingualXlsProcessHtml                              boolean                  O(false)
+    bilingualXlsSegmentation                             boolean                  O(true)
+    docComments                                          boolean                  O(false)
+    docIndex                                             boolean                  O(true)
+    docOther                                             boolean                  O(false)
+    docTagRegexp                                         string                   O
+    docHyperlinkTarget                                   boolean                  O(false)
+    docJoinSimilarRuns                                   boolean                  O(false)
+    docTargetFont                                        string                   O
+    docProperties                                        boolean                  O(false)
+    pptHiddenSlides                                      boolean                  O(false)
+    pptOther                                             boolean                  O(false)
+    xmlRulesFormat                                       enum(XmlRulesFormat)     O(PLAIN)
+    xmlIncludeTags                                       string                   O(*)       //Elements (import selected), example: "para,heading", only PLAIN format
+    xmlExcludeTags                                       string                   O       // Elements (ignore selected), example: "script,object", only PLAIN format
+    xmlIncludeAttributes                                 string                   O       // Attributes (import selected), example: "title", only PLAIN format
+    xmlExcludeAttributes                                 string                   O       // Attributes (ignore selected), example: "lang,href", only PLAIN format
+    xmlInlineTags                                        string                   O       // Translatable inline elements, example: "tt,b", only PLAIN format
+    xmlInlineTagsNonTranslatable                         string                   O       //Non-translatable inline elements,  example: "tt,b", only PLAIN format
+    xmlInlineTagsAuto                                    boolean                  O(false)       // Identify inline elements automatically, only PLAIN format
+    xmlSubFilterTags                                     string                   O       // HTML subfilter; example: "tt,b", only PLAIN format
+    xmlEntities                                          boolean                  O(false)       // Convert to character entities
+    xmlLockTags                                          string                   O       // Locked elements, example: "para,heading", only PLAIN format
+    xmlLockAttributes                                    string                   O       // Locked attributes, example: "title", only PLAIN format
+    xmlIncludeXPath                                      string                   O       // only used for XPATH format
+    xmlInlineTagsXPath                                   string                   O       // only used for XPATH format
+    xmlInlineTagsNonTranslatableXPath                    string                   O       // only used for XPATH format
+    xmlInlineTagsAutoXPath                               boolean                  O(false)
+    xmlSubFilterTagsXPath                                string                   O                  //HTML subfilter; only used for XPATH format
+    xmlLockXPath                                         string                   O                  // only used for XPATH format
+    xmlSegmentation                                      boolean                  O(true)
+    xmlTagRegexp                                         string                   O
+    xmlContextXPath                                      string                   O
+    xmlMaxLenXPath                                       string                   O
+    xmlPreserveWhitespaceXPath                           string                   O
+    xmlPreserveCharEntities                              string                   O
+    bilingualXmlTranslatableElementsXPath                string                   O
+    bilingualXmlSourceElementsXPath                      string                   O
+    bilingualXmlTargetElementsXPath                      string                   O
+    bilingualXmlInlineElementsNonTranslatableXPath       string                   O
+    bilingualXmlTagRegexp                                string                   O
+    bilingualXmlSegmentation                             boolean                  O(true)
+    xlfImportNotes                                       boolean                  O(true)
+    xlfSegmentation                                      boolean                  O(true)
+    xlfSkipImportRules                                   string                   O(translate=no)    // example: "translate=yes,approved=no,state=needs-adaptation"
+    xlfImportAsConfirmedRules                            string                   O                  //          multiples rules must be separated by newline or semicolon
+    xlfImportAsLockedRules                               string                   O                
+    xlfExportAttrsWhenConfirmedAndLocked                 string                   O                
+    xlfExportAttrsWhenConfirmedAndNotLocked              string                   O
+    xlfExportAttrsWhenNotConfirmedAndLocked              string                   O
+    xlfExportAttrsWhenNotConfirmedAndNotLocked           string                   O
+    xlfSaveConfirmedSegments                             boolean                  O(true)
+    xlfLineBreakTags                                     string                   O
+    xlfPreserveWhitespace                                boolean                  O(true)
+    xlfContextType                                       string                   O
+    xlfCopySourceToTargetIfNotImported                   boolean                  O(true)
+    sdlXlfSkipImportRules                                string                   O(translate=no)    // example: "translate=yes,locked=true,state=Draft"
+    sdlXlfImportAsConfirmedRules                         string                   O                  //          multiples rules must be separated by newline or semicolon
+    sdlXlfImportAsLockedRules                            string                   O(locked=true)
+    sdlXlfExportAttrsWhenConfirmedAndLocked              string                   O(locked=true)
+    sdlXlfExportAttrsWhenConfirmedAndNotLocked           string                   O
+    sdlXlfExportAttrsWhenNotConfirmedAndLocked           string                   O(locked=true)
+    sdlXlfExportAttrsWhenNotConfirmedAndNotLocked        string                   O
+    sdlXlfSaveConfirmedSegments                          boolean                  O(true)
+    ttxSaveConfirmedSegments                             boolean                  O(true)
+    yamlHtmlSubFilter                                    string                   O
+    yamlTagRegexp                                        string                   O
+    yamlIncludeKeyRegexp                                 string                   O
+    yamlContextPath                                      string                   O
+    ditaIncludeTags                                      string                   O
+    ditaExcludeTags                                      string                   O
+    ditaInlineTags                                       string                   O
+    ditaInlineTagsNonTranslatable                        string                   O
+    docBookIncludeTags                                   string                   O
+    docBookExcludeTags                                   string                   O
+    docBookInlineTags                                    string                   O
+    docBookInlineTagsNonTranslatable                     string                   O
+    poTagRegexp                                          string                   O
+    poExportMultiline                                    boolean                  O(true)
+    macStringsHtmlSubfilter                              boolean                  O(false)
+    macStringsTagRegexp                                  string                   O
+
+    php.tagRegexp                                        string                   O
+    php.htmlSubFilter                                    string                   O
+
+    json.tagRegexp                                       string                   O
+    json.htmlSubFilter                                   boolean                  O(true)
+    json.includeKeyRegexp                                string                   O
+    json.contextNotePath                                 string                   O
+    json.maxLenPath                                      string                   O
+
+    html.breakTagCreatesSegment                          boolean                  O(true)
+    html.unknownTagCreatesTag                            boolean                  O(true)
+    html.preserveWhitespace                              boolean                  O(false)
+    html.excludeElements                                 string                   O                // example: "script,blockquote"
+    html.tagRegexp                                       string                   O
+    html.charEntitiesToTags                              string                   O
+    html.translateMetaTagRegexp                          string                   O
+     
+    multilingualXls.sourceColumn                         string                   O
+    multilingualXls.targetColumn                         list(string)             O
+    multilingualXls.contextNoteColumn                    string                   O
+    multilingualXls.contextKeyColumn                     string                   O
+    multilingualXls.tagRegexp                            string                   O
+    multilingualXls.htmlSubFilter                        string                   O
+    multilingualXls.segmentation                         boolean                  O(true)
+    multilingualXls.importRows                           string                   O
+
+    xml.contextKeyXPath                                  string                   O
+
+    csv.delimiter                                        string                   O(,)
+    csv.delimiterType                                    enum(CsvDelimiter)       O(COMMA)
+    csv.htmlSubFilter                                    boolean                  O(false)
+    csv.tagRegexp                                        string                   O
+    csv.importColumns                                    string                   O
+    csv.contextNoteColumns                               string                   O
+    csv.contextKeyColumn                                 string                   O
+    csv.maxLenColumn                                     string                   O
+    csv.importRows                                       string                   O
+
+    txt.tagRegexp                                        string                   O
+    txt.translatableTextRegexp                           string                   O
+
+    xlf2.importNotes                                     boolean                  O(true)
+    xlf2.saveConfirmedSegments                           boolean                  O(true)
+    xlf2.segmentation                                    boolean                  O(true)
+    xlf2.lineBreakTags                                   boolean                  O(false)
+    xlf2.preserveWhitespace                              boolean                  O(true)
+    xlf2.copySourceToTargetIfNotImported                 boolean                  O(true)
+    xlf2.respectTranslateAttr                            boolean                  O(true)
+    xlf2.skipImportRules                                 string                   O
+    xlf2.importAsConfirmedRules                          string                   O(state=final)
+    xlf2.importAsLockedRules                             string                   O
+    xlf2.exportAttrsWhenConfirmedAndLocked               string                   O(state=final)
+    xlf2.exportAttrsWhenConfirmedAndNotLocked            string                   O(state=final)
+    xlf2.exportAttrsWhenNotConfirmedAndLocked            string                   O
+    xlf2.exportAttrsWhenNotConfirmedAndNotLocked         string                   O
+    
+    tmMatch.contextType                                  enum(ContextType)        O(PREV_AND_NEXT_SEGMENT)
+    tmMatch.prevOrNextSegment                            boolean                  O(false)
+    
+    propertiesTagRegexp                                  string                   O     
+    inputCharset                                         charset                  O
+    outputCharset                                        charset                  O
+    zipCharset                                           charset                  O
+    fileFormat                                           string                   O
+    targetLength                                         boolean                  O(false)
+    targetLengthMax                                      integer                  O(1000)
+    targetLengthPercent                                  boolean                  O(false)
+    targetLengthPercentValue                             double                   O(130)
+
+<strong>response: JSON</strong> 
+{
+  "unsupportedFiles":[ "document.png" ],
+  "jobParts":[
+     {
+        "id":32222654,
+        "internalId":"8",
+        "task":"eC7YWCngob4gkwKl_dc2",
+        "fileName":"3d.xlf",
+        "targetLang":"cs",
+        "workflowLevel":1,
+        "status":"NEW",
+        "isParentJobSplit":false,
+        "assignedTo":null,
+        "dateDue":null,
+        "dateCreated":"2016-03-15T13:55:12+0000",
+        "project":{
+           "id":704444,
+           "internalId":1297,
+           "name":"xliff",
+           "status":"NEW",
+           "sourceLang":"en",
+           "targetLangs":[
+              "cs"
+           ],
+           "dateDue":null,
+           "dateCreated":"2015-11-04T13:34:07+0000",
+           "note":"",
+           "machineTranslateSettings":null,
+           "workflowSteps":[
+           ],
+           "client":null,
+           "domain":null,
+           "subDomain":null,
+           "langSettings":[
+           ],
+           "createdBy":{
+              "deleted":false,
+              "active":true,
+              "userName":"tester",
+              "firstName":"tester",
+              "id":23715,
+              "lastName":"admin",
+              "role":"ADMIN",
+              "email":"test@memsource.com"
+           },
+           "qualityAssuranceSettings":{
+              "emptyTranslation":true,
+              "inconsistentTranslation":true,
+              "joinTags":true,
+              "missingNumbers":true,
+              "segmentNotConfirmed":true,
+              "terminology":true,
+              "multipleSpaces":true,
+              "trailingSpace":true,
+              "trailingPunctuation":false,
+              "targetLength":{
+                 "enabled":false,
+                 "max":1000
+              },
+              "formatting":true,
+              "unresolvedComment":true,
+              "emptyPairTags":true,
+              "strictJobStatus":false,
+              "forbiddenStrings":{
+                 "enabled":false,
+                 "list":[
+                 ]
+              },
+              "excludeLockedSegments":false,
+              "ignoreNotApprovedTerms":false,
+              "spellCheck":true,
+              "repeatedWords":true,
+              "inconsistentTagContent":true,
+              "emptyTagContent":true,
+              "xliffTags":true,
+              "forbiddenTerms":false,
+              "targetLengthPercent":{
+                 "enabled":false,
+                 "max":130.0
+              },
+              "targetLengthPerSegment":true,
+              "newerAtPrecedingWorkflowStep":true,
+              "leadingAndTrailingSpaces":true
+           },
+           "analyseSettings":{
+              "type":"PreAnalyse",
+              "includeFuzzyRepetitions":true,
+              "includeConfirmedSegments":true,
+              "includeNumbers":true,
+              "includeLockedSegments":true,
+              "countSourceUnits":true,
+              "includeTransMemory":true,
+              "compareWorkflowLevel":null
+           }
+        },
+        "job":{
+           "importResult":{
+              "warning":"Different source locale: 'de'\nDifferent target locale: 'fr'"
+              "warnings": [
+                 "Different source locale: 'de'",
+                 "Different target locale: 'fr'"
+                ]
+       }
+        },
+        "wordsCount":2023,
+        "beginIndex":0,
+        "endIndex":168,
+        "workflowStep":null,
+        "readOnly":false,
+        "lastModified":{
+           "date":null,
+           "by":null
+        },
+        "segmentsLastModified":null,
+        "assignedUsers":[
+        ],
+        "vendors":[
+        ]
+     }
+  ]
+}
+
+
+<strong>error codes</strong>
+    JobCreateError
+</pre>
+<p><strong>Note:</strong> See the <a title="API File Type List" href="https://wiki.memsource.com/wiki/API_File_Type_List">API File Type List</a> for fileFormat values.</p>
+<h3><span id="Edit_Job" class="mw-headline">Edit Job</span></h3>
+<pre><strong>action: api/v7/job/edit</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+    due                         datetime                 O N
+    linguist                    domain(User)             O N           // mutually exclusive with "vendor" parameter
+    vendor                      domain(Vendor)           O N           // mutually exclusive with "linguist" parameter
+    status                      enum(JobStatus)          O
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Delete_Job" class="mw-headline">Delete Job</span></h3>
+<pre><strong>action: api/v7/job/delete</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+    purge                       boolean            O(false)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Job" class="mw-headline">Get Job</span></h3>
+<pre><strong>action: api/v7/job/get</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+
+<strong>response: JSON</strong>
+    {
+      "id":1,
+      "internalId":"1",
+      "task":"Fsg0ETx1y6FAR8Tl1",
+      "fileName":"small.properties",
+      "targetLang":"de",
+      "workflowLevel":1,
+      "status":"COMPLETED",
+      "isParentJobSplit":false,
+      "assignedTo":{
+        "active":true,
+        "deleted":false,
+        "email":"test@test.com",
+        "firstName":"linguist",
+        "id":2,
+        "lastName":"test",
+        "role":"LINGUIST",
+        "userName":"linguist"
+      },
+      "dateDue":null,
+      "dateCreated":"2015-08-25T15:44:36Z",
+      "project":{
+        "id":1,
+        "internalId":1,
+        "name":"project",
+        "status":"NEW",
+        "sourceLang":"en",
+        "targetLangs":[
+          "cs",
+          "de"
+        ],
+        "dateDue":null,
+        "dateCreated":"2015-08-25T15:44:35Z",
+        "note":null,
+        "machineTranslateSettings":null,
+        "workflowSteps":[
+    
+        ],
+        "client":null,
+        "domain":null,
+        "subDomain":null,
+        "langSettings":[
+    
+        ],
+        "createdBy":{
+          "active":true,
+          "deleted":false,
+          "email":"test@test.com",
+          "firstName":"admin",
+          "id":1,
+          "lastName":"test",
+          "role":"ADMIN",
+          "userName":"admin"
+        }
+      },
+      "job":{
+        "importResult":{
+          "warning":null
+        }
+      },
+      "wordsCount":3,
+      "beginIndex":0,
+      "endIndex":2,
+      "workflowStep":null,
+      "readOnly":false,
+      "lastModified":{
+        "date":"2015-08-25T15:44:38Z",
+        "by":{
+          "active":true,
+          "deleted":false,
+          "email":"test@test.com",
+          "firstName":"admin",
+          "id":1,
+          "lastName":"test",
+          "role":"ADMIN",
+          "userName":"admin"
+        }
+      },
+      "segmentsLastModified":{
+        "date":"2015-08-25T15:44:38Z",
+        "by":{
+          "active":true,
+          "deleted":false,
+          "email":"test@test.com",
+          "firstName":"admin",
+          "id":1,
+          "lastName":"test",
+          "role":"ADMIN",
+          "userName":"admin"
+        },
+        "action":"UPLOAD_BILINGUAL"
+      }
+    }
+</pre>
+<h3><span id="List_Jobs" class="mw-headline">List Jobs</span></h3>
+<pre><strong>action: api/v7/job/list</strong>
+    token                       string
+    jobPart                     list(domain(JobPart))
+
+<strong>response: JSON</strong>
+    [
+      {
+        "id": 9372,
+        "task": "5087ab08eac015e0656c4a00",
+        "fileName": "my.doc",
+        "targetLang": "en",
+        "workflowLevel": 1,
+        "status": "NEW",
+        "isParentJobSplit": false,
+        "wordsCount": 331,
+        "beginIndex":0,
+        "endIndex":14,
+        "assignedTo": {
+          "id": 501,
+          "userName": "admin",
+          "email": "support@memsource.com"
+        }
+        // ... see <a title="Job API v7" href="https://wiki.memsource.com/wiki/Job_API_v7#Get_Job">Get Job</a>
+      }
+    ]
+</pre>
+<h3><span id="List_Jobs_By_Task" class="mw-headline">List Jobs By Task</span></h3>
+<pre><strong>action: api/v7/job/listByTask</strong>
+    token                       string
+    task                        list(task)
+    workflowLevel               integer         O(1)
+
+<strong>response: JSON</strong>
+ [
+     "taskId":"id",
+     "jobParts":[ 
+       // ... see <a title="Job API v7" href="https://wiki.memsource.com/wiki/Job_API_v7#Get_Job">Get Job</a>
+       ]
+ ]
+</pre>
+<h3><span id="Get_Original_File" class="mw-headline">Get Original File</span></h3>
+<h4><span id="By_Job_Part" class="mw-headline">By Job Part</span></h4>
+<pre><strong>action: api/v7/job/getOriginalFile</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+    X-Memsource                 json
+        {
+          "fileName": "agreement.doc"
+        }
+</pre>
+<h4><span id="By_Task" class="mw-headline">By Task</span></h4>
+<pre><strong>action: api/v7/job/getOriginalFileByTask</strong>
+    token                       string
+    task                        task
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+    X-Memsource                 json
+        {
+          "fileName": "agreement.doc"
+        }
+</pre>
+<h3><span id="Get_Bilingual_File" class="mw-headline">Get Bilingual File</span></h3>
+<pre><strong>action: api/v7/job/getBilingualFile</strong>
+    token                       string
+    jobPart                     list(domain(JobPart))
+    format                      enum(BilingualFormat)    O(Mxlf)
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+</pre>
+<h3><span id="Get_Preview_File" class="mw-headline">Get Preview File</span></h3>
+<pre><strong>action: api/v7/job/getPreviewFile</strong>
+    token                       string
+    bilingualFile               file
+    task                        task
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+    X-Memsource                 json
+        {
+          "fileName": "agreement-en-de-C.doc"
+        }
+</pre>
+<h3><span id="Get_PDF_Preview_.28sponsored_by_FrontLab.29" class="mw-headline">Get PDF Preview (sponsored by FrontLab)</span></h3>
+<pre><strong>action: api/v7/job/getPdfPreview</strong>
+    token                       string
+    task                        task
+    workflowLevel               integer         O(1)
+</pre>
+<pre><strong>response: JSON</strong>
+    {
+      "url":"<a class="external free" href="http://converterstatus.frontlab.com/default.aspx?action=idmltopdf&amp;jobid=" rel="nofollow">http://converterstatus.frontlab.com/default.aspx?action=idmltopdf&amp;jobid=</a>&lt;jobId&gt;&amp;jobtokenid=&lt;tokenId&gt;"
+    }
+</pre>
+<h3><span id="Get_Completed_File" class="mw-headline">Get Completed File</span></h3>
+<pre><strong>action: api/v7/job/getCompletedFile</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+    Memsource-API-Result    json
+        {
+            "warning":"Invalid xliff 2.0: Error in &lt;file&gt; id='f1', &lt;unit&gt; id='1'"
+        }
+    X-Memsource                 json
+        {
+          "fileName": "agreement-en-de-C.doc"
+        }
+</pre>
+<h3><span id="Get_Completed_File_By_Task" class="mw-headline">Get Completed File By Task</span></h3>
+<pre><strong>action: api/v7/job/getCompletedFileByTask</strong>
+    token                       string
+    task                        task
+    workflowLevel               integer              O(1)
+    format                      enum(PreviewFormat)  O(ORIGINAL)
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+    Memsource-API-Result    json
+        {
+            "warning":"Invalid xliff 2.0: Error in &lt;file&gt; id='f1', &lt;unit&gt; id='1'"
+        }
+    X-Memsource                 json
+        {
+          "fileName": "agreement-en-de-C.doc"
+        }
+</pre>
+<h3><span id="Upload_Bilingual_File" class="mw-headline">Upload Bilingual File</span></h3>
+<pre><strong>action: api/v7/job/uploadBilingualFile</strong>
+    token                       string
+    bilingualFile               file
+    format                      enum(BilingualFormat)    O(Mxlf)
+    saveToTransMemory           enum(TransMemSave)       O(Confirmed)
+    setCompleted                boolean                  O(false)
+
+<strong>response: JSON</strong>
+    [
+      {
+        "id": 9372,
+        "task": "5087ab08eac015e0656c4a00",
+        "fileName": "my.doc",
+        "targetLang": "en",
+        "workflowLevel": 1,
+        "status": "NEW",
+        "isParentJobSplit": false,
+        "wordsCount": 331,
+        "beginIndex":0,
+        "endIndex":14,
+        "assignedTo": {
+          "id": 501,
+          "userName": "admin",
+          "email": "support@memsource.com"
+        }
+      }
+    ]
+</pre>
+<h3><span id="Convert_Bilingual_File" class="mw-headline">Convert Bilingual File</span></h3>
+<pre><strong>action: api/v7/job/convertBilingualFile</strong>
+    token                       string
+    bilingualFile               file
+    from                        enum(BilingualFormat)
+    to                          enum(BilingualFormat)
+
+<strong>response: binary</strong>
+</pre>
+<h3><span id="Machine_Translation" class="mw-headline">Machine Translation</span></h3>
+<pre><strong>action: api/v7/job/machineTranslate</strong>
+    token                       string
+    task                        task
+    text                        list(string)
+
+<strong>response: JSON</strong>
+    {
+      "translations": [ "Hallo", "Welt" ]
+    }
+
+<strong>error codes</strong>
+    MachineTranslateNotSelected
+</pre>
+<h3><span id="Get_Translation_Resources" class="mw-headline">Get Translation Resources</span></h3>
+<pre><strong>action: api/v7/job/getTranslationResources</strong>
+    token                       string
+    task                        task
+    workflowLevel               integer         O(1)
+
+<strong>response: JSON</strong>
+   {
+     "termBases":[
+       {
+         "termBase":{
+           "id":1,
+           "name":"termBase",
+           "langs":[
+             "de",
+             "en"
+           ]
+         },
+         "writeMode":true,
+         "targetLang":"de",
+         "readMode":true,
+         "workflowStep":null
+       }
+     ],
+     "transMemories":[
+       {
+         "writeMode":true,
+         "transMemory":{
+           "id":1,
+           "targetLangs":[
+             "de"
+           ],
+           "sourceLang":"en",
+           "name":"transMem"
+         },
+         "targetLang":"de",
+         "penalty":0,
+         "readMode":true,
+         "workflowStep":null
+       }
+     ],
+     "targetLang":"de",
+     "fileName":"small.properties",
+     "machineTranslator":{
+       "name":"Google",
+       "type":"GoogleTranslate"    // see MachineTranslator enum for all possible values
+     },
+     "access":{
+       "showUserDataToLinguists": true,
+       "downloadEnabled": true
+     }
+   }
+</pre>
+<h3><span id="Set_Status" class="mw-headline">Set Status</span></h3>
+<pre><strong>action: api/v7/job/setStatus</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+    status                      enum(JobStatus)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Segments_Count_.28.22Get_Progress.22.29" class="mw-headline">Get Segments Count ("Get Progress")</span></h3>
+<pre><strong>action: api/v7/job/getSegmentsCount</strong>
+    token                       string
+    jobPart                     list(domain(JobPart))        M(100)
+
+<strong>response: JSON</strong>
+   [
+     {
+       "counts":{
+         "allConfirmed":false,
+         "charsCount":923,
+         "confirmedCharsCount":0,
+         "lockedSegmentsCount":0,
+         "qualityAssurance":{
+           "ignoredWarningsCount":0,
+           "segmentsCount":0,
+           "warningsCount":0
+         },
+         "qualityAssuranceResolved":false,
+         "segmentGroupsCount":10,
+         "segmentsCount":10,
+         "translatedLockedSegmentsCount":0,
+         "translatedSegmentsCount":0
+       }
+     }
+   ]
+</pre>
+<h3><span id="Get_Segments" class="mw-headline">Get Segments</span></h3>
+<pre><strong>action: api/v7/job/getSegments</strong>
+    token                       string
+    task                        task
+    beginIndex                  int
+    endIndex                    int
+
+<strong>response: JSON</strong>
+   [
+     [
+       {
+         "createdAt":1349958069141,
+         "createdBy":{
+           "firstName":"administrator",
+           "id":30,
+           "lastName":"admin",
+           "userName":"admin"
+         },
+         "id":"1wHy5zBpxBsb1omg1:0",
+         "modifiedAt":0,
+         "modifiedBy":null,
+         "source":"Hello",
+         "translation":"Hallo",
+         "workflowStep":{
+           "abbr":"P",
+           "id":4,
+           "level":1,
+           "name":"Preparation"
+         }
+       },
+       {
+         "createdAt":1349958069141,
+         "createdBy":{
+           "firstName":"administrator",
+           "id":30,
+           "lastName":"admin",
+           "userName":"admin"
+         },
+         "id":"1wHy5zBpxBsb1omg1:0",
+         "modifiedAt":0,
+         "modifiedBy":null,
+         "source":"Hello",
+         "translation":"Hallo",
+         "workflowStep":{
+           "abbr":"T",  
+           "id":1,
+           "level":2,
+           "name":"Translation"
+         }
+       }
+     ]
+   ]
+</pre>
+<h3><span id="Get_Workflow_Steps" class="mw-headline">Get Workflow Steps</span></h3>
+<pre><strong>action: api/v7/job/getWorkflowSteps</strong>
+    token                       string
+    task                        task
+
+<strong>response: JSON</strong>
+   [
+     {
+       "id":1,
+       "level":1,
+       "name":"Translation",
+       "abbr":"T"
+     },
+     {
+       "id":2,
+       "level":2,
+       "name":"Revision",
+       "abbr":"R"
+     }
+   ]
+</pre>
+<h3><span id="Compare_Bilingual_File" class="mw-headline">Compare Bilingual File</span></h3>
+<pre><strong>action: api/v7/job/compareBilingualFile</strong>
+    token                       string
+    bilingualFile               file
+    compareToLevel              int
+
+<strong>response: JSON</strong>
+   [
+     {
+       "segmentId":"MF5qobgaMiKFA8ak:0",
+       "state":"Diff",
+     },
+     {
+       "segmentId":"MF5qobgaMiKFA8ak:1",
+       "state":"Miss",
+     }
+   ]
+</pre>
+<h3><span id="Compare_Workflow_Steps" class="mw-headline">Compare Workflow Steps</span></h3>
+<pre><strong>action: api/v7/job/compareWorkflowSteps</strong>
+    token                       string
+    jobPart                     list(domain(JobPart))
+    compareAtLevel              int
+    compareWithLevel            int
+
+<strong>response: JSON</strong>
+   [
+     {
+       "segmentId":"MF5qobgaMiKFA8ak:0",
+       "state":"Diff",
+     },
+     {
+       "segmentId":"MF5qobgaMiKFA8ak:1",
+       "state":"Miss",
+     }
+   ]
+</pre>
+<h3><span id="List_By_Project" class="mw-headline">List By Project</span></h3>
+<pre><strong>action: api/v7/job/listByProject</strong>
+    token                       string
+    page                        integer                      O(0)
+    project                     domain(Project)
+    workflowLevel               integer                      O(1)
+    assignedTo                  domain(User)                 O
+    status                      enum(JobFilter.Status)       O
+
+<strong>response: JSON</strong>
+[
+  {
+     "id":38184639,
+     "internalId":"1",
+     "task":"u1U4C6Fqos5mgLEH0_dc1",
+     "fileName":"Pasted text.txt",
+     "targetLang":"de_de",
+     "workflowLevel":1,
+     "status":"NEW",
+     "isParentJobSplit":false,
+     "assignedTo":{
+        "deleted":false,
+        "active":true,
+        "userName":"Ling1",
+        "firstName":"J",
+        "id":149701,
+        "lastName":"DE",
+        "role":"LINGUIST",
+        "email":"ling1@memsource.com"
+     },
+     "dateDue":null,
+     "dateCreated":"2016-05-25T18:00:12+0000",
+     "project":{
+        "id":1096883,
+        "internalId":2064,
+        "name":"Project 53412",
+        "status":"NEW",
+        "sourceLang":"ru_ru",
+        "targetLangs":[
+           "de_de",
+           "en_gb",
+           "fr_fr"
+        ],
+        "dateDue":null,
+        "dateCreated":"2016-05-25T18:01:13+0000",
+        "note":null,
+        "machineTranslateSettings":null,
+        "workflowSteps":[
+        ],
+        "client":null,
+        "businessUnit":{
+        },
+        "domain":null,
+        "subDomain":null,
+        "langSettings":[
+        ],
+        "createdBy":{
+           "deleted":false,
+           "active":true,
+           "userName":"k_support",
+           "firstName":"Project",
+           "id":23715,
+           "lastName":"Manager",
+           "role":"ADMIN",
+           "email":"pm@memsource.com"
+        },
+        "qualityAssuranceSettings":{
+           "emptyTranslation":false,
+           "inconsistentTranslation":false,
+           "joinTags":false,
+           "missingNumbers":false,
+           "segmentNotConfirmed":false,
+           "terminology":false,
+           "multipleSpaces":false,
+           "trailingSpace":true,
+           "trailingPunctuation":false,
+           "targetLength":{
+              "enabled":false,
+              "max":1000
+           },
+           "formatting":false,
+           "unresolvedComment":false,
+           "emptyPairTags":false,
+           "strictJobStatus":false,
+           "forbiddenStrings":{
+              "enabled":false,
+              "list":[
+              ]
+           },
+           "excludeLockedSegments":false,
+           "ignoreNotApprovedTerms":false,
+           "spellCheck":false,
+           "repeatedWords":false,
+           "inconsistentTagContent":false,
+           "emptyTagContent":false,
+           "xliffTags":false,
+           "forbiddenTerms":false,
+           "targetLengthPercent":{
+              "enabled":false,
+              "max":130.0
+           },
+           "targetLengthPerSegment":false,
+           "newerAtPrecedingWorkflowStep":false,
+           "leadingAndTrailingSpaces":false
+        },
+        "analyseSettings":{
+           "type":"PreAnalyse",
+           "includeFuzzyRepetitions":true,
+           "includeConfirmedSegments":true,
+           "includeNumbers":true,
+           "includeLockedSegments":true,
+           "countSourceUnits":true,
+           "includeTransMemory":true,
+           "compareWorkflowLevel":null
+        }
+     },
+     "job":{
+        "importResult":{
+           "warning":null,
+           "warnings":[
+           ]
+        }
+     },
+     "wordsCount":1,
+     "beginIndex":0,
+     "endIndex":0,
+     "workflowStep":null,
+     "readOnly":false,
+     "lastModified":{
+        "date":null,
+        "by":null
+     },
+     "segmentsLastModified":null,
+     "assignedUsers":[
+        {
+           "deleted":false,
+           "active":true,
+           "userName":"Ling1",
+           "firstName":"J",
+           "id":149701,
+           "lastName":"DE",
+           "role":"LINGUIST",
+           "email":"ling1@memsource.com"
+        }
+     ],
+     "vendors":[
+     ]
+  },
+  {
+     "id":38184641,
+     "internalId":"3",
+     "task":"y1U4C6Fqos5mgLEH0_dc1",
+     "fileName":"Pasted text.txt",
+     "targetLang":"fr_fr",
+     "workflowLevel":1,
+     "status":"NEW",
+     "isParentJobSplit":false,
+     "assignedTo":{
+        "deleted":false,
+        "active":true,
+        "userName":"Ling2",
+        "firstName":"J",
+        "id":149710,
+        "lastName":"IT",
+        "role":"LINGUIST",
+        "email":"ling2@memsource.com"
+     },
+     "dateDue":null,
+     "dateCreated":"2016-05-25T18:00:12+0000",
+     "project":{
+        "id":1096883,
+        "internalId":2064,
+        "name":"Project 53412",
+        "status":"NEW",
+        "sourceLang":"ru_ru",
+        "targetLangs":[
+           "de_de",
+           "en_gb",
+           "fr_fr"
+        ],
+        "dateDue":null,
+        "dateCreated":"2016-05-25T18:01:13+0000",
+        "note":null,
+        "machineTranslateSettings":null,
+        "workflowSteps":[
+        ],
+        "client":null,
+        "businessUnit":{
+        },
+        "domain":null,
+        "subDomain":null,
+        "langSettings":[
+        ],
+        "createdBy":{
+           "deleted":false,
+           "active":true,
+           "userName":"k_support",
+           "firstName":"Project",
+           "id":23715,
+           "lastName":"Manager",
+           "role":"ADMIN",
+           "email":"pm@memsource.com"
+        },
+        "qualityAssuranceSettings":{
+           "emptyTranslation":false,
+           "inconsistentTranslation":false,
+           "joinTags":false,
+           "missingNumbers":false,
+           "segmentNotConfirmed":false,
+           "terminology":false,
+           "multipleSpaces":false,
+           "trailingSpace":true,
+           "trailingPunctuation":false,
+           "targetLength":{
+              "enabled":false,
+              "max":1000
+           },
+           "formatting":false,
+           "unresolvedComment":false,
+           "emptyPairTags":false,
+           "strictJobStatus":false,
+           "forbiddenStrings":{
+              "enabled":false,
+              "list":[
+              ]
+           },
+           "excludeLockedSegments":false,
+           "ignoreNotApprovedTerms":false,
+           "spellCheck":false,
+           "repeatedWords":false,
+           "inconsistentTagContent":false,
+           "emptyTagContent":false,
+           "xliffTags":false,
+           "forbiddenTerms":false,
+           "targetLengthPercent":{
+              "enabled":false,
+              "max":130.0
+           },
+           "targetLengthPerSegment":false,
+           "newerAtPrecedingWorkflowStep":false,
+           "leadingAndTrailingSpaces":false
+        },
+        "analyseSettings":{
+           "type":"PreAnalyse",
+           "includeFuzzyRepetitions":true,
+           "includeConfirmedSegments":true,
+           "includeNumbers":true,
+           "includeLockedSegments":true,
+           "countSourceUnits":true,
+           "includeTransMemory":true,
+           "compareWorkflowLevel":null
+        }
+     },
+     "job":{
+        "importResult":{
+           "warning":null,
+           "warnings":[
+           ]
+        }
+     },
+     "wordsCount":1,
+     "beginIndex":0,
+     "endIndex":0,
+     "workflowStep":null,
+     "readOnly":false,
+     "lastModified":{
+        "date":null,
+        "by":null
+     },
+     "segmentsLastModified":null,
+     "assignedUsers":[
+        {
+           "deleted":false,
+           "active":true,
+           "userName":"Ling2",
+           "firstName":"J",
+           "id":149710,
+           "lastName":"IT",
+           "role":"LINGUIST",
+           "email":"ling2@memsource.com"
+        }
+     ],
+     "vendors":[
+     ]
+  }
+]
+</pre>
+<h3><span id="Pre-translate" class="mw-headline">Pre-translate</span></h3>
+<pre><strong>action: api/v7/job/preTranslate</strong>
+    token                               string
+    jobPart                             list(domain(JobPart))
+    useTranslationMemory                boolean                    O(true)
+    translationMemoryThreshold          double                     O(0.7)
+    useMachineTranslation               boolean                    O(true)
+    insertMachineTranslationIntoTarget  boolean                    O(true)
+    preTranslateNonTranslatables        boolean                    O(false)
+    confirm100Matches                   boolean                    O(false)
+    confirm101Matches                   boolean                    O(false)
+    lock101Matches                      boolean                    O(false)
+    lock100Matches                      boolean                    O(false)
+    overwrite                           boolean                    O(false)
+    segmentFilter                       list(enum(SegmentFilter))  O
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Human_Translate_.28Gengo.29" class="mw-headline">Human Translate (Gengo)</span></h3>
+<pre><strong>action: /api/async/v2/job/humanTranslate</strong>
+   token                                string
+   jobPart                              list(domain(JobPart))
+   asyncTranslateSettings               domain(AsyncTranslateSettings)
+   level                                enum(GengoTranslateSettings.Level)   O
+   comment                              string                               O
+   glossaryId                           string                               O
+   usePreferredTranslators              boolean                              O 
+   callbackUrl                          string                               O
+
+<strong>response: AsyncRequest object as JSON</strong>
+</pre>
+<h3><span id="Pseudo-translate" class="mw-headline">Pseudo-translate</span></h3>
+<pre><strong>action: api/v7/job/pseudoTranslate</strong>
+    token                               string
+    jobPart                             list(domain(JobPart))
+    replacement                         string                     O($)
+    prefix                              string                     O(aaa)
+    suffix                              string                     O(bbb)
+    length                              double                     O(1)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Notify_Assigned_Linguist" class="mw-headline">Notify Assigned Linguist</span></h3>
+<pre><strong>action: api/v7/job/notifyAssignedLinguist</strong>
+    token                               string
+    jobPart                             list(domain(JobPart))
+    emailTemplate                       domain(OrganizationEmailTemplate)
+    cc                                  list(string)                               O
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="List_By_User_.28Assigned_To.29" class="mw-headline">List By User (Assigned To)</span></h3>
+<pre><strong>action: api/v7/job/listByAssignedTo</strong>
+    token                               string
+    assignedTo                          domain(User)
+    status                              enum(JobStatus)
+
+<strong>response: JSON</strong>
+ [
+   {
+     "id":1,
+     "project":{
+       "id":1,
+       "targetLangs":[
+         "cs",
+         "de"
+       ],
+       "status":"NEW",
+       "sourceLang":"en",
+       "name":"project",
+       "dateCreated":"2013-07-16T12:07:08Z",
+       "dateDue":null,
+       "note":null
+     },
+     "status":"NEW",
+     "targetLang":"de",
+     "task":"Tn1gJNpyxBsTKFYE0",
+     "assignedTo":{
+       "id":2,
+       "lastName":"test",
+       "email":"test@test.com",
+       "userName":"linguist",
+       "role":"LINGUIST",
+       "active":true,
+       "firstName":"linguist"
+     },
+     "fileName":"small.properties",
+     "dateCreated":"2013-07-16T12:07:10Z",
+     "dateDue":null,
+     "workflowLevel":1,
+     "isParentJobSplit":false,
+     "wordsCount": 331,
+     "beginIndex":0,
+     "endIndex":14
+   }
+ ]
+</pre>
+<h3><span id="Split_By_Parts_Count" class="mw-headline">Split By Parts Count</span></h3>
+<pre><strong>action: api/v7/job/splitByPartsCount</strong>
+    token                               string
+    jobPart                             domain(JobPart)
+    partsCount                          integer
+
+<strong>response: JSON</strong>
+ [
+   65321,65322,65323            // list of new JobPart identifiers
+ ]
+</pre>
+<h3><span id="Split_By_Part_Size" class="mw-headline">Split By Part Size</span></h3>
+<pre><strong>action: api/v7/job/splitByPartSize</strong>
+    token                               string
+    jobPart                             domain(JobPart)
+    partSize                            integer
+
+<strong>response: JSON</strong>
+ [
+   65321,65322,65323            // list of new JobPart identifiers
+ ]
+</pre>
+<h3><span id="Split_After_Specific_Segment.28s.29" class="mw-headline">Split After Specific Segment(s)</span></h3>
+<pre><strong>action: api/v7/job/splitAfterSegment</strong>
+    token                               string
+    jobPart                             domain(JobPart)
+    segmentOrdinal                      list(long)
+
+<strong>response: JSON</strong>
+ [
+   65321,65322,65323            // list of new JobPart identifiers
+ ]
+</pre>
+<h3><span id="Delete_All_Translations" class="mw-headline">Delete All Translations</span></h3>
+<pre><strong>action: api/v7/job/deleteAllTranslations</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+
+<strong>response: JSON</strong>
+ [
+   65321,65322,65323            // list of JobPart identifiers
+ ]
+</pre>
+<h3><span id="Special_Features" class="mw-headline">Special Features</span></h3>
+<pre><strong>action: api/v7/job/getSpecialFeatures</strong>
+    token                               string
+    task                                task
+
+<strong>response: JSON</strong>
+ {
+   "pdfPreview":{
+     "enabled":false
+   }
+ }
+</pre>
+<h3><span id="Status_Changes" class="mw-headline">Status Changes</span></h3>
+<pre><strong>action: api/v7/job/getStatusChanges</strong>
+    token                               string
+    jobPart                             domain(JobPart)
+
+<strong>response: JSON</strong>
+   [
+     "createdBy":{
+       "id":1,
+       "lastName":"test",
+       "email":"test@test.com",
+       "role":"ADMIN",
+       "userName":"admin",
+       "active":true,
+       "firstName":"admin",
+       "deleted":false
+     },
+     "status":"EMAILED",
+     "dateCreated":"2015-11-09T07:48:34+0000"
+   ]</pre>

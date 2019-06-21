@@ -1,0 +1,37 @@
+<h2><span id="Align_Single_Source_File" class="mw-headline">Align Single Source File</span></h2>
+<pre><strong>action: api/async/v2/align/alignSingleSourceFile</strong>
+    token                       string
+    sourceJob                   domain(JobPart)
+    tagetJob                    list(domain(JobPart))
+    transMemory                 domain(TransMemory)
+    callbackUrl                 string                     O
+
+<strong>response: JSON</strong>
+    {
+      "asyncRequest":{
+        "id":1415,
+        "createdBy":{
+          "id":1,
+        },
+        "asyncResponse":null,
+        "action":"ALIGN",
+        "dateCreated":"2014-11-03T16:03:11Z",
+        "parent": null,
+        "project": null
+      },
+      "alignment":{
+        "id":1,
+        "sourceJob": {
+          "id": 1112
+        },
+        "targetJobs": [
+          {
+            "id": 1113
+          }
+        ],
+        "asyncRequest": {
+          "id": 1
+        }
+      }
+    }
+</pre>

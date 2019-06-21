@@ -1,0 +1,209 @@
+<h3><span id="Create_New_Job" class="mw-headline">Create a New Job</span></h3>
+<pre><strong>action: api/v2/job/create</strong>
+    token                       string
+    project                     domain(Project)
+    file                        file
+    path                        string                   O         // destination directory 
+    targetLang                  locale
+    due                         datetime                 O
+    linguist                    domain(User)             O
+    zipCharset                  charset                  O
+
+<strong>response: JSON</strong>
+    {
+      "unsupportedFiles": [ "document.pdf" ],
+      "jobParts" : [
+        {
+          "id": 9371,
+          "task": "5023cd08e4b015e0656c4a8f",
+          "fileName": "document.txt",
+          "targetLang": "de"
+        },
+        {
+          "id": 9372,
+          "task": "5087ab08eac015e0656c4a00",
+          "fileName": "document.doc",
+          "targetLang": "de"
+        }
+      ]
+    }
+
+<strong>error codes</strong>
+    JobCreateError
+</pre>
+<h3><span id="Delete_Job" class="mw-headline">Delete Job</span></h3>
+<pre><strong>action: api/v2/job/delete</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Job" class="mw-headline">Get Job</span></h3>
+<pre><strong>action: api/v2/job/get</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+
+<strong>response: JSON</strong>
+    {
+      "id": 9372,
+      "task": "5087ab08eac015e0656c4a00",
+      "status": "NEW",
+      "isParentJobSplit": false,
+      "assignedTo": {
+        "id": 501,
+        "userName": "admin",
+        "email": "support@memsource.com"
+      }
+    }
+</pre>
+<h3><span id="Get_Original_File" class="mw-headline">Get Original File</span></h3>
+<h4><span id="By_Job_Part" class="mw-headline">By Job Part</span></h4>
+<pre><strong>action: api/v2/job/getOriginalFile</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+    X-Memsource                 json
+        {
+          "fileName": "agreement.doc"
+        }
+</pre>
+<h4><span id="By_Task" class="mw-headline">By Task</span></h4>
+<pre><strong>action: api/v2/job/getOriginalFileByTask</strong>
+    token                       string
+    task                        task
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+    X-Memsource                 json
+        {
+          "fileName": "agreement.doc"
+        }
+</pre>
+<h3><span id="Get_Bilingual_File" class="mw-headline">Get Bilingual File</span></h3>
+<pre><strong>action: api/v2/job/getBilingualFile</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+    format                      enum(BilingualFormat)    O(Mxlf)
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+</pre>
+<h3><span id="Get_Preview_File" class="mw-headline">Get Preview File</span></h3>
+<pre><strong>action: api/v2/job/getPreviewFile</strong>
+    token                       string
+    bilingualFile               file
+    task                        task
+
+<strong>response: binary</strong>
+
+<strong>response headers</strong>
+    Content-Disposition         file name
+    X-Memsource                 json
+        {
+          "fileName": "agreement-en-de-C.doc"
+        }
+</pre>
+<h3><span id="Get_Completed_File" class="mw-headline">Get Completed File</span></h3>
+<pre><strong>action: api/v2/job/getCompletedFile</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+
+<strong>response: binary</strong>
+
+</pre>
+<h3><span id="Upload_Bilingual_File" class="mw-headline">Upload Bilingual File</span></h3>
+<pre><strong>action: api/v2/job/uploadBilingualFile</strong>
+    token                       string
+    bilingualFile               file
+    format                      enum(BilingualFormat)    O(Mxlf)
+    saveToTransMemory           enum(TransMemSave)       O(Confirmed)
+    setCompleted                boolean                  O(false)
+
+<strong>response: empty JSON</strong>
+</pre>
+<h3><span id="Convert_Bilingual_File" class="mw-headline">Convert Bilingual File</span></h3>
+<pre><strong>action: api/v2/job/convertBilingualFile</strong>
+    token                       string
+    bilingualFile               file
+    from                        enum(BilingualFormat)
+    to                          enum(BilingualFormat)
+
+<strong>response: binary</strong>
+</pre>
+<h3><span id="Machine_Translation" class="mw-headline">Machine Translation</span></h3>
+<pre><strong>action: api/v2/job/machineTranslate</strong>
+    token                       string
+    task                        task
+    text                        list(string)
+
+<strong>response: JSON</strong>
+    {
+      "translations": [ "Hallo", "Welt" ]
+    }
+
+<strong>error codes</strong>
+    MachineTranslateNotSelected
+</pre>
+<h3><span id="Get_Translation_Resources" class="mw-headline">Get Translation Resources</span></h3>
+<pre><strong>action: api/v2/job/getTranslationResources</strong>
+    token                       string
+    task                        task
+    workflowLevel               integer
+
+<strong>response: JSON</strong>
+    {
+       "termBases":[
+         {
+           "id": 286,
+           "name": "My TB"
+         }
+       ],
+       "transMemories":[
+         {
+           "id": 724,
+           "name": "My TM"
+         }
+       ],  
+       "targetLang":"de",
+       "fileName":"small.properties",
+       "machineTranslator":{
+         "name":"Google",
+         "type":"GoogleTranslate"    // see MachineTranslator enum for all possible values
+      }
+    }
+</pre>
+<h3><span id="Set_Status" class="mw-headline">Set Status</span></h3>
+<pre><strong>action: api/v2/job/setStatus</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+    status                      enum(JobStatus)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Get_Segments_Count_.28Progress.29" class="mw-headline">Get Segments Count (Progress)</span></h3>
+<pre><strong>action: api/v2/job/getSegmentsCount</strong>
+    token                       string
+    jobPart                     domain(JobPart)
+
+<strong>response: JSON</strong>
+   {
+     "counts":{
+       "segmentsCount":3,
+       "segmentGroupsCount":3,
+       "qualityAssurance":{
+         "warningsCount":0,
+         "segmentsCount":0,
+         "ignoredWarningsCount":0
+       },
+       "translatedSegmentsCount":0
+     }
+   }
+</pre>

@@ -1,0 +1,32 @@
+<h2>Mac OS X 10.8 and Higher</h2>
+<p>Starting with OS X 10.8, Apple has introduced a new security policy enforced on Mac OS X called Gatekeeper. To allow installation of Memsource Editor on your Mac, go to <strong>System Preferences, </strong>select <strong>Security &amp; Privacy, </strong>and choose <em>Allow applications downloaded from anywhere</em>.</p>
+<p>Alternatively, you can also use the "right" button on your mouse instead of trying to open up the application by double-clicking. Select <strong>Open</strong> in the Context menu, then confirm that you really want to open the application.</p>
+<p> </p>
+<h2>Ubuntu</h2>
+<p>Please open Terminal and run these commands:</p>
+<ul>
+<li>
+<strong>For Ubuntu 12.04</strong><br>cd &lt;directory_where_you_downloaded_the_installer_file&gt;<br>(usually it is 'cd ~/Downloads')<br>chmod a+x MemsourceEditor-5.187-ubuntu-12.04.run<br>./MemSourceEditor-<span style="line-height: 20.8px;">5</span><span style="line-height: 20.8px;">.187</span>-ubuntu-12.04.run</li>
+</ul>
+<ul>
+<li>
+<strong>For Ubuntu 14.04</strong><br>chmod a+x MemsourceEditor-<span style="line-height: 20.8px;">5</span><span style="line-height: 20.8px;">.187</span>-ubuntu-14.04.run<br>./MemsourceEditor-<span style="line-height: 20.8px;">5</span><span style="line-height: 20.8px;">.187</span>-ubuntu-14.04.run</li>
+</ul>
+<ul>
+<li>
+<strong>For Ubuntu 16.04, 17.04, 17.10<br></strong>Download the file and then right-click on it. Click on <strong>Properties</strong>, then on the <em>Permissions<strong> </strong></em>tab. Tick the <strong>Execute </strong>box (<strong>Allow Executing File as Program</strong>) and the software installer will pop up for you to complete the installation.<br><br>
+</li>
+<li>
+<strong>For Ubuntu 18.04<br></strong>sudo apt-get install libglu1-mesa:i386<br>sudo apt-get install libxkbcommon-x11-0:i386<strong><br></strong>
+</li>
+</ul>
+<p> </p>
+<p>To start the application run <em>'run.sh'</em>.<br> <br>Memsource Editor is a 64bit application, but the installer itself is a 32bit application.<br>Most of the time. this doesn't cause any difficulties, but if you are experiencing any, try to install the 32bit system libraries on the Ubuntu as described on <a href="https://askubuntu.com/questions/454253/how-to-run-32-bit-app-in-ubuntu-64-bit">Ask Ubuntu</a>.</p>
+<p> </p>
+<p><strong>Note:</strong> The 32bit version of Ubuntu 14.04 is not supported by Memsource. Only 64bit versions are supported.</p>
+<p> </p>
+<p>Sometimes Ubuntu (when playing with KDE) has installed libraries that are incompatible with the libraries needed for Memsource Editor. The solution is to download <a href="https://memsource.desk.com/customer/portal/kb_article_attachments/52097/original.gz?1428071210">these libraries (te-lib.tar.gz)</a> and extract the files into the "lib" directory of the Memsource installation on Ubuntu.</p>
+<p><strong>Note:</strong> The <strong>Ubuntu version 10.04</strong> desktop edition has stopped being officially supported by Canonical and therefore is no longer supported by Memsource either.</p>
+<p> </p>
+<p> </p>
+<p> </p>

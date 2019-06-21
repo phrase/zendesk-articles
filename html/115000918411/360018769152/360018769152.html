@@ -1,0 +1,52 @@
+<h3><span id="Create_New_Quote" class="mw-headline">Create a New Quote</span></h3>
+<pre><strong>action: api/v2/quote/create</strong>
+    token                       string
+    name                        string
+    project                     domain(Project)
+    analyse                     domain(Analyse)
+    priceList                   domain(PriceList)
+    discountScheme              domain(DiscountScheme)      O
+    workflowStep                list(domain(WorkflowStep))  O
+                        
+
+<strong>response: JSON</strong>
+    {
+      "id": 238                 // id of the new quote
+    }
+</pre>
+<h3><span id="Get_Quote" class="mw-headline">Get a Quote</span></h3>
+<pre><strong>action: api/v2/quote/get</strong>
+    token                       string
+    quote                       domain(Quote)
+
+<strong>response: JSON</strong>
+   {
+     "id":1,
+     "name":"Quote",
+     "status":"NEW",
+     "currency":"USD",
+     "billingUnit":"Word",
+     "createdBy":{
+       "id":1,
+       "firstName":"admin",
+       "lastName":"test",
+       "userName":"admin",
+       "email":"test@test.com",
+       "role":"ADMIN",
+       "timezone":"Europe/London",
+       "active":true,
+       "deleted":false,
+       "terminologist":false,
+       "dateCreated":"2017-01-05T15:42:20+0000"
+     },
+     "dateCreated":"2017-01-05T15:42:54+0000",
+     "totalPrice":0.0
+   }
+</pre>
+<h3><span id="Delete_Quote" class="mw-headline">Delete a Quote</span></h3>
+<pre><strong>action: api/v2/quote/delete</strong>
+    token                       string
+    quote                       domain(Quote)
+
+<strong>response: empty</strong>
+</pre>

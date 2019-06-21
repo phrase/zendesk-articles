@@ -1,0 +1,36 @@
+<h3>Get</h3>
+<pre><strong>action: api/v2/asyncTranslateSettings/list</strong>
+    token                    string
+    settings                 domain(AsyncTranslateSettings)                             
+
+<strong>response: JSON</strong>
+    {
+      "id": 1,
+      "name": "Gengo",
+      "type": "GENGO",
+      "default": true,
+      "extra": {
+        "level": "PRO",
+        "glossaryId": null,
+        "usePreferredTranslators": false
+      }
+    }
+</pre>
+<h3>List</h3>
+<pre><strong>action: api/v2/asyncTranslateSettings/list</strong>
+    token                    string                             
+
+<strong>response: JSON</strong>
+    [
+      {
+        "id": 1,
+        "name": "Gengo",
+        "type": "GENGO",
+        "default": true,
+        "extra": {
+          "level": "PRO",
+          "glossaryId": null,
+          "usePreferredTranslators": false
+        }
+      }
+    ]</pre>

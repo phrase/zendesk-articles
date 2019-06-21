@@ -1,0 +1,30 @@
+{
+    "author_id": 116990862271,
+    "comments_disabled": false,
+    "created_at": "2018-04-26T07:53:02Z",
+    "draft": true,
+    "edited_at": "2019-05-14T08:33:06Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/360003054252-Terms-of-Service-Effective-as-of-25th-May-2018-GDPR-",
+    "id": 360003054252,
+    "label_names": [
+        "_RWD",
+        "_NoIMG",
+        "ToS",
+        "Terms of Service"
+    ],
+    "locale": "en-us",
+    "name": "Terms of Service\u2014Effective as of 25th May 2018 (GDPR)",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 5,
+    "promoted": false,
+    "section_id": 115000955311,
+    "source_locale": "en-us",
+    "title": "Terms of Service\u2014Effective as of 25th May 2018 (GDPR)",
+    "updated_at": "2019-05-14T08:33:06Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360003054252-Terms-of-Service-Effective-as-of-25th-May-2018-GDPR-.json",
+    "user_segment_id": null,
+    "vote_count": 4,
+    "vote_sum": 2
+}

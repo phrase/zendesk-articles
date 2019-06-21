@@ -1,0 +1,33 @@
+<p>Type:</p>
+<pre>Job Rejected
+</pre>
+<p>Suggested name:</p>
+<pre>Job rejected (en)
+</pre>
+<p>Suggested subject:</p>
+<pre>Project {project.name}: Job(s) Rejected
+</pre>
+<p>Suggested body:</p>
+<pre>Dear {recipient.firstName},
+
+Job(s) that you completed have just been rejected by a linguist in the ({nextWorkflow.name})
+and need to be corrected by you.
+
+These jobs need to be corrected:
+
+Project: {project.url}
+{jobInfo}
+File: {job.name}
+Language: {job.sourceLang} -&gt; {job.targetLang}
+Due: {job.dateDue}
+{/jobInfo}
+
+Let me know, if you have any questions.
+
+Best regards,
+
+{sender.firstName} {sender.lastName}
+{sender.email}
+
+P.S. This email was generated automatically.
+</pre>

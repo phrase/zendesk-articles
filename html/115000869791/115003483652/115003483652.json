@@ -1,0 +1,29 @@
+{
+    "author_id": 114295542352,
+    "comments_disabled": false,
+    "created_at": "2017-12-15T15:31:28Z",
+    "draft": false,
+    "edited_at": "2019-05-14T10:59:27Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003483652-Translating-PDFs-in-Memsource",
+    "id": 115003483652,
+    "label_names": [
+        "pdf",
+        "_RWD",
+        "_addIMG"
+    ],
+    "locale": "en-us",
+    "name": "Translating PDFs in Memsource",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 9,
+    "promoted": false,
+    "section_id": 115000869791,
+    "source_locale": "en-us",
+    "title": "Translating PDFs in Memsource",
+    "updated_at": "2019-05-14T10:59:27Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003483652-Translating-PDFs-in-Memsource.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

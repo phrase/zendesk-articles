@@ -1,0 +1,37 @@
+<h2 id="New_features_and_Improvements">New Features and Improvements</h2>
+<p><strong>Improved Handling of Quotation Marks in YAML files</strong></p>
+<p>When processing YAML files, Memsource automatically removed redundant quotation marks (e.g. from arrays). This, however, may have resulted in problems for systems that expected such quotation marks to be in place. This behavior has been improved, and exported YAML files will now contain the same quotation marks as the original documents.</p>
+<p> </p>
+<p><strong>Added Ignore Tag Metadata Option in TM matches</strong></p>
+<p>Processing documents from various sources (e.g. different source files) may have resulted in lower matches despite the fact that the content of the segments was exactly the same. This was caused by the tag metadata, which automatically lowered the match percentage to accommodate for possible differences in translation across various source documents. </p>
+<p>An option to <strong>Ignore tag metadata</strong> has been added to the TM Match Context and Optimization settings to allow users to decide how to treat tags originating from different source files.</p>
+<p>This option was also made available via the Memsource REST APIs.</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360012732152/Ignore_tag_metadata.png" alt="Ignore_tag_metadata.png" width="520" height="190"></p>
+<p> </p>
+<p><strong>New options for Post-editing analysis API</strong></p>
+<p>The following options have been added to the <strong>/api2/v1/analyses</strong> API call:</p>
+<ul>
+<li>Analyze TM post-editing</li>
+<li>Analyze NT post-editing</li>
+<li>Analyze MT post-editing</li>
+<li>Analyze by linguist</li>
+<li>Analyze by language</li>
+</ul>
+<h2>Fixed Bugs</h2>
+<ul>
+<li>The number of decimal points in Quotes is now limited to 2 places.</li>
+<li>Searching for "null" caused users to be disconnected from the system. This has now been fixed.</li>
+<li>Using the <strong>C</strong><strong>onvert to Memsource tags </strong>in MD files sometimes caused the tag content to be different than intended. This bug has been resolved. </li>
+<li>Pre-translation using Systran MT sometimes failed for larger documents. We have improved the communication with the MT system so such failure should no longer happen.</li>
+<li>Using the <strong>Convert to Memsource tags</strong> option sometimes led to an error when processing source files. We have optimized the handling of this conversion so such documents should now be correctly imported.</li>
+<li>Due to a bug in the PowerPoint import settings, some texts were sometimes not imported for translation. This bug has now been fixed. </li>
+<li>Multiple instances of the same job sometimes appeared for Vendors in Shared Job scenarios. This problem has now been resolved.</li>
+<li>Analyses containing a large number of documents took an excessive amount of time to open. With the optimizations that have been made, they should now open significantly faster.</li>
+<li>Certain metadata like Cost Center or Purchase Order number were not preserved in cloned projects. This has now been fixed.</li>
+<li>Files containing a # symbol were not imported correctly if processed via the GitHub connector. This bug is now fixed. </li>
+<li>Some PSD files processed in Memsource could not be opened in Photoshop 2018 after translation. This problem is now fixed. </li>
+<li>In shared jobs, vendor PMs sometimes got disconnected when using a concordance search in Memsource Editor. The bug has now been fixed.</li>
+</ul>
+<p> </p>
+<p><strong>Have you come across any other bugs?</strong></p>
+<p>Thank you for letting our <a href="https://help.memsource.com/hc/en-us/requests/new" target="_blank" rel="noopener">Support team</a> know.</p>

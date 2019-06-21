@@ -1,0 +1,49 @@
+<p>Machine Translation Quality Estimation (MTQE) is an AI-powered feature that provides segment-level quality estimations for machine translation (MT) suggestions in a similar way to the quality estimations for <a href="https://help.memsource.com/hc/en-us/articles/115003461351-Working-with-Translation-Memory#menu4">translation memory (TM) matches</a> and <a href="https://www.memsource.com/blog/2018/01/09/memsource-releasing-first-feature-powered-by-artificial-intelligence/">non-translatables (NT)</a>.</p>
+<p>The instant MT quality scores help guide post-editing and can be used to enhance the default (pre-translation) analysis and to assess MT engine quality.</p>
+<p>To learn more about the benefits of MTQE, see <a href="https://www.memsource.com/blog/2018/10/01/machine-translation-quality-estimation-memsource's-latest-ai-powered-feature/">our blog article</a>.</p>
+<p><strong>Note: </strong><span style="font-weight: 400;">MTQE is available as a standalone feature for any MT engine supported in Memsource or through Memsource Translate. </span></p>
+<h2>Quality Scores</h2>
+<p>The following scoring categories are now supported:</p>
+<ul>
+<li>
+<strong>100%</strong> -Excellent MT match, probably no post-editing required</li>
+<li><span class="wysiwyg-color-black"><strong>99% </strong>- <span style="font-weight: 400;">Near-perfect MT output, possibly minor post-editing required for mostly typographical errors</span></span></li>
+<li><span class="wysiwyg-color-black"><strong>75%</strong> - Good MT match, but likely to require some post-editing</span></li>
+<li>
+<strong>No score</strong> - When there is no score, it is very likely that the MT output is of low quality. In general, it is recommended that this output not be post-edited but used for reference only.</li>
+</ul>
+<p><img src="https://help.memsource.com/hc/article_attachments/360019685191/MTQE_Scoring.png" alt="MTQE_Scoring.png"></p>
+<p>The MTQE scores will appear at the segment level together with other translation resources (TM, NT, TB). When hovering over the score, a tooltip with the match origin will appear. This origin will also appear at the bottom of the CAT panel in the metadata section. </p>
+<h2>Setup</h2>
+<p><span style="font-weight: 400;">MTQE can be enabled for a specific MT engine supported by Memsource. Alternatively, it is available automatically with any of the engines supported by the </span><a href="https://help.memsource.com/hc/en-us/articles/360023356311"><span style="font-weight: 400;">Memsource Translate</span></a><span style="font-weight: 400;"> solution.</span></p>
+<p>You can enable MTQE for a specific MT engine in just a few simple steps:</p>
+<p class="wysiwyg-indent3"><strong>Step 1:</strong> Click the <strong>Setup</strong> wheel in the top right corner. Scroll down to <em>Integrations </em>and click on <em>Machine Translation Engines.</em></p>
+<p class="wysiwyg-indent3"><strong>Step 2:</strong> Select the applicable MT engine and click the <strong>Edit </strong>button (alternatively, you can also create a new MT engine by clicking on <strong>Create</strong> and selecting the engine you want). You can use MTQE with any of the <a href="https://help.memsource.com/hc/en-us/articles/115003934452-Machine-Translation">MT engines supported by Memsource</a>.</p>
+<p class="wysiwyg-indent3"><strong>Step 3:</strong> Select the <strong>MT Quality Estimation</strong> checkbox and click <strong>Save</strong>.</p>
+<p class="wysiwyg-indent3"><strong>Step 4:</strong> Once you've successfully set up the MT engine, you will see a checkmark appear under <strong>Quality Estimation</strong> in the MT settings page. </p>
+<h2>Using MTQE</h2>
+<p>With MTQE correctly enabled for any of your MT engines, it will be automatically available in projects with this MT engine selected. <span style="font-weight: 400;">If you are using Memsource Translate, MTQE will be available in projects with Memsource Translate selected as the </span><strong>MT engine type.</strong></p>
+<p>Please note that MTQE is not supported in all language combinations. To see the list of currently available language pairs, please refer to the dedicated page on <a href="https://help.memsource.com/hc/en-us/articles/360016627771">MTQE Support Languages</a>.</p>
+<h3>Analyses</h3>
+<p>With the MTQE feature enabled, you can run a Default Analysis which will include MT scores alongside the TM and NT scores. </p>
+<p>To carry out this analysis, you need to select the job, click <strong>Analyze,</strong> and enable the <strong>Include machine translation matches (Beta) </strong>option. You can learn more in our <a href="https://help.memsource.com/hc/en-us/articles/360016607631">Analyses</a> section.</p>
+<p><img class="img350" src="https://help.memsource.com/hc/article_attachments/360012594252/analysis_default_MTQE.png" alt="analysis_default_MTQE.png"></p>
+<p class="wysiwyg-text-align-left"><em>Include MT matches in Default analysis</em></p>
+<h3 class="wysiwyg-text-align-left">Pre-translation</h3>
+<p>In addition to the instant, segment-level, quality matches in the Memsource Editor, you can use MTQE via the pre-translation feature. This allows batch pre-translation with a number of options. </p>
+<p>To do this, select the job and click <strong>Pre-translate.</strong> Select <em>Pre-translate where Empty<strong>...</strong>. </em>In the pre-translation settings, there is now the option to confirm 100% machine translation matches right away (as shown below). To learn more, please refer to our <a style="background-color: #ffffff;" href="https://help.memsource.com/hc/en-us/articles/360002841231-Pre-translate-jobs">Pre-translate</a> section.</p>
+<p class="wysiwyg-text-align-left"><img class="img350" src="https://help.memsource.com/hc/article_attachments/360012593012/pre-translate.png" alt="pre-translate.png"><br><em>Pre-translate settings </em></p>
+<h2 class="wysiwyg-text-align-left">Buying Characters </h2>
+<p><span style="font-weight: 400;">To use MTQE, you will need to purchase characters (a form of credit) via Memsource. If you use the </span><a href="https://help.memsource.com/hc/en-us/articles/360023356311"><span style="font-weight: 400;">Memsource Translate</span></a><span style="font-weight: 400;"> feature you do not need to purchase MTQE characters. They are available for free automatically when you <a href="https://help.memsource.com/hc/en-us/articles/360023356311#Purchasing_Memsource_Translate_Characters" target="_self">purchase characters for Memsource Translate</a>.</span></p>
+<p>For each segment estimated by MTQE (whether via Analysis, through the CAT panel in the Memsource Editor, or during pre-translation), the appropriate number of characters will be deducted from the remaining characters available for your selected MT engine. </p>
+<p>MTQE can be used with all MT engines supported by Memsource. However, if you wish to use it with multiple MT engines, you will need to purchase characters for each of the engine types. For example, the 2 million characters available for Microsoft Translator can only be used for the Microsoft Translator MT engine. To use MTQE with Google Translate, you would need to purchase characters for Google Translate separately. </p>
+<p>To buy more characters, click on the <strong>Settings</strong> wheel in the top right corner, and scroll down to <em>Integrations. </em>Click on <em>Machine Translation Engines.</em> Next to the appropriate TM engine, select <strong>Buy Characters. </strong>Once you do this, the <em>Buy More Characters </em>page will appear with a list of 3 different bundles that are available:</p>
+<ul>
+<li><span class="wysiwyg-color-black">2 million characters - $40 (€34)</span></li>
+<li><span class="wysiwyg-color-black">5 million characters - $100 (€85)</span></li>
+<li><span class="wysiwyg-color-black">10 million characters - $200 (€170)</span></li>
+</ul>
+<p>Select a bundle and then follow the instructions on the payment pages. Once you have bought the characters, you will see that they have been added to the <strong>Remaining characters</strong> column.</p>
+<p><img class="img650" src="https://help.memsource.com/hc/article_attachments/360012593312/MTBuyChar.png" alt="MTBuyChar.png" width="1250" height="280"><br><em>Machine Translation Settings page</em></p>
+<p>Once you've purchased your additional characters, an invoice will be automatically generated. A link to the invoice will be available in the green banner that appears when the payment has been successful. It can also be viewed by going to <strong>Setup </strong>and clicking on <strong>Details </strong>in the <em>Subscription </em>section.  </p>
+<p><strong>Note:</strong> There is no time limit when it comes to using up these characters. Once they are purchased they will remain in your account.</p>

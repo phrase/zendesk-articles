@@ -1,0 +1,20 @@
+<h2>Setup</h2>
+<p>Apart from the standard authentication method (using an authentication token API call), the user can also configure OAuth 2.0 in their account and link Memsource to the desired application.<br> To establish the OAuth 2.0 connection, please follow the steps below:</p>
+<ol>
+<li>In your Memsource account, go to <strong>Setup </strong>and in the <em>Integrations </em>section, click on <strong>Registered </strong><strong>OAuth Apps.</strong> From here, click <strong>New</strong>.</li>
+<li>Insert the <em>Redirect (callback) URI,</em><strong> </strong>fill in the additional required fields, and press <strong>Save</strong>.</li>
+<li>You will be redirected to the overview of all registered applications, and a new field will be filled in: <em>Client ID</em>. This ID can be used in the application that connects to Memsource to establish the connection. It is, in fact, this ID that is stored in our database and is used to pair requests with the proper requester.</li>
+<li>Apart from the Client ID, you will also need the URLs below for authentication and for your token:
+<ul>
+<li>Auth URL: https://cloud.memsource.com/web/oauth/authorize</li>
+<li>Token URL https://cloud.memsource.com/web/oauth/token</li>
+</ul>
+</li>
+</ol>
+<p>Once you configure these fields, you can request the authentication token from Memsource. When you do, a window will open with a Login screen to Memsource. Use the Administrator account to log in and click <strong>Allow</strong>. This will link Memsource and your application and will enable authentication for the API calls without using the authentication API call. </p>
+<h3>Sample in Postman</h3>
+<p><img style="width: 400px; height: 491px; float: left; margin: 20px;" src="https://help.memsource.com/hc/article_attachments/115004125872/import-807795.jpg" alt=""></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>

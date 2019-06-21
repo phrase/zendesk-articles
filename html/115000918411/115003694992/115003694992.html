@@ -1,0 +1,72 @@
+<h2>Synchronous APIs</h2>
+<p>Here is a list of all our Synchronous APIs:</p>
+<ul>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/115003948352-Analysis-API-v2">Analysis API v2</a></li>
+<li>
+<a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019029971-Analytics-API-v3">Analytics API v3</a><a title="Analytics API v3" href="https://wiki.memsource.com/wiki/Analytics_API_v3">PI (v3)</a>
+</li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019030031-Async-Translate-Settings-API-v2">Async Translate Settings API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/115003948552-Authentication-API-v3">Authentication API v3</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018721652-Business-Unit-API-v2">Business Unit API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360001992612-Client-API-v2">Client API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019030691-Connector-API-v1">Connector API v1</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018722292-Domain-API-v2">Domain API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018722332-Email-Template-API-v2">Email Template API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019076231-File-API-v2">File API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/115003929991-Job-API-v8">Job API v8</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019076631-Language-API-v2">Language API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019076691-Machine-Translate-Settings-API-v2">Machine Translate Settings API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018722232-Net-Rate-Scheme-API-v2">Net Rate Scheme API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019079651-Price-List-API-v2">Price List API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/115003978152-Project-API-v4">Project API v4</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019079671-Project-Template-API-v2">Project Template API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018769092-Provider-API-v2">Provider API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019079691-Quality-Assurance-API-v3">Quality Assurance API v3</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018769152-Quote-API-v2">Quote API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018769172-Reference-File-API-v2">Reference File API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018769232-Segmentation-API-v2">Segmentation API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018769292-Spell-Check-API-v3">Spell Check API v3</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019079891-SubDomain-API-v2">SubDomain API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019079911-Term-Base-API-v2">Term Base API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/115003942712-Translation-Memory-API-v4">Translation Memory API v4</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019080211-User-API-v3">User API v3</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019080231-Vendor-API-v2">Vendor API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018771672-Webhook-API-v1">Webhook API v1</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018769532-Workflow-Step-API-v2">Workflow Step API v2</a></li>
+</ul>
+<h2><span id="Asynchronous_APIs" class="mw-headline">Asynchronous APIs</span></h2>
+<p>Asynchronous APIs should always be preferred to their synchronous counterparts. If you call synchronous APIs, there is a chance of receiving <em>timeout expired</em> responses when processing large batches of files or even a single huge file. Synchronous APIs should only be used for small files and small-scale integration with Memsource.</p>
+<h3><span id="Polling" class="mw-headline">Polling</span></h3>
+<p>After you call an asynchronous API, you will receive an instant response including the identifier request. You will use this identifier to check the status of the request by calling <tt>getAsyncRequest</tt> and checking the <tt>asyncResponse</tt> field. This polling approach can lead to a number of <tt>getAsyncRequest</tt> calls before you actually receive <tt>asyncResponse</tt> as not null.</p>
+<h3><span id="Callbacks" class="mw-headline">Callbacks</span></h3>
+<p>As a response to the drawbacks of the polling approach to asynchronous requests, we have introduced support for callbacks in all asynchronous APIs. When calling an asynchronous request, you specify a URL (in the <tt>callbackUrl</tt> parameter) that will be requested from our side just after the work initiated by the asynchronous request is finished.</p>
+<p>Callbacks are requested via HTTP POST calls, and the data is passed on in the body encoded as JSON. The JSON object always contains:</p>
+<ul>
+<li>information about the asynchronous request (the same as when calling <tt>getAsyncRequest</tt>)</li>
+<li>detailed information about the result of the action (for example, a full analysis or job details)</li>
+</ul>
+<div class="alert alert-green">
+<pre>{
+  "asyncRequest": {
+   ...
+  }
+  "analyse": {
+   ...
+  }
+}
+</pre>
+</div>
+<p>If the callback URL is not accessible, the request will be repeated from our side after 2 minutes, then 4 minutes, 8 minutes, 16 minutes, and then after 30 minutes up to a total number of 10 retries.</p>
+<p>Your callback URL must respond with the 200 OK HTTP status code to be considered successful on our side.</p>
+<h3><span id="List_of_Asynchronous_APIs" class="mw-headline">List of Asynchronous APIs</span></h3>
+<ul>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018713552-Alignment-Asynchronous-v2">Alignment Asynchronous v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019030671-Asynchronous-API-v3">Asynchronous API v3</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360018721952-Analysis-Asynchronous-API-v2">Analysis Asynchronous API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019076611-Job-Asynchronous-API-v2">Job Asynchronous API v2</a></li>
+<li><a class="article-list-link" href="https://help.memsource.com/hc/en-us/articles/360019080091-Translation-Memory-Asynchronous-API-v2">Translation Memory Asynchronous API v2</a></li>
+</ul>
+<h2><span id="Data_Types" class="mw-headline">Errors</span></h2>
+<ul>
+<li><a title="API Error Codes" href="https://help.memsource.com/hc/en-us/articles/360001418551-Memsource-API-Error-Codes">Error Codes</a></li>
+</ul>

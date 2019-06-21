@@ -1,0 +1,9 @@
+<p>The file should be added to the body of the request as a binary attachment. Please make sure you have correctly inserted the <strong>Memsource</strong> and the <strong>Content-Disposition </strong>headers. Below you can find the sample PHP from Postman.</p>
+<div class="alert alert-green">
+<p>&lt;?php</p>
+<p>$request = new HttpRequest();<br> $request-&gt;setUrl('<a href="https://cloud.memsource.com/web/api2/v1/projects/%7BUID%20of%20your%20project%7D/jobs" rel="nofollow noreferrer">https://cloud.memsource.com/web/api2/v1/projects/%7BUID%20of%20your%20project%7D/jobs</a>');<br> $request-&gt;setMethod(HTTP_METH_POST);</p>
+<p>$request-&gt;setQueryData(array(<br> 'token' =&gt; 'Your token goes here'<br> ));</p>
+<p>$request-&gt;setHeaders(array(<br> 'postman-token' =&gt; 'ABC',<br> 'cache-control' =&gt; 'no-cache',<br> 'content-disposition' =&gt; 'filename*=UTF-8''Sample.txt',<br> 'memsource' =&gt; '{\\"targetLangs\\":[\\"de\\",\\"fr\\",\\"es\\"],\\"callbackUrl\\":\\"<a href="https://my-shiny-service.com/consumeCallback%5C%5C%22,%5C%5C%22importSettings%5C%5C%22:%7B%5C%5C%22uid%5C%5C%22:%5C%5C%22WF0T1SfSHxII09yKr0dZh9%5C%5C%22%7D" rel="nofollow noreferrer">https://my-shiny-service.com/consumeCallback\\",\\"importSettings\\":{\\"uid\\":\\"WF0T1SfSHxII09yKr0dZh9\\"}</a>}'<br> ));</p>
+<p>try {<br> $response = $request-&gt;send();</p>
+<p>echo $response-&gt;getBody();<br> } catch (HttpException $ex) {<br> echo $ex;<br> }</p>
+</div>

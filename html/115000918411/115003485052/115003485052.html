@@ -1,0 +1,11 @@
+<p>If you want to use or build your own editor, you can use our API to connect to Memsource. It is highly recommended that you cache your results and optimize your client application in such a way that it does not generate a lot of unnecessary API traffic. For instance, when a user starts scrolling through a file in your workbench without stopping at a specific segment, your workbench should not generate API calls for the segments that the user has just scrolled through. Here are the relevant API calls:</p>
+<ol>
+<li>APIs to display segment matches in the <a href="https://help.memsource.com/hc/en-us/articles/115003642952-CAT-Pane">CAT Pane</a>:<br> - <a href="http://wiki.memsource.com/wiki/Translation_Memory_API_v4#Search_Segment_By_Task">TM segment matches</a><br> - <a href="http://wiki.memsource.com/wiki/Term_Base_API_v2#Search_Terms_In_Text_By_Task">TB segment matches</a><br> - <a href="http://wiki.memsource.com/wiki/Job_API_v3#Machine_Translation">MT segment matches</a>
+</li>
+<li>APIs to retrieve TM/TB search results for the <a href="https://help.memsource.com/hc/en-us/articles/115003632551-Search-Pane">Search Pane</a>:<br> - <a href="http://wiki.memsource.com/wiki/Translation_Memory_API_v4#Search_By_Task">TM search results</a><br> - <a href="http://wiki.memsource.com/wiki/Term_Base_API_v2#Search_Terms_By_Task">TB search results</a>
+</li>
+<li>APIs to update TM with new translations and TB with new terms:<br> - <a href="http://wiki.memsource.com/wiki/Job_API_v3#Upload_Bilingual_File">Uploading an MXLIFF</a> also updates the TM in the write mode<br> - <a href="http://wiki.memsource.com/wiki/Term_Base_API_v2#Create_Term_By_Task">Adding new terms</a>
+</li>
+</ol>
+<p><br> In addition to those mentioned above, there are API calls that are used in Memsource Editor. For instance, API calls that power Quality Assurance, track changes, etc. You will find them in our <a href="https://help.memsource.com/hc/en-us/articles/115003694992-Memsource-Legacy-API-API-Reference">API Reference article</a>.</p>
+<p> </p>

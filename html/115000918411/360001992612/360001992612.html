@@ -1,0 +1,13 @@
+<p><span class="wysiwyg-font-size-large">Create a New Client</span></p>
+<pre><strong>action: api/v2/client/create</strong><br> token string<br> name string<br> externalId string O<br><br><strong>response: JSON</strong><br> {<br> "id": 238 // id of the new client<br> }</pre>
+<p>Get a Client</p>
+<pre>action: api/v2/client/get<br> token string<br> client domain(Client)
+<br>response: JSON<br> {<br> "id":3,<br> "name":"client",<br> "externalId":"1234567"<br> }</pre>
+<p>List Clients</p>
+<pre>action: api/v2/client/list<br> token string<br> page integer O(0)<br> name string O
+<br>response: JSON<br> [<br> {<br> "id":3,<br> "name":"client"<br> "externalId":"1234567"<br> }<br> ]</pre>
+<p>Edit a Client</p>
+<pre>action: api/v2/client/edit<br> token string<br> client domain(Client)<br> name string 0<br> externalId string 0
+<br>response: empty<br>Delete Client<br>action: api/v2/client/delete<br> token string</pre>
+<p>Client Domain(Client)</p>
+<pre>response: empty</pre>

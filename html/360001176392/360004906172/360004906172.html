@@ -1,0 +1,43 @@
+<h2>New Features, Improvements, and Changes</h2>
+<p><strong>Use DeepL Translator with Memsource</strong></p>
+<p>Memsource users can choose from an even wider range of machine translation (MT) engines. Memsource now supports DeepL Translator, a neural machine translation engine which provides high-quality machine translation matches.</p>
+<p>DeepL Translator currently supports 42 language combinations between English, German, French, Spanish, Italian, Polish, and Dutch. The neural networks are already training to master more languages like Mandarin, Japanese, and Russian.</p>
+<p>Find out <a href="https://www.deepl.com/home">more</a> about DeepL Translator.</p>
+<p>To set up DeepL in Memsource and learn about the other machine translation engines we support, see our <a href="https://help.memsource.com/hc/en-us/articles/115003934452-Machine-Translation#DeepL_Translator">Machine Translation</a> help center article.</p>
+<p> </p>
+<p><strong>Memsource + Jukkou MT Engine</strong></p>
+<p>Memsource users will now be able to attach the Jukkou machine translation (MT) engine to translation projects. When setting up this MT engine in Memsource, it is possible to choose from industry-specific versions of the engine: legal, medical, and financial.</p>
+<p>This engine is only available for real-time translation in the Memsource Editor and batch pre-translation is not supported.</p>
+<p>To set up this engine and find out about the other machine translation engines we support, see our <a href="https://help.memsource.com/hc/en-us/articles/115003934452-Machine-Translation#Jukkou_MT_">Machine Translation</a> help center article.</p>
+<p> </p>
+<p><strong>New Supported Languages</strong></p>
+<p>Memsource now supports 82 new languages/language locales.</p>
+<p>Users will be able to select these languages when creating projects, translation memories, and term bases.</p>
+<p>An updated list of all supported languages is available in <a href="https://help.memsource.com/hc/en-us/articles/115003929811-Supported-Languages">this article</a>.</p>
+<p> </p>
+<p><strong>New Job Owner Notification Option </strong></p>
+<p>An option to Notify the job owner when the job status is changed has been added to the <strong>Access and Security</strong> settings both in the main <strong>Setup</strong> and the <strong>Project Template</strong> settings. Previously, it was only possible to select this option manually, on a project level.</p>
+<p> </p>
+<p><strong>Support for COTI</strong></p>
+<p>Memsource now supports the Common Translation Interface (COTI) as a premium feature for Memsource Enterprise users. Find out more about the <a href="https://www.memsource.com/blog/2018/02/06/memsource-enterprise-edition/">Memsource Enterprise edition</a>.</p>
+<p>COTI is an interface developed by DERCOM (The Association of German Manufacturers of Authoring and Content Management Systems) for data exchange between authoring systems and translation systems.</p>
+<p>COTI was developed as part of an effort to improve CMS/TMS system integration and make it more flexible. This standardized interface creates translation projects from content management systems and then exports the final translations from the CAT tool. COTI can reduce translation costs as well as errors that result from manual translation management. Before the support for COTI was developed, PMs and Localization managers needed to do a lot of manual work: extracting the files from the packages, creating a project based on the configuration information, exporting the translated files and putting them in the correct folder.</p>
+<p>COTI has three levels and Memsource supports level 2. The difference between this and level 1 is that the data exchange is automated via exchange folders in level 2 instead of simply being provided in the specified package structure. In level 3, the data exchange is via web services (API).</p>
+<p>In COTI level 2, the content management system places a data package, including the content to be translated and any reference materials, into an exchange folder. This folder is monitored by Memsource and the package is converted into a Memsource project when new content is added.</p>
+<p>Once the translation project is completed, Memsource places the finished COTI package into a second exchange folder, which is monitored by the content management system. As soon as the CMS detects the COTI package, including the translation, the CMS automatically imports the translation.</p>
+<p>The <a href="http://www.dercom.de/en/projects">COTI specifications</a> provide more technical information. We’ve also created a <a href="https://help.memsource.com/hc/en-us/articles/360004506451">help center article</a> all about using COTI with Memsource.</p>
+<p>You can integrate Memsource with various online repositories and CMSs, including Typo3, using our connectors and plugins. See our<a href="https://www.memsource.com/integrations/"> integrations page</a>.</p>
+<p> </p>
+<p><strong>Change to File Import Settings </strong></p>
+<p>This is a very important change to the default settings.</p>
+<p>Previously, when importing a new file with customized file import settings, these settings would be saved into the project and all additional files added to the project later would also use these settings.</p>
+<p>With the latest release, the customized file import settings will no longer overwrite the settings of the project. This means that when adding a new file into a project, the default file import settings of the project (or project template) will be used. If the file needs to be imported in the same way the previous file was imported (with customized import settings), you either need to set these up for this specific file, or you can re-use any previously created import settings via the “Create a new job with the same file import settings” option on the Project's page.<br><img src="https://help.memsource.com/hc/article_attachments/360006750431/createNewJobFromOldJob.png" alt="createNewJobFromOldJob.png"></p>
+<h2>Fixed Bugs</h2>
+<ul>
+<li>When the email login option was selected in Memsource, the window that appeared was too small. This has been fixed.</li>
+<li>The Job Create API will now return the correct language locale.</li>
+<li>If you view the details for an existing connector and click the <strong>Select remote folder</strong> button, the dialog box that appears will only display 1 connector and the list of folders.<br><br>
+</li>
+</ul>
+<p><strong>Have you come across any other bugs?</strong></p>
+<p>Thank you for letting our <a href="https://help.memsource.com/hc/en-us/requests/new" rel="noopener">Support team</a> know.</p>

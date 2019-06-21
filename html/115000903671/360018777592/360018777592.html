@@ -1,0 +1,24 @@
+<p>Type:</p>
+<pre>Job status changed
+</pre>
+<p>Suggested name:</p>
+<pre>Job Status Changed (en)
+</pre>
+<p>Suggested subject:</p>
+<pre>Project {project.name}: {jobs.count} Job(s) {jobs.newStatus}
+</pre>
+<p>Suggested body:</p>
+<pre>Dear {recipient.firstName},
+
+Your linguist user {linguist.firstName} {linguist.lastName} ({linguist.email}) 
+has changed status for the following jobs:
+
+Project: {project.url}
+
+{jobInfo}
+File: {job.name}
+Changed to status: {job.status}
+Language: {job.sourceLang} -&gt; {job.targetLang}
+Due: {job.dateDue}
+{/jobInfo}
+</pre>

@@ -1,0 +1,175 @@
+<h3><span id="Create_New_Translation_Memory" class="mw-headline">Create a New Translation Memory</span></h3>
+<pre><strong>action: api/v2/transMemory/create</strong>
+    token                       string
+    name                        string
+    sourceLang                  locale
+    targetLang                  list(locale)
+
+<strong>response: JSON</strong>
+    {
+      "id": 1954              // id of the new translation memory
+    }
+</pre>
+<h3><span id="Get_Translation_Memory" class="mw-headline">Get Translation Memory</span></h3>
+<pre><strong>action: api/v2/transMemory/get</strong>
+    token                       string
+    transMemory                 domain(TransMemory)
+
+<strong>response: JSON</strong>
+    {
+      "id":1,
+      "targetLangs":[
+        "de",
+        "en"
+      ],
+      "sourceLang":"cs"
+    }
+</pre>
+<h3><span id="Delete_Translation_Memory" class="mw-headline">Delete Translation Memory</span></h3>
+<pre><strong>action: api/v2/transMemory/delete</strong>
+    token                       string
+    transMemory                 domain(TransMemory)
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="List_Translation_Memories" class="mw-headline">List Translation Memories</span></h3>
+<pre><strong>action: api/v2/transMemory/list</strong>
+    token                       string
+
+<strong>response: JSON</strong>
+   [
+     {
+       "id":1,
+       "targetLangs":[
+         "de"
+       ],
+       "sourceLang":"en",
+       "name":"transMem"
+     }
+   ]
+</pre>
+<h3><span id="Import_Data" class="mw-headline">Import Data</span></h3>
+<pre><strong>action: api/v2/transMemory/import</strong>
+    token                       string
+    transMemory                 domain(TransMemory)
+    file                        file                             // TMX or MXLIFF file
+    strictLangMatching          boolean               O(false)
+    stripNativeCodes            boolean               O(true)
+
+<strong>response: JSON</strong>
+    {
+      "acceptedSegmentsCount": "21809"
+    }
+</pre>
+<h3><span id="Search" class="mw-headline">Search</span></h3>
+<pre><strong>action: api/v2/transMemory/search</strong>
+    token                       string
+    transMemory                 domain(TransMemory)
+    query                       string
+    sourceLang                  locale
+
+<strong>response: JSON</strong>
+    // same as in Search By Task
+</pre>
+<h3><span id="Search_By_Task" class="mw-headline">Search By Task</span></h3>
+<pre><strong>action: api/v2/transMemory/searchByTask</strong>
+    token                       string
+    task                        task
+    query                       string
+    workflowLevel               integer                        O(0)
+    scoreThreshold              double                         O(0.0) any value from interval [0.0;1.01]
+    previousSegment             string                         O
+    nextSegment                 string                         O
+
+<strong>response: JSON</strong>
+    [
+      {
+        "grossScore":1,
+        "score":1,
+        "segmentId":"5023cd08e4b015e0656c4a8f",
+        "source":{
+          "id": "80ffcd08e4b015e0656c4a4c",
+          "createdAt":1344523528505,
+          "lang":"en",
+          "modifiedAt":1344523528505,
+          "nextSegment":"World",
+          "previousSegment":null,
+          "rtl":false,
+          "text":"Hello"
+        },
+        "subSegment":false,
+        "transMemory":{
+          "id":"5023cb2ee4b015e0656c4a8e",
+          "name":"test api"
+        },
+        "translations":[
+          {
+            "id": "7affcd08e4b015e0656c4aee"
+            "client":null,
+            "createdAt":1344523528505,
+            "createdBy":{
+              "firstName":"administrator",
+              "id":30,
+              "lastName":"admin",
+              "userName":"admin"
+            },
+            "domain":null,
+            "fileName":"small.properties",
+            "lang":"de",
+            "modifiedAt":1344600081648,
+            "modifiedBy":{
+              "firstName":"administrator",
+              "id":30,
+              "lastName":"admin",
+              "userName":"admin"
+            },
+            "project":{
+              "id":427,
+              "name":"test tm api"
+            },
+            "rtl":false,
+            "text":"HalloXX"
+          }
+        ]
+      }
+    ]
+
+ <strong>error codes</strong>
+      TransMemoryNotSelected                                   no translation memory is selected for the task
+</pre>
+<h3><span id="Update_Source" class="mw-headline">Update Source</span></h3>
+<pre><strong>action: api/v2/transMemory/updateSource</strong>
+    token                       string
+    transMemory                 domain(TransMemory)
+    segmentId                   string
+    text                        string
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Update_Translation" class="mw-headline">Update Translation</span></h3>
+<pre><strong>action: api/v2/transMemory/updateTranslation</strong>
+    token                       string
+    transMemory                 domain(TransMemory)
+    segmentId                   string
+    lang                        locale
+    text                        string
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Delete_Source_And_Translation" class="mw-headline">Delete Source and Translation</span></h3>
+<pre><strong>action: api/v2/transMemory/deleteSourceAndTranslation</strong>
+    token                       string
+    transMemory                 domain(TransMemory)
+    segmentId                   string
+
+<strong>response: empty</strong>
+</pre>
+<h3><span id="Delete_Translation" class="mw-headline">Delete Translation</span></h3>
+<pre><strong>action: api/v2/transMemory/deleteTranslation</strong>
+    token                       string
+    transMemory                 domain(TransMemory)
+    segmentId                   string
+    lang                        locale
+
+<strong>response: empty</strong>
+</pre>

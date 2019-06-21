@@ -1,0 +1,19 @@
+<h3><span id="Create_New_Reference_File" class="mw-headline">Create a New Reference File</span></h3>
+<pre><strong>action: api/v2/referenceFile/create</strong>
+    token                       string
+    project                     domain(Project)
+    file                        file
+    note                        string                     O
+
+<strong>response: JSON</strong>
+    {
+      "id": 238                 // id of the new reference file
+    }
+</pre>
+<h3><span id="Download_Reference_File" class="mw-headline">Download a Reference File</span></h3>
+<pre><strong>action: api/v2/referenceFile/download</strong>
+    token                       string
+    referenceFile               domain(ReferenceFile)
+
+<strong>response: binary</strong>
+</pre>

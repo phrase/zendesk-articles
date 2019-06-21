@@ -1,0 +1,64 @@
+<p>Using the Continuous Job feature, you can upload an updated version of an original file from a repository to an existing project, overwriting the older version of the same file. This is particularly useful for software localization. When new strings are added to a file in a repository, the modified source strings are updated and any deleted source strings are deleted. Unchanged strings that are already translated are copied to the updated version of the job.</p>
+<ul>
+<li>This feature is only available for specific file formats (see below).</li>
+<li>Files must be monolingual (multilingual format is not supported).</li>
+<li>The file must be uploaded from an online repository using one of the <a href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors">Memsource connectors</a>.</li>
+<li>This feature is available for Team, Ultimate, and Enterprise edition users.</li>
+</ul>
+<h2>Supported File Formats</h2>
+<p>The continuous job feature is available for the following file formats:</p>
+<ul>
+<li>RESX</li>
+<li>XML</li>
+<li>PO</li>
+<li>XLSX</li>
+<li>Properties</li>
+<li>CSV</li>
+<li>JSON</li>
+<li>YAML</li>
+<li>Android XML</li>
+<li>iOS strings</li>
+</ul>
+<h2 id='Set_up_the_"Continuous_Job_Settings"'>Managing the Continuous Job Settings</h2>
+<p>The <em>Continuous Job </em>Settings are available by going to <strong>Setup</strong> and clicking on <strong>Continuous Job Settings </strong>in the <em>Automation</em> section. They are set for the whole organization. Every Continuous Job will use these settings.</p>
+<p>Choose:</p>
+<ul>
+<li>
+<strong>Source Update Frequency:</strong> This controls how often the repository is checked for updates. (The shortest interval available is every 30 minutes.)</li>
+<li>
+<strong>Translation Export Frequency:</strong> This controls how often the translated content is exported back to the repository. (The shortest interval available is every 30 minutes.)</li>
+</ul>
+<p>Please be aware that once the settings are chosen for a particular job, they cannot be changed for that job. If you change the settings at a later time, they will not apply to jobs that have already been set up using this feature; the new settings will only apply to new jobs.</p>
+<p><img class="img350" src="https://help.memsource.com/hc/article_attachments/360011952192/ContJobsSett.png" alt="ContJobsSett.png" width="608" height="598"></p>
+<h2 id="Importing_Continuous_job_to_a_project">Importing Continuous Jobs to a Project</h2>
+<p>The first instance of a Continuous Job is imported manually in a similar way to other files from the online repository:</p>
+<ol>
+<li>Open an existing project</li>
+<li>Click on <strong>New</strong> to open the <em>New Job</em> page</li>
+<li>Select <strong>Add from online repository</strong>
+</li>
+<li>Select the relevant repository and your files</li>
+<li>Check the option <strong>Import files as continuous jobs.</strong> This option only appears if at least one of the selected files is supported for Continuous Jobs (XML, PO, XLSX, Properties, CSV).</li>
+</ol>
+<p><img class="img350" src="https://help.memsource.com/hc/article_attachments/360012032051/new_job_continuous.png" alt="new_job_continuous.png"></p>
+<h2>Continuous Jobs in Project View</h2>
+<p>Continuous jobs have a special icon in the project's view. The tooltip also shows that the job is continuous and when it was updated last.</p>
+<p><img class="img450" src="https://www.dropbox.com/s/pq8nu5k4qruj1li/continuousJobProjectView.png?raw=1"></p>
+<h2 id="Updating_the_job">Updating the Job</h2>
+<ul>
+<li>The job is monitored periodically based on the <em>Continuous Job</em> settings.</li>
+<li>If a change in the source file is detected, the job in Memsource is updated.</li>
+<li>If the job that is being updated is opened in the Web Editor (i.e. someone is working on it), a notification is displayed to the user, and they are prompted to reload the job.</li>
+<li>Segments are updated based on the changes made in the source file.</li>
+<li>Unchanged segments are copied together with the translation in the target.</li>
+<li>The target is cleared for segments with the changed source. (The previous translation isn't lost because it's saved in the translation memory.)</li>
+<li>Segments deleted from the source file are also deleted from the job in Memsource. </li>
+</ul>
+<p><img class="img450" src="https://help.memsource.com/hc/article_attachments/360012039792/ContJobsTWE.png" alt="ContJobsTWE.png" width="615" height="141"></p>
+<h2 id="Exporting_translation_back_to_the_repository">Exporting a Translation Back to the Repository</h2>
+<ul>
+<li>The translation is periodically pushed back to the repository based on the frequency set in the Continuous Job Settings.</li>
+<li>Translated target segments are exported only if they have been modified.</li>
+<li>Even unconfirmed modified segments are exported.</li>
+</ul>
+<p>These jobs don't need to be set as <em>Completed</em>. If a Continuous job is set as <em>Completed</em> by a Linguist and a new update is available, the status of the job is changed to <em>Emailed</em> and a notification is sent to the assigned Linguist.</p>

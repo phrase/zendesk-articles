@@ -1,0 +1,146 @@
+<p><strong>Memsource Legacy API is being deprecated. </strong><br> <strong>If you are developing a new integration, you'll need to use <a href="https://help.memsource.com/hc/en-us/articles/115003694732-Introduction-to-Memsource-REST-API">Memsource REST API </a>instead.</strong></p>
+<h3>Create a New Price List</h3>
+<pre><strong>action: api/v2/priceList/create</strong>
+    token                       string
+    name                        string
+    currency                    currency
+    unit                        enum(BillingUnit)        O(Word)
+
+<strong>response: JSON</strong>
+    {
+      "id": 175                // id of the new price list
+    }
+</pre>
+<h3><span id="Get_Price_List" class="mw-headline">Get a Price List</span></h3>
+<pre><strong>action: api/v2/priceList/get</strong>
+    token                       string
+    priceList                   domain(PriceList)
+
+<strong>response: JSON</strong>
+   {
+     "id":175,
+     "name":"price list",
+     "currency":"EUR",
+     "unit":"Word"
+   }
+</pre>
+<h3><span id="List_Price_Lists" class="mw-headline">List Price Lists</span></h3>
+<pre><strong>action: api/v2/priceList/list</strong>
+    token                       string
+    page                        integer            O(0)
+
+<strong>response: JSON</strong>
+   [
+     {
+       "id":175,
+       "name":"domain",
+       "currency":"EUR",
+       "unit":"Word"
+     }
+   ]
+</pre>
+<h3><span id="Update_Price_List" class="mw-headline">Update a Price List</span></h3>
+<pre><strong>action: api/v2/priceList/update</strong>
+    token                       string
+    priceList                   domain(PriceList)
+    name                        string                   O  // if not specified, leaves unmodified
+    currency                    currency                 O  // if not specified, leaves unmodified
+    unit                        enum(BillingUnit)        O  // if not specified, leaves unmodified
+
+<strong>response: JSON</strong>
+    {}
+</pre>
+<h3><span id="Delete_Price_List" class="mw-headline">Delete a Price List</span></h3>
+<pre><strong>action: api/v2/priceList/delete</strong>
+    token                       string
+    priceList                   domain(PriceList)
+
+<strong>response: JSON</strong>
+   {}
+</pre>
+<h3><span id="Add_Language_Pairs" class="mw-headline">Add Language Pairs</span></h3>
+<pre><strong>action: api/v2/priceList/addLanguagePairs</strong>
+    token                       string
+    priceList                   domain(PriceList)
+    sourceLang                  list(locale)
+    targetLang                  list(locale)
+
+<strong>response: JSON</strong>
+   {}
+</pre>
+<h3><span id="Remove_Language_Pairs" class="mw-headline">Remove Language Pairs</span></h3>
+<pre><strong>action: api/v2/priceList/removeLanguagePairs</strong>
+    token                       string
+    priceList                   domain(PriceList)
+    sourceLang                  list(locale)             O  // if not specified, selects all
+    targetLang                  list(locale)             O  // if not specified, selects all
+
+<strong>response: JSON</strong>
+   {}
+</pre>
+<h3><span id="Get_Price" class="mw-headline">Get Price</span></h3>
+<pre><strong>action: api/v2/priceList/getPrice</strong>
+    token                       string
+    priceList                   domain(PriceList)
+    sourceLang                  list(locale)                 O  // if not specified, selects all
+    targetLang                  list(locale)                 O  // if not specified, selects all
+    workflowStep                list(domain(WorkflowStep))   O  // if not specified, selects all
+
+<strong>response: JSON</strong>
+   [
+     {
+       "sourceLang":"en_us",
+       "targetLang":"de_de",
+       "prices":[
+         {
+           "workflowStep":{
+             "abbr":"T",
+             "id":1,
+             "name":"Translation"
+           },
+           "price":0.05
+         },
+         {
+           "workflowStep":{
+             "abbr":"R",
+             "id":2,
+             "name":"Revision"
+           },
+           "price":0.02
+         },
+         {
+           "workflowStep":{
+             "abbr":"CR",
+             "id":3,
+             "name":"Client review"
+           },
+           "price":0
+         }
+       ],
+       "minimumPrice":5
+     }
+   ]
+</pre>
+<h3><span id="Set_Minimum_Price" class="mw-headline">Set a Minimum Price</span></h3>
+<pre><strong>action: api/v2/priceList/setMinimumPrice</strong>
+    token                       string
+    priceList                   domain(PriceList)
+    sourceLang                  list(locale)             O  // if not specified, selects all
+    targetLang                  list(locale)             O  // if not specified, selects all
+    minimumPrice                double                   O  // if not specified, sets price to null
+
+<strong>response: JSON</strong>
+   {}
+</pre>
+<h3><span id="Set_Price" class="mw-headline">Set Price</span></h3>
+<pre><strong>action: api/v2/priceList/setPrice</strong>
+    token                       string
+    priceList                   domain(PriceList)
+    sourceLang                  list(locale)                 O  // if not specified, selects all
+    targetLang                  list(locale)                 O  // if not specified, selects all
+    workflowStep                list(domain(WorkflowStep))   O  // if not specified, selects all
+    price                       double                       O  // if not specified, sets price to null
+
+<strong>response: JSON</strong>
+   {}
+</pre>

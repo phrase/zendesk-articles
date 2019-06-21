@@ -1,0 +1,9 @@
+<p>TXT import options:</p>
+<ul>
+<li>
+<strong>Translatable text:</strong> Users can specify (using <a title="Regexp" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp">Regexp</a>) what lines should be imported.</li>
+<li>
+<strong>Convert to Memsource tags: </strong>Matching text will be converted to Memsource tags using Regexp. </li>
+</ul>
+<p><img class="img350" src="https://www.dropbox.com/s/k7l592tlf4rtwwd/Txt.png?raw=1"></p>
+<p><strong>Note: </strong>If, for example, you want to use regular expression to extract only the value of content attributes from one line <strong>&lt;meta name="breadcrumbs" content="Cheap cars"&gt;</strong> the regexp should be: <strong>(?&lt;=\&lt;meta name="breadcrumbs" content=")[^\"]+</strong></p>
