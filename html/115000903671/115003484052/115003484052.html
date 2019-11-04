@@ -1,320 +1,268 @@
-<div style="text-align: justify;">Quality Assurance is a feature built into both Memsource Editor. It detects errors in translation by comparing source and target segments. Keep in mind that software Quality Assurance is not intended to replace human reviewers—it simply helps translators detect formal errors and improve the overall translation quality.</div>
-<div style="text-align: justify;"> </div>
-<h2 style="text-align: justify;">QA Checks</h2>
-<div style="text-align: justify;">The QA checks cover errors that range from spelling errors to tag issues. They even check for inconsistent terminology. Below, you'll find a list of the issues that the QA checks cover.</div>
-<div style="text-align: justify;">
-<ul>
+<p>Quality Assurance (QA) is a feature built into both Memsource Editors. It detects errors in translation by comparing source and target segments, checking the term base, spelling, content of the tags, etc.  Linguists should run the QA check before they set the job to Completed and they should resolve all the QA issues. Keep in mind that Quality Assurance software is not intended to replace human reviewers—it simply helps translators detect formal errors and improve the overall translation quality.</p>
+<p>There are two ways in which Memsource helps with QA:</p>
+<ol class="list-colored">
 <li>
-<strong>Empty Target</strong>
-<ul>
-<li>The target contains no characters or tags.</li>
-</ul>
-</li>
+<strong> Instant QA</strong> is run on a segment when it is confirmed. If there are some issues, the segment is not saved to a translation memory. The Linguist must resolve the QA issues in order to confirm the segment.</li>
 <li>
-<strong>Trailing Punctuation</strong>
-<ul>
-<li>Trailing punctuation is different in the source and target.</li>
-<li>For example, the source ends with "." but the target does not or vice-versa.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Inconsistent Translations</strong>
+<strong>Manual QA</strong> checks for all segments in the job—usually this is run by the Linguist before the job is set to <em>Completed</em>.</li>
+</ol>
+<h2>Quality Assurance Setup</h2>
+<p>General settings can be accessed from the <strong>Setup</strong> page under <em>Project Settings<strong>,</strong></em> by clicking on <strong>Quality Assurance</strong>. All selected checks will become the default QA settings for all projects. If needed, these settings can be adjusted later on at a project level by going to the project, clicking on <strong>Edit, </strong>then expanding the <em>Quality Assurance</em> section.  in a similar fashion can be Quality Assurance setting edited in a project template.</p>
+<p>By default, all QA warnings can be set to "ignore" by Linguists/Vendors. However, for some QA checks, the Project Managers can disable the "Can be ignored" option in the QA settings. Linguists and Vendors will not be able to ignore these warnings.</p>
+<p><img class="img350" title="QA settings" src="https://www.dropbox.com/s/zhse9lq2egohldg/QA_ignorable.png?raw=1" alt="QA settings"></p>
+<h3>List of QA Checks</h3>
+<p>The QA checks cover errors that range from spelling errors to tag issues. They even check for inconsistent terminology. Below, you'll find a list of the issues that the QA checks cover.</p>
+<table class="table table--color-header table--bordered table--striped">
+<tbody>
+<tr>
+<th style="width: 154px;">QA check</th>
+<th style="width: 480.276px;">Note</th>
+<th class="wysiwyg-text-align-center" style="width: 64.7245px;">Instant QA</th>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Empty Target</strong></td>
+<td style="width: 480.276px;">The target contains no characters or tags.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Trailing Punctuation</strong></td>
+<td style="width: 480.276px;">Trailing punctuation is different in the source and target.<br> For example, the source ends with "." but the target does not or vice-versa.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Inconsistent Translations</strong></td>
+<td style="width: 480.276px;">
 <ul>
 <li>A segment with an identical source but a different target precedes the checked segment.</li>
 <li>A segment with an identical target but a different source precedes the checked segment.</li>
 <li>Repetition exceptions and segments with an empty target are skipped.</li>
 </ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Newer Version in a Preceding workflow Step Available</strong>
-<ul>
-<li>Checks whether newer versions of segments exist in preceding workflow steps. For example, a translator has modified a segment in the Translation Workflow Step after it was revised in the Revision Workflow Step.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Missing Numbers</strong>
-<ul>
-<li>The number in the source is not present in the target.</li>
-<li>For example, the source has the phrase "1 and 2", but the target reads "1 and 3".</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Repeated words</strong>
-<ul>
-<li>Two or more adjacent words in the target are identical.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Multiple Spaces</strong>
-<ul>
-<li>There are multiple spaces in the target but not in the source.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Leading and Trailing Spaces</strong>
-<ul>
-<li>There is a leading or trailing space in the target but not in the source.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Tags &amp; Formatting</strong>
-<ul>
-<li>Tags/formatting are missing or invalid, or there are missing or redundant line breaks.</li>
-<li>Example: the source contains "{1} {2}" but the target reads "{1}".</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Inconsistent Tag Content</strong>
-<ul>
-<li>The tag content between the source and its corresponding target tag differ.</li>
-<li>For example, the source shows "&lt;a href="<a class="external free" href="http://bbc.co.uk/" rel="nofollow">http://bbc.co.uk</a>"&gt;" but the target contains "&lt;a href="http://"&gt;"</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Empty Tag Content</strong>
-<ul>
-<li>The target tag content is empty, while the source tag content is not.</li>
-<li>For example, the source reads "&lt;a href="<a class="external free" href="http://bbc.co.uk/" rel="nofollow">http://bbc.co.uk</a>"&gt;" but the target shows "".</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Tags, Joined Segments</strong>
-<ul>
-<li>The number of {j} tags is different in the source and target.</li>
-<li>For example, the source is "xxx{j}yyy" but the target is "xxx yyy".</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>No Text Between the Tags</strong>
-<ul>
-<li>There is a paired tag with no text between the tags in the target but not in the source.</li>
-<li>For example, there is {1&gt;abc&lt;1} in the source and {1&gt;&lt;1} in the target.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Nested Tags</strong>
-<ul>
-<li>Paired tags in the target are misplaced.</li>
-<li>For example, there is {1&gt;{2&gt;abc&lt;2}{3&gt;abc&lt;3}{4&gt;&lt;4}&lt;1} in the source and {1&gt;{2&gt;abc&lt;2}{3&gt;abc{4&gt;&lt;3}&lt;4}&lt;1} in the target.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>XLIFF Tags</strong>
-<ul>
-<li>Paired tags (such as <em>bpt</em> and <em>ept</em>) are in the incorrect order in the completed target file.</li>
-<li>For example, the source contains "bpt bpt ept ept" and the target contains "bpt ept ept bpt".</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Terminology</strong>
+</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Newer Version in a Preceding workflow Step Available</strong></td>
+<td style="width: 480.276px;">Checks whether newer versions of segments exist in preceding Workflow steps.<br> For example, a translator has modified a segment in the Translation Workflow step after it was revised in the Revision Workflow step.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Missing Numbers</strong></td>
+<td style="width: 480.276px;">The number in the source is not present in the target.<br> For example, the source has the phrase "1 and 2", but the target reads "1 and 3".</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Repeated words</strong></td>
+<td style="width: 480.276px;">Two or more adjacent words in the target are identical.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Multiple Spaces</strong></td>
+<td style="width: 480.276px;">There are multiple spaces in the target but not in the source.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Leading and Trailing Spaces</strong></td>
+<td style="width: 480.276px;">There is a leading or trailing space in the target but not in the source.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Tags &amp; Formatting</strong></td>
+<td style="width: 480.276px;">Tags/formatting are missing or invalid, or there are missing or redundant line breaks.<br> Example: the source contains "{1} {2}" but the target reads "{1}".</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Inconsistent Tag Content</strong></td>
+<td style="width: 480.276px;">The tag content between the source and its corresponding target tag differ.<br> For example, the source shows "&lt;a href="<a class="external free" href="http://bbc.co.uk/" rel="nofollow">http://bbc.co.uk</a>"&gt;" but the target contains "&lt;a href="http://"&gt;".</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Empty Tag Content</strong></td>
+<td style="width: 480.276px;">The target tag content is empty, while the source tag content is not.<br> For example, the source reads "&lt;a href="<a class="external free" href="http://bbc.co.uk/" rel="nofollow">http://bbc.co.uk</a>"&gt;" but the target shows "".</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Tags, Joined Segments</strong></td>
+<td style="width: 480.276px;">The number of {j} tags is different in the source and target.<br> For example, the source is "xxx{j}yyy" but the target is "xxx yyy".</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>No Text Between the Tags</strong></td>
+<td style="width: 480.276px;">There is a paired tag with no text between the tags in the target but not in the source.<br> For example, there is {1&gt;abc&lt;1} in the source and {1&gt;&lt;1} in the target.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Nested Tags</strong></td>
+<td style="width: 480.276px;">Paired tags in the target are misplaced.<br> For example, there is {1&gt;{2&gt;abc&lt;2}{3&gt;abc&lt;3}{4&gt;&lt;4}&lt;1} in the source and {1&gt;{2&gt;abc&lt;2}{3&gt;abc{4&gt;&lt;3}&lt;4}&lt;1} in the target.<br> This option is disabled by default, but it is important to enable it for projects with Excel files.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>XLIFF Tags</strong></td>
+<td style="width: 480.276px;">Paired tags (such as <em>bpt</em> and <em>ept</em>) are in the incorrect order in the completed target file.<br> For example, the source contains "bpt bpt ept ept" and the target contains "bpt ept ept bpt".</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Terminology</strong></td>
+<td style="width: 480.276px;">
 <ul>
 <li>The terms in the source do not have a corresponding term translation in the target.</li>
-<li>A forbidden term is used for the translation (Forbidden terms in the source are ignored).</li>
-<li>Note that only terms within the source will be checked.</li>
+<li>A forbidden term is used for the translation. (Forbidden terms in the source are ignored.)</li>
 </ul>
-</li>
-</ul>
-<ul>
-<li><strong>Ignore Not Approved Terms</strong></li>
-</ul>
-<ul>
-<li>
-<strong>Forbidden Terms Without a Source</strong>
-<ul>
-<li>This is based only on target terms with no source term.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Spelling</strong>
-<ul>
-<li>The target contains misspelled words.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Not Confirmed Segments</strong>
-<ul>
-<li>Checks to make sure each segment is confirmed.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Unresolved Conversation</strong>
-<ul>
-<li>Ensures that no segment contains an unresolved comment in a conversation.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Maximum Target Segment Length in Characters</strong>
-<ul>
-<li>The target segment length is greater than the given parameter (default 100000).</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Maximum Target Segment Length in % of Source</strong>
-<ul>
-<li>The target segment length is greater than the given parameter (default 130%).</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Maximum Target Length as Set During Job Creation</strong>
-<ul>
-<li>This is imported from the original file or can be set with the <strong>Segmentation and Segment Length</strong> import option.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Not Allowed</strong>
-<ul>
-<li>The target contains strings that are not allowed.</li>
-<li>Characters, or alternatively, utf-8 codes, can be entered as strings that are <em>not allowed. </em>Numerous strings can be entered this way, separated by commas.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Exclude locked segments from QA</strong>
-<ul>
-<li>If you have only Memsource Editor and thus cannot edit the project properties, the only solution is to coordinate with a Project Manager and ask them to adjust the QA check in such a way that they deliver relevant results.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong>Linguists May Not Set Jobs with QA Warnings to Completed</strong></li>
-</ul>
-<ul>
-<li>
-<strong>Target Text Identical with Source One</strong>
+Note that only terms within the source will be checked.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Ignore not approved terms</strong></td>
+<td style="width: 480.276px;">This will ignore terms that are not considered <em>approved.</em>
+</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Forbidden Terms Without a Source</strong></td>
+<td style="width: 480.276px;">
+<p>This is based only on target terms with no source term.</p>
+</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">
+<p>Yes</p>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Spelling</strong></td>
+<td style="width: 480.276px;">The target contains misspelled words.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Not Confirmed Segments</strong></td>
+<td style="width: 480.276px;">Checks to make sure each segment is confirmed.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">No</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Unresolved Conversation</strong></td>
+<td style="width: 480.276px;">Ensures that no segment contains an unresolved comment in a conversation.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">No</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Maximum Target Segment Length in Characters</strong></td>
+<td style="width: 480.276px;">The target segment length is greater than the given parameter (default 100000).</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Maximum Target Segment Length in % of Source</strong></td>
+<td style="width: 480.276px;">The target segment length is greater than the given parameter (default 130%).</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Maximum Target Length as Set During Job Creation</strong></td>
+<td style="width: 480.276px;">This is imported from the original file or can be set with the <strong>Segmentation and Segment Length</strong> import option.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Not Allowed</strong></td>
+<td style="width: 480.276px;">The target contains strings that are not allowed.<br> Characters, or alternatively, utf-8 codes, can be entered as strings that are <em>not allowed. </em>Numerous strings can be entered this way, separated by commas.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Exclude locked segments from QA</strong></td>
+<td style="width: 480.276px;">If you have Memsource Editor only and thus cannot edit the project properties, the only solution is to coordinate with a Project Manager and ask them to adjust the QA checks in such a way that they deliver relevant results.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Target Text Identical with Source One</strong></td>
+<td style="width: 480.276px;">
 <ul>
 <li>This is a QA check for text copied from the source to the target.</li>
 <li>No warning will be displayed for segments containing only plain numbers, tags, or non-translatable characters.</li>
-<li>Segments translated using the Memsource <strong>Non-translatables</strong> feature are ignored in this QA check. </li>
+<li>Segments translated using the Memsource <strong>Non-translatables</strong> feature are ignored in this QA check.</li>
 </ul>
-</li>
-</ul>
-<ul>
-<li><strong>Ignore in All Workflow Steps</strong></li>
-</ul>
-<ul>
-<li>
-<strong>Fuzzy Matches with no Post-Editing</strong>
-<ul>
-<li>A fuzzy match has been confirmed without being edited.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>Extra Numbers in Target</strong>
-<ul>
-<li>The target contains an extra number that the source does not.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<strong>REGEXP</strong>
+</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Ignore in All Workflow Steps</strong></td>
+<td style="width: 480.276px;"> </td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Unedited TM fuzzy match</strong></td>
+<td style="width: 480.276px;">
+<p>A fuzzy TM match has been confirmed without being edited.</p>
+</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">
+<p>No</p>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Unedited NT/MT fuzzy match</strong></td>
+<td style="width: 480.276px;">
+<p>A fuzzy NT/MT match has been confirmed without being edited.</p>
+</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">
+<p>No</p>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Extra Numbers in Target</strong></td>
+<td style="width: 480.276px;">The target contains an extra number that the source does not.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>Linguists may not set jobs with QA warnings to Completed</strong></td>
+<td style="width: 480.276px;">Use this if you want to force your Providers (Linguists and Vendors) to run a QA check and to resolve all QA warnings. They won't be able to set the job to <em>Completed</em> otherwise.</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">--</td>
+</tr>
+<tr>
+<td style="width: 154px;"><strong>REGEXP</strong></td>
+<td style="width: 480.276px;">
 <ul>
 <li>This section can be used to define checks based on Regular Expressions as well as Descriptions that will be displayed in the Editors when such an issue is identified.</li>
 <li>Multiple conditions can be set using the <strong>PLUS</strong> button.</li>
 <li>Memsource checks whether the counts of the regexp matches differ between the source and the target text.</li>
 </ul>
-</li>
+</td>
+<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
+</tr>
+</tbody>
+</table>
+<h2>Running a QA</h2>
+<p>For more details about running the QA in the Editors, please refer to our <a href="https://help.memsource.com/hc/en-us/articles/115003643072-Quality-Assurance-Pane">Quality Assurance Pane</a> article.</p>
+<h2>QA Status for Jobs</h2>
+<p>Whenever a QA check is launched for a job, the outcome is saved with the translation job. If you hover over the <span style="line-height: 20.8px; text-align: justify;">job's confirmed percentage</span>, an information box will appear that includes the QA status related to the job. These include the following:</p>
+<ul class="list-bullet">
+<li>
+<strong>QA Warnings: Not launched</strong> - The QA has not been launched for this job.</li>
+<li>
+<strong>QA Warnings: Incomplete</strong> - The QA has been launched only for part of a job (e.g. the user did not click the "Show more" link at the bottom of the QA warnings list). Or, the QA has been launched for the entire job but the job was later edited.</li>
+<li>
+<strong>QA Warnings: 2 (1 ignored)</strong> - The QA has been launched and it includes a total of 2 warnings of which 1 was marked as ignored.</li>
 </ul>
-</div>
-<h2 style="text-align: justify;">Setting Up QA Checks</h2>
-<div style="text-align: justify;">General settings can be accessed from the <strong>Setup</strong> page under <em>Project Settings<strong>,</strong></em> by clicking on <strong>Quality Assurance</strong>. All selected checks will become default QA settings for all projects. If needed, these settings can be adjusted later on a project level by going to the project, clicking on <strong>Edit, </strong>then expanding the <em>Quality Assurance</em> section.</div>
-<div style="text-align: justify;"> </div>
-<h3>Ignorable Warnings</h3>
-<p>By default, all QA warnings can be set to "ignore" by Linguists/Vendors. However, for some QA checks, the Project Managers can disable the "Can be ignored" option in the QA settings. Linguists and Vendors will not be able to ignore these warnings.</p>
-<p><img class="img350" src="https://www.dropbox.com/s/zhse9lq2egohldg/QA_ignorable.png?raw=1"></p>
-<h2 style="text-align: justify;">Running a QA</h2>
-<div style="text-align: justify;">To run a QA check, go to Memsource Editor. Click on the <em>QA</em> Pane in the bottom right corner and then <strong>Run</strong> at the top. This will launch a QA check based on the project settings. For more details, please refer to our <a href="https://help.memsource.com/hc/en-us/articles/115003643072-Quality-Assurance-Pane">Quality Assurance Pane</a> article.<br> <br> <img style="width: 502px; height: 199px;" src="https://help.memsource.com/hc/article_attachments/115004126332/import-815076.jpg" alt=""><br> <br> </div>
-<div>It is possible to run a complete QA check or to do a partial one by selecting/unselecting specific types of checks from the drop-down menu next to the <strong>Run</strong> button.<br> <br>After running a QA check, click on the QA warning and you will be taken to the segment where the problem has been detected. If you spot any false warnings, you can mark them as "ignored".  The warning will still be displayed in the <em>QA</em> Pane, but it will be grayed out. If you prefer, you can hide ignored warnings by ticking the <em>Hide ignored</em> option.<br> <br>QA warnings can be sorted by clicking on <em>Type</em>. You can also select multiple warnings and mark them as ignored at once.</div>
-<div><img src="https://help.memsource.com/hc/article_attachments/360024632311/mceclip1.png"></div>
-<h2 style="text-align: justify;">QA Status for Jobs</h2>
-<div style="text-align: justify;">Whenever a QA check is launched for a job, the outcome is saved with the translation job. If you hover over the <span style="line-height: 20.8px; text-align: justify;">job's confirmed percentage</span>, an information box will appear that includes the QA status related to the job. These include the following:</div>
-<ul>
-<li style="text-align: justify;">QA Warnings: Not launched
-<ul>
-<li>The QA has not been launched for this job.</li>
-</ul>
-</li>
-<li style="text-align: justify;">QA Warnings: Incomplete
-<ul>
-<li>The QA has been launched only for part of a job (e.g. the user did not click the "Show more" link at the bottom of the QA warnings list).</li>
-<li>Or, the QA has been launched for the entire job but the job was later edited.</li>
-</ul>
-</li>
-<li style="text-align: justify;">QA Warnings: 2 (1 ignored)
-<ul>
-<li>The QA has been launched and it includes a total of 2 warnings of which 1 was marked as ignored.</li>
-</ul>
-</li>
-</ul>
-<h2 style="text-align: justify;">Forcing Linguists and Vendors to Run a QA Check</h2>
-<p>It is possible to prevent Linguists and Vendors from being able to set the job to <em>Completed</em> unless they run the QA check and deal with all its warnings. You can do this by going to the <em>Projects </em>tab and clicking on the name of your project. Click the <strong>Edit<em> </em></strong>button in the top right corner. Expand the <em>Quality Assurance</em> section and uncheck the <strong>Can be ignored</strong> box for any QA checks you want to prevent the Linguist/Vendors from ignoring.</p>
-<h2 style="text-align: justify;">Issues Which Can be Solved by Running a Proper QA</h2>
-<div style="text-align: justify;">
-<strong>Export Failed, File Could not be Generated</strong><br>There are missing or misplaced tags in your file. Run the quality assurance with the following options selected in your project:</div>
-<ul>
-<li style="text-align: justify;">Tags/Formatting</li>
-<li style="text-align: justify;">Joined Tags</li>
-<li style="text-align: justify;">Empty Pair Tags</li>
-</ul>
-<div style="text-align: justify;">Correct the problems identified by the quality assurance check and re-export the file.<br> <br> <strong>Unresolved QA Warnings</strong><br>Project owners can prevent Linguists and Vendors from setting jobs with QA warnings to completed. As a Linguist or Vendor, you will see this error message when you try to set a job to <em>Completed</em> without running a QA check or when leaving some warnings unresolved. To resolve this, please proceed like this:</div>
-<ol>
-<li style="text-align: justify;">In the Memsource Editor, click on the QA Pane, located in the bottom right.</li>
-<li style="text-align: justify;">Click on the <strong>Run</strong> button at the top.</li>
-<li style="text-align: justify;">Resolve all QA warnings that get displayed. If you get a false warning, you can also ignore the warning by clicking on the "i" column. Once the warning has been ignored, it will turn grey.</li>
+<h2>Forcing Providers to Run a QA Check</h2>
+<p>It is possible to prevent your Providers (Linguists and Vendors) from being able to set the job to <em>Completed</em> unless they run the QA check and deal with all its warnings. Project Managers can also select which QA checks can be set to "<em>ignore</em>" by your Linguists.</p>
+<ol class="list-colored">
+<li>Open your project and click the <strong>Edit<em> </em></strong>button in the top right corner.</li>
+<li>Expand the <em>Quality Assurance</em> section and check <strong>Linguists may not set jobs with QA warnings to Completed </strong>at the bottom of the list.</li>
+<li>Uncheck the <strong>Can be ignored</strong> box for any QA checks you want to prevent the Linguist/Vendors from ignoring.</li>
 </ol>
-<div style="text-align: justify;">
-<strong>Translation and Terminology Inconsistencies</strong><br>The <strong>Inconsistent Translations</strong> <strong>check</strong> can detect the following inconsistencies:</div>
+<h3>Instant QA settings</h3>
+<p>If you would like to force Linguists to use Instant QA—to check every segment before they save it to the TM—go to <strong>Project, Edit, </strong>and<strong> Access and Security</strong> and unselect <strong>Users may turn on/turn off Instant QA in editors</strong>. This will set the Editor's option <strong>Instant QA </strong>to ON and the Linguists will not be able to disable it. This feature is useful when you have several Linguists working on the same TM and the same target language. The segments with QA issues will not be saved to the TM and therefore won't be offered to other Linguists as a valuable TM match.</p>
+<h2>Issues Which Can be Solved by Running a Proper QA</h2>
+<p><strong>Export Failed, File Could not be Generated</strong><br> There are missing or misplaced tags in your file. Run the quality assurance with the following options selected in your project:</p>
 <ul>
-<li style="text-align: justify;">A segment with an identical source but a different target precedes the checked segment.</li>
-<li style="text-align: justify;">A segment with an identical target but a different source precedes the checked segment.</li>
+<li>Tags/Formatting</li>
+<li>Joined Tags</li>
+<li>Empty Pair Tags</li>
 </ul>
-<div style="text-align: justify;">There is a feature in the TB section where you can choose whether or not you want to have a certain term base included in the QA check.<br> <br>The <strong>Terminology check</strong> can detect these inconsistencies:</div>
+<p>Correct the problems identified by the quality assurance check and re-export the file.<br> <br> <strong>Unresolved QA Warnings</strong><br> Project owners can prevent Linguists and Vendors from setting jobs with QA warnings to completed. As a Linguist or Vendor, you will see this error message when you try to set a job to <em>Completed</em> without running a QA check or when leaving some warnings unresolved. To resolve this, please proceed like this:</p>
+<ol>
+<li>In the Memsource Editor, click on the QA Pane, located in the bottom right.</li>
+<li>Click on the <strong>Run</strong> button at the top.</li>
+<li>Resolve all QA warnings that get displayed. If you get a false warning, you can also ignore the warning by clicking on the "i" column. Once the warning has been ignored, it will turn grey.</li>
+</ol>
+<p><strong>Translation and Terminology Inconsistencies</strong><br> The <strong>Inconsistent Translations</strong> <strong>check</strong> can detect the following inconsistencies:</p>
 <ul>
-<li style="text-align: justify;">The terms in the source do not have a corresponding term translation in the target.</li>
-<li style="text-align: justify;">A forbidden term is used for the translation (Forbidden terms in the source are ignored).</li>
+<li>A segment with an identical source but a different target precedes the checked segment.</li>
+<li>A segment with an identical target but a different source precedes the checked segment.</li>
+</ul>
+<p>There is a feature in the TB section where you can choose whether or not you want to have a certain term base included in the QA check.<br> <br> The <strong>Terminology check</strong> can detect these inconsistencies:</p>
+<ul>
+<li>The terms in the source do not have a corresponding term translation in the target.</li>
+<li>A forbidden term is used for the translation (Forbidden terms in the source are ignored).</li>
 </ul>

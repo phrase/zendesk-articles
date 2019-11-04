@@ -3,8 +3,8 @@
     "comments_disabled": false,
     "created_at": "2017-12-23T17:57:55Z",
     "draft": false,
-    "edited_at": "2019-05-14T11:03:41Z",
-    "html_url": "https://help.memsource.com/hc/en-us/articles/115003633011-Web-Editor-Commands",
+    "edited_at": "2019-10-14T10:10:38Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003633011-Editor-for-Web-Commands",
     "id": 115003633011,
     "label_names": [
         "web editor",
@@ -19,7 +19,7 @@
         "_addIMG"
     ],
     "locale": "en-us",
-    "name": "Web Editor Commands",
+    "name": "Editor for Web Commands",
     "outdated": false,
     "outdated_locales": [],
     "permission_group_id": 592372,
@@ -27,9 +27,9 @@
     "promoted": false,
     "section_id": 115000918792,
     "source_locale": "en-us",
-    "title": "Web Editor Commands",
-    "updated_at": "2019-05-14T11:03:41Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003633011-Web-Editor-Commands.json",
+    "title": "Editor for Web Commands",
+    "updated_at": "2019-10-14T10:10:38Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003633011-Editor-for-Web-Commands.json",
     "user_segment_id": null,
     "vote_count": 3,
     "vote_sum": 3

@@ -1,28 +1,17 @@
-<p>The <em>Quality Assurance </em>Pane displays QA warnings for segments with potential problems. Quality Assurance can be launched directly from the <em>Quality Assurance </em>Pane and in this way, the translation can be checked. Users can also run a partial check for selected QA options only.</p>
-<p><img src="https://help.memsource.com/hc/article_attachments/115004303372/Translation-quality-assurance.png" alt="Translation-quality-assurance.png" width="319" height="453"></p>
-<p> </p>
-<p>The Quality Assurance warnings should be resolved in one of two ways: either by correcting the translation and confirming it or by marking the QA warning as <em>Ignored</em> (by clicking in the "<strong>i</strong>" column) if the QA warning is a false alarm.</p>
-<p>Some warnings might be set as <em>Unignorable</em> by the Project Managers. These warning cannot be set to <em>Ignore</em> and must be corrected in the target segments before proceeding.</p>
-<p> </p>
-<p>Below is a list of the available QA checks:</p>
-<ul>
-<li>Empty translation</li>
-<li>Trailing punctuation</li>
-<li>Inconsistent translations</li>
-<li>Missing numbers</li>
-<li>Repeated words</li>
-<li>Multiple spaces</li>
-<li>Trailing spaces</li>
-<li>Tags &amp; formatting</li>
-<li>Inconsistent tag content</li>
-<li>Empty tag content</li>
-<li>Tags—joined segments</li>
-<li>No text between tags</li>
-<li>XLIFF tags</li>
-<li>Terminology</li>
-<li>Spelling</li>
-<li>Unconfirmed segments</li>
-<li>Unresolved conversation</li>
-<li>Maximum segment length in characters</li>
-<li>Not-allowed characters</li>
-</ul>
+<p>Quality Assurance (QA) is a feature built into both Memsource Editors. It detects errors in translation by comparing source and target segments, checking the term base, spelling, content of the tags, etc. It helps translators detect formal errors and improve overall translation quality and consistency. It is very important to run the QA check on files with tags to prevent problems with the validity of the translated document. The QA warnings for segments with potential problems are displayed in the Quality Assurance Pane (QA) in the Memsource Editors.</p>
+<p>There are two ways that Memsource helps with QA: an <strong>Instant QA</strong> check and a <strong>manual QA</strong> check.</p>
+<h2>Instant QA</h2>
+<p>The Instant QA check is run on each segment when it is confirmed. If there are some QA issues, the segment is neither confirmed nor saved to a translation memory. A yellow warning triangle is displayed instead of a green "Confirmed" icon, and the QA pane with the warnings is opened. The Linguist needs to fix all the issues or set the false positive warnings to "ignored" in order to be able to confirm the segment.</p>
+<p><img class="img350" title="Instant QA" src="https://www.dropbox.com/s/7341nx7s3538hrt/editors_InstantQA_pane.png?raw=1" alt="Instant QA"></p>
+<p>The Instant QA feature can be disabled in the Editor by going to <strong>Preference, Misc,</strong> and<strong> Instant QA.</strong> However, the Project Manager might restrict the Linguist's right to change this setting. In this case, the option in the Preference window will be greyed out and the Instant QA will run on each confirmed segment.</p>
+<h2>Manual QA Check</h2>
+<p>Quality Assurance can be launched for all segments manually directly from the <em>QA </em>Pane in the bottom-right corner of the Editor and in this way, the translation can be checked. Users can also run a partial check for selected QA options only by clicking on the arrow in the <strong>Run Job QA</strong> button and selecting any QA checks they want to use.</p>
+<p><img class="img350" title="Partial QA" src="https://www.dropbox.com/s/h1mbqzqz0zt23cb/Editor_QA_partial.png?raw=1" alt="Partial QA"></p>
+<p>The Project Manager can force the Linguists to run the QA before they can set the job to <em>Completed</em>. In this case, if there are some unresolved QA issues or if the QA check was not used at all, the Linguist will not be able to set the job to <em>Completed</em>.</p>
+<h2>QA Warnings</h2>
+<p>After running a QA check, click on the QA warning and you will be taken to the segment where the problem has been detected.</p>
+<p>The Quality Assurance warnings should be resolved in one of two ways: either by correcting the translation and confirming it or by marking the QA warning as <em>ignored</em> (by clicking on the "<strong>i</strong>" column or the warning row) if the QA warning is a false alarm. The warning will still be displayed in the <em>QA</em> Pane, but it will be grayed out. If you prefer, you can hide ignored warnings by ticking the <strong>Hide ignored</strong> option.</p>
+<p>Some warnings might be set as <em>Unignorable</em> by the Project Managers. These warnings cannot be set to <em>ignore</em> and must be corrected in the target segments before proceeding.</p>
+<p>QA warnings can be sorted by clicking on <strong>Type.</strong> You can also select multiple warnings using the Shift or the Ctrl key with the mouse click and marking them as ignored all at once.</p>
+<p><img class="img350" title="QA pane with ignored and Unignorable warnings" src="https://www.dropbox.com/s/m6dxgo30ds9tpg8/Editor_QA_pane.png?raw=1"></p>
+<p>The list of all QA checks and their meanings can be found in our <a href="https://help.memsource.com/hc/en-us/articles/115003484052" target="_self">Quality Assurance</a> article.</p>

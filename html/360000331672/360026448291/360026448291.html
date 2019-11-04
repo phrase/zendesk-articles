@@ -1,12 +1,12 @@
 <p><strong>Due to Memsource Legacy APIs being deprecated in the near future, this article serves as an adapted version of the basic tutorial on how to work with Memsource APIs.</strong></p>
 <p> </p>
-<p>The article below will provide a simple API scenario with sample API calls and how to chain them together to complete a simple action using only Memsource APIs.</p>
-<p>Each section includes a link to the precise API call where additional information can be found, as well as a sample API call to illustrate a simple scenario. However, the options that can be set via the APIs are quite extensive. Please consult the respective sections of our<a href="https://help.memsource.com/hc/en-us/articles/360003015431-REST-API-Documentation" target="_blank" rel="noopener"> REST API documentation</a> to find out more about all the possible options available.</p>
-<p>All sample responses include only the information relevant for this scenario. For the complete Responses and the range of information they can contain, please refer to our documentation.<br> To test this scenario, you can use <a href="https://www.getpostman.com/" target="_self">Postman</a> or any similar application allowing you to submit a GET request (which can also be tested directly in the browser) or a POST API request with a JSON body.</p>
+<p>The article below will provide a simple API scenario with sample API calls and instructions on how to chain them together to complete a simple action using only Memsource APIs.</p>
+<p>Each section includes a link to the precise API call where additional information can be found, as well as an API call to illustrate a simple scenario. However, the options that can be set via the APIs are quite extensive. Please consult the respective sections of our<a href="https://help.memsource.com/hc/en-us/articles/360003015431-REST-API-Documentation" rel="noopener"> REST API documentation</a> to find out more about all the possible options available.</p>
+<p>All sample responses include only the information relevant for this scenario. For the complete Responses and the range of information they can contain, please refer to our documentation.<br>To test this scenario, you can use <a href="https://www.getpostman.com/">Postman</a> or any similar application that allows you to submit a GET request and a POST API request with a JSON body.</p>
 <h2>Description</h2>
-<p>The scenario discussed in this article will cover the following process:<br> The user will authenticate himself to be able to perform the following action (the API equivalent of logging in). The next step will be the creation of a simple project, uploading of jobs, and assignment of a Linguist, including sending an email notification. The actual translation work will be performed outside of the API scenario (in any of the Editors). Once the assignment is finished (marked as <em>Completed by Linguist</em>), the scenario will continue by changing the project's status to <em>Completed</em> and downloading of the finished document from the project.</p>
+<p>The scenario discussed in this article will cover the following process:<br>The user will authenticate themselves to be able to perform the following action (the API equivalent of logging in). The next step will be the creation of a simple project, uploading of jobs, and assignment of a Linguist, including sending an email notification. The actual translation work will be performed outside of the API scenario (in any of the Editors). Once the assignment is finished (marked as <em>Completed by Linguist</em>), the scenario will continue by changing the project's status to <em>Completed</em> and downloading the finished document from the project.</p>
 <h2>Method</h2>
-<p>In the Legacy format, both GET and POST methods worked in the majority of the API calls. This has now changed and each individual REST API call has an appropriate method listed. Using an incorrect method (e.g. GET during project creation) will result in an unsuccessful API call.</p>
+<p>In the Legacy format, both GET and POST methods worked in the majority of the API calls. This has now changed, and each individual REST API call has an appropriate method listed. Using an incorrect method (e.g. GET instead of POST in the project creation call) will result in an unsuccessful API call.</p>
 <h2>How to Use Postman to Test APIs</h2>
 <p>The screenshot below demonstrates how to orient yourself in the Postman environment and how to use it to test the API scenario described in this article.</p>
 <p><img src="https://help.memsource.com/hc/article_attachments/360025637191/Postman.png" alt="Postman.png" width="609" height="413"></p>
@@ -18,8 +18,7 @@
 <li>
 <strong>oAuth 2.0: </strong><a href="https://help.memsource.com/hc/en-us/articles/360001398672-Memsource-REST-API-Authentication#OAuth_2.0">oAuth 2.0</a> allows users to validate a certain application in Memsource, which consequently allows its continuous communication with Memsource (without the need for further authentication).</li>
 </ol>
-<p>In the scenario we're discussing here, we will be using the first option—that is, using the authentication token. This token is necessary for all the following API calls and will not be listed in the example parameters.<br> <br> To authenticate yourself, use the <a href="https://cloud.memsource.com/web/docs/api#operation/login" target="_blank" rel="noopener">api2/v1/auth/login</a> API call with appropriate parameters (in this case username and password).</p>
-<p> </p>
+<p>In the scenario we're discussing here, we will be using the first option—that is, using the authentication token. This token is necessary for all the following API calls and will not be listed in the example parameters.<br> <br>To authenticate yourself, use the <a href="https://cloud.memsource.com/web/docs/api#operation/login" rel="noopener">api2/v1/auth/login</a> API call with appropriate parameters (in this case username and password).</p>
 <ul>
 <li><strong>Method: POST</strong></li>
 <li>
@@ -32,8 +31,8 @@
 <strong>Response: </strong>Authentication token.</li>
 </ul>
 <h2>Step 2: Project Creation, Import, and Assignment</h2>
-<h3>Project creation</h3>
-<p>Projects are created using the <a href="https://cloud.memsource.com/web/docs/api#operation/createProject" target="_blank" rel="noopener">api2/v1/projects</a> API call, with the mandatory parameters of <strong>name, sourceLang, </strong>and<strong> targetLangs.</strong></p>
+<h3>Project Creation</h3>
+<p>Projects are created using the <a href="https://cloud.memsource.com/web/docs/api#operation/createProject" rel="noopener">api2/v1/projects</a> API call, with the mandatory parameters of <strong>name, sourceLang, </strong>and<strong> targetLangs.</strong></p>
 <ul>
 <li>
 <strong>Method:</strong> <strong>POST</strong>
@@ -48,15 +47,10 @@
 <strong>Response:</strong> Project UID (e.g. KmtNyVlz1skQd2aMVEipp7)</li>
 </ul>
 <h3>Job Creation</h3>
-<p>With the UID obtained in the previous call, it is now possible to add new jobs directly into this newly created project using <a href="https://cloud.memsource.com/web/docs/api#operation/createJob" target="_blank" rel="noopener">api2/v1/projects/{projectUid}/jobs</a>.</p>
-<p>The expression {projectUid} serves as a placeholder in the request URL where the obtained Project UID should be inserted. With the Create Job API call it is also necessary to change the <strong>Headers </strong>of the request to match the ones required by Memsource (in other calls, Postman will automatically add appropriate headers to the request).</p>
+<p>With the UID obtained in the previous call, it is now possible to add new jobs directly into this newly created project using <a href="https://cloud.memsource.com/web/docs/api#operation/createJob" rel="noopener">api2/v1/projects/{projectUid}/jobs</a>.</p>
+<p>The expression {projectUid} serves as a placeholder in the request URL where the obtained Project UID should be inserted. With the Create Job API call, it is also necessary to change the <strong>Headers </strong>of the request to match the ones required by Memsource (in other calls, Postman will automatically add appropriate headers to the request).</p>
 <p>All the import parameters need to be inserted into a custom <strong>Memsource</strong> header.</p>
 <p>The <strong>Content-Disposition</strong> header needs to include the filename in a pre-defined format in order for Memsource to process the import request correctly.</p>
-<p>This call can also include <strong>assignments</strong> as an optional parameter (as used in the example). If this parameter is not included, a separate call (<a href="https://cloud.memsource.com/web/docs/api#operation/editPart" target="_self">/api2/v1/projects/{projectUid}/jobs/{jobUid}</a>) needs to be used for the purpose of task assignment. The ID of the Provider that is inserted in the call can be obtained in multiple ways:</p>
-<ol>
-<li>While in Memsource, go to <strong>Users </strong>and click on the name of the Provider you wish to assign via the API. The ID will be a part of the URL displayed in the address bar (e.g. https://cloud.memsource.com/web/user/show/<strong>94573</strong>).</li>
-<li>Use the <a href="https://cloud.memsource.com/web/docs/api#operation/getListOfUsersFiltered" target="_self">/api2/v1/users</a> API call. This API call does not require any specific parameters, and it will return a list of all users in the account. The response contains both usernames and IDs. An optional parameter <strong>userName</strong> can be added to the query allowing you to list only users with specific usernames.</li>
-</ol>
 <ul>
 <li><strong>Method: POST</strong></li>
 <li>
@@ -71,17 +65,30 @@
 <li>
 <strong>Response:</strong> Job UID (e.g. dOYgeXzAdAbj4xFjuEVZP2)</li>
 </ul>
+<p>This call can also include <strong>assignments</strong> as an optional parameter. If this parameter is not included, a separate call (<a href="https://cloud.memsource.com/web/docs/api#operation/editPart">/api2/v1/projects/{projectUid}/jobs/{jobUid}</a>) needs to be used for the purpose of task assignment. The ID of the Provider that is inserted in the call can be obtained in multiple ways:</p>
+<ol>
+<li>While in Memsource, go to <strong>Users </strong>and click on the name of the Provider you wish to assign via the API. The ID will be a part of the URL displayed in the address bar (e.g. https://cloud.memsource.com/web/user/show/<strong>94573</strong>).</li>
+<li>Use the <a href="https://cloud.memsource.com/web/docs/api#operation/getListOfUsersFiltered">/api2/v1/users</a> API call. This API call does not require any specific parameters, and it will return a list of all users in the account. The response contains both usernames and IDs. An optional parameter, <strong>userName</strong>, can be added to the query allowing you to list only users with specific usernames.</li>
+</ol>
 <h3>Notify Assigned Users</h3>
-<p>The job UID can then be used as an optional parameter in <a href="https://cloud.memsource.com/web/docs/api#operation/notifyAssigned" target="_blank" rel="noopener">/api2/v1/projects/{projectUid}/jobs/notifyAssigned</a>, along with the <strong>emailTemplate</strong> parameter, which represents the ID of the email template that should be used. This can be obtained from the Memsource UI or using <a href="https://cloud.memsource.com/web/docs/api#operation/listOrgEmailTemplates" target="_blank" rel="noopener">/api2/v1/emailTemplates</a>.</p>
+<p>The job UID can then be used as an optional parameter in <a href="https://cloud.memsource.com/web/docs/api#operation/notifyAssigned" rel="noopener">/api2/v1/projects/{projectUid}/jobs/notifyAssigned</a> along with the <strong>emailTemplate</strong> parameter, which represents the ID of the email template that should be used. This can be obtained from the Memsource UI or using <a href="https://cloud.memsource.com/web/docs/api#operation/listOrgEmailTemplates" rel="noopener">/api2/v1/emailTemplates</a>.</p>
 <ul>
 <li>
 <strong>Request URL:</strong> https://cloud.memsource.com/web/api2/v1/projects/KmtNyVlz1skQd2aMVEipp7/jobs/notifyAssigned?token=Authentication token</li>
 <li>
 <strong>Response:</strong> Empty</li>
 </ul>
-<p>This is where the translator would start to work in his/her account, in the same way as if the Memsource UI was used. After the job is finished, the PM in charge would receive a notification and the 3rd part of the scenario can be initiated. It is also possible to wait for a callback (please see more details about <a href="https://help.memsource.com/hc/en-us/articles/115003695152-Memsource-Legacy-API-Webhooks">webhooks</a>) and initiate the 3rd part automatically, but we are listing only a simple example scenario.</p>
-<h2>Part 3: Project Completion and Download</h2>
-<p>Once the job (in this case the only one in the project) is completed, it is possible to use <a href="https://cloud.memsource.com/web/docs/api#operation/setProjectStatus" target="_self">/api2/v1/projects/{projectUid}/setStatus</a> with the mandatory parameters <strong>project </strong>and<strong> status</strong> to change the status of the entire project to <em>Completed</em>. This change is a manual one. However, if <a href="https://help.memsource.com/hc/en-us/articles/115003680771-Projects#Project_Status_Automation_1">Project Status Automation</a> is used, the status will be changed automatically. It is also possible to wait for a <a href="https://help.memsource.com/hc/en-us/articles/115003695152-Memsource-Legacy-API-Webhooks">webhook</a>, and initiate other actions based on the callback received.</p>
+<p>This is where the translator would start to work in their account, in the same way they would if the Memsource UI was being used. After the job is finished, the PM in charge would receive a notification, and the 3rd part of the scenario can be initiated. It is also possible to wait for a callback (please see more details about <a href="https://help.memsource.com/hc/en-us/articles/115003695152-Memsource-Legacy-API-Webhooks">webhooks</a>) and initiate the 3rd part automatically, but we are listing only a simple example scenario.</p>
+<h2>Part 3: Download Translated File, Set Project to Completed</h2>
+<p>The API call <a href="https://cloud.memsource.com/web/docs/api#operation/completedFile">/api2/v1/projects/{projectUid}/jobs/{jobUid}/targetFile</a> with the parameter <strong>jobUid </strong>can be used to retrieve the translated content.</p>
+<ul>
+<li><strong>Method: GET</strong></li>
+<li>
+<strong>Request URL:</strong> https://cloud.memsource.com/web/api2/v1/projects/KmtNyVlz1skQd2aMVEipp7/jobs/dOYgeXzAdAbj4xFjuEVZP2/targetFile?token=Authentication token</li>
+<li>
+<strong>Response:</strong> Binary response with the completed file itself</li>
+</ul>
+<p>Once the job (in this case the only one in the project) is completed, it is possible to use <a href="https://cloud.memsource.com/web/docs/api#operation/setProjectStatus">/api2/v1/projects/{projectUid}/setStatus</a> with the mandatory parameters <strong>project </strong>and<strong> status</strong> to change the status of the entire project to <em>Completed</em>. This change is a manual one. However, if <a href="https://help.memsource.com/hc/en-us/articles/115003680771-Projects#Project_Status_Automation_1">Project Status Automation</a> is used, the status will be changed automatically. It is also possible to wait for a <a href="https://help.memsource.com/hc/en-us/articles/115003695152-Memsource-Legacy-API-Webhooks">webhook</a> and initiate other actions based on the callback received.</p>
 <ul>
 <li><strong>Method POST</strong></li>
 <li>
@@ -92,12 +99,4 @@
 <ul>
 <li>
 <strong>Response:</strong> Empty</li>
-</ul>
-<p>Once the project is completed (or even before), the API call <a href="https://cloud.memsource.com/web/docs/api#operation/completedFile" target="_self">/api2/v1/projects/{projectUid}/jobs/{jobUid}/targetFile</a> with the parameter <strong>jobUid </strong>can be used to retrieve the translated content.</p>
-<ul>
-<li><strong>Method: GET</strong></li>
-<li>
-<strong>Request URL:</strong> https://cloud.memsource.com/web/api2/v1/projects/KmtNyVlz1skQd2aMVEipp7/jobs/dOYgeXzAdAbj4xFjuEVZP2/targetFile?token=Authentication token</li>
-<li>
-<strong>Response:</strong> Binary response with the completed file itself</li>
 </ul>

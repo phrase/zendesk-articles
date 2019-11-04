@@ -1,0 +1,56 @@
+<h2>Setting up and Using Automated Project Creation</h2>
+<p>The Automated Project Creation rules allow users to configure the way in which Memsource monitors specific folders and creates new projects whenever new content is detected in them. This is powered by the <a href="https://help.memsource.com/hc/en-us/articles/115003460911">Memsource connectors</a>. The logic of the project creation process is similar to that followed when the <a title="Automation Widget" href="https://wiki.memsource.com/wiki/Automation_Widget">Automation Widget</a> is used.</p>
+<p><strong>Note:</strong> Automated Project Creation is only available for users with the Team, Ultimate, or Enterprise editions.</p>
+<h2>Setting Up the Automation Rules</h2>
+<p>To use this feature, you will need at least one <a href="https://help.memsource.com/hc/en-us/articles/115003460911" target="_blank" rel="noopener">connector</a> and at least one <a href="https://help.memsource.com/hc/en-us/articles/360001388091" target="_blank" rel="noopener">service</a> created in your Memsource account. After you have established them, you can follow the instructions below:</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360024515972/mceclip0.png"></p>
+<p><span class="wysiwyg-font-size-small"><em>Automated Project Settings</em></span></p>
+<ol>
+<li>In your account, go to <strong>Setup, Automated Project Creation, </strong>and click on <strong>New.</strong>
+</li>
+<li>Set up the source and target languages. Note that any project created using Automated Project Creation will have these languages specified automatically.</li>
+<li>Choose the <strong>Remote Folder</strong> which should be monitored for new or updated content. <br>Please note that only some folders will be available for certain repositories (For example, <em>Posts and Pages </em>for Drupal and Wordpress).</li>
+<li>Designate a <strong>Processed subfolder.</strong> The files imported to Memsource will be moved to this folder. This will help you to see which files are currently being processed. <br>If this option is disabled, the source files will stay in their original folder. However, they will not be picked up multiple times.<br><strong>Important:</strong> if this option is disabled and <a href="https://help.memsource.com/hc/en-us/articles/115003692532-Setup#File_Renaming" target="_self">File Renaming</a> is not used, the original documents can be overwritten by their translations (depending on the repository used).</li>
+<li>Specify a <strong>Target Subfolder Path</strong> for the translated files exported from Memsource.
+<ul>
+<li>You can use <code>{targetLang}</code> for the folder's name.</li>
+<li>You can create subfolders within your source folder. For example: <code>target/{targetLang}</code> will result in <code>source/target/de'</code> (This option is available for FTP, SFTP, Dropbox, Google Drive, Box, OneDrive, Git, GitHub, GitLab, and Bitbucket Cloud.)</li>
+<li>For some repositories, an absolute path is available. Begin your path with / to indicate the absolute path. For example: <code>/Output/APC-out/{targetLang}</code> (This option is available only for Azure, FTP, SFTP, Dropbox, Google Drive, Box, OneDrive, Git, and SharePoint.) For GitHub and GitLab an absolute path is available only within the same branch and the same project.</li>
+</ul>
+</li>
+<li>
+<strong>Frequency </strong>of the checks can be specified to define how often Memsource should check for new content in the designated folder.</li>
+<li>Choose the appropriate <strong>Service</strong> (similar to the Automation Widget). The service used will determine multiple factors:
+<ol>
+<li>Possible language combinations (A single service can be used in multiple Automated Project Creation rules.)</li>
+<li>The Workflow steps with which the project will be created.</li>
+<li>Project Templates that will be used for the newly created project (including project settings and user assignments).</li>
+</ol>
+</li>
+<li>If you want to differentiate between projects coming from different automation rules, you can use a <strong>Default Project Title</strong> to define the automatically-generated names of projects. It is possible to use macro {filename} in the Project's title. If multiple filenames are used in the project's name, only the first filename will be used.</li>
+<li>The <strong>Default Project Owner</strong> will always be notified when a new project is created using the automation rules.</li>
+<li>You can also customize the Email Templates that should be used for notifications.</li>
+</ol>
+<h2>Using Automated Project Creation</h2>
+<p>With the automation rules set, content can now be created in the designated folders. Based on the frequency checks, Memsource will look into the specified folder and identify new or updated content (based on file names, metadata, size, etc.).</p>
+<p>Some of the connectors have an additional means of determining new content (for example, the WordPress and Drupal plugins). Please visit our dedicated sections for <a href="https://help.memsource.com/hc/en-us/articles/360001156791-WordPress-Connector" target="_self">WordPress</a> and <a href="https://help.memsource.com/hc/en-us/articles/360003166391-Drupal-Plugin" target="_self">Drupal</a> to learn more about how these plugins work and determine new content. </p>
+<h3><span id="Automatic_Creation_of_New_Projects_from_Online_Repositories" class="mw-headline">Automatic Creation of New Projects from Online Repositories</span></h3>
+<div class="thumb tright">On the <em>Automated Project Creation</em> page, Memsource will show you the currently available rules and the "last checked" and "next check" dates and times. You can also check the connection status from this page.</div>
+<p>Depending on the selected frequency, Memsource will look in the online repository in question, and if new content is identified, new projects will be created either with the default settings or with settings taken from the selected project template. This can lead to the full automation of the process, including analysis, pre-translation, assignment to Linguists/Vendors, and the e-mailing of notifications.</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360001902792/ListofConnectors.png" alt="ListofConnectors.png" width="507" height="100"> <br><em><span class="wysiwyg-font-size-small">List of Available Connectors</span></em></p>
+<p><span class="mw-headline"><strong>ZIP files</strong> are supported:<br></span></p>
+<ul>
+<li><span class="mw-headline">Multiple ZIP files can be imported to one project</span></li>
+<li><span class="mw-headline">Translated files are exported back to ZIP files</span></li>
+<li><span class="mw-headline">If one ZIP file is imported to multiple targets, the translated files will be exported to multiple ZIP files—one ZIP for each target language—using the target locale code in the ZIP name (for example Pack18.en_us.ZIP).</span></li>
+</ul>
+<h3><span id="Automatic_Export_of_Completed_Files_back_to_Online_Repositories" class="mw-headline">Automatic Export of Completed Files Back to Online Repositories</span></h3>
+<p>As soon as the project status changes to <em>Completed</em>, which can also be achieved using Project Status Automation rules, the translated files will be automatically sent back to the Online Repository into newly created subfolders identified by the language codes (for example, 'en' for English).</p>
+<h3><span id="Disabling_Automated_Project_Creation" class="mw-headline">Disabling Automated Project Creation</span></h3>
+<p>APC can be disabled in 3 ways:</p>
+<ul>
+<li>Manually in the APC settings</li>
+<li>Automatically after 90 days of inactivity</li>
+<li>Automatically after the organization account has been deactivated (at end of the subscription).</li>
+</ul>
+<p>Please note that w<span style="font-weight: 400;">hen a connector used as part of the Automated Project Creation rules detects three or more instances in a row of a project not being created when it should be, a notification will be sent to the affected Memsource users.</span></p>

@@ -8,6 +8,8 @@
 <div class="thumb tright">
 <div class="thumbinner">
 <div class="thumbcaption">There are several categories that the segments can fall into:</div>
+<div class="thumbcaption"> </div>
+<h3 class="thumbcaption">Translation Memory matches</h3>
 </div>
 </div>
 <ul>
@@ -18,22 +20,25 @@
 <li>
 <strong>78%</strong> is a fuzzy translation memory match (anything below 100%).</li>
 <li>
-<strong>MT</strong> stands for machine translation. (This will only be shown if it was previously enabled by a Project Manager.)</li>
+<strong>S</strong> is a subsegment match. If a smaller part of the original text was previously translated as short segment, the CAT pane will show it even though the match is lower then the threshold set in the Editor's Preference.</li>
+<li>Arrow ↓ indicates TM penalization. Project manager can set a penalty to a low quality TM - for example 100% match will only show as 95% match</li>
+</ul>
+<h3>Term Base match</h3>
+<ul>
 <li>
 <strong>TB</strong> is a suggested term from a term base.</li>
-<li>
-<strong>S</strong> is a subsegment match. These are somewhat similar to terms from a TB, except that they are automatically generated from the translation memory.</li>
-</ul>
-<p>In addition to what's noted above, there are some additional features you might see:</p>
-<ul>
 <li>An asterisk on a term notifies users that a Note or Usage Information is available.</li>
 <li>The letters <em>TB</em> being greyed-out indicates a "New" term that has not yet been approved.</li>
-<li>A term in red term indicates a rejected term that should not be used during translation.</li>
+<li>A term in red indicates a rejected term that should not be used during translation.</li>
 </ul>
 <h2>Non-translatable Matches</h2>
 <p>An underlined score of <span class="wysiwyg-underline">100%</span> or <span class="wysiwyg-underline">99%</span> can be a Non-Translatable match or an MTQE (<a href="https://help.memsource.com/hc/en-us/articles/360016450971" target="_blank" rel="noopener">Machine translation Quality Estimation</a>) match. Hover your mouse over the underlined score to see the details. You can also see the details in the CAT pane when you click on the match there. Both 99% and 100% matches are likely to be segments that probably do not require translation but that should still be checked by a translator.</p>
 <p><span class="wysiwyg-color-black">If the <em>Display non-translatables in Memsource Editor</em> optio</span>n is enabled, segments identified as non-translatable are displayed in the Memsource Editor’s CAT pane. When an NT match is hovered over, a tooltip will indicate whether the match is AI or rule-based. This information is also visible at the bottom of the CAT pane when an NT match is selected.</p>
-<h2>MTQE Matches</h2>
+<h2>MT and MTQE Matches</h2>
+<ul>
+<li>
+<strong>MT</strong> stands for machine translation. (This will only be shown if it was previously enabled by a Project Manager.)</li>
+</ul>
 <p>The Memsource MTQE feature enables users to analyze a job and provides a percentage score for machine translation suggestions at the segment level before any post-editing is done. (In order to do this, <span class="wysiwyg-color-black">MTQA must be enabled in the MT Engine settings</span>.)</p>
 <ul>
 <li>
@@ -62,11 +67,12 @@
 <h2><span id="Displaying_Additional_Information_for_Terms" class="mw-headline">Displaying Additional Information for Terms</span></h2>
 <p>When a term is selected in the CAT pane, additional information is displayed:</p>
 <ul>
+<li>Links to <a href="https://help.memsource.com/hc/en-us/articles/360021934312#Add_or_Edit_a_Term's_Attributes" target="_self">edit the term's source or target</a> (depending on Linguist's user rights)</li>
+<li>The Term's attributes (if available)</li>
+<li>The Concept's attributes (if available)</li>
 <li>The name of the term base</li>
 <li>The date when the term was created and/or edited</li>
 <li>the name of the user (unless restricted by user rights)</li>
-<li>Links to edit the source and target terms (unless restricted by user rights)</li>
-<li>Additional parameters of the target term, such as Note, Usage, Gender,  etc.</li>
 </ul>
-<p>The presence of the additional parameters Note or Usage is indicated by an asterisk attached to the term in the CAT pane.</p>
-<p><img class="img350" src="https://www.dropbox.com/s/pakgsy4vww1ppkt/CatPane_TargetTermDetails.png?raw=1"></p>
+<p>The presence of the Note or Usage is indicated by an asterisk attached to the term in the CAT pane.</p>
+<p><img class="img350" title="Term details in CAT pane" src="https://www.dropbox.com/s/xtoju6cz1ppjgvb/ED_CAT_pane_TermDetails.png?raw=1" alt="Term details in CAT pane"></p>

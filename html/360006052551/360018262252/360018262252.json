@@ -1,0 +1,27 @@
+{
+    "author_id": 116602510771,
+    "comments_disabled": false,
+    "created_at": "2018-10-22T09:36:39Z",
+    "draft": false,
+    "edited_at": "2019-08-01T19:26:10Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/360018262252-Multilingual-XLSX-Files",
+    "id": 360018262252,
+    "label_names": [
+        "_RWD"
+    ],
+    "locale": "en-us",
+    "name": "Multilingual XLSX Files",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 111,
+    "promoted": false,
+    "section_id": 360006052551,
+    "source_locale": "en-us",
+    "title": "Multilingual XLSX Files",
+    "updated_at": "2019-08-02T15:08:56Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360018262252-Multilingual-XLSX-Files.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

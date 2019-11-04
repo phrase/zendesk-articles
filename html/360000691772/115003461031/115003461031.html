@@ -1,4 +1,4 @@
-<p>The Memsource Translation Plugin for AEM 6.2 and AEM 6.3 enables users of Memsource to link their Memsource accounts to Multilingual Sites created using the <a href="https://www.adobe.com/marketing/experience-manager-sites/web-content-management.html" target="_self">AEM CMS system</a>. The sections below will cover the essentials of configuring the plugin and how to work with it. To find more information about Translating Content for Multilingual Sites, please visit the <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation.html">Adobe documentation</a> (especially the sections concerning <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-tic.html">Configuring the Translation Framework</a>, <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-prep.html">Preparing Content for Translation</a>, <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-rules.html">Identifying Content to Translate</a>, and <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-manage.html">Managing Translation Projects</a>).</p>
+<p>The Memsource Translation Plugin for AEM 6.2, AEM 6.3, and AEM 6.4 enables users of Memsource to link their Memsource accounts to Multilingual Sites created using the <a href="https://www.adobe.com/marketing/experience-manager-sites/web-content-management.html" target="_self">AEM CMS system</a>. The sections below will cover the essentials of configuring the plugin and how to work with it. To find more information about Translating Content for Multilingual Sites, please visit the <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation.html">Adobe documentation</a> (especially the sections concerning <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-tic.html">Configuring the Translation Framework</a>, <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-prep.html">Preparing Content for Translation</a>, <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-rules.html">Identifying Content to Translate</a>, and <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-manage.html">Managing Translation Projects</a>).</p>
 <h2>Memsource Configuration</h2>
 <p>The plugin uses the Memsource <a href="https://help.memsource.com/hc/en-us/articles/115003941812-Automation-Widget">Automation Widget</a> functionality to create a project in Memsource and send the files from AEM to Memsource. Once the jobs are translated, the Project Manager sets the project to <em>Completed,</em> and the translated files are sent back to AEM.</p>
 <p>To successfully link Memsource with AEM, you will need the following:</p>
@@ -24,9 +24,9 @@
 <li>
 <strong>Automation Widget:</strong> Select the Automation Widget you have prepared for use in AEM. If you wish to use multiple Automation Widgets for different scenarios, you will need to set up multiple configurations. </li>
 <li>
-<strong>Service:</strong> Select the service that will govern the language setup of projects (orders) in Memsource as well as the Workflow setup of these Memsource projects. If you wish to use multiple language and Workflow options, you will need to create multiple configurations.</li>
+<strong>Service:</strong> Select the service that will govern the language setup of projects (orders) in Memsource as well as the Workflow setup of these Memsource projects. If you wish to use multiple languages and Workflow options, you will need to create multiple configurations.</li>
 <li>
-<strong>AutoComplete Project:</strong> This should be ticked if you would like the AEM projects to reflect the statuses of projects in Memsource.</li>
+<strong>Auto Complete Project:</strong> This should be ticked if you would like the AEM Translation Jobs to skip the Review step.</li>
 <li>
 <strong>AEM URL:</strong> This is the URL of the site where content for translation is located.</li>
 </ul>
@@ -49,14 +49,13 @@
 </ul>
 <h2>Applying Translation Integration to Content</h2>
 <ul>
-<li>Navigate to the root of the content you wish to translate in Memsource, select it and click <strong>View Properties</strong>.</li>
-<li>On the <em>Cloud Services</em> Tab, select your newly created configuration as the <strong>Translation Integration Configuration reference.</strong>
-</li>
-<li>Click on the plus <strong>(+)</strong> button to add a new configuration and select the <strong>Memsource Translation Plugin for AEM.</strong> This will display a dropdown menu with previously created configurations. Select the one you'd like to use for this content.
+<li>Navigate to the root of the content you wish to translate in Memsource, select it and click <strong>Properties</strong>.</li>
+<li>On the <strong>Cloud Services</strong> Tab, select your newly created configuration as the <strong>Translation Integration</strong>.</li>
+<li>Click on the <strong>Add configuration</strong> label and select the <strong>Memsource Translation Plugin for AEM.</strong> This will display a dropdown menu with previously created configurations. Select the one you'd like to use for this content.
 <ul>
 <li>By default, all child pages will inherit these settings. However, you can adjust any page to use a different cloud configuration if needed.</li>
 </ul>
 </li>
 </ul>
-<p>When you add content from these pages, only the translatable content will be added. If you create a project from the <em>References</em> Panel, it will be automatically set up to use the cloud configuration you choose.</p>
+<p>When you add content from these pages, only the translatable content will be added. If you create a project from the <em>References</em> Panel, it will be automatically set up to use the cloud configuration associated with the root page.</p>
 <p>For more details on creating translation projects using the <em>References</em> Panel, please see the <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-manage.html">Managing Translation Projects</a> section of the <a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation.html">Adobe documentation</a>.</p>

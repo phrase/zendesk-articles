@@ -1,0 +1,178 @@
+<h2><span id="Introduction" class="mw-headline">Introduction</span></h2>
+<p>XPath stands for XML Path Language. It can be used to navigate through elements and attributes in an XML document. If you are new to XPATH, please see this <a class="external text" href="http://www.w3schools.com/xml/xpath_intro.asp" rel="nofollow">XPath Tutorial</a> first and study the official <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/" target="_blank" rel="noopener">XPATH documentation</a>.</p>
+<p>A subset of XPath 1.0 is accepted with the following limitations:</p>
+<ul>
+<li>Axis in step
+<ul>
+<li>
+<strong>Supported:</strong> ancestor, ancestor-or-self, attribute, child, descendant, descendant-or-self</li>
+<li>
+<strong>Not supported:</strong> following, preceding, following-sibling, preceding-sibling, namespace</li>
+</ul>
+</li>
+<li>Predicate
+<ul>
+<li>
+<strong>Supported:</strong> conditions on current node or ancestor nodes and its properties (attributes, namespaces)</li>
+<li>
+<strong>Not supported (for example):</strong> position number, axis child::, descendant, descendant-or-self, following::, preceding::, following-sibling::, preceding-sibling::, function last()</li>
+</ul>
+</li>
+</ul>
+<h2><span id="Basic_Rules" class="mw-headline">Basic Rules</span></h2>
+<ul>
+<li>Use / and // in paths</li>
+<li>Use single quotes ‘ ‘ in names</li>
+<li>Use a pipe | for joining the requests</li>
+<li>Names are case-sensitive: &lt;Body&gt; is different from &lt;body&gt;</li>
+</ul>
+<h2><span id="Examples" class="mw-headline">Examples</span></h2>
+<p>There are online <a class="external text" href="http://zvon.org/xxl/XPathTutorial/Output/examples.html" rel="nofollow">examples</a> which can help you to understand XPath better.</p>
+<p>For example, files in the attachment include XPath Example 1 and XPath example 2 (with namespace).</p>
+<ol>
+<li>
+<strong>Import all elements and all attributes</strong>
+<p>//* | //@*</p>
+</li>
+<li>
+<p><strong>Import all elements and the value of attribute1</strong> (&lt;elem1 attribute1="translate" attribute2="Do not translate"/&gt;)</p>
+<p>//* | //@attribute1</p>
+</li>
+<li>
+<p><strong>Import all descendants of Child elements</strong></p>
+<p>//Child//*</p>
+</li>
+<li>
+<p><strong>Import an element lis and its descendants only if the attribute translate='true'</strong> (&lt;lis translate="true"&gt;translate this&lt;/lis&gt;&lt;lis translate="false"&gt;do not translate this&lt;/lis&gt;)</p>
+<p>//lis[@translate='true']/descendant-or-self::*</p>
+</li>
+<li>
+<p><strong>Import all elements and descendants if the element's attribute is translate='true'</strong></p>
+<p>//*[@translate='true']/descendant-or-self::*</p>
+</li>
+<li>
+<p><strong>Import value of the attribute Text in element Data</strong> &lt;Data Text="Text for translation"&gt;</p>
+<p>//data/@text</p>
+</li>
+<li>
+<p><strong>Import the &lt;mT:translation&gt; element and its descendants, except element &lt;mT:ignore&gt;</strong></p>
+<p>//mT:translation/descendant-or-self::*[not(ancestor-or-self::mT:ignore)]</p>
+</li>
+<li>
+<strong>Exclude all elements with the attribute translate='false'<br> </strong>//*[not(@translate='false')]</li>
+<li>
+<p><strong>Exclude elements 'lis' with the attribute translate='false' </strong>(&lt;lis translate="false"&gt;Do not translate)</p>
+<p>//*[not(self::lis[@translate='false'])]</p>
+</li>
+<li>
+<p><strong>Exclude elements 'lis' with the attribute translate='false' and their descentants</strong> (&lt;lis translate="false"&gt;&lt;p&gt;Do not translate)</p>
+<p>//*[not(ancestor-or-self::lis[@translate='false'])]</p>
+</li>
+<li>
+<p><strong>Exclude all elements containing 'link'</strong> (&lt;menu1link&gt;, &lt;tmenu41link&gt;)</p>
+<p>//*[not(contains(name(),'link'))]</p>
+</li>
+<li>
+<p><strong>Exclude all elements if they or their ancestor have an attribute 'lis' containing 'link'</strong> (&lt;ele lis=menu1link&gt;, &lt;mon lis=tmenu41link&gt;)</p>
+<p>//*[not(ancestor-or-self::node()[contains(@lis, 'link')])]</p>
+</li>
+<li>
+<p><strong>import elements PT if their parent LANG has the attribute 'updated' with year 2015 (&lt;LANG updated="20150213T121526"&gt;&lt;PT&gt;)'</strong></p>
+<p>//LANG[contains(@updated,'2015')]/PT</p>
+</li>
+<li>
+<strong>Import elements 'Description' and 'Name' only if they are not descendants of elements 'Definitions' or 'Types':</strong><br><br>//*[not(ancestor-or-self::*[(name()='Definitions') or (name()='Types')])]/*[(name()='Description') or (name()='Name')]</li>
+<li>
+<strong>XML with namespace</strong> &lt;root xmlns:xhtml="<a class="external free" href="http://www.w3.org/1999/xhtml" rel="nofollow">http://www.w3.org/1999/xhtml</a>"&gt; &lt;Child&gt;&lt;Text&gt;translate this&lt;/Text&gt;&lt;/Child&gt;
+<ul>
+<li>
+<p>import all elements in &lt;Child&gt;:</p>
+<p>//*[local-name()='Child']//*</p>
+</li>
+<li>
+<p>import only elements &lt;Text&gt; in &lt;Child&gt;:</p>
+<p>//*[local-name()='Child']/*[local-name()='Text']</p>
+</li>
+<li>
+<p>import all elements under element &lt;CONTRACT&gt;, if attribute &lt;CATEGORY&gt; in &lt;CONTRACT&gt; has the value &lt;ORIGINAL&gt;:</p>
+<p>//*[local-name()='CONTRACT' and @CATEGORY='ORIGINAL']//*</p>
+</li>
+</ul>
+</li>
+<li>
+<strong>XML with namespace and attributes</strong> &lt;root xmlns:xhtml="<a class="external free" href="http://www.w3.org/1999/xhtml" rel="nofollow">http://www.w3.org/1999/xhtml</a>"&gt; &lt;Child translate='1'&gt;translate this&lt;/Child&gt;
+<ul>
+<li>import element &lt;Child&gt; if the attribute translate is 1:
+<p>//*[local-name()="Child"][@*[local-name()='translate']='1']</p>
+</li>
+<li>
+<p>import all elements with the attribute translate=true:</p>
+<p>//*[@*[local-name()='translate']='true']</p>
+</li>
+</ul>
+</li>
+<li>
+<strong>XML with namespace. Import the element target from element tu, but not when the attribute id contains 'img' or 'extra'</strong>:
+<ul>
+<li>File example:
+<p><span class="nt">&lt;tu</span> <span class="na">id=</span><span class="s">"pages|content|extra"</span><span class="nt">&gt;</span> <span class="nt">&lt;ori</span> <span class="na">xml:lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>Course one<span class="nt">&lt;/ori&gt;</span> <span class="nt">&lt;target</span> <span class="na">xml:lang=</span><span class="s">"lang"</span><span class="nt">&gt;</span>Course one<span class="nt">&lt;/target&gt;</span> <span class="nt">&lt;/tu&gt;</span></p>
+</li>
+<li>
+<p>XPATH example:</p>
+<p>//*[local-name()='tu' and not(contains(@id,'img') or contains(@id,'extra'))]/*[local-name()='target']</p>
+</li>
+</ul>
+</li>
+<li>
+<strong>Import all elements except &lt;comment&gt; and &lt;lis&gt; unless &lt;lis translate="true"&gt; and their descendants</strong>:
+<p>//*[count(ancestor-or-self::node()[(name()='lis' and (not(@translate='true')) ) or name()='comment'])=0]</p>
+</li>
+<li>
+<strong>Import all elements except &lt;comment&gt; and except elements with attribute &lt;... attribute2="Do not translate"&gt; and their descendants</strong>:<br><br>//*[count(ancestor-or-self::node()[(@attribute2='Do not translate') or name()='comment'])=0]<br><br>
+</li>
+<li>
+<strong>Import values of attributes 'varName' and 'glossName' but only if their ancestors have attribute attribute1='translate' or attribute1='edit'</strong>:<br><br>//*[(self::node()[@attribute1='translate' or @attribute1='edit'])]//@*[local-name()='varName' or local-name()='glossName']<br><br>
+</li>
+<li>
+<strong>Import all elements and attributes except elements with the attribute Name= Back, Menu, or Time<br></strong> <br>//*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])] | //@*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])]</li>
+</ol>
+<dl>
+<dd>
+<dl>
+<dd>In this case it could be better to import all and lock the atributes you don’t want to import (see following points.). Once the segments are Locked, you have to copy source to target in Editor in order to have original transferred to translation.</dd>
+</dl>
+</dd>
+</dl>
+<ul>
+<li>
+<strong>Lock all elements with the attribute Name with values: Back, Menu, or Time and their descendants</strong>
+<p>//*[@Name='Back' or @Name='Menu' or @Name='Time']/descendant-or-self::*</p>
+</li>
+<li>
+<p><strong>Lock all attributes of Name with values: Back, Menu, or Time and their descendants</strong></p>
+<p>//*[@Name='Back' or @Name='Menu' or @Name='Time']//@*</p>
+</li>
+</ul>
+<h2><span id="Multilingual_XML_with_namespace" class="mw-headline">Multilingual XML with Namespace</span></h2>
+<p>If your multilingual XML contains namespace,  the xpath could be the following: </p>
+<p><img class="img450" src="https://www.dropbox.com/s/4kzr0zt7h8sas2h/MultiXML_XPATH.png?raw=1"></p>
+<ul>
+<li>//*[local-name()='trans-unit']</li>
+<li>*[local-name()='source']</li>
+<li>*[local-name()='target']</li>
+</ul>
+<h2><span id="Context_Note" class="mw-headline">Context Note</span></h2>
+<p>it is possible to import context notes to translated segments. There are three examples in this Sample:</p>
+<p><img class="img450" src="https://www.dropbox.com/s/mvegxiyi7ihnvun/XPATH_sample3.png?raw=1"></p>
+<ul>
+<li>Attribute in parent element (context 1): ../@context1</li>
+<li>Attribute in self element (context2): @context2</li>
+<li>Sibling element (context 3): ../context3</li>
+</ul>
+<p>Be aware, that if you import</p>
+<ul>
+<li><strong>Elements&amp;Attributes: //*</strong></li>
+</ul>
+<p>the content of the context note will be imported to source segments as well. You will have to exclude the context note elements/attributes from general import in Elements&amp;Attributes.</p>
+<p> </p>
+<p>Samples attached:</p>

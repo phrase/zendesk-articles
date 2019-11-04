@@ -3,13 +3,14 @@
     "comments_disabled": false,
     "created_at": "2017-12-23T16:19:17Z",
     "draft": false,
-    "edited_at": "2019-03-08T15:51:31Z",
+    "edited_at": "2019-07-16T09:01:56Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003632531-Language-Quality-Assessment",
     "id": 115003632531,
     "label_names": [
         "desktop editor",
         "_RWD",
-        "_NoIMG"
+        "_IMG_ok",
+        "_RWD_K"
     ],
     "locale": "en-us",
     "name": "Language Quality Assessment",
@@ -21,7 +22,7 @@
     "section_id": 115000903871,
     "source_locale": "en-us",
     "title": "Language Quality Assessment",
-    "updated_at": "2019-03-08T15:51:31Z",
+    "updated_at": "2019-07-16T09:01:56Z",
     "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003632531-Language-Quality-Assessment.json",
     "user_segment_id": null,
     "vote_count": 0,

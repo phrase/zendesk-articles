@@ -1,0 +1,69 @@
+<p>The content of a translation memory can be <a href="https://help.memsource.com/hc/en-us/articles/360012041651-Edit-Translation-Memory">edited directly</a> in the Memsource Editor (by an Administrator or a Project Manager). It can also be <a href="https://help.memsource.com/hc/en-us/articles/360014863731-Export-a-Translation-Memory" target="_self">exported</a> into a file and edited in an external program by anyone. The edited file then can be imported back to Memsource (again by a Memsource Administrator or a Project Manager).</p>
+<h2>Exported File Formats</h2>
+<ul>
+<li>An exported <strong>TMX file</strong> can be edited in a program such as <a href="http://okapi-olifant.software.informer.com/3.0/" target="_blank" rel="noopener">Okapi Olifant</a> (usually only up to 100,000 segments or "translation units"). Okapi Olifant has a lot of useful functions for editing the segments, deleting duplicates, etc.</li>
+<li>An exported <strong>XLS file</strong> can be edited in Excel.</li>
+</ul>
+<h2>Importing XLSX files back</h2>
+<p>When a XLSX file is imported back to Memsource Translation Memory, the following process takes place:</p>
+<ol>
+<li>Translation units with the same source, target and context are deduplicated upon import.</li>
+<li>Translation units with edited source or target or context (or missing context) will be added as new translation units.</li>
+<li>Translation units with |update suffix and edited source or target or context will overwrite old units (see below).</li>
+<li>Translation units with |delete suffix will be deleted (see below).</li>
+</ol>
+<h2>Examples of Editing  a TM in Excel</h2>
+<p>When Editing the TM in Excel, you can do one of two things:</p>
+<ul>
+<li>Edit it in Excel and then import the edited file to a new Translation Memory (and delete the old TM).</li>
+<li>Edit the file in Excel, add "|update" or "|delete" to the segment's ID and import it back to the original Translation Memory.</li>
+</ul>
+<h2>Deleting Multiple 100% Matches</h2>
+<p>A 100% match is a segment with the same source but different <a href="https://help.memsource.com/hc/en-us/articles/360017460212" target="_self">context</a>. If you want to have your segments with no context (every source text has only one translation, regardless of the context in the file), you can export the TM with no context and import it to a new, empty TM. Every duplicate segment in the XLS file will be overwritten by its newer version when imported back to Memsource.</p>
+<ol>
+<li>
+<strong>Step:</strong> Open the TM, click on <strong>Export</strong> and select <em>XLS</em> from the <em>Format </em>dropdown menu.</li>
+<li>
+<strong>Step:</strong> From the list of parameters, deselect the <em>Previous segment, Next segment,</em> and <em>Segment key</em> options. These are the options that add context around a segment, and without them, each segment will be context-free.</li>
+<li>
+<strong>Step: </strong>Click <strong>Export.</strong>
+</li>
+<li>
+<strong>Step:</strong> Import the file into a <a href="https://help.memsource.com/hc/en-us/articles/360010849432-Create-Translation-Memory">new TM</a> in Memsource.</li>
+<li>
+<strong>Step:</strong> At this point, if you are absolutely sure you don't want to keep the segments with the context, you can delete the old TM.</li>
+</ol>
+<p><img class="img250" title="Export TM with no context" src="https://www.dropbox.com/s/jw2w6fer9dnred3/TM_exportTM_noContext.png?raw=1" alt="export TM noContext"></p>
+<p><strong>Note:</strong> You can choose to save your translations without context when importing new jobs to a project. Please see our <a href="https://help.memsource.com/hc/en-us/articles/360017460212">TM Match Context and Optimization</a> article for more details.</p>
+<h2>Deleting Segments From One User</h2>
+<p>If you want to delete all segments created (or modified) by one user, you can do this in Excel as well. You will have to export the TM with all parameter to XLS file, select all segments created (or modified) by that user and add "|delete" to the segments' ID. When the XLS file is imported back to the Memsource TM, all segments with "|delete" will be removed from the Memsource TM. Do this by following the steps below.</p>
+<p><strong>Important:</strong> Export the Excel file with context (by checking the <em>Previous segment, Next segment,</em> and <em>Context key </em>boxes) in order to prevent having duplicate the segments when importing the TM back to Memsource.</p>
+<ol>
+<li>
+<strong>Step:</strong> Export the TM as an <em>XLS file</em> with all the predefined options (that is, with all 3 context options) selected, and add <em>Created by</em> and/or <em>Last Modified by.</em>
+</li>
+<li>
+<strong>Step:</strong> In the c<em>reated_by</em> (or <em>modified_by</em>) column, turn on <a href="https://support.office.com/en-au/article/Filter-data-in-a-range-or-table-01832226-31b5-4568-8806-38c37dcc180e" target="_blank" rel="noopener">filters</a> and select the user whose segments you want to delete.</li>
+<li>
+<strong>Step:</strong> Once the segments are filtered, go to the first column (titled <em>*ID*</em>), and type "|delete" using the | or 'pipe' character at the end of the ID tag with no spaces.</li>
+<li>
+<strong>Step:</strong> Do this for all segments that that user created.</li>
+<li>
+<strong>Step:</strong> Turn off the filter in the <em>created_by</em> column, and check to make sure only the segments you intend to delete have "|delete" written at the end of their ID.</li>
+<li>
+<strong>Step:</strong> Save the excel file and import it to your Memsource Translation Memory.</li>
+</ol>
+<p><img class="img350" title="Marking segments as deleted in XLSX file" src="https://www.dropbox.com/s/ja2jjo9i3zby0zm/TM_editXLSX_delete.png?raw=1" alt="deleting_segments"></p>
+<h2>Editing a Segment's Source or Target</h2>
+<p>When editing segments in Excel, you can add "|update" to their IDs, save the Excel file, and import it back to your Memsource TM. Segments with "|update" will be updated while others will be skipped (if their source, target and context is unchanged).</p>
+<ul>
+<li>
+<strong>Step 1:</strong> Export the TM in XLS format. Be sure to check the <em>Previous segment, Next segment, </em>and<em> Context key </em>boxes.</li>
+<li>
+<strong>Step 2: </strong>Open the file in Excel and edit it as desired.</li>
+<li>
+<strong>Step 3:</strong> In the first column (titled *ID*) add "|update" to the end of the ID for every item you updated. This is similar to the way you deleted segments in the section above.</li>
+<li>
+<strong>Step 4:</strong> Save the Excel file and import it to your Memsource Translation Memory.</li>
+</ul>
+<p><strong>Note: </strong>For values in the <em>created_by</em> and <em>modified_by</em> columns, only Memsource usernames are supported. If the name is changed and does not correspond with a Memsource username, the field will be imported back to the TM as empty.</p>

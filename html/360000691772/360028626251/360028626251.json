@@ -8,20 +8,19 @@
     "id": 360028626251,
     "label_names": [
         "_RWD",
-        "_IMG_ok",
-        "_RWD_K"
+        "_IMG_ok"
     ],
     "locale": "en-us",
     "name": "Kentico Connector",
     "outdated": false,
     "outdated_locales": [],
-    "permission_group_id": 592352,
+    "permission_group_id": 592372,
     "position": 0,
     "promoted": false,
     "section_id": 360000691772,
     "source_locale": "en-us",
     "title": "Kentico Connector",
-    "updated_at": "2019-06-05T16:25:23Z",
+    "updated_at": "2019-08-02T15:10:11Z",
     "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360028626251-Kentico-Connector.json",
     "user_segment_id": null,
     "vote_count": 0,

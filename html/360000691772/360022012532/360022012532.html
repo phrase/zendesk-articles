@@ -165,7 +165,7 @@
 <h2>Setup</h2>
 <p>To set up individual connectors, navigate to <strong>Setup</strong> and scroll down to the <em>Integrations </em>section. Click <strong>Connectors</strong>. After clicking on <strong>New,</strong> you can choose the connector you wish to create. For more detailed information, please see the articles on each individual connector in the chart above.</p>
 <h2>Import New Jobs from Online Repositories</h2>
-<p>Once you set up your desired connectors, you will be able to <a href="https://help.memsource.com/hc/en-us/articles/115003483992-How-to-Import-Content-from-Online-Repositories-to-Memsource" target="_self">import content from online repositories</a> either manually or through <a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation" target="_self">automatic project creation</a>. To do this manually, follow these steps:</p>
+<p>Once you set up your desired connectors, you will be able to <a href="https://help.memsource.com/hc/en-us/articles/115003483992-How-to-Import-Content-from-Online-Repositories-to-Memsource" target="_self">import content from online repositories</a> either manually or through <a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation" target="_self">automated project creation</a>. To do this manually, follow these steps:</p>
 <p><strong>Step 1:</strong> Go to the <em>New Job </em>page.</p>
 <p><strong>Step 2:</strong> Click on <span style="font-weight: bolder;">Add from Online Repository.</span></p>
 <p><strong>Step 3:</strong> Choose the online repository you want to use.</p>
@@ -174,15 +174,199 @@
 <p><img src="https://relianta.sirv.com/Connectors/Connectors-Creating-new-jobs-Online-Repositories.png" alt=""></p>
 <h2>Export Completed Jobs to Online Repositories</h2>
 <p>Once the translation has been completed, you'll be able to export your jobs. For jobs imported from an online repository, there will be a new command available under <strong>Download</strong> called <strong>Export to Online Repository. </strong>Select the files you want to export and click on <strong>Export to Online Repository. </strong>The completed files will be sent back to the online repository from which they were imported and renamed according to the syntax you select during <a style="background-color: #ffffff;" title="Memsource Cloud User Manual" href="https://help.memsource.com/hc/en-us/articles/115003692532-Setup#File_Renaming_1">File Renaming</a>.</p>
-<p>Please note that FTP does not support <em>auto-renaming</em>. If File Renaming is turned off, the exported document will overwrite the source file.</p>
+<p><strong>Important:</strong> FTP does not support <em>auto-renaming</em>. If <em>File Renaming </em>is turned off, the exported document will overwrite the source file.</p>
 <p><img class="img450" src="https://www.dropbox.com/s/3qsy4vbo42ocyun/Connectors_ExportOnlineReposit.png?raw=1"></p>
 <h2>Troubleshooting</h2>
 <p>A connector can sometimes become invalid due to a variety of reasons. If this happens, you'll see a red exclamation mark (<strong>!</strong>) next to the button you used to test your connector's credentials.</p>
 <p><img class="img450" src="https://www.dropbox.com/s/v1l74kyt24zhznq/Connectors_ConnectorError_Dropbox.png?raw=1"></p>
-<p>This exclamation mark can be due to various reasons. The most common reasons are:</p>
+<p>This exclamation mark can be due to a variety of reasons. The most common reasons are:</p>
 <ul>
 <li>The authorization token has expired after a long period of inactivity.</li>
 <li>Users have revoked access.</li>
 <li>Users have changed their credentials for a remote service (Dropbox, Google, etc.)</li>
 </ul>
 <p>If any of these occurs, the connector edit dialog will show a <strong>Re-authenticate</strong> button. Click this re-establish the connection to the online repository in question.</p>
+<p> </p>
+<p>------------------------------------------------------------------------------------------------------------</p>
+<p> </p>
+<h2>Introduction</h2>
+<p>As the name suggests, connectors are used in Memsource to set up connections between your Memsource account and various Content Management Systems (CMSs) and other online repositories.</p>
+<p>The connectors can then be used to:</p>
+<ol>
+<li>Manually import jobs from the connector directly into a project and export the translated files back. You can import jobs by going to <a href="https://help.memsource.com/hc/en-us/articles/360002825692">Create New Job</a> and selecting <strong>Add from Online Repository.  </strong>You can export them again by selecting <a href="https://help.memsource.com/hc/en-us/articles/360002826692">Download Files</a> and clicking on <strong>Export to Online Repository.</strong>
+</li>
+<li>Set up <a href="https://help.memsource.com/hc/en-us/articles/115003460931">Automated Project Creation</a> to automatically import new files from the connectors.</li>
+<li>Set up an <a href="https://help.memsource.com/hc/en-us/articles/115003941812-Automation-Widget">Automation Widget</a> and let Submitters with special user rights upload files from connectors via the <a href="https://help.memsource.com/hc/en-us/articles/115003484392-Client-Portal-in-Memsource">Client Portal</a>.</li>
+</ol>
+<p>Users can set up a connection between Memsource and the content management systems (CMSs) and online repositories shown in the table below.</p>
+<h2>Accessing the Connectors</h2>
+<p>Each of the Memsource connectors is available to everyone with a Team, Ultimate, or Enterprise edition. The chart below shows which connectors come standard with each edition. However, you can purchase any additional connectors in the list.</p>
+<p><strong>Important: </strong>The Team Start edition includes the Box, Dropbox, Google Drive, and Microsoft OneDrive connectors. It is not possible to purchase additional connectors for the Team Start edition.</p>
+<table class="table1">
+<tbody>
+<tr>
+<th>Connector/<br>Edition</th>
+<th>  Team  </th>
+<th>Ultimate</th>
+<th>Enterprise</th>
+</tr>
+<tr>
+<td>
+<a href="https://help.memsource.com/hc/en-us/articles/115003461031-Memsource-Translation-Plugin-for-Adobe-Experience-Manager-AEM-" target="_self">AEM</a>*</td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028583411" target="_self">Bitbucket Cloud</a></td>
+<td> </td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028286132" target="_self">Bitbucket Server</a></td>
+<td> </td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028429632" target="_self">Box</a></td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028484891" target="_self">Confluence</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360026241531" target="_self">Contentful</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360025513652" target="_self">Contentstack</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360022874672" target="_self">Dropbox</a></td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360003166391-Drupal-Plugin" target="_self">Drupal</a></td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028325612" target="_self">FTP</a></td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git</a></td>
+<td> </td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360024186011" target="_self">GitHub</a></td>
+<td> </td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360004326372" target="_self">GitLab</a></td>
+<td> </td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360022071332" target="_self">Google Drive</a></td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028286712" target="_self">Help Scout</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360025881752" target="_self">HubSpot</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360026396151?flash_digest=348f596df67e1e8ea67b111744a4a44657709880" target="_self">Joomla</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028626251?flash_digest=0ec4197f3070e5c4cb4fb5d3c177f93e2693e015" target="_self">Kentico</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360023241191" target="_self">Magento 2</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028776531" target="_self">Marketo</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028584731" target="_self">Microsoft Azure</a></td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028285452" target="_self">Microsoft OneDrive</a></td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028583191" target="_self">Microsoft SharePoint Online</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028855511" target="_self">Salesforce Knowledge</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028593492" target="_self">SFTP</a></td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028539892" target="_self">Sitecore</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td>
+<a href="https://help.memsource.com/hc/en-us/articles/360003466931" target="_self">TYPO3</a>*</td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360001156791" target="_self">Wordpress</a></td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+<td class="wysiwyg-text-align-center">X</td>
+</tr>
+<tr>
+<td><a href="https://help.memsource.com/hc/en-us/articles/360028844731" target="_self">Zendesk</a></td>
+<td class="wysiwyg-text-align-center" colspan="3">$    </td>
+</tr>
+</tbody>
+</table>
+<p>* The integration with Adobe Experience Manager (AEM) and Typo3 are via plugins, not connectors.</p>
+<p>$ Available at an additional cost.</p>
+<h2>Setup</h2>
+<p>To set up individual connectors, navigate to <strong>Setup</strong> and scroll down to the <em>Integrations </em>section. Click <strong>Connectors</strong>. After clicking on <strong>New,</strong> you can choose the connector you wish to create. For more detailed information, please see the articles on each individual connector in the chart above.</p>
+<h2>Troubleshooting</h2>
+<p>When your connector is working, you'll see a black checkmark in the <em>Status </em>column in your list of connectors. However, a connector can sometimes become invalid for a variety of reasons. If this happens, you'll see a red exclamation mark (<strong>!</strong>) instead. Hover your mouse over the error icon to see more details. The most common reasons you might experience an error are:</p>
+<ul>
+<li>The authorization token has expired after a long period of inactivity.</li>
+<li>Users have revoked access.</li>
+<li>Users have changed their credentials for a remote service (Dropbox, Google, etc.)</li>
+</ul>
+<p>If any of these occurs, the connector edit dialog will show a <strong>Re-authenticate</strong> button. Click this button to re-establish the connection to the online repository in question.</p>
