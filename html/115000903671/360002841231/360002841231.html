@@ -2,13 +2,13 @@
 <p>The following submenus are available (depending on your Memsource Edition):</p>
 <ul>
 <li>
-<strong>Pre-translate where Empty... </strong>This will be discussed <a href="https://help.memsource.com/hc/en-us/articles/360002841231#Pre-translate_where_Empty_1">below</a>.</li>
+<strong>Pre-translate where Empty... </strong>See the chapter <a href="https://help.memsource.com/hc/en-us/articles/360002841231#Pre-translate_where_Empty_1">below</a>.</li>
 <li>
 <strong>Human Translate where Empty... </strong>See the <a title="Human Translation Engines" href="https://help.memsource.com/hc/en-us/articles/115003937811">Human Translation Engines</a> page for more details.</li>
 <li>
 <strong>Copy Source to Target where Empty</strong> This will copy source segments into target segments as long as the target segments are empty.</li>
 <li>
-<strong>Pseudo-translate where Empty...</strong> This will be discussed <a href="https://help.memsource.com/hc/en-us/articles/360002841231#Pseudo-translate_1">below</a>.<strong><br></strong>
+<strong>Pseudo-translate where Empty...</strong> See the chapter <a href="https://help.memsource.com/hc/en-us/articles/360002841231#Pseudo-translate_1">below</a>.<strong><br></strong>
 </li>
 <li>
 <strong>Delete All Translations</strong> This will clear all target segments in the selected files. Locked segments will not be cleared. Please note that this action <em>cannot be undone</em>.</li>
@@ -18,7 +18,7 @@
 <h3><span id="Pre-translate_where_Empty" class="mw-headline">Pre-translate where Empty</span></h3>
 <p><strong>Pre-translate where Empty</strong> can be set on 4 different pages in Memsource and can later be used for <a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation" target="_self">automatic pre-translation</a> when a job is created. With the exception of the fourth option, each section also includes special settings for auto-propagating repetitions. The four places it can be found are:</p>
 <ol>
-<li>In the general <strong>Setup</strong> of Memsource for Admins and Project Managers in the <em>Project Settings </em>section.</li>
+<li>In the general <strong>Setup</strong> of Memsource for Administrators and Project Managers in the <em>Project Settings </em>section.</li>
 <li>In the <strong>Project settings</strong> when creating a new project or editing an existing one.</li>
 <li>In the <strong>Project Templates settings.</strong>
 </li>
@@ -26,18 +26,18 @@
 </ol>
 <p>The following options are available:<br> <strong>Translation Memory</strong></p>
 <ul>
-<li>Pre-translate from a translation memory (if a TM is assigned to a project).</li>
+<li>Pre-translate from translation memory (if a TM is assigned to a project)</li>
 <li>Pre-translation threshold % (To use this, set a minimum match level. Any matches lower than this number will not be inserted into the job's target.)</li>
 </ul>
 <p><strong>Machine Translation</strong></p>
 <ul>
-<li>Pre-translate from machine translation (if an MT is assigned to a project).</li>
-<li>Display quality-estimated machine translation matches in Memsource Editor.</li>
+<li>Pre-translate from machine translation (if an MT engine is assigned to a project)</li>
+<li>Display quality-estimated machine translation matches in Memsource Editors (Beta)</li>
 </ul>
 <p><strong>Non-Translatables</strong></p>
 <ul>
-<li>Pre-translate non-translatables.</li>
-<li>Display non-translatables in Memsource Editor.</li>
+<li>Pre-translate non-translatables</li>
+<li>Display non-translatables scores in Memsource Editor</li>
 </ul>
 <p><strong>Repetitions</strong> (This feature is available only in <strong>Setup,</strong> in the Project's settings, and in <em>Project Templates.</em>)<strong><br></strong></p>
 <ul>
@@ -49,13 +49,13 @@
 <li>100% translation memory matches</li>
 <li>100% non-translatable matches</li>
 <li>100% machine translation matches (Beta)</li>
-<li>Repetitions (This is available only in <strong>Setup,</strong> in the Project's settings and in <em>Project Templates</em>. It is applicable only for auto-propagated repetitions in the Editors.)</li>
+<li>Repetitions (This is available only in <strong>Setup</strong>, in the Project's settings and in <em>Project Templates</em>. It is applicable only for auto-propagated repetitions in the Editors.)</li>
 </ul>
 <p><strong>Pre-translate &amp; set job to completed</strong></p>
 <ul>
-<li>Pre-translate on job creation.</li>
+<li>Pre-translate on job creation</li>
 <li>Set job to completed once pre-translated (Using this feature, the job is set to <em>Completed</em> even if not all segments are translated and confirmed.)</li>
-<li>Set project to completed once all jobs pre-translated.</li>
+<li>Set project to completed once all jobs pre-translated</li>
 </ul>
 <p><strong>Lock</strong></p>
 <ul>
@@ -64,7 +64,7 @@
 <li>100% non-translatable matches</li>
 <li>100% machine translation matches (Beta)</li>
 </ul>
-<p><img class="img350" src="https://help.memsource.com/hc/article_attachments/360012583692/pre-translate.png" alt="pre-translate.png"></p>
+<p><img class="img350" title="Pre-translate settings" src="https://www.dropbox.com/s/oooom1s3dpgeuny/PR_pre-translate_window.png?raw=1" alt="pre-translate.png"></p>
 <p><strong><span id="Translation_Memory" class="mw-headline">Translation Memory</span></strong></p>
 <ul>
 <li>
@@ -98,11 +98,12 @@
 <p><strong><span id="Set_Job_to_Completed" class="mw-headline">Pre-translate &amp; set job to completed</span></strong></p>
 <ul>
 <li>
-<strong>Pre-translate on job creation</strong> (only available in the general <strong>Setup</strong> and <em>Project settings</em>)</li>
-<li><strong>Set job to completed once pre-translated</strong></li>
+<strong>Pre-translate on job creation</strong> (This is only available in the general <strong>Setup</strong> and in the project's <em>Pre-translation</em> settings.)</li>
+<li>
+<strong>Set job to completed once pre-translated </strong>(The job is set to completed even if not all segments are translated and confirmed.)</li>
+<li><strong>Set job to completed once pre-translated and all segments are confirmed</strong></li>
 <li><strong>Set project to completed once all jobs are pre-translated</strong></li>
 </ul>
-<p>This feature is for Machine Translation only. It can be used for projects created with the Automation widget. Your client submits files which will be automatically pre-translated on your MT Engine (including NT results if enabled) and sent back to your client.</p>
 <p><strong><span id="Lock" class="mw-headline">Lock</span></strong></p>
 <p><strong>Note:</strong> Locking segments during pre-translation can be only done from a PM's account.</p>
 <ul>
@@ -113,7 +114,7 @@
 <strong>Lock 100% machine translation matches (Beta) </strong>when using the <a href="https://help.memsource.com/hc/en-us/articles/360016450971" rel="noopener">MTQE</a> feature.<strong><br></strong>
 </li>
 </ul>
-<p>Project managers have a few more options in the pre-translation settings than Linguists. Even if a Linguist runs a pre-translation from their account, the settings of the Project Manager are applied when it comes to locking.</p>
+<p>Project Managers have a few more options in the pre-translation settings than Linguists. Even if a Linguist runs a pre-translation from their account, the settings of the Project Manager are applied when it comes to locking.</p>
 <p>In order to unlock segments, the Linguist needs to contact the Project Manager and ask to have the segments unlocked. It is possible that the segments are locked on purpose and should not be translated by the Linguist.</p>
 <h3><span id="Pre-translation_Best_Practice" class="mw-headline">Pre-translation Best Practice</span></h3>
 <p>It may not be necessary or even advisable to <a class="external text" href="https://help.memsource.com/hc/en-us/articles/115003483532-Should-I-always-pre-translate-a-file-before-a-translator-starts-translating-it-" rel="nofollow">always pre-translate files before translation</a>. Normally, the Memsource Editor will take care of the pre-translation in a way that can be more efficient.</p>
@@ -127,12 +128,12 @@
 <p>This feature makes it possible to pseudo-translate a file using the following options:</p>
 <ul>
 <li>
-<strong>Pseudo-translate using</strong> - A selected character wil be added into original text ('Test' will be 'T$e$s$t$')</li>
+<strong>Pseudo-translate using</strong> - A selected character wil be added into original text (For example, 'Test' will be 'T$e$s$t$')</li>
 <li>
-<strong>Add to target segment start</strong> - For example, 'aaa' ('Test' will be 'aaaT$e$s$t$')</li>
+<strong>Add to target segment start</strong> - For example, 'aaa' ('Test' will then be 'aaaT$e$s$t$')</li>
 <li>
-<strong>Add to target segment end</strong> - For example, 'bbb' ('Test' will be 'T$e$s$t$bbb')</li>
+<strong>Add to target segment end</strong> - For example, 'bbb' ('Test' will then be 'T$e$s$t$bbb')</li>
 <li>
 <strong>Target segment length (%)</strong> - This is the length of the target including the pseudo-translate character (at 100% 'Test' will be 'T$e$'), but excluding the characters added at the start and at the end ('aaaT$e$bbb').</li>
 </ul>
-<p>Pseudo-translate is available from the Team edition up.</p>
+<p>Pseudo-translate is available in the Team edition and higher.</p>

@@ -1,0 +1,30 @@
+{
+    "author_id": 116602510771,
+    "comments_disabled": false,
+    "created_at": "2017-12-15T15:31:37Z",
+    "draft": false,
+    "edited_at": "2019-07-16T23:34:06Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003460811-Save-Segments-to-a-Translation-Memory",
+    "id": 115003460811,
+    "label_names": [
+        "TM_family",
+        "_RWD",
+        "_NoIMG",
+        "_RWD_K"
+    ],
+    "locale": "en-us",
+    "name": "Save Segments to a Translation Memory",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 12,
+    "promoted": false,
+    "section_id": 360002971060,
+    "source_locale": "en-us",
+    "title": "Save Segments to a Translation Memory",
+    "updated_at": "2019-10-10T12:16:27Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003460811-Save-Segments-to-a-Translation-Memory.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

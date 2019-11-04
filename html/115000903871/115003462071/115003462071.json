@@ -3,12 +3,11 @@
     "comments_disabled": false,
     "created_at": "2017-12-15T15:45:25Z",
     "draft": false,
-    "edited_at": "2019-05-14T11:41:01Z",
+    "edited_at": "2019-08-02T00:00:32Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003462071-Joining-and-Splitting-Segments",
     "id": 115003462071,
     "label_names": [
         "segmentation",
-        "_RWD",
         "_addIMG"
     ],
     "locale": "en-us",
@@ -21,7 +20,7 @@
     "section_id": 115000903871,
     "source_locale": "en-us",
     "title": "Joining and Splitting Segments",
-    "updated_at": "2019-05-14T11:41:01Z",
+    "updated_at": "2019-08-02T00:00:32Z",
     "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003462071-Joining-and-Splitting-Segments.json",
     "user_segment_id": null,
     "vote_count": 1,

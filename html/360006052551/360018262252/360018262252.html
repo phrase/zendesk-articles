@@ -1,0 +1,40 @@
+<p>If your XLS or XLSX file is multilingual plain text, you can import it as several bilingual jobs to Memsource in one go.</p>
+<p>To do this, map the corresponding target language columns in the <strong>File Import Settings.</strong> This will create separate jobs for each language pair, while in the background the file will remain as one. And when you download the completed file after translation, you will have a single Excel file containing all languages.</p>
+<p>A few things to note about this process:</p>
+<ol>
+<li>Translating multiple sheets in Multilingual Excel is not supported. Only the first sheet can be used for import and export of translatable text.</li>
+<li>Excel files are converted to XML 2003 Spreadsheets when imported—most of the Excel formatting, graphs and images <em>will be lost</em>.</li>
+<li>Some files cannot be converted to multilingual files due to compatibility issues between various versions of Microsoft Excel.</li>
+</ol>
+<h3>File Import Settings:</h3>
+<p>1. First, be sure to select <strong>Multilingual MS Excel</strong> in the <strong>File Type</strong> field. (This is bottom of the<em> File Import Settings</em> page). If you fail to do this, the file will be imported as a regular Excel. <br><img class="img250" src="https://help.memsource.com/hc/article_attachments/360013846092/fileType_multiExcel.png" alt="fileType_multiExcel.png"></p>
+<p>2. Then you can then open the <em>Multilingual MS Excel</em> section and select the following options:</p>
+<ul>
+<li>
+<strong>Use HTML subfilter:</strong> If your XLSX file contains any HTML tags, it can be imported with the HTML Subfilter option. In this case, it is possible to set additional settings in the HTML. (For example, a break tag (&lt;br/&gt;) would create a new segment.) Please note that paragraph tags (such as &lt;p&gt;) will create new segments even if <strong>Segment Multilingual XLS</strong> is unselected. It is important that the target (unless it is empty) has the same HTML structure as the source. Otherwise, it can result in different segmentation of the source and target languages and can cause trouble. (For example, target paragraphs might be replaced with source paragraphs.)</li>
+<li>
+<strong>Segment multilingual XLS:</strong> It is safer to have one cell as one segment, but you can choose to have text segmented by a general segmentation rule. (Please note that the above-mentioned HTML subfilter is an exception.)</li>
+<li>
+<strong>Source (column):</strong> Here, you can use lowercase or capital letters (a or A). For more columns, enter letters separated by commas with no spaces (for example A,D,G).</li>
+<li>
+<strong>Target (column):</strong> There is one column for each target language. For more columns, enter letters separated by commas with no spaces (for example B,E,H).</li>
+<li>
+<strong>Context key (column):</strong> Here, you can specify a context key that will be saved with the segment to the Translation Memory. This is available by going to <strong>File Import Settings, </strong>selecting <strong>TM Match Context and Optimization</strong> and ensuring that the <em>Context Type</em> is set to <strong>Segment key.</strong>
+</li>
+<li>
+<strong>Context note (column):</strong> It is possible to have more columns as a context note (B,C). The notes will be displayed on separate lines.</li>
+<li>
+<strong>Maximum length (column):</strong> This sets the maximum length of the translation. For more columns, enter letters separated by commas, with no spaces (for example I,J,K).</li>
+<li>
+<strong>Convert to Memsource tags:</strong> Use <a title="Regexp" href="https://wiki.memsource.com/wiki/Regexp">Regexp</a> to convert non-translatable text into Memsource tags.</li>
+</ul>
+<p><img class="img250" src="https://help.memsource.com/hc/article_attachments/360013849492/multiExcel_settings.png" alt="multiExcel_settings.png"></p>
+<h3>XLSX File example</h3>
+<p>Below, you'll see an Excel file with two context notes and maximum target length:</p>
+<p><img class="img350" src="https://help.memsource.com/hc/article_attachments/360013849752/multiExcel_example.png" alt="multiExcel_example.png"></p>
+<h3>Jobs in Project</h3>
+<p>Multilingual jobs have a slightly different icon then general XLSX jobs so that they are easily distinguished from monolingual jobs.</p>
+<p>If the file was imported as a multilingual file into several target languages, the <em>Completed</em> file will be always composed of all the target languages.</p>
+<p><img class="img350" src="https://help.memsource.com/hc/article_attachments/360013849832/multiExcel_jobs_Icons.png" alt="multiExcel_jobs_Icons.png"></p>
+<h2>In-context Preview Limit</h2>
+<p>The In-context Preview in the Editor can only be generated for a maximum of 200 columns in the imported file. A file with more than 200 columns will have the following warning displayed in the project: <em>"In-context preview was not generated."</em> and the in-context preview will not be available in the Editor. This limit doesn't apply to the hidden columns—if the original file has more then 200 columns but they are <em>"hidden"</em>, then the preview will be created.</p>

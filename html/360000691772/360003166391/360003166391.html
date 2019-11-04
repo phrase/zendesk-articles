@@ -7,14 +7,18 @@
 </ul>
 <p>Older versions of Drupal are not supported.</p>
 <h2>Memsource Translation Plugin for Drupal</h2>
+<div class="callout callout--danger callout--dashed">
+<h4 class="callout__title">Important:</h4>
+The Memsource Translation Plugin for Drupal will be disabled in June 2020. It will no longer be possible to create a new Drupal plugin configuration from November 19th, 2019. We recommend instead that all current users of this plugin use the highly configurable Drupal TMGMT module (see the instructions below).</div>
 <p>The Memsource Translation Plugin for Drupal 8 and the <a title="Connectors" href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors" target="_self">Connector</a> feature allow content managers to import Drupal posts, pages, and any text set as "translatable" in the Drupal 8 settings into Memsource for translation. The content can be imported manually via the <a title="Connectors" href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors#Creating_New_Jobs_from_Online_Repositories" target="_self">Add from Online Repository</a> button or automatically using the <a title="Automated Project Creation" href="https://help.memsource.com/hc/en-us/articles/115003460931-How-to-setup-and-use-the-Automated-Project-Creation" target="_self">Automated Project Creation</a> feature.</p>
 <h3><span id="Setting_languages_and_translatable_content_types_on_Drupal_site" class="mw-headline">Setting Languages and Translatable Content Types</span></h3>
 <ol>
 <li>Go to your Drupal server and select <strong>Admin, Configuration,</strong> and <strong>Regional and Language. </strong>Select the <em>Languages </em>page.</li>
-<li>Add all of the languages you want to use, and set one of them as <strong>Default</strong> (this is equivalent to the source language in Memsource and will be probably the same as the main language of your Drupal site).</li>
+<li>Add all of the languages* you want to use, and set one of them as <strong>Default</strong> (this is equivalent to the source language in Memsource and will be probably the same as the main language of your Drupal site).</li>
 <li>Go to <strong>Admin, Configuration, </strong>and<strong> Regional and Language.</strong> Select the<strong> </strong><em>Content language and translation </em>page.</li>
 <li>Select the translatable <strong>content types</strong>. Memsource currently supports <em>Content</em> and its subtypes (<em>Article</em> and <em>Basic page</em>).</li>
 </ol>
+<p>* Please note that in Drupal 7, you will need to select the language's code (fr_fr) instead of the language's name (French, France).</p>
 <h3>Adding the Memsource Plugin to the Drupal site</h3>
 <ol>
 <li>Go to the <strong>Downloads</strong> section on <a href="https://www.drupal.org/project/memsource_connector" rel="nofollow">https://www.drupal.org/project/memsource_connector</a> and copy the link address of the version you would like to install.</li>

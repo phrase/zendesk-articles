@@ -3,16 +3,16 @@
 <p>Memsource supports the following Sitecore field types:</p>
 <ul>
 <li>Single-Line Text</li>
-<li>Rich text</li>
+<li>Rich Text</li>
 <li>Multi-Line Text</li>
 <li>HTML</li>
-<li>text</li>
+<li>Text</li>
 <li>Name Value List</li>
 <li>General Link</li>
 <li>Image</li>
-<li>Checklist (referenced items are included in the job if not translated)</li>
-<li>Multilist (referenced items are included in the job if not translated)</li>
-<li>Treelist (referenced items are included in the job if not translated)</li>
+<li>Checklist (Referenced items are included in the job if not translated.)</li>
+<li>Multilist (Referenced items are included in the job if not translated.)</li>
+<li>Treelist (Referenced items are included in the job if not translated.)</li>
 </ul>
 <p><strong>Note:</strong> The <em>Default Language</em> set in your Sitecore server has to be the same language as the source language in your Memsource account.</p>
 <h2>Set up the Connector in Sitecore</h2>
@@ -36,4 +36,15 @@
 <p>In Memsource, navigate to Setup and scroll down to the <em>Integrations </em>section. Click on <strong>Connectors. </strong>After clicking on <strong>New,</strong> you can choose the connector you wish to create. Give it a name and change the Type to <em>Sitecore.</em> </p>
 <p><img src="https://help.memsource.com/hc/article_attachments/360029518371/mceclip0.png" alt="mceclip0.png"></p>
 <p>In the <em>Sitecore URL </em>field, enter the URL you see at the top of the page when you log into Sitecore. Enter your Sitecore user name and Sitecore password in the <em>User name </em>and <em>Password </em>fields, respectively. Then, change the source language. Remember that this has to be the same as the <em>Default language </em>in your Sitecore account.</p>
-<p>Click on <strong>Test connection. </strong>If you've entered your information correctly, you will see a small check mark appear next to the <strong>Test connection </strong>button.<strong> </strong>Then, click <strong>Save.</strong> </p>
+<p>Click on <strong>Test connection. </strong>If you've entered your information correctly, you will see a small checkmark appear next to the <strong>Test connection </strong>button.<strong> </strong>Then, click <strong>Save.</strong></p>
+<p>When using the Sitecore connector, if you are also setting up Automatic Project Creation, please note whether or not the main page you're translating has sub-items. If it does have sub-items, and changes are made to those sub-items, a new project will not automatically be created. Instead, you will have to translate those items manually. </p>
+<h2>Access Roles and Permissions</h2>
+<p>When using the Sitecore connector, there is no need to have specific roles. Instead, it should be enough to do the following:</p>
+<ul>
+<li>Add <em>Read</em> and <em>Write</em> access rights to items that you want to translate. (See Sitecore's information on <a href="https://doc.sitecore.com/developers/91/platform-administration-and-architecture/en/the-access-rights.html" target="_self">access rights</a> for more information.)</li>
+<li>Add <em>Read</em> access right to items that are parents of items that you want to translate.</li>
+<li>Add <em>Read </em>access right to languages items using <code>/System/Languages/**</code>
+</li>
+<li>Add <em>Read</em> access right to workflow items using <code>/System/Workflows/**</code>
+</li>
+</ul>

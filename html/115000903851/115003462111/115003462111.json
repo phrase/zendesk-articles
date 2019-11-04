@@ -3,8 +3,8 @@
     "comments_disabled": false,
     "created_at": "2017-12-15T15:45:30Z",
     "draft": false,
-    "edited_at": "2019-05-14T11:31:11Z",
-    "html_url": "https://help.memsource.com/hc/en-us/articles/115003462111-Working-with-Memsource-Tags",
+    "edited_at": "2019-08-02T01:20:05Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003462111-Tags-in-Memsource",
     "id": 115003462111,
     "label_names": [
         "tags",
@@ -17,7 +17,7 @@
         "_addIMG"
     ],
     "locale": "en-us",
-    "name": "Working with Memsource Tags",
+    "name": "Tags in Memsource",
     "outdated": false,
     "outdated_locales": [],
     "permission_group_id": 592372,
@@ -25,9 +25,9 @@
     "promoted": false,
     "section_id": 115000903851,
     "source_locale": "en-us",
-    "title": "Working with Memsource Tags",
-    "updated_at": "2019-05-14T11:31:11Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003462111-Working-with-Memsource-Tags.json",
+    "title": "Tags in Memsource",
+    "updated_at": "2019-08-02T01:20:05Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003462111-Tags-in-Memsource.json",
     "user_segment_id": null,
     "vote_count": 0,
     "vote_sum": 0

@@ -1,0 +1,32 @@
+{
+    "author_id": 116602510771,
+    "comments_disabled": false,
+    "created_at": "2017-12-28T18:37:23Z",
+    "draft": false,
+    "edited_at": "2019-10-15T14:09:14Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003692212-Translation-Memories",
+    "id": 115003692212,
+    "label_names": [
+        "TM",
+        "transMemory",
+        "TM_family",
+        "_RWD",
+        "_IMG_ok",
+        "_RWD_K"
+    ],
+    "locale": "en-us",
+    "name": "Translation Memories",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 0,
+    "promoted": false,
+    "section_id": 360002971060,
+    "source_locale": "en-us",
+    "title": "Translation Memories",
+    "updated_at": "2019-10-15T14:09:14Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003692212-Translation-Memories.json",
+    "user_segment_id": null,
+    "vote_count": 1,
+    "vote_sum": 1
+}

@@ -1,0 +1,53 @@
+<p>PO gettext is an internationalization and localization (i18n) system commonly used for writing multilingual programs on Unix-like computer operating systems.</p>
+<p>The PO file filter by default imports files with the following extension:</p>
+<ul>
+<li>.po</li>
+</ul>
+<h2><span id="File_Import_Settings" class="mw-headline">File Import Settings</span></h2>
+<ul>
+<li>Export multi-line strings (This option is selected by default and improves the handling of PO files with \n tags.)</li>
+<li>Convert to Memsource tags (This uses regular expressions for converting specific text to tags—see our <a title="Regexp" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp">Regexp</a> manual for more information.)</li>
+<li>Use HTML subfilter (See <a href="https://help.memsource.com/hc/en-us/articles/360004658671">HTML File</a> for available customization.)</li>
+<li>Segment PO (These segmentation rules will be used to segment the text in the source and target elements).</li>
+</ul>
+<p><img class="img450" src="https://www.dropbox.com/s/89v0wlmcnw1w2dw/PO_import.png?raw=1"></p>
+<h2>File Format</h2>
+<p>The valid PO gettext file is bilingual, where 'msgid' contains source text and 'msgstr' contains target text. You can find more details in this <a class="external text" href="http://pology.nedohodnik.net/doc/user/en_US/ch-poformat.html" rel="nofollow noopener">PO user guide</a>.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>#: src/name.c:36
+msgid "My name is %s.\n"
+msgstr "Je m'appelle %s.\n"</pre>
+</div>
+<h3>Plural Form</h3>
+<p>PO Gettext allows the localization of <a href="https://help.memsource.com/hc/en-us/articles/360031122932-Plural-Forms-in-Memsource4" target="_self">Plural Forms</a>* which are supported in Memsource.</p>
+<ul>
+<li>The original file has to contain <em>msgid_plural</em> string as well as the singular <em>msgid.</em>
+</li>
+<li>The plural rules specification (the formula) defined in the file's header will be used to generate plural forms. If there is no such specification, the standard <a href="http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html" rel="noopener">Unicode CLDR Plural Rules</a> based on the target languages will be used for the job import.</li>
+<li>The file should be imported with the <a href="https://help.memsource.com/hc/en-us/articles/360017460212">Segment Key Context</a> to get better leverage from the translation memory.</li>
+<li>The target locale and the plural form of the segment will be used as the segment's Context Key and saved to the TM.</li>
+<li>The string <em>msgctxt—</em>if present in the original file—will be added to the segment's Context Key and saved to the TM. It will also be displayed in the Editor's Context Note window.</li>
+</ul>
+<p> * PO GNU Gettext only supports plural forms with integer numbers. A decimal number form such as "1.5 points" is not supported by PO files and therefore cannot be offered by Memsource.</p>
+<p>1. Example of an <strong>unspecified plural</strong> in PO Gettext file.<br>If this file is imported to German and Arabic, the German target file will have only 2 plural forms while the Arabic target file will have 6 plural forms. The correct Plural Rule will be automatically used for each target language, and the job will be imported with a language-specific number of plural forms.</p>
+<pre>msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#:ui/gui/409
+msgctxt "GUI|Installation"
+msgid "%d _storage device selected"
+msgid_plural "%d _storage devices selected" </pre>
+<p>2. Example of file with the <strong>specified Plural Rule</strong> for the Czech language in the header. <br>This file will always have 3 plural forms even when imported to German or Arabic.</p>
+<pre>msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n&gt;=2 &amp;&amp; n&lt;=4 ? 1 : 2);\n"<br>"Language: cs\n"<br>
+#:ui/gui/409
+msgctxt "GUI|Installation"
+msgid "%d _storage device selected"
+msgid_plural "%d _storage devices selected" <br>msgstr[0] ""<br>msgstr[1] ""<br>msgstr[2] "" </pre>

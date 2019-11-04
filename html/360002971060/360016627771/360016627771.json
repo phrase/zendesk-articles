@@ -1,0 +1,30 @@
+{
+    "author_id": 116923428752,
+    "comments_disabled": false,
+    "created_at": "2018-10-02T10:53:00Z",
+    "draft": false,
+    "edited_at": "2019-03-08T15:31:45Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/360016627771-MTQE-Supported-Language-Pairs",
+    "id": 360016627771,
+    "label_names": [
+        "MTQE",
+        "MTQE Supported Language Pairs",
+        "_RWD",
+        "_NoIMG"
+    ],
+    "locale": "en-us",
+    "name": "MTQE Supported Language Pairs",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 21,
+    "promoted": false,
+    "section_id": 360002971060,
+    "source_locale": "en-us",
+    "title": "MTQE Supported Language Pairs",
+    "updated_at": "2019-10-10T12:16:27Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360016627771-MTQE-Supported-Language-Pairs.json",
+    "user_segment_id": null,
+    "vote_count": 1,
+    "vote_sum": 1
+}

@@ -3,13 +3,13 @@
     "comments_disabled": false,
     "created_at": "2017-12-15T15:46:07Z",
     "draft": false,
-    "edited_at": "2019-06-18T17:40:03Z",
+    "edited_at": "2019-10-31T14:15:40Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003484932-In-Context-Preview",
     "id": 115003484932,
     "label_names": [
         "preview",
-        "_RWD",
-        "_addIMG"
+        "_addIMG",
+        "4_SR"
     ],
     "locale": "en-us",
     "name": "In-Context Preview",
@@ -21,7 +21,7 @@
     "section_id": 115000903851,
     "source_locale": "en-us",
     "title": "In-Context Preview",
-    "updated_at": "2019-06-18T17:40:03Z",
+    "updated_at": "2019-10-31T14:15:40Z",
     "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003484932-In-Context-Preview.json",
     "user_segment_id": null,
     "vote_count": 0,

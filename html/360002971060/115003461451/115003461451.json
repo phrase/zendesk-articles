@@ -1,0 +1,30 @@
+{
+    "author_id": 116602510771,
+    "comments_disabled": false,
+    "created_at": "2017-12-15T15:35:23Z",
+    "draft": false,
+    "edited_at": "2019-07-13T01:35:09Z",
+    "html_url": "https://help.memsource.com/hc/en-us/articles/115003461451-Edit-Translation-Memory-Content-Externally",
+    "id": 115003461451,
+    "label_names": [
+        "TM_family",
+        "_RWD",
+        "_IMG_ok",
+        "_RWD_K"
+    ],
+    "locale": "en-us",
+    "name": "Edit Translation Memory Content Externally",
+    "outdated": false,
+    "outdated_locales": [],
+    "permission_group_id": 592372,
+    "position": 13,
+    "promoted": false,
+    "section_id": 360002971060,
+    "source_locale": "en-us",
+    "title": "Edit Translation Memory Content Externally",
+    "updated_at": "2019-10-10T12:16:27Z",
+    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003461451-Edit-Translation-Memory-Content-Externally.json",
+    "user_segment_id": null,
+    "vote_count": 0,
+    "vote_sum": 0
+}

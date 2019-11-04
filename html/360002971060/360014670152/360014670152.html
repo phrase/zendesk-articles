@@ -1,0 +1,88 @@
+<p>A translation unit (TU) is a source and a target segment saved together into a translation memory. Whenever a segment/TU is saved, the pre-defined attributes are automatically added to the source and/or target of the TU in the translation memory.</p>
+<h2>Memsource TU Metadata</h2>
+<p>Here is a list of attributes with o note, it the attribute is saved with the target segment or source segment:</p>
+<ul>
+<li>
+<strong>Created</strong> (date/time) - target segment</li>
+<li>
+<strong>Created by</strong> - target segment. Only Memsource Usernames are supported.</li>
+<li>
+<strong>Last modified</strong> (date/time) - target segment</li>
+<li>
+<strong>Last modified by</strong> - target segment. Only Memsource Usernames are supported.</li>
+<li>
+<strong>Project</strong> - target segment</li>
+<li>
+<strong>Client</strong> - target segment. This is the Client set in the project when the translation was created.</li>
+<li>
+<strong>Domain</strong> - target segment. This is the Domain set in the project when the translation was created.</li>
+<li>
+<strong>Subdomain</strong> - target segment. This is the Subdomain set in the project when the translation was created.</li>
+<li>
+<strong>File</strong> - target segments. This is the name of the file where the translation was created.</li>
+<li>
+<strong>Context</strong> - source segment. This is the<em> Previous segment, Next segment</em> or <em>Segment key, </em>depending on the File Import Settings when the job was created.<em><br></em>
+</li>
+</ul>
+<p><strong>Note:</strong> The attributes of the translation memory (Domain, Client, Business Unit, etc.) have no effect on the translation unit metadata.</p>
+<h2>Excel Format</h2>
+<p>For <a href="https://help.memsource.com/hc/en-us/articles/360011103391-Import-content-to-Translation-Memory">importing</a> and <a href="https://help.memsource.com/hc/en-us/articles/360014863731-Export-Translation-memory">exporting</a> the content of a translation memory using the <strong>Excel</strong> format, the following metadata is supported: </p>
+<ul>
+<li>
+<strong>ID </strong>- Memsource internal ID</li>
+<li>
+<strong>{source language code}</strong> - for example 'en' or 'en_us'</li>
+<li>
+<strong>prev</strong> - text of the previous segment</li>
+<li>
+<strong>next</strong> - text of the following segment</li>
+<li>
+<strong>seg_key</strong> - text of the context key</li>
+<li>
+<strong>mdata</strong> - metadata of Memsource tags</li>
+<li>
+<strong>{target language code}</strong> - en or en_us</li>
+<li>
+<strong>created_by</strong> - Memsource Username</li>
+<li>
+<strong>created_at</strong> - in format 2017.07.07 14:39:52,000</li>
+<li>
+<strong>modified_by</strong> - Memsource Username</li>
+<li>
+<strong>modified_at</strong> - in format 2017.07.07 14:39:52,000</li>
+<li>
+<strong>client</strong> - Memsource ID (number)</li>
+<li>
+<strong>project</strong> - Memsource ID (number)</li>
+<li>
+<strong>domain</strong> - Memsource ID (number)</li>
+<li>
+<strong>subdomain</strong> - Memsource ID (number)</li>
+<li>
+<strong>note</strong> - text (external use only, not visible in Memsource)</li>
+<li>
+<strong>reviewed</strong> - true/false (external use only, not visible in Memsource) </li>
+<li>
+<strong>aligned</strong> - true/false (external use only, not visible in Memsource) </li>
+<li>
+<strong>filename</strong> - the name of the original file (test.docx)</li>
+<li>
+<strong>mdata</strong> - metadata of Memsource tags </li>
+</ul>
+<p><strong>Note:</strong> The order of the columns reflects the attributes of the source segment and the attributes of the target segment.</p>
+<h2>TMX Format</h2>
+<p>For <a href="https://help.memsource.com/hc/en-us/articles/360011103391-Import-content-to-Translation-Memory">importing</a> and <a href="https://help.memsource.com/hc/en-us/articles/360014863731-Export-Translation-memory">exporting</a> the content of a translation memory using the <strong>TMX</strong> format, the following metadata is supported: </p>
+<p><strong>Properties in the source TUV element:</strong></p>
+<pre>&lt;prop type="context_prev"&gt;Text of the previous segment&lt;/prop&gt;
+&lt;prop type="context_next"&gt;Text of the following segment&lt;/prop&gt;<br>&lt;prop type="x-context_seg_key"&gt;Context Key&lt;/prop&gt;*
+</pre>
+<p>*For context based on a segment key</p>
+<p><strong>Properties in target TUV element:</strong></p>
+<pre>&lt;prop type="created_at"&gt;1322746823589&lt;/prop&gt;
+&lt;prop type="created_by"&gt;Some name&lt;/prop&gt;
+&lt;prop type="modified_at"&gt;1323854662890&lt;/prop&gt;
+&lt;prop type="modified_by"&gt;Some name&lt;/prop&gt;
+&lt;prop type="project"&gt;Project name&lt;/prop&gt;
+&lt;prop type="client"&gt;Client name&lt;/prop&gt;
+&lt;prop type="domain"&gt;Domain name&lt;/prop&gt;
+&lt;prop type="filename"&gt;File name&lt;/prop&gt;</pre>

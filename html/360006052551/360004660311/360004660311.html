@@ -1,0 +1,40 @@
+<p id="firstHeading" class="firstHeading" lang="en">The file import options for JSON files that can be selected when <a style="background-color: #ffffff; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px;" title="Memsource Cloud User Manual" href="https://help.memsource.com/hc/en-us/articles/115003691852-Jobs">creating a new job</a> are as follows<span style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px;">:</span></p>
+<div id="bodyContent" class="mw-body-content">
+<div id="mw-content-text" class="mw-content-ltr" dir="ltr" lang="en">
+<ul>
+<li><strong>Use HTML subfilter</strong></li>
+<li>
+<strong>Convert to Memsource tags:</strong> To do this, use <a href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_self">Regexp</a>. The matching text will be converted to Memsource tags.</li>
+<li>
+<strong>Import specific keys only (use regexp)</strong>: for example ".*/title"</li>
+<li>
+<strong>Context note *:</strong> Matching content will be displayed in the context note. For example: <em>../title/note</em> if the context note is a descendant of "title", or "../note" if the note is the sibling of "title". </li>
+<li>
+<strong>Context key *:</strong> This is for values that constitute TM context (101% match), if applicable.</li>
+<li>
+<strong>Max. target length *</strong>: Matching content will be set as a maximum target length. For example: <em>../title/length</em> if length is descendant of "title" or "../length" if length is sibling of "title". </li>
+</ul>
+<p>* See <a href="https://help.memsource.com/hc/en-us/articles/115003483412" target="_self">Memsource Limits</a> for JSON</p>
+<img class="img450" src="https://www.dropbox.com/s/u9bh5moym4tvt8l/Json.png?raw=1">
+<p>The following is a JSON example where "../note" and "../length" can be used in import settings:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="p">{</span>
+<span class="nt">"root"</span><span class="p">:</span>
+  <span class="p">[</span>
+	<span class="p">{</span>
+	<span class="nt">"title"</span><span class="p">:</span><span class="s2">"text for translation 1"</span><span class="p">,</span>
+	<span class="nt">"note"</span><span class="p">:</span> <span class="s2">"note for text 1"</span><span class="p">,</span>
+	<span class="nt">"length"</span><span class="p">:</span><span class="mi">13</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+	<span class="nt">"description"</span><span class="p">:</span><span class="s2">"text for translation 2"</span><span class="p">,</span>
+	<span class="nt">"note"</span><span class="p">:</span> <span class="s2">"note for text 2"</span><span class="p">,</span>
+	<span class="nt">"length"</span><span class="p">:</span><span class="mi">16</span>
+	<span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre>
+</div>
+<img class="img450" src="https://www.dropbox.com/s/7d0iaesxroei0xc/Json2.png?raw=1">
+</div>
+</div>

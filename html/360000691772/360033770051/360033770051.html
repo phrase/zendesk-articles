@@ -1,0 +1,37 @@
+<p>TYPO3 is a free and open-source web content management system written in PHP.</p>
+<p>TYPO3 is, along with Drupal, Joomla! and WordPress, among the most popular content management systems worldwide.</p>
+<p>By using a TYPO3 connector, users are able to translate the page content of the TYPO3 CMS, i.e. standard pages. In a Memsource project, you can manually select pages for translation and then manually upload them back to your TYPO3 site, or you can configure <a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation">Automated Project Creation</a> and download / upload the files automatically.</p>
+<h2>Requirements</h2>
+<ul>
+<li>TYPO3 Version: 8.7 or higher</li>
+<li>PHP Version: 7.0 or higher</li>
+</ul>
+<p>Content from Typo3 will always be imported as HTML files.</p>
+<h2>Set up the Memsource Connector in your TYPO3 CMS</h2>
+<ol>
+<ol>
+<li>
+<strong>Download the Memsource Connector</strong> from <a href="https://extensions.typo3.org/extension/memsource_connector/" target="_blank" rel="noopener">TYPO3 extensions page</a> and <strong>install</strong> it in your Typo3 CMS.</li>
+<li>
+<strong>Enable the Memsource extension</strong> in TYPO3 Admin Tools &gt; Extensions.<br> <img class="img450" title="Enable Memsource Extension in Typo3 CMS" src="https://www.dropbox.com/s/pj0wk5o91xlwkw5/Connector_typo3_enable_ext.png?raw=1" alt="Enable Memsource Extension in Typo3 CMS">
+</li>
+<li>
+<strong>Get the Memsource Connector Token</strong> in the TYPO System by clicking on <strong>Memsource</strong>. On this page, you can also enable the debug mode and download logs.<br> <img class="img450" title="Memsource token in Typo3" src="https://www.dropbox.com/s/czfr80l2razz9vp/Connector_typo3_token.png?raw=1" alt="Memsource token in Typo3">
+</li>
+<li>
+<strong>Setup target Languages</strong> in the <strong>List</strong> section in TYPO3:<br><img class="img450" title="Add target languages in Typo3 CMS" src="https://www.dropbox.com/s/a2jjpx3gjrx3yk3/Connector_typo3_addLanguages.png?raw=1" alt="Add target languages in Typo3 CMS">
+</li>
+</ol>
+</ol>
+<h2>Set up the TYPO3 Connector in Memsource</h2>
+<p>Once you have your plugin set up in TYPO3, please log in to your Memsource account and follow the steps listed below:</p>
+<ol>
+<li>To set up a new connector, go to the Memsource <strong>Setup</strong> page. Under the <em>Integrations </em>section, click on <strong>Connectors</strong>, and then select <strong>New.</strong>
+</li>
+<li>Select the<em>TYPO3</em> option.</li>
+<li>Enter the URL of your TYPO3 CMS (for example <a href="http://memsourcedemo.com/typo3-v8">http://memsourcedemo.com/typo3-v8</a>) in the Host field. Then enter the Memsource Connector Token in the Token field.</li>
+<li>Enter the <strong>source language </strong>(please note that TYPO3 does not store this information).</li>
+<li>Click &gt;<strong>Test connection</strong>. Memsource should connect to your TYPO3 site and display a list of target languages configured in your TYPO3 instance.</li>
+<li>If everything is OK, <strong>Save</strong> the connector.</li>
+</ol>
+<p><img class="img450" title="New Typo3 connector" src="https://www.dropbox.com/s/yyma72gds6x11vr/Connector_typo3_MemsourceWindow.png?raw=1" alt="New Typo3 connector"></p>

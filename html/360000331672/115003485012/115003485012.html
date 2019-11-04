@@ -2,7 +2,7 @@
 <p> </p>
 <p><strong>Note:</strong> These limits apply to both the Memsource REST API and Memsource Legacy API. </p>
 <div align="center">
-<table class="article" style="width: 481px; background-color: #fafafa; height: 110px;" border="#000" width="481">
+<table class="table1">
 <tbody>
 <tr>
 <th style="width: 231.778px;">Edition</th>
@@ -32,7 +32,7 @@
 <h2>Exceeded Limit</h2>
 <p>The limits are checked every 30 minutes and reset at 0:00 GMT. The API response when the limit is exceeded is <tt>ApiLimitReached</tt>. Once the limit of the API calls has been reached, no further calls will be accepted by the system. Users can create an email notification when 80% or 100% of the limit is reached by going to <strong>Setup</strong> in the UI and clicking on <strong>API statistics </strong>in the <em>Integrations </em>section.</p>
 <h2>Actions Consisting of Multiple Calls</h2>
-<p>The system will only accept calls received before the daily limit was exceeded.<br>For example, an organization uses 5 calls to perform a certain action and the completed action would have used 2002 calls. If such a situation occurs, the system will only accept the 2000th call and the action would remain uncompleted.</p>
+<p>The system will only accept calls received before the daily limit was exceeded.<br> For example, an organization uses 5 calls to perform a certain action and the completed action would have used 2002 calls. If such a situation occurs, the system will only accept the 2000th call and the action would remain uncompleted.</p>
 <h2>Which Edition to Choose with a 3rd-party Integration?</h2>
 <p>If you require integration between Memsource and a 3rd-party system such as XTRF, Plunet or another similar system via the APIs, you need to take into account the daily limit on API calls of the edition you use. The limit might be exceeded in the middle of a workday and no further calls will be accepted by Memsource. If you think the daily call limit of the edition you use if insufficient, you might choose to upgrade to the Ultimate edition which has unlimited daily API calls. </p>
 <h2>What is Not Counted Towards API Limits?</h2>
