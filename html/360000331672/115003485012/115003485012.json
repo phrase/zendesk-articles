@@ -3,7 +3,7 @@
     "comments_disabled": false,
     "created_at": "2017-12-15T15:46:43Z",
     "draft": false,
-    "edited_at": "2019-10-15T13:12:56Z",
+    "edited_at": "2019-11-08T09:46:21Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003485012-API-Limits-for-Editions",
     "id": 115003485012,
     "label_names": [
@@ -22,7 +22,7 @@
     "section_id": 360000331672,
     "source_locale": "en-us",
     "title": "API Limits for Editions",
-    "updated_at": "2019-10-15T13:12:56Z",
+    "updated_at": "2019-11-08T09:46:21Z",
     "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003485012-API-Limits-for-Editions.json",
     "user_segment_id": null,
     "vote_count": 0,

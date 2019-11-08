@@ -3,7 +3,7 @@
     "comments_disabled": false,
     "created_at": "2018-01-11T19:51:49Z",
     "draft": false,
-    "edited_at": "2019-06-14T15:38:14Z",
+    "edited_at": "2019-11-08T09:46:38Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003929991-Job-API-v8",
     "id": 115003929991,
     "label_names": [
@@ -21,7 +21,7 @@
     "section_id": 115000918411,
     "source_locale": "en-us",
     "title": "Job API v8",
-    "updated_at": "2019-06-14T15:38:14Z",
+    "updated_at": "2019-11-08T09:46:38Z",
     "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003929991-Job-API-v8.json",
     "user_segment_id": null,
     "vote_count": 0,
