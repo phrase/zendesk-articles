@@ -10,7 +10,8 @@
         "cloud",
         "machine translation",
         "extLink",
-        "_RWD"
+        "_RWD",
+        "_addIMG"
     ],
     "locale": "en-us",
     "name": "Machine Translation",
@@ -22,7 +23,7 @@
     "section_id": 360002971060,
     "source_locale": "en-us",
     "title": "Machine Translation",
-    "updated_at": "2019-11-01T12:41:04Z",
+    "updated_at": "2019-11-08T08:24:58Z",
     "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003934452-Machine-Translation.json",
     "user_segment_id": null,
     "vote_count": 2,

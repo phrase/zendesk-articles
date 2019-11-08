@@ -169,7 +169,9 @@
 <em>msgstr ("The number must be higher than 0.")</em> <br>To import msgstr strings in so-called monolingual PO files using a TXT filter, use regexp: <strong>(?&lt;=msgstr ").*(?=")<br><br></strong>
 </li>
 <li>
-<em># Note: This is a note<br></em>To exclude lines starting with # use regexp <strong>(^[^#].*)</strong><em><br></em>
+<em># Note: This is a note<br></em>To exclude lines starting with # use regexp <strong>(^[^#].*)<br></strong><em><br></em>
+</li>
+<li>values '126', 'DCeT', 'Text (en)'<br>to import only text in quotes and with (en), such as <strong>Text (en)'</strong> use regexp <strong>(?&lt;=')[^']*\(en\)(?=')</strong>
 </li>
 </ol>
 </div>
