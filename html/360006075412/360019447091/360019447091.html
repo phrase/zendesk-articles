@@ -7,18 +7,18 @@
 <li>Download the correct installer for your operating system.</li>
 <li>Extract the downloaded ZIP file.</li>
 <li>Inside the 'config' subfolder, you will find the 'kibana.yml' configuration file. Open it using a text editor or a source code editor, such as Notepad++ or jEdit (for a clearer display of the code).</li>
-<li>Replace the value of the <strong>elasticsearch_url</strong> (usually "<a class="external free" href="http://localhost:9200" rel="nofollow">http://localhost:9200</a>") with the URL you have generated in your Memsource account and make sure the <strong>kibana_index</strong> is set to <strong>.kibana</strong> like this:<br> <img class="img450" src="https://www.dropbox.com/s/qy64mhuboa8c0cx/Kibana_configuration.png?raw=1">
+<li>Replace the value of the <strong>elasticsearch_url</strong> (usually "<a class="external free" href="http://localhost:9200" rel="nofollow">http://localhost:9200</a>") with the URL you have generated in your Memsource account and make sure the <strong>kibana_index</strong> is set to <strong>.kibana</strong> like this:<br> <img class="img450" src="https://pages.memsource.com/hc/Kibana_configuration.png">
 </li>
 <li>Save the file.</li>
 <li>To start Kibana, go to the 'bin' subdirectory in the extracted folder and double-click <strong>kibana.bat</strong> (Windows users), or <strong>kibana</strong> (other users).</li>
-<li>If you have setup everything correctly, you will see this:<br> <img class="img450" src="https://www.dropbox.com/s/0l1qa3048ol7p1k/Kibana_Connected.png?raw=1"><br>This means that Kibana is ready for use. This command window has to stay open in order to maintain the connection to Kibana.</li>
-<li>Open your browser and type <strong>localhost:5601</strong> into the address bar to access the visualization workbench.<br> <img class="img350" src="https://www.dropbox.com/s/d1of0umfjo4judn/URL_kibana.png?raw=1">
+<li>If you have setup everything correctly, you will see this:<br> <img class="img450" src="https://pages.memsource.com/hc/Kibana_Connected.png"><br>This means that Kibana is ready for use. This command window has to stay open in order to maintain the connection to Kibana.</li>
+<li>Open your browser and type <strong>localhost:5601</strong> into the address bar to access the visualization workbench.<br> <img class="img350" src="https://pages.memsource.com/hc/URL_kibana.png">
 </li>
 </ol>
 <h2><span id="Configuring_Kibana" class="mw-headline">Configuring Kibana</span></h2>
 <ol>
 <li>Start Kibana as described in step 7 of the previous section.</li>
-<li>When you log in for the first time, you will be prompted to configure the index patterns that you want to utilize for your visualization. Do this in <em>Settings</em> under the <em>Indices</em> menu.<br><img class="img350" src="https://www.dropbox.com/s/8e0sqhbf0ds6tag/Index_pattern.png?raw=1"><br>The following index patterns are currently available:
+<li>When you log in for the first time, you will be prompted to configure the index patterns that you want to utilize for your visualization. Do this in <em>Settings</em> under the <em>Indices</em> menu.<br><img class="img350" src="https://pages.memsource.com/hc/Index_pattern.png"><br>The following index patterns are currently available:
 <ul>
 <li>com.memsource.web.analytics.data.job (job.dateCreated)</li>
 <li>com.memsource.web.analytics.data.jobpart (jobPart.dateCreated)</li>
@@ -59,7 +59,7 @@
 </li>
 </ul>
 <h2>Visualization</h2>
-<p><img class="img350" src="https://www.dropbox.com/s/x8koy0n47wjiqrx/How_many_words_Linguists_translated_and_into_which_languages.jpg?raw=1" width="651" height="237"></p>
+<p><img class="img350" src="https://pages.memsource.com/hc/How_many_words_Linguists_translated_and_into_which_languages.jpg" width="651" height="237"></p>
 <div class="thumbcaption"><em><span class="wysiwyg-font-size-small">How many words Linguists translated and into which languages</span></em></div>
 <p> </p>
 <p>Below you will find a short guide on how to create your visualization. For more information about the possible options and types of visualizations, please consult the <a class="external text" href="https://www.elastic.co/guide/en/kibana/current/index.html" rel="nofollow">Kibana User Guide</a>.</p>
@@ -87,4 +87,4 @@
 <li>Dashboards can also be saved and stored for later use.</li>
 </ul>
 <p> </p>
-<p><img class="img350" src="https://www.dropbox.com/s/wg0syn2xuygrnai/Dashboard_sample.png?raw=1"></p>
+<p><img class="img350" src="https://pages.memsource.com/hc/Dashboard_sample.png"></p>

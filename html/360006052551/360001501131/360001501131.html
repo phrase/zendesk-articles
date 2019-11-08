@@ -41,7 +41,7 @@
 <li>
 <strong>Convert to character entities:</strong> Enter a list of character references (separated by commas) into the output file. For example, when you want quotes ("), they would be represented as <tt>&amp;quot;</tt> and the character Σ would be represented as <tt>&amp;#x3A3;</tt> use <tt>&amp;quot;,&amp;#x3A3;</tt>. Please note that &amp; and &lt; are always exported as &amp;amp; and &amp;lt; respectively.</li>
 </ul>
-<p><img class="img450" src="https://www.dropbox.com/s/qazg1tv3sh6ntyn/Custom-xml-setting.png?raw=1"></p>
+<p><img class="img450" src="https://pages.memsource.com/hc/Custom-xml-setting.png"></p>
 <h2><span id="XML_Settings_Using_XPath" class="mw-headline">XML Settings Using XPath</span></h2>
 <p>Translatable content can also be defined using the XPath query language. This method allows for the creation of complex import rules and some additional features that the Plain Import feature lacks. However, the user must be familiar with XPath:</p>
 <ul>
@@ -76,12 +76,12 @@
 </li>
 </ul>
 <p>Please note that the XPath expression should define the elements and/or attributes whose text/value should be translated and not the actual text node. See our article on <a title="XPath" href="https://help.memsource.com/hc/en-us/articles/360001569871-XPath">XPath</a> for more information.</p>
-<p><img class="img450" src="https://www.dropbox.com/s/8ke4bpqs67k4nrz/Custom-xml-setting2.png?raw=1"></p>
+<p><img class="img450" src="https://pages.memsource.com/hc/Custom-xml-setting2.png"></p>
 <h2>HTML Preview with XSLT stylesheet</h2>
 <p>XSLT language (Extensible Stylesheet Language Transformations) can be used to transform XML documents into HTML format for in-context preview purposes. Memsource currently supports <strong>XSLT 2.0</strong>.</p>
 <p>To import the XML file with a stylesheet (XSL or XSLT), navigate to the bottom of the XML import settings and choose <strong>XSLT file.</strong> When you import an XML with a stylesheet, the Preview Translation feature (found the Editor by clicking on <strong>Document</strong> and selecting <strong>Preview Translation</strong>) will generate an HTML preview instead of an XML one. (Please see this <a class="external text" href="https://www.youtube.com/watch?v=tjBSLM3wxbQ" rel="nofollow">video</a> for more information.) Once used for file import, XSLT can also be downloaded from the <em>File Import Settings</em> page.</p>
-<p><img class="img450" src="https://www.dropbox.com/s/anbwq41j5m9gqvg/XSLT-768x517.png?raw=1"></p>
-<p><img class="img450" src="https://www.dropbox.com/s/zs1k5p97tkoflzg/Download_xslt.png?raw=1"></p>
+<p><img class="img450" src="https://pages.memsource.com/hc/XSLT-768x517.png"></p>
+<p><img class="img450" src="https://pages.memsource.com/hc/Download_xslt.png"></p>
 <h2>CDATA in XML file</h2>
 <p><span class="ILfuVd"><span class="e24Kjd">The term <strong>CDATA</strong> means, Character Data. <strong>CDATA</strong> is defined as blocks of text that are not parsed by the parser but are otherwise recognized as markup. The predefined entities such as &amp;lt;, &amp;gt;, and &amp;amp; require typing and are generally difficult to read in the markup. In such cases, the <strong>CDATA</strong> section can be used.</span></span></p>
 <p><span class="ILfuVd">If the source file contains CDATA and if you use option "Segment XML" then Memsource will add CDATA to every segment in the Completed file.</span></p>
