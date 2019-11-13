@@ -29,4 +29,3 @@ for dirName, subdirList, fileList in os.walk(rootDir):
                 response = requests.put(url, auth=auth.get_auth(), headers=headers, data=json.dumps(data))
                 print(response)
                 time.sleep(0.1)
-
