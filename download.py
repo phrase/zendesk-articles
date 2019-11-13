@@ -7,6 +7,7 @@ import pathlib
 
 import auth
 
+json_props = ['html_url', 'title']
 page = 1
 
 while True:
@@ -32,8 +33,9 @@ while True:
         f.write(body)
         f.close()
 
-        json_article = article.copy()
-        del json_article['body']
+        json_article = {}
+        for prop in json_props:
+            json_article[prop] = article[prop]
         f = open(json_filename, 'w')
         f.write(json.dumps(json_article, indent=4, sort_keys=True))
         f.close()
