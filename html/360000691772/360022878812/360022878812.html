@@ -1,29 +1,37 @@
-<p><span style="font-weight: 400;">Git is an open-source distributed version control system that is used primarily for tracking changes in source codes during software development. It is an underlying direct repository where documents can be stored.</span></p>
-<p><span style="font-weight: 400;">Memsource supports three different connectors for Git Service accounts: Git, GitHub, and GitLab. Each one requires a different method of authentication, access, and setup. Please visit the </span><a href="https://help.memsource.com/hc/en-us/articles/360024186011-GitHub-Connector" target="_self">GitHub </a><span style="font-weight: 400;">and </span><a href="https://help.memsource.com/hc/en-us/articles/360004326372-GitLab-Connector" target="_self">GitLab</a><span style="font-weight: 400;"> connector pages for more setup information regarding those connectors.</span>  </p>
-<h2>Set up the Connector</h2>
-<p><span style="font-weight: 400;">To set up your </span><a href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors"><span style="font-weight: 400;">connector</span></a><span style="font-weight: 400;">, navigate to </span><strong>Setup </strong><span style="font-weight: 400;">in Memsource and scroll down to the </span><em><span style="font-weight: 400;">Integrations </span></em><span style="font-weight: 400;">section. Click on</span><strong> Connectors</strong><span style="font-weight: 400;">. After clicking on </span><strong>New,</strong><span style="font-weight: 400;"> you can choose the connector you wish to create. Give it a name and change the </span><strong>Type </strong><span style="font-weight: 400;">to </span><em><span style="font-weight: 400;">Git. </span></em><span style="font-weight: 400;">Your Git username and password are required. However, your SSH key and SSH password are optional.</span></p>
-<p><img class="img450" src="https://pages.memsource.com/hc/Connectors_CreateConnector_Git.png"></p>
-<p><strong>Note:</strong><span style="font-weight: 400;"> When entering your URL into the </span><em><span style="font-weight: 400;">Host </span></em><span style="font-weight: 400;">field, it must lead to the actual Git repository.</span></p>
-<p> </p>
-<p><span style="font-weight: 400;">Once you’ve entered your information, click </span><strong>Connection test. </strong><span style="font-weight: 400;">If you’ve entered everything correctly, a checkmark will appear next to the </span><strong>Connection test </strong><span style="font-weight: 400;">button indicating that the validation was successful. Then, click </span><strong>Save.</strong></p>
-<h2><span style="font-weight: 400;">Manual or Automated File Retrieval</span></h2>
-<p><span style="font-weight: 400;">Memsource enables users to either manually or automatically retrieve content from Online Repositories or CMSs.</span></p>
-<p><span style="font-weight: 400;">When creating a new job, instead of selecting </span><strong>Choose Files </strong><span style="font-weight: 400;">to manually retrieve files from your local PC's hard drive</span><strong>, </strong><span style="font-weight: 400;">select </span><strong>Add from Online Repository</strong><span style="font-weight: 400;">. Then browse the folder structure directly in your Git account and choose the files you want to translate.</span></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360023821171/mceclip0.png" width="603" height="448"></p>
-<h2><span style="font-weight: 400;">Show Files Added or Changed in the Last Commit</span></h2>
-<p><span style="font-weight: 400;">In this same section, users attempting to manually upload documents from their Git repository to Memsource can easily identify content that has been changed or added in the last commit. </span><span style="font-weight: 400;">Display changed or new content by clicking on </span><strong>Git Service</strong><span style="font-weight: 400;"> at the top of the window and then clicking the folder name in the bottom half of the window. The </span><strong>Show </strong><span style="font-weight: 400;">button will be located in the middle of the screen.</span></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360023736771/mceclip0.png"></p>
-<h2>Automated Project Creation</h2>
-<p><span style="font-weight: 400;">Together with the GIT connector, </span><a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation"><span style="font-weight: 400;">Automated Project Creation</span></a><span style="font-weight: 400;"> allows you to monitor folders, subfolders, and even specific files to detect when new content is added or existing content is modified.</span></p>
-<p><span style="font-weight: 400;">Organizations can define a folder structure specifically for files targeted for localization, and Memsource will do the rest. This option also eliminates accidental imports of documents that are not really intended for translation but still need to be contained in the same folder as translatable content (e.g. Readme files).</span></p>
-<p><span style="font-weight: 400;">This can be done in the </span><em><span style="font-weight: 400;">Automated Project Settings </span></em><span style="font-weight: 400;">section of Memsource. Click the </span><strong>Set remote folder </strong><span style="font-weight: 400;">button to either monitor entire folders or specific files only.</span></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360021109971/mceclip3.png" width="675" height="843"></p>
-<h2>Continuous Jobs</h2>
-<p><span style="font-weight: 400;">Memsource knows that developers code around the clock. To make your life even easier, Memsource supports </span><a href="https://help.memsource.com/hc/en-us/articles/360015039031-Continuous-Jobs"><span style="font-weight: 400;">continuous jobs</span></a>, <span style="font-weight: 400;">allowing you to upload new versions of files that are still being translated. They are then pushed back to your Git repository periodically, once changes have been made. </span></p>
-<div>
-<div>
-<h2>Video</h2>
-<p><span style="font-weight: 400;">To see a demonstration outlining how each of these processes work, please see the video below:</span></p>
-<iframe src="https://www.youtube.com/embed/Ennt-SaVLck" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
+<div class="callout">
+<strong>Available in:</strong> <strong class="color-primary">Ultimate and Enterprise editions</strong><br> <strong>Available for an additional cost in:</strong> <strong class="color-primary">Team edition</strong>
+<p>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</p>
 </div>
+<p>Git connector allows the downloading of source files and uploading of target files directly from/to the Git repository. Memsource clones the remote repository locally and uses git commands to communicate with the remote repo.</p>
+<h2>Git Connector Use Cases</h2>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>. View changes submitted since the last commit by clicking the <strong>show</strong> link in the middle of the screen.</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository. View changes submitted since the last commit by clicking the <strong>show</strong> link in the middle of the screen.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a new commit is detected in monitored files, folder, or an entire subdirectory.<br>
+<ul>
+<li>Selected files are imported the very first time APC runs. No files are imported when a folder is monitored</li>
+<li>This connector supports absolute path setting. Note that the target translation files can be stored only in the same branch as the source file.</li>
+</ul>
+</li>
+<li>Set up <a href="https://help.memsource.com/hc/en-us/articles/360015039031" target="_self">Continous Jobs</a> to have Memsource monitor selected files for changes.</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to Git</h2>
+<h4><strong>Git Settings:</strong></h4>
+<p>No changes are required.</p>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol>
+<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Git</em>.</li>
+<li>Enter the repository address into the <strong>Host</strong> field.<br><strong>Note</strong>: the repository address is the connection string used to clone the repository (e.g. git@gitlab.com:joe.doe/my-repo.git)</li>
+<li>For https access enter the <strong>Username</strong> and <strong>Password. <br></strong>For SSH access load the <strong>SSH key</strong> and optionally enter the <strong>SSH passphrase</strong>
+<div class="callout callout--danger callout--dashed">
+<h4 class="callout__title">Important:</h4>
+<p>Only legacy PEM private key format is supported when using the SSH key for authentication. Use the <em>-m </em>PEM option when generating the SSH key with ssh-keygen.</p>
 </div>
+</li>
+<li>Click <strong>Test Connections</strong>.<br> A checkmark appears if the connection is successful. A red exclamation point appears if it isn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default project, branch, and folder is required when connecting to a Git account, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>
