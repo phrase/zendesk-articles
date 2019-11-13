@@ -1,28 +1,4 @@
 {
-    "author_id": 116923428752,
-    "comments_disabled": false,
-    "created_at": "2018-03-14T09:19:23Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:47:00Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360001723091-Lesson-2-Create-and-Manage-Translation-Memories",
-    "id": 360001723091,
-    "label_names": [
-        "_RWD",
-        "_addIMG"
-    ],
-    "locale": "en-us",
-    "name": "Lesson 2: Create and Manage Translation Memories",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 2,
-    "promoted": false,
-    "section_id": 115000933152,
-    "source_locale": "en-us",
-    "title": "Lesson 2: Create and Manage Translation Memories",
-    "updated_at": "2019-11-08T09:47:00Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360001723091-Lesson-2-Create-and-Manage-Translation-Memories.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Lesson 2: Create and Manage Translation Memories"
 }

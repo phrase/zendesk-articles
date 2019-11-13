@@ -1,31 +1,4 @@
 {
-    "author_id": 116602510771,
-    "comments_disabled": false,
-    "created_at": "2017-12-15T15:35:35Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:47:48Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003484072-Term-Morphology",
-    "id": 115003484072,
-    "label_names": [
-        "term base",
-        "_RWD",
-        "TB_family",
-        "_IMG_ok",
-        "TB"
-    ],
-    "locale": "en-us",
-    "name": "Term Morphology",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 18,
-    "promoted": false,
-    "section_id": 360002971060,
-    "source_locale": "en-us",
-    "title": "Term Morphology",
-    "updated_at": "2019-11-08T09:47:48Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003484072-Term-Morphology.json",
-    "user_segment_id": null,
-    "vote_count": 1,
-    "vote_sum": 1
+    "title": "Term Morphology"
 }

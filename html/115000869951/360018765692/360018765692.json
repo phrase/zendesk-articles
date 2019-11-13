@@ -1,28 +1,4 @@
 {
-    "author_id": 116602510771,
-    "comments_disabled": false,
-    "created_at": "2018-11-05T10:06:26Z",
-    "draft": false,
-    "edited_at": "2019-05-14T09:53:52Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360018765692-Job-API-v2",
-    "id": 360018765692,
-    "label_names": [
-        "_RWD",
-        "_NoIMG"
-    ],
-    "locale": "en-us",
-    "name": "Job API v2",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 10,
-    "promoted": false,
-    "section_id": 115000869951,
-    "source_locale": "en-us",
-    "title": "Job API v2",
-    "updated_at": "2019-08-02T15:11:33Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360018765692-Job-API-v2.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Job API v2"
 }

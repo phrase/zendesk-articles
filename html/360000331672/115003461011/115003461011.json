@@ -1,30 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2017-12-15T15:32:49Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:46:25Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003461011-How-to-Setup-OAuth-Authentication-in-Memsource",
-    "id": 115003461011,
-    "label_names": [
-        "REST API",
-        "Legacy API",
-        "_RWD",
-        "_addIMG"
-    ],
-    "locale": "en-us",
-    "name": "How to Setup OAuth Authentication in Memsource",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 8,
-    "promoted": false,
-    "section_id": 360000331672,
-    "source_locale": "en-us",
-    "title": "How to Setup OAuth Authentication in Memsource",
-    "updated_at": "2019-11-08T09:46:25Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003461011-How-to-Setup-OAuth-Authentication-in-Memsource.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "How to Setup OAuth Authentication in Memsource"
 }

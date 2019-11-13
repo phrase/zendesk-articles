@@ -1,27 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2017-12-15T15:36:03Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:48:54Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003484252-ApSIC-Xbench-Connector-for-Memsource",
-    "id": 115003484252,
-    "label_names": [
-        "_RWD"
-    ],
-    "locale": "en-us",
-    "name": "ApSIC Xbench Connector for Memsource",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 10,
-    "promoted": false,
-    "section_id": 360000691772,
-    "source_locale": "en-us",
-    "title": "ApSIC Xbench Connector for Memsource",
-    "updated_at": "2019-11-08T09:48:54Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003484252-ApSIC-Xbench-Connector-for-Memsource.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "ApSIC Xbench Connector for Memsource"
 }

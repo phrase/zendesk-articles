@@ -1,28 +1,4 @@
 {
-    "author_id": 116990862271,
-    "comments_disabled": false,
-    "created_at": "2018-04-26T08:05:42Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:47:56Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360003071711-Privacy-Notice-for-Users-of-Memsource",
-    "id": 360003071711,
-    "label_names": [
-        "_RWD",
-        "_NoIMG"
-    ],
-    "locale": "en-us",
-    "name": "Privacy Notice for Users of Memsource",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 8,
-    "promoted": false,
-    "section_id": 115000955311,
-    "source_locale": "en-us",
-    "title": "Privacy Notice for Users of Memsource",
-    "updated_at": "2019-11-08T09:47:56Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360003071711-Privacy-Notice-for-Users-of-Memsource.json",
-    "user_segment_id": null,
-    "vote_count": 7,
-    "vote_sum": 5
+    "title": "Privacy Notice for Users of Memsource"
 }

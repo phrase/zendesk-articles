@@ -1,25 +1,4 @@
 {
-    "author_id": 116602510771,
-    "comments_disabled": false,
-    "created_at": "2019-06-17T23:12:00Z",
-    "draft": true,
-    "edited_at": "2019-11-08T09:47:04Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360029283652-Create-Termbase",
-    "id": 360029283652,
-    "label_names": [],
-    "locale": "en-us",
-    "name": "Create Termbase",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 15,
-    "promoted": false,
-    "section_id": 115000903671,
-    "source_locale": "en-us",
-    "title": "Create Termbase",
-    "updated_at": "2019-11-08T09:47:04Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360029283652-Create-Termbase.json",
-    "user_segment_id": 124451,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Create Termbase"
 }

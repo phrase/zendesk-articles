@@ -1,32 +1,4 @@
 {
-    "author_id": 373846258851,
-    "comments_disabled": false,
-    "created_at": "2019-01-17T12:25:43Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:47:48Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360021885672-Import-Content-to-a-Term-Base",
-    "id": 360021885672,
-    "label_names": [
-        "termbase",
-        "add terms",
-        "_RWD",
-        "TB_family",
-        "_IMG_ok",
-        "4_KR"
-    ],
-    "locale": "en-us",
-    "name": "Import Content to a Term Base",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 17,
-    "promoted": false,
-    "section_id": 360002971060,
-    "source_locale": "en-us",
-    "title": "Import Content to a Term Base",
-    "updated_at": "2019-11-08T09:47:48Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360021885672-Import-Content-to-a-Term-Base.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Import Content to a Term Base"
 }

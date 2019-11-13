@@ -1,30 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2018-06-07T12:06:56Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:48:03Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360004658671-Working-with-HTML-Files",
-    "id": 360004658671,
-    "label_names": [
-        "html",
-        "htm",
-        "html markup",
-        "_RWD"
-    ],
-    "locale": "en-us",
-    "name": "Working with HTML Files",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 110,
-    "promoted": false,
-    "section_id": 360006052551,
-    "source_locale": "en-us",
-    "title": "Working with HTML Files",
-    "updated_at": "2019-11-08T09:48:03Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360004658671-Working-with-HTML-Files.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Working with HTML Files"
 }

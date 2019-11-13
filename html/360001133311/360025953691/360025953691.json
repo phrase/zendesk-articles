@@ -1,27 +1,4 @@
 {
-    "author_id": 373846258851,
-    "comments_disabled": false,
-    "created_at": "2019-03-28T16:31:30Z",
-    "draft": false,
-    "edited_at": "2019-05-13T14:11:12Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360025953691-April-2-2019-Memsource-Editor-for-Web-Release-v6-154-1",
-    "id": 360025953691,
-    "label_names": [
-        "_RWD"
-    ],
-    "locale": "en-us",
-    "name": "April 2, 2019: Memsource Editor for Web Release v6.154.1",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 0,
-    "promoted": false,
-    "section_id": 360001133311,
-    "source_locale": "en-us",
-    "title": "April 2, 2019: Memsource Editor for Web Release v6.154.1",
-    "updated_at": "2019-08-02T15:12:46Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360025953691-April-2-2019-Memsource-Editor-for-Web-Release-v6-154-1.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "April 2, 2019: Memsource Editor for Web Release v6.154.1"
 }

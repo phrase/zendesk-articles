@@ -1,29 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2018-01-11T19:40:54Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:47:15Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003940892-Job-Board",
-    "id": 115003940892,
-    "label_names": [
-        "jobs",
-        "_RWD",
-        "job board"
-    ],
-    "locale": "en-us",
-    "name": "Job Board",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 7,
-    "promoted": false,
-    "section_id": 115000903671,
-    "source_locale": "en-us",
-    "title": "Job Board",
-    "updated_at": "2019-11-08T09:47:15Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003940892-Job-Board.json",
-    "user_segment_id": null,
-    "vote_count": 3,
-    "vote_sum": 3
+    "title": "Job Board"
 }

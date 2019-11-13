@@ -1,33 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2018-01-11T20:49:19Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:47:20Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003942912-Post-editing-Analysis",
-    "id": 115003942912,
-    "label_names": [
-        "cloud",
-        "post-editing analysis",
-        "word count",
-        "analyze",
-        "_RWD",
-        "_addIMG",
-        "wordcount"
-    ],
-    "locale": "en-us",
-    "name": "Post-editing Analysis",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 23,
-    "promoted": false,
-    "section_id": 115000903671,
-    "source_locale": "en-us",
-    "title": "Post-editing Analysis",
-    "updated_at": "2019-11-08T09:47:20Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003942912-Post-editing-Analysis.json",
-    "user_segment_id": null,
-    "vote_count": 2,
-    "vote_sum": 2
+    "title": "Post-editing Analysis"
 }

@@ -1,28 +1,4 @@
 {
-    "author_id": 116602510771,
-    "comments_disabled": false,
-    "created_at": "2019-07-31T17:13:32Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:47:02Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360031122932-Plural-Forms-in-Memsource",
-    "id": 360031122932,
-    "label_names": [
-        "_RWD",
-        "4_KR"
-    ],
-    "locale": "en-us",
-    "name": "Plural Forms in Memsource",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 14,
-    "promoted": false,
-    "section_id": 115000903671,
-    "source_locale": "en-us",
-    "title": "Plural Forms in Memsource",
-    "updated_at": "2019-11-08T09:47:02Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360031122932-Plural-Forms-in-Memsource.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Plural Forms in Memsource"
 }

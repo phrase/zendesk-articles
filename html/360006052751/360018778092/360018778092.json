@@ -1,25 +1,4 @@
 {
-    "author_id": 116969996392,
-    "comments_disabled": false,
-    "created_at": "2018-11-05T16:53:28Z",
-    "draft": false,
-    "edited_at": "2018-11-20T21:51:27Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360018778092-New-Project-via-Instant-Quote-form-unsupported-files-Email-Template",
-    "id": 360018778092,
-    "label_names": [],
-    "locale": "en-us",
-    "name": "New Project via Instant Quote form (unsupported files) Email Template",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 129,
-    "promoted": false,
-    "section_id": 360006052751,
-    "source_locale": "en-us",
-    "title": "New Project via Instant Quote form (unsupported files) Email Template",
-    "updated_at": "2019-08-02T15:13:03Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360018778092-New-Project-via-Instant-Quote-form-unsupported-files-Email-Template.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "New Project via Instant Quote form (unsupported files) Email Template"
 }

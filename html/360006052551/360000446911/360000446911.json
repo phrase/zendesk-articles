@@ -1,31 +1,4 @@
 {
-    "author_id": 116990862271,
-    "comments_disabled": false,
-    "created_at": "2018-01-31T09:38:06Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:48:02Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360000446911-Supported-File-Formats",
-    "id": 360000446911,
-    "label_names": [
-        "file types",
-        "file type",
-        "file formats",
-        "file format",
-        "_RWD"
-    ],
-    "locale": "en-us",
-    "name": "Supported File Formats",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 54,
-    "promoted": false,
-    "section_id": 360006052551,
-    "source_locale": "en-us",
-    "title": "Supported File Formats",
-    "updated_at": "2019-11-08T09:48:02Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360000446911-Supported-File-Formats.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Supported File Formats"
 }

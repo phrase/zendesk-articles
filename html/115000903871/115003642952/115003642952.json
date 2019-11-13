@@ -1,29 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2017-12-23T16:22:17Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:48:43Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003642952-The-CAT-Pane",
-    "id": 115003642952,
-    "label_names": [
-        "desktop editor",
-        "_addIMG",
-        "4_SR"
-    ],
-    "locale": "en-us",
-    "name": "The CAT Pane",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 4,
-    "promoted": false,
-    "section_id": 115000903871,
-    "source_locale": "en-us",
-    "title": "The CAT Pane",
-    "updated_at": "2019-11-08T09:48:43Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003642952-The-CAT-Pane.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "The CAT Pane"
 }

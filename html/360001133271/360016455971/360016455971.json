@@ -1,28 +1,4 @@
 {
-    "author_id": 116990862271,
-    "comments_disabled": false,
-    "created_at": "2018-09-27T17:27:32Z",
-    "draft": false,
-    "edited_at": "2019-05-13T14:04:48Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360016455971-October-2-2018-Memsource-Editor-for-Desktop-Release-v6-220-1",
-    "id": 360016455971,
-    "label_names": [
-        "_RWD",
-        "_NoIMG"
-    ],
-    "locale": "en-us",
-    "name": "October 2, 2018: Memsource Editor for Desktop Release v6.220.1",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 2,
-    "promoted": false,
-    "section_id": 360001133271,
-    "source_locale": "en-us",
-    "title": "October 2, 2018: Memsource Editor for Desktop Release v6.220.1",
-    "updated_at": "2019-08-02T15:12:45Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360016455971-October-2-2018-Memsource-Editor-for-Desktop-Release-v6-220-1.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "October 2, 2018: Memsource Editor for Desktop Release v6.220.1"
 }

@@ -1,27 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2017-12-15T15:36:25Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:47:32Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003484392-Client-Portal-in-Memsource",
-    "id": 115003484392,
-    "label_names": [
-        "_RWD"
-    ],
-    "locale": "en-us",
-    "name": "Client Portal in Memsource",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 35,
-    "promoted": false,
-    "section_id": 360006136131,
-    "source_locale": "en-us",
-    "title": "Client Portal in Memsource",
-    "updated_at": "2019-11-08T09:47:32Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003484392-Client-Portal-in-Memsource.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Client Portal in Memsource"
 }

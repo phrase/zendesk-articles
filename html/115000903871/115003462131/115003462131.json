@@ -1,28 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2017-12-15T15:45:59Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:48:39Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003462131-Context-Information-in-Memsource-Editors",
-    "id": 115003462131,
-    "label_names": [
-        "_addIMG",
-        "4_SR"
-    ],
-    "locale": "en-us",
-    "name": "Context Information in Memsource Editors",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 12,
-    "promoted": false,
-    "section_id": 115000903871,
-    "source_locale": "en-us",
-    "title": "Context Information in Memsource Editors",
-    "updated_at": "2019-11-08T09:48:39Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003462131-Context-Information-in-Memsource-Editors.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Context Information in Memsource Editors"
 }

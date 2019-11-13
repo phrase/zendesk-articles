@@ -1,25 +1,4 @@
 {
-    "author_id": 373846258851,
-    "comments_disabled": false,
-    "created_at": "2019-06-10T08:20:55Z",
-    "draft": false,
-    "edited_at": "2019-09-30T08:17:56Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360029337511-June-10-2019-Memsource-Mobile-Release-v2-45-0",
-    "id": 360029337511,
-    "label_names": [],
-    "locale": "en-us",
-    "name": "June 10, 2019: Memsource Mobile Release v2.45.0",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 0,
-    "promoted": false,
-    "section_id": 360003089251,
-    "source_locale": "en-us",
-    "title": "June 10, 2019: Memsource Mobile Release v2.45.0",
-    "updated_at": "2019-09-30T08:17:56Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360029337511-June-10-2019-Memsource-Mobile-Release-v2-45-0.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "June 10, 2019: Memsource Mobile Release v2.45.0"
 }

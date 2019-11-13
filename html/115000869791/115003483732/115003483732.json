@@ -1,28 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2017-12-15T15:32:42Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:45:27Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003483732-What-are-Memsource-Project-Dashboards-",
-    "id": 115003483732,
-    "label_names": [
-        "_RWD",
-        "_addIMG"
-    ],
-    "locale": "en-us",
-    "name": "What are Memsource Project Dashboards?",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 8,
-    "promoted": false,
-    "section_id": 115000869791,
-    "source_locale": "en-us",
-    "title": "What are Memsource Project Dashboards?",
-    "updated_at": "2019-11-08T09:45:27Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003483732-What-are-Memsource-Project-Dashboards-.json",
-    "user_segment_id": null,
-    "vote_count": 1,
-    "vote_sum": 1
+    "title": "What are Memsource Project Dashboards?"
 }

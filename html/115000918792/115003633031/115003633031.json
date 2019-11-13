@@ -1,32 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2017-12-23T18:05:51Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:45:58Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003633031-Text-Filter-Find-and-Replace-",
-    "id": 115003633031,
-    "label_names": [
-        "web editor",
-        "replace",
-        "find and replace",
-        "search and replace",
-        "_RWD",
-        "_addIMG"
-    ],
-    "locale": "en-us",
-    "name": "Text Filter (Find and Replace)",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 7,
-    "promoted": false,
-    "section_id": 115000918792,
-    "source_locale": "en-us",
-    "title": "Text Filter (Find and Replace)",
-    "updated_at": "2019-11-08T09:45:58Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003633031-Text-Filter-Find-and-Replace-.json",
-    "user_segment_id": null,
-    "vote_count": 2,
-    "vote_sum": 2
+    "title": "Text Filter (Find and Replace)"
 }

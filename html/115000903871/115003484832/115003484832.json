@@ -1,29 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2017-12-15T15:45:44Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:48:45Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003484832-Confirming-Segments",
-    "id": 115003484832,
-    "label_names": [
-        "confirm segments",
-        "_RWD",
-        "_addIMG"
-    ],
-    "locale": "en-us",
-    "name": "Confirming Segments",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 14,
-    "promoted": false,
-    "section_id": 115000903871,
-    "source_locale": "en-us",
-    "title": "Confirming Segments",
-    "updated_at": "2019-11-08T09:48:45Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003484832-Confirming-Segments.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Confirming Segments"
 }

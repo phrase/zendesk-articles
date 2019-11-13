@@ -1,28 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2017-12-15T15:33:37Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:49:28Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003461311-Getting-Started-for-Academic-Edition-Users",
-    "id": 115003461311,
-    "label_names": [
-        "_RWD",
-        "_addIMG"
-    ],
-    "locale": "en-us",
-    "name": "Getting Started for Academic Edition Users",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 1,
-    "promoted": false,
-    "section_id": 115000969731,
-    "source_locale": "en-us",
-    "title": "Getting Started for Academic Edition Users",
-    "updated_at": "2019-11-08T09:49:28Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003461311-Getting-Started-for-Academic-Edition-Users.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Getting Started for Academic Edition Users"
 }

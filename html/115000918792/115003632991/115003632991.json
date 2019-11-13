@@ -1,29 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2017-12-23T17:45:50Z",
-    "draft": false,
-    "edited_at": "2019-05-14T11:03:00Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003632991-Introduction-to-Memsource-Editor-for-the-Web",
-    "id": 115003632991,
-    "label_names": [
-        "web editor",
-        "_RWD",
-        "_NoIMG"
-    ],
-    "locale": "en-us",
-    "name": "Introduction to Memsource Editor for the Web",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 0,
-    "promoted": true,
-    "section_id": 115000918792,
-    "source_locale": "en-us",
-    "title": "Introduction to Memsource Editor for the Web",
-    "updated_at": "2019-05-14T11:03:00Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003632991-Introduction-to-Memsource-Editor-for-the-Web.json",
-    "user_segment_id": null,
-    "vote_count": 5,
-    "vote_sum": 3
+    "title": "Introduction to Memsource Editor for the Web"
 }

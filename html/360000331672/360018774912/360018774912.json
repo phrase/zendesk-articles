@@ -1,28 +1,4 @@
 {
-    "author_id": 116602510771,
-    "comments_disabled": false,
-    "created_at": "2018-11-05T15:33:49Z",
-    "draft": false,
-    "edited_at": "2019-05-01T14:59:25Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360018774912-Supported-Character-Sets",
-    "id": 360018774912,
-    "label_names": [
-        "_RWD",
-        "_NoIMG"
-    ],
-    "locale": "en-us",
-    "name": "Supported Character Sets",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 8,
-    "promoted": false,
-    "section_id": 360000331672,
-    "source_locale": "en-us",
-    "title": "Supported Character Sets",
-    "updated_at": "2019-05-01T14:59:25Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360018774912-Supported-Character-Sets.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Supported Character Sets"
 }

@@ -1,25 +1,4 @@
 {
-    "author_id": 116969996392,
-    "comments_disabled": false,
-    "created_at": "2018-11-05T17:02:51Z",
-    "draft": false,
-    "edited_at": "2018-11-20T21:50:14Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360019088391-Work-Completed-Email-Template",
-    "id": 360019088391,
-    "label_names": [],
-    "locale": "en-us",
-    "name": "Work Completed Email Template",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 136,
-    "promoted": false,
-    "section_id": 360006052751,
-    "source_locale": "en-us",
-    "title": "Work Completed Email Template",
-    "updated_at": "2019-08-02T15:13:04Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360019088391-Work-Completed-Email-Template.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Work Completed Email Template"
 }

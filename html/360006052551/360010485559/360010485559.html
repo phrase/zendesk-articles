@@ -1,0 +1,36 @@
+<p>Multilingual plain text CSV files can be imported into Memsource as several bilingual jobs.</p>
+<p>Map the corresponding target language columns in the <strong>File Import Settings</strong> to create separate jobs for each language pair. The completed CSV file contains the target languages after translation.</p>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>Translating multiple sheets in Multilingual CSV is not supported. Only the first sheet can be used for import and export of translatable text.</li>
+<li>CSV files are converted to ??? Spreadsheets when imported</li>
+<li>??? Some files cannot be converted to multilingual files due to compatibility issues between various versions of Microsoft Excel.</li>
+</ul>
+<h3 id="file-import-settings--0-0">File Import Settings:</h3>
+<p>1. Select <strong>Multilingual CSV</strong> in the <strong>File Type</strong> field. (This is bottom of the<em> File Import Settings</em> page). File will be imported as a normal CSV file if this is not specified.</p>
+<p>2. Open the <em>Multilingual CSV</em> section and specify required options:</p>
+<ul>
+<li>
+<strong>Use HTML subfilter:</strong> If the CSV file contains HTML tags, they can be imported with the HTML Subfilter option. In this case, use additional settings in the HTML. (For example, a break tag (&lt;br/&gt;) would create a new segment.) Please note that paragraph tags (such as &lt;p&gt;) will create new segments even if <strong>Segment Multilingual CSV</strong> is unselected. The target should have the same HTML structure as the source unless empty. If not the same, different segmentations of the source and target languages may result. (For example, target paragraphs are replaced with source paragraphs.)</li>
+<li>
+<strong>Segment multilingual CSV:</strong> It is safer to have one cell as one segment, but text can be segmented with a general segmentation rule. (Note that the above-mentioned HTML subfilter is an exception.)</li>
+<li>
+<strong>Source (column):</strong> Use lowercase or capital letters (a or A). For more columns, enter letters separated by commas with no spaces (for example A,D,G).</li>
+<li>
+<strong>Target (column):</strong> There is one column for each target language. For more columns, enter letters separated by commas with no spaces (for example B,E,H).</li>
+<li>
+<strong>Import specific rows only</strong>: </li>
+<li>
+<strong>Context key (column):</strong> Specify a context key that will be saved with the segment to the Translation Memory. This is available by going to <strong>File Import Settings, </strong>selecting <strong>TM Match Context and Optimization</strong> and ensuring that the <em>Context Type</em> is set to <strong>Segment key.</strong>
+</li>
+<li>
+<strong>Context note (column):</strong> It is possible to have more columns as a context note (B,C). The notes will be displayed on separate lines.</li>
+<li>
+<strong>Maximum length (column):</strong> This sets the maximum length of the translation. For more columns, enter letters separated by commas, with no spaces (for example I,J,K).</li>
+<li>
+<strong>Convert to Memsource tags:</strong> Use <a title="Regexp" href="https://wiki.memsource.com/wiki/Regexp">Regexp</a> to convert non-translatable text into Memsource tags.</li>
+</ul>
+<h3 id="jobs-in-project-0-2">Jobs in Project</h3>
+<p>Multilingual jobs have a slightly different icon then general CSV jobs so that they are easily distinguished from monolingual jobs.</p>
+<h3 id="in-context-preview-limit-0-3">In-context Preview Limit</h3>
+<p>The In-context Preview in the Editor can only be generated for a maximum of 200 columns in the imported file. A file with more than 200 columns will have the following warning displayed in the project: <em>"In-context preview was not generated."</em> and the in-context preview will not be available in the Editor. This limit doesn't apply to the hidden columns—if the original file has more then 200 columns but they are <em>"hidden"</em>, then the preview will be created.</p>

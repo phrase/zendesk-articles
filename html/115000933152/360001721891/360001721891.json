@@ -1,32 +1,4 @@
 {
-    "author_id": 116923428752,
-    "comments_disabled": false,
-    "created_at": "2018-03-14T07:45:57Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:46:59Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/360001721891-Lesson-1-Create-a-Project",
-    "id": 360001721891,
-    "label_names": [
-        "project managers",
-        "log in",
-        "sign in",
-        "login",
-        "_RWD",
-        "_addIMG"
-    ],
-    "locale": "en-us",
-    "name": "Lesson 1: Create a Project",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 1,
-    "promoted": false,
-    "section_id": 115000933152,
-    "source_locale": "en-us",
-    "title": "Lesson 1: Create a Project",
-    "updated_at": "2019-11-08T09:46:59Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/360001721891-Lesson-1-Create-a-Project.json",
-    "user_segment_id": null,
-    "vote_count": 2,
-    "vote_sum": 2
+    "title": "Lesson 1: Create a Project"
 }

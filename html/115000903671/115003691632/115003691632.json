@@ -1,33 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2017-12-28T17:56:10Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:47:13Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003691632-Shared-Projects-and-Jobs",
-    "id": 115003691632,
-    "label_names": [
-        "cloud",
-        "vendor",
-        "shared_jobs",
-        "shared_projects",
-        "_IMG_ok",
-        "adding vendor",
-        "_RWD_K"
-    ],
-    "locale": "en-us",
-    "name": "Shared Projects and Jobs",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 6,
-    "promoted": false,
-    "section_id": 115000903671,
-    "source_locale": "en-us",
-    "title": "Shared Projects and Jobs",
-    "updated_at": "2019-11-08T09:47:13Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003691632-Shared-Projects-and-Jobs.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Shared Projects and Jobs"
 }

@@ -1,28 +1,4 @@
 {
-    "author_id": 114295542352,
-    "comments_disabled": false,
-    "created_at": "2018-01-11T20:11:57Z",
-    "draft": false,
-    "edited_at": "2019-11-08T09:48:25Z",
     "html_url": "https://help.memsource.com/hc/en-us/articles/115003941812-Automation-Widget",
-    "id": 115003941812,
-    "label_names": [
-        "cloud",
-        "4_KR"
-    ],
-    "locale": "en-us",
-    "name": "Automation Widget",
-    "outdated": false,
-    "outdated_locales": [],
-    "permission_group_id": 592372,
-    "position": 11,
-    "promoted": false,
-    "section_id": 360003006780,
-    "source_locale": "en-us",
-    "title": "Automation Widget",
-    "updated_at": "2019-11-08T09:48:25Z",
-    "url": "https://memsource.zendesk.com/api/v2/help_center/en-us/articles/115003941812-Automation-Widget.json",
-    "user_segment_id": null,
-    "vote_count": 0,
-    "vote_sum": 0
+    "title": "Automation Widget"
 }
