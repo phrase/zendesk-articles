@@ -24,12 +24,15 @@
 <li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
 <li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
 <li>Provide a name for the connection and change the <strong>Type</strong> to <em>Git</em>.</li>
-<li>Enter the repository address into the <strong>Host</strong> field.<br><strong>Note</strong>: the repository address is the connection string used to clone the repository (e.g. git@gitlab.com:joe.doe/my-repo.git)</li>
+<li>Enter the repository address into the <strong>Host</strong> field.<br> <strong>Note</strong>: the repository address is the connection string used to clone the repository (e.g. <a href="mailto:git@gitlab.com:joe.doe/my-repo.git)">git@gitlab.com:joe.doe/my-repo.git)</a>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Note</h4>
+In order for Memsource Cloud to access the repository, it has to be reachable from the Internet.</div>
+</li>
 <li>For https access enter the <strong>Username</strong> and <strong>Password. <br></strong>For SSH access load the <strong>SSH key</strong> and optionally enter the <strong>SSH passphrase</strong>
-<div class="callout callout--danger callout--dashed">
-<h4 class="callout__title">Important:</h4>
-<p>Only legacy PEM private key format is supported when using the SSH key for authentication. Use the <em>-m </em>PEM option when generating the SSH key with ssh-keygen.</p>
-</div>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Note</h4>
+Only legacy PEM private key format is supported when using the SSH key for authentication. Use the <em>-m </em>PEM option when generating the SSH key with ssh-keygen.</div>
 </li>
 <li>Click <strong>Test Connections</strong>.<br> A checkmark appears if the connection is successful. A red exclamation point appears if it isn't. Mouse over the icon to see additional details.</li>
 <li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
