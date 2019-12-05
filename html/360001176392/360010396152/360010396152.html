@@ -1,26 +1,26 @@
 <h2>New Features and Improvements</h2>
 <p><strong>Improved Translation Memory View</strong></p>
-<p><span style="font-weight: 400;">Management of translation memories with a large number of locales has been improved with additional control options.</span></p>
-<p><span style="font-weight: 400;">It was already possible to drag and drop columns to the desired places and therefore view certain languages next to each other. We have now added a drag&amp;drop icon to make it easier and more visible for everyday users.</span></p>
-<p><span style="font-weight: 400;">In addition to the drag&amp;drop icon, a new option (</span><strong>Make Leftmost</strong><span style="font-weight: 400;">) has been added to the header of each language. When clicked, the entire language column is moved to the leftmost position on the screen, placing it directly next to the language of the search. This way, users can easily move target languages and compare them with their respective sources.</span></p>
-<p><span style="font-weight: 400;"><img src="https://help.memsource.com/hc/article_attachments/360008310752/TM_move_columns_and_make_leftmost.png" alt="TM_move_columns_and_make_leftmost.png" width="619" height="463"></span></p>
+<p>Management of translation memories with a large number of locales has been improved with additional control options.</p>
+<p>It was already possible to drag and drop columns to the desired places and therefore view certain languages next to each other. We have now added a drag&amp;drop icon to make it easier and more visible for everyday users.</p>
+<p>In addition to the drag&amp;drop icon, a new option (<strong>Make Leftmost</strong>) has been added to the header of each language. When clicked, the entire language column is moved to the leftmost position on the screen, placing it directly next to the language of the search. This way, users can easily move target languages and compare them with their respective sources.</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360008310752/TM_move_columns_and_make_leftmost.png" alt="TM_move_columns_and_make_leftmost.png" width="619" height="463"></p>
 <p> </p>
 <p><strong>Adding Target-Language Attribute to XLIFF Files with Missing Namespace</strong></p>
-<p><span style="font-weight: 400;">Certain tools can generate XLIFF files without a proper XLIFF namespace in the file declaration. Previously, Memsource was able to process such files, but without a valid declaration and namespace, the target-language attribute was not added to the completed XLIFF file.</span></p>
-<p><span style="font-weight: 400;">Now, with the latest release, even files without a proper XLIFF namespace will contain the target-language attribute, which improves the validity of the exported documents. </span></p>
-<p><span style="font-weight: 400;"> </span></p>
+<p>Certain tools can generate XLIFF files without a proper XLIFF namespace in the file declaration. Previously, Memsource was able to process such files, but without a valid declaration and namespace, the target-language attribute was not added to the completed XLIFF file.</p>
+<p>Now, with the latest release, even files without a proper XLIFF namespace will contain the target-language attribute, which improves the validity of the exported documents. </p>
+<p> </p>
 <p><strong>Change Source Language in Empty Projects</strong></p>
-<p><span style="font-weight: 400;">Occasionally, projects can be created in a hurry and a simple misclick in the source language can cause an incorrect project to be created (e.g. English (Australia) instead of general English). Now, as long as the project remains empty (no TMs, TBs, or Jobs are added to it), it will be possible to change the source language of the project. </span></p>
-<p><span style="font-weight: 400;"> </span></p>
+<p>Occasionally, projects can be created in a hurry and a simple misclick in the source language can cause an incorrect project to be created (e.g. English (Australia) instead of general English). Now, as long as the project remains empty (no TMs, TBs, or Jobs are added to it), it will be possible to change the source language of the project. </p>
+<p> </p>
 <p><strong>List Jobs, API Filters Jobs Based on Assigned Vendor</strong></p>
-<p><span style="font-weight: 400;">It is now possible to list jobs (via the endpoint /api2/v2/projects/{projectUid}/jobs) not only by the assigned Linguist but also by the assigned Vendor. </span><span style="font-weight: 400;"><br><br></span></p>
+<p>It is now possible to list jobs (via the endpoint /api2/v2/projects/{projectUid}/jobs) not only by the assigned Linguist but also by the assigned Vendor. <br><br></p>
 <p><strong>API Call to Get a List of Warnings in a Specific File</strong></p>
-<p><span style="font-weight: 400;">Translation can produce various kinds of errors (e.g. tags and formatting errors) that could prevent users from downloading the completed file. </span></p>
-<p><span style="font-weight: 400;">Using the new API call (api2/v1/projects/{projectUid}/jobs/{jobUid}/targetFileWarnings), users can get a list of potentially critical errors introduced in the document during the translation and then fix those errors in order to download the completed file.</span></p>
+<p>Translation can produce various kinds of errors (e.g. tags and formatting errors) that could prevent users from downloading the completed file. </p>
+<p>Using the new API call (api2/v1/projects/{projectUid}/jobs/{jobUid}/targetFileWarnings), users can get a list of potentially critical errors introduced in the document during the translation and then fix those errors in order to download the completed file.</p>
 <p> </p>
 <p><strong>Amazon MT Available as a New MT Engine</strong></p>
-<p><span style="font-weight: 400;">Amazon Translate has been added as a supported MT engine and is now available to users.</span></p>
-<p><span style="font-weight: 400;"><img src="https://help.memsource.com/hc/article_attachments/360008351091/Amazon_MT.png" alt="Amazon_MT.png" width="482" height="322"></span></p>
+<p>Amazon Translate has been added as a supported MT engine and is now available to users.</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360008351091/Amazon_MT.png" alt="Amazon_MT.png" width="482" height="322"></p>
 <p> </p>
 <p><span class="wysiwyg-color-black"><strong>Have you come across any bugs?</strong></span></p>
 <p><span class="wysiwyg-color-black">Thank you for letting our <a href="https://help.memsource.com/hc/en-us/requests/new" rel="noopener">Support team</a> know.</span></p>
