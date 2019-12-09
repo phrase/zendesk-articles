@@ -1,18 +1,51 @@
-<p><span style="font-weight: 400;">Google Drive is a cloud-based </span><span style="font-weight: 400;">file storage and synchronization service designed </span><span style="font-weight: 400;">to integrate with most operating systems and devices, sync content in real time across multiple devices, and act as a backup repository for data—i.e., if a device breaks, gets stolen, or fails, the data will still be retrievable from another device. It frees up space on local hard drives and can be used as a platform for sending or receiving files that are too big to be emailed. Real-time collaboration between users is also possible.</span></p>
-<p><span style="font-weight: 400;">The Memsource Google Drive connector is able to read the folders that you specify in Google Drive. You can manually access those folders to create translation jobs in Memsource, or you can configure </span><a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation"><span style="font-weight: 400;">Automated Project Creation</span></a><span style="font-weight: 400;"> to initiate jobs based on rules that you define in a </span><a href="https://help.memsource.com/hc/en-us/articles/115003483952-What-is-a-Project-Template-"><span style="font-weight: 400;">project template</span></a><span style="font-weight: 400;">. </span></p>
-<p><span style="font-weight: 400;">Note that Google Docs, Google Sheets, and Google Slides use specialized file formats that Memsource cannot natively support. Our connector therefore converts those file types to .docx, .xlsx, or .pptx, respectively, for processing. When a translation of any of those types of files is completed and uploaded back to Google Drive, they will be automatically converted back into their native Google format.</span></p>
-<h2>Supported File Formats</h2>
-<p><span style="font-weight: 400;">In addition to supporting all file formats that can be imported into Google Drive, Memsource also supports Google Docs, Google Sheets, and Google Slides.</span></p>
-<h2><span style="font-weight: 400;">Set up the Connector </span></h2>
-<p><span style="font-weight: 400;">To set up your <a href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors">connector</a>, navigate to </span><strong>Setup </strong><span style="font-weight: 400;">and scroll down to the </span><em><span style="font-weight: 400;">Integrations </span></em><span style="font-weight: 400;">section. Click on</span><strong> Connectors</strong><span style="font-weight: 400;">. After clicking on </span><strong>New,</strong><span style="font-weight: 400;"> you can choose the connector you wish to create. Give it a name and change the </span><strong>Type </strong><span style="font-weight: 400;">to </span><em><span style="font-weight: 400;">Google Drive. </span></em><span style="font-weight: 400;">Click on </span><strong>Connect to Google Drive</strong><span style="font-weight: 400;">. A Google authentication screen will appear where you can select your account.  Click on </span><strong>Allow</strong><span style="font-weight: 400;"> so that</span> <span style="font-weight: 400;">Memsource can access your Google Drive files. Then, click </span><strong>Save.</strong></p>
-<h2><span style="font-weight: 400;">Google Drive Privacy Policy</span></h2>
-<p><span style="font-weight: 400;">By using this service, you agree that Memsource can access your Google Drive, browse files and folders, access and download selected files, upload the translated versions back to your Google Drive, and access and download native Google documents in your Google Drive. Our use of Google user data is limited to the practices explicitly disclosed in this privacy policy.</span></p>
-<h2><span style="font-weight: 400;">Troubleshooting</span></h2>
-<p><span style="font-weight: 400;">If you are experiencing either of the following issues, please visit your Google account page and follow the instructions below. </span></p>
+<div class="callout">
+<strong>Available in:</strong> <strong class="color-primary">All editions</strong>
+</div>
+<p>Google Drive is a cloud-based file storage and synchronization service designed to integrate with most operating systems and devices, sync content in real-time across multiple devices, and act as a backup data repository for data.</p>
+<p>Google Drive connector allows the downloading of source files and uploading of target files directly to/from the personal Google Drive repository. Shared drives are currently not supported. The connector uses the Google Drive API to implement the integration.</p>
+<p>Google Docs, Google Sheets, and Google Slides use specialized file formats that Memsource does not support. The connector converts these file types to .docx, .xlsx, or .pptx, respectively, for processing. When a translation of any of those types of files is completed and uploaded back to Google Drive, they are automatically converted back into their native Google format.</p>
+<p>Google Drive cannot export Google Docs files over a certain size (approximately 10 MB). The error <em>The file is too large to be exported </em>is triggered and the job will not be created. In this case, download the file and upload it to Memsource manually.</p>
+<h2>Google Drive Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">A red exclamation mark displays next to your Google Connector, saying that your Google account is no longer valid.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">You are unable to add an additional Google connector because Google only allows one connector per Google account.</span></li>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> (APC) to have Memsource automatically create new projects when a change in the <strong>last modified date</strong> is detected in monitored files or a folder.
+<ul>
+<li>Selected files are imported the very first time APC runs. All files are imported when a folder is monitored.</li>
+<li>This connector supports absolute path setting.</li>
 </ul>
-<p><span style="font-weight: 400;">From your Google account page, click on your account (in the top right corner). Click </span><strong>Security </strong><span style="font-weight: 400;">on the left, and scroll down to </span><em><span style="font-weight: 400;">Third-party apps with account access.</span></em><span style="font-weight: 400;"> From here, click on </span><strong>Manage third-party access. </strong><span style="font-weight: 400;">If "Memsource Connector" is listed here, you can delete it and try creating a Google Drive connector again.</span></p>
-<p> </p>
-<p><strong>Note:</strong><span style="font-weight: 400;"> Google Drive cannot export very large Google Docs files. (That is, files created within the Google Drive; other imported files can be downloaded without limitations.) If the file is over a certain size (approximately 10 MB), you will get the error "The file is too large to be exported" and the job will not be created. In this case, please try downloading the file and uploading it to Memsource manually.</span></p>
+</li>
+<li>Set up <a href="https://help.memsource.com/hc/en-us/articles/360015039031" target="_self">Continous Jobs</a> to have Memsource monitor selected files for changes.</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to Google Drive</h2>
+<h4><strong>Google Drive Settings:</strong></h4>
+<p>No changes are required.</p>
+<h4><strong>Memsource Settings:</strong></h4>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Note:</h4>
+In some browsers, pop-ups must be enabled in the browser in order to connect.</div>
+<ol>
+<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>. <br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Google Drive</em>.</li>
+<li>Click <strong>Connect to Google Drive</strong>.<br> A Google authentication screen will appear where you can select your account.</li>
+<li>Click on <strong>Allow</strong>.<br> A checkmark will appear in the connector setup if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<div class="callout callout--warning callout--dashed">
+<h4 class="callout__title">Tip</h4>
+<p>If you are unable to add an additional Google connector try the following steps:</p>
+<ol>
+<li>Visit the Google Drive page</li>
+<li>Click on the account (top right corner)</li>
+<li>Click <strong>Security </strong>on the left, and scroll down to <em>Third-party apps with account access.</em>
+</li>
+<li>Click on <strong>Manage third-party access. </strong>If <em>Memsource Connector</em> is listed here, delete it and recreate the Google Drive connector.</li>
+</ol>
+</div>
+<p>If a default project, branch, and folder is required when connecting to a Google Drive account, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>
+<h2>Google Drive Privacy Policy</h2>
+<p>By using this service, you agree that Memsource can access your Google Drive, browse files and folders, access and download selected files, upload the translated versions back to your Google Drive, and access and download native Google documents in your Google Drive. Memsource use of Google user data is limited to the practices explicitly disclosed in this privacy policy.</p>

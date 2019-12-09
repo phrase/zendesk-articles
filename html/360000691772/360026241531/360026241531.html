@@ -1,8 +1,69 @@
-<p><span class="wysiwyg-color-black70">Contentful lets you create, manage, and distribute your websites, images, or documents across platforms.</span></p>
-<p><span class="wysiwyg-color-black70">Using Memsource, you will be able to translate your content by either manually uploading it or using  <a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation"><span style="font-weight: 400;">Automated Project Creation</span></a><span style="font-weight: 400;"> to initiate jobs based on rules that you define in a</span> <a href="https://help.memsource.com/hc/en-us/articles/115003483952-What-is-a-Project-Template-"><span style="font-weight: 400;">Project Template</span></a><span style="font-weight: 400;">. This article provides a step-by-step guide to setting up and using the Memsource extension for Contentful.</span></span></p>
-<h2><span class="wysiwyg-color-black70" style="font-weight: 400;">Set up the Connector</span></h2>
-<p><span class="wysiwyg-color-black70"><strong>Note:</strong><span style="font-weight: 400;"> You will need to have pop-ups enabled in your browser in order to connect. </span></span></p>
-<p><span class="wysiwyg-color-black70"> <font color="#404040"> Before setting up the <a href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors" target="_self">connector</a> in Memsource, you'll want to log into your Contentful account. Being logged into Contentful will allow Memsource to get your account information during the setup process. </font> </span></p>
-<p><span class="wysiwyg-color-black70"> <font color="#404040"> Navigate to Memsource and log in. Go to the main <strong>Setup </strong><span style="font-weight: 400;">and scroll down to the </span><em><span style="font-weight: 400;">Integrations </span></em><span style="font-weight: 400;">section. Click on</span><strong> Connectors</strong><span style="font-weight: 400;">. After clicking on </span><strong>New,</strong><span style="font-weight: 400;"> you can choose the connector you wish to create. </span> </font> </span> <span class="wysiwyg-color-black70"> If you're using <em>entry-level</em> localization in your Contentful instance,<em> </em>please select our <strong>Contentful (Entry-level) </strong>connector. For <em>field-level </em>localization, please use the <strong>Contentful </strong>connector.  <font color="#404040"> <span style="font-weight: 400;">Then, click <strong>Connect to Contentful.</strong></span> </font> </span></p>
-<p><img class="img450" src="https://pages.memsource.com/hc/Connectors_CreateConnector_Contentful.png"></p>
-<p><span class="wysiwyg-color-black70"><span style="font-weight: 400;">After you click <strong>Connect to Contentful, </strong>a pop-up window will appear that should show that your authentication was successful. Close the window, and you'll be brought back to your Memsource account. </span><span style="font-weight: 400;">If you’ve done everything correctly, you should see a little checkmark next to the </span><strong>Connect to Contentful </strong><span style="font-weight: 400;">button. After this, click </span><strong>Save.</strong></span></p>
+<div class="callout">
+<strong>Available in:</strong> <strong class="color-primary">Enterprise edition</strong>
+<p>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</p>
+</div>
+<p>Contentful provides a headless content management infrastructure to create, manage and distribute content to any platform or device.</p>
+<h2>Supported Localization Methods</h2>
+<p>Contentful supports multiple localization methods. Visit <a href="https://www.contentful.com/developers/docs/concepts/locales/" target="_blank" rel="noopener">Contentful documentation</a> for their detailed description.</p>
+<h3>Entry-Level Localization</h3>
+<p>Use <em>Contentful (Entry-Level)</em> connector.</p>
+<p>The entry-level connector only works with content types that have localized reference fields (e.g., a <em>reference</em> field called <em>Localized</em> that is enabled for localization).</p>
+<h3>Field-Level Localization</h3>
+<p>Use <em>Contentful</em> connector.</p>
+<p>The field-level connector only works with content types that have a translatable field (e.g., either <em>Text</em> of <em>Rich Text</em> field with enabled localization). If the content type is also enabled for entry-level localization (has a localized reference field), then only the reference that matches the Memsource's project source language is processed by the field-level connector.</p>
+<h2>Contentful Connector Use Cases</h2>
+<div class="callout callout--danger callout--dashed">
+<h4 class="callout__title">Important:</h4>
+<p>Ensure the <strong>Source language</strong> of Memsource's project matches the <strong>Default </strong>locale of the Contentful space that is configured in Contentful's <em>Locales</em> settings. <br>Additionally, <strong>Target languages</strong> of the project must be a subset of Contentful target locales. The languages must match exactly; <em>English</em> and <em>English (United States) </em>are considered different languages.</p>
+</div>
+<p>There are a number of use cases for the connector.</p>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the <strong>content size</strong> is detected for monitored documents or a folder.
+<ul>
+<li>Selected documents are imported the very first time APC runs.</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Set up the Connector</h2>
+<h4><strong>Contentful Settings:</strong></h4>
+<p>No changes are required.</p>
+<h4><strong>Memsource Settings:</strong></h4>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Note</h4>
+In some browsers, pop-ups must be enabled in the browser in order to connect.</div>
+<ol>
+<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> either to <em>Contentful (Entry-Level)</em> or <em>Contentful</em> to use field-level localization.</li>
+<li>Select how to process nested content. Content can use a reference field to reference other content allowing the creating a hierarchy of entities.
+<div class="tabs">
+<div class="tabs-menu">
+<span class="tabs-link is-active">Contentful (Entry-Level)</span> <span class="tabs-link">Contentful</span>
+</div>
+<div class="tab">
+<p>The entry-level connector automatically traverses the entire hierarchy of nested content.</p>
+</div>
+<div class="tab is-hidden">
+<p>Select how the field-level connector should import nested content.</p>
+<ul>
+<li>
+<em>Selected entry only</em> - only content that's explicitly selected when adding content from the online repository or when a change is detected by Automated Project Creation is imported for translation.</li>
+<li>
+<em>Import referenced entries</em> - the connector traverses the entire hierarchy of nested content and imports all content for translation.</li>
+</ul>
+</div>
+</div>
+</li>
+<li>Click <strong>Connect to Contentful.<br></strong>A checkmark will appear in the connector setup if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.<strong><br></strong>
+</li>
+<li>Contentful (Entry-Level) only: set the <strong>Source language</strong>.
+<div class="callout callout--danger callout--dashed">
+<h4 class="callout__title">Important:</h4>
+This language should match the <strong>Default </strong>locale of the Contentful space that's configured in Contentful's <em>Locales</em> settings.</div>
+</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>

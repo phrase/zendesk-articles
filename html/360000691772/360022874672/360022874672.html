@@ -1,17 +1,48 @@
-<p><span style="font-weight: 400;">Dropbox is a cloud-based file storage and synchronization service designed to integrate with most operating systems and devices, sync content in real time across multiple devices, and act as a backup repository for data—i.e., if a device breaks, gets stolen, or fails, the data will still be retrievable from another device. It frees up space on local hard drives and can be used as a platform for sending or receiving files that are too big to be emailed. Real-time collaboration between users is also possible. You can manually access those folders to create translation jobs in Memsource, or you can configure</span><a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation"> <span style="font-weight: 400;">Automated Project Creation</span></a><span style="font-weight: 400;"> to initiate jobs based on rules that you define in a</span><a href="https://help.memsource.com/hc/en-us/articles/115003483952-What-is-a-Project-Template-"> <span style="font-weight: 400;">project template</span></a><span style="font-weight: 400;">.</span></p>
-<h2><span style="font-weight: 400;">Set up the Connector</span></h2>
-<p><span style="font-weight: 400;">To set up your </span><a href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors"><span style="font-weight: 400;">connector</span></a><span style="font-weight: 400;">, navigate to </span><strong>Setup, </strong><span style="font-weight: 400;">and scroll down to the </span><em><span style="font-weight: 400;">Integrations </span></em><span style="font-weight: 400;">section. Click on</span><strong> Connectors</strong><span style="font-weight: 400;">. After clicking on </span><strong>New,</strong><span style="font-weight: 400;"> you can choose the connector you wish to create. Give it a name and change the </span><strong>Type </strong><span style="font-weight: 400;">to </span><em><span style="font-weight: 400;">Dropbox. </span></em><span style="font-weight: 400;">Click on </span><strong>Join Dropbox, </strong><span style="font-weight: 400;">and a popup will appear. Insert your Dropbox credentials and click on </span><strong>Sign in</strong><span style="font-weight: 400;">. If the credentials are correct, a tick will appear next to </span><strong>Connect to Dropbox</strong><span style="font-weight: 400;"> button.</span></p>
-<p><span style="font-weight: 400;"><img src="https://help.memsource.com/hc/article_attachments/360023203091/mceclip0.png" width="600" height="259"></span></p>
-<h2><span style="font-weight: 400;">Tips and Tricks</span></h2>
+<div class="callout">
+<strong>Available in:</strong> <strong class="color-primary">All editions</strong>
+</div>
+<p>Dropbox is a cloud-based file storage and synchronization service designed to integrate with most operating systems and devices, sync content in real-time across multiple devices, and act as a backup data repository for data.</p>
+<p>Dropbox connector allows the downloading of source files and uploading of target files directly to/from the Dropbox repository. The connector uses the Dropbox API to implement the integration.</p>
+<h2>Dropbox Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">You can create subfolders within your source folder. For example: target/{targetLang} will result in source/target/de'</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">You can also create an absolute path. To do this, begin your path with a slash (/). For example: /Output/APC-out/{targetLang} </span></li>
-</ul>
-<h2><span style="font-weight: 400;">Troubleshooting</span></h2>
-<p><span style="font-weight: 400;">Sometimes, the connector can become invalid. If this happens, it’ll be shown with a red exclamation mark. This can happen for a few reasons:</span></p>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> (APC) to have Memsource automatically create new projects when a change in the <strong>last modified date</strong> is detected in monitored files or a folder.
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">The authorization token expires after a long period of inactivity</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Users revoke the access</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Users change their credentials for a remote service (Dropbox, Google, ...)</span></li>
+<li>Selected files are imported the very first time APC runs. All files are imported when a folder is monitored.</li>
+<li>This connector supports absolute path setting.</li>
 </ul>
-<p><span style="font-weight: 400;">If this happens, the Dropbox connector’s edit dialog will show a </span><strong>Re-authenticate </strong><span style="font-weight: 400;">button that you can use to re-establish the connection. </span></p>
+</li>
+<li>Set up <a href="https://help.memsource.com/hc/en-us/articles/360015039031" target="_self">Continous Jobs</a> to have Memsource monitor selected files for changes.</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to Dropbox</h2>
+<h4><strong>Dropbox Settings:</strong></h4>
+<p>No changes are required.</p>
+<h4><strong>Memsource Settings:</strong></h4>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Note</h4>
+In some browsers, pop-ups must be enabled in the browser in order to connect.</div>
+<ol>
+<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Dropbox</em>.</li>
+<li>Click <strong>Connect to Dropbox.</strong>
+</li>
+<li>A popup window or a new tab will appear requesting authorization.<br> If successful, a small checkmark appears next to the Connect to Dropbox button.<strong><br><br> </strong>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Note</h4>
+<p>If the connector becomes invalid, a red exclamation mark will be displayed and the Dropbox connector’s edit dialog will show a Re-authenticate button that is used to re-establish the connection.</p>
+<p>Reasons for invalidation:</p>
+<ul>
+<li>The authorization token expires after a long period of inactivity</li>
+<li>Users revoke access</li>
+<li>Users change their credentials</li>
+</ul>
+</div>
+</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default project, branch, and folder is required when connecting to a Dropbox account, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>

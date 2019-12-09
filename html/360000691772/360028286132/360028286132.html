@@ -1,16 +1,69 @@
-<p><span style="font-weight: 400;">Bitbucket Cloud is similar to </span><a href="https://docs.google.com/document/d/1bszH1app2MYdRu-QxOfRxF0TnWCCRNH-NQT0D5nlGBw/edit#"><span style="font-weight: 400;">Bitbucket Server</span></a><span style="font-weight: 400;">, </span><span style="font-weight: 400;">but is</span><span style="font-weight: 400;"> different in terms of authentication and access.</span><span style="font-weight: 400;"> Below, you’ll find instructions on how to integrate your Bitbucket Cloud account and your Memsource account.</span></p>
-<p> </p>
-<p><strong>Note:</strong><span style="font-weight: 400;"> You will need to have pop-ups enabled in your browser in order to successfully connect your accounts.</span></p>
-<h2><span style="font-weight: 400;">Configure Bitbucket Server</span></h2>
-<p><span style="font-weight: 400;">Before setting up the </span><a href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors"><span style="font-weight: 400;">connector</span></a><span style="font-weight: 400;"> in Memsource, you’ll want to log in to your Bitbucket account in order to create a personal access token. This will be used later in Memsource. To create this token, click </span><span style="font-weight: 400;">on your profile picture and select </span><strong>Manage account </strong><span style="font-weight: 400;">from the dropdown list.</span></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360028809132/mceclip0.png" alt="mceclip0.png"></p>
-<p><span style="font-weight: 400;">Under Account settings, select </span><strong>Personal access tokens</strong><span style="font-weight: 400;"> and then click the </span><strong>Create a token</strong><span style="font-weight: 400;"> button. Enter a </span><em><span style="font-weight: 400;">token name</span></em><span style="font-weight: 400;"> (this can be anything). Then, set the permissions as follows: Project—</span><em><span style="font-weight: 400;">Read</span></em><span style="font-weight: 400;">, Repositories—</span><em><span style="font-weight: 400;">Write</span></em><span style="font-weight: 400;">. Then, click </span><strong>Create.</strong></p>
-<p><strong><img src="https://help.memsource.com/hc/article_attachments/360028808952/mceclip1.png" alt="mceclip1.png"></strong></p>
-<p><strong>Important: </strong><span style="font-weight: 400;">When the pop-up window with the password appears, copy and save it somewhere, as it will not be displayed again.</span></p>
-<p> </p>
-<p><span style="font-weight: 400;">The last thing you’ll need is your Bitbucket Server account’s URL. This will be everything in the address bar up to the first slash (</span><strong>/</strong><span style="font-weight: 400;">). Copy this and save it alongside your personal access token.</span></p>
-<p><span style="font-weight: 400;"><img src="https://help.memsource.com/hc/article_attachments/360028811151/mceclip2.png" alt="mceclip2.png"></span></p>
-<h2><span style="font-weight: 400;">Set up the Connector in Memsource</span></h2>
-<p><span style="font-weight: 400;">In Memsource, navigate to Setup and scroll down to the </span><em><span style="font-weight: 400;">Integrations </span></em><span style="font-weight: 400;">section. Click on </span><strong>Connectors.</strong><span style="font-weight: 400;"> After clicking on </span><strong>New</strong><span style="font-weight: 400;">, you can choose the connector you wish to create. Give it a name and change the Type to </span><em><span style="font-weight: 400;">Bitbucket Server.</span></em></p>
-<p><em><img src="https://help.memsource.com/hc/article_attachments/360028809012/mceclip3.png" alt="mceclip3.png"></em></p>
-<p><span style="font-weight: 400;">Enter your <em>Bitbucket site URL </em>and your personal access token into the fields provided and click </span><strong>Test Connection.</strong><span style="font-weight: 400;"> If you've entered everything correctly, a little check mark will appear. Then, click </span><strong>Save.</strong></p>
+<div class="callout">
+<strong>Available in:</strong> <strong class="color-primary">Ultimate and Enterprise editions</strong><br> <strong>Available for an additional cost in:</strong> <strong class="color-primary">Team edition</strong>
+<p>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</p>
+</div>
+<p>Bitbucket Server connector allows the downloading of source files and uploading of target files directly to/from the Bitbucket Server repository. The connector uses the Bitbucket Server API to implement the integration and allows access to all repositories associated with a Bitbucket Server account.</p>
+<p>Use <a href="https://help.memsource.com/hc/en-us/articles/360028583411" target="_self">Bitbucket Cloud Connector</a> if connecting to <a href="http://bitbucket.org/" target="_self">http://bitbucket.org/</a>.</p>
+<h2>Bitbucket Server Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in <strong>file size</strong> is detected in monitored files or a folder.
+<ul>
+<li>Selected files are imported the very first time APC runs. All files are imported when a folder is monitored.</li>
+<li>Use the <a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git connector</a> if you need to monitor an entire subdirectory.</li>
+<li>This connector supports absolute path setting. Note that the target translation files can be stored only in the same branch as the source file.</li>
+</ul>
+</li>
+<li>Set up <a href="https://help.memsource.com/hc/en-us/articles/360015039031" target="_self">Continous Jobs</a> to have Memsource monitor selected files for changes.</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Use <a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git connector</a> to connect to Bitbucket if:</h4>
+<ul>
+<li>Limiting Memsource access to a single repository is required.</li>
+<li>Using an SSH key for authentication.</li>
+<li>Monitoring an entire subdirectory for a change in <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> is required.</li>
+<li>Detection of file changes based on Last modified date as opposed to just file size is required.</li>
+</ul>
+</div>
+<h2>Connect to Bitbucket Server</h2>
+<h4><strong>Bitbucket Server Settings:</strong></h4>
+<p>Create an access token in the Bitbucket account:</p>
+<ol>
+<li>Log in to the Bitbucket account, click the profile icon in the top-right corner, and click on <em>Manage account.</em><br> The <em>Account settings </em>screen opens.</li>
+<li>Navigate to <em>Personal access tokens</em> and click <strong>Create a token.</strong>
+</li>
+<li>Provide a name.</li>
+<li>Set permissions:
+<ul>
+<li>
+<strong>Projects</strong> permission to <em>Read.</em>
+</li>
+<li>
+<strong>Repositories</strong> permission to <em>Write.</em>
+</li>
+</ul>
+</li>
+<li>Click on <strong>Create.</strong><br> This generates a token needed to enter into the Memsource connector configuration.<br>
+<div class="callout callout--danger callout--dashed">
+<h4 class="callout__title">Important:</h4>
+The token is only visible at this stage and will not be visible again if the window is closed.</div>
+</li>
+</ol>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol>
+<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New.<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Bitbucket Server</em>.</li>
+<li>Enter the server host address into the <strong>Host</strong> field and the <strong>Bitbucket personal access token </strong>obtained from the Bitbucket server site.
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Note:</h4>
+In order for Memsource Cloud to access the repository, it must be accessible from the Internet.</div>
+</li>
+<li>Click <strong>Test connection</strong>.<strong><br></strong>A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default project, branch, and folder is required when connecting to a Bitbucket Cloud account, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>

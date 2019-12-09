@@ -1,17 +1,48 @@
-<p>Memsource provides a Secure File Transfer Protocol (SFTP) connector. Like FTP, SFTP allows users to transfer files between different computers and acts in a way that is similar to how transferring files on your own computer work.  Using the SFTP connector, users will be able to translate these files either manually or through <a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation" target="_self">automated project creation</a>. Below, you'll find instructions for how to set up this connector.</p>
-<h2>Setting up the Connector</h2>
-<p>To set up your <a href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors">connector</a>, log into Memsource and navigate to <strong>Setup. </strong>Scroll down to the <em>Integrations </em>section. Click on<strong> Connectors</strong>. After clicking on <strong>New,</strong> you can choose the connector you wish to create. Give it a name and change the <strong>Type </strong>to <em>SFTP.</em></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360029641852/mceclip0.png" alt="mceclip0.png"></p>
-<p>Once you change the <strong>Type</strong> of connector to <em>SFTP, </em>you'll need to enter the following information:</p>
+<div class="callout">
+<strong>Available in:</strong> <strong class="color-primary">Team, Ultimate and Enterprise editions</strong><br>
+<p>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</p>
+</div>
+<p>Secure File Transfer Protocol (SFTP) is a secure version of File Transfer Protocol (FTP) that enables data transfer over a Secure Shell (SSH) protocol.</p>
+<p>SFTP connector allows the downloading of source files and uploading of target files directly to/from the SFTP repository. The connector uses the SFTP API to implement the integration.</p>
+<h2>SFTP Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
 <ul>
-<li>Your <em>Host </em>name. This is your domain name and will begin with <em>"ftp".</em>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
 </li>
-<li>The <em>Port </em>number. This is automatically set by Memsource to 22 and can be left as it is.</li>
-<li>Your <em>SFTP User name</em>. </li>
-<li>Your <em>SFTP Password.</em>
-</li>
-<li>Your <em>SSH key.</em>
-</li>
-<li>Your <em>SSH passphrase</em>.</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> (APC) to have Memsource automatically create new projects when a change in the <strong>last modified date</strong> is detected in monitored files or a folder.
+<ul>
+<li>Selected files are imported the very first time APC runs. No files are imported when a folder is monitored.</li>
+<li>This connector supports absolute path setting.</li>
 </ul>
-<p>Once you've entered the information above, click on <strong>Test Connection</strong> to see if the credentials are correct and if Memsource can reach the site successfully. If you've entered everything correctly, you should see a little check mark next to the <strong>Test connection </strong>button. Then, click <strong>Save.</strong></p>
+</li>
+<li>Set up <a href="https://help.memsource.com/hc/en-us/articles/360015039031" target="_self">Continous Jobs</a> to have Memsource monitor selected files for changes.</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to SFTP</h2>
+<h4><strong>SFTP Settings:</strong></h4>
+<p>No changes are required.</p>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol>
+<li>Log into Memsource and navigate to <strong>Setup. </strong>Scroll down to the <em>Integrations </em>section and click on<strong> Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New</strong>.<br> The <em>Create Connectors</em> page opens.</li>
+<li>Provide a name for the connector and select <em>SFTP</em> from the dropdown list of connector types.</li>
+<li>Provide the following information:
+<ul>
+<li>
+<em>Host </em>name. Does not include the protocol (e.g. files.example.com).</li>
+<li>
+<em>Port </em>number (Default setting is <em>22</em>).</li>
+<li>SFTP <em>User name</em>. </li>
+<li>SFTP<em> Password.</em>
+</li>
+<li><em>SSH key.</em></li>
+<li>
+<em>SSH passphrase</em>.</li>
+</ul>
+</li>
+<li>Click <strong>Test Connection<br></strong>A checkmark appears if the connection is successful. A red exclamation point appears if it isn't. Mouse over the icon to see additional details.<strong><br></strong>
+</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default project, branch, and folder is required when connecting to an SFTP account, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>

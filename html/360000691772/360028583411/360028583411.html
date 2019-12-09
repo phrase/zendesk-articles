@@ -1,19 +1,66 @@
-<p>Bitbucket Cloud is similar to <a href="https://help.memsource.com/hc/en-us/articles/360028286132" target="_self">Bitbucket Server</a> but is different in terms of authentication and access. Below, you’ll find instructions on how to integrate your Bitbucket Cloud account and your Memsource account.</p>
-<p><strong>Note:</strong> You will need to have pop-ups enabled in your browser in order to successfully connect your accounts.</p>
-<h2>Configure Bitbucket Cloud</h2>
-<p>Before setting up the <a href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors">connector</a> in Memsource, you’ll want to log in to your Bitbucket account to make sure it’s set up properly.</p>
+<div class="callout">
+<strong>Available in:</strong> <strong class="color-primary">Ultimate and Enterprise editions</strong><br> <strong>Available for an additional cost in:</strong> <strong class="color-primary">Team edition</strong>
+<p>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</p>
+</div>
+<p>Bitbucket Cloud connector allows the downloading of source files and uploading of target files directly to/from the Bitbucket Cloud repository. The connector uses the Bitbucket Cloud API to implement the integration and allows access to all repositories associated with a Bitbucket Cloud account.</p>
+<p>Use <a href="https://help.memsource.com/hc/en-us/articles/360028286132" target="_self">Bitbucket Server Connector</a> for self-hosted Bitbucket installations.</p>
+<h2>Bitbucket Cloud Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in <strong>file size</strong> is detected in monitored files or a folder.
+<ul>
+<li>Selected files are imported the very first time APC runs. All files are imported when a folder is monitored.</li>
+<li>Use the <a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git connector</a> if you need to monitor an entire subdirectory.</li>
+<li>This connector supports absolute path setting. Note that the target translation files can be stored only in the same branch as the source file.</li>
+</ul>
+</li>
+<li>Set up <a href="https://help.memsource.com/hc/en-us/articles/360015039031" target="_self">Continous Jobs</a> to have Memsource monitor selected files for changes.</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Use <a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git connector</a> to connect to Bitbucket if:</h4>
+<ul>
+<li>Limiting Memsource access to a single repository is required.</li>
+<li>Using an SSH key for authentication.</li>
+<li>Monitoring an entire subdirectory for a change in <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> is required.</li>
+<li>Detection of file changes based on Last modified date as opposed to just file size is required.</li>
+</ul>
+</div>
+<h2>Connect to Bitbucket Cloud</h2>
+<h4><strong>Bitbucket Cloud Settings:</strong></h4>
+<p>Log in to Bitbucket Cloud in the same browser used to connect to Memsource.</p>
 <ol>
-<li>Click on <strong>Your Profile and Settings </strong>in the lower-left hand corner and select <strong>Bitbucket Settings. </strong>
+<li>Click on <strong>Your profile and settings </strong>in the lower-left hand corner and select <strong>Bitbucket settings. </strong>
 </li>
 <li>Under <em>Access Management, </em>select <strong>App Passwords</strong> and click on <strong>Create app password. </strong>
 </li>
-<li>Enter a label (this can be anything).</li>
-<li>Then, set the permissions as follows: Account—<em>Read</em>, Projects—<em>Read</em>, Repositories—<em>Write, Admin</em>. When you’re finished, click <strong>Create.</strong>
+<li>Provide a label.</li>
+<li>Set the permissions as follows:
+<ul>
+<li>Account: <em>Read</em>,</li>
+<li>Projects: <em>Read</em>,</li>
+<li>Repositories: <em>Write, Admin</em>.</li>
+</ul>
+</li>
+<li>Click <strong>Create.</strong><br> This generates a password used to enter into the Memsource connector configuration.
+<div class="callout callout--danger callout--dashed">
+<h4 class="callout__title">Important:</h4>
+The token is only visible at this stage and will not be visible again if the window is closed.</div>
 </li>
 </ol>
-<p><img src="https://help.memsource.com/hc/article_attachments/360028808312/mceclip0.png" alt="mceclip0.png"></p>
-<p><strong>Important: </strong>When the pop-up window with the password appears, copy and save it somewhere, as it will not be displayed again.</p>
-<h2>Set up the Connector in Memsource</h2>
-<p>In Memsource, navigate to Setup and scroll down to the <em>Integrations </em>section. Click on <strong>Connectors.</strong> After clicking on <strong>New</strong>, you can choose the connector you wish to create. Give it a name and change the Type to <em>Bitbucket Cloud.</em></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360028810451/mceclip1.png" alt="mceclip1.png"></p>
-<p><strong>If you’re still logged into your Bitbucket Cloud account, click Connect to Bitbucket. A small should appear. Finally, click Save.</strong></p>
+<h4><strong>Memsource Settings:</strong></h4>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Note</h4>
+In some browsers, pop-ups must be enabled in the browser in order to connect.</div>
+<ol>
+<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New.<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Bitbucket Cloud</em>.</li>
+<li>Click <strong>Connect to Bitbucket</strong>.<strong><br></strong>A popup window or a new tab will appear requesting authorization.</li>
+<li>Click the <strong>Authorize Memsource</strong> button.<br> If successful, the window/tab will disappear and a small checkmark appears next to the <strong>Connect to Bitbucket</strong> button.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default project, branch, and folder is required when connecting to a Bitbucket Cloud account, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>

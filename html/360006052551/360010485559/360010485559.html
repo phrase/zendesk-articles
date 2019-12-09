@@ -1,15 +1,21 @@
 <p>Multilingual plain text CSV files can be imported into Memsource as several bilingual jobs.</p>
-<p>Map the corresponding target language columns in the <strong>File Import Settings</strong> to create separate jobs for each language pair. The completed CSV file contains the target languages after translation.</p>
-<p><strong>Note</strong>: The In-context Preview in the Editor can only be generated for a maximum of 200 columns in the imported file. A file with more than 200 columns will have the following warning displayed in the project: <em>"In-context preview was not generated."</em> and the in-context preview will not be available in the Editor. This limit doesn't apply to the hidden columns—if the original file has more then 200 columns but they are <em>"hidden"</em>, then the preview will be created.</p>
-<h3 id="file-import-settings--0-0">File Import Settings:</h3>
+<p>Map the corresponding target language columns in the <strong>File Import Settings</strong> to create separate jobs for each language pair. The completed CSV file contains the source and target languages after translation.</p>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title"><strong> Note: </strong></h4>
+The In-context Preview in the Editor can only be generated for a maximum of 200 columns in the imported file. For more information, see <a href="https://help.memsource.com/hc/en-us/articles/115003484932-In-Context-Preview" target="_self">In-Context Preview</a>. </div>
+<h3>File Import Settings:</h3>
 <ol>
-<li>Select <em>Multilingual CSV</em> in the <strong>File Type</strong> field. <br><strong>Warning</strong>: File will be imported as a normal CSV file if this is not specified.</li>
+<li>Select <em>Multilingual CSV</em> in the <strong>File Type</strong> field. <br>
+<div class="callout callout--danger callout--dashed">
+<h4 class="callout__title">Important: </h4>
+File will be imported as a normal CSV file if this is not specified.</div>
+</li>
 <li>Open the <strong>Multilingual CSV</strong> section and specify required settings:
 <ul>
 <li>
-<strong>Use HTML subfilter:</strong> If the CSV file contains HTML tags, they can be imported with the HTML Subfilter option. In this case, use additional settings in the HTML. (For example, a break tag (&lt;br/&gt;) would create a new segment.) Please note that paragraph tags (such as &lt;p&gt;) will create new segments even if <strong>Segment Multilingual CSV</strong> is unselected. The target should have the same HTML structure as the source unless empty. If not the same, different segmentations of the source and target languages may result. (For example, target paragraphs are replaced with source paragraphs.)</li>
+<strong>Use HTML subfilter: </strong>For more information, see <a href="https://help.memsource.com/hc/en-us/articles/360004658671">HTML File</a>.</li>
 <li>
-<strong>Segment multilingual CSV:</strong> It is safer to have one cell as one segment, but text can be segmented with a general segmentation rule. (Note that the above-mentioned HTML subfilter is an exception.)</li>
+<strong>Segment multilingual CSV:</strong> Having one cell as one segment is less error prone, but text can be segmented with general segmentation rules if required. The HTML subfilter is an exception.</li>
 <li>
 <strong>Source (column number):</strong> Use only integers. For more columns, enter integers separated by commas with no spaces (for example 1,2,3).</li>
 <li>
@@ -17,7 +23,7 @@
 <li>
 <strong>Import specific rows only</strong>: Enter row numbers to be imported. For more rows, enter integers separated by commas with no spaces (for example 1,3,5).</li>
 <li>
-<strong>Context key (column number):</strong> Specify a context key that will be saved with the segment to the Translation Memory. This is available by going to <strong>File Import Settings, </strong>selecting <strong>TM Match Context and Optimization</strong> and ensuring that the <em>Context Type</em> is set to <strong>Segment key.</strong>
+<strong>Context key (column number):</strong> Specify a context key that will be saved with the segment to the Translation Memory. This is available by going to <strong>File Import Settings, </strong>selecting <a href="https://help.memsource.com/hc/en-us/articles/360017460212-TM-Match-Context-and-Optimization" target="_self"><strong>TM Match Context and Optimization</strong></a> and ensuring that the <em>Context Type</em> is set to <strong>Segment key.</strong>
 </li>
 <li>
 <strong>Context note (column number):</strong> It is possible to have more columns as a context note (2,3). The notes will be displayed on separate lines.</li>
@@ -29,4 +35,3 @@
 </li>
 <li>Click <strong>Create<br></strong>The File is imported with specified settings and ready for use in the job.</li>
 </ol>
-<p><strong>Note</strong>: Multilingual jobs have a specific icon so that they are distinguishable from monolingual jobs. </p>

@@ -1,66 +1,61 @@
-<p><span style="font-weight: 400;">GitLab is an open-source, web-based DevOps lifecycle tool that focuses on software development. It lets teams work together on code and gives increased control over their repositories. </span></p>
-<p><span style="font-weight: 400;">Memsource supports three different connectors for Git Service accounts: Git, GitHub, and GitLab. Each one requires a different method of authentication, access, and setup. Please visit the </span><a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git</a><span style="font-weight: 400;"> and </span><a href="https://help.memsource.com/hc/en-us/articles/360024186011" target="_self">GitHub</a><span style="font-weight: 400;"> connector pages for more setup information regarding those connectors.</span></p>
-<h2>Set up the GitLab Connector</h2>
-<h3><span style="font-weight: 400;">Connecting to GitLab</span></h3>
-<p><span style="font-weight: 400;">Unlike GitHub, GitLab allows for the use of REST APIs and thus requires a more complicated setup. To set up the connection between GitLab and Memsource, you first need to create an access token in your GitLab account.</span></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360005456851/mceclip1.png" width="971" height="413"></p>
-<p> </p>
-<p><strong>Step 1: </strong><span style="font-weight: 400;">Log into your GitLab account and navigate to </span><strong>Settings</strong><span style="font-weight: 400;"> and click on </span><strong>Access Tokens.</strong></p>
-<p><strong>Step 2: </strong><span style="font-weight: 400;">Fill in the </span><strong>Name </strong><span style="font-weight: 400;">and </span><strong>Expires at </strong><span style="font-weight: 400;">fields. It’s best to choose a longer time period so that you don’t need to re-create the token again and again.</span></p>
-<p><strong>Step 3: </strong><span style="font-weight: 400;">Under </span><em><span style="font-weight: 400;">Scopes, </span></em><span style="font-weight: 400;">check the </span><strong>API </strong><span style="font-weight: 400;">and </span><strong>read_user </strong><span style="font-weight: 400;">checkboxes.</span></p>
-<p><strong>Step 4: </strong><span style="font-weight: 400;">Click on </span><strong>Create personal access token. </strong><span style="font-weight: 400;">This will generate a token that you will need to enter into Memsource. </span><strong>Important: </strong><span style="font-weight: 400;">The token is only visible at this stage and cannot be reached afterward.</span></p>
-<p><span style="font-weight: 400;">With the access token correctly created and copied, navigate back to Memsource to establish the connector. The following fields are required to set up the GitLab connector:</span></p>
+<div class="callout">
+<strong>Available in:</strong> <strong class="color-primary">Ultimate and Enterprise editions</strong><br> <strong>Available for an additional cost in:</strong> <strong class="color-primary">Team edition</strong>
+<p>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</p>
+</div>
+<p>GitLab connector allows the downloading of source files and uploading of target files directly to/from the GitLab repository. The connector uses the GitLab API to implement the integration and allows access to all repositories associated with a GitLab account.</p>
+<h2>GitLab Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Name</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Type (GitLab)</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">GitLab site URL (the same URL where the Access token was generated)</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">GitLab personal access token</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Commit message</span></li>
-</ul>
-<h3><span style="font-weight: 400;">Connecting in Memsource</span></h3>
-<p><strong>Step 1: </strong><span style="font-weight: 400;">In Memsource, go to </span><strong>Setup </strong><span style="font-weight: 400;">in the top right corner. Scroll down to the </span><em><span style="font-weight: 400;">Integrations </span></em><span style="font-weight: 400;">section and click on </span><strong>Connectors.</strong></p>
-<p> <img src="https://help.memsource.com/hc/article_attachments/360005457231/mceclip3.png" width="916" height="514"></p>
-<p> </p>
-<p><strong>Step 2: </strong><span style="font-weight: 400;">Click </span><strong>New.</strong></p>
-<p><strong>Step 3: </strong><span style="font-weight: 400;">Under, </span><strong>Type </strong><span style="font-weight: 400;">choose </span><em><span style="font-weight: 400;">GitLab. </span></em></p>
-<p><strong>Step 4: </strong><span style="font-weight: 400;">Complete the </span><strong>GitLab site URL</strong><span style="font-weight: 400;"> field and enter your token from GitLab into the </span><strong>GitLab personal access token </strong><span style="font-weight: 400;">field. </span></p>
-<p><strong>Step 5: </strong><span style="font-weight: 400;">Click </span><strong>Test connection.</strong> <img src="https://help.memsource.com/hc/article_attachments/360005458611/mceclip12.png" width="648" height="356"></p>
-<p><span style="font-weight: 400;">If a little tick appears next to the </span><strong>Test connection </strong><span style="font-weight: 400;">button, then everything’s connected correctly. If not, you’ll see a little exclamation mark. If you do see the exclamation mark, check that you’ve entered your GitLab site URL and the GitLab personal access token correctly.</span></p>
-<p><span style="font-weight: 400;">Once you see the tick, click </span><strong>Save. </strong><span style="font-weight: 400;">The new integration will now appear in your list of connectors.</span></p>
-<h2><span style="font-weight: 400;">Using the GitLab Connector</span></h2>
-<p><span style="font-weight: 400;">Now that you have your connector set up, it’s time to put it to use. You can do this in two ways:</span></p>
-<ol>
-<li style="font-weight: 400;">
-<span style="font-weight: 400;">Use </span><a href="https://help.memsource.com/hc/en-us/articles/115003460931-How-to-setup-and-use-Automated-Project-Creation"><span style="font-weight: 400;">Automated Project Creation</span></a><span style="font-weight: 400;"> so that Memsource checks your GitLab files for changes at regular intervals. New projects and jobs are created when you make any changes.</span>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
 </li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Manually create Memsource jobs from your GitLab files. This will be explained in the steps below.</span></li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in <strong>file size</strong> is detected for monitored files.
+<ul>
+<li>Due to limitations in GitHub API monitoring an entire folder is not supported.</li>
+<li>Selected files are imported the very first time APC runs.</li>
+<li>Use the <a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git connector</a> if you need to monitor an entire subdirectory.</li>
+<li>This connector supports absolute path setting. Note that the target translation files can be stored only in the same branch as the source file.</li>
+</ul>
+</li>
+<li>Set up <a href="https://help.memsource.com/hc/en-us/articles/360015039031" target="_self">Continous Jobs</a> to have Memsource monitor selected files for changes.</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Use <a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git connector</a> to connect to GitLab if:</h4>
+<ul>
+<li>Limiting Memsource access to a single repository is required.</li>
+<li>Using an SSH key for authentication.</li>
+<li>Monitoring a directory for a change in <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> is required.</li>
+<li>Detection of file changes based on Last modified date as opposed to just file size is required.</li>
+</ul>
+</div>
+<h2>Connect to GitLab</h2>
+<h4><strong>GitLab Settings:</strong></h4>
+<p>Create an access token in the GitLab account.</p>
+<ol>
+<li>Log in to the GitLab account, navigate to <em>Settings</em> and click on <em>Access Tokens</em>.<br> The <em>Personal Access Tokens</em> screen opens.</li>
+<li>Fill in the <strong>Name</strong> and <strong>Expires at</strong> fields. Choose a longer time period so the token doesn't require frequent recreation.</li>
+<li>Under <em>Scopes,</em> check the <strong>api</strong> and <strong>read_user</strong> checkboxes.</li>
+<li>Click on <strong>Create personal access token</strong>. This generates a token needed to enter into the Memsource connector configuration.
+<div class="callout callout--danger callout--dashed">
+<h4 class="callout__title">Important:</h4>
+The token is only visible at this stage and cannot be reached afterward.</div>
+</li>
 </ol>
-<p> </p>
-<p><strong>Step 1: </strong><span style="font-weight: 400;">To set up projects manually, go to a project and select </span><strong>New. </strong></p>
-<p><strong>Step 2: </strong><span style="font-weight: 400;">Instead of adding a new file, click </span><strong>Add from Online Repository</strong></p>
-<p><strong><img src="https://help.memsource.com/hc/article_attachments/360028379552/mceclip0.png"></strong></p>
-<p><strong>Step 3: <span style="font-weight: 400;">Select the GitLab integration that you created. Then, select the file or files that need to be translated.</span></strong></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360028379672/mceclip1.png"></p>
-<h2><span style="font-weight: 400;">Manual or Automated File Retrieval</span></h2>
-<p><span style="font-weight: 400;">Memsource enables users to either manually or automatically retrieve content from Online Repositories or CMSs. </span></p>
-<p><span style="font-weight: 400;">When creating a new job, instead of selecting </span><strong>Choose Files </strong><span style="font-weight: 400;">to manually retrieve files from your local PC's hard drive</span><strong>, </strong><span style="font-weight: 400;">select </span><strong>Add from Online Repository</strong><span style="font-weight: 400;">. Then browse the folder structure directly in your Git account and choose the files you want to translate.</span></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360023821191/mceclip0.png" width="603" height="448"></p>
-<h3><span style="font-weight: 400;">Show Files Added or Changed in the Last Commit</span></h3>
-<p><span style="font-weight: 400;">In this same section, users attempting to manually upload documents from their Git repository to Memsource can easily identify content that has been changed or added in the last commit. </span><span style="font-weight: 400;">Display changed or new content by clicking on </span><strong>Git Service</strong><span style="font-weight: 400;"> at the top of the window and then clicking the folder name in the bottom half of the window. The </span><strong>Show </strong><span style="font-weight: 400;">button will be located in the middle of the screen.</span></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360023736771/mceclip0.png"></p>
-<h2><span style="font-weight: 400;">Automated Project Creation</span></h2>
-<p><span style="font-weight: 400;">Together with the GIT connector, </span><a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation"><span style="font-weight: 400;">Automated Project Creation</span></a><span style="font-weight: 400;"> allows you to monitor folders, subfolders, and even specific files to detect when new content is added or existing content is modified.</span></p>
-<p><span style="font-weight: 400;">Organizations can define a folder structure specifically for files targeted for localization, and Memsource will do the rest. This option also eliminates accidental imports of documents that are not really intended for translation but still need to be contained in the same folder as translatable content (e.g. Readme files).</span></p>
-<p><span style="font-weight: 400;">This can be done in the </span><em><span style="font-weight: 400;">Automated Project Settings </span></em><span style="font-weight: 400;">section of Memsource. Click the </span><strong>Set remote folder </strong><span style="font-weight: 400;">button to either monitor entire folders or specific files only.</span></p>
-<p><span style="font-weight: 400;"><img src="https://help.memsource.com/hc/article_attachments/360021109971/mceclip3.png" width="675" height="843"></span></p>
-<h2>Continuous Jobs</h2>
-<p><span style="font-weight: 400;">Memsource knows that developers code around the clock. To make your life even easier, Memsource supports </span><span style="font-weight: 400;"><a href="https://help.memsource.com/hc/en-us/articles/360015039031-Continuous-Jobs" target="_self">continuous jobs</a>, </span><span style="font-weight: 400;">allowing you to upload new versions of files that are still being translated. They are then pushed back to your Git repository periodically, once changes have been made. </span> </p>
-<h2><span style="font-weight: 400;">Troubleshooting</span></h2>
-<p><span style="font-weight: 400;">During setup, you may see a small red </span><strong>!</strong><span style="font-weight: 400;"> after you click </span><strong>Connection test. </strong><span style="font-weight: 400;">If this happens…</span></p>
-<h2><span style="font-weight: 400;">Video</span></h2>
-<div>
-<div>
-<p><span style="font-weight: 400;">To see a demonstration outlining how each of these processes work, please see the video below:</span></p>
-<iframe src="https://www.youtube.com/embed/Ennt-SaVLck" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
-</div>
-</div>
+<h4><strong>Memsource Settings:</strong></h4>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Note:</h4>
+In some browsers, pop-ups must be enabled in the browser in order to connect.</div>
+<ol>
+<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>GitLab</em>.</li>
+<li>Enter <strong>GitLab site URL</strong> (e.g <a href="https://gitlab.com/">https://gitlab.com/</a>) and the <strong>GitLab personal access token </strong>you have obtained from the GitLab site.
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Note:</h4>
+In order for Memsource Cloud to access the repository, it must be accessible from the Internet.</div>
+</li>
+<li>Click <strong>Test Connections</strong>.<br> A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default project, branch, and folder is required when connecting to a GitLab account, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>

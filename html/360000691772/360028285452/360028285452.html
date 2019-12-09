@@ -1,10 +1,38 @@
-<p><span style="font-weight: 400;">Microsoft OneDrive is a file hosting cloud-based service that lets you easily store your documents. </span><span style="font-weight: 400;">Below, you’ll find instructions on how to integrate your OneDrive account with Memsource.</span></p>
-<p><span style="font-weight: 400;">Please note that this connector only supports Microsoft OneDrive. OneDrive for Business is not supported at this time.</span></p>
-<h2><span style="font-weight: 400;">Set up the Connector</span></h2>
-<p><strong>Note:</strong><span style="font-weight: 400;"> You will need to have pop-ups enabled in your browser.</span></p>
-<p> </p>
-<p><span style="font-weight: 400;">Before setting up the </span><a href="https://help.memsource.com/hc/en-us/articles/115003948452-Connectors"><span style="font-weight: 400;">connector</span></a><span style="font-weight: 400;"> in Memsource, you'll want to log in to your OneDrive account. Being logged into OneDrive will allow Memsource to get your account information during the setup process.</span></p>
-<p><span style="font-weight: 400;">Navigate to Setup and scroll down to the </span><em><span style="font-weight: 400;">Integrations </span></em><span style="font-weight: 400;">section. Click on </span><strong>Connectors.</strong><span style="font-weight: 400;"> After clicking on </span><strong>New</strong><span style="font-weight: 400;">, you can choose the connector you wish to create. Give it a name and change the Type to </span><em><span style="font-weight: 400;">Microsoft OneDrive.</span></em></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360028807412/mceclip0.png" alt="mceclip0.png"></p>
-<p><span style="font-weight: 400;">If you haven’t logged into your Microsoft OneDrive account yet, you’ll see a pop-up asking you for your OneDrive login information. If you are already logged in, this step will be automatically skipped.</span></p>
-<p><span style="font-weight: 400;">The pop-up you see will now ask you to allow Memsource to access the information in your OneDrive account. Click on </span><strong>Yes. </strong><span style="font-weight: 400;">Once you’ve done this, you should see a small check mark next to the </span><strong>Connect to OneDrive </strong><span style="font-weight: 400;">button. Click on </span><strong>Save.</strong></p>
+<div class="callout">
+<strong>Available in:</strong> <strong class="color-primary">All editions</strong>
+</div>
+<p>Microsoft OneDrive is a file hosting cloud-based service for document storage.</p>
+<p>OneDrive connector allows the downloading of source files and uploading of target files directly to/from the Microsoft OneDrive repository. The connector uses the OneDrive API to implement the integration.</p>
+<div class="callout callout--danger callout--dashed">
+<h4 class="callout__title">Important:</h4>
+This connector only supports Microsoft OneDrive. <strong>OneDrive for Business</strong> is not supported at this time.</div>
+<h2>OneDrive Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> (APC) to have Memsource automatically create new projects when a change in the <strong>last modified date</strong> is detected in monitored files or a folder.
+<ul>
+<li>Selected files are imported the very first time APC runs. No files are imported when a folder is monitored.</li>
+<li>This connector supports absolute path setting.</li>
+</ul>
+</li>
+<li>Set up <a href="https://help.memsource.com/hc/en-us/articles/360015039031" target="_self">Continous Jobs</a> to have Memsource monitor selected files for changes.</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to OneDrive</h2>
+<h4><strong>OneDrive Settings:</strong></h4>
+<p>No changes are required.</p>
+<h4><strong>Memsource Settings:</strong></h4>
+<div class="callout callout--success callout--dashed">
+<h4 class="callout__title">Note:</h4>
+In some browsers, pop-ups must be enabled in the browser in order to connect. Connect to OneDrive before setting up the connector.  </div>
+<ol>
+<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>. <br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Microsoft OneDrive</em>. </li>
+<li>Click <strong>Connect to OneDrive.<br></strong>If successful, a small checkmark appears next to the <strong>Connect to OneDrive</strong> button. A red exclamation point appears if it isn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default project, branch, and folder is required when connecting to a OneDrive account, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>

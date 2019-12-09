@@ -8,15 +8,16 @@
 <li>
 <strong>Import specific keys only (use regexp)</strong>: for example ".*/title"</li>
 <li>
-<strong>Context note *:</strong> Matching content will be displayed in the context note. For example: <em>../title/note</em> if the context note is a descendant of "title", or "../note" if the note is the sibling of "title". </li>
+<strong>Exclude specific keys (use regexp)</strong>: for example ".*/2"</li>
 <li>
-<strong>Context key *:</strong> This is for values that constitute TM context (101% match), if applicable.</li>
+<strong>Context note:</strong> Matching content will be displayed in the context note. For example: <em>../title/note</em> if the context note is a descendant of "title", or "../note" if the note is the sibling of "title".</li>
 <li>
-<strong>Max. target length *</strong>: Matching content will be set as a maximum target length. For example: <em>../title/length</em> if length is descendant of "title" or "../length" if length is sibling of "title". </li>
+<strong>Max. target length</strong>: Matching content will be set as a maximum target length. For example: <em>../title/length</em> if length is descendant of "title" or "../length" if length is sibling of "title".</li>
+<li>
+<strong>Context key:</strong> This is for values that constitute TM context (101% match), if applicable.</li>
 </ul>
-<p>* See <a href="https://help.memsource.com/hc/en-us/articles/115003483412" target="_self">Memsource Limits</a> for JSON</p>
-<img class="img450" src="https://pages.memsource.com/hc/Json.png">
-<p>The following is a JSON example where "../note" and "../length" can be used in import settings:</p>
+<p class="wysiwyg-indent1"><strong>Note</strong>: <strong>Context Note</strong>, <strong>Context Key</strong><em> </em>and <strong>Max. target length</strong><em> </em>are processed only for files 10MB and smaller.</p>
+<p><strong>Example</strong>: The following is a JSON example where "../note" and "../length" can be used in import settings:</p>
 <div class="mw-highlight mw-content-ltr" dir="ltr">
 <pre><span class="p">{</span>
 <span class="nt">"root"</span><span class="p">:</span>
@@ -35,6 +36,14 @@
 <span class="p">}</span>
 </pre>
 </div>
-<img class="img450" src="https://pages.memsource.com/hc/Json2.png">
 </div>
+<div class="mw-content-ltr" dir="ltr" lang="en">In <em>Settings </em>apply:</div>
+<ul>
+<li class="mw-content-ltr" dir="ltr" lang="en">
+<strong>Import specific keys only (use regexp): </strong>.*/title|.*/description</li>
+<li class="mw-content-ltr" dir="ltr" lang="en">
+<strong>Context note:</strong> ../note</li>
+<li class="mw-content-ltr" dir="ltr" lang="en">
+<strong>Max. target length:</strong> ../length</li>
+</ul>
 </div>
