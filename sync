@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd "$(dirname "$0")"
+
+./download.py
+
+git add --all html
+
+git commit -m "article sync from zendesk"
+git push origin master
+
+
+
