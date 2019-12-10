@@ -12,10 +12,6 @@
 <p>Use <em>Contentful</em> connector.</p>
 <p>The field-level connector only works with content types that have a translatable field (e.g., either <em>Text</em> of <em>Rich Text</em> field with enabled localization). If the content type is also enabled for entry-level localization (has a localized reference field), then only the reference that matches the Memsource's project source language is processed by the field-level connector.</p>
 <h2>Contentful Connector Use Cases</h2>
-<div class="callout callout--danger callout--dashed">
-<h4 class="callout__title">Important:</h4>
-<p>Ensure the <strong>Source language</strong> of Memsource's project matches the <strong>Default </strong>locale of the Contentful space that is configured in Contentful's <em>Locales</em> settings. <br>Additionally, <strong>Target languages</strong> of the project must be a subset of Contentful target locales. The languages must match exactly; <em>English</em> and <em>English (United States) </em>are considered different languages.</p>
-</div>
 <p>There are a number of use cases for the connector.</p>
 <ul>
 <li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
@@ -29,6 +25,10 @@
 <li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
 </ul>
 <h2>Set up the Connector</h2>
+<div class="callout callout--danger callout--dashed">
+<h4 class="callout__title">Important:</h4>
+<p>Ensure the <strong>Source language</strong> of Memsource's project matches the <strong>Default </strong>locale of the Contentful space that is configured in Contentful's <em>Locales</em> settings.<br> Additionally, <strong>Target languages</strong> of the project must be a subset of Contentful target locales. The languages must match exactly; <em>English</em> and <em>English (United States) </em>are considered different languages.</p>
+</div>
 <h4><strong>Contentful Settings:</strong></h4>
 <p>No changes are required.</p>
 <h4><strong>Memsource Settings:</strong></h4>
