@@ -1,15 +1,47 @@
-<p>Zendesk is a customer service platform, and the Memsource connector integrates with two Zendesk products: Support and Guide.</p>
-<h2>Zendesk Settings</h2>
-<p>To establish a connection between Zendesk and Memsource, you will first need to set the languages in your Zendesk account. You have to do this in both products—<em>Zendesk Support</em> (to translate the dynamic text) and<em> Zendesk Guide</em> (to translate the articles in your knowledge base website). Your Zendesk subscription plan must support multilingual content.</p>
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li><strong>Enterprise edition</strong></li>
+</ul>
+<p>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</p>
+</div>
+<p>Zendesk connector allows the downloading of source content and uploading of translations to/from Zendesk for the following content types:</p>
+<ul>
+<li>Articles, Sections, and Categories in the <em>Guide</em> module</li>
+<li>Dynamic text in the <em>Support</em> module</li>
+</ul>
+<h2>Zendesk Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the last modified date is detected for monitored files or an entire list.
+<ul>
+<li>Selected files are imported the very first time APC runs.</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to Zendesk</h2>
+<h4><strong>Zendesk Settings:</strong></h4>
 <ol>
-<li>Log in to your Zendesk account.</li>
-<li>In Zendesk Support, <a href="https://support.zendesk.com/hc/en-us/articles/203663376-Adding-multiple-languages-to-Zendesk-Support-Professional-and-Enterprise-" target="_blank" rel="noopener">add new target languages</a>.</li>
-<li>Switch to <a href="https://support.zendesk.com/hc/en-us/categories/360001751893" target="_blank" rel="noopener">Zendesk Guide</a> and <a href="https://support.zendesk.com/hc/en-us/articles/224857687" target="_blank" rel="noopener">add new target languages</a> there. Zendesk Guide offers more locales than Zendesk Support, so make sure you select the same locale. For example, using Norwegian in Support and Norwegian(Bokmål) in Guide will not work.</li>
+<li>Zendesk Support: Go to <em>Account</em> in the <em>Admin</em> section and <a href="https://support.zendesk.com/hc/en-us/articles/203663376-Adding-multiple-languages-to-Zendesk-Support-Professional-and-Enterprise-" target="_blank" rel="noopener">configure target languages.</a>
+</li>
+<li>Zendesk Guide: Go to <em>Language settings</em> in the Admin section and <a href="https://support.zendesk.com/hc/en-us/articles/224857687" target="_blank" rel="noopener">configure target languages</a>. </li>
 </ol>
-<p><strong>Note:</strong> Memsource connector languages are set according to the languages in Zendesk Support<em>.</em></p>
-<h2>Memsource Settings</h2>
-<p>In Memsource, navigate to Setup and scroll down to the <em>Integrations </em>section. Click on <strong>Connectors. </strong>After clicking on <strong>New</strong>, you can choose the connector you wish to create. Give it a name and change the Type to <em>Zendesk.</em></p>
-<p><img class="img450" title="New Zendesk Connector" src="https://pages.memsource.com/hc/connector_zendesk_createNew.png" alt="New Zendesk Connector"></p>
-<p>For the <em>Host prefix</em> field, enter your the first part of your Zendesk URL. Note that the<em> http:// </em>and <em>.zendesk.com </em>parts of the URL are automatically added, so you'll only need to add the part of the URL that goes in between those two sections. For example, you would type <em>mysupportsite </em> for https://mysupportsite.zendesk.com.</p>
-<p>After you've entered your Host prefix, click on <strong>Connect to Zendesk. </strong>A pop-up window will appear and will ask for your credentials for Zendesk. If you already are signed in to Zendesk in another tab, the authorization will be automatic. Make sure you have pop-up windows enabled in your web browser.</p>
-<p>If you've set everything up correctly, you'll see a checkmark next to the <strong>Connect to Zendesk </strong>button. Then, click <strong>Save.</strong></p>
+<ul>
+<li>Memsource connector languages are set according to the languages in Zendesk Support.<br><em>English</em> in Zendesk is actually <em>English (United States)</em> full locale.</li>
+<li>Zendesk Guide offers more locales than Zendesk Support. Ensure the same list of locales is selected (e.g. <em>Norwegian</em> in Support and <em>Norwegian(Bokmål)</em> in Guide are considered different languages).</li>
+</ul>
+<p><strong>Memsource Settings:</strong></p>
+<ol>
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Zendesk</em>.</li>
+<li>Enter the <strong>Host prefix</strong>.</li>
+<li>Click <strong>Connect to Zendesk</strong>.<br> Zendesk login page opens</li>
+<li>Log in to Zendesk<br> A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default folder is required when connecting to a Zendesk, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>
