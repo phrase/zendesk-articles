@@ -7,6 +7,7 @@
 // @match        https://github.com/Memsource/zendesk-articles/blob/*.html
 // @grant        none
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
+// @downloadURL  https://raw.githubusercontent.com/Memsource/zendesk-articles/master/scripts/tampermonkey.js
 // ==/UserScript==
 
 (function() {
