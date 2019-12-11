@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Zendesk articles at GitHub
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  show a link to Zendesk article
 // @author       You
 // @match        https://github.com/Memsource/zendesk-articles/blob/*.html
