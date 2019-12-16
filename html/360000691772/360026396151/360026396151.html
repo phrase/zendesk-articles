@@ -1,14 +1,47 @@
-<p>Joomla is a Content Management System (CMS) that allows users to create and maintain web content. The Joomla Connector allows you to connect to the Joomla CMS with Memsource. Using Memsource, you will be able to translate your articles and categories by either manually uploading them or by using  <a style="background-color: #ffffff;" href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation">Automated Project Creation</a> to initiate jobs based on rules that you define in a<span style="color: #9900ff;"> <a style="background-color: #ffffff;" href="https://help.memsource.com/hc/en-us/articles/115003483952-What-is-a-Project-Template-">Project Templa</a><a style="background-color: #ffffff;" href="https://help.memsource.com/hc/en-us/articles/115003483952-What-is-a-Project-Template-">te</a><span style="color: #9900ff;">. </span> <font color="#404040"> This article provides a step-by-step guide to setting up and using the Memsource extension for Joomla. </font> </span></p>
-<h2 class="western">Requirements</h2>
-<h4 class="western"> Before you begin, you'll need to install a plugin into your Joomla instance. This plugin uses <em>Joomla Multilingual Associations,</em> which are supported in Joomla 3.7 and newer. </h4>
-<h2> <font color="#404040">Set up the Connector in Joomla</font>
-</h2>
-<p>In order to install the plugin, log into your Joomla account. Find the Memsource Connector in the Joomla Extensions Directory by clicking on <strong>Components</strong><em> </em>and selecting <strong>Memsource Connector. </strong>On this page, you'll see your <em>Memsource Connector Token.</em> Copy<strong> </strong>this to your clipboard.</p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360025977471/mceclip3.png"></p>
-<p>You should also copy the URL from your browser. Everything up to and including the ".com" will be used as the <strong>Host </strong>name in Memsource.</p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360026572771/mceclip0.png" width="999" height="357"></p>
-<h2>Set up the Connector in Memsource</h2>
-<p> <font color="#404040"> Navigate to Memsource and log in. Go to the main <strong>Setup </strong>and scroll down to the <em>Integrations </em>section. Click on<strong> Connectors</strong>. After clicking on <strong>New,</strong> you can choose the connector you wish to create. Give it a name and change the <strong>Type </strong>to <em>Joomla. </em></font></p>
-<p><font color="#404040">Enter the URL you copied from Joomla into the <strong>Host </strong>section. Paste</font><font color="#404040"> the token from your Joomla account into the <strong>Token </strong>field. </font><font color="#404040">Then, click <strong>Test Connection.</strong></font></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360025973992/mceclip0.png"></p>
-<p>If you’ve done everything correctly, you should see a little checkmark next to the <strong>Test Connection </strong>button. After this, click <strong>Save.</strong></p>
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong>Enterprise edition</strong> for additional cost.</li>
+<li>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>Joomla is a Content Management System (CMS) that allows users to create and maintain web content.</p>
+<p>Joomla connector allows the downloading of <strong>articles</strong> and <strong>categories</strong> and uploading of translations to/from Joomla.</p>
+<h2>Minimum Requirements</h2>
+<ul>
+<li>Joomla 3.7 or newer</li>
+</ul>
+<h2>Joomla Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the last modified date is detected for monitored files or an entire list.
+<ul>
+<li>Selected files are imported the very first time APC runs.</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to Joomla</h2>
+<h4><strong>Joomla Settings:</strong></h4>
+<ol>
+<li>Install <em>Multilingual Associations</em> that are part of the <em>System - Language Filter</em> plugin.</li>
+<li>Download the <a href="https://extensions.joomla.org/extension/memsource-connector/" target="_blank" rel="noopener">Memsource connector</a> and follow the installation instructions.</li>
+<li>Go to the <strong>Components</strong> menu and select <em>Memsource Connector.</em>
+</li>
+<li>Copy the <em>Memsource Connector Token</em> to the clipboard.</li>
+</ol>
+<p><strong>Memsource Settings:</strong></p>
+<ol>
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Joomla</em>.</li>
+<li>Enter the <strong>Host</strong> including the protocol (e.g. https://example.org/).</li>
+<li>Paste the token from Joomla into the <strong>Token</strong> field.</li>
+<li>Click <strong>Test connection</strong>.<br> A list of languages configured in Joomla will appear if the connection was successful. A red exclamation point will appear with an error message if it wasn't.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default folder is required when connecting to a Joomla, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>
