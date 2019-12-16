@@ -1,12 +1,46 @@
-<p>Kentico is a cloud-based content management system that allows teams to easily collaborate on creating websites, online stores, and community sites. Memsource supports versions 11 and 12 of Kentico. Below, you'll find instructions on how to connect your Kentico account to Memsource. </p>
-<h2>Set up the Connector in Kentico</h2>
-<p>In order to establish a connection between Memsource and Kentico, you will need to enable both <em>REST Service </em>and <em>REST Translation </em>in your Kentico account. </p>
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
 <ul>
-<li>To enable <em>REST Translation</em>, navigate to <strong>Settings,</strong> and expand the<strong> Content</strong> folder on the left side of the page. Then, select <strong>Translation services.</strong> </li>
-<li>To enable <em>REST Service</em>, you'll need to go to <strong>Settings</strong> and open the <strong>Integration</strong> folder on the left-hand side<strong>.</strong> Select <strong>Global</strong> and check the option <strong>Service enabled.</strong> </li>
+<li>
+<strong>Enterprise edition</strong> for additional cost.</li>
+<li>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
 </ul>
-<p>You will also need to acquire the <strong>Kentico URL,</strong> which you can obtain from the <em>Sites </em>section in Kentico. Copy this and save it—you'll need it later in Memsource. Once you have all of this information from Kentico, open Memsource.</p>
-<h2>Set up the Connector in Memsource</h2>
-<p>Navigate to Memsource and log in. Go to <strong>Setup </strong>and scroll down to the <em>Integrations </em>section. Click on <strong>Connectors</strong>. After clicking on <strong>New,</strong> you can choose the connector you wish to create. Give it a name and change the <strong>Type </strong>to <em>Kentico.</em></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360029311891/mceclip0.png" alt="mceclip0.png"></p>
-<p>Enter your <em>Kentico URL, Kentico User name, </em>and your <em>Kentico password</em>. Also select the source language of your Kentico CMS. Then click <strong>Test connection. </strong>Once you’ve done this, you should see a small check mark next to the <strong>Test Connection </strong>button. Click on <strong>Save.</strong></p>
+</div>
+<p>Kentico is a cloud-based content management system that allows teams to easily collaborate on creating websites, online stores, and community sites. Memsource supports versions 11 and 12 of Kentico.</p>
+<p>Kentico connector allows the downloading of source content and uploading of translations to/from Kentico.</p>
+<h2>Kentico Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the last modified date is detected for monitored files or an entire list.
+<ul>
+<li>Selected files are imported the very first time APC runs.</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to Kentico</h2>
+<h4><strong>Kentico Settings:</strong></h4>
+<p>In order to establish a connection between Memsource and Kentico, enable both REST Service and REST Translation in the Kentico account. </p>
+<ol>
+<li>Navigate to <em>Settings,</em> and expand the <strong>Content</strong> folder on the left side of the page. </li>
+<li>Select <strong>Translation services</strong> and enable REST Translation.</li>
+<li>Go to <em>Settings</em> and open the <strong>Integration</strong> folder on the left-hand side.</li>
+<li>Select <strong>Global</strong> and check the option <strong>Service enabled</strong> to enable the REST Service.</li>
+<li>Copy and save the <strong>Kentico URL</strong> from the Sites section.</li>
+</ol>
+<p><strong>Memsource Settings:</strong></p>
+<ol>
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Kentico</em>.</li>
+<li>Enter the <strong>Kentico URL</strong>
+</li>
+<li>Enter the username and password.</li>
+<li>Select the <strong>Source Language</strong>.</li>
+<li>Click <strong>Test connection</strong>.<br>A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default folder is required when connecting to a Kentico, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>

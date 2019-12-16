@@ -1,17 +1,56 @@
-<h2>Configure the Connector in Help Scout</h2>
-<p>In order to establish a connection between your Help Scout account and Memsourc<em>e, a Help Scout Docs API Key</em> is required. To get this, log into your Help Scout account. Select <strong>Your Profile</strong> from the <em>Account </em>dropdown list in the top right-hand corner of the dashboard.</p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360028809332/mceclip0.png" alt="mceclip0.png"></p>
-<p> </p>
-<p>Select <strong>Authentication </strong>on the right side of the screen and then select the <strong>API Keys </strong>tab. Under the <em>Docs API </em>section, click <strong>Generate an API Key. </strong>Copy this key and save it somewhere.</p>
-<h2>Set up the Connector in Memsource</h2>
-<p>In Memsource, navigate to Setup and scroll down to the <em>Integrations </em>section. Click on <strong>Connectors.</strong> After clicking on <strong>New</strong>, you can choose the connector you wish to create. Give it a name, change the Type to <em>Help Scout, </em>and paste your API key into the <em>Help Scout Docs API key </em>field<em>.</em></p>
-<p>In the <em>Help Scout Target Collection </em>field, type the name of an existing Help Scout collection, or the name of the new collection you want to create. If you create a new collection, this new collection will also appear in the list of collections in your Help Scout account.</p>
-<p> </p>
-<p><strong>Note:</strong> To view a Help Scout collection created via the connector in Memsource, the collection must first be saved. Do this by navigating to Help Scout, clicking on <strong>Manage, </strong>and selecting <strong>Docs. </strong>Then, select the target site for the collection. Note that in a Basic or Standard account, there will only be one site. In a Plus account, there will be multiple sites. Select <strong>Collections </strong>on the left-hand side and click on the collection created by the connector. Finally, click <strong>Save Collection.</strong></p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360028811871/mceclip1.png" alt="mceclip1.png"></p>
-<p>Once these fields are completed, click <strong>Test connection.</strong></p>
-<p>For a Basic or Standard Help Scout account, a message will appear to confirm the connection to the single site on Help Scout.</p>
-<p>For a Plus Help Scout account, a list of your multilingual sites will be displayed. Select the language of each site from the drop-down lists. You will also need to select which site will be the source site for the translation.</p>
-<p><img src="https://help.memsource.com/hc/article_attachments/360028809612/mceclip2.png" alt="mceclip2.png"></p>
-<h2>Translate Articles from Help Scout</h2>
-<p>Please note that when an article is first translated and exported back to Help Scout, the article will appear as a draft and will need to be published manually. However, if an article already published in Help Scout is translated in Memsource, once it is exported back into Help Scout the article will immediately be published.</p>
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong>Enterprise edition</strong> for additional cost.</li>
+<li>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>Help Scout connector allows the downloading of source content and uploading of translations to/from Help Scout.</p>
+<h2>Help Scout Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the last modified date is detected for monitored files or an entire list.
+<ul>
+<li>Selected files are imported the very first time APC runs.</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<p>When an article is first translated and exported back to Help Scout, the article appears as a draft and must be published manually. If a previously published article is translated in Memsource, it is immediately published when exported back into Help Scout.</p>
+<h2>Connect to Help Scout</h2>
+<h4><strong>Help Scout Settings:</strong></h4>
+<ol>
+<li>Select <strong>Your Profile</strong> from the <em>Account </em>dropdown list in the top right-hand corner of the dashboard.</li>
+<li>Select <em>Authentication </em>on the right side of the screen and then the <em>API Keys</em> tab. Copy the <strong>Docs API Key</strong><em style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">.</em> Generate this key it if it doesn't exist yet.</li>
+</ol>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol>
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Help Scout</em>.</li>
+<li>Paste the API key into the <strong>Help Scout Docs API key</strong> field.</li>
+<li>In the <strong>Help Scout Target Collection</strong> field, type the name of an existing Help Scout collection or the name of a collection to be created. New collections appear in the collection list of the Help Scout account.</li>
+<li>Click <strong>Test connection</strong>.
+<ul>
+<li>For a <em>Basic</em> or <em>Standard</em> Help Scout account, a message will appear to confirm the connection to the single site on Help Scout.</li>
+<li>For a <em>Plus</em> Help Scout account, a list of multilingual sites will be displayed. Select the language of each site from the drop-down lists and which site will be the source for the translation.</li>
+</ul>
+</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default folder is required when connecting to a Help Scout, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>
+<div class="callout callout--success callout--dashed">
+<span class="callout__title">Note:</span> To view a Help Scout collection created via the connector in Memsource, the collection must first be saved.</div>
+<p>To save a collection, follow these steps:</p>
+<ol>
+<li>In Help Scout, go to <em>Manage</em><strong> </strong>and <em>Docs</em><strong>. </strong>
+</li>
+<li>Select the target site for the collection (Basic or Standard accounts have only be one site. Plus accounts have multiple sites).</li>
+<li>Select <em>Collections </em>on the left-hand side and click on the collection created by the connector.</li>
+<li>Click <strong>Save Collection.</strong>
+</li>
+</ol>
