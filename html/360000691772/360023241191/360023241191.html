@@ -1,94 +1,95 @@
-<p>Using Memsource, you will be able to translate products, categories, pages, and blocks from Magento 2. You can manually upload your content or you can configure <a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation">Automated Project Creation</a> to initiate jobs based on rules that you define in a <a href="https://help.memsource.com/hc/en-us/articles/115003483952-What-is-a-Project-Template-">project template</a>. <font color="#404040">This article provides a step-by-step guide to setting up and using the Memsource Connector extension for Magento 2. </font></p>
-<h2 class="western">Requirements</h2>
-<h4 class="western">Before you begin, make sure that you are running Magento CE 2.1 or newer.</h4>
-<h2 class="western">Installation</h2>
-<p class="western">There are three ways to install the Memsource Connector extension into your Magento 2 instance: through the Magento Marketplace, by using <a href="https://getcomposer.org/">Composer</a>, or by installing it manually. Each of these three options will be explained below:</p>
-<h3 class="western">Installing via Magento Marketplace</h3>
-<p class="western">Find the Memsource Connector on the <font color="#0000ff"> <u><a href="https://marketplace.magento.com/catalogsearch/result/?q=Memsource#q=Memsource&amp;idx=m2_cloud_prod_default_products&amp;p=0&amp;fR%5Bext_platform%5D%5B0%5D=Magento%202&amp;hFR%5Bcategories.level0%5D%5B0%5D=Extensions&amp;nR%5Bvisibility_search%5D%5B%3D%5D%5B0%5D=1">Magento Marketplac</a><a href="https://marketplace.magento.com/catalogsearch/result/?q=Memsource#q=Memsource&amp;idx=m2_cloud_prod_default_products&amp;p=0&amp;fR%5Bext_platform%5D%5B0%5D=Magento%202&amp;hFR%5Bcategories.level0%5D%5B0%5D=Extensions&amp;nR%5Bvisibility_search%5D%5B%3D%5D%5B0%5D=1">e</a></u> </font> and get the extension by clicking on <strong>Add to Cart</strong>:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022754372/mceclip0.png" width="601" height="400"></p>
-<p class="western"> </p>
-<p class="western">In the Magento Administration, go to <strong>System</strong> and click on <strong>Web Setup Wizard:</strong></p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022754392/mceclip1.png" width="600" height="397"></p>
-<p class="western"> </p>
-<p class="western">Then, choose the <strong>Extension Manager:</strong></p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022783231/mceclip2.png" width="602" height="235"></p>
-<p class="western"> </p>
-<p class="western">Under the number of extensions to install, click on <strong>Review and Install:</strong></p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022783391/mceclip3.png" width="601" height="281"></p>
-<p class="western"> </p>
-<p class="western">On the list of extensions, find the Memsource Connector, and click on the <strong>Install</strong> link:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022783491/mceclip4.png" width="821" height="147"></p>
-<p class="western"> </p>
-<p class="western">Now, we'll go through the installation of the extension. Let’s start with the <strong>Readiness Check:</strong></p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022783551/mceclip5.png" width="617" height="205"></p>
-<p class="western"> </p>
-<p class="western">Once you’ve passed the Readiness Check, you can continue the installation process by clicking the <strong>Next</strong> button. After this, you will be asked to create a data backup:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022783631/mceclip6.png" width="600" height="274"></p>
-<p class="western"> </p>
-<p class="western">After the backup process is complete, you are ready to install the Memsource extension—just click the <strong>Install</strong> button:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022783671/mceclip7.png" width="600" height="232"></p>
-<p class="western"> </p>
-<p class="western"><strong>Note:</strong> If you are not sure about any of the steps above, check out <a href="https://docs.magento.com/marketplace/user_guide/buyers/install-extension.html">Magento Docs</a> for further information.</p>
-<h3>Installing via Composer</h3>
-<p>To install the extension via Composer:</p>
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong>Enterprise edition</strong> for additional cost.</li>
+<li>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>Magento connector allows the downloading of source content and uploading of translations to/from Magento for the following content types:</p>
+<ul>
+<li>Products</li>
+<li>Categories</li>
+<li>Pages</li>
+<li>Blocks</li>
+</ul>
+<h2>Requirements</h2>
+<ul>
+<li>Magento CE 2.1 or higher</li>
+</ul>
+<h2>Magento Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the last modified date is detected for monitored files or an entire list.
+<ul>
+<li>Selected files are imported the very first time APC runs.</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Install Magento Extension</h2>
+<p>There are three ways to install the Memsource Connector extension into a Magento instance:</p>
+<ul>
+<li>through the Magento Marketplace</li>
+<li>by using <a href="https://getcomposer.org/">Composer</a>
+</li>
+<li>manually</li>
+</ul>
+<h4><strong>Installing via Magento Marketplace</strong></h4>
+<ol>
+<li>Open the <a href="https://marketplace.magento.com/memsource-magento2-connector.html" target="_blank" rel="noopener">Magento Marketplace entry</a> and add it to cart</li>
+<li>In the Magento Administration, go to <em>System</em><strong> </strong>and click on <strong>Web Setup Wizard</strong>
+</li>
+<li>Choose the <strong>Extension Manager</strong>
+</li>
+<li>Under the number of extensions to install, click on <strong>Review and Install</strong>
+</li>
+<li>Find the Memsource Connector, and click on the <strong>Install</strong> link</li>
+<li>Finish the installation</li>
+</ol>
+<p><strong>Note:</strong> For more information, see <a href="https://docs.magento.com/marketplace/user_guide/buyers/install-extension.html">Magento Documentation</a>.</p>
+<h4><strong>Installing via Composer</strong></h4>
+<p>Use the following commands to install via Composer:</p>
 <pre>composer require memsource/magento2-connector
 php bin/magento module:enable Memsource_Connector
 php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy</pre>
-<h3 class="western">Manual Installation</h3>
-<h4 class="western">If you are unable to use either Magento Marketplace or Composer, you can install the connector manually. To do this, follow the steps below:</h4>
-<p><strong>Step 1: </strong>Download the zip file from <font color="#0000ff"> <u><a href="https://github.com/Memsource/magento2-connector/releases">GitHub releases</a></u></font>.</p>
-<p><strong>Step 2: </strong>In your Magento 2 installation, extract the downloaded zip file into the folder app/code/Memsource/Connector</p>
-<p><strong>Step 3: </strong>Enable the extension and clear the cache:</p>
+<h4><strong>Manual Installation</strong></h4>
+<p>If unable to use either Magento Marketplace or Composer, the connector can be installed manually. <br>To install manually, follow these steps:</p>
+<ol>
+<li>Download the zip file from <a href="https://github.com/Memsource/magento2-connector/releases">GitHub releases</a>.</li>
+<li>In the Magento installation, extract the downloaded zip file into the folder <em>app/code/Memsource/Connector</em>
+</li>
+<li>Enable the extension and clear the cache with these commands:</li>
+</ol>
 <pre>php bin/magento module:enable Memsource_Connector
 php bin/magento setup:upgrade
 php bin/magento cache:flush
 php bin/magento setup:di:compile
 php bin/magento setup:static-content:deploy</pre>
-<h2>
-<a id="user-content-configuration" class="anchor" href="https://github.com/Memsource/magento2-connector#configuration"></a>Configuration</h2>
-<h3 class="western">Set up a Multilingual Website</h3>
-<p>Now it’s time to connect Memsource with Magento. First, make sure that you have correctly set up your websites, stores and store views. Sign in to the Magento Administration, go to <strong>Stores,</strong> and click on <strong>All Stores:</strong></p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022754712/mceclip8.png" width="601" height="325"></p>
-<p class="western"> </p>
-<p class="western">Every language is associated with a store view, so if you want to use two languages, you will need at least two store views. If you don’t have enough store views, you can add more by clicking the <strong>Create Store View</strong> link:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022783731/mceclip9.png" width="602" height="285"></p>
-<p class="western"> </p>
-<p class="western">Then, you have to provide some basic information about your new store view and click <strong>Save</strong>:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022784191/mceclip10.png" width="600" height="349"></p>
-<p class="western"> </p>
-<p class="western">Every store view should have a language associated with it. To set them up, go to <strong>Stores</strong> and click <strong>Configuration:</strong> </p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022754992/mceclip11.png" width="601" height="351"></p>
-<p class="western"> </p>
-<p class="western">Select your store view from the dropdown menu: </p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022784231/mceclip12.png" width="607" height="229"></p>
-<p class="western"> </p>
-<p class="western">Set the language for your store view. Update the Locale Options and click on <strong>Save Config:</strong></p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022755052/mceclip13.png" width="603" height="274"></p>
-<p> </p>
-<p class="western">Now, you'll need to obtain the URL and token for API calls. Do this in Magento 2 by going to <strong>Stores,</strong> clicking on <strong>Configuration,</strong> and selecting <strong>MEMSOURCE.</strong> On this page, you will see the URL and a token. The URL will be in the address bar, and the token can be found in the middle of the <em>General Configuration</em> section. Save these—you’ll them need to configure Memsource.</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022784271/mceclip14.png" width="603" height="281"></p>
-<h3 class="western">Memsource Configuration</h3>
-<p class="western">Once you have the URL and the token, open Memsource and go to <strong>Setup. </strong>Click on <strong>Integrations,</strong>  <strong>Connectors, </strong> and then <strong>New:</strong> </p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022755112/mceclip15.png" width="605" height="244"></p>
-<p class="western"> </p>
-<p class="western">Fill in the form with your URL and Token from Magento 2 and click on <strong>Test connection.</strong> Then, choose the source website, store, and store view:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022755192/mceclip16.png" width="601" height="325"></p>
-<p class="western"> </p>
-<p class="western">If everything is successful, you should see your Magento account in the connectors list:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022755212/mceclip17.png" width="622" height="198"></p>
-<h2 class="western">Usage</h2>
-<p class="western">Now you can create a project (or choose an existing one) for content translation, and create a new job:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022784391/mceclip18.png" width="605" height="316"></p>
-<p class="western"> </p>
-<p class="western">For translating Magento content, click on <strong>Add from Online Repository</strong> and choose your connector. Then, choose the content you want to translate:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022755252/mceclip19.png" width="601" height="465"></p>
-<p class="western"> </p>
-<p class="western">Finally, confirm the job creation: </p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022755292/mceclip20.png" width="602" height="355"></p>
-<p class="western"> </p>
-<p class="western">After translation, you can upload the content back to Magento:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022755352/mceclip21.png" width="604" height="331"></p>
-<p class="western"> </p>
-<p class="western">In Magento Administration, go to the Products list and filter by the store view that was used as a target. You should then see your translated product:</p>
-<p class="western"><img src="https://help.memsource.com/hc/article_attachments/360022784511/mceclip22.png" width="607" height="272"></p>
+<h2>Connect to Magento</h2>
+<h4><strong>Magento Settings:</strong></h4>
+<ol>
+<li>In the Magento Administration, go to <em>Stores</em> and click on <strong>All Stores</strong>.</li>
+<li>Click <strong>Create Store View</strong> to create a separate view for every language.</li>
+<li>To associate language with a store go to <em>Stores</em> and click <strong>Configuration</strong>, select the <strong>Store View</strong> from the dropdown menu, and update the <em>Locale Options.</em>
+</li>
+<li>Save the configuration.</li>
+<li>Go to <em>Stores,</em> click on <strong>Configuration</strong>, and select <strong>MEMSOURCE.</strong>
+</li>
+<li>Copy the URL in the browser address bar and the <strong>Token</strong> from the <em>General Configuration</em> section.</li>
+</ol>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol>
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Magento</em>.</li>
+<li>Enter the <strong>Magento site URL </strong>(including the protocol) and the <strong>Memsource plugin token</strong>.</li>
+<li>Click <strong>Test connection</strong>.<br> A checkmark will appear if the connection was successful and a new configuration option. A red exclamation point will appear with an error message if it wasn't.</li>
+<li>Select the <strong>Website</strong>, <strong>Store</strong>, and <strong>Source store view</strong>.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default folder is required when connecting to a Magento, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>
