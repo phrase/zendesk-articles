@@ -155,3 +155,15 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 <li>Once all files in the AEM job are accepted, the status changes to <em>Completed</em>.</li>
 </ol>
 <p>For more details on creating translation projects using the <em>References</em> Panel, see the <a href="https://docs.adobe.com/content/help/en/experience-manager-64/administering/introduction/tc-manage.html" target="_blank" rel="noopener">Managing Translation Projects</a> section of the Adobe documentation.</p>
+<h2>Custom Language Mapping</h2>
+<p>Follow these steps to map AEM languages to different languages in Memsource (e.g. zh to zh_tw). The mapping applies to both source and target languages:</p>
+<ol>
+<li>Open CRXDE (<code>/crx/de/index.jsp</code>).</li>
+<li>Browse to the <code>/apps/memsource-connector/language-mapping/</code> folder.</li>
+<li>Create a new node.</li>
+<li>Use AEM language code as the <strong>Name</strong> (e.g. zh), keep <strong>Type</strong>: <em>nt:unstructured.</em>
+</li>
+<li>Add property: <br><strong>Name</strong>: <em>memsourceLanguage</em> <br><strong>Type</strong>: <em>String</em> <br><strong>Value</strong>: Memsource language code (e.g. zh_tw)</li>
+<li>Click <strong>Save All.</strong>
+</li>
+</ol>

@@ -1,32 +1,61 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li><strong>Enterprise edition</strong></li>
+<li>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
 <p>TYPO3 is a free and open-source web content management system written in PHP.</p>
-<p>TYPO3, along with Drupal, Joomla! and WordPress, are popular content management systems.</p>
-<p>By using a TYPO3 connector, users translate the page content of the TYPO3 CMS, e.g., standard pages. In a Memsource project, pages are manually selected for translation and then manually uploaded back to a TYPO3 site. <a href="https://help.memsource.com/hc/en-us/articles/115003460931-Automated-Project-Creation">Automated Project Creation</a> can be configured to download/upload the files automatically.</p>
 <h2>Requirements</h2>
 <ul>
 <li>TYPO3 Version: 8.7 or higher</li>
 <li>PHP Version: 7.0 or higher</li>
 </ul>
-<p>Content from Typo3 is always imported as HTML files.</p>
-<h2>Set up the Memsource Connector in your TYPO3 CMS</h2>
+<p>Content from TYPO3 is always imported as HTML files.</p>
+<h2>TYPO3 Connector Use Cases</h2>
+<p>There are a number of use cases for the connector.</p>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the <strong>last modified date</strong> is detected for monitored documents.
+<ul>
+<li>Selected documents are imported the very first time APC runs.</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to TYPO3</h2>
+<h4><strong>TYPO3 Settings:</strong></h4>
 <ol>
-<li>Download the Memsource Connector from <a href="https://extensions.typo3.org/extension/memsource_connector/" target="_blank" rel="noopener">TYPO3 extensions page</a> and install it in Typo3 CMS.</li>
-<li>Enable the Memsource extension in TYPO3 <em>Admin Tools &gt; Extensions</em>.</li>
-<li>Get the Memsource Connector Token in the TYPO System by clicking on <strong>Memsource</strong>. Debug mode and download logs are enabled on this page.</li>
-<li>Setup target Languages in the <em>List</em> section in TYPO3</li>
+<li>In the left-hand menu, go to <em>ADMIN TOOLS</em><strong> </strong>and click on <strong>Extensions.</strong>
+</li>
+<li>Select <em>Get Extensions</em> from the drop-down list at the top of the window, and search for <em>memsource connector</em> (related <a href="https://extensions.typo3.org/extension/memsource_connector/" target="_blank" rel="noopener">extensions page</a>).</li>
+<li>Install and enable the extension<em>.</em>
+</li>
+<li>Get the <strong>Memsource Connector Token</strong> from the <strong>Memsource</strong> page in the <em>SYSTEM</em><strong>  </strong>section.</li>
+<li>Setup target languages in the <em>List</em> section in TYPO3. <br>See <a href="https://docs.typo3.org/typo3cms/EditorsTutorial/Languages/Index.html" target="_blank" rel="noopener">Working with Languages</a> in TYPO3 documentation for more information.</li>
 </ol>
-<h2>Set up the TYPO3 Connector in Memsource</h2>
-<p>After plugin is set up in TYPO3, log in to your Memsource account and follow these steps:</p>
+<h4><strong>Memsource Settings:</strong></h4>
 <ol>
-<li>From the Memsource Setup page, click on <strong>Connectors</strong> under the <em>Integrations </em>section and select <strong>New.</strong>
+<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>TYPO3.</em>
 </li>
-<li>Select the <em>TYPO3</em> option.</li>
-<li>Enter the URL of the TYPO3 CMS (for example <a href="http://memsourcedemo.com/typo3-v8">http://memsourcedemo.com/typo3-v8</a>) in the <em>Host</em> field and the Memsource Connector Token in the <em>Token</em> field.</li>
-<li>Enter the source language. <br>
-<div class="callout callout--success callout--dashed">
-<h4 class="callout__title">Note</h4>
-TYPO3 will not store this information</div>
-</li>
-<li>Click <strong>Test connection</strong>. <br>Memsource connects to the TYPO3 site and displays a list of target languages configured in the TYPO3 instance.</li>
-<li>
-<strong>Save</strong> the connector.<br>The connector is added to the list on the <em>Connectors</em> page.</li>
+<li>Enter the host of the TYPO3 CMS, including the protocol (e.g. http://memsourcedemo.com/typo3-v8), in the <strong>Host</strong> field.</li>
+<li>Enter the Memsource Connector Token in the <strong>Token</strong> field.</li>
+<li>Click <strong>Test connection</strong>.<br> A list of languages configured in TYPO3 will appear if the connection was successful. A red exclamation point will appear with an error message if it wasn't.</li>
+<li>Enter the source language. <br>TYPO3 will not store this information.</li>
+<li>Click<strong> Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default folder is required when connecting to a TYPO3, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>
+<h2>Troubleshooting</h2>
+<h4>Debug Mode</h4>
+<p>When reporting an issue to Memsource support please include the log file.</p>
+<ol>
+<li>In the left-hand menu, go to <em>SYSTEM</em><strong> </strong>and click on <strong>Memsource</strong>.</li>
+<li>Click <strong>Enable debug mode</strong>.</li>
+<li>Reproduce the issues</li>
+<li>Download the log by clicking the <strong>Download logs</strong> button.</li>
+<li>Turn off the debug mode and optionally empty the log by clicking the <strong>Clear logs</strong> button.</li>
 </ol>
