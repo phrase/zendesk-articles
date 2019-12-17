@@ -58,18 +58,19 @@ php bin/magento module:enable Memsource_Connector
 php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy</pre>
 <h4><strong>Manual Installation</strong></h4>
-<p>If unable to use either Magento Marketplace or Composer, the connector can be installed manually. <br>To install manually, follow these steps:</p>
+<p>If unable to use either Magento Marketplace or Composer, the connector can be installed manually.<br> To install manually, follow these steps:</p>
 <ol>
 <li>Download the zip file from <a href="https://github.com/Memsource/magento2-connector/releases">GitHub releases</a>.</li>
 <li>In the Magento installation, extract the downloaded zip file into the folder <em>app/code/Memsource/Connector</em>
 </li>
-<li>Enable the extension and clear the cache with these commands:</li>
-</ol>
+<li>Enable the extension and clear the cache with these commands:
 <pre>php bin/magento module:enable Memsource_Connector
 php bin/magento setup:upgrade
 php bin/magento cache:flush
 php bin/magento setup:di:compile
 php bin/magento setup:static-content:deploy</pre>
+</li>
+</ol>
 <h2>Connect to Magento</h2>
 <h4><strong>Magento Settings:</strong></h4>
 <ol>
@@ -93,3 +94,13 @@ php bin/magento setup:static-content:deploy</pre>
 <li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
 </ol>
 <p>If a default folder is required when connecting to a Magento, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>
+<h2>Troubleshooting</h2>
+<h4>Debug Mode</h4>
+<p>When reporting an issue to Memsource support please include the log file. The file contains all API calls.</p>
+<ol>
+<li>Go to <em>Stores,</em> click on <strong>Configuration</strong>, and select <strong>MEMSOURCE</strong>.</li>
+<li>Under <em>Configuration</em>, set the <strong>Debug Mode</strong> to <em>Yes</em>. Save the configuration.</li>
+<li>Reproduce the issues</li>
+<li>Download <code>/var/log/memsource_connector.log</code> by clicking the <em>Download</em> link under the <strong>Debug Mode</strong> setting.</li>
+<li>Turn off the debug mode and optionally empty the log by clicking the <em>Empty</em> link.</li>
+</ol>
