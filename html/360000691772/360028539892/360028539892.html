@@ -18,7 +18,7 @@
 <h2>Set up the Connector in Sitecore</h2>
 <p>In order to set up the connector, you'll need to have your Sitecore Administrator <a href="https://doc.sitecore.com/developers/91/platform-administration-and-architecture/en/enable-https-for-core-roles.html" target="_self">enable SSL</a> and enable Rest API.</p>
 <p>To enable Rest API, you'll need to do the following:</p>
-<p>In the file <code>{SITECORE_ROOT}Website\App_Config\Include\Sitecore.ItemWebApi.config</code> (e.g.: <code>C:\inetpub\wwwroot\SiteCore\Website\App_Config\Include\Sitecore.ItemWebApi.config</code>) set <code>itemwebapi.mode</code> and <code>itemwebapi.access</code>.</p>
+<p>In the file <code>{SITECORE_ROOT}Website\App_Config\Include\Sitecore.ItemWebApi.config</code> <br>(e.g.: <code style="font-size: 15px;">C:\inetpub\wwwroot\SiteCore\Website\App_Config\Include\Sitecore.ItemWebApi.config</code>)<br>set <code>itemwebapi.mode</code> and <code>itemwebapi.access</code>.</p>
 <p>After this, restart the server/service:</p>
 <pre>&lt;site name="website"&gt;
     &lt;patch:attribute name="itemwebapi.mode"&gt;StandardSecurity&lt;/patch:attribute&gt;
