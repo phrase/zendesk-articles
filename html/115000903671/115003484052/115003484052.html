@@ -20,17 +20,17 @@
 <th class="wysiwyg-text-align-center" style="width: 64.7245px;">Instant QA</th>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Empty Target</strong></td>
+<td style="width: 154px;"><strong>Empty target</strong></td>
 <td style="width: 480.276px;">The target contains no characters or tags.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Trailing Punctuation</strong></td>
+<td style="width: 154px;"><strong>Trailing punctuation</strong></td>
 <td style="width: 480.276px;">Trailing punctuation is different in the source and target.<br> For example, the source ends with "." but the target does not or vice-versa.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Inconsistent Translations</strong></td>
+<td style="width: 154px;"><strong>Inconsistent translations</strong></td>
 <td style="width: 480.276px;">
 <ul>
 <li>A segment with an identical source but a different target precedes the checked segment.</li>
@@ -41,12 +41,12 @@
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Newer Version in a Preceding workflow Step Available</strong></td>
+<td style="width: 154px;"><strong>Newer version in a preceding workflow step available</strong></td>
 <td style="width: 480.276px;">Checks whether newer versions of segments exist in preceding Workflow steps.<br> For example, a translator has modified a segment in the Translation Workflow step after it was revised in the Revision Workflow step.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Missing Numbers</strong></td>
+<td style="width: 154px;"><strong>Missing numbers</strong></td>
 <td style="width: 480.276px;">The number in the source is not present in the target.<br> For example, the source has the phrase "1 and 2", but the target reads "1 and 3".</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
@@ -56,47 +56,47 @@
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Multiple Spaces</strong></td>
+<td style="width: 154px;"><strong>Multiple spaces</strong></td>
 <td style="width: 480.276px;">There are multiple spaces in the target but not in the source.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Leading and Trailing Spaces</strong></td>
+<td style="width: 154px;"><strong>Leading and trailing spaces</strong></td>
 <td style="width: 480.276px;">There is a leading or trailing space in the target but not in the source.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Tags &amp; Formatting</strong></td>
+<td style="width: 154px;"><strong>Tags &amp; formatting</strong></td>
 <td style="width: 480.276px;">Tags/formatting are missing or invalid, or there are missing or redundant line breaks.<br> Example: the source contains "{1} {2}" but the target reads "{1}".</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Inconsistent Tag Content</strong></td>
+<td style="width: 154px;"><strong>Inconsistent tag content</strong></td>
 <td style="width: 480.276px;">The tag content between the source and its corresponding target tag differ.<br> For example, the source shows "&lt;a href="<a class="external free" href="http://bbc.co.uk/" rel="nofollow">http://bbc.co.uk</a>"&gt;" but the target contains "&lt;a href="http://"&gt;".</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Empty Tag Content</strong></td>
+<td style="width: 154px;"><strong>Empty tag content</strong></td>
 <td style="width: 480.276px;">The target tag content is empty, while the source tag content is not.<br> For example, the source reads "&lt;a href="<a class="external free" href="http://bbc.co.uk/" rel="nofollow">http://bbc.co.uk</a>"&gt;" but the target shows "".</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Tags, Joined Segments</strong></td>
+<td style="width: 154px;"><strong>Tags-joined segments</strong></td>
 <td style="width: 480.276px;">The number of {j} tags is different in the source and target.<br> For example, the source is "xxx{j}yyy" but the target is "xxx yyy".</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>No Text Between the Tags</strong></td>
+<td style="width: 154px;"><strong>No text between the tags</strong></td>
 <td style="width: 480.276px;">There is a paired tag with no text between the tags in the target but not in the source.<br> For example, there is {1&gt;abc&lt;1} in the source and {1&gt;&lt;1} in the target.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Nested Tags</strong></td>
+<td style="width: 154px;"><strong>Nested tags</strong></td>
 <td style="width: 480.276px;">Paired tags in the target are misplaced.<br> For example, there is {1&gt;{2&gt;abc&lt;2}{3&gt;abc&lt;3}{4&gt;&lt;4}&lt;1} in the source and {1&gt;{2&gt;abc&lt;2}{3&gt;abc{4&gt;&lt;3}&lt;4}&lt;1} in the target.<br> This option is disabled by default, but it is important to enable it for projects with Excel files.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>XLIFF Tags</strong></td>
+<td style="width: 154px;"><strong>XLIFF tags</strong></td>
 <td style="width: 480.276px;">Paired tags (such as <em>bpt</em> and <em>ept</em>) are in the incorrect order in the completed target file.<br> For example, the source contains "bpt bpt ept ept" and the target contains "bpt ept ept bpt".</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
@@ -111,13 +111,7 @@ Note that only terms within the source will be checked.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Ignore not approved terms</strong></td>
-<td style="width: 480.276px;">This will ignore terms that are not considered <em>approved.</em>
-</td>
-<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
-</tr>
-<tr>
-<td style="width: 154px;"><strong>Forbidden Terms Without a Source</strong></td>
+<td style="width: 154px;"><strong>Forbidden terms without a source</strong></td>
 <td style="width: 480.276px;">
 <p>This is based only on target terms with no source term.</p>
 </td>
@@ -131,42 +125,32 @@ Note that only terms within the source will be checked.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Not Confirmed Segments</strong></td>
+<td style="width: 154px;"><strong>Not confirmed segments</strong></td>
 <td style="width: 480.276px;">Checks to make sure each segment is confirmed.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">No</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Unresolved Conversation</strong></td>
+<td style="width: 154px;"><strong>Unresolved conversation</strong></td>
 <td style="width: 480.276px;">Ensures that no segment contains an unresolved comment in a conversation.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">No</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Maximum Target Segment Length in Characters</strong></td>
+<td style="width: 154px;"><strong>Maximum target segment length in characters</strong></td>
 <td style="width: 480.276px;">The target segment length is greater than the given parameter (default 100000).</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Maximum Target Segment Length in % of Source</strong></td>
+<td style="width: 154px;"><strong>Maximum target segment length in % of source</strong></td>
 <td style="width: 480.276px;">The target segment length is greater than the given parameter (default 130%).</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Maximum Target Length as Set During Job Creation</strong></td>
-<td style="width: 480.276px;">This is imported from the original file or can be set with the <strong>Segmentation and Segment Length</strong> import option.</td>
-<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
-</tr>
-<tr>
-<td style="width: 154px;"><strong>Not Allowed</strong></td>
+<td style="width: 154px;"><strong>Not allowed</strong></td>
 <td style="width: 480.276px;">The target contains strings that are not allowed.<br> Characters, or alternatively, utf-8 codes, can be entered as strings that are <em>not allowed. </em>Numerous strings can be entered this way, separated by commas.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Exclude locked segments from QA</strong></td>
-<td style="width: 480.276px;">If you have Memsource Editor only and thus cannot edit the project properties, the only solution is to coordinate with a Project Manager and ask them to adjust the QA checks in such a way that they deliver relevant results.</td>
-<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
-</tr>
-<tr>
-<td style="width: 154px;"><strong>Target Text Identical with Source One</strong></td>
+<td style="width: 154px;"><strong>Target text identical with source one</strong></td>
 <td style="width: 480.276px;">
 <ul>
 <li>This is a QA check for text copied from the source to the target.</li>
@@ -174,11 +158,6 @@ Note that only terms within the source will be checked.</td>
 <li>Segments translated using the Memsource <strong>Non-translatables</strong> feature are ignored in this QA check.</li>
 </ul>
 </td>
-<td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
-</tr>
-<tr>
-<td style="width: 154px;"><strong>Ignore in All Workflow Steps</strong></td>
-<td style="width: 480.276px;"> </td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
@@ -200,17 +179,12 @@ Note that only terms within the source will be checked.</td>
 </td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Extra Numbers in Target</strong></td>
+<td style="width: 154px;"><strong>Extra numbers in target</strong></td>
 <td style="width: 480.276px;">The target contains an extra number that the source does not.</td>
 <td class="wysiwyg-text-align-center" style="width: 64.7245px;">Yes</td>
 </tr>
 <tr>
-<td style="width: 154px;"><strong>Linguists may not set jobs with QA warnings to Completed</strong></td>
-<td style="width: 480.276px;">Use this if you want to force your Providers (Linguists and Vendors) to run a QA check and to resolve all QA warnings. They won't be able to set the job to <em>Completed</em> otherwise.</td>
-<td class="wysiwyg-text-align-center" style="width: 64.7245px;">--</td>
-</tr>
-<tr>
-<td style="width: 154px;"><strong>REGEXP</strong></td>
+<td style="width: 154px;"><strong>Regexp</strong></td>
 <td style="width: 480.276px;">
 <ul>
 <li>This section can be used to define checks based on Regular Expressions as well as Descriptions that will be displayed in the Editors when such an issue is identified.</li>
