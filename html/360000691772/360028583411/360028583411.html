@@ -23,19 +23,19 @@
 <li>Set up <a href="https://help.memsource.com/hc/en-us/articles/360015039031" target="_self">Continous Jobs</a> to have Memsource monitor selected files for changes.</li>
 <li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
 </ul>
-<div class="callout callout--success callout--dashed">
-<h4 class="callout__title">Use <a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git connector</a> to connect to Bitbucket if:</h4>
+<div class="callout callout--info callout--dashed">
+<span class="callout__title">If requirements are:</span>
 <ul>
-<li>Limiting Memsource access to a single repository is required.</li>
+<li>Limiting Memsource access to a single repository.</li>
 <li>Using an SSH key for authentication.</li>
-<li>Monitoring an entire subdirectory for a change in <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> is required.</li>
-<li>Detection of file changes based on Last modified date as opposed to just file size is required.</li>
+<li>Monitoring an entire subdirectory for a change in <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a>. </li>
+<li>Detection of file changes based on Last modified date as opposed to just file size.</li>
 </ul>
-</div>
+Use <a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git connector</a> to connect to Bitbucket</div>
 <h2>Connect to Bitbucket Cloud</h2>
 <h4><strong>Bitbucket Cloud Settings:</strong></h4>
-<p>Log in to Bitbucket Cloud in the same browser used to connect to Memsource.</p>
 <ol>
+<li>Log in to Bitbucket Cloud in the same browser used to connect to Memsource.</li>
 <li>Click on <strong>Your profile and settings </strong>in the lower-left hand corner and select <strong>Bitbucket settings. </strong>
 </li>
 <li>Under <em>Access Management, </em>select <strong>App Passwords</strong> and click on <strong>Create app password. </strong>
@@ -48,18 +48,11 @@
 <li>Repositories: <em>Write, Admin</em>.</li>
 </ul>
 </li>
-<li>Click <strong>Create.</strong><br> This generates a password used to enter into the Memsource connector configuration.
-<div class="callout callout--danger callout--dashed">
-<h4 class="callout__title">Important:</h4>
-The token is only visible at this stage and will not be visible again if the window is closed.</div>
-</li>
+<li>Click <strong>Create.</strong><br> This generates a password used to enter into the Memsource connector configuration.<br> The token is only visible at this stage and will not be visible again if the window is closed.</li>
 </ol>
 <h4><strong>Memsource Settings:</strong></h4>
-<div class="callout callout--success callout--dashed">
-<h4 class="callout__title">Note</h4>
-In some browsers, pop-ups must be enabled in the browser in order to connect.</div>
 <ol>
-<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
+<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors.</strong><br> The <em>Connectors</em> page opens.</li>
 <li>Click <strong>New.<br></strong>The <em>Create Connector</em> page opens.</li>
 <li>Provide a name for the connection and change the <strong>Type</strong> to <em>Bitbucket Cloud</em>.</li>
 <li>Click <strong>Connect to Bitbucket</strong>.<strong><br></strong>A popup window or a new tab will appear requesting authorization.</li>
