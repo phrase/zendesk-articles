@@ -1,23 +1,26 @@
-<div class="callout">
-<strong>Available in:</strong> <strong class="color-primary">Enterprise edition</strong>
-<p>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</p>
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong>Enterprise edition<br></strong>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
 </div>
 <p>The Memsource Translation Plugin for Adobe AEM 6.2, AEM 6.3, and AEM 6.4 enables users of Memsource to link their Memsource accounts to multilingual sites created using the AEM CMS system.<br> For more information about Translating Content for Multilingual Sites, see <a href="https://docs.adobe.com/content/help/en/experience-manager-64/administering/introduction/translation.html" target="_blank" rel="noopener">Adobe AEM documentation</a>. </p>
 <h2>Configure Memsource</h2>
 <h3>Configure In-Context Preview</h3>
 <p>The In-context Preview feature offers a real-time preview of original or translated text in both the Memsource Editor for Web and Memsource Editor for Desktop.</p>
 <p>In order for Memsource to offer the real-time preview, it must have access to unpublished pages in an on-premise AEM author node.<br> <br> <strong>Memsource requirements:</strong></p>
-<ul>
+<ul class="list-bullet">
 <li>Pass through the enterprise firewall to access the on-premise AEM installation</li>
 <li>Authenticate into the AEM authoring environment</li>
 </ul>
-<h4><strong>Configure the Firewall</strong></h4>
+<h4><strong>Firewall Configuration</strong></h4>
 <ul>
 <li>AEM installation must be accessible from the following IP addresses:<br> 34.243.87.13, 34.248.197.209, 108.129.22.31, 3.248.158.93</li>
 <li>AEM domain name must be able to be resolved externally.</li>
 </ul>
 <h4><strong>Set up AEM Authentication</strong></h4>
-<ol>
+<ol class="list-colored">
 <li>Create an AEM user with minimum permissions required to view unpublished pages.</li>
 <li>In Memsource, from the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <strong><em>Connectors</em></strong>.<br> The <em>Connectors</em> page opens.</li>
 <li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
@@ -27,12 +30,12 @@
 <li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
 </ol>
 <div class="callout callout--success callout--dashed">
-<h4 class="callout__title">Note:</h4>
+<span class="callout__title">Note:</span>
 <p>Some HTML tags present a risk and the Memsource Editors remove them from this HTML when displaying the preview. This is to ensure user's data privacy and security.</p>
 Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, OBJECT</code> or <code>background-image</code> CSS property</div>
 <h3>Configure Translation Workflow</h3>
 <p>Memsource provides a highly-configurable workflow engine allowing associations with AEM jobs, specific net rates schemes, due dates schemes, price lists, workflows steps and more.<br> Follow these steps to configure processing of AEM jobs:</p>
-<ol>
+<ol class="list-colored">
 <li>Create a <a href="https://help.memsource.com/hc/en-us/articles/115003483952" target="_self"><strong>Project Template</strong></a> configured on your needs.<br> Under <em>Access and Security</em> set the <strong>Allow loading external content in editors</strong>.<br> Apply the following <strong>XML File Import Settings</strong>:<img class="img250" src="https://pages.memsource.com/hc/AEM_XML_Import_Settings.png"> </li>
 <li>Create a <a href="https://help.memsource.com/hc/en-us/articles/360001388091" target="_self"><strong>Service</strong></a>.
 <ul>
@@ -66,7 +69,7 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 </div>
 </div>
 <p>Create a new configuration and enter the following information:</p>
-<ol>
+<ol class="list-colored">
 <li>
 <strong>Memsource Home URL:</strong> The default URL is <a href="https://cloud.memsource.com/web/">https://cloud.memsource.com/web/</a> but can be different if you or the LSP is using a Custom URL.</li>
 <li>
@@ -100,12 +103,12 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 <li>
 <em>Translate page assets</em><strong> </strong>should be set to <strong>Do not translate.</strong>
 </li>
-<li>On the<strong><em> </em></strong><em>Assets</em><strong> </strong>Tab, you can also set the <em>Translation Workflow</em><strong> </strong>to <strong>Do not translate.</strong>
+<li>On the<strong><em> </em></strong><em>Assets</em><strong> </strong>Tab, set the <em>Translation Workflow</em><strong> </strong>to <strong>Do not translate.</strong>
 </li>
 </ul>
 <p>If a project still contains non-translatable assets or reference materials, mark and<strong> </strong>delete them directly in Memsource.</p>
 <h3>Apply Translation Integration to Content</h3>
-<ol>
+<ol class="list-colored">
 <li>Navigate to the root of the content to translate in Memsource, select it and click <strong>Properties</strong>.</li>
 <li>On the <strong>Cloud Services</strong> Tab, select the newly created configuration as the <strong>Translation Integration</strong>.</li>
 <li>Click on the <strong>Add configuration</strong> label and select the <strong>Memsource Translation Plugin for AEM.</strong> <br> A dropdown menu is displayed with previously created configurations.</li>
@@ -118,7 +121,7 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 <p>When adding content from these pages, only translatable content will be added. If a project is created from the <em>References</em> Panel, it will be automatically set up to use the cloud configuration associated with the root page.</p>
 <h2>Submit Content for Translation</h2>
 <p>To submit content for translation, create a translation project in AEM. Project can be created manually from the Projects section or use built-in AEM workflows to minimize the effort.<br> To prepare a project for submission to Memsource through the built-in workflows, follow these steps:</p>
-<ol>
+<ol class="list-colored">
 <li>From the <strong>Sites</strong> view, navigate to the page, select it, and open the <strong>References Panel</strong>
 </li>
 <li>Click <strong>Language Copies</strong> and expand the <strong>Create &amp; Translate</strong> section at the bottom of the rail</li>
@@ -143,9 +146,8 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 <li>Click the ellipsis on the first tile to open the Advanced project settings.<br> If configured properly, configurations created in the steps above are referenced.</li>
 <li>To submit a job to Memsource, select <strong>Start</strong> from the job tile menu.<br> A new project will be created in Memsource within a few minutes
 <div class="callout callout--info callout--dashed">
-<h4 class="callout__title">Recommendation:</h4>
-<p>AEM polls for a job status update on a schedule that is configured in <strong>Translation Platform Configuration</strong> accessed via <strong>Web Console</strong>. Setting the <strong>Scheduler Cron</strong> property to run frequently (e.g. <code>0 0/5 * * * ? *</code> triggers a translation job status refresh every 5 minutes).</p>
-<p>You can also force AEM to pull by refreshing the project detail page.</p>
+<span class="callout__title">Recommendation:</span> AEM polls for a job status update on a schedule that is configured in <strong>Translation Platform Configuration</strong> accessed via <strong>Web Console</strong>. Setting the <strong>Scheduler Cron</strong> property to run frequently (e.g. <code>0 0/5 * * * ? *</code> triggers a translation job status refresh every 5 minutes).
+<p>Refreshing the project detail page forces an AEM pull.</p>
 </div>
 </li>
 <li>In Memsource, translate the product jobs and set their status to <em>Completed</em>.</li>
@@ -156,14 +158,15 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 </ol>
 <p>For more details on creating translation projects using the <em>References</em> Panel, see the <a href="https://docs.adobe.com/content/help/en/experience-manager-64/administering/introduction/tc-manage.html" target="_blank" rel="noopener">Managing Translation Projects</a> section of the Adobe documentation.</p>
 <h2>Custom Language Mapping</h2>
-<p>Follow these steps to map AEM languages to different languages in Memsource (e.g. zh to zh_tw). The mapping applies to both source and target languages:</p>
-<ol>
+<p>Follow these steps to map AEM languages to different languages in Memsource (e.g. zh to zh_tw). The mapping applies to both source and target languages. </p>
+<ol class="list-colored">
 <li>Open CRXDE (<code>/crx/de/index.jsp</code>).</li>
 <li>Browse to the <code>/apps/memsource-connector/language-mapping/</code> folder.</li>
 <li>Create a new node.</li>
 <li>Use AEM language code as the <strong>Name</strong> (e.g. zh), keep <strong>Type</strong>: <em>nt:unstructured.</em>
 </li>
-<li>Add property: <br><strong>Name</strong>: <em>memsourceLanguage</em> <br><strong>Type</strong>: <em>String</em> <br><strong>Value</strong>: Memsource language code (e.g. zh_tw)</li>
+<li>Add property:<br> <strong>Name</strong>: <em>memsourceLanguage</em> <br> <strong>Type</strong>: <em>String</em> <br> <strong>Value</strong>: Memsource language code (e.g. zh_tw)</li>
 <li>Click <strong>Save All.</strong>
 </li>
 </ol>
+<p>Un-mapped language codes are sent to Memsource as they are.</p>

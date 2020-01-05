@@ -1,14 +1,14 @@
 <div class="callout callout--transparent  callout--dashed">
 <h4 class="callout__title">Available in:</h4>
 <ul>
-<li><strong>Ultimate and Enterprise editions</strong></li>
-<li>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+<li>
+<strong>Ultimate and Enterprise editions<br></strong>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
 </ul>
 </div>
 <p>GitLab connector allows the downloading of source files and uploading of target files directly to/from the GitLab repository. The connector uses the GitLab API to implement the integration and allows access to all repositories associated with a GitLab account.</p>
 <h2>GitLab Connector Use Cases</h2>
 <p>There are a number of use cases for the connector:</p>
-<ul>
+<ul class="list-bullet">
 <li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
 </li>
 <li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</li>
@@ -24,39 +24,39 @@
 <li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
 </ul>
 <div class="callout callout--success callout--dashed">
-<h4 class="callout__title">Use <a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git connector</a> to connect to GitLab if:</h4>
+<h4 class="callout__title">If requirements are:</h4>
 <ul>
-<li>Limiting Memsource access to a single repository is required.</li>
+<li>Limiting Memsource access to a single repository.</li>
 <li>Using an SSH key for authentication.</li>
-<li>Monitoring a directory for a change in <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> is required.</li>
-<li>Detection of file changes based on Last modified date as opposed to just file size is required.</li>
+<li>Monitoring a directory for a change in <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a>.</li>
+<li>Detection of file changes based on Last modified date as opposed to just file size.</li>
 </ul>
+<h4>Use <a href="https://help.memsource.com/hc/en-us/articles/360022878812" target="_self">Git connector</a> to connect to GitLab</h4>
 </div>
 <h2>Connect to GitLab</h2>
 <h4><strong>GitLab Settings:</strong></h4>
 <p>Create an access token in the GitLab account.</p>
-<ol>
+<ol class="list-colored">
 <li>Log in to the GitLab account, navigate to <em>Settings</em> and click on <em>Access Tokens</em>.<br> The <em>Personal Access Tokens</em> screen opens.</li>
 <li>Fill in the <strong>Name</strong> and <strong>Expires at</strong> fields. Choose a longer time period so the token doesn't require frequent recreation.</li>
 <li>Under <em>Scopes,</em> check the <strong>api</strong> and <strong>read_user</strong> checkboxes.</li>
 <li>Click on <strong>Create personal access token</strong>. This generates a token needed to enter into the Memsource connector configuration.
-<div class="callout callout--danger callout--dashed">
-<h4 class="callout__title">Important:</h4>
-The token is only visible at this stage and cannot be reached afterward.</div>
+<ul>
+<li>The token is only visible at this stage and cannot be reached afterward.</li>
+</ul>
 </li>
 </ol>
 <h4><strong>Memsource Settings:</strong></h4>
-<div class="callout callout--success callout--dashed">
-<h4 class="callout__title">Note:</h4>
-In some browsers, pop-ups must be enabled in the browser in order to connect.</div>
-<ol>
-<li>From the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
+<ol class="list-colored">
+<li>From the <em style="font-size: 15px;">Setup</em><span style="font-size: 15px;"> page, scroll down to the </span><em style="font-size: 15px;">Integrations</em><span style="font-size: 15px;"> section. Click on </span><em style="font-size: 15px;">Connectors</em><span style="font-size: 15px;">.</span>
+</li>
+<li>The <em>Connectors</em> page opens.</li>
 <li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
 <li>Provide a name for the connection and change the <strong>Type</strong> to <em>GitLab</em>.</li>
 <li>Enter <strong>GitLab site URL</strong> (e.g <a href="https://gitlab.com/">https://gitlab.com/</a>) and the <strong>GitLab personal access token </strong>you have obtained from the GitLab site.
-<div class="callout callout--success callout--dashed">
-<h4 class="callout__title">Note:</h4>
-In order for Memsource Cloud to access the repository, it must be accessible from the Internet.</div>
+<ul>
+<li>In order for Memsource Cloud to access the repository, it must be accessible from the Internet.</li>
+</ul>
 </li>
 <li>Click <strong>Test Connections</strong>.<br> A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</li>
 <li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>

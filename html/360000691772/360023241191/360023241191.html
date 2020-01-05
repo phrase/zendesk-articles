@@ -2,8 +2,7 @@
 <h4 class="callout__title">Available in:</h4>
 <ul>
 <li>
-<strong>Enterprise edition</strong> for additional cost.</li>
-<li>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+<strong>Enterprise edition</strong> for additional cost.<br> Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
 </ul>
 </div>
 <p>Magento connector allows the downloading of source content and uploading of translations to/from Magento for the following content types:</p>
@@ -19,7 +18,7 @@
 </ul>
 <h2>Magento Connector Use Cases</h2>
 <p>There are a number of use cases for the connector:</p>
-<ul>
+<ul class="list-bullet">
 <li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
 </li>
 <li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository.</li>
@@ -33,13 +32,13 @@
 <h2>Install Magento Extension</h2>
 <p>There are three ways to install the Memsource Connector extension into a Magento instance:</p>
 <ul>
-<li>through the Magento Marketplace</li>
-<li>by using <a href="https://getcomposer.org/">Composer</a>
+<li>Through the Magento Marketplace</li>
+<li>Use <a href="https://getcomposer.org/">Composer</a>
 </li>
-<li>manually</li>
+<li>Manually</li>
 </ul>
 <h4><strong>Installing via Magento Marketplace</strong></h4>
-<ol>
+<ol class="list-colored">
 <li>Open the <a href="https://marketplace.magento.com/memsource-magento2-connector.html" target="_blank" rel="noopener">Magento Marketplace entry</a> and add it to cart</li>
 <li>In the Magento Administration, go to <em>System</em><strong> </strong>and click on <strong>Web Setup Wizard</strong>
 </li>
@@ -50,7 +49,7 @@
 <li>Find the Memsource Connector, and click on the <strong>Install</strong> link</li>
 <li>Finish the installation</li>
 </ol>
-<p><strong>Note:</strong> For more information, see <a href="https://docs.magento.com/marketplace/user_guide/buyers/install-extension.html">Magento Documentation</a>.</p>
+<p>For more information, see <a href="https://docs.magento.com/marketplace/user_guide/buyers/install-extension.html">Magento Documentation</a>.</p>
 <h4><strong>Installing via Composer</strong></h4>
 <p>Use the following commands to install via Composer:</p>
 <pre>composer require memsource/magento2-connector
@@ -59,7 +58,7 @@ php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy</pre>
 <h4><strong>Manual Installation</strong></h4>
 <p>If unable to use either Magento Marketplace or Composer, the connector can be installed manually.<br> To install manually, follow these steps:</p>
-<ol>
+<ol class="list-colored">
 <li>Download the zip file from <a href="https://github.com/Memsource/magento2-connector/releases">GitHub releases</a>.</li>
 <li>In the Magento installation, extract the downloaded zip file into the folder <em>app/code/Memsource/Connector</em>
 </li>
@@ -73,7 +72,7 @@ php bin/magento setup:static-content:deploy</pre>
 </ol>
 <h2>Connect to Magento</h2>
 <h4><strong>Magento Settings:</strong></h4>
-<ol>
+<ol class="list-colored">
 <li>In the Magento Administration, go to <em>Stores</em> and click on <strong>All Stores</strong>.</li>
 <li>Click <strong>Create Store View</strong> to create a separate view for every language.</li>
 <li>To associate language with a store go to <em>Stores</em> and click <strong>Configuration</strong>, select the <strong>Store View</strong> from the dropdown menu, and update the <em>Locale Options.</em>
@@ -84,7 +83,7 @@ php bin/magento setup:static-content:deploy</pre>
 <li>Copy the URL in the browser address bar and the <strong>Token</strong> from the <em>General Configuration</em> section.</li>
 </ol>
 <h4><strong>Memsource Settings:</strong></h4>
-<ol>
+<ol class="list-colored">
 <li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
 <li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
 <li>Provide a name for the connection and change the <strong>Type</strong> to <em>Magento</em>.</li>
@@ -97,7 +96,7 @@ php bin/magento setup:static-content:deploy</pre>
 <h2>Troubleshooting</h2>
 <h4>Debug Mode</h4>
 <p>When reporting an issue to Memsource support please include the log file. The file contains all API calls.</p>
-<ol>
+<ol class="list-colored">
 <li>Go to <em>Stores,</em> click on <strong>Configuration</strong>, and select <strong>MEMSOURCE</strong>.</li>
 <li>Under <em>Configuration</em>, set the <strong>Debug Mode</strong> to <em>Yes</em>. Save the configuration.</li>
 <li>Reproduce the issues</li>
