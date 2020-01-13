@@ -1,9 +1,9 @@
-<p>A webhook is a way in which Memsource can notify a 3rd-party system about certain events (for example, a job status that has been changed). It is an arbitrary URL which can handle HTTP POST requests. When you are logged in Memsource, webhooks can be configured in <strong>Setup</strong> by clicking on <strong>Webhooks </strong>in the <em>Integrations</em> section. </p>
+<p>Webhooks allow Memsource to notify 3rd-party systems about specified events. It is an arbitrary URL which handles HTTP POST requests.</p>
 <p>Webhooks can be selected for the following events:</p>
 <ul>
-<li>Job status has changed</li>
-<li>Job assigned</li>
+<li>Job status changed</li>
 <li>Job created</li>
+<li>Job assigned</li>
 <li>Job due date changed</li>
 <li><label for="events-PROJECT_CREATED">Project created</label></li>
 <li><label for="events-PROJECT_STATUS_CHANGED">Project status changed</label></li>
@@ -14,7 +14,18 @@
 <li><label for="events-ANALYSIS_CREATED">Analysis created</label></li>
 <li><label for="events-CONTINUOUS_JOB_UPDATED">Continuous job updated</label></li>
 </ul>
-<p>The requests are treated in the same way as callbacks in <a href="https://wiki.memsource.com/wiki/Memsource_API#Asynchronous_APIs">asynchronous APIs</a>. A JSON data structure is passed in the body of a POST request.</p>
+<h2>Configure Webhooks</h2>
+<p>To configure Webhooks, follow these steps:</p>
+<ol class="list-colored">
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Webhooks</strong>.<br> The <em>Webhooks</em> page opens.</li>
+<li>Click <strong>New.<br></strong>The <em>Create Webhook</em> page opens.</li>
+<li>Enter URL.</li>
+<li>Select events.</li>
+<li>Click <strong>Save</strong>.</li>
+<li>The Webhook is added to the list on the <em>Webhooks</em> page.</li>
+</ol>
+<h2>Webhook functionality</h2>
+<p>Requests are treated in the same way as callbacks in <a style="background-color: #ffffff;" href="https://wiki.memsource.com/wiki/Memsource_API#Asynchronous_APIs">asynchronous APIs</a>. A JSON data structure is passed in the body of a POST request.</p>
 <div class="alert alert-green">
 <pre>{
   event: "JOB_STATUS_CHANGED",
@@ -23,17 +34,17 @@
   ]
 }</pre>
 </div>
-<h2>Webhook Error</h2>
+<h3>Webhook Errors</h3>
 <p>Memsource monitors if the webhook callback was successfully received. If the webhook reception fails 100 times, it will be automatically deactivated.</p>
 <ul>
 <li>A message will appear in the Memsource UI in <strong>Setup</strong> under <strong>Webhooks</strong>
 </li>
 <li>An email notification will be sent to all Admins of the Memsource account</li>
 </ul>
-<h2>Example</h2>
+<h3>Example</h3>
 <p>For the purpose of this example, we have used a website called <a href="https://requestbin.com/" target="_blank" rel="noopener">RequestBin</a>. The site will provide a URL link that can be used in Memsource Integrations section.<br> <img class="img450" title="Webhook instance in Memsource Setup" src="https://pages.memsource.com/hc/setup_webhook.png" alt="Webhook in Memsource Setup"></p>
 <p>The next time a Job Status is changed or a Job is created in the connected Memsource account, the URL will receive the appropriate response from the system.<br> Please note that this is a simple example of webhooks at work. The actual usage can be more complex and the receiving of the response should be considered a signal for the connected application to perform certain actions.</p>
-<h2><span id="Events" class="mw-headline">Events</span></h2>
+<h3><span id="Events" class="mw-headline">Events</span></h3>
 <p>Below, you'll see examples of what it looks like when a job status has changed, when a job has been assigned, when one has been created, and when the due date for a job has been changed.</p>
 <ul>
 <li>Job status has changed</li>
