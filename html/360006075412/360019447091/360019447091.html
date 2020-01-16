@@ -1,16 +1,20 @@
-<div class="callout">
-<strong>Available in:</strong> <strong class="color-primary">Ultimate and Enterprise editions</strong><br>
-<p>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</p>
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong>Ultimate and Enterprise editions<br></strong>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
 </div>
 <p>Kibana is an open source workbench that allows for the visualization of data previously indexed in the Memsource analytics warehouse. </p>
-<p><strong>Note:</strong> Kibana version 4.1.6 is required to process data from Memsource. Download from the <a class="external text" style="background-color: #ffffff;" href="https://www.elastic.co/downloads/past-releases/kibana-4-1-6" rel="nofollow">Elastic website</a>.</p>
+<div class="callout callout--success callout--dashed">
+<span class="callout__title">Note:</span> Kibana version 4.1.6 is required to process data from Memsource. Download from the <a class="external text" style="background-color: #ffffff;" href="https://www.elastic.co/downloads/past-releases/kibana-4-1-6" rel="nofollow">Elastic website</a>. </div>
 <h2><span id="Downloading.2C_Installation_Start-Up" class="mw-headline">Installation</span></h2>
-<h3>Memsource steps:</h3>
+<h3>Memsource steps</h3>
 <ol>
 <li>From the <em>Setup</em> page, click <strong>Kibana</strong> under <em>Analytics and Reporting</em>.<br> The <em>Kibana</em> setup page opens.</li>
 <li>Click <strong>Setup Kibana Access</strong>.<br> A unique URL is generated that required to visualize data with Kibana.</li>
 </ol>
-<h3>Kibana steps:</h3>
+<h3>Kibana steps</h3>
 <ol>
 <li>Open the <em>kibana.yml</em> configuration file from Kibana <em>config</em> subfolder. </li>
 <li>Replace <em>elasticsearch_url</em> value (usually "<a class="external free" href="http://localhost:9200" rel="nofollow">http://localhost:9200"</a>) with the URL generated in the Memsource steps.</li>
@@ -24,12 +28,15 @@
 <li>Other O/S: double-click <strong>kibana</strong> (other users).</li>
 </ul>
 </li>
-<li>Verify setup.<br> The following is visible in the command prompt window:<br> <img class="img450" src="https://pages.memsource.com/hc/Kibana_Connected.png"><br> <strong>Note</strong>: Command prompt window must stay open to maintain connection to Kibana.</li>
+<li>Verify setup.<br> The following is visible in the command prompt window:<br> <img class="img450" src="https://pages.memsource.com/hc/Kibana_Connected.png"><br>
+<div class="callout callout--danger callout--dashed">
+<span class="callout__title"> Important:</span> Command prompt window must stay open to maintain connection to Kibana.</div>
+</li>
 <li>Enter <em>localhost:5601</em> into the address bar of a browser to access the visualization workbench.</li>
 </ol>
-<h2><span id="Configuring_Kibana" class="mw-headline">Configuring Kibana</span></h2>
-<ol>
-<li>Index patterns are required for visualization and are applied in <em>Settings</em> under the <em>Indices</em> menu.<br> The following index patterns are currently available:
+<h2><span id="Configuring_Kibana" class="mw-headline">Kibana Configuration</span></h2>
+<ul>
+<li>Index patterns are required for visualization and are applied in <em style="font-size: 15px;">Settings</em><span style="font-size: 15px;"> under the <em>I</em></span><em style="font-size: 15px;">ndices</em><span style="font-size: 15px;"> menu. </span>The following index patterns are currently available:
 <ul>
 <li>com.memsource.web.analytics.data.job (job.dateCreated)</li>
 <li>com.memsource.web.analytics.data.jobpart (jobPart.dateCreated)</li>
@@ -41,7 +48,7 @@
 </li>
 <li>When creating indexes, the expression in brackets represent the recommended Time-field name for the given index. Any or all of the indexes available can be configured.</li>
 <li>Once the indexes are registered, data can be visualized through the Visualize tab.</li>
-</ol>
+</ul>
 <h2><span id="Classification_of_Indexes" class="mw-headline">Index Classifications</span></h2>
 <ul>
 <li>Job index
@@ -76,5 +83,5 @@
 </li>
 </ul>
 <div class="callout callout--warning callout--dashed">
-<h4 class="callout__title">Tip</h4>
-A selection of <a href="https://help.memsource.com/hc/en-us/articles/360019133072" target="_self">configuration samples</a>.</div>
+<span class="callout__title">Tip:</span> A selection of <a href="https://help.memsource.com/hc/en-us/articles/360019133072" target="_self">configuration samples </a>
+</div>
