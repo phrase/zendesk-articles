@@ -1,46 +1,61 @@
 <h2>Renaming Files</h2>
-<p>File renaming is used to automatically rename downloaded (translated) files. It can be set up in the general Setup under <em>Project Settings </em>(affecting only newly created projects) or for individual projects (by going to the job and selecting <strong>Edit</strong>).</p>
-<p>The following macros are supported with the <strong>Rename completed files to</strong> option:</p>
+<p>File renaming automates the renaming of downloaded (translated) files. Access to the settings are found in the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page under <em>Project Settings </em>(affecting only newly created projects) or for individual projects by editing the specified job.</p>
+<p>Supported macros:</p>
 <ul>
 <li>
-<strong>{path}</strong> - This is only for files imported in ZIP format with a folder structure.</li>
+<strong>{path}</strong> - Only for files imported in ZIP format with a folder structure.</li>
 <li>
-<strong>{fileName}</strong> - It is also possible to remove characters from the original file name, using {filename[0:-3]} for example.</li>
-<li><strong>{sourceLang}</strong></li>
-<li><strong>{targetLang}</strong></li>
+<strong>{fileName}</strong> 
+<ul>
+<li>Characters can be removed from the original file name by using a negative integer {filename[0:-3]}.</li>
+</ul>
+</li>
+<li>
+<strong>{sourceLang} </strong>-Adds source language</li>
+<li>
+<strong>{targetLang} </strong>- Adds target language</li>
 <li><strong>{workflow}</strong></li>
 <li><strong>{status}</strong></li>
 <li>
-<strong>{date}</strong> - the date that the file was downloaded, in the PM's timezone</li>
+<strong>{date}</strong> - date of file download in the PM's timezone</li>
 <li>
-<strong>{time}</strong> - the time that the file was downloaded, in the PM's timezone</li>
+<strong>{time}</strong> - time of file download in the PM's timezone</li>
 <li>
-<strong>{userName}</strong> - of the assigned Linguist or Vendor. If multiple Linguists are assigned, the name will be empty.</li>
+<strong>{userName}</strong> - Adds username of the assigned Linguist or Vendor. If multiple Linguists are assigned, the name will be empty.</li>
 <li>
-<strong>{replaceExt[po]}</strong> - replaces the extension of the file. For example, the original file <em>test.POT</em> will be downloaded as <em>test.PO</em>. The extension will be replaced by the one in the [ ] brackets. Please note that changing the extension will not change the format itself. That is, renaming 'docx' to 'xlsx' will not change a Word file into an Excel file.</li>
+<strong>{replaceExt[xx]}</strong> - The file extension is replaced by that specified within [ ] brackets.
+<ul>
+<li>Example: If {replaceExt[txt]} is specified, the file <em>test.POT</em> is downloaded as <em>test.txt</em>.</li>
+<li>Changing extensions does not change the format itself; renaming 'docx' to 'xlsx' does not change a Word file into an Excel file. </li>
 </ul>
-<p> </p>
-<p>Here's an example of how this works. By copying the following script:</p>
-<p class="wysiwyg-indent4">{path}/{filename}-{sourceLang}-{targetLang}-{workflow}-{status}-{date}-{time}-{userName}</p>
-<p>You'll get a file named: </p>
-<p class="wysiwyg-indent4"><em>Completed file:</em> testing/TestFile-en_us-ja-T-C-20160110-0912-ling1.xlf</p>
-<p>If <strong>Rename completed files to</strong> is not selected in a project with multiple target languages, and the user decides to download multiple jobs with different targets, the downloaded ZIP file will have folders with language codes added.</p>
+</li>
+</ul>
+<h3>Example:</h3>
+<p>The following script:</p>
+<ul>
+<li>{path}/{filename}-{sourceLang}-{targetLang}-{workflow}-{status}-{date}-{time}-{userName}</li>
+</ul>
+<p>Produces: </p>
+<ul>
+<li>testing/TestFile-en_us-ja-T-C-20160110-0912-ling1.xlf</li>
+</ul>
+<p>If <em>Rename completed files to</em> is not selected in a project with multiple target languages, and the user decides to download multiple jobs with different targets, the downloaded ZIP file will have folders with language codes added.</p>
 <h2>Renaming Analyses</h2>
-<p>The default analysis name "Analysis #1", etc can be changed manually, or by using these macros:</p>
+<p>Default analysis name "Analysis #1, #2, etc." can be changed manually or by using these macros:</p>
 <ul>
 <li><strong>{projectName}</strong></li>
 <li>
-<strong>{sourceLang}</strong> - This results in a name with the source language name added (the same as it does with file renaming).</li>
+<strong>{sourceLang}</strong> - Adds source language</li>
 <li>
-<strong>{targetLang}</strong> - This results in a name with the target language added. If multiple languages are analyzed, the language will be empty.</li>
+<strong>{targetLang}</strong> - Adds target language. If multiple languages are analyzed, the language will be empty.</li>
 <li>
-<strong>{userName}</strong> - This will include the username of the assigned Linguist or Vendor. If multiple Linguists are assigned, the name will be empty.</li>
+<strong>{userName}</strong> - Adds username of the assigned Linguist or Vendor. If multiple Linguists are assigned, the name will be empty.</li>
 <li><strong>{workflow}</strong></li>
 <li><strong>{innerId}</strong></li>
 </ul>
-<p>These renaming patterns can be set up in multiple places:</p>
+<p>Renaming patterns can be set up in multiple places:</p>
 <ul>
-<li>The main Setup page (This will change the renaming patterns for the whole organization.)</li>
+<li>The main <em>Setup</em> (<span class="icon-sprite cog"> </span>) page (This will change the renaming patterns for the whole organization.)</li>
 <li>Inside of a project</li>
 <li>In a project template</li>
 <li>In the Analyze dialog window (when creating a new analysis)</li>
