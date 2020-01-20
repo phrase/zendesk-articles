@@ -1,13 +1,21 @@
-<p>Single Sign-on (SSO) allows Memsource users to log in to Memsource directly via a third-party application. Memsource enables integrations with identity providers (IdPs) compliant with SAML 2.0 protocol, including OneLogin. SSO is only available for Memsource users with Ultimate or Enterprise editions and can only be configured if you are logged in as an Administrator.</p>
-<h2>Configure Single Sign-On</h2>
-<p>Single Sign-On can be configured in the <strong>Setup</strong> of your Account.</p>
-<p>To enable SSO, first select the checkbox marked <strong>Enable SSO for your organization</strong>.</p>
-<p>Once SSO is enabled, a series of fields will appear which need to be filled in.</p>
-<p><img class="img450" src="https://pages.memsource.com/hc/SSO_configuration.png"></p>
-<p>The following fields will need to be filled in:</p>
-<ol>
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
 <li>
-<strong>Certificate Fingerprint</strong>: This is used to validate the authenticity of the IdP.<br><strong>Important:</strong> Depending on the way your fingerprint was generated, it can be delimited by either colons or spaces. If the authentication is not successful, please try switching the colons and spaces in the fingerprint to make sure that it is correctly created.</li>
+<strong>Ultimate and Enterprise editions<br></strong>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.  </li>
+</ul>
+</div>
+<p>Single Sign-on (SSO) allows Memsource users to log in to Memsource via third-party applications. Memsource enables integrations with identity providers (IdPs) compliant with the SAML 2.0 protocol.</p>
+<h2>Enabling Single Sign-On</h2>
+<p>Prerequisite: Administrator Login</p>
+<p>To enable Single Sign-On, follow these steps:</p>
+<ol>
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Single Sign-On</em> section. Click on <strong>Details</strong>.<br> The <em>Single Sign-On</em> page opens.</li>
+<li>Select the <strong>Enable SSO for your organization</strong> radio button.<br>Configuration details are presented.</li>
+<li>Complete the following fields:<br>The first five fields should be completed using information from an IdP provider. (For more information about configuring SSO for Onelogin, see <a class="external text" href="https://support.onelogin.com/hc/en-us/articles/115003638343-Configuring-SSO-for-SAML-Enabled-Apps" rel="nofollow">OneLogin documentation</a>.)<br>
+<ul>
+<li>
+<strong>Certificate Fingerprint</strong>: This is used to validate the authenticity of the IdP.<br>Depending fingerprint generation, it is delimited by either colons or spaces. If authentication is not successful, switch the colons and spaces in the fingerprint to ensure it is correctly applied.</li>
 <li>
 <strong>Certificate Fingerprint Algorithm</strong>: Select from SHA-1, SHA-256, SHA-384 or SHA-512.</li>
 <li>
@@ -20,25 +28,31 @@
 <strong>Landing URL (Optional)</strong>: Choose the URL of the web page that users will see when they log out of Memsource.</li>
 <li>
 <strong>Key User Identifier</strong>: Select whether users will identify themselves using a USERNAME or an EMAIL address. <strong>Note</strong>: Memsource requires a unique username by default, but users can opt to use the same email address multiple times. Choosing the EMAIL option will require users to use a unique email address.</li>
+</ul>
+</li>
+<li>Apply severity ratings.</li>
+<li>Click <strong>Save</strong>.<br>Settings will be applied to workflow steps in which LQA is enabled.</li>
 </ol>
-<p>Fields 1-5 should be completed using information from the IdP provider. (For Onelogin, you can find out more information about configuring SSO in the <a class="external text" href="https://support.onelogin.com/hc/en-us/articles/115003638343-Configuring-SSO-for-SAML-Enabled-Apps" rel="nofollow">OneLogin documentation</a>.)</p>
-<h2>SCIM Configuration</h2>
-<p>To configure SCIM properties in your identity provider, select the checkbox and then click <strong>Generate New Token</strong>. A unique token will appear in the SCIM Bearer Token field. Insert the SCIM Bearer Token and the SCIM Base URL into the relevant section of your identity provider settings. (For OneLogin, you can find SCIM configuration in the Configuration<strong> </strong>tab. See the <a class="external text" href="https://developers.onelogin.com/scim/create-app#configapp" rel="nofollow">OneLogin documentation</a> for more details.)</p>
-<p>Finally, click <strong>Save</strong> to save all the configuration information.</p>
-<p><img class="img450" src="https://pages.memsource.com/hc/SSO_SCIM_configuration.png"></p>
-<h2>User Management</h2>
-<p>In this section, you can prohibit users from changing their login credentials, such as their username, email, or password. You can also select the user role for new users created via SSO (Note that the Linguist role is selected by default). There are two ways to do this:</p>
+<h3>SCIM Configuration</h3>
+<p>To configure SCIM properties, follow these steps:</p>
+<ol>
+<li>Select the <strong>Enable SCIM</strong> radio button.<br>SCIM configuration details are presented.</li>
+<li>Click <strong>Generate New Token.<br></strong>The <em>SCIM Bearer Token</em> field is populated with a unique token.<strong><br></strong>
+</li>
+<li>Copy the token and the <em>SCIM Base URL</em>.<br>These will be used in identity provider settings.</li>
+<li>Click <strong>Save</strong>.<br>Configuration is saved.</li>
+</ol>
+<h3>User Management</h3>
+<p>Options:</p>
 <ul>
 <li>
-<strong>Allow users to change their login credentials: </strong>Uncheck this box to prevent users from editing their usernames, passwords, and emails and can be used to force them to access Memsource only through SSO (as SSO uses a different authentication method).</li>
+<strong>Allow users to change their login credentials: </strong>Uncheck this box to prevent users from editing their usernames, passwords, and emails. Can be used to force users to access Memsource only through SSO (as SSO uses a different authentication method).</li>
 <li>
-<strong>New users mapped to:</strong> This<strong> </strong>will allow you to select the user role for new users created via SSO: Linguists, Project Managers, or Submitter. The Linguist role is selected by default.</li>
+<strong>New users mapped to:</strong> Sets default new user role for new users created via SSO: Linguists, Project Managers, or Submitter. The Linguist role is selected by default.</li>
 </ul>
-<p><img class="img450" src="https://pages.memsource.com/hc/SSO_User_management.png"></p>
-<h2>Application Details</h2>
-<p>The following information can be used in your IdP to configure Memsource as the recipient application and therefore establish the connection: the <strong>Organization ID </strong>and the <strong>Domain URL.</strong></p>
-<p><img class="img450" src="https://pages.memsource.com/hc/SSO_Application_Details.png"></p>
-<p>Some SSO providers may require Entity ID / Metadata URL, ACS URL or <em>SLS URL</em>. <br>In that case, use:</p>
+<h3>Application Details</h3>
+<p><strong>Organization ID </strong>and the <strong>Domain URL </strong>can be used by an IdP to configure Memsource as the recipient application and to establish the connection.</p>
+<p>Some SSO providers require Entity ID / Metadata URL, ACS URL or <em>SLS URL</em>.<br> If required, use:</p>
 <ul>
 <li>
 <em>Entity ID/Metadata URL:</em><a href="https://cloud.memsource.com/web/saml2Login/metadata/%7BorgId%7D">https://cloud.memsource.com/web/saml2Login/metadata/{orgId}</a>
