@@ -37,6 +37,8 @@
 <li>
 <strong>Segment XML</strong>: Unselect this option if segmentation is not desired.</li>
 <li>
+<strong>Import comments: </strong>Select this option to import comments.</li>
+<li>
 <strong>Convert to Memsource tags (use regexp):</strong> Use a <em>regular expression</em> to convert specific text to tags.</li>
 <li>
 <strong>Convert to character entities:</strong> Enter a list of character references (separated by commas) into the output file. For example, when you want quotes ("), they would be represented as <tt>&amp;quot;</tt> and the character Σ would be represented as <tt>&amp;#x3A3;</tt> use <tt>&amp;quot;,&amp;#x3A3;</tt>. Please note that &amp; and &lt; are always exported as &amp;amp; and &amp;lt; respectively.</li>
@@ -87,6 +89,6 @@
 <p><span class="ILfuVd">If the source file contains CDATA and if you use option "Segment XML" then Memsource will add CDATA to every segment in the Completed file.</span></p>
 <p><span class="ILfuVd">Source:</span></p>
 <pre>&lt;text&gt;&lt;![CDATA[Translatable text A. Translatable text B.]]&gt;&lt;/text&gt;</pre>
-<p>Target: </p>
+<p>Target:</p>
 <pre>&lt;text&gt;&lt;![CDATA[Translatable text A.]]&gt;&lt;![CDATA[ ]]&gt;&lt;![CDATA[Translatable text B.]]&gt;&lt;/text&gt;</pre>
 <p>This is the correct behavior. The Completed file is valid XML and the XML viewer will display the text correctly as "Translatable text A. Translatable text B."</p>
