@@ -21,10 +21,24 @@ for dirName, subdirList, fileList in os.walk(rootDir):
             if article_limit is None or article_limit == article:
                 url = 'https://memsource.zendesk.com/api/v2/help_center/articles/{}/translations/en-us.json'.format(
                     article)
-                print(f"Requesting {url}")
                 headers = {'Content-Type': 'application/json'}
+
+                print(f"Requesting GET {url}")
+                response = requests.get(url, auth=auth.get_auth(), headers=headers)
+                data = json.loads(response.text)
+
                 f = open(f"{dirName}/{fname}", "r")
-                data = {"translation": {"body": f.read()}}
-                response = requests.put(url, auth=auth.get_auth(), headers=headers, data=json.dumps(data))
-                print(response)
+                body = f.read()
+
+                if "translation" in data:
+                    if data["translation"]["body"] == body:
+                        print(f"No update to article {article}")
+                    else:
+                        new_data = {"translation": {"body": body}}
+                        print(f"Requesting PUT {url}")
+                        response = requests.put(url, auth=auth.get_auth(), headers=headers, data=json.dumps(new_data))
+                        print(response)
+                else:
+                    print(f"Article {article} not found")
+
                 time.sleep(0.1)
