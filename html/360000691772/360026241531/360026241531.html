@@ -13,7 +13,7 @@
 <p>The entry-level connector only works with content types that have localized reference fields (e.g., a <em>reference</em> field called <em>Localized</em> that is enabled for localization).</p>
 <h3>Field-Level Localization</h3>
 <p>Use <em>Contentful</em> connector.</p>
-<p>The field-level connector only works with content types that have a translatable field (e.g., either <em>Text</em> of <em>Rich Text</em> field with enabled localization). If the content type is also enabled for entry-level localization (has a localized reference field), then only the reference that matches the Memsource's project source language is processed by the field-level connector.</p>
+<p>The field-level connector only works with content types that have a translatable field (e.g., either <em>Text</em> of <em>Rich Text</em> field with enabled localization). If the connector is configured to import referenced entries, it traverses the entire hierarchy of nested content and imports all translatable fields for translation. If the reference field is enabled for localization, it imports the reference that match the Memsource project's source language.</p>
 <h2>Contentful Connector Use Cases</h2>
 <p>There are a number of use cases for the connector.</p>
 <ul class="list-bullet">
@@ -53,7 +53,7 @@
 <li>
 <em>Selected entry only</em> - only content that's explicitly selected when adding content from the online repository or when a change is detected by Automated Project Creation is imported for translation.</li>
 <li>
-<em>Import referenced entries</em> - the connector traverses the entire hierarchy of nested content and imports all content for translation.</li>
+<em>Import referenced entries</em> - the connector traverses the entire hierarchy of nested content and imports all translatable fields for translation.</li>
 </ul>
 </div>
 </div>
