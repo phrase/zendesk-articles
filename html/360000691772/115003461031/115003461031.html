@@ -6,11 +6,11 @@
 </ul>
 </div>
 <p>Supported Versions:</p>
-<p><span style="font-weight: 400;">The Memsource Translation Plugin for Adobe AEM follows the same product support periods as Adobe AEM. For information on support periods, see </span><a href="https://helpx.adobe.com/support/programs/eol-matrix.html#EF"><span style="font-weight: 400;">https://helpx.adobe.com/support/programs/eol-matrix.html.</span></a></p>
-<p><span style="font-weight: 400;">Once an AEM version reaches end of core support, Memsource no longer maintains the plugin. The installer will be available but no further improvements or fixes will be implemented.</span></p>
+<p><span>The Memsource Translation Plugin for Adobe AEM follows the same product support periods as Adobe AEM. For information on support periods, see </span><a href="https://helpx.adobe.com/support/programs/eol-matrix.html#EF"><span>https://helpx.adobe.com/support/programs/eol-matrix.html.</span></a></p>
+<p><span>Once an AEM version reaches end of core support, Memsource no longer maintains the plugin. The installer will be available but no further improvements or fixes will be implemented.</span></p>
 <ul>
-<li><span style="font-weight: 400;">Plugin version 1.x supports AEM 6.3</span></li>
-<li><span style="font-weight: 400;">Plugin version 2.x supports AEM 6.4 and 6.5.</span></li>
+<li><span>Plugin version 1.x supports AEM 6.3</span></li>
+<li><span>Plugin version 2.x supports AEM 6.4 and 6.5.</span></li>
 </ul>
 <h2>Configure Memsource</h2>
 <h3>Configure In-Context Preview</h3>
@@ -58,12 +58,12 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 </ol>
 <h2>Install the Plugin</h2>
 <ol>
-<li style="font-weight: 400;">
-<span style="font-weight: 400;">If migrating from AEM 6.2 or 6.3 to 6.4 and above, remove all Legacy Cloud Services configurations from the Classic UI Admin tool (/miscadmin#/etc/cloudservices/memsource-translation)<br></span>All configurations disappear from Legacy Cloud Services &gt;  Memsource Translation Plugin for AEM.</li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">In Tools, Deployment, go to <em>Packages</em>.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Uninstall previous version of the plugin, if applicable.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Select Upload package and upload the installation file.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Check Force Upload and submit.</span></li>
+<li>
+<span>If migrating from AEM 6.2 or 6.3 to 6.4 and above, remove all Legacy Cloud Services configurations from the Classic UI Admin tool (/miscadmin#/etc/cloudservices/memsource-translation)<br></span>All configurations disappear from Legacy Cloud Services &gt;  Memsource Translation Plugin for AEM.</li>
+<li><span>In Tools, Deployment, go to <em>Packages</em>.</span></li>
+<li><span>Uninstall previous version of the plugin, if applicable.</span></li>
+<li><span>Select Upload package and upload the installation file.</span></li>
+<li><span>Check Force Upload and submit.</span></li>
 </ol>
 <h2>Configure Adobe Experience Manager</h2>
 <p>Two configurations are required:</p>
@@ -77,20 +77,18 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 <span class="tabs-link is-active">AEM 6.4, 6.5</span> <span class="tabs-link">AEM 6.3</span>
 </div>
 <div class="tab">
-<p>In Tools, go to <em>Cloud Services</em>, click <strong>Legacy Cloud Services</strong>, and navigate to <em>Memsource Translation Plugin for AEM</em>.</p>
+<li><span>In <em>Tools</em>, <em>General</em>, go to <em>Configuration Browser.</em></span></li>
+<li><span>Create a configuration container for each Memsource service (e.g. one configuration for human translation and a separate configuration for machine-only translation).</span></li>
+<li>In <em>Cloud Services</em>, go to <em>Translation Cloud Services.</em>
+</li>
+<li>Expand the <em>conf</em> directory.<br> <span>The configuration containers created in the previous step are listed.</span>
+</li>
 </div>
 <div class="tab is-hidden">
 <p>In Tools, go to <em>Deployment</em>, click on <strong>Cloud Services</strong>, and navigate to <em>Memsource Translation Plugin for AEM</em>.</p>
 </div>
 </div>
-<ol>
-<li style="font-weight: 400;"><span style="font-weight: 400;">In <em>Tools</em>, <em>General</em>, go to <em>Configuration Browser.</em></span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Create a configuration container for each Memsource service (e.g. one configuration for human translation and a separate configuration for machine-only translation).</span></li>
-<li>In <em>Cloud Services</em>, go to <em>Translation Cloud Services.</em>
-</li>
-<li>Expand the <em>conf</em> directory.<br> <span style="font-weight: 400;">The configuration containers created in the previous step are listed.</span>
-</li>
-<li>Create a new configuration and enter the following information:
+Create a new configuration and enter the following information:
 <ul>
 <li>
 <strong>Memsource Home URL:</strong> The default URL is <a href="https://cloud.memsource.com/web/">https://cloud.memsource.com/web/</a> but can be different if you or the LSP is using a Custom URL.</li>
@@ -102,12 +100,12 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 <li>
 <strong>Service:</strong> Select the service that governs the language setup of projects (orders) in Memsource as well as the Workflow setup of these Memsource projects.</li>
 <li>
-<strong>Autocomplete Job:</strong> Select if the AEM Translation Jobs is to skip the Review step.</li>
+<strong>Autocomplete Job:</strong> Select if the AEM Translation Jobs is to skip the Review step. In version 6.5, equivalent configuration is available in translation project advanced settings.
+</li>
 <li>
 <strong>AEM URL:</strong> Use the same host address of the AEM installation used in the Memsource connector and append with <em>/sites.html/content/</em> (e.g. <em>https://aem-author.example.org/sites.html/content/</em>).</li>
 </ul>
-</li>
-</ol>
+
 <h3>Set up the Translation Integration</h3>
 <p>When using the Memsource Translation Plugin for AEM, all files in the translation jobs are submitted for translation and thus returned from Memsource. Use the project <em>Translation Integration</em><strong> </strong>configuration to prevent non-translatable assets or reference materials from being included in the projects.</p>
 <div class="tabs">
@@ -132,9 +130,8 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 </ul>
 <p>If a project still contains non-translatable assets or reference materials, mark and<strong> </strong>delete them directly in Memsource.</p>
 <h3>Apply Translation Integration to Sites</h3>
-<p><span style="font-weight: 400;">Configure default Memsource Translation Provider with different parts of the site taxonomy. Configure the provider at the root node of the site. All descendant pages will inherit the setting. Override the setting at the node that should use different provider configuration (e.g. entire site uses human translation but the community section uses machine translation).</span></p>
-<ol class="list-colored">
-<li>
+<p><span>Configure default Memsource Translation Provider with different parts of the site taxonomy. Configure the provider at the root node of the site. All descendant pages will inherit the setting. Override the setting at the node that should use different provider configuration (e.g. entire site uses human translation but the community section uses machine translation).</span></p>
+
 <div class="tabs">
 <div class="tabs-menu">
 <span class="tabs-link is-active">AEM 6.4, 6.5</span> <span class="tabs-link">AEM 6.3</span>
@@ -143,10 +140,9 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 <p>On the <em>Advanced </em>Tab, select the newly created configuration as the Cloud Configuration.</p>
 </div>
 <div class="tab is-hidden">
+<ol class="list-colored">
+<li>
 <p>On the <em>Cloud Services</em> Tab, select the newly created configuration as the Translation Integration.</p>
-</div>
-</div>
-</li>
 <li>Click on the <strong>Add configuration</strong> label and select the <strong>Memsource Translation Plugin for AEM.</strong> <br> A dropdown menu is displayed with previously created configurations.</li>
 <li>Select the configuration for use with this content.
 <ul>
@@ -154,6 +150,8 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 </ul>
 </li>
 </ol>
+</div>
+</div>
 <p>When adding content from these pages, only translatable content will be added. If a project is created from the <em>References</em> Panel, it will be automatically set up to use the cloud configuration associated with the root page.</p>
 <h2>Submit Content for Translation</h2>
 <p>To submit content for translation, create a translation project in AEM. Project can be created manually from the Projects section or use built-in AEM workflows to minimize the effort.<br> To prepare a project for submission to Memsource through the built-in workflows, follow these steps:</p>
