@@ -44,7 +44,7 @@
 </ul>
 <p>If you want to change this behavior and import, for example, only the "Comment" as a Memsource Note, "Example" as Usage, the Status as <em>Approved</em> or <em>New</em> (Memsource supports only those two options) and don't need to import "Definition", you can edit your TBX.XML file to fit the standard of the Memsource format for TBX files:</p>
 <div class="mw-highlight mw-content-ltr" dir="ltr">
-<pre><span class="nt">&lt;termNote</span> <span class="na">type=</span><span class="s">"Note"</span><span class="nt">&gt;</span>term =API= should not be translated<span class="nt">&lt;/termNote&gt;</span>
+<pre><span class="nt">&lt;</span><span class="s">note</span><span class="nt">&gt;</span>term =API= should not be translated<span class="nt">&lt;/note&gt;</span>
 <span class="nt">&lt;termNote</span> <span class="na">type=</span><span class="s">"usageNote"</span><span class="nt">&gt;</span>Memsource offers a set of API calls.<span class="nt">&lt;/termNote&gt;</span>
 <span class="nt">&lt;termNote</span> <span class="na">type=</span><span class="s">"status"</span><span class="nt">&gt;</span>Approved<span class="nt">&lt;/termNote&gt;</span>
 </pre>
@@ -58,7 +58,7 @@
 </div>
 <p>Replace:</p>
 <div class="mw-highlight mw-content-ltr" dir="ltr">
-<pre><span class="o">&lt;</span><span class="nx">termNote</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"Note"</span><span class="o">&gt;</span><span class="nx">\1</span><span class="o">&lt;/</span><span class="nx">termNote</span><span class="o">&gt;</span>
+<pre><span class="o">&lt;</span><span class="s2">note</span><span class="o">&gt;</span><span class="nx">\1</span><span class="o">&lt;/</span><span class="nx">note</span><span class="o">&gt;</span>
 </pre>
 </div>
 <p><strong>Changing "Example" to "Usage"</strong></p>
