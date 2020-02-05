@@ -40,7 +40,8 @@
 <p>Some HTML tags present a risk and the Memsource Editors remove them from this HTML when displaying the preview. This is to ensure user's data privacy and security.</p>
 Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, OBJECT</code> or <code>background-image</code> CSS property</div>
 <h3>Configure Translation Workflow</h3>
-<p>Memsource provides a highly-configurable workflow engine allowing associations with AEM jobs, specific net rates schemes, due dates schemes, price lists, workflows steps and more.<br> Follow these steps to configure processing of AEM jobs:</p>
+<p>Memsource provides a highly-configurable workflow engine allowing associations with AEM jobs, specific net rates schemes, due dates schemes, price lists, workflows steps and more.</p>
+<p>To configure processing of AEM jobs, follow these steps:</p>
 <ol class="list-colored">
 <li>Create a <a href="https://help.memsource.com/hc/en-us/articles/115003483952" target="_self"><strong>Project Template</strong></a> configured on your needs.<br> Under <em>Access and Security</em> set the <strong>Allow loading external content in editors</strong>.<br> Apply the following <em>XML File Import Settings</em>:<img class="img250" src="https://pages.memsource.com/hc/AEM_XML_Import_Settings.png"> </li>
 <li>Create a <a href="https://help.memsource.com/hc/en-us/articles/360001388091" target="_self"><strong>Service</strong></a>.
@@ -55,6 +56,15 @@ Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, 
 <li>Don't select the AEM connector configuration in the Connectors combo.</li>
 </ul>
 </li>
+</ol>
+<p>To validate the Memsource configuration, follow these steps:</p>
+<ol class="p-rich_text_list p-rich_text_list__ordered" data-stringify-type="ordered-list" data-indent="0">
+<li>Open an incomplete AEM Translation Project.</li>
+<li>Select <em>Export</em> form the <em>Job</em> tile menu.</li>
+<li>Find the XML file that contains the source text within the downloaded zip file.</li>
+<li>In Memsource, navigate to the <em>Automation Widget</em> used for the integration and open the listed URL.</li>
+<li>Complete the AW form, upload the XML file, validate the email and submit.</li>
+<li>Verify the new project was created from the Project template as configured.</li>
 </ol>
 <h2>Install the Plugin</h2>
 <ol>
