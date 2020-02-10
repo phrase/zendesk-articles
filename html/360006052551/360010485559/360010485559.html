@@ -1,14 +1,12 @@
 <p>Multilingual plain text CSV files can be imported into Memsource as several bilingual jobs.</p>
 <p>Map the corresponding target language columns in the <strong>File Import Settings</strong> to create separate jobs for each language pair. The completed CSV file contains the source and target languages after translation.</p>
 <div class="callout callout--success callout--dashed">
-<h4 class="callout__title"><strong> Note: </strong></h4>
-The In-context Preview in the Editor can only be generated for a maximum of 200 columns in the imported file. For more information, see <a href="https://help.memsource.com/hc/en-us/articles/115003484932-In-Context-Preview" target="_self">In-Context Preview</a>. </div>
+<span class="callout__title">Note:</span> The In-context Preview in the Editor can only be generated for a maximum of 200 columns in the imported file. For more information, see <a href="https://help.memsource.com/hc/en-us/articles/115003484932-In-Context-Preview" target="_self">In-Context Preview</a>. </div>
 <h3>File Import Settings:</h3>
 <ol>
 <li>Select <em>Multilingual CSV</em> in the <strong>File Type</strong> field. <br>
 <div class="callout callout--danger callout--dashed">
-<h4 class="callout__title">Important: </h4>
-File will be imported as a normal CSV file if this is not specified.</div>
+<span class="callout__title"> Important:</span> File will be imported as a normal CSV file if this is not specified.</div>
 </li>
 <li>Open the <strong>Multilingual CSV</strong> section and specify required settings:
 <ul>
@@ -35,3 +33,10 @@ File will be imported as a normal CSV file if this is not specified.</div>
 </li>
 <li>Click <strong>Create<br></strong>The File is imported with specified settings and ready for use in the job.</li>
 </ol>
+<div class="callout callout--danger callout--dashed">
+<span class="callout__title"> Important:</span> <br> Using <strong>Segment multilingual CSV</strong> on a file that contains target text may result in a different number of segments in the source and in the target.
+<ul>
+<li>A warning will be displayed on the project page: "<em>Document segmentation resulted in a different number of source and target segments in some paragraphs. Extra segments have been joined with previous segments using space characters except in non-space languages (e.g., JA, ZH, KO). Try importing without segmentation.</em>" </li>
+<li>A segment comment will be added to the job in the Memsource Editors: "<em>Target is not segmented as expected!</em>".</li>
+</ul>
+</div>

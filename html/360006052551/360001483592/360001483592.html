@@ -50,26 +50,33 @@ Not translatable text.
 <li>Convert to character entities - enter a comma separated list of character references required in the output file. For example when you want quotes " represented as &amp;quot; and character Σ represented as &amp;#x3A3; use &amp;quot;,&amp;#x3A3;. Please note that &amp; and &lt; are always exported as &amp;amp; and &amp;lt;.</li>
 </ul>
 <div class="alert alert-blue">*Xpath is relative to "Elements containing source and target sub-elements:" and only sub-elements in this parent element are evaluated.</div>
-<p><span class="wysiwyg-font-size-small"><em><img src="https://help.memsource.com/hc/article_attachments/360001867432/mceclip0.png" width="411" height="315"> </em></span><br><em><span class="wysiwyg-font-size-small">Multilingual XML Import Rules</span></em></p>
-<p><br>Please note that the XPath expression should define the elements which text/value should be translated and not the actual text node.</p>
+<p><span class="wysiwyg-font-size-small"><em><img src="https://help.memsource.com/hc/article_attachments/360001867432/mceclip0.png" width="411" height="315"> </em></span><br> <em><span class="wysiwyg-font-size-small">Multilingual XML Import Rules</span></em></p>
+<p><br> Please note that the XPath expression should define the elements which text/value should be translated and not the actual text node.</p>
 <p>See more information on <a title="XPath" href="https://help.memsource.com/hc/en-us/articles/360001569871-XPath">XPath</a>.</p>
 <h2><span id="HTML_Subfilter" class="mw-headline">HTML Subfilter</span></h2>
-<div class="thumb tright">XML files with html tags (such as &amp;lt;p&amp;gt;) can be imported with option <strong>HTML Subfilter</strong>. In this case it is possible to set additional setting in the HTML (such as <strong>Break tag (&lt;br/&gt;) creates new segment</strong>).</div>
+<div class="thumb tright">XML files with html tags (such as &amp;lt;p&amp;gt;) can be imported with option <strong>HTML Subfilter</strong>. In this case it is possible to set additional setting in the HTML (such as <strong>Break tag (&lt;br/&gt;) creates new </strong>).</div>
 <p>Please note that paragraph tags (such as &amp;lt;p&amp;gt;) will create a new segments even if the <strong>Segment Multilingual XML</strong> is unselected.</p>
-<p><img class="img350" src="https://pages.memsource.com/hc/Html_xml.png"> <br><em><span class="wysiwyg-font-size-small">HTML settings </span></em></p>
+<p><img class="img350" src="https://pages.memsource.com/hc/Html_xml.png"> <br> <em><span class="wysiwyg-font-size-small">HTML settings </span></em></p>
 <h2><span class="mw-headline">Segment Multilingual XML</span></h2>
-<p><span class="mw-headline">The elements containing more than one sentence can be segmented using the Segmentation rules. If there is a different number of segments in source and target elements, a warning will be displayed on the project page and residual segments will be joined to the last segment of the element. The segments will be joined with a whitespace character.</span></p>
+<p>Having one element as one segment is less error prone, but the text in the source and target elements can be segmented with general segmentation rules if required. The HTML subfilter is an exception.</p>
+<div class="callout callout--danger callout--dashed">
+<span class="callout__title"> Important:</span><br> Using <strong>Segment multilingual XML</strong> on a file that contains target text may result in a different number of segments in the source and in the target.
+<ul>
+<li>A warning will be displayed on the project page: "<em>Document segmentation resulted in a different number of source and target segments in some paragraphs. Extra segments have been joined with previous segments using space characters except in non-space languages (e.g., JA, ZH, KO). Try importing without segmentation.</em>" </li>
+<li>A segment comment will be added to the job in the Memsource Editors: "<em>Target is not segmented as expected!</em>".</li>
+</ul>
+</div>
 <h2><span id="File_Type" class="mw-headline">File Type</span></h2>
 <div class="thumb tright"> The Multilingual XML file filter will imports files <strong>only</strong> when it is specifically selected in Import Settings:</div>
 <ul>
 <li>
 <strong>File Type</strong>: Multilingual XML</li>
 </ul>
-<p><img class="img350" src="https://pages.memsource.com/hc/MultiXML_filetype.png">  <br><span class="wysiwyg-font-size-small"><em>File Type</em></span></p>
+<p><img class="img350" src="https://pages.memsource.com/hc/MultiXML_filetype.png"> <br> <span class="wysiwyg-font-size-small"><em>File Type</em></span></p>
 <h2><span id="Jobs_in_Project" class="mw-headline">Jobs in Project</span></h2>
 <div class="thumb tright">Multilingual jobs have a slightly different icon then general XML jobs so they are easily distinguished from monolingual jobs.</div>
 <p>If the file was imported as multilingual into several target languages, the Completed file will be always composed from all the target languages.</p>
-<p><img class="img350" src="https://pages.memsource.com/hc/MultilingXML_jobs.png">  <br><span class="wysiwyg-font-size-small"><em>File Type</em></span></p>
+<p><img class="img350" src="https://pages.memsource.com/hc/MultilingXML_jobs.png"> <br> <span class="wysiwyg-font-size-small"><em>File Type</em></span></p>
 <h2>HTML Preview with XSLT stylesheet</h2>
 <p><img src="https://help.memsource.com/hc/article_attachments/360009051032/Multilingual_XML_preview.png" alt="Multilingual_XML_preview.png" width="500" height="380"></p>
 <p><span class="wysiwyg-font-size-small"><em>XSLT Preview File</em></span></p>

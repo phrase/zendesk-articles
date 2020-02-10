@@ -7,13 +7,20 @@
 <li>Some files cannot be converted to multilingual files due to compatibility issues between various versions of Microsoft Excel.</li>
 </ol>
 <h3>File Import Settings:</h3>
-<p>1. First, be sure to select <strong>Multilingual MS Excel</strong> in the <strong>File Type</strong> field. (This is bottom of the<em> File Import Settings</em> page). If you fail to do this, the file will be imported as a regular Excel. <br><img class="img250" src="https://help.memsource.com/hc/article_attachments/360013846092/fileType_multiExcel.png" alt="fileType_multiExcel.png"></p>
+<p>1. First, be sure to select <strong>Multilingual MS Excel</strong> in the <strong>File Type</strong> field. (This is bottom of the<em> File Import Settings</em> page). If you fail to do this, the file will be imported as a regular Excel.<br> <img class="img250" src="https://help.memsource.com/hc/article_attachments/360013846092/fileType_multiExcel.png" alt="fileType_multiExcel.png"></p>
 <p>2. Then you can then open the <em>Multilingual MS Excel</em> section and select the following options:</p>
 <ul>
 <li>
 <strong>Use HTML subfilter:</strong> If your XLSX file contains any HTML tags, it can be imported with the HTML Subfilter option. In this case, it is possible to set additional settings in the HTML. (For example, a break tag (&lt;br/&gt;) would create a new segment.) Please note that paragraph tags (such as &lt;p&gt;) will create new segments even if <strong>Segment Multilingual XLS</strong> is unselected. </li>
 <li>
-<strong>Segment multilingual XLS:</strong> It is safer to have one cell as one segment, but you can choose to have text segmented by a general segmentation rule. (Please note that the above-mentioned HTML subfilter is an exception.) <span class="mw-headline">If there is a different number of segments in source and target elements, a warning will be displayed on the project page and residual segments will be joined to the last segment of the element. The segments will be joined with a whitespace character.</span>
+<strong>Segment multilingual XLS:</strong> It is safer to have one cell as one segment, but you can choose to have text segmented by a general segmentation rule. (Please note that the above-mentioned HTML subfilter is an exception.) 
+<div class="callout callout--danger callout--dashed">
+<span class="callout__title"> Important:</span><br> Using <strong>Segment multilingual XLS</strong> on a file that contains target text may result in a different number of segments in the source and in the target.
+<ul>
+<li>A warning will be displayed on the project page: "<em>Document segmentation resulted in a different number of source and target segments in some paragraphs. Extra segments have been joined with previous segments using space characters except in non-space languages (e.g., JA, ZH, KO). Try importing without segmentation.</em>" </li>
+<li>A segment comment will be added to the job in the Memsource Editors: "<em>Target is not segmented as expected!</em>".</li>
+</ul>
+</div>
 </li>
 <li>
 <strong>Source (column):</strong> Here, you can use lowercase or capital letters (a or A). For more columns, enter letters separated by commas with no spaces (for example A,D,G).</li>
