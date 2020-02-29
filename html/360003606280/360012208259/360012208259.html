@@ -1,0 +1,73 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section caution internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-0abc6c55-1c9e-935e-7d19-8181eed2431e" id="UUID-0abc6c55-1c9e-935e-7d19-8181eed2431e_UUID-c6f85993-1316-4167-bb0f-d4ea3798f0be"></a>Available for</h3></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Team, Ultimate and Enterprise Editions</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>Secure File Transfer Protocol (SFTP) is a secure version of File Transfer Protocol (FTP) that enables data transfer over a Secure Shell (SSH) protocol.</p>
+<p>SFTP connector allows the downloading of source files and uploading of target files directly to/from the SFTP repository. The connector uses the SFTP API to implement the integration.</p>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-0abc6c55-1c9e-935e-7d19-8181eed2431e" id="UUID-0abc6c55-1c9e-935e-7d19-8181eed2431e_UUID-9ff13540-9b0e-7c6d-081f-2cb39f857854"></a>Use Cases</h3></div>
+<p>There are a number of use cases for the connector:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Project Managers can add files directly to projects from an online repository.</p></li>
+<li class="listitem"><p>Set up the Automation Widget allowing Submitters to add files to requests directly from the online repository.</p></li>
+<li class="listitem">
+<p>Use Automated Project Creation (APC) to have Memsource automatically create new projects when a change in the <span class="bold bold"><strong>last modified date</strong></span> is detected for monitored files or a folder.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Selected files are imported the very first time APC runs. No files are imported when a folder is monitored.</p></li>
+<li class="listitem"><p>This connector supports absolute path setting.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>Set up Continuous Jobs to have Memsource monitor selected files for changes.</p></li>
+<li class="listitem"><p>The Connector API can be used to automate steps otherwise performed manually through the UI. Webhooks can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<h3>
+<a id="UUID-0abc6c55-1c9e-935e-7d19-8181eed2431e_bridgehead-idm462377470112483161965716418"></a>SFTP Settings</h3>
+<p>No changes are required.</p>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-0abc6c55-1c9e-935e-7d19-8181eed2431e" id="UUID-0abc6c55-1c9e-935e-7d19-8181eed2431e_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h3></div>
+<div class="procedure">
+<a id="UUID-0abc6c55-1c9e-935e-7d19-8181eed2431e_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009442240/15e591325da49d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step">
+<p>Click on <span class="guilabel">Connectors</span>.</p>
+<p>The <span class="guimenu">Connectors</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Connector</span> page opens.</p>
+</li>
+<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to <span class="emphasis"><em>SFTP</em></span>.</p></li>
+<li class="step">
+<p>Provide the following information:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="emphasis"><em>Host</em></span> name. Does not include the protocol (e.g. files.example.com).</p></li>
+<li class="listitem"><p><span class="emphasis"><em>Port</em></span> number (default setting is 22).</p></li>
+<li class="listitem"><p>SFTP <span class="emphasis"><em>User name</em></span>.</p></li>
+<li class="listitem"><p>SFTP <span class="emphasis"><em>Password</em></span>.</p></li>
+<li class="listitem"><p>SSH <span class="emphasis"><em>key</em></span>.</p></li>
+<li class="listitem"><p>SSH <span class="emphasis"><em>passphrase</em></span>.</p></li>
+</ul></div>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Test connection</span>.</p>
+<p>A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The connector is added to the list on the Connectors page.</p>
+</li>
+</ol>
+</div>
+<p>If a default project, branch, and folder is required when connecting, open the connector configuration and click the <span class="guilabel">Select Remote Folder</span> button to set it.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

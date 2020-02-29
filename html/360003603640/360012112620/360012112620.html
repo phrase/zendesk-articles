@@ -1,0 +1,58 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section caution internal sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-5a83d1da-4d52-f78c-022e-6891bc9343f7" id="UUID-5a83d1da-4d52-f78c-022e-6891bc9343f7_UUID-20eb2bee-fd34-3878-faa7-487c54d6f553"></a>Available for</h2></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Ultimate and Enterprise Editions</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>COTI is an interface developed by DERCOM (Associated of German Manufacturers of Authoring and Content Management Systems) for data exchange between authoring systems and translation systems.</p>
+<p>Memsource supports level 2 COTI integration.</p>
+<p>A COTI package must exist in the content management system (CMS) in order for Memsource to use it. See <a class="link" href="http://www.dercom.de/en/projects" target="_blank" rel="noopener">DERCOM documentation</a> for more information.</p>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-5a83d1da-4d52-f78c-022e-6891bc9343f7" id="UUID-5a83d1da-4d52-f78c-022e-6891bc9343f7_UUID-d8e44de7-15ed-343c-7853-e72db0121ef8"></a>Set up CMS Monitoring</h2></div>
+<p>The exchange folder for the exported COTI files needs to be linked to a <a class="link linktextconsumer" href="https://help.memsource.com/document/preview/387#UUID-1769bc5f-7313-2fde-238f-bda55a1f70f6" target="_blank">supported connector</a> to use the COTI Project Creation feature.</p>
+<p>To set up a folder, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-5a83d1da-4d52-f78c-022e-6891bc9343f7_procedure-idm4625729220507231626809268199"></a><ol class="procedure" type="1">
+<li class="step"><p>Configure the required online repository connector.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009452500/15e5930c583fdc.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section.</p></li>
+<li class="step">
+<p>Click on <span class="guilabel">COTI Project Creation</span>.</p>
+<p>The <span class="guimenu">COTI Project Creation</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create COTI Project Settings</span> page opens.</p>
+</li>
+<li class="step"><p>Provide a name for the project.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Select remote folder</span>.</p>
+<p>Select the required folder from the required repository.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">OK</span>.</p>
+<p>Memsource checks the specified folder for required COTI subfolders. If none are found, a warning is displayed.</p>
+</li>
+<li class="step"><p>Set Monitoring Frequency.</p></li>
+<li class="step"><p>Provide additional setting and specify Email Templates.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>Project is added to the list.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p><span class="bold bold"><strong>Downloading COTI Archives and Project Creation</strong></span></p>
+<p>When a new COTI file is detected in the exchange folder, Memsource automatically downloads and analyzes it. If recognized as a valid COTI archive, a new Memsource project will be created.</p>
+<p>Check in a Memsource Editor to ensure that the COTI file is imported correctly.</p>
+<p>If there is an issue in Memsource Editor for Web, create a Project Template and adjust the import settings to address the issue. Project properties (source and target languages, for example) are defined by the COTI file. The file contains metadata that is extracted and used to set up the project.</p>
+<p>The number of jobs in a Memsource project depend on the number of translatable files in a COTI archive. It may also contain reference files that are attached to the project which are not translated.</p>
+<p><span class="bold bold"><strong>Translating COTI Files</strong></span></p>
+<p>Files can be translated manually or using pre-translate with a translation memory and machine translation matches.</p>
+<p>Once complete, Memsource automatically re-builds the original COTI archive with the translated files. The archive file is a zip format with a .coti extension.</p>
+<p>The completed COTI archive is then uploaded back to the exchange folder. The CMS detects this upload, unpacks the COTI archive, and imports the translation.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

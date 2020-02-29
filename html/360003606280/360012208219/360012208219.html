@@ -1,0 +1,74 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section caution internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-fb9d277b-02b0-0e87-cb36-c1d8cf64944a" id="UUID-fb9d277b-02b0-0e87-cb36-c1d8cf64944a_UUID-20eb2bee-fd34-3878-faa7-487c54d6f553"></a>Available for</h3></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Ultimate and Enterprise Editions</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>Microsoft Azure is a cloud-based platform that provides serverless containers to help build, manage, and deploy applications.</p>
+<p>Microsoft Azure connector allows the downloading of source files and uploading of target files directly to/from the Azure Storage File Shares.</p>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-fb9d277b-02b0-0e87-cb36-c1d8cf64944a" id="UUID-fb9d277b-02b0-0e87-cb36-c1d8cf64944a_UUID-9ff13540-9b0e-7c6d-081f-2cb39f857854"></a>Use Cases</h3></div>
+<p>There are a number of use cases for the connector:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Project Managers can add files directly to projects from an online repository.</p></li>
+<li class="listitem"><p>Set up the Automation Widget allowing Submitters to add files to requests directly from the online repository.</p></li>
+<li class="listitem">
+<p>Use Automated Project Creation (APC) to have Memsource automatically create new projects when a change in <span class="bold bold"><strong>file size</strong></span> is detected in monitored files or a folder.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Selected files are imported the very first time APC runs. No files are imported when a folder is monitored.</p></li>
+<li class="listitem"><p>This connector supports absolute path setting.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>Set up Continuous Jobs to have Memsource monitor selected files for changes.</p></li>
+<li class="listitem"><p>The Connector API can be used to automate steps otherwise performed manually through the UI. Webhooks can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-fb9d277b-02b0-0e87-cb36-c1d8cf64944a" id="UUID-fb9d277b-02b0-0e87-cb36-c1d8cf64944a_UUID-fd88ffed-eabb-3bd5-c3d9-69c78716c68d"></a>Microsoft Azure Settings</h3></div>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>Log in to your Microsoft Azure account through the <a class="link" href="https://login.microsoftonline.com/common/oauth2/authorize?resource=https%3a%2f%2fmanagement.core.windows.net%2f&amp;amp;response_mode=form_post&amp;amp;response_type=code+id_token&amp;amp;scope=user_impersonation+openid&amp;amp;state=OpenIdConnect.AuthenticationProperties%3db-JH-Moyad5OspWZHkPvnCaCNRuFo0RoBa-vv2tunJrfq6cH3VuCxvxF0zhkmF7ypyJdb44I-jfU2XxJminv2mYriIPDwAQEvY-lYcu_jvsLLFTrsOz_Od5m8uxFnZio3yOATOLu4sEMSMvCE2mxCpR_htJWKyq7waxD-67B_6vxA6pYwPgmlS4jWqEthb72-U0KGnlTMIw9ZQUcvcfTVcDKNX_tMgfa6QuFnFEq0U2LWi8fVh0-ZTw6h3FD0tueTGo3PZVJlE5rqdUGwft_uwr_4Z4WplAulrz0CAh4qsd1oJALVAHTx1Drfv8RnET74u_ohLYXPbBxNmKacrFiqoDLggViysJBDZx6P4dU3ykfbS8yi6JpovPmCaWZszoLXeU1zV47Ag5Q2NXGtcFkRUYWnnIqq9Xg8P2krnYQHLXemkFDi7Pz9vZrDGqeRhWN__f7w8i3K__io691rAr3jg&amp;amp;nonce=637165081300650214.NzFjOWFjNDYtNDVlMy00YzlkLWEzMWYtYmE1NDAwZDgzOTMxMjdhZjkyNjUtNDM5OS00MjM2LTk2MTItNGJkMDc5NDEyMTE5&amp;amp;client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&amp;amp;redirect_uri=https%3a%2f%2fportal.azure.com%2fsignin%2findex%2f%3ffeature.refreshtokenbinding%3dtrue%26feature.snivalidation%3dtrue%26feature.usemsallogin%3dfalse&amp;amp;site_id=501430&amp;amp;client-request-id=1fca1f35-4971-41d5-9b0f-a347885c8dfe&amp;amp;x-client-SKU=ID_NET&amp;amp;x-client-ver=1.0.40306.1554" target="_blank" rel="noopener">Azure portal</a>.</p></li>
+<li class="step"><p>Click on <span class="guilabel">Storage accounts</span> in the left-hand navigation panel.</p></li>
+<li class="step">
+<p>Select an existing storage account or create a new one.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Endpoints must be public in order for Memsource Cloud to access the repository from the Internet. If restricting access to selected networks is required, see Memsource IP addresses.</p></li></ul></div>
+</li>
+<li class="step"><p>In the <span class="guimenu">Settings</span> menu, click <span class="guilabel">Access keys</span> and copy either key 1 or key 2 <span class="guilabel">Connection string</span>.</p></li>
+</ol></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-fb9d277b-02b0-0e87-cb36-c1d8cf64944a" id="UUID-fb9d277b-02b0-0e87-cb36-c1d8cf64944a_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h3></div>
+<div class="procedure">
+<a id="UUID-fb9d277b-02b0-0e87-cb36-c1d8cf64944a_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009442160/15e591325da49d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step">
+<p>Click on <span class="guilabel">Connectors</span>.</p>
+<p>The <span class="guimenu">Connectors</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Connector</span> page opens.</p>
+</li>
+<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to <span class="emphasis"><em>Microsoft Azure</em></span>.</p></li>
+<li class="step"><p>Provide the connection string.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Test connection</span>.</p>
+<p>A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The connector is added to the list on the Connectors page.</p>
+</li>
+</ol>
+</div>
+<p>If a default project, branch, and folder is required when connecting, open the connector configuration and click the <span class="guilabel">Select Remote Folder</span> button to set it.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

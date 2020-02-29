@@ -1,0 +1,90 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section caution internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-6fab76d9-0bff-c233-9008-087602479374" id="UUID-6fab76d9-0bff-c233-9008-087602479374_UUID-7406bf8f-8c9f-3069-f9be-4fe823e7e371"></a>Available for</h3></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Enterprise Edition</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>Help Scout connector allows the downloading of source content and uploading of translations to/from Help Scout.</p>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-6fab76d9-0bff-c233-9008-087602479374" id="UUID-6fab76d9-0bff-c233-9008-087602479374_UUID-9ff13540-9b0e-7c6d-081f-2cb39f857854"></a>Use Cases</h3></div>
+<p>There are a number of use cases for the connector:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Project Managers can add files directly to projects from an online repository.</p></li>
+<li class="listitem"><p>Set up the Automation Widget allowing Submitters to add files to requests directly from the online repository.</p></li>
+<li class="listitem">
+<p>Use Automated Project Creation (APC) to have Memsource automatically create new projects when a change in the <span class="bold bold"><strong>last modified date</strong></span> is detected for monitored files or a folder.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Selected files are imported the very first time APC runs.</p></li></ul></div>
+</li>
+<li class="listitem"><p>The Connector API can be used to automate steps otherwise performed manually through the UI. Webhooks can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>When an article is first translated and exported back to Help Scout, the article appears as a draft and must be published manually. If a previously published article is translated in Memsource, it is immediately published when exported back into Help Scout.</p>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-6fab76d9-0bff-c233-9008-087602479374" id="UUID-6fab76d9-0bff-c233-9008-087602479374_UUID-3dc9fe8a-f659-218a-be6f-2524f91428a4"></a>Help Scout Settings</h3></div>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>Select <span class="guilabel">Your Profile</span> from the <span class="guimenu">Account</span> dropdown list in the top right-hand corner of the dashboard.</p></li>
+<li class="step">
+<p>Select <span class="guilabel">Authentication</span> on the right side of the screen and then the <span class="guimenu">API Keys</span> tab. Copy the <span class="guilabel">Docs API Key</span>. </p>
+<p>Generate this key it if it doesn't exist yet.</p>
+</li>
+</ol></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-6fab76d9-0bff-c233-9008-087602479374" id="UUID-6fab76d9-0bff-c233-9008-087602479374_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h3></div>
+<div class="procedure">
+<a id="UUID-6fab76d9-0bff-c233-9008-087602479374_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009454979/15e591325da49d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step">
+<p>Click on <span class="guilabel">Connectors</span>.</p>
+<p>The <span class="guimenu">Connectors</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Connector</span> page opens.</p>
+</li>
+<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to <span class="emphasis"><em>Help Scout</em></span>.</p></li>
+<li class="step"><p>Paste the API key into the <span class="guilabel">Help Scout Docs API</span> key field.</p></li>
+<li class="step">
+<p>In the <span class="guilabel">Help Scout Target Collection</span> field, type the name of an existing Help Scout collection or the name of a collection to be created.</p>
+<p>New collections appear in the collection list of the Help Scout account.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Test connection</span>.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>For a <span class="emphasis"><em>Basic</em></span> or <span class="emphasis"><em>Standard</em></span> Help Scout account, a message will appear to confirm the connection to the single site on Help Scout.</p></li>
+<li class="listitem"><p>For a <span class="emphasis"><em>Plus</em></span> Help Scout account, a list of multilingual sites will be displayed. Select the language of each site from the drop-down lists and which site will be the source for the translation.</p></li>
+</ul></div>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The connector is added to the list on the Connectors page.</p>
+</li>
+</ol>
+</div>
+<p>If a default project, branch, and folder is required when connecting, open the connector configuration and click the <span class="guilabel">Select Remote Folder</span> button to set it.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-6fab76d9-0bff-c233-9008-087602479374" id="UUID-6fab76d9-0bff-c233-9008-087602479374_UUID-007b2f2b-6eb3-058b-3207-9ac961e4983c"></a>Saving Help Scout Collections</h3></div>
+<p>To view a Help Scout collection created via the connector in Memsource, the collection must first be saved.</p>
+<p>To save a collection, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-6fab76d9-0bff-c233-9008-087602479374_procedure-idm4577319722588831616581247075"></a><ol class="procedure" type="1">
+<li class="step"><p>In Help Scout, go to <span class="guimenu">Manage</span> and <span class="guimenu">Docs</span>.</p></li>
+<li class="step"><p>Select the target site for the collection (Basic or Standard accounts have only one site. Plus accounts have multiple sites).</p></li>
+<li class="step"><p>Select <span class="guimenu">Collections</span> on the left-hand side and click on the collection created by the connector.</p></li>
+<li class="step"><p>Click <span class="guilabel">Save Collection</span>.</p></li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

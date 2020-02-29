@@ -1,0 +1,137 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section caution internal sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6" id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_UUID-a807d54c-6312-1be9-2cf6-7ffbcbe00dbe"></a>Available for</h2></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Project Managers</p></li>
+<li class="listitem"><p>Team Editions and higher</p></li>
+</ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>Automated Project Creation rules allow the configuration of how Memsource monitors specific folders and creates new projects if new content is detected in them. This provides full process automation; analysis, pre-translation, assignment to Linguists/Vendors, and the e-mailing of notifications.</p>
+<p>As soon as a project status changes to <span class="emphasis"><em>Completed</em></span> either manually or by Project Status Automation rules, the translated files are sent back to the Online Repository into newly created subfolders identified by language codes (en, es, ja, etc.)</p>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6" id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_UUID-f7eb992a-6e9e-45a6-8129-3142ca2e29a1"></a>Set up Automation Rules</h2></div>
+<p><span class="bold bold"><strong>Prerequisites:</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>At least one <a class="link linktextconsumer" href="https://help.memsource.com/document/preview/390#UUID-2aebdc84-c474-f68d-92e3-a50eb8966572" target="_blank">connector</a> and one <a class="link" href="https://help.memsource.com/hc/articles/360012215099#UUID-f021f3f3-3659-b700-c1a6-421cf8ce5b5b" title="Services">service</a> in a Memsource account.</p></li></ul></div>
+<p><span class="bold bold"><strong>Follow these steps:</strong></span></p>
+<div class="procedure">
+<a id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_procedure-idm4573163243731231650971943354"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009465139/15e593274a23ab.png" style="" alt="Setup_gear.png"></span> page, click <span class="guilabel">Automated Project Creation</span>.</p>
+<p>The <span class="guimenu">Automated Project Creation</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Automated Project Settings</span> page opens.</p>
+</li>
+<li class="step"><p>Select the source and target languages that automatically created projects will be associated with.</p></li>
+<li class="step">
+<p>Choose the <span class="guilabel">Remote Folder</span> to monitor for new or updated content.</p>
+<p>The contents of the folder is listed in the main window.</p>
+</li>
+<li class="step">
+<p>Select specific files to be monitored.</p>
+<p>Not all options are available on all connectors. See the Use Cases section of the specific connector documentation:</p>
+<ul class="stepalternatives">
+<li class="step"><p>If none selected, the entire folder is monitored for a change or new files.</p></li>
+<li class="step"><p>Include subfolders to enable the monitoring of the selected folder and its subfolders.</p></li>
+</ul>
+</li>
+<li class="step">
+<p>Depending on the pathname of the required target files, set <span class="guimenu">Export completed files to</span> and <span class="guimenu">Target Subfolder Path fields</span>.</p>
+<p>See <a class="link" href="#UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_UUID-8ac27269-922a-4fdf-1bea-74a0ce9c1b57" title="Set Target File Pathnames">Set Target Files Pathname</a> for more information.</p>
+</li>
+<li class="step">
+<p>Designate a <span class="guimenu">Processed subfolder</span>.</p>
+<p>Files imported to Memsource are moved to this folder providing visibility on which files are being processed. If disabled, source files stay in their original folder.</p>
+<p>If this option is disabled and File Renaming is not used, original documents can be overwritten by their translations (depending on repository).</p>
+</li>
+<li class="step"><p>Set a frequency for how often Memsource should check for new content in the designated folder.</p></li>
+<li class="step"><p>Choose required Service.</p></li>
+<li class="step">
+<p>To differentiate between projects coming from different automation rules, use a <span class="guimenu">Default Project Name</span> to define the automatically-generated names of projects.</p>
+<p>The macro {filename} can be used in the Project's title. If multiple filenames are used in the project's name, only the first filename will be used.</p>
+</li>
+<li class="step">
+<p>Set <span class="guimenu">Default Project Owner</span>.</p>
+<p>Default Project Owner will always be notified when a new project is created using automation rules.</p>
+</li>
+<li class="step"><p>Customize Email Templates used for notifications if required.</p></li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>With the automation rules set, content can now be created in the designated folders. Based on frequency checks, Memsource looks into the specified folder and identifies new or updated content (based on file names, metadata, size, etc.).</p>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6" id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_UUID-cd5d084c-7f7d-a132-2d25-0dd16836c854"></a>Automatic Creation of New Projects from Online Repositories</h2></div>
+<p>On the <span class="guimenu">Automated Project Creation</span> page, Memsource displays currently available rules, connection status and the <span class="guimenu">last checked</span> and <span class="guimenu">next chec</span>k dates and times.</p>
+<p>If new content is identified, new projects are created with either default settings or settings taken from the selected project template.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6" id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_UUID-8ac27269-922a-4fdf-1bea-74a0ce9c1b57"></a>Set Target File Pathnames</h2></div>
+<p>Relative to the source file the target files can be exported to:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Same folder</strong></span></p>
+<p>If specific files are selected, then select <span class="guilabel">Source file folder</span> for <span class="guimenu">Export completed files to</span> and keep the <span class="guimenu">Target Subfolder Path</span> empty.Not supported if the entire folder is monitored.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Language subfolder</strong></span></p>
+<p>Always keep the <span class="guimenu">Target Subfolder Path</span> empty.</p>
+<p>If specific files are monitored, then select <span class="guilabel">Target language subfolder</span> for <span class="guimenu">Export completed files to</span>.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Any folder</strong></span></p>
+<p>If specific files are monitored, then select <span class="guilabel">Target language subfolder</span> for <span class="guimenu">Export completed files to</span>.</p>
+<p>Specify the folder name in the <span class="guimenu">Target Subfolder Path</span>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Use {targetLang} macro to represent target language.</p></li>
+<li class="listitem"><p>Subfolders can be created within the source folder.Available for Azure, FTP, SFTP, Dropbox, Google Drive, Box, OneDrive, Git, GitHub, GitLab, and Bitbucket Cloud.</p></li>
+<li class="listitem">
+<p>For some repositories, an absolute path is available. Begin your path with / to indicate the absolute path.</p>
+<p>Available for Azure, FTP, SFTP, Dropbox, Google Drive, Box, OneDrive, Git, GitHub, GitLab, and SharePoint.The leading / in GIT-based repositories represents the root of the repository (where .git folder is located) and starts after the branch name. The target files will be stored in the same branch. Storing the files in a different branch is not supported.</p>
+</li>
+<li class="listitem"><p>Use .. to refer to the parent folder.</p></li>
+</ul></div>
+<p><span class="bold bold"><strong>Examples</strong></span></p>
+<p>If the source file is <code class="code">/files/loc/ui.properties</code> and the target langauge is German (Germany):</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p><code class="code">translations/{targetLang}</code> will create /files/loc/translations/de_de</p></li>
+<li class="listitem"><p><code class="code">/files-{targetLang}/loc</code> will create /files-de_de/loc/&lt;filename&gt;</p></li>
+<li class="listitem"><p><code class="code">../{targetLang}</code> will create /files/de_de/&lt;filename&gt;</p></li>
+</ul></div>
+<p>Name of the actual file is based on the File Renaming set in Project settings.</p>
+</li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6" id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_UUID-171f43d2-fc6f-ec02-24d8-b09d38efaa35"></a>Disable Automated Project Creation</h2></div>
+<p>There are three ways to disable APC:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Manually disabled in settings.</p></li>
+<li class="listitem"><p>Automatically disables after 90 days of inactivity.</p></li>
+<li class="listitem"><p>Automatically after the organization account has been deactivated (at the end of the subscription).</p></li>
+</ul></div>
+<p>When a connector used as part of the Automated Project Creation rules detects three or more consecutive instances of a project not being created when it should be, notification is sent to affected Memsource users.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6" id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_UUID-42077640-bf57-d064-e9bc-b8b33a59acd9"></a>Zip File Support</h2></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Multiple ZIP files can be imported to one project.</p></li>
+<li class="listitem"><p>Translated files are exported back to ZIP files.</p></li>
+<li class="listitem"><p>If one ZIP file is imported to multiple targets, the translated files will be exported to multiple ZIP files—one ZIP for each target language—using the target locale code in the ZIP name (for example <span class="emphasis"><em>Pack18.en_us.ZIP</em></span>).</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

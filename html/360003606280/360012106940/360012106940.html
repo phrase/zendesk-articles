@@ -1,0 +1,143 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section caution internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044" id="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044_UUID-7406bf8f-8c9f-3069-f9be-4fe823e7e371"></a>Available for</h3></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Enterprise Edition</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>Magento connector allows the downloading of source content and uploading of translations to/from Magento for the following content types:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Products</p></li>
+<li class="listitem"><p>Categories</p></li>
+<li class="listitem"><p>Pages</p></li>
+<li class="listitem"><p>Blocks</p></li>
+</ul></div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044" id="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044_UUID-0a7ecc3d-e030-3753-a861-0b7478d16898"></a>Supported Versions</h3></div>
+<p>Magento CE 2.1 or higher</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044" id="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044_UUID-9ff13540-9b0e-7c6d-081f-2cb39f857854"></a>Use Cases</h3></div>
+<p>There are a number of use cases for the connector:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Project Managers can add files directly to projects from an online repository.</p></li>
+<li class="listitem"><p>Set up the Automation Widget allowing Submitters to add files to requests directly from the online repository.</p></li>
+<li class="listitem">
+<p>Use Automated Project Creation (APC) to have Memsource automatically create new projects when a change in the <span class="bold bold"><strong>last modified date</strong></span> is detected for monitored files or a folder.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Selected files are imported the very first time APC runs.</p></li></ul></div>
+</li>
+<li class="listitem"><p>The Connector API can be used to automate steps otherwise performed manually through the UI. Webhooks can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044" id="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044_UUID-34435497-92df-9e40-f0af-93a6656021b8"></a>Install Magento Extension</h3></div>
+<p>There are three ways to install the Memsource Connector extension into a Magento instance:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Through the Magento Marketplace</p></li>
+<li class="listitem"><p>Use Composer</p></li>
+<li class="listitem"><p>Manually</p></li>
+</ul></div>
+<p><span class="bold bold"><strong>Installing via Magento Marketplace</strong></span></p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>Open the Magento Marketplace entry and add it to cart.</p></li>
+<li class="step"><p>In the Magento Administration, go to System and click on <span class="guilabel">Web Setup Wizard</span>.</p></li>
+<li class="step"><p>Choose the <span class="guilabel">Extension Manager</span>.</p></li>
+<li class="step"><p>Under the number of extensions to install, click on <span class="guilabel">Review and Install</span>.</p></li>
+<li class="step"><p>Find the Memsource Connector, and click on the <span class="guilabel">Install</span> link.</p></li>
+<li class="step"><p>Finish the installation.</p></li>
+</ol></div>
+<p>For more information, see <a class="link" href="https://docs.magento.com/marketplace/user_guide/buyers/install-extension.html" target="_blank" rel="noopener">Magento Documentation</a>.</p>
+<p><span class="bold bold"><strong>Installing via Composer</strong></span></p>
+<p>Use the following commands to install via Composer:</p>
+<pre class="programlisting">composer require memsource/magento2-connector
+php bin/magento module:enable Memsource_Connector
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy</pre>
+<p><span class="bold bold"><strong>Manual Installation</strong></span></p>
+<p>If unable to use either Magento Marketplace or Composer, the connector can be installed manually.</p>
+<p>To install manually, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044_procedure-idm4616737389080031618126593393"></a><ol class="procedure" type="1">
+<li class="step"><p>Download the zip file from GitHub releases.</p></li>
+<li class="step"><p>In the Magento installation, extract the downloaded zip file into the folder app/code/Memsource/Connector</p></li>
+<li class="step">
+<p>Enable the extension and clear the cache with these commands:</p>
+<pre class="programlisting">php bin/magento module:enable Memsource_Connector
+php bin/magento setup:upgrade
+php bin/magento cache:flush
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy</pre>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044" id="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044_UUID-bfb76d73-5cb9-8485-b41c-e367dd111bc9"></a>Magento Settings</h3></div>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>In the Magento Administration, go to Stores and click on <span class="guilabel">All Stores</span>.</p></li>
+<li class="step"><p>Click <span class="guilabel">Create Store View</span> to create a separate view for every language.</p></li>
+<li class="step"><p>To associate language with a store go to <span class="guimenu">Stores</span> and click <span class="guilabel">Configuration</span>, select the <span class="guilabel">Store View</span> from the dropdown menu, and update the <span class="guimenu">Locale Options</span>.</p></li>
+<li class="step"><p>Save the configuration.</p></li>
+<li class="step"><p>Go to Stores, click on <span class="guilabel">Configuration</span>, and select <span class="guilabel">MEMSOURCE</span>.</p></li>
+<li class="step"><p>Copy the URL in the browser address bar and the <span class="guilabel">Token</span> from the <span class="guimenu">General Configuration</span> section.</p></li>
+</ol></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044" id="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h3></div>
+<div class="procedure">
+<a id="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009455039/15e591325da49d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step">
+<p>Click on <span class="guilabel">Connectors</span>.</p>
+<p>The <span class="guimenu">Connectors</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Connector</span> page opens.</p>
+</li>
+<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to <span class="emphasis"><em>Magento</em></span>.</p></li>
+<li class="step"><p>Enter the <span class="guilabel">Magento site URL</span> (including the protocol) and the <span class="guilabel">Memsource plugin token</span>.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Test connection</span>.</p>
+<p>A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</p>
+</li>
+<li class="step"><p>Select the <span class="guilabel">Website</span>, <span class="guilabel">Store</span>, and <span class="guilabel">Source store</span> view.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The connector is added to the list on the Connectors page.</p>
+</li>
+</ol>
+</div>
+<p>If a default project, branch, and folder is required when connecting, open the connector configuration and click the <span class="guilabel">Select Remote Folder</span> button to set it.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044" id="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044_UUID-6b365dd2-4b69-e1b8-2ab6-637da6ef71e5"></a>Debug Mode</h3></div>
+<p>When reporting an issue to Memsource support please include the log file. The file contains all API calls.</p>
+<div class="procedure">
+<a id="UUID-f9ec99a5-1e61-c9da-1d8e-2ee3a4940044_procedure-idm4531670225443231618138857243"></a><ol class="procedure" type="1">
+<li class="step"><p>Go to <span class="guimenu">Stores</span>, click on <span class="guilabel">Configuration</span>, and select <span class="guilabel">MEMSOURCE</span>.</p></li>
+<li class="step">
+<p>Under <span class="guimenu">Configuration</span>, set the <span class="guilabel">Debug Mode</span> to <span class="guimenu">Yes</span>.</p>
+<p>Save the configuration.</p>
+</li>
+<li class="step"><p>Reproduce the issues</p></li>
+<li class="step"><p>Download <code class="code">/var/log/memsource_connector.log</code> by clicking the <span class="guilabel">Download</span> link under the <span class="guimenu">Debug Mode</span> setting.</p></li>
+<li class="step"><p>Turn off the debug mode and optionally empty the log by clicking the <span class="guilabel">Empty</span> link.</p></li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

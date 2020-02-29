@@ -1,0 +1,121 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section caution internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-5e8515e4-94aa-2905-6667-d48e88429263" id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_UUID-7406bf8f-8c9f-3069-f9be-4fe823e7e371"></a>Available for</h3></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Enterprise Edition</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>Sitecore is a web content management service that helps users build and manage websites.</p>
+<p>Sitecore connector allows the downloading of source content and uploading of translations to/from Sitecore for the following field types:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Single-Line Text</p></li>
+<li class="listitem"><p>Rich Text</p></li>
+<li class="listitem"><p>Multi-Line Text</p></li>
+<li class="listitem"><p>HTML</p></li>
+<li class="listitem"><p>Text</p></li>
+<li class="listitem"><p>Name Value List</p></li>
+<li class="listitem"><p>General Link</p></li>
+<li class="listitem"><p>Image</p></li>
+<li class="listitem"><p>Checklist (Referenced items are included in the job if not translated.)</p></li>
+<li class="listitem"><p>Multilist (Referenced items are included in the job if not translated.)</p></li>
+<li class="listitem"><p>Treelist (Referenced items are included in the job if not translated.)</p></li>
+</ul></div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-5e8515e4-94aa-2905-6667-d48e88429263" id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_UUID-0a7ecc3d-e030-3753-a861-0b7478d16898"></a>Supported Versions</h3></div>
+<p>Sitecore - XP (Experience Platform): 8.2 and higher</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-5e8515e4-94aa-2905-6667-d48e88429263" id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_UUID-9ff13540-9b0e-7c6d-081f-2cb39f857854"></a>Use Cases</h3></div>
+<p>There are a number of use cases for the connector:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Project Managers can add files directly to projects from an online repository.</p></li>
+<li class="listitem"><p>Set up the Automation Widget allowing Submitters to add files to requests directly from the online repository.</p></li>
+<li class="listitem">
+<p>Use Automated Project Creation (APC) to have Memsource automatically create new projects when a change in the <span class="bold bold"><strong>last modified date</strong></span> is detected for monitored files or a folder.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Selected files are imported the very first time APC runs.</p></li>
+<li class="listitem"><p>If using Automatic Project Creation and the main page to be translated contains sub-items, changes made to those sub-items do not automatically create a new project. These sub-items will need to be translated manually.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>The Connector API can be used to automate steps otherwise performed manually through the UI. Webhooks can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p><span class="bold bold"><strong>Restrictions</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The <span class="emphasis"><em>Default Language</em></span> set in the Sitecore server must be the same language as the source language in the Memsource account.</p></li></ul></div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-5e8515e4-94aa-2905-6667-d48e88429263" id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_UUID-ddb652df-e3b9-92e9-5288-0eedc445a32f"></a>Sitecore Settings</h3></div>
+<p>In order to set up the connector, the Sitecore Administrator must enable SSL and the Rest API.</p>
+<p>To enable the Rest API, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_procedure-idm4616737252214431619883176797"></a><ol class="procedure" type="1">
+<li class="step"><p>In the file <code class="code">{SITECORE_ROOT}Website\App_Config\Include\Sitecore.ItemWebApi.config</code> set <code class="code">itemwebapi.mode</code> and <code class="code">itemwebapi.access</code>.</p></li>
+<li class="step">
+<p>Restart the server/service:</p>
+<pre class="programlisting">&lt;site name="website"&gt;
+    &lt;patch:attribute name="itemwebapi.mode"&gt;StandardSecurity&lt;/patch:attribute&gt;
+    &lt;patch:attribute name="itemwebapi.access"&gt;ReadWrite&lt;/patch:attribute&gt;
+    &lt;patch:attribute name="itemwebapi.allowanonymousaccess"&gt;false&lt;/patch:attribute&gt;
+&lt;/site&gt;</pre>
+</li>
+<li class="step">
+<p>Set the security policies:</p>
+<p>In the file <code class="code">{SITECORE_ROOT}Website\App_Config\Include\Sitecore.Services.Client.config</code> set the value <code class="code">Sitecore.Services.SecurityPolicy</code> from <code class="code">Sitecore.Services.Infrastructure.Web.Http.Security.ServicesLocalOnlyPolicy, Sitecore.Services.Infrastructure</code>to <code class="code">Sitecore.Services.Infrastructure.Web.Http.Security.ServicesOnPolicy, Sitecore.Services.Infrastructure</code>.</p>
+</li>
+</ol>
+</div>
+<p><span class="bold bold"><strong>Access Roles and Permissions</strong></span></p>
+<p>The Sitecore connector does not require specific roles.</p>
+<p>Apply these settings:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Add Read and Write access rights to items that to be translated.</p>
+<p>For more information, see <a class="link" href="https://doc.sitecore.com/developers/91/platform-administration-and-architecture/en/the-access-rights.html" target="_blank" rel="noopener">Sitecore access rights</a>.</p>
+</li>
+<li class="listitem"><p>Add Read access right to items that are parents of items to be translated.</p></li>
+<li class="listitem"><p>Add Read access right to languages items using <code class="code">/System/Languages/**</code></p></li>
+<li class="listitem"><p>Add Read access right to workflow items using <code class="code">/System/Workflows/**</code></p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-5e8515e4-94aa-2905-6667-d48e88429263" id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h3></div>
+<div class="procedure">
+<a id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009442260/15e591325da49d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step">
+<p>Click on <span class="guilabel">Connectors</span>.</p>
+<p>The <span class="guimenu">Connectors</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Connector</span> page opens.</p>
+</li>
+<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to <span class="emphasis"><em>Sitecore</em></span>.</p></li>
+<li class="step"><p>Enter the Sitecore URL, including the protocol.</p></li>
+<li class="step"><p>Enter the Username and Password.</p></li>
+<li class="step">
+<p>Select the <span class="guilabel">Source Language</span>.</p>
+<p>Source language must match the default language in Sitecore.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Test connection</span>.</p>
+<p>A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The connector is added to the list on the Connectors page.</p>
+</li>
+</ol>
+</div>
+<p>If a default project, branch, and folder is required when connecting, open the connector configuration and click the <span class="guilabel">Select Remote Folder</span> button to set it.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

@@ -1,0 +1,104 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section caution internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6" id="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6_UUID-20eb2bee-fd34-3878-faa7-487c54d6f553"></a>Available for</h3></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Ultimate and Enterprise Editions</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6" id="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6_UUID-0a7ecc3d-e030-3753-a861-0b7478d16898"></a>Supported Versions</h3></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Bitbucket Server - 5.8 and higher</p></li></ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6" id="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6_UUID-9ff13540-9b0e-7c6d-081f-2cb39f857854"></a>Use Cases</h3></div>
+<p>There are a number of use cases for the connector:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Project Managers can add files directly to projects from an online repository.</p></li>
+<li class="listitem"><p>Set up the Automation Widget allowing Submitters to add files to requests directly from the online repository.</p></li>
+<li class="listitem">
+<p>Use Automated Project Creation (APC) to have Memsource automatically create new projects when a change in <span class="bold bold"><strong>file size</strong></span> is detected in monitored files or a folder.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Selected files are imported the very first time APC runs. All files are imported when a folder is monitored.</p></li>
+<li class="listitem"><p>Use the Git connector if you need to monitor an entire subdirectory.</p></li>
+<li class="listitem"><p>This connector supports absolute path setting. Target translation files can be stored only in the same branch as the source file.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>Set up Continuous Jobs to have Memsource monitor selected files for changes.</p></li>
+<li class="listitem"><p>The Connector API can be used to automate steps otherwise performed manually through the UI. Webhooks can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</p></li>
+</ul></div>
+<div dir="ltr" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Tip</h3>
+<p>If requirements are:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Limiting Memsource access to a single repository.</p></li>
+<li class="listitem"><p>Using an SSH key for authentication.</p></li>
+<li class="listitem"><p>Monitoring an entire subdirectory for a change in Automated Project Creation.</p></li>
+<li class="listitem"><p>Detection of file changes based on Last modified date as opposed to just file size.</p></li>
+</ul></div>
+<p>Use <a class="link" href="https://help.memsource.com/hc/articles/360012208099#UUID-6a6bb220-dd9e-9427-3528-ab7f25d78f17" title="Git Connector">Git connector</a> to connect to <span class="bold bold"><strong>Bitbucket</strong></span>.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6" id="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6_UUID-615d40e1-7915-3adb-df62-20663727a9ab"></a>BitBucket Server Settings</h3></div>
+<p>Create an access token in the Bitbucket account:</p>
+<div class="procedure">
+<a id="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6_procedure-idm4603247764502431654386781741"></a><ol class="procedure" type="1">
+<li class="step">
+<p>Log in to the Bitbucket account, click the profile icon in the top-right corner, and click on <span class="guilabel">Manage account</span>.</p>
+<p>The <span class="guimenu">Account settings</span> screen opens.</p>
+</li>
+<li class="step"><p>Navigate to <span class="guimenu">Personal access tokens</span> and click <span class="guilabel">Create a token</span>.</p></li>
+<li class="step"><p>Provide a name.</p></li>
+<li class="step">
+<p>Set permissions:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong>Projects</strong></span> permission to <span class="emphasis"><em>Read</em></span>.</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>Repositories</strong></span> permission to <span class="emphasis"><em>Write</em></span>.</p></li>
+</ul></div>
+</li>
+<li class="step">
+<p>Click on <span class="guilabel">Create</span>.</p>
+<p>This generates a token needed to enter into the Memsource connector configuration.The token is only visible at this stage and will not be visible again if the window is closed.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6" id="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h3></div>
+<div class="procedure">
+<a id="UUID-7d4224ab-1d29-c8c1-c5be-67caabbe0ce6_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009454819/15e591325da49d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step">
+<p>Click on <span class="guilabel">Connectors</span>.</p>
+<p>The <span class="guimenu">Connectors</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Connector</span> page opens.</p>
+</li>
+<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to <span class="emphasis"><em>Bitbucket Server</em></span>.</p></li>
+<li class="step"><p>Enter the server host address into the <span class="guilabel">Host</span> field and the <span class="guilabel">Bitbucket personal access token</span> obtained from the Bitbucket server site.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Test connection</span>.</p>
+<p>A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The connector is added to the list on the Connectors page.</p>
+</li>
+</ol>
+</div>
+<p>If a default project, branch, and folder is required when connecting, open the connector configuration and click the <span class="guilabel">Select Remote Folder</span> button to set it.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p></p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

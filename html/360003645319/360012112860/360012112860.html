@@ -1,0 +1,74 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>Due Date Schemes allow users to configure a set of conditions which will be used to automatically calculate a Due Date for projects received via the Automation Widget or Automated Project Creation.</p>
+<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-0e2570ac-5170-51a4-945c-c5352ba81621" id="UUID-0e2570ac-5170-51a4-945c-c5352ba81621_UUID-c61477b3-9d5e-dad6-5eca-9f4ed3f118f3"></a>Set up a Due Date Scheme</h2></div>
+<p>Follow these steps:</p>
+<div class="procedure">
+<a id="UUID-0e2570ac-5170-51a4-945c-c5352ba81621_procedure-idm4573163010932831654500403572"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009453000/15e593274a23ab.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section and click on <span class="guilabel">Due Date Schemes</span>.</p>
+<p>The <span class="guimenu">Due Date Schemes</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Due Date Scheme</span> page opens.</p>
+</li>
+<li class="step">
+<p>Specify scheme details.</p>
+<p><span class="guimenu">Name</span>, <span class="guimenu">Quota</span> and <span class="guimenu">Office Hours</span> are mandatory fields.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="guimenu">Quota</span> Quota is used to determine the volume of characters, words or pages that can be processed within a given time period. The combination of these two factors is used to calculate an hourly rate for which documents can be translated.</p>
+<p>When a document is submitted, the values are used to calculate the approximate delivery time (e.g. it takes 5 hours to translate 50 words).</p>
+<p>The lowest calculation threshold is set to 2 hours. This ensures that even small assignments do not add up to create unrealistic delivery times.</p>
+<p>Click <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009453020/15e593274a5d8e.png" style="" alt="add.png"></span> to add additional Non-business days and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009465239/15e593274a8f08.png" style="" alt="delete.png"></span> to remove them.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Working days</span></p>
+<p>Working days specify what days assignments are worked on and used to calculate a Due Date. </p>
+<p>Non-business days can be used to exclude specific days from the calculation (e.g. bank holidays, or a company-wide absence).</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Office hours</span></p>
+<p>Office hours specify which hours of the given workday work is performed on assignments.</p>
+<p>Depending on when the Due Date falls, they are also used to specify the Start of the calculation and Delivery times.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Start</span></p>
+<p>Specifies the starting time of the calculation depending on whether the documents have been received during or after office hours. The calculation can start immediately, a specific number of hours after submission, or at a specific day and time.</p>
+<p><span class="bold bold"><strong>Use Case: </strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>The calculation for jobs received DURING office hours starts immediately after document is received.</p></li>
+<li class="listitem"><p>The calculation for jobs received AFTER office hours starts at the beginning of the next working day.</p></li>
+</ul></div>
+<p>Small jobs (e.g. 10 words) submitted less than 2 hours before the end of office hours are regarded as being delivered AFTER office hours. This ensures that small assignments are not delivered late due to being submitted near the end of the office hours and not being addressed in time.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Delivery</span></p>
+<p>Based on the Quota, Office hours, and Start time, a Due Date is automatically calculated using an hourly rate. Depending on the size, this determines when jobs should be delivered but may fall both during and after specified office hours or working days. Delivery rules specify how the deadline should be adjusted if the Due Date falls outside of the desired time ranges. Due Date can also be adjusted for jobs to be delivered within office hours.</p>
+<p><span class="bold bold"><strong>Use Case:</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p>A job’s Due Date falls on Wednesday, 18:00 (outside of office hours),</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; "><li class="listitem"><p>Rule defines that job is not delivered immediately, but in the next working day at a specified hour.</p></li></ul></div>
+</li>
+<li class="listitem">
+<p>A job is calculated to be delivered at 13:00 (inside office hours).</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; "><li class="listitem"><p>Rule defines that job is delivered immediately or at a specified hour during the same working day.</p></li></ul></div>
+</li>
+</ul></div>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Large Assignments</span></p>
+<p>The automatically calculated Due Date can be extended by a specified number of hours or days depending on the size of the received job.</p>
+<p>Click <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009453020/15e593274a5d8e.png" style="" alt="add.png"></span> to add more size exceptions and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009465239/15e593274a8f08.png" style="" alt="delete.png"></span> to remove them.</p>
+</li>
+</ul></div>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
