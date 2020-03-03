@@ -34,6 +34,29 @@
 <li>Summary of API usage, list and breakdown of API calls per period of time, etc.</li>
 </ul>
 </li>
+<li>Time Tracking<br> Collection of time-tracking stats (in ms) follows these principles and can be seen in both MXLIFF files and in Kibana:<img class="img450" title="" src="https://pages.memsource.com/hc/TimeTracking.png" alt="">
+<ul>
+<li>User clicks into segment #1:
+<ul>
+<li>Counting of segment #1 thinking time starts</li>
+<li>Counting of segment #1 editing time starts</li>
+</ul>
+</li>
+<li>User starts editing segment #1:
+<ul>
+<li>Counting of segment #1 thinking time is stopped</li>
+<li>Counting of segment #1 editing time continues</li>
+</ul>
+</li>
+<li>User clicks into segment #2:
+<ul>
+<li>Counting of segment #1 editing time is stopped</li>
+</ul>
+</li>
+<li>When a user re-enters segment #1, the counting starts again and the new times are added to the previous values. If edited upon re-entering, both times are updated. If there is no editing, times are not updated.</li>
+<li>The thinking and/or editing times are measured for each workflow step separately.</li>
+</ul>
+</li>
 </ul>
 <div class="callout callout--success callout--dashed">
 <span class="callout__title">Note:</span> Kibana version 4.1.6 is required to process data from Memsource. Download from the <a class="external text" style="background-color: #ffffff;" href="https://www.elastic.co/downloads/past-releases/kibana-4-1-6" rel="nofollow">Elastic website</a>. </div>
