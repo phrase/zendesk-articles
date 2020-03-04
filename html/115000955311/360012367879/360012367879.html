@@ -1,0 +1,17 @@
+<p><span style="font-weight: 400;">Transport Layer Security (TLS) is a protocol used to ensure privacy and data integrity when connecting to Memsource from browsers and other applications.</span></p>
+<p><span style="font-weight: 400;">As of Thursday the 26th of March, 2020, Memsource will be disabling TLSv1.1 and enabling HTTP/2. Use of TLSv1.2 or higher will be required.</span></p>
+<p><strong>Reasons for this are:</strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">TLSv1.1 is no longer considered a secure protocol.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">As of the end of March, TLSv1.1 will no longer be supported by Apple, Google, Microsoft or Mozilla and various government organizations mandate use of TLSv1.2 or higher.</span></li>
+</ul>
+<p><span style="font-weight: 400;">We believe very few users will be affected by this change but if there is any concern, see the steps below.</span></p>
+<p><strong>How to prepare:</strong></p>
+<ul>
+<li style="font-weight: 400;">
+<span style="font-weight: 400;">If using a very old browser it will fail when connecting to Memsource. Your browser will need to be updated to a version that uses modern security protocols. All modern browsers use TLSv1.2 or higher. <br>To ensure your browser is ready, open </span><a href="https://www.howsmyssl.com/"><span style="font-weight: 400;">https://www.howsmyssl.com/</span></a><span style="font-weight: 400;"> (this site checks browser security).</span>
+</li>
+<li style="font-weight: 400;">
+<span style="font-weight: 400;">As an API customer, ensure your application connects via TLSv1.2 or higher. <br>To check your application, open </span><a href="https://www.howsmyssl.com/a/check"><span style="font-weight: 400;">https://www.howsmyssl.com/a/check</span></a><span style="font-weight: 400;"> with the same HTTP client as in your application.</span>
+</li>
+</ul>
