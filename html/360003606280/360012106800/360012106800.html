@@ -43,7 +43,7 @@
 <p><span class="bold bold"><strong>Pre-requisite</strong></span>: Create an Adobe Experience Manager user with minimum permissions required to view unpublished pages.</p>
 <div class="procedure">
 <a id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009659719/15e620f3a99604.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009660859/15e6211e3ad28d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -83,7 +83,7 @@
 <p>Create a Project Template configured to your needs.</p>
 <p>Under <span class="guimenu">Access and Security</span> set the <span class="guilabel">Allow loading external content in editors</span>.</p>
 <p>Apply the following <span class="guimenu">XML File Import Settings</span>:</p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360009659739/15e620f3a9d71f.png" style="" alt="content of the image was changed."></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360009655700/15e6211e3b20f2.png" style="" alt="content of the image was changed."></div>
 </li>
 <li class="step">
 <p>Create a Service.</p>
@@ -245,10 +245,30 @@
 <div class="panel-body collapse" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-9a9fec07-34b4-6ba3-09e9-4fb5ba6f51cd_body">
 <p>Configure default Memsource Translation Provider with different parts of the site taxonomy. Configure the provider at the root node of the site. All descendant pages will inherit the setting. Override the setting at the node that should use different provider configuration (e.g. entire site uses human translation but the community section uses machine translation).</p>
 <p>To apply translation integration, follow these steps:</p>
-<p><span class="bold bold"><strong>6.4, 6.5</strong></span></p>
-<div class="procedure"><ul class="procedure"><li class="step"><p>On the <span class="guimenu">Advanced</span> Tab, select the newly created configuration as the Cloud Configuration.</p></li></ul></div>
-<p><span class="bold bold"><strong>6.3</strong></span></p>
-<div class="procedure"><ol class="procedure" type="1">
+<div class="sidebar accordion accordion">
+<a id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_sidebar-idm4575661821438431669696313903"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Versions 6.4, 6.5</span>
+</div></div>
+</div>
+<div id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_sidebar-idm4575661821438431669696313903_body" class="panel-body collapse"><div class="procedure">
+<a id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_procedure-idm457566182136003166969666822"></a><ul class="procedure"><li class="step"><p>On the <span class="guimenu">Advanced</span> Tab, select the newly created configuration as the Cloud Configuration.</p></li></ul>
+</div></div>
+</div>
+</div>
+<div class="sidebar accordion accordion">
+<a id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_sidebar-idm4560692575328031669697270918"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Version 6.3</span>
+</div></div>
+</div>
+<div id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_sidebar-idm4560692575328031669697270918_body" class="panel-body collapse"><div class="procedure"><ol class="procedure" type="1">
 <li class="step"><p>On the <span class="guimenu">Cloud Services Tab</span>, select the newly created configuration as the Translation Integration.</p></li>
 <li class="step">
 <p>Click on the <span class="guilabel">Add configuration</span> label and select the <span class="guilabel">Memsource Translation Plugin for AEM</span>. </p>
@@ -258,7 +278,9 @@
 <p>Select the configuration for use with this content.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>By default, all child pages inherit these settings. Adjust any page to use a different cloud configuration if required.</p></li></ul></div>
 </li>
-</ol></div>
+</ol></div></div>
+</div>
+</div>
 <p>When adding content from these pages, only translatable content will be added. If a project is created from the <span class="guimenu">References Panel</span>, it will be automatically set up to use the cloud configuration associated with the root page.</p>
 <p>Memsource Home URL: The default URL is <a class="link" href="https://cloud.memsource.com/web/" target="_blank" rel="noopener">https://cloud.memsource.com/web/</a> but can be different if you or the LSP is using a Custom URL.</p>
 </div>
@@ -276,12 +298,33 @@
 <li class="step"><p>Select target languages, optionally uncheck the <span class="guilabel">Select all sub-pages</span>.</p></li>
 <li class="step">
 <p>Select the appropriate option from the Project dropdown:</p>
-<p><span class="bold bold"><strong>6.4, 6.5</strong></span></p>
+<div class="sidebar accordion accordion">
+<a id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_sidebar-idm4575661954035231669705205706"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Versions 6.4, 6.5</span>
+</div></div>
+</div>
+<div id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_sidebar-idm4575661954035231669705205706_body" class="panel-body collapse">
 <p>Select <span class="guilabel">Create Multi-language Translation Project</span>.</p>
-<p>A single project is created with multiple jobs (one per language) if there are multiple target languages.</p>
-<p><span class="bold bold"><strong>6.3</strong></span></p>
-<p>Select <span class="guilabel">Create a new translation project</span>.</p>
 <p>If there are multiple target languages, a separate project will be created for each language.</p>
+</div>
+</div>
+</div>
+<div class="sidebar accordion accordion">
+<a id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_sidebar-idm4573163221417631669706847627"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Version 6.3</span>
+</div></div>
+</div>
+<div id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_sidebar-idm4573163221417631669706847627_body" class="panel-body collapse"><p>Select <span class="guilabel">Create a new translation project</span>.</p></div>
+</div>
+</div>
 </li>
 <li class="step"><p>Enter project title and click <span class="guilabel">Create</span>.</p></li>
 <li class="step"><p>Navigate to the project in the <span class="guimenu">Projects</span> section and open it.</p></li>
