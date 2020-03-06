@@ -1,0 +1,81 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong>Enterprise edition</strong> for additional cost.<br>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>Sitecore is a web content management service that helps users build and manage websites.</p>
+<p>Sitecore connector allows the downloading of source content and uploading of translations to/from Sitecore for the following field types:</p>
+<ul>
+<li>Single-Line Text</li>
+<li>Rich Text</li>
+<li>Multi-Line Text</li>
+<li>HTML</li>
+<li>Text</li>
+<li>Name Value List</li>
+<li>General Link</li>
+<li>Image</li>
+<li>Checklist (Referenced items are included in the job if not translated.)</li>
+<li>Multilist (Referenced items are included in the job if not translated.)</li>
+<li>Treelist (Referenced items are included in the job if not translated.)</li>
+</ul>
+<h2 id="minimum-requirements-0-0">Minimum Requirements</h2>
+<ul>
+<li>Sitecore - XP (Experience Platform): 8.2 and higher</li>
+</ul>
+<h2>Sitecore Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul class="list-bullet">
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the last modified date is detected for monitored files or an entire list.
+<ul>
+<li>Selected files are imported the very first time APC runs.</li>
+<li>If using Automatic Project Creation and the main page to be translated contains sub-items, changes made to those sub-items do not automatically create a new project. These sub-items will need to be translated manually.</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps normally performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<p>Restrictions:</p>
+<ul class="list-bullet">
+<li>The <em>Default Language</em> set in the Sitecore server must be the same language as the source language in the Memsource account.</li>
+</ul>
+<h2>Connect to Sitecore</h2>
+<h4><strong>Sitecore Settings:</strong></h4>
+<p>In order to set up the connector, the Sitecore Administrator must enable <a href="https://doc.sitecore.com/developers/91/platform-administration-and-architecture/en/enable-https-for-core-roles.html" target="_self">SSL</a> and the Rest API.</p>
+<p>To enable the Rest API, follow these steps:</p>
+<ol class="list-colored">
+<li>In the file <code>{SITECORE_ROOT}Website\App_Config\Include\Sitecore.ItemWebApi.config</code> <br> set <code>itemwebapi.mode</code> and <code>itemwebapi.access</code>.</li>
+<li>Restart the server/service:
+<pre>&lt;site name="website"&gt;
+    &lt;patch:attribute name="itemwebapi.mode"&gt;StandardSecurity&lt;/patch:attribute&gt;
+    &lt;patch:attribute name="itemwebapi.access"&gt;ReadWrite&lt;/patch:attribute&gt;
+    &lt;patch:attribute name="itemwebapi.allowanonymousaccess"&gt;false&lt;/patch:attribute&gt;
+&lt;/site&gt;</pre>
+</li>
+<li>Set the security policies:<br> In the file <code style="font-size: 15px;">{SITECORE_ROOT}Website\App_Config\Include\Sitecore.Services.Client.config</code><br> set the value <code style="font-size: 15px;">Sitecore.Services.SecurityPolicy</code>from <code style="font-size: 15px;">Sitecore.Services.Infrastructure.Web.Http.Security.ServicesLocalOnlyPolicy, Sitecore.Services.Infrastructure</code>to <code style="font-size: 15px;">Sitecore.Services.Infrastructure.Web.Http.Security.ServicesOnPolicy, Sitecore.Services.Infrastructure</code>.</li>
+</ol>
+<p><strong>Access Roles and Permissions</strong></p>
+<p>The Sitecore connector does not require specific roles.<br> Apply these settings:</p>
+<ul>
+<li>Add <em>Read</em> and <em>Write</em> access rights to items that to be translated. (For more information, see Sitecore <a href="https://doc.sitecore.com/developers/91/platform-administration-and-architecture/en/the-access-rights.html" target="_self">access rights</a>.)</li>
+<li>Add <em>Read</em> access right to items that are parents of items to be translated.</li>
+<li>Add <em>Read </em>access right to languages items using <code>/System/Languages/**</code>
+</li>
+<li>Add <em>Read</em> access right to workflow items using <code>/System/Workflows/**</code>
+</li>
+</ul>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol class="list-colored">
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Sitecore</em>.</li>
+<li>Enter the Sitecore URL, including the protocol.</li>
+<li>Enter the <strong>Username</strong> and <strong>Password</strong>.</li>
+<li>Select the <strong>Source Language</strong>.<br> Source language must match the default language in Sitecore.</li>
+<li>Click <strong>Test connection</strong>.<strong><br></strong>A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default folder is required when connecting to a Sitecore, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>

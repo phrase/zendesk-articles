@@ -1,0 +1,129 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong>Enterprise edition<br></strong>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>TYPO3 is a free and open-source web content management system written in PHP.</p>
+<h2>Requirements</h2>
+<ul class="list-bullet">
+<li>Localization Manager 8.0.0 or higher</li>
+</ul>
+<p>See <a href="https://docs.typo3.org/typo3cms/extensions/l10nmgr/ExtLocalizationManager/UsersManual/Index.html" target="_self">TYPO3 extension</a> documentation for installation instructions.</p>
+<h2>Configure Translation Workflow</h2>
+<p>Memsource provides a highly-configurable workflow engine allowing associations with TYPO3 jobs, specific net rates schemes, due dates schemes, price lists, workflows steps and more.<br> To configure processing of TYPO3 jobs, follow these steps:</p>
+<ol class="list-colored">
+<li>Create a <a href="https://help.memsource.com/hc/en-us/articles/360001388091" target="_self"><strong>Service</strong></a>.
+<ul>
+<li>Select the same source and target languages as in TYPO3.</li>
+</ul>
+</li>
+<li>Create an <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self"><strong>Automation Widget</strong></a>.
+<ul>
+<li>Select the service created in the previous step.</li>
+</ul>
+</li>
+</ol>
+<h2>Configure TYPO3</h2>
+<h3>Add Target Languages</h3>
+<p>To add required target languages, see the <a href="https://docs.typo3.org/typo3cms/EditorsTutorial/Languages/Index.html">Working with Languages</a> article in the TYPO3 documentation.</p>
+<h3> Add Memsource Extension</h3>
+<ol class="list-colored">
+<li style="font-weight: 400;">In the left-hand menu, go to <em>ADMIN TOOLS</em><strong> </strong>and click on <strong>Extensions.</strong>
+</li>
+<li style="font-weight: 400;">Select <em>Get Extensions</em> from the drop-down list at the top of the window and search for <em>Memsource</em>.</li>
+<li style="font-weight: 400;">Click the <strong>Import and Install</strong> button in the <em>Actions</em> column for the Memsource plugin.</li>
+</ol>
+<h2>Configure the Plugin in TYPO3</h2>
+<ol class="list-colored">
+<li style="font-weight: 400;">From the menu on the left-hand side, select <strong>MEMSOURCE</strong> and click on <strong>Configuration. </strong>
+</li>
+<li style="font-weight: 400;">Fill in the Connection fields:</li>
+</ol><ul>
+<li style="font-weight: 400;">API URL prefix:  <a href="https://cloud.memsource.com/web">https://cloud.memsource.com/web</a>
+</li>
+<li style="font-weight: 400;">Memsource account username</li>
+<li style="font-weight: 400;">Memsource account password</li>
+</ul>
+<li style="font-weight: 400;">Click <strong>Save</strong>
+</li>
+<li style="font-weight: 400;">Select an Automation Widget from the drop-down list. The list of Automation Widgets is available after the connection has been established. If only one Automation Widget is configured in Memsource, it is automatically selected.</li>
+
+<h2>Create a Configuration File Using the Localization Manager</h2>
+<p>A localization manager extension must be installed to create a configuration file.</p>
+<ol class="list-colored">
+<li style="font-weight: 400;">From the TYPO3 account, go to the menu. Under <em>WEB,</em> click on <strong>List. </strong>
+</li>
+<li style="font-weight: 400;">Click on the top item with the globe icon, and then click the <strong>Create new record</strong> button at the top of the page (outlined in red below). <br>  <img src="https://help.memsource.com/hc/article_attachments/360004605691/mceclip2.png" width="129" height="47">
+</li>
+<li style="font-weight: 400;">Under <em>Localization Manager</em><strong>, </strong>click on <strong>L10n Manager Configuration.</strong>
+</li>
+<li style="font-weight: 400;">Complete the following fields:
+<ul>
+<li style="font-weight: 400;">Title</li>
+<li style="font-weight: 400;">Export filenameprefix</li>
+<li style="font-weight: 400;">Depth of page levels</li>
+<li style="font-weight: 400;">Source language</li>
+<li style="font-weight: 400;">Select items to export</li>
+</ul>
+</li>
+<li style="font-weight: 400;">Click <strong>Save.</strong>
+</li>
+</ol>
+<h2>Export an XML file for Translation</h2>
+<p>Once configured, files can be exported for import into Memsource.</p>
+<ol class="list-colored">
+<li style="font-weight: 400;">Under <em>WEB</em><strong>,</strong> click on <strong>L10N Manager, </strong>and select the created config file.</li>
+<li style="font-weight: 400;">In the <em>Choose your action</em> drop-down list, select <strong>XML export/import.</strong>
+</li>
+<li style="font-weight: 400;">Select the <strong>Target language</strong> and click the <strong>Export</strong> button.</li>
+<li style="font-weight: 400;">The exported XML file is saved to the TYPO3 root directory `/uploads/tx_l10nmgr/jobs/out`</li>
+</ol>
+<h2>Send an XML file to Memsource</h2>
+<ol class="list-colored">
+<li style="font-weight: 400;">
+<p>From the menu, go to <em>MEMSOURCE</em> and select <strong>Transfers.</strong></p>
+</li>
+<li style="font-weight: 400;">
+<p>Select the XML file for translation.</p>
+</li>
+<li style="font-weight: 400;">
+<p>Choose a service and a due date from each of the drop-down lists.</p>
+<ul>
+<li style="font-weight: 400;">
+<p>The list of services displayed only includes the services with language settings that correspond to the languages defined in the selected XML file. A due date can only be set if there is no Due Date Scheme in the selected service.</p>
+</li>
+</ul>
+</li>
+<li style="font-weight: 400;">
+<p>Click <strong>Send</strong> and then <strong>confirm your request.</strong></p>
+</li>
+</ol>
+<h2>Download Translated Content from Memsource</h2>
+<p>After the translation is done in Memsource and the status of the project is set as <em>Completed</em> or <em>Completed by Linguist</em>, the translated content may be downloaded.</p>
+<p>To download the content, follow these steps: </p>
+<ol class="list-colored">
+<li style="font-weight: 400;">From your TYPO3 account, go to <em>MEMSOURCE</em> and click on <strong>Transfers </strong>in the left-hand menu.</li>
+<li style="font-weight: 400;">Click <strong>Download and publish </strong>in the <em>Actions</em> column.</li>
+</ol>
+<h2>View the Translated Content </h2>
+<ol class="list-colored">
+<li style="font-weight: 400;">In the TYPO3 menu, go to <em>WEB</em><strong>, </strong> and click <strong>Page.</strong> </li>
+<li style="font-weight: 400;">Select the target language from the drop-down list at the top of the page.<br> The translated XML file will have been saved to the TYPO3 root directory `/uploads/tx_memsource/translated_files`.</li>
+<li style="font-weight: 400;">If unable to see the translated content, click again on <strong>Page</strong> and select the top item with the globe icon. Choose <em>Languages</em> from the drop-down list at the top of the page.</li>
+<li style="font-weight: 400;">From the drop-down list next to <em>Make a new translation of this page</em><strong>,</strong> select the desired target language.<br> The translated content for that language appears.</li>
+</ol>
+<h2>Update a Translation</h2>
+<p>To make changes to a source file in TYPO3 and to be re-translated, export a new XML file and send it to Memsource.  </p>
+<p>To update a translation, follow these steps:</p>
+<ol class="list-colored">
+<li style="font-weight: 400;">From the menu, select <em>WEB</em> and click on <strong>L10 Manager.</strong>
+</li>
+<li style="font-weight: 400;">Select the configuration file.</li>
+<li style="font-weight: 400;">Under <em>Choose your action</em>, select <strong>XML export/import.</strong>
+</li>
+<li style="font-weight: 400;">Select the target language and check the box <strong>New/Changed content only.</strong>
+</li>
+<li style="font-weight: 400;">Click the <strong>Export </strong>button.</li>
+</ol>

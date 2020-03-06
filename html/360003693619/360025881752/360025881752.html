@@ -1,0 +1,54 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong>Enterprise edition<br></strong>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>HubSpot connector allows the downloading of source content and uploading of translations to/from HubSpot Marketing Hub for the following content types:</p>
+<ul>
+<li>Website pages</li>
+<li>Landing pages</li>
+<li>Blog posts</li>
+<li>Forms</li>
+<li>Files</li>
+</ul>
+<p>CTAs and Custom modules are not supported due to limitations in the HubSpot API.</p>
+<h2>HubSpot Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul class="list-bullet">
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>. Only documents that match the connector's source language or don't have any language set are listed.</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository. Only documents that match the connector's source language or don't have any language set are listed.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the <strong>last modified date</strong> is detected in monitored files or a folder.<br>
+<ul>
+<li>Selected files are imported the very first time APC runs.</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to HubSpot</h2>
+<h4><strong>HubSpot Settings:</strong></h4>
+<p>No changes are required.</p>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol class="list-colored">
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>HubSpot</em>.</li>
+<li>Click <strong>Connect to HubSpot</strong>.<br> HubSpot login page opens</li>
+<li>Log in to HubSpot and select an account<strong><br></strong>A checkmark will appear in the connector setup if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</li>
+<li>Choose how the target files are to be organized in HubSpot:
+<ul>
+<li>
+<em>as multi-language groups</em> - the translated pages are linked to the master page and form a language group. This option is supported by HubSpot for only Landing and Website pages. For more information, see <a href="https://knowledge.hubspot.com/cos-general/how-to-manage-multi-language-content-with-hubspots-cos" target="_blank" rel="noopener">Manage multi-language</a> (HubSpot link).</li>
+<li>
+<em>as separate documents</em> - the translated pages are stored as siblings. Language code appended to their internal page name differentiates the individual translations (e.g., Homepage vs. Homepage [de]).</li>
+</ul>
+</li>
+<li>Set the <strong>Source Language</strong>
+<ul>
+<li>This language must match the <strong>Source language</strong> of the Memsource project and should match the <strong>Primary language</strong> of the HubSpot site that's configured in HubSpot <em>Domains &amp; URLs</em> settings.</li>
+</ul>
+</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default folder is required when connecting to a HubSpot, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it. </p>

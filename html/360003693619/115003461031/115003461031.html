@@ -1,0 +1,219 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong>Enterprise edition<br></strong>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>Supported Versions:</p>
+<p><span style="font-weight: 400;">The Memsource Translation Plugin for Adobe Experience Manager follows the same product support periods as Adobe Experience Manager. <br>For information on support periods, see </span><a href="https://helpx.adobe.com/support/programs/eol-matrix.html#EF"><span style="font-weight: 400;">https://helpx.adobe.com/support/programs/eol-matrix.html.</span></a></p>
+<p><span style="font-weight: 400;">Once an Adobe Experience Manager version reaches end of core support, Memsource no longer maintains the plugin. The installer will be available but no further improvements or fixes will be implemented.</span></p>
+<ul>
+<li><span style="font-weight: 400;">Plugin version 1.x supports Adobe Experience Manager 6.3</span></li>
+<li><span style="font-weight: 400;">Plugin version 2.x supports Adobe Experience Manager 6.4 and 6.5.</span></li>
+</ul>
+<h2>Configure Memsource</h2>
+<h3>Configure In-Context Preview</h3>
+<p>The In-context Preview feature offers a real-time preview of original or translated text in both the Memsource Editor for Web and Memsource Editor for Desktop.</p>
+<p>In order for Memsource to offer the real-time preview, it must have access to unpublished pages in an on-premise <span style="font-weight: 400;">Adobe Experience Manager</span> author node.<br> <br> <strong>Memsource requirements:</strong></p>
+<ul class="list-bullet">
+<li>Pass through the enterprise firewall to access the on-premise <span style="font-weight: 400;">Adobe Experience Manager</span> installation</li>
+<li>Authenticate into the <span style="font-weight: 400;">Adobe Experience Manager</span> authoring environment</li>
+</ul>
+<h4><strong>Firewall Configuration</strong></h4>
+<ul>
+<li>
+<span style="font-weight: 400;">Adobe Experience Manager</span> installation must be accessible from the following IP addresses:<br> 34.243.87.13, 34.248.197.209, 108.129.22.31, 3.248.158.93</li>
+<li>
+<span style="font-weight: 400;">Adobe Experience Manager</span> domain name must be able to be resolved externally.</li>
+</ul>
+<h4><strong>Set up Authentication</strong></h4>
+<ol class="list-colored">
+<li>Create a user with minimum permissions required to view unpublished pages.</li>
+<li>In Memsource, from the <em>Setup</em> page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Adobe Experience Manager Live Preview</em>.</li>
+<li>Enter the <strong>Host</strong>.<br> Use the host address of the installation (e.g., https://aem-author.example.org/). The domain name must be resolvable externally (not the intranet domain).</li>
+<li>Enter the username and password</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<div class="callout callout--success callout--dashed">
+<span class="callout__title">Note:</span>
+<p>Some HTML tags present a risk and the Memsource Editors remove them from this HTML when displaying the preview. This is to ensure user's data privacy and security.</p>
+Examples of removed tags include <code>FORM, IFRAME, SCRIPT, SVG, VIDEO, EMBED, OBJECT</code> or <code>background-image</code> CSS property</div>
+<h3>Configure Translation Workflow</h3>
+<p>Memsource provides a highly-configurable workflow engine allowing associations with jobs, specific net rates schemes, due dates schemes, price lists, workflows steps and more.</p>
+<p>To configure processing of <span style="font-weight: 400;">Adobe Experience Manager</span> jobs, follow these steps:</p>
+<ol class="list-colored">
+<li>Create a <a href="https://help.memsource.com/hc/en-us/articles/115003483952" target="_self"><strong>Project Template</strong></a> configured on your needs.<br> Under <em>Access and Security</em> set the <strong>Allow loading external content in editors</strong>.<br> Apply the following <em>XML File Import Settings</em>:<img class="img250" src="https://pages.memsource.com/hc/AEM_XML_Import_Settings.png"> </li>
+<li>Create a <a href="https://help.memsource.com/hc/en-us/articles/360001388091" target="_self"><strong>Service</strong></a>.
+<ul>
+<li>Select the same source and target languages as in <span style="font-weight: 400;">Adobe Experience Manager</span>.</li>
+<li>Select the project template configured in the previous step.</li>
+</ul>
+</li>
+<li>Create an <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self"><strong>Automation Widget</strong></a>.
+<ul>
+<li>Select the service created in the previous step.</li>
+<li>Don't select the <span style="font-weight: 400;">Adobe Experience Manager</span> connector configuration in the Connectors combo.</li>
+</ul>
+</li>
+</ol>
+<p>To validate the Memsource configuration, follow these steps:</p>
+<ol class="p-rich_text_list p-rich_text_list__ordered" data-stringify-type="ordered-list" data-indent="0">
+<li>Open an incomplete Translation Project.</li>
+<li>Select <em>Export</em> form the <em>Job</em> tile menu.</li>
+<li>Find the XML file that contains the source text within the downloaded zip file.</li>
+<li>In Memsource, navigate to the <em>Automation Widget</em> used for the integration and open the listed URL.</li>
+<li>Complete the AW form, upload the XML file, validate the email and submit.</li>
+<li>Verify the new project was created from the Project template as configured.</li>
+</ol>
+<h2>Install the Plugin</h2>
+<ol>
+<li style="font-weight: 400;">
+<span style="font-weight: 400;">If migrating from Adobe Experience Manager 6.2 or 6.3 to 6.4 and above, remove all Legacy Cloud Services configurations from the Classic UI Admin tool (/miscadmin#/etc/cloudservices/memsource-translation)<br></span>All configurations disappear from Legacy Cloud Services &gt;  Memsource Translation Plugin for AEM.</li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">In Tools, Deployment, go to <em>Packages</em>.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Uninstall previous version of the plugin, if applicable.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Select Upload package and upload the installation file.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Check Force Upload and submit.</span></li>
+</ol>
+<h2>Configure Adobe Experience Manager</h2>
+<p>Two configurations are required:</p>
+<ul>
+<li>Tell the system that Memsource exists by adding it as a Translation Service Provider specifying how to connect to the TMS.</li>
+<li>Tell <span style="font-weight: 400;">Adobe Experience Manager</span> when and how Memsource is to be used by configuring Translation Integration Configuration. For example: use Memsource for high-visibility content, but a machine translation vendor for community content.</li>
+</ul>
+<h3>Add Memsource as a Translation Service Provider</h3>
+<div class="tabs">
+<div class="tabs-menu">
+<span class="tabs-link is-active">6.4 ,6.5</span> <span class="tabs-link">6.3</span>
+</div>
+<div class="tab">
+<p>In Tools, go to <em>Deployment</em>, click on <strong>Cloud Services</strong>, and navigate to <em>Memsource Translation Plugin for AEM</em>.</p>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">In <em>Tools</em>, <em>General</em>, go to <em>Configuration Browser.</em></span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Create a configuration container for each Memsource service (e.g. one configuration for human translation and a separate configuration for machine-only translation).</span></li>
+<li>In <em>Cloud Services</em>, go to <em>Translation Cloud Services.</em>
+</li>
+<li>Expand the <em>conf</em> directory.<br> <span style="font-weight: 400;">The configuration containers created in the previous step are listed.</span>
+</li>
+</ol>
+</div>
+<div class="tab is-hidden">
+<p>In Tools, go to <em>Cloud Services</em>, click <strong>Legacy Cloud Services</strong>, and navigate to <em>Memsource Translation Plugin for AEM</em>.</p>
+</div>
+</div>
+<p>Create a new configuration and enter the following information:</p>
+<ul>
+<li>
+<strong>Memsource Home URL:</strong> The default URL is <a href="https://cloud.memsource.com/web/">https://cloud.memsource.com/web/</a> but can be different if you or the LSP is using a Custom URL.</li>
+<li>
+<strong>Username</strong> and <strong>Password</strong>
+</li>
+<li>
+<strong>Automation Widget:</strong> Select the Automation Widget prepared for use in <span style="font-weight: 400;">Adobe Experience Manager</span>. If using multiple Automation Widgets for different scenarios, set up multiple configurations. </li>
+<li>
+<strong>Service:</strong> Select the service that governs the language setup of projects (orders) in Memsource as well as the Workflow setup of these Memsource projects.</li>
+<li>
+<strong>Autocomplete Job:</strong> Select if the Translation Jobs is to skip the Review step.</li>
+<li>
+<strong><span style="font-weight: 400;">Adobe Experience Manager</span> URL:</strong> Use the same host address of the <span style="font-weight: 400;">Adobe Experience Manager</span> installation used in the Memsource connector and append with <em>/sites.html/content/</em> (e.g. <em>https://aem-author.example.org/sites.html/content/</em>).</li>
+</ul>
+<h3>Set up the Translation Integration</h3>
+<p>When using the Memsource Translation Plugin for AEM, all files in the translation jobs are submitted for translation and thus returned from Memsource. Use the project <em>Translation Integration</em><strong> </strong>configuration to prevent non-translatable assets or reference materials from being included in the projects.</p>
+<div class="tabs">
+<div class="tabs-menu">
+<span class="tabs-link is-active">6.4, 6.5</span> <span class="tabs-link">6.3</span>
+</div>
+<div class="tab">
+<p>In <em>Tools</em><strong>,</strong> go to <em>Cloud Services</em>, click the <strong>Translation Cloud Services</strong></p>
+</div>
+<div class="tab is-hidden">
+<p>In <em>Tools</em>, go to the <em>Deployment</em>, click on <strong>Cloud Services</strong>, and select <strong>Translation Integration</strong>.</p>
+</div>
+</div>
+<p>Create a new configuration specifically for translation in Memsource.</p>
+<ul>
+<li>Ensure <em>Translate Component Strings</em><strong> </strong>and <em>Translate Tags</em> are unchecked.</li>
+<li>
+<em>Translate page assets</em><strong> </strong>should be set to <strong>Do not translate.</strong>
+</li>
+<li>On the<strong><em> </em></strong><em>Assets</em><strong> </strong>Tab, set the <em>Translation Workflow</em><strong> </strong>to <strong>Do not translate.</strong>
+</li>
+</ul>
+<p>If a project still contains non-translatable assets or reference materials, mark and<strong> </strong>delete them directly in Memsource.</p>
+<h3>Apply Translation Integration to Sites</h3>
+<p><span style="font-weight: 400;">Configure default Memsource Translation Provider with different parts of the site taxonomy. Configure the provider at the root node of the site. All descendant pages will inherit the setting. Override the setting at the node that should use different provider configuration (e.g. entire site uses human translation but the community section uses machine translation).</span></p>
+<ol class="list-colored">
+<li>
+<div class="tabs">
+<div class="tabs-menu">
+<span class="tabs-link is-active">6.4, 6.5</span> <span class="tabs-link">6.3</span>
+</div>
+<div class="tab">
+<p>On the <em>Advanced </em>Tab, select the newly created configuration as the Cloud Configuration.</p>
+</div>
+<div class="tab is-hidden">
+<p>On the <em>Cloud Services</em> Tab, select the newly created configuration as the Translation Integration.</p>
+</div>
+</div>
+</li>
+<li>Click on the <strong>Add configuration</strong> label and select the <strong>Memsource Translation Plugin for AEM.</strong> <br> A dropdown menu is displayed with previously created configurations.</li>
+<li>Select the configuration for use with this content.
+<ul>
+<li>By default, all child pages inherit these settings. Adjust any page to use a different cloud configuration if required.</li>
+</ul>
+</li>
+</ol>
+<p>When adding content from these pages, only translatable content will be added. If a project is created from the <em>References</em> Panel, it will be automatically set up to use the cloud configuration associated with the root page.</p>
+<h2>Submit Content for Translation</h2>
+<p>To submit content for translation, create a translation project in <span style="font-weight: 400;">Adobe Experience Manager</span>. Project can be created manually from the Projects section or use built-in workflows to minimize the effort.<br> To prepare a project for submission to Memsource through the built-in workflows, follow these steps:</p>
+<ol class="list-colored">
+<li>From the <em>Sites</em> view, navigate to the page, select it, and open the <em>References Panel.</em>
+</li>
+<li>Click <strong>Language Copies</strong> and expand the <strong>Create &amp; Translate</strong> section at the bottom of the rail</li>
+<li>Select target languages, optionally uncheck the <strong>Select all sub-pages</strong>
+</li>
+<li>Select the right option from the Project dropdown.
+<div class="tabs">
+<div class="tabs-menu">
+<span class="tabs-link is-active">6.4, 6.5</span> <span class="tabs-link">6.3</span>
+</div>
+<div class="tab">
+<p>Select <em>Create Multi-language Translation Project</em>. A single project is created with multiple jobs (one per language) if there are multiple target languages.</p>
+</div>
+<div class="tab is-hidden">
+<p>Select <em>Create a new translation project</em>. If there are multiple target languages, a separate project will be created for each language.</p>
+</div>
+</div>
+</li>
+<li>Enter project title and click <strong>Create</strong>
+</li>
+<li>Navigate to the project in the <em>Projects</em> section and open it.</li>
+<li>Click the ellipsis on the first tile to open the Advanced project settings.<br> If configured properly, configurations created in the steps above are referenced.</li>
+<li>To submit a job to Memsource, select <strong>Start</strong> from the job tile menu.<br> A new project will be created in Memsource within a few minutes
+<div class="callout callout--info callout--dashed">
+<span class="callout__title">Recommendation:</span> <span style="font-weight: 400;">Adobe Experience Manager</span> polls for a job status update on a schedule that is configured in <em>Translation Platform Configuration</em> accessed via <em>Web Console</em>. Setting the <em>Scheduler Cron</em> property to run frequently (e.g. <code>0 0/5 * * * ? *</code> triggers a translation job status refresh every 5 minutes).
+<p>Refreshing the project detail page forces a pull.</p>
+</div>
+</li>
+<li>In Memsource, translate the product jobs and set their status to <em>Completed</em>.</li>
+<li>If not set automatically in Memsource project automation settings, set the project status to <em>Completed</em>.</li>
+<li>If the <em>Autocomplete Jobs</em> in the Memsource configuration is turned on, the Translation Job status will change to <em>Ready for Review </em>within minutes. The status then changes to <em>Completed</em>.</li>
+<li>If rejected, the job is submitted back to Memsource with comments. The job status in Memsource changes to <em>Rejected</em> and the comments appear in the rejected job email. Format of the <em>CMS Job Rejected</em> email can be customized in <em>Email Templates</em> settings.</li>
+<li>Once all files in the job are accepted, the status changes to <em>Completed</em>.</li>
+</ol>
+<p>For more details on creating translation projects using the <em>References</em> Panel, see the <a href="https://docs.adobe.com/content/help/en/experience-manager-64/administering/introduction/tc-manage.html" target="_blank" rel="noopener">Managing Translation Projects</a> section of the Adobe documentation.</p>
+<h2>Custom Language Mapping</h2>
+<p>Follow these steps to map <span style="font-weight: 400;">Adobe Experience Manager</span> languages to different languages in Memsource (e.g. zh to zh_tw). The mapping applies to both source and target languages. </p>
+<ol class="list-colored">
+<li>Open CRXDE (<code>/crx/de/index.jsp</code>).</li>
+<li>Browse to the <code>/apps/memsource-connector/language-mapping/</code> folder.</li>
+<li>Create a new node.</li>
+<li>Use <span style="font-weight: 400;">Adobe Experience Manager</span> language code as the <em>Name</em> (e.g. zh), keep <em>Type</em>: <em>nt:unstructured.</em>
+</li>
+<li>Add property:<br> <strong>Name</strong>: <em>memsourceLanguage</em> <br> <strong>Type</strong>: <em>String</em> <br> <strong>Value</strong>: Memsource language code (e.g. zh_tw)</li>
+<li>Click <strong>Save All.</strong>
+</li>
+</ol>
+<p>Un-mapped language codes are sent to Memsource as they are.</p>

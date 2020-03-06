@@ -1,0 +1,51 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li><strong>All editions</strong></li>
+</ul>
+</div>
+<p>Google Drive is a cloud-based file storage and synchronization service designed to integrate with most operating systems and devices, sync content in real-time across multiple devices, and act as a backup data repository for data.</p>
+<p>Google Drive connector allows the downloading of source files and uploading of target files directly to/from the personal Google Drive repository. Shared drives are currently not supported. The connector uses the Google Drive API to implement the integration.</p>
+<p>Google Docs, Google Sheets, and Google Slides use specialized file formats that Memsource does not support. The connector converts these file types to .docx, .xlsx, or .pptx, respectively, for processing. When a translation of any of those types of files is completed and uploaded back to Google Drive, they are automatically converted back into their native Google format.</p>
+<p>Google Drive cannot export Google Docs files over a certain size (approximately 10 MB). The error <em>The file is too large to be exported </em>is triggered and the job will not be created. In this case, download the file and upload it to Memsource manually.</p>
+<h2>Google Drive Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul class="list-bullet">
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> (APC) to have Memsource automatically create new projects when a change in the <strong>last modified date</strong> is detected in monitored files or a folder.
+<ul>
+<li>Selected files are imported the very first time APC runs. All files are imported when a folder is monitored.</li>
+<li>This connector supports absolute path setting.</li>
+</ul>
+</li>
+<li>Set up <a href="https://help.memsource.com/hc/en-us/articles/360015039031" target="_self">Continous Jobs</a> to have Memsource monitor selected files for changes.</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to Google Drive</h2>
+<h4><strong>Google Drive Settings:</strong></h4>
+<p>No changes are required.</p>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol class="list-colored">
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Google Drive</em>.</li>
+<li>Click <strong>Connect to Google Drive</strong>.<br> A Google authentication screen will appear where you can select your account.</li>
+<li>Click on <strong>Allow</strong>.<br> A checkmark will appear in the connector setup if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<div class="callout callout--warning callout--dashed">
+<h4 class="callout__title">Tip</h4>
+<p>If you are unable to add an additional Google connector try the following steps:</p>
+<ol>
+<li>Visit the Google Drive page</li>
+<li>Click on the account (top right corner)</li>
+<li>Click <strong>Security </strong>on the left, and scroll down to <em>Third-party apps with account access.</em>
+</li>
+<li>Click on <strong>Manage third-party access. </strong>If <em>Memsource Connector</em> is listed here, delete it and recreate the Google Drive connector.</li>
+</ol>
+</div>
+<p>If a default project, branch, and folder is required when connecting to a Google Drive account, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>
+<h2>Google Drive Privacy Policy</h2>
+<p>By using this service, you agree that Memsource can access your Google Drive, browse files and folders, access and download selected files, upload the translated versions back to your Google Drive, and access and download native Google documents in your Google Drive. Memsource use of Google user data is limited to the practices explicitly disclosed in this privacy policy.</p>

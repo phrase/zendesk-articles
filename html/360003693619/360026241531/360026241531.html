@@ -1,0 +1,65 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong>Enterprise edition<br></strong>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>Contentful provides a headless content management infrastructure to create, manage and distribute content to any platform or device.</p>
+<h2>Supported Localization Methods</h2>
+<p>Contentful supports multiple localization methods. Visit <a href="https://www.contentful.com/developers/docs/concepts/locales/" target="_blank" rel="noopener">Contentful documentation</a> for their detailed description.</p>
+<h3>Entry-Level Localization</h3>
+<p>Use <em>Contentful (Entry-Level)</em> connector.</p>
+<p>The entry-level connector only works with content types that have localized reference fields (e.g., a <em>reference</em> field called <em>Localized</em> that is enabled for localization).</p>
+<h3>Field-Level Localization</h3>
+<p>Use <em>Contentful</em> connector.</p>
+<p>The field-level connector only works with content types that have a translatable field (e.g., either <em>Text</em> of <em>Rich Text</em> field with enabled localization). If the connector is configured to import referenced entries, it traverses the entire hierarchy of nested content and imports all translatable fields for translation. If the reference field is enabled for localization, it imports the references that match the Memsource project's source language.</p>
+<h2>Contentful Connector Use Cases</h2>
+<p>There are a number of use cases for the connector.</p>
+<ul class="list-bullet">
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self"> add files directly to projects from an online repository</a>. Content is searchable by Entity ID.</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository. Content is searchable by Entity ID.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the <strong>content size</strong> is detected for monitored documents or a folder.
+<ul>
+<li>Selected documents are imported the very first time APC runs.</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Set up the Connector</h2>
+<ul>
+<li>The <strong>Source language</strong> of Memsource's project must match the <strong>Default </strong>locale of the Contentful space that is configured in Contentful's <em>Locales</em> settings.</li>
+<li>
+<strong>Target languages</strong> of the project must be a subset of Contentful target locales. The languages must match exactly; for example, <em>English</em> and <em>English (United States) </em>are considered different languages.</li>
+</ul>
+<h4><strong>Contentful Settings:</strong></h4>
+<p>No changes are required.</p>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol class="list-colored">
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> either to <em>Contentful (Entry-Level)</em> or <em>Contentful</em> to use field-level localization.</li>
+<li>Select how to process nested content. Content can use a reference field to reference other content allowing the creating a hierarchy of entities.
+<div class="tabs">
+<div class="tabs-menu">
+<span class="tabs-link is-active">Contentful (Entry-Level)</span> <span class="tabs-link">Contentful</span>
+</div>
+<div class="tab">
+<p>The entry-level connector automatically traverses the entire hierarchy of nested content.</p>
+</div>
+<div class="tab is-hidden">
+<p>Select how the field-level connector should import nested content.</p>
+<ul>
+<li>
+<em>Selected entry only</em> - only content that's explicitly selected when adding content from the online repository or when a change is detected by Automated Project Creation is imported for translation.</li>
+<li>
+<em>Import referenced entries</em> - the connector traverses the entire hierarchy of nested content and imports all translatable fields for translation.</li>
+</ul>
+</div>
+</div>
+</li>
+<li>Click <strong>Connect to Contentful.<br></strong>A checkmark will appear in the connector setup if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.<strong><br></strong>
+</li>
+<li>Contentful (Entry-Level) only: set the <strong>Source language</strong>.<br> <strong>Note</strong>: This language should match the <strong>Default </strong>locale of the Contentful space that's configured in Contentful's <em>Locales</em> settings.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>

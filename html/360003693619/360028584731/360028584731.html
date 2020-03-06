@@ -1,0 +1,45 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong>Ultimate and Enterprise editions<br></strong>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>Microsoft Azure is a cloud-based platform that provides serverless containers to help build, manage, and deploy applications.</p>
+<p>Microsoft Azure connector allows the downloading of source files and uploading of target files directly to/from the Azure Storage <strong>File Shares</strong>.</p>
+<h2>Microsoft Azure Connector Use Cases</h2>
+<ul class="list-bullet">
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>.</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the file size is detected in monitored files or a folder.<br>
+<ul>
+<li>Selected files are imported the very first time APC runs. No files are imported when a folder is monitored</li>
+<li>This connector supports absolute path setting.</li>
+</ul>
+</li>
+<li>Set up <a href="https://help.memsource.com/hc/en-us/articles/360015039031" target="_self">Continous Jobs</a> to have Memsource monitor selected files for changes.</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Setting up the Connector</h2>
+<h4><strong>Microsoft Azure Settings:</strong></h4>
+<ol class="list-colored">
+<li>Log in to your Microsoft Azure account through the <a href="http://portal.azure.com/">Azure portal.</a>
+</li>
+<li>Click on <strong>Storage accounts </strong>in the left-hand navigation panel.</li>
+<li>Select an existing storage account or create a new one.
+<ul>
+<li>Endpoints must be public in order for Memsource Cloud to access the repository from the Internet. If restricting access to selected networks is required, see <a href="https://help.memsource.com/hc/en-us/articles/360010299660" target="_self">Memsource IP addresses</a>.</li>
+</ul>
+</li>
+<li>In the <em>Settings</em> menu, click <strong>Access keys</strong> and copy either key 1 or key 2 <strong>Connection string</strong>.</li>
+</ol>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol class="list-colored">
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Microsoft Azure</em>.</li>
+<li>Provide the connection string.</li>
+<li>Click <strong>Test Connection<br></strong>A checkmark appears if the connection is successful. A red exclamation point appears if it isn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default project, branch, and folder is required when connecting to a Microsoft Azure account, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>

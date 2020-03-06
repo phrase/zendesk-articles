@@ -1,0 +1,84 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li><strong>Team, Ultimate and Enterprise editions</strong></li>
+<li>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>WordPress is an open-source blogging and web content management system. It also supports mailing lists, forums, media galleries, analytics, and online stores.</p>
+<h2>Requirements</h2>
+<ul>
+<li>WordPress Version: 3.7 or higher</li>
+<li>PHP Version: 5.6 or higher</li>
+<li>WPML Plugin: Version 3.7 or higher</li>
+</ul>
+<h2>Supported Content Types</h2>
+<p>WordPress connector allows the downloading of source content and uploading of target localizations directly to/from WordPress for the following content types:</p>
+<ul>
+<li>Posts</li>
+<li>Pages</li>
+<li>Tags</li>
+<li>Categories</li>
+<li>Custom post types</li>
+</ul>
+<h2>Supported Visual Page Builders</h2>
+<p>The following Visual Page Builders are supported by the Memsource Translation Plugin for WordPress:</p>
+<ul>
+<li style="font-weight: 400;">Avada</li>
+<li style="font-weight: 400;">Divi</li>
+<li style="font-weight: 400;">WPBakery Page Builder (formerly Visual Composer)</li>
+<li style="font-weight: 400;">Avia (Enfold Theme)
+<ul>
+<li style="font-weight: 400;">Enfold custom fields must be deselected because they are not supported. Click on the Memsource Plugin in your WordPress account and go to the <em>Translatable Content</em> page to deselect the Enfold custom fields.</li>
+</ul>
+</li>
+</ul>
+<h2>WordPress Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul>
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> (APC) to have Memsource automatically create new projects when a change in the <strong>last modified date</strong> is detected in monitored files or an entire list.<br>Selected files are imported the very first time APC runs.</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to WordPress</h2>
+<h4><strong>WordPress Settings:</strong></h4>
+<ol>
+<li>Install the <a href="https://wpml.org/" target="_blank" rel="noopener">WPML plugin</a> to create and manage multilingual pages.</li>
+<li>Follow instructions on <a href="https://wordpress.org/plugins/memsource-connector/" target="_blank" rel="noopener">Memsource Translation Plugin for WordPress</a> page to install the plugin.</li>
+<li>Go to <em>Memsource</em> in the left-hand navigation panel</li>
+<li>Click <em>Connector</em> and then <strong>Show Connector settings</strong>.</li>
+<li>Click <strong>Generate new token</strong> to generate a token to establish the connection.</li>
+<li>Select which posts should be imported based on their status and what status should be assigned to the translated content sent back from Memsource.</li>
+<li>Navigate to the <em>Translatable content</em> page and select custom fields from the list that should be exported from WordPress and translated in Memsource.<br>All custom fields are selected for export by default.</li>
+<li>Navigate to the <em>Language mapping</em> page and map WordPress languages to <a href="https://help.memsource.com/hc/en-us/articles/115003929811" target="_self">Memsource language codes</a>.</li>
+<li>Go to the <em>Shortcodes</em> page to see the list of supported shortcodes or add a custom shortcode that was created using a third-party shortcode plugin.</li>
+</ol>
+<div class="callout callout--success callout--dashed">
+<span class="callout__title">Note:</span> Languages in WPML must match the languages of the Memsource project. To support local variations such as <em>French (Canada)</em>, define the languages in the WPML panel inside WordPress.</div>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol>
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>WordPress</em>.</li>
+<li>Enter the <strong>WordPress site URL</strong> (e.g. if your WordPress admin page URL was http://blog.memsource.com/wp-admin/index.php, the site URL would be http://blog.memsource.com/).</li>
+<li>Enter the <strong>Memsource WordPress plugin token</strong> with the token from Memsource plugin configuration</li>
+<li>Click <strong>Test connection</strong><br> A list of languages configured by the WPML plugin will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default content type is required when connecting to a WordPress, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>
+<h2>Troubleshooting</h2>
+<h3>What to do if Memsource Imports Text Full of Code</h3>
+<p>Some Wordpress add-ons inject code into your WordPress pages. Memsource does not handle this code without further configuration. <br>Add-ons known to cause this issue are:</p>
+<ul>
+<li style="font-weight: 400;">Avia Layout Builder</li>
+<li style="font-weight: 400;">Divi Builder</li>
+<li style="font-weight: 400;">Fusion Builder</li>
+<li style="font-weight: 400;">Visual Composer</li>
+<li style="font-weight: 400;">WPBakery (formerly Visual Composer)</li>
+</ul>
+<p>To configure Memsource in this case, please indicate in WordPress<a href="https://www.memsource.com/blog/2018/04/04/wordpress-plugin-choose-which-custom-fields-to-translate/"> which custom fields you wish to translate</a>. Go to <strong>Memsource </strong>Plugin, then <strong>Shortcodes</strong>, and add the shortcodes based on the specification of the addon format. For Bakery, the settings are shown below:</p>
+<p><img src="https://help.memsource.com/hc/article_attachments/360021100151/mceclip0.png"></p>
+<h3>Connection Test Fails when Configuring the Connector</h3>
+<p>Some WordPress plugins, like WP Hardening, provide options for disabling the JSON API. Ensure the WordPress API is not disabled. </p>

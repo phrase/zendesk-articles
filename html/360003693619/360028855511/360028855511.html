@@ -1,0 +1,44 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available for:</h4>
+<ul>
+<li>
+<strong>Enterprise edition<br></strong>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>Salesforce Knowledge is an online content management system that helps businesses with their marketing, sales, and commerce needs.</p>
+<h2>Salesforce Knowledge Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul class="list-bullet">
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the last modified date is detected for monitored files or a folder.
+<ul>
+<li>Selected files are imported the very first time APC runs. All files are imported when a folder is monitored.</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<p>Restrictions: </p>
+<ul class="list-bullet">
+<li>
+<strong>Source language</strong> of Memsource's project must match the <strong>Default </strong>language of Salesforce Knowledge configured in <em>Knowledge Settings</em>. <em>English</em> in Salesforce is actually <em>English (United States)</em> full locale. </li>
+<li>
+<strong>Target languages</strong> of the project must be a subset of Knowledge target languages.</li>
+<li>Articles must be published before they are sent to Memsource for translation. The connector does not work with articles saved as drafts.</li>
+</ul>
+<h2>Connect to Salesforce Knowledge</h2>
+<h4><strong>Salesforce Knowledge Settings:</strong></h4>
+<ol class="list-colored">
+<li>Go to the <em>Setup</em> and enable <a href="https://help.salesforce.com/articleView?id=knowledge_whatis.htm&amp;type=5" target="_blank" rel="noopener">Knowledge User and Salesforce Knowledge</a>.</li>
+<li>Go to the <em>Knowledge Settings</em> and configure the target languages.</li>
+</ol>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol class="list-colored">
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Connectors</strong>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click <strong>New.<br></strong>The <em>Create Connector</em> page opens.</li>
+<li>Provide a name for the connection and change the <strong>Type</strong> to <em>Salesforce Knowledge</em>.</li>
+<li>Click <strong>Connect to Salesforce</strong>.<strong><br></strong>A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default folder is required when connecting to a Salesforce Knowledge, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>

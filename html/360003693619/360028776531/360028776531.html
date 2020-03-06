@@ -1,0 +1,68 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available in:</h4>
+<ul>
+<li>
+<strong class="color-primary">Enterprise edition<br></strong>Get in touch with <a href="https://www.memsource.com/demo/" target="_self">Sales</a> for licensing questions.</li>
+</ul>
+</div>
+<p>Marketo is automation software designed for account-based marketing and other marketing services.</p>
+<p>Marketo connector allows the downloading of source content and uploading of translations to/from a Marketo server for the following content types:</p>
+<ul class="list-bullet">
+<li>Emails</li>
+<li>Email templates</li>
+<li>Files</li>
+<li>Forms</li>
+<li>Landing pages</li>
+<li>Landing page templates</li>
+</ul>
+<p>Snippets and Segmentation are currently not supported.</p>
+<h2>Template Restrictions</h2>
+<p>Localized templates and assets have the same name as the <code>&lt;original-name&gt;
+  [language]</code> (e.g. Black Friday Promo [de-de]). The localized asset references the localized version of the template provided the template in that language exists. Otherwise, it references the original template.</p>
+<p>Only approved templates can be referenced, therefore if the template is localized, the connector automatically moves it to the approved state. </p>
+<h2>Marketo Connector Use Cases</h2>
+<p>There are a number of use cases for the connector:</p>
+<ul class="list-bullet">
+<li>Project Managers can <a href="https://help.memsource.com/hc/en-us/articles/115003483992" target="_self">add files directly to projects from an online repository</a>
+</li>
+<li>Set up the <a href="https://help.memsource.com/hc/en-us/articles/115003941812" target="_self">Automation Widget</a> so Submitters can add files to requests directly from the online repository.</li>
+<li>Use <a href="https://help.memsource.com/hc/en-us/articles/115003460931" target="_self">Automated Project Creation</a> to have Memsource automatically create new projects when a change in the <strong>last modified date</strong> is detected for monitored files or a folder.
+<ul>
+<li>Selected files are imported the very first time APC runs</li>
+</ul>
+</li>
+<li>The <a href="https://cloud.memsource.com/web/docs/api#tag/Connector" target="_self">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a href="https://help.memsource.com/hc/en-us/articles/360004209771" target="_self">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</li>
+</ul>
+<h2>Connect to Marketo</h2>
+<h4><strong>Marketo Settings:</strong></h4>
+<ol class="list-colored">
+<li>Enable REST APIs in the Marketo account.<br> Refer to <a href="http://developers.marketo.com/rest-api/" target="_blank" rel="noopener">Marketo documentation</a> for instructions.</li>
+<li>Go to <strong>Admin</strong> and click on <strong>LaunchPoint</strong> in the <em>Integration</em> section.</li>
+<li>Create a new service or view details of an existing service.</li>
+<li>Copy and save your <strong>Client ID</strong> and <strong>Client Secret</strong>.</li>
+<li>Close the dialog box and navigate back to the Integration section of the <strong>Admin</strong> page.</li>
+<li>Select <strong>Web Services.</strong>
+</li>
+<li>Copy the subdomain from the <strong>Identity</strong> URL in the <em>REST API </em>section (e.g. 000-MJB-007).</li>
+</ol>
+<h4><strong>Memsource Settings:</strong></h4>
+<ol class="list-colored">
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <em>Connectors</em>.<br> The <em>Connectors</em> page opens.</li>
+<li>Click New.<br> The <em>Create Connectors</em> page opens.</li>
+<li>Provide a name for the connector and select <em>Marketo </em>from the drop-down list of connector types.</li>
+<li>Provide the following information:
+<ul>
+<li>
+<em>Marketo API key<br></em>Enter Marketo Client ID.</li>
+<li>
+<em>Marketo API secret<br></em>Enter Marketo Client Secret.</li>
+<li>
+<em>Marketo API identity URL<br></em>Enter the first part of the Marketo Identity URL<em><br></em>
+</li>
+</ul>
+</li>
+<li>Click <strong>Test Connection<br></strong>A checkmark appears if the connection is successful. A red exclamation point appears if it isn't. Mouse over the icon to see additional details.<strong><br></strong>
+</li>
+<li>Click <strong>Save</strong>.<br> The connector is added to the list on the <em>Connectors</em> page.</li>
+</ol>
+<p>If a default folder is required when connecting to a Marketo, open the connector configuration and click the <strong>Select Remote Folder</strong> button to set it.</p>

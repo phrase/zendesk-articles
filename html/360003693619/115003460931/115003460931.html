@@ -1,0 +1,91 @@
+<div class="callout callout--transparent  callout--dashed">
+<h4 class="callout__title">Available for:</h4>
+<ul>
+<li><strong>Project managers</strong></li>
+<li>
+<strong>Team</strong> editions and higher</li>
+</ul>
+</div>
+<p>Automated Project Creation rules allow users to configure the way in which Memsource monitors specific folders and creates new projects whenever new content is detected in them. </p>
+<h2>Set Up Automation Rules</h2>
+<h4>Prerequisites:</h4>
+<ul>
+<li>At least one <a href="https://help.memsource.com/hc/en-us/articles/115003948452" target="_self">connector</a> and one <a href="https://help.memsource.com/hc/en-us/articles/360001388091" target="_blank" rel="noopener">service</a> in a Memsource account.</li>
+</ul>
+<h4>Follow these steps:</h4>
+<ol class="list-colored">
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page,<strong> </strong>click<strong> Automated Project Creation.<br></strong>The <em>Automated Project Creation</em> page opens.</li>
+<li>Click on <strong>New.<br></strong>The <em>Create Automated Project Settings</em> page opens.</li>
+<li>Select the source and target languages that automatically created projects will be associated with.</li>
+<li>Choose the <strong>Remote Folder</strong> to monitor for new or updated content.<br> The contents of the folder is listed in the main window.</li>
+<li>Select specific files to be monitored.<br> Options available on some connectors. See the <em>Use Cases</em> section of the specific <a style="background-color: #ffffff;" href="https://help.memsource.com/hc/en-us/articles/115003948452" target="_self">connector</a> documentation:
+<ul>
+<li>If none selected, the entire folder is monitored for a change or new files.</li>
+<li>
+<strong>Include subfolders</strong> to enable the monitoring of the selected folder and its subfolders. </li>
+</ul>
+</li>
+<li>Depending on the pathname of the required target files, set <strong>Export completed files to</strong> and <strong>Target Subfolder Path</strong> fields. See <a href="#Setting_Target_Pathname">Setting Target Files Pathname</a> for more information.</li>
+<li>Designate a <strong>Processed subfolder.</strong><br> Files imported to Memsource will be moved to this folder providing visibility on which files are being processed. If disabled, source files stay in their original folder.<br> If this option is disabled and <a href="https://help.memsource.com/hc/en-us/articles/360002921512" target="_self">File Renaming</a> is not used, original documents can be overwritten by their translations (depending on repository).</li>
+<li>Set a frequency for how often Memsource should check for new content in the designated folder.</li>
+<li>Choose required <a href="https://help.memsource.com/hc/en-us/articles/360001388091" target="_self"><strong>Service</strong></a>.</li>
+<li>To differentiate between projects coming from different automation rules, use a <strong>Default Project Name</strong> to define the automatically-generated names of projects. It is possible to use macro {filename} in the Project's title. If multiple filenames are used in the project's name, only the first filename will be used.</li>
+<li>Set <strong>Default Project Owner.<br></strong>Default Project Owner will always be notified when a new project is created using automation rules.</li>
+<li>Customize Email Templates used for notifications if required.</li>
+</ol>
+<h2>Using Automated Project Creation</h2>
+<p>With the automation rules set, content can now be created in the designated folders. Based on frequency checks, Memsource looks into the specified folder and identifies new or updated content (based on file names, metadata, size, etc.).</p>
+<h3><span id="Automatic_Creation_of_New_Projects_from_Online_Repositories" class="mw-headline">Automatic Creation of New Projects from Online Repositories</span></h3>
+<div class="thumb tright">On the <em>Automated Project Creation</em> page, Memsource displays currently available rules, connection status and the "last checked" and "next check" dates and times.</div>
+<p>If new content is identified, new projects will be created with either default settings or settings taken from the selected project template. This provides full process automation; analysis, pre-translation, assignment to Linguists/Vendors, and the e-mailing of notifications.</p>
+<h4>ZIP file support:</h4>
+<ul class="list-bullet">
+<li>Multiple ZIP files can be imported to one project.</li>
+<li>Translated files are exported back to ZIP files.</li>
+<li>If one ZIP file is imported to multiple targets, the translated files will be exported to multiple ZIP files—one ZIP for each target language—using the target locale code in the ZIP name (for example Pack18.en_us.ZIP).</li>
+</ul>
+<h3><span id="Automatic_Export_of_Completed_Files_back_to_Online_Repositories">Automatic Export of Completed Files Back to Online Repositories</span></h3>
+<p>As soon as the project status changes to <em>Completed </em>either manually or by Project Status Automation rules, translated files are sent back to the Online Repository into newly created subfolders identified by language codes (for example, 'en' for English).</p>
+<h3><span id="Disabling_Automated_Project_Creation">Disabling Automated Project Creation</span></h3>
+<p>APC can be disabled in 3 ways:</p>
+<ul class="list-bullet">
+<li>Manually in the APC settings</li>
+<li>Automatically after 90 days of inactivity</li>
+<li>Automatically after the organization account has been deactivated (at the end of the subscription).</li>
+</ul>
+<p>When a connector used as part of the Automated Project Creation rules detects three or more consecutive instances of a project not being created when it should be, notification is sent to affected Memsource users.</p>
+<h2>
+<a name="Setting_Target_Pathname"></a>Setting Target Files Pathname</h2>
+<p>Relative to the source file the target files can be exported to:</p>
+<div class="tabs">
+<div class="tabs-menu">
+<span class="tabs-link is-active">Same folder</span> <span class="tabs-link">Language subfolder</span> <span class="tabs-link">Any folder</span>
+</div>
+<div class="tab">
+<p>If specific files are selected, then select <em>Source file folder </em>for <strong>Export completed files to</strong> and keep the <strong>Target Subfolder Path</strong> empty.</p>
+<p>Not supported if the entire folder is monitored.</p>
+</div>
+<div class="tab is-hidden">
+<p>Always keep the <strong>Target Subfolder Path</strong> empty.</p>
+<p>If specific files are monitored, then select <em>Target language subfolder </em>for <strong>Export completed files to</strong>.</p>
+</div>
+<div class="tab is-hidden">
+<p>If specific files are monitored, then select <em>Target language subfolder </em>for <strong>Export completed files to</strong>.</p>
+<p>Specify the folder name in the <strong>Target Subfolder Path</strong>:</p>
+<ul>
+<li>Use {targetLang} macro to represent target language.</li>
+<li>Subfolders can be created within the source folder.<br> Available for Azure, FTP, SFTP, Dropbox, Google Drive, Box, OneDrive, Git, GitHub, GitLab, and Bitbucket Cloud.</li>
+<li>For some repositories, an absolute path is available. Begin your path with / to indicate the absolute path.<br> Available for Azure, FTP, SFTP, Dropbox, Google Drive, Box, OneDrive, Git, GitHub, GitLab, and SharePoint.<br> The leading / in GIT-based repositories represents the root of the repository (where .git folder is located) and starts after the branch name. The target files will be stored in the same branch. Storing the files in a different branch is not supported.</li>
+<li>Use .. to refer to the parent folder.</li>
+</ul>
+<h4><strong>Examples</strong></h4>
+<p>If the source file is /files/loc/ui.properties and the target langauge is <em>German (Germany)</em>:</p>
+<ul>
+<li>translations/{targetLang} will create /files/loc/translations/de_de</li>
+<li>/files-{targetLang}/loc will create /files-de_de/loc/&lt;filename&gt;</li>
+<li>../{targetLang} will create /files/de_de/&lt;filename&gt;</li>
+</ul>
+<p>Name of the actual file is based on the <a href="https://help.memsource.com/hc/en-us/articles/360002921512" target="_self">File Renaming</a> set in Project settings.</p>
+</div>
+</div>
+<p> </p>
