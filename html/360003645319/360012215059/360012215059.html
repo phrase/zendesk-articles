@@ -9,18 +9,18 @@
 <p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<p>Automated Project Creation rules allow the configuration of how Memsource monitors specific folders and creates new projects if new content is detected in them. This provides full process automation; analysis, pre-translation, assignment to Linguists/Vendors, and the e-mailing of notifications.</p>
+<p>Automated Project Creation rules allow the configuration of how Memsource monitors specific folders and creates new projects if new or updated content is detected in them. This provides full process automation; analysis, pre-translation, assignment to Linguists/Vendors, and the e-mailing of notifications.</p>
 <p>As soon as a project status changes to <span class="emphasis"><em>Completed</em></span> either manually or by Project Status Automation rules, the translated files are sent back to the Online Repository into newly created subfolders identified by language codes (en, es, ja, etc.)</p>
 <div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6" id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_UUID-f7eb992a-6e9e-45a6-8129-3142ca2e29a1"></a>Set up Automation Rules</h2></div>
 <p><span class="bold bold"><strong>Prerequisites:</strong></span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>At least one <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360012207959#UUID-2aebdc84-c474-f68d-92e3-a50eb8966572" target="_blank">connector</a> and one <a class="link" href="https://help.memsource.com/hc/articles/360012215099#UUID-f021f3f3-3659-b700-c1a6-421cf8ce5b5b" title="Services">service</a> in a Memsource account.</p></li></ul></div>
-<p><span class="bold bold"><strong>Follow these steps:</strong></span></p>
+<p>Follow these steps:</p>
 <div class="procedure">
 <a id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_procedure-idm4573163243731231650971943354"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009524920/15e5e616be4ee4.png" style="" alt="Setup_gear.png"></span> page, click <span class="guilabel">Automated Project Creation</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360009664639/15e621f840ff7c.png" style="" alt="Setup_gear.png"></span> page, click <span class="guilabel">Automated Project Creation</span>.</p>
 <p>The <span class="guimenu">Automated Project Creation</span> page opens.</p>
 </li>
 <li class="step">
@@ -91,13 +91,13 @@
 <p>If specific files are monitored, then select <span class="guilabel">Target language subfolder</span> for <span class="guimenu">Export completed files to</span>.</p>
 <p>Specify the folder name in the <span class="guimenu">Target Subfolder Path</span>:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p>Use {targetLang} macro to represent target language.</p></li>
+<li class="listitem"><p>Use <code class="code">{targetLang}</code> macro to represent target language.</p></li>
 <li class="listitem"><p>Subfolders can be created within the source folder.Available for Azure, FTP, SFTP, Dropbox, Google Drive, Box, OneDrive, Git, GitHub, GitLab, and Bitbucket Cloud.</p></li>
 <li class="listitem">
 <p>For some repositories, an absolute path is available. Begin your path with / to indicate the absolute path.</p>
 <p>Available for Azure, FTP, SFTP, Dropbox, Google Drive, Box, OneDrive, Git, GitHub, GitLab, and SharePoint.The leading / in GIT-based repositories represents the root of the repository (where .git folder is located) and starts after the branch name. The target files will be stored in the same branch. Storing the files in a different branch is not supported.</p>
 </li>
-<li class="listitem"><p>Use .. to refer to the parent folder.</p></li>
+<li class="listitem"><p>Use <code class="code">..</code> to refer to the parent folder.</p></li>
 </ul></div>
 <p><span class="bold bold"><strong>Examples</strong></span></p>
 <p>If the source file is <code class="code">/files/loc/ui.properties</code> and the target langauge is German (Germany):</p>
