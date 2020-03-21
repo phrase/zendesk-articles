@@ -25,7 +25,7 @@ msgstr "Je m'appelle %s.\n"</pre>
 <li>The original file has to contain <em>msgid_plural</em> string as well as the singular <em>msgid.</em>
 </li>
 <li>The plural rules specification (the formula) defined in the file's header will be used to generate plural forms. If there is no such specification, the standard <a href="http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html" rel="noopener">Unicode CLDR Plural Rules</a> based on the target languages will be used for the job import.</li>
-<li>The file should be imported with the <a href="https://help.memsource.com/hc/en-us/articles/360017460212">Segment Key Context</a> to get better leverage from the translation memory.</li>
+<li>The file must be imported with the <a href="https://help.memsource.com/hc/en-us/articles/360017460212">Segment Key Context</a> in order to use the Plurals functionality properly.</li>
 <li>The target locale and the plural form of the segment will be used as the segment's Context Key and saved to the TM.</li>
 <li>The string <em>msgctxt—</em>if present in the original file—will be added to the segment's Context Key and saved to the TM. It will also be displayed in the Editor's Context Note window.</li>
 </ul>
