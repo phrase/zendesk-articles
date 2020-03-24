@@ -89,24 +89,13 @@
 <strong>binary</strong> - binary data.</li>
 </ul>
 <h2><span id="Task_vs._Job_Part" class="mw-headline">Task vs. Job Part</span></h2>
-<dl>
-<dt>Task</dt>
-<dd>A task represents one translation job (i.e. file to be translated) in one target language. If one job is uploaded in more target languages, an independent task is created for every target language.</dd>
-<dd>If a job is translated in multiple workflows, each workflow shares the same task but differs in workflow level. (This is the reason why some API calls have two arguments for task and level.) A task identifier is composed of alphanumeric characters (e.g., RiYnxBD0xBY1lwhf1) while a level is identified by an integer (usually 1-10). The first level in each project that uses workflows always has identifier 1.</dd>
-<dd></dd>
-<dd></dd>
-<dd></dd>
-<dd></dd>
-<dd>Jobs split into multiple parts will have the same task ID, and the parameter "isParentJobSplit" will be "true".</dd>
-<dd></dd>
-</dl>
-<dl>
-<dt>Job Part</dt>
-<dd>A jobPart represents a job per target language(s) and workflow steps. For instance, a single file imported to a project with 2 Workflow Steps and 3 target languages will result in 6 jobParts. Each jobPart can be assigned to a different Linguist or have a different due date or status.</dd>
-<dd>Each jobPart can be also split into multiple jobParts which will get their own jobPart ID. A jobPart is always unique.</dd>
-<dd></dd>
-<dd></dd>
-</dl>
+<h4>Task</h4>
+<p>A task represents one translation job (i.e. file to be translated) in one target language. If one job is uploaded in more target languages, an independent task is created for every target language.</p>
+<p>If a job is translated in multiple workflows, each workflow shares the same task but differs in workflow level. (This is the reason why some API calls have two arguments for task and level.) A task identifier is composed of alphanumeric characters (e.g., RiYnxBD0xBY1lwhf1) while a level is identified by an integer (usually 1-10). The first level in each project that uses workflows always has identifier 1.</p>
+<p>Jobs split into multiple parts will have the same task ID, and the parameter "isParentJobSplit" will be "true".</p>
+<h4>Job Part</h4>
+<p>A jobPart represents a job per target language(s) and workflow steps. For instance, a single file imported to a project with 2 Workflow Steps and 3 target languages will result in 6 jobParts. Each jobPart can be assigned to a different Linguist or have a different due date or status.</p>
+<p>Each jobPart can be also split into multiple jobParts which will get their own jobPart ID. A jobPart is always unique.</p>
 <h2><span id="Enums" class="mw-headline">Enums</span></h2>
 <table class="wikitable" style="border-color: #e6e6e6; background-color: #fafafa;" border="1">
 <tbody>
