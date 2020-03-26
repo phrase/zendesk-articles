@@ -1,0 +1,126 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>The Computer Assisted Translation (CAT) pane displays segmented source text alongside matches from translation memories, term bases, and machine translations. Non-translatable matches are also displayed.</p>
+<p>Click on a segment in the CAT pane to see more information about that segment in the lower window.</p>
+<div dir="ltr" class="note">
+<h3 class="title">Note</h3>
+<p>If a Term has a note or usage information, it is tagged with an asterisk (<span class="bold bold"><strong>*</strong></span>).</p>
+</div>
+<p>Hover over information in the bottom window to see more detail.</p>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be" id="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be_UUID-84c46ad0-ce47-18c9-6fc3-dff727e77e1b"></a>CAT Result Ordering</h2></div>
+<p>CAT results are displayed in the following order:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p>Best translation memory or non-translatable match, based on the score.</p></li>
+<li class="listitem"><p>Term base items (If there is a preferred term, it will be placed at top.)</p></li>
+<li class="listitem"><p>Translation memory, non-translatable, or MTQE based on scores.</p></li>
+<li class="listitem"><p>Machine translations (with no MTQE score)</p></li>
+<li class="listitem"><p>Sub-segment TM (pink <span class="bold bold"><strong>S</strong></span>)</p></li>
+</ol></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be" id="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be_UUID-5bccbbae-391b-ffa0-ce7c-9afe8f84e47b"></a>Translation Memory Matches</h2></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>101%</strong></span> - An in-context translation memory match.</p>
+<p>A greater than a 100% match indicates the context also matches what is saved in the TM.</p>
+</li>
+<li class="listitem"><p><span class="bold bold"><strong>100%</strong></span> - An exact translation memory match.</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>78%</strong></span> - A fuzzy translation memory match (anything below 100%).</p></li>
+<li class="listitem">
+<p><span class="bold bold"><strong>S</strong></span>  - A subsegment match.</p>
+<p>If a smaller part of the original text was previously translated as a short segment, the CAT pane will display it even though the match is lower then the threshold set in the Editor's Preference.</p>
+</li>
+<li class="listitem">
+<p>The downward arrow (<span class="bold bold"><strong>↓</strong></span>) indicates TM penalization.</p>
+<p>A project manager can set penalties for low quality TM matches in order to ensure they are reviewed. 100% matches, for example, may be shown as 95% matches.</p>
+</li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be" id="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be_UUID-b1680ad0-3ede-1d6b-0b62-d021d2d227d2"></a>Term Base Matches</h2></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong>TB</strong></span> indicates a suggested term from a term base.</p></li>
+<li class="listitem"><p>An asterisk on a term indicates that a Note or Usage Information is available.</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>TB</strong></span> in grey indicates a <span class="emphasis"><em>New</em></span> term that has not yet been approved.</p></li>
+<li class="listitem"><p>A term in red indicates a term that has been rejected and should not be used during translation.</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be" id="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be_UUID-e212976d-e8f6-30de-2265-3be98681b075"></a>Non-translatable Matches</h2></div>
+<p>A non-translatable (NT) is text that does not require translation. Memsource AI identifies these texts and suggests them as NT matches. Depending on AI accuracy, the NT match is either 100% or 99% and are likely to be segments not requiring translation but should still be reviewed by a linguist.</p>
+<p>Display of the NT score in the Memsource Editors is optional and there are two settings:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>NT with no score displayed with a white background in the score column and CAT pane</p></li>
+<li class="listitem"><p>NT with score displayed as dash underlined green 100 or orange 99 in the score column and the CAT pane</p></li>
+</ul></div>
+<p>To see match details:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Hover over the underlined score.</p></li>
+<li class="listitem"><p>Click on the match in the CAT pane.</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be" id="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be_UUID-212d51df-c3b5-fd38-80ac-7b12cb2586b4"></a>Machine Translation and MTQE Matches</h2></div>
+<p>If enabled, the <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360012527380#UUID-d22813f5-ca65-a373-f56d-75bf18a99635">Memsource MTQE</a> feature enables users to analyze a job and provides a percentage score for machine translation suggestions at the segment level before any post-editing is done.</p>
+<p>MTQE Scores:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong>100%</strong></span>: Perfect MT output - post-editing likely not required.</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>99%</strong></span>: Near-perfect MT output - minor post-editing required; likely formatting or punctuation issues.</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>75%</strong></span>: Good MT match, some human post-editing required.</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>No score</strong></span>: MTQE cannot confidently identify the quality. Output should be checked by a Linguist.</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be" id="UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be_UUID-7a7fb24c-ee23-057b-8444-adb74d532665"></a>CAT Preferences</h2></div>
+<p>To set CAT preferences, follow these steps:</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step">
+<p>From the <span class="guimenu">Tools</span> menu, select <span class="guilabel">Preferences</span>.</p>
+<p>The <span class="guimenu">PREFERENCES</span> windows opens.</p>
+</li>
+<li class="step">
+<p>Select the <span class="guimenu">CAT</span> tab.</p>
+<p>Available options:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="guimenu">Translation Memory (TM)</span></p>
+<p>Set the Minimum match rate for translation memory matches to be displayed and used for pre-translations.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">After confirming a segment, jump to the</span></p>
+<p>Select the desired behavior after confirming a segment.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Pre-translate</span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p>Enable/disable the auto-propagation of repetitions.</p>
+<p>Admins and Project Managers can decide if the translations of repeated source text segments are automatically inserted into the corresponding target text segments. They can also choose whether Linguist users can control this setting.</p>
+<p>For more information, see <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003460891-How-to-Be-Secure-with-Memsource-Cloud#Linguists_may_turn_on/turn_off_auto-propagation_of_repetitions" target="_blank" rel="noopener">How to Be Secure with Memsource</a></p>
+</li>
+<li class="listitem"><p>Set Pre-translate options to control the behavior of pre-translating the next segment that the user jumps to after confirming a segment.</p></li>
+<li class="listitem"><p>If machine translation is available for a project, <span class="guimenu">Insert MT</span> will pre-translate segments with machine translation when a translation memory match above the minimum specified threshold is not available.</p></li>
+</ul></div>
+</li>
+</ul></div>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>CAT preferences are saved for the editor.</p>
+</li>
+</ol></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
