@@ -47,6 +47,7 @@
 <h2><span id="XML_Settings_Using_XPath" class="mw-headline">XML Settings Using XPath</span></h2>
 <p>Translatable content can also be defined using the XPath query language. This method allows for the creation of complex import rules and some additional features that the Plain Import feature lacks. However, the user must be familiar with XPath:</p>
 <ul>
+<ul>
 <li>
 <strong>Context key:</strong> This is the value that constitutes TM context (101% matches) if applicable.</li>
 <li>
@@ -58,7 +59,12 @@
 <li>
 <strong>Convert character entities:</strong> Enter a list of character references (such as &amp;quot; or &amp;#x3A3;) that are required in the output file. Each item in this list will be separated by a comma. Please note that &amp; and &lt; are always exported as &amp;amp; and &amp;lt; respectively.</li>
 </ul>
+</ul>
+<div class="callout callout--success callout--dashed">
+<span class="callout__title">Note: </span> The <em><strong>Context Note, </strong></em><em><strong>Context Key,</strong></em> and <strong>Max. target length</strong> are processed only for files with a maximum of 10,000 XML elements.</div>
 <p>A subset of XPath 1.0 is accepted with the following limitations:</p>
+<ul>
+<ul>
 <ul>
 <li>Axis in step
 <ul>
@@ -76,6 +82,8 @@
 <strong>Not supported:</strong> For example: position number, axis child::, descendant::, descendant-or-self::, following::, preceding::, following-sibling::, preceding-sibling::, function last()</li>
 </ul>
 </li>
+</ul>
+</ul>
 </ul>
 <p>Please note that the XPath expression should define the elements and/or attributes whose text/value should be translated and not the actual text node. See our article on <a title="XPath" href="https://help.memsource.com/hc/en-us/articles/360001569871-XPath">XPath</a> for more information.</p>
 <p><img class="img450" src="https://pages.memsource.com/hc/Custom-xml-setting2.png"></p>
