@@ -1,11 +1,33 @@
 <div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
 <p>Earlier release notes can be found in the <a class="link" href="https://help.memsource.com/hc/en-us/sections/360001176392-Memsource" target="_blank" rel="noopener">archive</a>.</p>
-<div xml:lang="en" dir="ltr" class="section accordion internal sub-topic" lang="en"><div class="panel panel-default">
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-95fbc7a2-783a-5f07-e86f-3a1662f04862"></a>v20.6 - April 7, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-95fbc7a2-783a-5f07-e86f-3a1662f04862_body">
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk Connector</a> can specify that jobs are only created for articles that are flagged for translation.</p></li>
+<li class="listitem"><p>More project metadata filters (<span class="emphasis"><em>Owner</em></span>, <span class="emphasis"><em>Client</em></span>, <span class="emphasis"><em>Domain</em></span>, <span class="emphasis"><em>Subdomain</em></span>, <span class="emphasis"><em>Cost Center</em></span>, <span class="emphasis"><em>Business Unit</em></span> and <span class="emphasis"><em>Note</em></span>) have been added to the Project Templates API.</p></li>
+</ul></div>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>POPUP element is not imported for translation from an RC file. This has been fixed.</p></li>
+<li class="listitem"><p> <a class="link" href="https://cloud.memsource.com/web/docs/api" target="_blank" rel="noopener">REST API</a>: If a job is created without specific import settings, Global import settings are not applied. This has been fixed.</p></li>
+<li class="listitem"><p>Project <a class="link" href="https://help.memsource.com/hc/en-us/articles/360002826872-Analysis" target="_blank" rel="noopener">analysis</a> settings gets overwritten with settings from latest analysis settings. This has been fixed.</p></li>
+<li class="listitem"><p>Hidden text in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360004586932-MS-Word" target="_blank" rel="noopener">MS Word</a> files is being imported when it is specified not to be. This has been fixed.</p></li>
+<li class="listitem"><p> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk Connector</a>: Draft articles are being pushed to Published instead of Draft. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-cac7f1fa-1536-bc6d-14c8-bca4deec1741"></a>v20.5 - March 24, 2020</h2></div></div>
 <div class="panel-body collapse" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-cac7f1fa-1536-bc6d-14c8-bca4deec1741_body">
-<h3>
-<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h3>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>LQA data from Analytics can now be provided by the Analytics API.</p></li>
 <li class="listitem"><p>LIST Last Login Date endpoint added to Memsource APIs.</p></li>
@@ -14,8 +36,8 @@
 <li class="listitem"><p>Contentful (field-level) Connector provides an optional Fallback language.</p></li>
 <li class="listitem"><p>Various UI improvements.</p></li>
 </ul></div>
-<h3>
-<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h3>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Cost centers are not propagated from Project Templates when created via the Automation Widget or Automated Project Creation. This has been fixed.</p></li>
 <li class="listitem"><p>Selection of an <span class="guimenu">Entry import mode</span> for the Contentful (field-level) connector was not working in the UI. This has been fixed.</p></li>
@@ -24,12 +46,12 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div></div>
-<div xml:lang="en" dir="ltr" class="section accordion internal sub-topic" lang="en"><div class="panel panel-default">
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-fc853047-9345-8962-39e5-1333e1fb7266"></a>v20.4 - March 10, 2020</h2></div></div>
 <div class="panel-body collapse" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-fc853047-9345-8962-39e5-1333e1fb7266_body">
-<h3>
-<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h3>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Amazon Translate now available for Memsource Translate.</p></li>
 <li class="listitem"><p>Project page has a new filter allowing filtering of projects by status.</p></li>
@@ -52,15 +74,15 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div></div>
-<div xml:lang="en" dir="ltr" class="section accordion internal sub-topic" lang="en"><div class="panel panel-default">
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-5682cee8-a062-4b37-3234-4549ae32abdd"></a>v20.3 - February 25, 2020</h2></div></div>
 <div class="panel-body collapse" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-5682cee8-a062-4b37-3234-4549ae32abdd_body">
-<h3>
-<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h3>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Magento Connector has been updated (1.0.6). This updates helps with connection problems to Magento version 2.3.</p></li></ul></div>
-<h3>
-<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h3>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p>Contentful Connector:</p>
@@ -81,12 +103,12 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div></div>
-<div xml:lang="en" dir="ltr" class="section accordion internal sub-topic" lang="en"><div class="panel panel-default">
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-8f525962-27ed-07fc-7c08-39165a50a4b4"></a>v20.2 - February 11, 2020</h2></div></div>
 <div class="panel-body collapse" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-8f525962-27ed-07fc-7c08-39165a50a4b4_body">
-<h3>
-<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h3>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
 <p><span class="bold bold"><strong>Jobs View</strong></span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Project owner is now visible in the Jobs View and can be used as a filter.</p></li>
@@ -119,8 +141,8 @@
 <p><span class="bold bold"><strong>New Languages Supported in <a class="link" href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html" target="_blank" rel="noopener">Amazon Translate</a></strong></span></p>
 <p><span class="bold bold"><strong>Connector Warning</strong></span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Connectors with open continuous jobs can be deleted with no warning. This has been changed and a warning is displayed.</p></li></ul></div>
-<h3>
-<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h3>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Memsource employee names could be found in the properties of exported bilingual .docx files. This has been fixed.</p></li>
 <li class="listitem"><p>Pre-translations exported to bilingual .docx contain incorrect fonts and languages. This has been fixed.</p></li>
@@ -133,12 +155,12 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div></div>
-<div xml:lang="en" dir="ltr" class="section accordion internal sub-topic" lang="en"><div class="panel panel-default">
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-0a505f78-1851-7f75-a129-c01eff6fd939"></a>v20.1 - January 28, 2020</h2></div></div>
 <div class="panel-body collapse" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-0a505f78-1851-7f75-a129-c01eff6fd939_body">
-<h3>
-<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h3>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Linguist Portal Job View: Translation jobs assigned to the linguist are presented in a table with acceptance buttons and filtering options.</p></li>
 <li class="listitem"><p>Added support for <span class="emphasis"><em>npatMT</em></span> MT engine.</p></li>
@@ -146,8 +168,8 @@
 <li class="listitem"><p><span class="emphasis"><em>Search shared space</em></span> functionality improved to increase search speed.</p></li>
 <li class="listitem"><p>Added support for Adobe Experience Manager 6.5</p></li>
 </ul></div>
-<h3>
-<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h3>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>If Modify TBs is disabled for Guest users, View TBs and Approve terms functions do not work. This has been fixed.</p></li>
 <li class="listitem"><p>Analysis created via API ignore the naming macro. This has been fixed.</p></li>
@@ -155,15 +177,15 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div></div>
-<div xml:lang="en" dir="ltr" class="section accordion internal sub-topic" lang="en"><div class="panel panel-default">
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-5aa2bf11-559b-8334-e4f7-070dca9bfe70"></a>v19.26 - January 14, 2020</h2></div></div>
 <div class="panel-body collapse" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-5aa2bf11-559b-8334-e4f7-070dca9bfe70_body">
-<h3>
-<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h3>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Trusted IP Addresses can now be assigned to specific user roles.</p></li></ul></div>
-<h3>
-<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h3>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>GitLab online repositories were not maintaining original states or the full path to the repository was altered. This has been fixed.</p></li>
 <li class="listitem"><p>If 'Include Tags' is selected for Google AutoML, parts between the tags are translated instead of whole segments. This has been fixed.</p></li>
