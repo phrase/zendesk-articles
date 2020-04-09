@@ -10,14 +10,14 @@
 <p><span class="bold bold"><strong>Pre-translation</strong></span></p>
 <p>In addition to the instant, segment-level, quality matches in the Memsource Editor, MTQE is used in pre-translation. This can be turned off in Pre-translate options.</p>
 <p>See <a class="link" href="https://help.memsource.com/hc/en-us/articles/360002841231-Pre-translate-Jobs" target="_blank" rel="noopener">Pre-translate</a> for more information.</p>
-<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2" id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_UUID-e73f37ec-70e7-9210-1f89-7f75b4ee192a"></a>Configure MTQE</h2></div>
 <p>MTQE can be enabled for specific MT engines supported by Memsource. It is also automatically available with any of the engines supported by the Memsource Translate solution.</p>
 <p>To enable MTQE for a specific MT engine, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_procedure-idm4573158307942431645643525417"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360010303460/15e7b79d130f2c.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360010895859/15e8f25fdca195.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step"><p>Click on <span class="guilabel">Machine Translation Engines</span>.</p></li>
 <li class="step">
 <p>Select the applicable MT engine and click <span class="guilabel">Edit</span>.</p>
@@ -32,9 +32,23 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2" id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_UUID-b830b4b7-81f2-8b30-4f94-3018de3e29df"></a>Evaluating MTQE Results</h2></div>
+<a data-zd-article="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2" id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_UUID-e8c93097-ba9e-2f31-8f35-b292d02bff04"></a>Quality Scores</h2></div>
+<p>Scoring categories:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>100% -Excellent MT match, probably no post-editing required</p></li>
+<li class="listitem"><p>99% - Near-perfect MT output, possibly minor post-editing required for mostly typographical errors</p></li>
+<li class="listitem"><p>75% - Good MT match, but likely to require some post-editing</p></li>
+<li class="listitem"><p>No score - When there is no score, it is very likely that the MT output is of low quality. In general, it is recommended that this output not be post-edited but used for reference only.</p></li>
+</ul></div>
+<p>MTQE scores appear at the segment level together with other translation resources (TM, NT, TB). Match origin is presented in a tooltip and at the bottom of the CAT panel in the metadata section.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2" id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_UUID-b830b4b7-81f2-8b30-4f94-3018de3e29df"></a>Evaluating MTQE Results</h2></div></div>
+<div class="panel-body collapse" id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_UUID-b830b4b7-81f2-8b30-4f94-3018de3e29df_body">
 <p>Once MTQE has been enabled and employed as part of the Machine Translation process, MTQE scores for content and engine can be measured for accuracy. Direct comparison between segment-level MTQE scores and post-editing analysis is not available, but the following options provide ways to quantitatively and qualitatively evaluate MTQE scores.</p>
 <p><span class="bold bold"><strong>Evaluating with Post-editing Analysis</strong></span></p>
 <p>Post-editing analysis indicates editing effort; how much text the Linguist or Proofreader had to edit. For post-editing analysis in projects with Machine Translation and MTQE, results are calculated as the difference between the machine translation suggestions and the final text after post-editing is finished.</p>
@@ -58,20 +72,22 @@
 </li>
 </ol>
 </div>
-<div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
-<div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2" id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_UUID-4b193a28-d771-786d-96d5-bbaa49ae65fc"></a>Buy MTQE Characters</h2></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2" id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_UUID-4b193a28-d771-786d-96d5-bbaa49ae65fc"></a>Purchase MTQE Characters</h2></div></div>
+<div class="panel-body collapse" id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_UUID-4b193a28-d771-786d-96d5-bbaa49ae65fc_body">
 <p>MTQE requires purchased characters. Segments estimated by MTQE (via Analysis, the CAT panel in the Memsource Editor, or pre-translation) consume these characters. Characters purchased for Memsource Translate are automatically available for MTQE. </p>
 <p>MTQE characters for third-party MT engines are vendor specific; for example, MTQE characters available for DeepL can only be used for the DeepL MT engine and characters available for MTQE CrossLang would only be usable by the CrossLang engine.</p>
-<div xml:lang="en" dir="ltr" class="section internal sub-topic" lang="en">
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2" id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_UUID-8be1d58e-34ec-babb-fb77-33b818debfb3"></a>Purchase Characters</h3></div>
 <p>To purchase characters, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_procedure-idm4589028014470431631947433131"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360010303460/15e7b79d130f2c.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360010895859/15e8f25fdca195.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Machine Translation Engines</span>.</p>
 <p>The <span class="guimenu">Machine Translation Engine</span> page opens.</p>
@@ -101,9 +117,10 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section accordion internal sub-topic" lang="en"><div class="panel panel-default">
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2" id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_UUID-214925cb-c5c0-5f9a-fc53-7fb3e60045d2"></a>MTQE Supported Language Pairs</h2></div></div>
 <div class="panel-body collapse" id="UUID-d435d748-e1b8-88e6-7089-9cc73e1320d2_UUID-214925cb-c5c0-5f9a-fc53-7fb3e60045d2_body"><div class="informaltable table-responsive">
