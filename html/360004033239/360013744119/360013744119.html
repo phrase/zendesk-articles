@@ -1,0 +1,202 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-5fb9456c-e857-a963-771d-d44d216a8fa8"></a>Segmentation</h2></div>
+<p>Segmentation is the process that splits original texts into smaller parts. This improves the retrieval of previously translated text from a translation memory.</p>
+<p>Default segmentation rules in Memsource correspond with specifics of each supported language and can be customized.</p>
+<p>Jobs imported with bad segmentation such as poorly formatted Word files or the application of inappropriate segmentation customization can affect TM match values.</p>
+<p><span class="bold bold"><strong>Example</strong></span>:</p>
+<div class="itemizedlist">
+<p>Good Segmentation:</p>
+<ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+<p><span class="emphasis"><em>Translation memories with multilingual target languages are supported and can be used bidirectionally.</em></span></p>
+<p>Match value of 100%.</p>
+</li></ul>
+</div>
+<div class="itemizedlist">
+<p>Poor Segmentation</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="emphasis"><em>Translation memories with multilingual target languages are supported.</em></span> Match value of 100%.</p></li>
+<li class="listitem">
+<p><span class="emphasis"><em>and can be used bidirectionally.</em></span></p>
+<p>Match value of 63%.</p>
+</li>
+</ul>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-35436dda-8c7d-4b66-2c71-83db2a0602fd"></a>Customize Segmentation Rules</h2></div>
+<p>Customized segmentation rules can be applied to <a class="link" href="https://help.memsource.com/hc/articles/360013675740#UUID-29d1a108-bf4f-799c-9ff5-6826433147c8" title="Jobs Overview">jobs</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project templates</a>. When set as primary, they are applied to all new jobs imported for that source language.</p>
+<p>There are two types of segmentation rules: </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Abbreviations to the XLSX file</p></li>
+<li class="listitem"><p>Regular expression of SRX files</p></li>
+</ul></div>
+<p>To use customized rules, download default rules, modify them, upload the modified file and apply them to specified jobs.</p>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-6ee31788-709c-9599-46ad-e762a84e4a62"></a>Download Default Segmentation Rules</h3></div></div>
+<div class="panel-body collapse" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-6ee31788-709c-9599-46ad-e762a84e4a62_body">
+<p>To download the default segmentation rules, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747554516301"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011870800/15eb90fd7e0318.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
+<p>The <span class="guimenu">Segmentation</span> page opens.</p>
+</li>
+<li class="step">
+<p>Select the language to be customized and click <span class="guilabel">Export XLSX/SRX</span>.</p>
+<p>The <span class="guimenu">Export XLSX/SRX</span> window opens.</p>
+</li>
+<li class="step">
+<p>Select format:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong>XLSX</strong></span> provides an abbreviation list.</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>SRX</strong></span> provides regular expression rules.</p></li>
+</ul></div>
+</li>
+<li class="step"><p>Select a language from the dropdown list.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Download</span>.</p>
+<p>The file is downloaded to your system.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-0c79b942-b2d6-e95b-edf6-d36c035ea3b1"></a>Edit Abbreviations in an XLSX File</h3></div></div>
+<div class="panel-body collapse" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-0c79b942-b2d6-e95b-edf6-d36c035ea3b1_body">
+<p>Abbreviations can be specified for individual languages after which new segments should not be created.</p>
+<p>To edit abbreviations, follow these steps:</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>Open the downloaded XLSX file in an editor.</p></li>
+<li class="step">
+<p>Change the contents with the following formatting:</p>
+<p>The XLSX file must have two columns with no headings.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong>Column 1</strong></span>: Abbreviation to be specified</p></li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Column 2</strong></span>: Specification of segmentation behavior</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>ABBR_UPPER_NUM</strong></span></p>
+<p>A new segment is <span class="emphasis"><em>not</em></span> be created if the abbreviation is followed by white-space and then by a number, a symbol (math, currency signs, dingbats, etc.) or a word with the first letter in upper case.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>ABBR_NUM</strong></span></p>
+<p>A new segment will <span class="emphasis"><em>not</em></span> be created if the abbreviation is followed by white-space and then by a number.</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</li>
+<li class="step"><p>Save the edited XLSX file.</p></li>
+</ol></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-b6497a13-1aef-bcbd-427c-a4a5f36e9f2e"></a>Edit Regular Expressions in an SRX File</h3></div></div>
+<div class="panel-body collapse" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-b6497a13-1aef-bcbd-427c-a4a5f36e9f2e_body">
+<p>Editing SRX files is a complex process suitable only for users experienced in using Regular Expressions. </p>
+<p>There are several rules that can be changed in an SRX file:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Import text from Excel without segmentation. Here, one cell is equal to one segment.</p></li>
+<li class="listitem"><p>Import text with a new line in order to split one segment into two.</p></li>
+<li class="listitem"><p>Use a colon (or any other character) as a segment separator.</p></li>
+<li class="listitem"><p>Forbid the use of a semicolon (or any other character) as a segment separator.</p></li>
+<li class="listitem"><p>Removing an abbreviation from the list (the text will be segmented).</p></li>
+</ul></div>
+<p>These rules are <span class="emphasis"><em>character-based</em></span>; only a single character can be used as segment separator. Group of characters (for example: &lt;p&gt;) cannot be used as a segment separator.</p>
+<p>To edit the SRX file, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747605636608"></a><ol class="procedure" type="1">
+<li class="step"><p>Open the file in a text editor such as <a class="link" href="https://notepad-plus-plus.org/downloads/" target="_blank" rel="noopener">Notepad ++</a>.</p></li>
+<li class="step">
+<p>Edit using <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expressions</a> or remove the inner segmentation completely.</p>
+<p>Example:</p>
+<div class="mediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011870820/15eb90fd7e3357.png" style="" alt="BreakRules_Example.png"></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><code class="code">&lt;rule break="no"&gt;</code></p>
+<p>The list of rules, where the segment will not be broken. I.E. a list of abbreviations</p>
+</li>
+<li class="listitem">
+<p><code class="code">&lt;rule&gt; &lt;beforebreak&gt;</code></p>
+<p>A regular expression for a character before a break (for example, at the end of a sentence ". ? ! :"). If you, for example, don't want segment text after a colon, simply delete <code class="code">:</code> from every <code class="code">&lt;rule&gt;&lt;beforebreak&gt;</code> code.</p>
+</li>
+<li class="listitem">
+<p><code class="code">&lt;rule&gt; &lt;afterbreak&gt;</code></p>
+<p>A regular expression for a character after a break (for example, at the start of a new sentence—a space and capital letter).</p>
+</li>
+</ul></div>
+</li>
+<li class="step"><p>Save the modified SRX file.</p></li>
+</ol>
+</div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-bcef4801-0d79-b6f9-e757-52ef5161f164"></a>Upload New Segmentation Rules</h3></div></div>
+<div class="panel-body collapse" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-bcef4801-0d79-b6f9-e757-52ef5161f164_body">
+<p>To upload modified or new segmentation rules, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747706104723"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011870800/15eb90fd7e0318.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
+<p>The <span class="guimenu">Segmentation</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Upload Custom XLSX or SRX Segmentation File</span> page opens.</p>
+</li>
+<li class="step"><p>Select a <span class="guimenu">Language</span> from the dropdown list.</p></li>
+<li class="step"><p>Provide a <span class="guimenu">Name</span> for the rule.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Choose File</span>.</p>
+<p>A file selection window opens.</p>
+</li>
+<li class="step"><p>Select the modified rules file for upload.</p></li>
+<li class="step"><p>Check <span class="guimenu">Primary</span> if the custom segmentation rules will be the primary segmentation rules for the selected language.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Create</span>.</p>
+<p>The <span class="guimenu">Segmentation</span> page opens and the rule has been added to the list.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-85a78d12-725e-750f-6e43-0f10caf2197e"></a>Use Custom Segmentation Rules on Job Import</h3></div></div>
+<div class="panel-body collapse" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-85a78d12-725e-750f-6e43-0f10caf2197e_body">
+<p>To use custom rules on a job import, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747727880795"></a><ol class="procedure" type="1">
+<li class="step">
+<p>At step 8 of <a class="link" href="https://help.memsource.com/hc/articles/360013675740#UUID-29d1a108-bf4f-799c-9ff5-6826433147c8_UUID-86543056-6056-5c1b-8666-45bc5d78c2c8" title="Create a Job">Creating a Job</a>, click <span class="guilabel">Segmentation and Segment Length</span> from the <span class="guimenu">File Import Settings</span>.</p>
+<p>The <span class="guimenu">Segmentation and Segment Length</span> options dropdown opens.</p>
+</li>
+<li class="step"><p>Select the modified rules from the <span class="guimenu">Source segmentation rules</span> dropdown list.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Create</span>.</p>
+<p>The job is created and added to the list using the specified segmentation rules.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

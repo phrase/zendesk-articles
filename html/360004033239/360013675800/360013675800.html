@@ -1,0 +1,288 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/115003484052-Quality-Assurance" target="_blank" rel="noopener">Quality Assurance</a> (QA) is a feature built into Memsource Editors. It detects errors in translation by comparing source and target segments, checking the term base, spelling, content of the tags, etc. It helps translators detect formal errors and improve overall translation quality and consistency.</p>
+<p>If set by a project manager, QA checks may be mandatory for jobs and projects. If mandatory, QA warnings must be mitigated before the jobs can be set to <span class="emphasis"><em>Completed</em></span>.</p>
+<p>QA checks can be <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872099-Quality-Assurance-Pane" target="_blank" rel="noopener">applied instantly, or manually</a>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Instant QA</strong></span></p>
+<p>Run on a segment when confirmed. If issues are identified, the segment is not saved to a translation memory until the Linguist resolves them.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Manual QA</strong></span></p>
+<p>Checks all segments in the job. To be run by the Linguist before the job is set to <span class="emphasis"><em>Completed</em></span>.</p>
+</li>
+</ul></div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c" id="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c_UUID-d099ea0f-345c-062f-6bb0-dced6ecf45c2"></a>Quality Assurance Default Setup</h2></div>
+<p>To setup default QA settings, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c_procedure-idm231749430927827"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011870780/15eb90fd7e0318.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Quality Assurance</span>.</p>
+<p>The <span class="guimenu">Quality Assurance</span> page opens.</p>
+</li>
+<li class="step">
+<p>Select required settings and click <span class="guilabel">Save</span>.</p>
+<p>Settings are saved and will be applied to all new projects.</p>
+</li>
+</ol>
+</div>
+<p>The Quality Assurance settings interface can also be accessed at the project level by editing a project or by editing a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project template</a>.</p>
+<p>By default, all QA warnings can be set to <span class="emphasis"><em>ignore</em></span> by Linguists/Vendors. For some QA checks, the Project Managers can disable the <span class="guimenu">Can be ignored</span> option in the QA settings so Linguists and Vendors will not be able to ignore these warnings when setting a job to <span class="emphasis"><em>Complete</em></span>.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c" id="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c_UUID-b13cbef5-8ea1-12d9-ab64-45176f5a3279"></a>QA Status for Jobs</h2></div>
+<p>Whenever a QA check is launched for a job, the outcome is saved with the translation job with different values:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>QA Warnings: Not launched </strong></span></p>
+<p>The QA has not been launched for this job.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>QA Warnings: Incomplete </strong></span></p>
+<p>The QA has been launched for only part of a job (e.g. the user did not click the <span class="guilabel">Show more</span> link at the bottom of the QA warnings list). Or, the QA was launched for the entire job was later edited.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>QA Warnings: 2 (1 ignored) </strong></span></p>
+<p>The QA has been launched and it includes a total of 2 warnings of which 1 was marked as ignored.</p>
+</li>
+</ul></div>
+<p>Hover over the <span class="guimenu">Confirmed</span> value of a job on a project page to see QA Status.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c" id="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c_UUID-7ec6b09e-b1f8-8c72-b4d6-4100eba17aae"></a>List of QA Checks</h2></div></div>
+<div class="panel-body collapse" id="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c_UUID-7ec6b09e-b1f8-8c72-b4d6-4100eba17aae_body">
+<p>The QA checks cover errors that range from spelling errors to tag issues and inconsistent terminology.</p>
+<div class="informaltable table-responsive"><table>
+<thead><tr>
+<th><p>QA check</p></th>
+<th><p>Function</p></th>
+<th><p>Instant QA</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>Empty target</p></td>
+<td><p>The target contains no characters or tags.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Trailing punctuation</p></td>
+<td>
+<p>Trailing punctuation is different in the source and target.</p>
+<p>For example, the source ends with "." but the target does not or vice-versa.</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Inconsistent translations</p></td>
+<td><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>A segment with an identical source but a different target precedes the checked segment.</p></li>
+<li class="listitem"><p>A segment with an identical target but a different source precedes the checked segment.</p></li>
+<li class="listitem"><p>Repetition exceptions and segments with an empty target are skipped.</p></li>
+</ul></div></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Newer version in a preceding workflow step available</p></td>
+<td>
+<p>Checks whether newer versions of segments exist in preceding Workflow steps.</p>
+<p>For example, a translator has modified a segment in the Translation Workflow step after it was revised in the Revision Workflow step.</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Missing numbers</p></td>
+<td>
+<p>The number in the source is not present in the target.</p>
+<p>For example, the source has the phrase "1 and 2", but the target reads "1 and 3".</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Repeated words</p></td>
+<td><p>Two or more adjacent words in the target are identical.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Multiple spaces</p></td>
+<td><p>There are multiple spaces in the target but not in the source.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Leading and trailing spaces</p></td>
+<td><p>There is a leading or trailing space in the target but not in the source.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Tags &amp; formatting</p></td>
+<td>
+<p>Tags/formatting are missing or invalid, or there are missing or redundant line breaks.Example: the source contains "{1} {2}" but the target reads "{1}".</p>
+<p>Example: the source contains "{1} {2}" but the target reads "{1}".</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Inconsistent tag content</p></td>
+<td>
+<p>The tag content between the source and its corresponding target tag differ.</p>
+<p>For example, the source shows <code class="code">&lt;a href="http://bbc.co.uk"&gt;</code> but the target contains <code class="code">&lt;"http://"&gt;</code></p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Empty tag content</p></td>
+<td>
+<p>The target tag content is empty, while the source tag content is not.</p>
+<p>For example, the source reads <code class="code">&lt;a href="http://bbc.co.uk"&gt;</code> but the target shows "".</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Tags-joined segments</p></td>
+<td>
+<p>The number of {j} tags is different in the source and target.</p>
+<p>For example, the source is "xxx{j}yyy" but the target is "xxx yyy".</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>No text between the tags</p></td>
+<td>
+<p>There is a paired tag with no text between the tags in the target but not in the source.</p>
+<p>For example, there is {1&gt;abc&lt;1} in the source and {1&gt;&lt;1} in the target.</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Nested tags</p></td>
+<td>
+<p>Paired tags in the target are misplaced.</p>
+<p>For example, there is {1&gt;{2&gt;abc&lt;2}{3&gt;abc&lt;3}{4&gt;&lt;4}&lt;1} in the source and {1&gt;{2&gt;abc&lt;2}{3&gt;abc{4&gt;&lt;3}&lt;4}&lt;1} in the target. This option is disabled by default, but it is important to enable it for projects with Excel files.</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>XLIFF tags</p></td>
+<td>
+<p>Paired tags (such as <span class="emphasis"><em>bpt</em></span> and <span class="emphasis"><em>ept</em></span>) are in the incorrect order in the completed target file.</p>
+<p>For example, the source contains "bpt bpt ept ept" and the target contains "bpt ept ept bpt".</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Terminology</p></td>
+<td>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>The terms (with status <span class="emphasis"><em>Approved</em></span>) in the source do not have a corresponding term translation (status <span class="emphasis"><em>New</em></span> or <span class="emphasis"><em>Approved</em></span>) in the target.</p></li>
+<li class="listitem"><p>A forbidden term is used for the translation. (Forbidden terms in the source are ignored.)</p></li>
+</ul></div>
+<p>Only terms within the source will be checked</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Forbidden terms without a source</p></td>
+<td><p>This is based only on target terms with no source term.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Spelling</p></td>
+<td><p>The target contains misspelled words.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Not confirmed segments</p></td>
+<td><p>Checks to make sure each segment is confirmed.</p></td>
+<td><p>No</p></td>
+</tr>
+<tr>
+<td><p>Unresolved conversation</p></td>
+<td><p>Ensures that no segment contains an unresolved comment in a conversation.</p></td>
+<td><p>No</p></td>
+</tr>
+<tr>
+<td><p>Maximum target segment length in characters</p></td>
+<td><p>The target segment length is greater than the given parameter (default 100000).</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Maximum target segment length in % of source</p></td>
+<td><p>The target segment length is greater than the given parameter (default 130%).</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Not allowed</p></td>
+<td>
+<p>The target contains strings that are not allowed.Characters, or alternatively, utf-8 codes, can be entered as strings that are <span class="emphasis"><em>not allowed</em></span>. </p>
+<p>Numerous strings can be entered this way, separated by commas.</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Target text identical with source one</p></td>
+<td><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>This is a QA check for text copied from the source to the target.</p></li>
+<li class="listitem"><p>No warning will be displayed for segments containing only plain numbers, tags, or non-translatable characters.</p></li>
+<li class="listitem"><p>Segments translated using the Memsource Non-translatables feature are ignored in this QA check.</p></li>
+</ul></div></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Unedited TM fuzzy match</p></td>
+<td><p>A fuzzy TM match has been confirmed without being edited.</p></td>
+<td><p>No</p></td>
+</tr>
+<tr>
+<td><p>Unedited NT/MT fuzzy match</p></td>
+<td><p>A fuzzy NT/MT match has been confirmed without being edited.</p></td>
+<td><p>No</p></td>
+</tr>
+<tr>
+<td><p>Extra numbers in target</p></td>
+<td><p>The target contains an extra number that the source does not.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Regexp</p></td>
+<td><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>This section can be used to define checks based on Regular Expressions as well as Descriptions that will be displayed in the Editors when such an issue is identified.</p></li>
+<li class="listitem"><p>Multiple conditions can be set using the PLUS button.</p></li>
+<li class="listitem"><p>Memsource checks whether the counts of the regexp matches differ between the source and the target text.</p></li>
+</ul></div></td>
+<td><p>Yes</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c" id="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c_UUID-a48fb40e-2c85-6d35-31a8-66cff931f58c"></a>QA Management Options</h2></div>
+<h4>
+<a id="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c_bridgehead-idm231749556235325"></a>Forcing Providers to Run a QA Check</h4>
+<p>Providers (Linguists and Vendors) can be prevented from setting a job to <span class="emphasis"><em>Completed</em></span> unless a QA check is run and <a class="link linktextconsumer" href="https://help.memsource.com/document/preview/2937#UUID-d9cc738f-e997-be83-27b5-ca536b7b75b3">warnings mitigated</a>. Project Managers can also select which QA checks can be set to <span class="emphasis"><em>ignore</em></span> by Linguists.</p>
+<p>To select which QA checks can be ignored, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c_procedure-idm231749560527372"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From a project page, click <span class="guilabel">Edit</span>.</p>
+<p>The <span class="guimenu">Edit Project</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Quality Assurance</span>.</p>
+<p>The options table opens.</p>
+</li>
+<li class="step"><p>Check the <span class="guimenu">Linguists may not set jobs with QA warnings to Completed</span> radio button.</p></li>
+<li class="step"><p>Uncheck the <span class="guimenu">Can be ignored</span> radio button for any QA checks the Linguist/Vendor should not set to <span class="emphasis"><em>ignore</em></span>.</p></li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

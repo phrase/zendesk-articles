@@ -1,0 +1,183 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>Analysis calculates the character/word count in selected files and identifies repetitions, non-translatables, translation memory matches, and machine translation matches. Analysis can also show the number of revisions made by a reviewer.</p>
+<p>Some CAT tools refer to Analysis as statistics.</p>
+<p>Since different billing units are used in different countries, three calculation methods are available:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Characters</strong></span> </p>
+<p>Without spaces.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Words</strong></span> </p>
+<p>For languages that use spaces between words—excluding Chinese, Japanese, and Thai.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Pages</strong></span> </p>
+<p>1800 characters with spaces—unrelated to the actual number of pages in a file.</p>
+</li>
+</ul></div>
+<div dir="ltr" class="note">
+<h3 class="title">Note</h3>
+<p>Characters from CJK languages are counted as both characters and words.</p>
+</div>
+<p>Three analysis types are provided:</p>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-6c314b96-5f74-6cf0-790c-7b80c0799beb"></a>Default Analysis</h2></div></div>
+<div class="panel-body collapse" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-6c314b96-5f74-6cf0-790c-7b80c0799beb_body">
+<p>Default Analysis is the standard analysis run <span class="emphasis"><em>before</em></span> translation. It provides the baseline analysis of a job that can be used with the Post-editing Analysis to determine how much effort was put into translating that job. This baseline is also used the basis for generating Quotes for clients.</p>
+<p>A breakdown of segments/words/character counts is produced and if used in a project, TM matches are identified along with non-translatable matches and <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360012527380#UUID-d22813f5-ca65-a373-f56d-75bf18a99635">Machine Translation Quality Estimation</a> (if enabled).</p>
+<p>Running a Default Analysis after translation produces incorrect analyses.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-3c0ab630-301c-89a2-bbd3-c11109f7d36d"></a>Post-editing Analysis</h2></div></div>
+<div class="panel-body collapse" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-3c0ab630-301c-89a2-bbd3-c11109f7d36d_body">
+<p>Post-editing analysis indicates editing effort; how much editing the text required from a linguist or proofreader. It is based on the target and is run after post-editing is complete.</p>
+<p>When a linguist clicks on an untranslated segment, the current highest translation memory match, machine translation, and/or non-translatable match is saved for that segment and is used in post-editing analysis.</p>
+<p>In projects with Revision in the workflow, the post-editing analysis is calculated as the difference between the translated text and the proofread text.</p>
+<p>Memsource post-editing analysis extends the traditional translation memory analysis to include machine translation (MT) and non-translatables (NT).</p>
+<h4>
+<a id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_bridgehead-idm4663436486292831727035227621"></a>Post-analysis Options</h4>
+<p>Post-editing options are used for calculating the post-editing effort required for matches from the translation memory (TM), non-translatables (NT) and machine translation (MT).</p>
+<p><span class="bold bold"><strong>Analyze TM post-editing enabled</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Intended for low-quality TM that contain high percent matches that require Linguist editing.</p></li>
+<li class="listitem"><p>Indicates post-editing effort for the TM.</p></li>
+<li class="listitem"><p>Contains only 100% matches in the analysis. In-context 101% matches from the TM have no effect on the calculation.</p></li>
+</ul></div>
+<p><span class="bold bold"><strong>Analyze TM post-editing disabled</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Intended for high-quality TM where matches should be edited as little as possible to reduce cost.</p></li>
+<li class="listitem"><p>Indicates both 101% and 100%.</p></li>
+<li class="listitem"><p>Indicates TM matches offered to the Linguist when the segment is opened (not the actual Linguist's post-editing effort).</p></li>
+<li class="listitem"><p>Indicates post-editing effort for machine translation and non-translatables.</p></li>
+</ul></div>
+<p><span class="bold bold"><strong>Analyze NT/MT post-editing enabled</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>If the MT or NT suggestion was accepted without further editing it is presented as a 100% match in the analysis.</p></li>
+<li class="listitem"><p>If Linguist changes the MT, the match rate will be lower. The score-counting algorithm is the same as that used to calculate the score of translation memory fuzzy matches.</p></li>
+<li class="listitem"><p>Editing of an NT will cause the segment be presented as 0-49% NT.</p></li>
+</ul></div>
+<p><span class="bold bold"><strong>Analyze NT/MT post-editing disabled</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Entries from MT/NT without any estimated score will be considered TM 0%-49% matches. They will be indicated translated by the Linguist with the MT not considered.</p></li>
+<li class="listitem"><p>MTQE and Memsource Translate matches higher than 75% will be in the MT column in their respective matches.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-10429b14-5bbc-9a56-2693-3218d995f79e"></a>Compare Analysis</h2></div></div>
+<div class="panel-body collapse" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-10429b14-5bbc-9a56-2693-3218d995f79e_body">
+<div xml:lang="en" dir="ltr" class="section caution sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-c6f85993-1316-4167-bb0f-d4ea3798f0be"></a>Available for</h3></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Team, Ultimate and Enterprise Editions</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>The Compare Analysis feature is available only in projects with Workflow steps. It compares two versions of a file in different Workflow steps and analyzes how the two versions differ.</p>
+<p><span class="bold bold"><strong>For example:</strong></span></p>
+<p>A comparison between the Translation and Review steps indicates the actual effort of a Reviewer by identifying how much the translation changed during the Review step.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-20f13fb8-0e26-2bf5-a032-0004e32c0991"></a>Create an Analysis</h2></div>
+<p>To create an analysis, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_procedure-idm4604110293518431728277975211"></a><ol class="procedure" type="1">
+<li class="step"><p>From a <span class="guimenu">Project</span> page, select one or more <span class="guimenu">Jobs</span>.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Analyze</span>.</p>
+<p>The Analyze window opens.</p>
+</li>
+<li class="step"><p>Select an <span class="guimenu">Type</span> from the dropdown list.</p></li>
+<li class="step"><p>Provide a name if required.</p></li>
+<li class="step">
+<p>Select analysis options and click <span class="guilabel">Analyze</span>.</p>
+<p>The analysis, or analyses are added to the list.</p>
+</li>
+<li class="step"><p>Click on an analysis in the list to view it.</p></li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>Analysis can be run on multiple jobs and can be grouped in two ways:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Analyze by provider</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem">
+<p>For a project with many jobs assigned to various Linguists or Vendors. Used to:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>Create separate analyses containing files assigned to individual Linguists or Vendors.</p></li>
+<li class="listitem"><p>Assign analyses to a provider making the analyses visible to their Linguists/Vendors.</p></li>
+</ul></div>
+</li></ul></div>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Analyze by language</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem">
+<p>If a project contains multiple target languages, the analyses of all files can be run in a batch creating a separate analysis for each individual language.</p>
+<p>To Analyze by language, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_procedure-idm46634365035424317268304323"></a><ol class="procedure" type="1">
+<li class="step"><p>From a Project page, select all <span class="guimenu">Job</span> files.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Analyze</span>.</p>
+<p>The <span class="guimenu">Analyze</span> window opens.</p>
+</li>
+<li class="step"><p>Maintain default settings and select <span class="guimenu">Analyze by language</span>.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Analyze</span>.</p>
+<p>Job analysis is prepared by language.</p>
+</li>
+</ol>
+</div>
+</li></ul></div>
+</li>
+</ul></div>
+<h4>
+<a id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_bridgehead-idm4554783249960031728441862748"></a>Customize the Analysis View</h4>
+<p>Segments, Pages, Words, Characters, and Percents columns can be displayed/hidden in the Analysis table.</p>
+<h4>
+<a id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_bridgehead-idm4663436485336031728442534741"></a>Download the Analysis</h4>
+<p>To download an analysis, follow these steps:</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>Select a file type from the dropdown menu.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Download</span>.</p>
+<p>The file is downloaded.</p>
+</li>
+</ol></div>
+<p>These files can be imported into most project management software systems.</p>
+<h4>
+<a id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_bridgehead-idm4554783153131231728271029137"></a>Apply a Net Rate Scheme</h4>
+<p>You can apply a discount to words/characters/pages in an analysis. A discounted translation volume is immediately calculated and displayed directly in the analysis in the <span class="guimenu">Net Rate</span> row.</p>
+<p>To remove the Net Rate Scheme from the analysis, leave the field next to the Apply Net Rate button empty.</p>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-02b2913f-aa0b-5714-bdd8-12a92ad7d7b5"></a>Assign Analysis to a Provider</h2></div>
+<p>To assign an analysis to to a provider, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_procedure-idm4554783305974431726846276208"></a><ol class="procedure" type="1">
+<li class="step">
+<p>Select an analysis from the list and click <span class="guilabel">Edit</span>.</p>
+<p>The <span class="guimenu">Edit Analysis</span> page opens.</p>
+</li>
+<li class="step"><p>Select a Provider from the dropdown list.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The analysis will be available to the assigned provider on the <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003944792-Linguist-Portal" target="_blank" rel="noopener">Linguist Portal</a>.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
