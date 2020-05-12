@@ -1,0 +1,272 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>A translation memory (TM) is a database of previously translated text and is a key component of CAT tools. Text is split into smaller segments (usually sentences or titles) during <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483972-Segmentation" target="_blank" rel="noopener">segmentation</a>. The original segment and its translation are then saved into the translation memory as a <span class="emphasis"><em>translation unit</em></span>.</p>
+<p>A TM can have several target languages but only one source language and can be used in multiple projects simultaneously.</p>
+<p>There are two main benefits to using a TM:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>A TM allows for the reuse of translations. This speeds up the translation process and reduces costs.</p></li>
+<li class="listitem"><p>A TM helps to ensure translation consistency. This is important when a client has more than one translator working on a project</p></li>
+</ul></div>
+<p>While the use of translation memories is highly recommended, there are some limitations:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>While there are no specific limits to how many target languages a TM can have or how many translation units can be saved in a TM, very large TMs (with millions of segments) slow down the performance of searches, pre-translation or analysis and can be difficult to maintain and edit.</p></li>
+<li class="listitem"><p>File size is limited to 1 GB for exporting and importing. A project can have multiple TMs, so it is always better to have a few smaller, well managed TMs than one very large one.</p></li>
+</ul></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-2ac08b2e-0881-5ab4-07d1-2ea0e3fcfc95"></a>Create a Translation Memory</h2></div></div>
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-2ac08b2e-0881-5ab4-07d1-2ea0e3fcfc95_body">
+<p>To create a Translation Memory, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_procedure-idm231759646107189"></a><ol class="procedure" type="1">
+<li class="step">
+<p>Translation Memories can be created from three places:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Click the Translation Memories <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011903640/15eba54b891dc2.png" style="" alt="Panel_plus.png"></span> in the panel menu.</p></li>
+<li class="listitem"><p>Click <span class="guilabel">New</span> from the <span class="guimenu">Translation Memories</span> page.</p></li>
+<li class="listitem"><p>Click<span class="guilabel">Create New</span> from the <span class="guimenu">Translation Memories</span> table on a project page.</p></li>
+</ul></div>
+<p>The <span class="guimenu">Create Term Base</span> page opens.</p>
+</li>
+<li class="step">
+<p>Provide a <span class="guimenu">Name</span>.</p>
+<p>Term Bases can be used for multiple projects so the name does not need to be specific for a project.</p>
+</li>
+<li class="step">
+<p>Provide a <span class="guimenu">Source Language</span>.</p>
+<p>The original language of your document.</p>
+<p>Only one source language can be selected per translation memory.</p>
+</li>
+<li class="step">
+<p>Provide a <span class="guimenu">Target Language</span>.</p>
+<p>The languages to be translated into.</p>
+<p>There can be an unlimited number of target languages in a translation memory but a maximum of 10-15 languages is recommended. Less than 30 languages is still manageable, but more than 50 languages cause the TM to become slow and hard to work with.</p>
+</li>
+<li class="step"><p>Provide business information and a note if applicable.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Create</span>.</p>
+<p>If created from a project page, the new TB is added to the list on that page.</p>
+<p>If created elsewhere, the new TB page opens.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-bafe9a04-4afd-220a-d2e5-3063d57808bc"></a>Translation Memory Page</h2></div></div>
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-bafe9a04-4afd-220a-d2e5-3063d57808bc_body">
+<p>Clicking on a TM from the <span class="guimenu">Translation Memories</span> panel or a project page opens the translation memory page.</p>
+<p>Dependent on user rights:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>The attributes of a translation memory can be edited.</p></li>
+<li class="listitem"><p>A TM can be deleted. This moves the TM will to the Recycle Bin where it will remain for 30 days.</p></li>
+<li class="listitem"><p>Content can be searched for individual entries requiring editing.</p></li>
+<li class="listitem"><p>Content can be imported from other TMs or other CAT tools.</p></li>
+<li class="listitem"><p>Content of a TM can be exported for editing in another CAT tool and imported back into Memsource.</p></li>
+<li class="listitem"><p>Previously translated files can be aligned with their originals and imported to a new TM.</p></li>
+</ul></div>
+<p>The <span class="guimenu">Related Projects</span> table presents all projects a specific TM is associated with.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-092e04ad-68d7-166b-c339-cedaf1d8e45f"></a>Translation Memory Attributes</h2></div></div>
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-092e04ad-68d7-166b-c339-cedaf1d8e45f_body">
+<p>The attributes in a translation memory allow users to group, filter, and sort them. Attributes can also be used to restrict or allow access to guests, restricted Project Managers or users with limited users.</p>
+<p>Attributes do not apply to translation units stored in that TM. </p>
+<p>To translation memory attributes, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_procedure-idm231761292469468"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From a project page, click on a TM to be edited.</p>
+<p>The translation memory page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Edit</span>.</p>
+<p>The <span class="guimenu">Edit Translation Memory</span> page opens.</p>
+</li>
+<li class="step"><p>Make required changes to TM attributes.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The project page opens with the updated TM.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-bb70bf2c-cd31-7633-ad2e-1203e0f7436d"></a>Assign a Translation Memory to a Project</h2></div></div>
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-bb70bf2c-cd31-7633-ad2e-1203e0f7436d_body">
+<p>In order to use a translation memory for <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360013675760#UUID-7ed2ed16-6064-f667-bb86-7d971d7004c9">analysis</a>, <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360013675780#UUID-a982e5f9-9aa2-434f-116c-17b822d35343">pre-translation</a>, or actual <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775880-Memsource-Editors-Overview" target="_blank" rel="noopener">translation in a Memsource Editor</a>, the TM must be assigned to a <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360013675720#UUID-fd006a60-d1b0-dc4b-8681-00d5464cd76e">project</a>.</p>
+<p>Multiple TMs can be assigned to one project and a single TM can be assigned to multiple projects. There can be up to 10 TMs assigned to each project per language and Workflow step.</p>
+<p>To assign a translation memory to a project, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_procedure-idm231761395695737"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From a project page, click <span class="guilabel">Select</span> from the <span class="guimenu">Translation Memories</span> table.</p>
+<p>The <span class="guimenu">Select TMs</span> window opens.</p>
+</li>
+<li class="step">
+<p>Select either <span class="guimenu">All</span>, or a specific language from the dropdown list and click <span class="guilabel">Continue</span>.</p>
+<p>The <span class="guimenu">Select TMs for All Target Languages</span> or <span class="guimenu">Select TMs for Target Language</span> page opens.</p>
+</li>
+<li class="step">
+<p>Select TM(s) with these options:</p>
+<p>The first selected TM is automatically selected for Write mode. This can be changed if required. Filter can be used to search for TMs by name, ID number or client name.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong><span class="guimenu">Read</span></strong></span></p>
+<p>Analysis, Pre-translate and the Editor can access the content of the TM selected as <span class="guimenu">Read</span>. Unchecking the <span class="guimenu">Read</span> checkbox unassigns the TM from the project. TMs with reversed source and target languages can be assigned as <span class="guimenu">Read-only</span></p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong><span class="guimenu">Write</span></strong></span></p>
+<p>Any segments confirmed in an editor or <a class="link linktextconsumer" href="https://help.memsource.com/document/preview/4621#UUID-1601e4ba-40df-d962-11d4-e2ef301430f1">uploaded</a> are saved into the TM.</p>
+<p>There is a maximum of two <span class="guimenu">Write</span> TMs per language and Workflow step in a project.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu"><span class="bold bold"><strong>Source Language</strong></span></span></p>
+<p>Source language of saved TMs is displayed.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu"><span class="bold bold"><strong>Target Languages</strong></span></span></p>
+<p>Shows all target languages associated with a TM whether used in current project or not.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu"><span class="bold bold"><strong>Penalty (%)</strong></span></span></p>
+<p>Set the penalty percentage for TM matches in Analysis, Pre-translate and an editor.</p>
+</li>
+</ul></div>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>Project page opens with assigned TMs listed in the <span class="guimenu">Translation Memories</span> table.</p>
+</li>
+</ol>
+</div>
+<p>Relevant TMs are displayed first and ordering is based on the Client, Domain, Subdomain and user rights of the Project Manager.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-3b275425-0cc2-6b63-2971-619cb40d1636"></a>Translation Memory Match Context</h2></div></div>
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-3b275425-0cc2-6b63-2971-619cb40d1636_body">
+<p>When working with 101% matches from a TM, context can be saved with each segment.</p>
+<p>Context is used to determine if the match in TM is:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>101% </strong></span></p>
+<p>An in-context match.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>100% </strong></span></p>
+<p>Source text is a match, but context of the new text is different.</p>
+</li>
+</ul></div>
+<p>This becomes important when the context of the segment results in two different translations of the same original text.</p>
+<div class="informalexample">
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<p>In Czech, a female 'Project manager' is translated differently than a male 'Project manager'.</p>
+<p>If surrounding segments create context that can be used to identify the difference, both translations are saved to the Translation Memory and are presented as a 101% match when the same context is provided.</p>
+</div>
+<h3>
+<a id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_bridgehead-idm231771943041696"></a>Context Types</h3>
+<p>The type of context which will be saved with the segment to the translation memory is set in <span class="guimenu">File Import Settings</span> when the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360002825692-Create-New-Jobs" target="_blank" rel="noopener">job is imported</a>. Every file can be imported with different settings.</p>
+<p>A translation memory can contain segments with different types of context:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Automatic</strong></span></p>
+<p>Context type will be selected automatically based on the file type.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Files imported with the context type <span class="emphasis"><em>Segment Key</em></span>: ANDROID_STRING, CHROME_JSON, DESKTOP_ENTRY, DTD, JAVA PROPERTIES, JOOMLA_INI, <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483412" target="_blank" rel="noopener">JSON</a>, MAC_STRINGS, MOZILLA_PROPERTIES, PHP, PLIST, PO (gettext), RESJSON, RESX, TS, XML_PROPERTIES, <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483412" target="_blank" rel="noopener">YAML</a></p></li>
+<li class="listitem"><p>Other formats will be imported with the context type <span class="emphasis"><em>Previous and next segment</em></span>.</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Previous and Next Segments </strong></span></p>
+<p>Both the previous and next segment will be saved as context.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Segment Key</strong></span></p>
+<p>The segment key or the segment ID will be saved as context. This can be specified for the above mentioned <span class="emphasis"><em>Segment key</em></span> file formats and also customized for: CSV, XML, Multilingual XML and Multilingual MS Excel files.</p>
+<p>In some file formats, the segment key is more important than context (YAML, JSON, etc.).</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>No Context </strong></span></p>
+<p>If context can be ignored no context will be saved and the translation will always overwritten by the newest version.</p>
+</li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-98135ffb-4d58-e58b-7cda-b173d3e9ea8e"></a>Optimize Translation Memory Matches</h2></div></div>
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-98135ffb-4d58-e58b-7cda-b173d3e9ea8e_body">
+<p>The translation memory match can be further optimized for the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360002825692-Create-New-Jobs" target="_blank" rel="noopener">imported jobs</a> in the File Import Settings:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="guimenu">Previous OR next segment context as 101% </span></p>
+<p>If context matches in either the previous <span class="emphasis"><em>or</em></span> the next segment, it will be offered as a 101% match. Default requires both the previous and next segment to match.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Ignore tag metadata</span> (enabled by default)</p>
+<p>If the tag's metadata in the job is different then tag metadata in the TM, the difference will be ignored. The tag metadata from the job's original segment will be automatically added to the job's translated segment.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Penalize multiple 101% TM matches by 1% </span></p>
+<p>When more then one 101% with a different target (translation) is found, then all 101% matches are displayed as 100% with an arrow signaling the penalization.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p>In <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360013675780#UUID-a982e5f9-9aa2-434f-116c-17b822d35343">Pre-translate</a></p>
+<p>If the Pre-translation threshold is set to 101%, segments with multiple matches will not be pre-translated.</p>
+</li>
+<li class="listitem">
+<p>In <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360013675760#UUID-7ed2ed16-6064-f667-bb86-7d971d7004c9">Analysis</a>:</p>
+<p>Segments with multiple 101% matches will be counted as 100% matches.</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-969630ed-256b-700e-8861-3e812e5c9d29"></a>Batch Update Translation Memories</h2></div></div>
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-969630ed-256b-700e-8861-3e812e5c9d29_body">
+<p>Memsource allows users to modify TMs directly in the UI itself. However, performing large-scale editing and modifications to the TM can only be done outside the Memsource UI. Appending the segment ID with <span class="emphasis"><em>update</em></span> in the XLSX file triggers an update on import.</p>
+<p>To batch update a translation memory in a spreadsheet editor, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_procedure-idm231776751751831"></a><ol class="procedure" type="1">
+<li class="step"><p><a class="link" href="https://help.memsource.com/hc/articles/360013696840#UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-c019d420-233d-73de-9ca3-9c1c6c2d5019" title="Export a Translation Memory">Export a TM to XLSX</a> and ensure it is <a class="link" href="https://help.memsource.com/hc/articles/360013696840#UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-b10c1176-83b0-84b2-c534-0f76b72d0ae7" title="Import Content to a Translation Memory">formatted correctly for import</a>.</p></li>
+<li class="step"><p>Open the file in an editor.</p></li>
+<li class="step"><p>Insert two additional columns between the <span class="guimenu">*ID*</span> column and the first language column.</p></li>
+<li class="step"><p>Keeping the ID information in column A, remove the <span class="guimenu">*ID*</span> column label and place it in column C.</p></li>
+<li class="step"><p>Fill the cells in column B with the word <span class="emphasis"><em>update</em></span>.</p></li>
+<li class="step">
+<p>In the first cell of the <span class="guimenu">ID</span> column, create the formula <code class="code">=(A2&amp;"|"&amp;B2)</code> and click Enter.</p>
+<p>Cell C2 is populated with the ID from cell A2 and the word update (from cell B2) separated by <code class="code">|</code>.</p>
+</li>
+<li class="step">
+<p>Copy the formula to the rest of the <span class="guimenu">*ID*</span> column.</p>
+<p>All <span class="guimenu">*ID*</span> column cells are populated with the appended ID information.</p>
+</li>
+<li class="step"><p>Make required modifications to the segments.</p></li>
+<li class="step"><p>Save the file.</p></li>
+<li class="step">
+<p>Import the file back to Memsource.</p>
+<p>All segments with the appended ID are updated.</p>
+</li>
+</ol>
+</div>
+<p>Appending the ID with the word <span class="emphasis"><em>delete</em></span> instead of <span class="emphasis"><em>update</em></span> will delete those segments on import.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

@@ -1,0 +1,55 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>Term morphology is handled several ways:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Fuzzy matches</p></li>
+<li class="listitem"><p>Exact matches</p></li>
+<li class="listitem"><p>Word stem separation</p></li>
+<li class="listitem"><p>Synonym use</p></li>
+</ul></div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-d052987c-e4fd-a65a-2528-dfcd68eb0ea1" id="UUID-d052987c-e4fd-a65a-2528-dfcd68eb0ea1_UUID-84795c93-7465-ad96-ae90-9239a988fdbd"></a>Fuzzy Match Type</h2></div>
+<p>By default, the match type for new terms is set to <span class="emphasis"><em>Fuzzy</em></span>.</p>
+<p>When the match type is Fuzzy, a suffix can be appended to a word and it will still be matched.</p>
+<p><span class="bold bold"><strong>Examples:</strong></span></p>
+<div class="informalexample">
+<a id="UUID-d052987c-e4fd-a65a-2528-dfcd68eb0ea1_example-idm231775324623367"></a><div class="itemizedlist">
+<p>The simple morphology of added characters.</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="emphasis"><em>car</em></span> will also match <span class="emphasis"><em>cars</em></span></p></li>
+<li class="listitem"><p><span class="emphasis"><em>game</em></span> will also match <span class="emphasis"><em>games</em></span></p></li>
+</ul>
+</div>
+</div>
+<p>As long as the suffix is no longer than 50% of the term, it will be matched.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-d052987c-e4fd-a65a-2528-dfcd68eb0ea1" id="UUID-d052987c-e4fd-a65a-2528-dfcd68eb0ea1_UUID-8faf4031-8508-34cd-c351-4a9b691708e1"></a>Exact Match Type</h2></div>
+<p>Fuzzy match might not be suitable for words such as <span class="emphasis"><em>contract</em></span> as <span class="emphasis"><em>contractor</em></span> would be an incorrect match. This term would be better served with <span class="emphasis"><em>Exact Match</em></span> settings</p>
+<p>Exact Match is also recommended for abbreviations; <span class="emphasis"><em>AN</em></span> may require an Exact match and also be <span class="emphasis"><em>Case sensitive</em></span>. Only <span class="emphasis"><em>AN</em></span> would provide and exact match while <span class="emphasis"><em>an</em></span>, <span class="emphasis"><em>and</em></span> or <span class="emphasis"><em>AND</em></span> would not.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-d052987c-e4fd-a65a-2528-dfcd68eb0ea1" id="UUID-d052987c-e4fd-a65a-2528-dfcd68eb0ea1_UUID-21af169a-8038-cd46-3f94-b9cce20006bb"></a>Terms with Rich Morphology</h2></div>
+<p>To improve matching for terms with rich morphology as when part of a word changes due to context, a boundary between the word stem (the part that does not change) and the suffix (the part that does change) can be defined by inserting a pipe character <code class="code">|</code>. For example: "biolog|y" will also match "biologic".</p>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<div class="informalexample">
+<a id="UUID-d052987c-e4fd-a65a-2528-dfcd68eb0ea1_example-idm231775337401578"></a><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>biolog|y</em></span> will also match <span class="emphasis"><em>biologic</em></span></p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-d052987c-e4fd-a65a-2528-dfcd68eb0ea1" id="UUID-d052987c-e4fd-a65a-2528-dfcd68eb0ea1_UUID-f18b57f6-2af7-daa3-cacf-936cd53d6a6d"></a>Synonyms</h2></div>
+<p>For some terms, the fuzzy match or separating stem will not work; <span class="emphasis"><em>leaf</em></span> and <span class="emphasis"><em>leaves</em></span>would not match in one term. In such case, to use synonyms.</p>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<div class="informalexample">
+<a id="UUID-d052987c-e4fd-a65a-2528-dfcd68eb0ea1_example-idm231775348243987"></a><p>Create the term <span class="emphasis"><em>contract</em></span> and its synonym <span class="emphasis"><em>contracts</em></span> and set them both to Exact match. This recognizes both forms of the word while ignoring <span class="emphasis"><em>contractor</em></span> that would be recognized with a Fuzzy match.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
