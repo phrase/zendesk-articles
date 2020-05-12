@@ -21,15 +21,15 @@
 <li class="step">
 <p>Translation Memories can be created from three places:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>Click the Translation Memories <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011903640/15eba54b891dc2.png" style="" alt="Panel_plus.png"></span> in the panel menu.</p></li>
+<li class="listitem"><p>Click the Translation Memories <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011906780/15eba5f9d087e8.png" style="" alt="Panel_plus.png"></span> in the panel menu.</p></li>
 <li class="listitem"><p>Click <span class="guilabel">New</span> from the <span class="guimenu">Translation Memories</span> page.</p></li>
 <li class="listitem"><p>Click<span class="guilabel">Create New</span> from the <span class="guimenu">Translation Memories</span> table on a project page.</p></li>
 </ul></div>
-<p>The <span class="guimenu">Create Term Base</span> page opens.</p>
+<p>The <span class="guimenu">Create Translation Memory</span> page opens.</p>
 </li>
 <li class="step">
 <p>Provide a <span class="guimenu">Name</span>.</p>
-<p>Term Bases can be used for multiple projects so the name does not need to be specific for a project.</p>
+<p>Translation Memories can be used for multiple projects so the name does not need to be specific for a project.</p>
 </li>
 <li class="step">
 <p>Provide a <span class="guimenu">Source Language</span>.</p>
@@ -44,8 +44,8 @@
 <li class="step"><p>Provide business information and a note if applicable.</p></li>
 <li class="step">
 <p>Click <span class="guilabel">Create</span>.</p>
-<p>If created from a project page, the new TB is added to the list on that page.</p>
-<p>If created elsewhere, the new TB page opens.</p>
+<p>If created from a project page, the new TM is added to the list on that page.</p>
+<p>If created elsewhere, the new TM page opens.</p>
 </li>
 </ol>
 </div>
@@ -76,7 +76,7 @@
 <div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-092e04ad-68d7-166b-c339-cedaf1d8e45f_body">
 <p>The attributes in a translation memory allow users to group, filter, and sort them. Attributes can also be used to restrict or allow access to guests, restricted Project Managers or users with limited users.</p>
 <p>Attributes do not apply to translation units stored in that TM. </p>
-<p>To translation memory attributes, follow these steps:</p>
+<p>To edit translation memory attributes, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_procedure-idm231761292469468"></a><ol class="procedure" type="1">
 <li class="step">
@@ -265,6 +265,116 @@
 </ol>
 </div>
 <p>Appending the ID with the word <span class="emphasis"><em>delete</em></span> instead of <span class="emphasis"><em>update</em></span> will delete those segments on import.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-82a39631-b1e5-ec9e-c57f-497c93f8e6a9"></a>Translation Unit Metadata</h2></div></div>
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-82a39631-b1e5-ec9e-c57f-497c93f8e6a9_body">
+<p>A translation unit (TU) is a source and a target segment saved together into a translation memory.</p>
+<p>When a segment/TU is saved, pre-defined attributes or metadata are automatically added to the source and/or target of the TU in the translation memory.</p>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-3ed4a0e4-04f7-1bef-a127-8d5d5867fd1e"></a>Memsource TU Attribute Metadata</h3></div></div>
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-3ed4a0e4-04f7-1bef-a127-8d5d5867fd1e_body"><div class="panel-inner">
+<p>These attributes can be saved with the target segment or source segment as indicated:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong>Created (date/time)</strong></span> - target segment</p></li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Created by</strong></span> - target segment.</p>
+<p>Only Memsource Usernames are supported.</p>
+</li>
+<li class="listitem"><p><span class="bold bold"><strong>Last modified (date/time)</strong></span> - target segment</p></li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Last modified by</strong></span> - target segment.</p>
+<p>Only Memsource Usernames are supported.</p>
+</li>
+<li class="listitem"><p><span class="bold bold"><strong>Project</strong></span> - target segment</p></li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Client</strong></span> - target segment.</p>
+<p>This is the Client as set in the project when the translation was created.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Domain</strong></span> - target segment</p>
+<p>This is the Domain as set in the project when the translation was created.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Subdomain</strong></span> - target segment</p>
+<p>This is the Subdomain as set in the project when the translation was created.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>File</strong></span> - target segments</p>
+<p>Name of the file where the translation was created.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Context</strong></span> - source segment</p>
+<p>This is the <span class="emphasis"><em>Previous segment</em></span>, <span class="emphasis"><em>Next segment</em></span> or <span class="emphasis"><em>Segment key</em></span>, depending on the <span class="guimenu">File Import Settings</span> when the job was created.</p>
+</li>
+</ul></div>
+<p>Translation Memory attributes (<span class="emphasis"><em>Domain</em></span>, <span class="emphasis"><em>Client</em></span>, <span class="emphasis"><em>Business Unit</em></span>, etc.) have no effect on translation unit metadata.</p>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-db8ccb28-747b-2658-e77b-a6ec1f28e8d0"></a>TMX Format</h3></div></div>
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-db8ccb28-747b-2658-e77b-a6ec1f28e8d0_body"><div class="panel-inner">
+<p>For importing and exporting the content of a translation memory using the TMX format, the following metadata is supported:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Properties in the source TUV element:</p>
+<pre class="programlisting">&lt;prop type="context_prev"&gt;Text of the previous segment&lt;/prop&gt;
+&lt;prop type="context_next"&gt;Text of the following segment
+&lt;/prop&gt;&lt;prop type="x-context_seg_key"&gt;Context Key&lt;/prop&gt;*</pre>
+<p>*For context based on a segment key</p>
+</li>
+<li class="listitem">
+<p>Properties in target TUV element:</p>
+<pre class="programlisting">&lt;prop type="created_at"&gt;1322746823589&lt;/prop&gt;
+&lt;prop type="created_by"&gt;Some name&lt;/prop&gt;
+&lt;prop type="modified_at"&gt;1323854662890&lt;/prop&gt;
+&lt;prop type="modified_by"&gt;Some name&lt;/prop&gt;
+&lt;prop type="project"&gt;Project name&lt;/prop&gt;
+&lt;prop type="client"&gt;59131&lt;/prop&gt;
+&lt;prop type="domain"&gt;6678&lt;/prop&gt;&lt;prop type="subdomain"&gt;5370&lt;/prop&gt;
+&lt;prop type="filename"&gt;File name&lt;/prop&gt;&lt;prop type="aligned"&gt;false&lt;/prop&gt;&lt;prop type="reviewed"&gt;false&lt;/prop&gt;</pre>
+</li>
+</ul></div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-7180f4b1-e603-e161-300e-fc51943253a1"></a>XLSX Format</h3></div></div>
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-7180f4b1-e603-e161-300e-fc51943253a1_body"><div class="panel-inner">
+<p>For importing and exporting the content of a translation memory using the XLSX format, the following metadata is supported:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong>ID</strong></span> - Memsource internal ID</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>{source language code}</strong></span> - for example 'en' or 'en_us'</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>prev</strong></span> - text of the previous segment</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>next</strong></span> - text of the following segment</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>seg_key</strong></span> - text of the context key</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>mdata</strong></span> - metadata of Memsource tags</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>{target language code}</strong></span> - en or en_us</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>created_by</strong></span> - Memsource Username</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>created_at</strong></span> - in format 2017.07.07 14:39:52,000</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>modified_by</strong></span> - Memsource Username</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>modified_at</strong></span> - in format 2017.07.07 14:39:52,000</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>client</strong></span> - Memsource ID (number)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>project</strong></span> - Memsource ID (number)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>domain</strong></span> - Memsource ID (number)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>subdomain</strong></span> - Memsource ID (number)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>note</strong></span> - text (external use only, not visible in Memsource)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>reviewed</strong></span> - true/false (external use only, not visible in Memsource)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>aligned</strong></span> - true/false (external use only, not visible in Memsource)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>filename</strong></span> - the name of the original file (test.docx)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>mdata</strong></span> - metadata of Memsource tags</p></li>
+</ul></div>
+<p>The order of the columns reflects the attributes of the source segment and the attributes of the target segment.</p>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div></div>

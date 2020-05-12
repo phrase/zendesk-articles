@@ -1,115 +1,18 @@
 <div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
-<div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-82a39631-b1e5-ec9e-c57f-497c93f8e6a9"></a>Translation Unit Metadata</h2></div>
-<p>A translation unit (TU) is a source and a target segment saved together into a translation memory.</p>
-<p>When a segment/TU is saved, pre-defined attributes are automatically added to the source and/or target of the TU in the translation memory.</p>
-<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
-<div class="panel-heading"><div class="titlepage"><h3 class="title">
-<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-3ed4a0e4-04f7-1bef-a127-8d5d5867fd1e"></a>Memsource TU Metadata</h3></div></div>
-<div class="panel-body collapse" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-3ed4a0e4-04f7-1bef-a127-8d5d5867fd1e_body">
-<p>These attributes can be saved with the target segment or source segment as indicated:</p>
+<p>Translation memories can be edited. This allows for the addition, modification, or deletion of segments. This can be done in Memsource or by exporting the TM for modification in external applications. </p>
+<p>Dependent on user rights:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="bold bold"><strong>Created (date/time)</strong></span> - target segment</p></li>
-<li class="listitem">
-<p><span class="bold bold"><strong>Created by</strong></span> - target segment.</p>
-<p>Only Memsource Usernames are supported.</p>
-</li>
-<li class="listitem"><p><span class="bold bold"><strong>Last modified (date/time)</strong></span> - target segment</p></li>
-<li class="listitem">
-<p><span class="bold bold"><strong>Last modified by</strong></span> - target segment.</p>
-<p>Only Memsource Usernames are supported.</p>
-</li>
-<li class="listitem"><p><span class="bold bold"><strong>Project</strong></span> - target segment</p></li>
-<li class="listitem">
-<p><span class="bold bold"><strong>Client</strong></span> - target segment.</p>
-<p>This is the Client as set in the project when the translation was created.</p>
-</li>
-<li class="listitem">
-<p><span class="bold bold"><strong>Domain</strong></span> - target segment</p>
-<p>This is the Domain as set in the project when the translation was created.</p>
-</li>
-<li class="listitem">
-<p><span class="bold bold"><strong>Subdomain</strong></span> - target segment</p>
-<p>This is the Subdomain as set in the project when the translation was created.</p>
-</li>
-<li class="listitem">
-<p><span class="bold bold"><strong>File</strong></span> - target segments</p>
-<p>Name of the file where the translation was created.</p>
-</li>
-<li class="listitem">
-<p><span class="bold bold"><strong>Context</strong></span> - source segment</p>
-<p>This is the <span class="emphasis"><em>Previous segment</em></span>, <span class="emphasis"><em>Next segment</em></span> or <span class="emphasis"><em>Segment key</em></span>, depending on the <span class="guimenu">File Import Settings</span> when the job was created.</p>
-</li>
+<li class="listitem"><p>TM attributes can be changed.</p></li>
+<li class="listitem"><p>TM can be deleted (moved to <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360013744299#UUID-1e37e39c-e4a8-3f6b-fd8f-4a1e11ed0265">Recycle Bin</a>)</p></li>
+<li class="listitem"><p>Content can be searched for individual entries to be changed.</p></li>
+<li class="listitem"><p>Import content from other TMs or other CAT tools.</p></li>
+<li class="listitem"><p>Export TM content for editing in other CAT tools and import it back to Memsource.</p></li>
+<li class="listitem"><p>Align previously translated files with their originals and import them to a new TM.</p></li>
 </ul></div>
-<p>Translation Memory attributes (<span class="emphasis"><em>Domain</em></span>, <span class="emphasis"><em>Client</em></span>, <span class="emphasis"><em>Business Unit</em></span>, etc.) have no effect on translation unit metadata.</p>
-</div>
-<div class="glossary-definitions" style="display:none!important;"></div>
-</div></div>
 <div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
-<div class="panel-heading"><div class="titlepage"><h3 class="title">
-<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-7180f4b1-e603-e161-300e-fc51943253a1"></a>XLSX Format</h3></div></div>
-<div class="panel-body collapse" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-7180f4b1-e603-e161-300e-fc51943253a1_body">
-<p>For importing and exporting the content of a translation memory using the XLSX format, the following metadata is supported:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="bold bold"><strong>ID</strong></span> - Memsource internal ID</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>{source language code}</strong></span> - for example 'en' or 'en_us'</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>prev</strong></span> - text of the previous segment</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>next</strong></span> - text of the following segment</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>seg_key</strong></span> - text of the context key</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>mdata</strong></span> - metadata of Memsource tags</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>{target language code}</strong></span> - en or en_us</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>created_by</strong></span> - Memsource Username</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>created_at</strong></span> - in format 2017.07.07 14:39:52,000</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>modified_by</strong></span> - Memsource Username</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>modified_at</strong></span> - in format 2017.07.07 14:39:52,000</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>client</strong></span> - Memsource ID (number)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>project</strong></span> - Memsource ID (number)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>domain</strong></span> - Memsource ID (number)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>subdomain</strong></span> - Memsource ID (number)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>note</strong></span> - text (external use only, not visible in Memsource)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>reviewed</strong></span> - true/false (external use only, not visible in Memsource)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>aligned</strong></span> - true/false (external use only, not visible in Memsource)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>filename</strong></span> - the name of the original file (test.docx)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>mdata</strong></span> - metadata of Memsource tags</p></li>
-</ul></div>
-<p>The order of the columns reflects the attributes of the source segment and the attributes of the target segment.</p>
-</div>
-<div class="glossary-definitions" style="display:none!important;"></div>
-</div></div>
-<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
-<div class="panel-heading"><div class="titlepage"><h3 class="title">
-<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-db8ccb28-747b-2658-e77b-a6ec1f28e8d0"></a>TMX Format</h3></div></div>
-<div class="panel-body collapse" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-db8ccb28-747b-2658-e77b-a6ec1f28e8d0_body">
-<p>For importing and exporting the content of a translation memory using the TMX format, the following metadata is supported:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem">
-<p>Properties in the source TUV element:</p>
-<pre class="programlisting">&lt;prop type="context_prev"&gt;Text of the previous segment&lt;/prop&gt;
-&lt;prop type="context_next"&gt;Text of the following segment
-&lt;/prop&gt;&lt;prop type="x-context_seg_key"&gt;Context Key&lt;/prop&gt;*</pre>
-<p>*For context based on a segment key</p>
-</li>
-<li class="listitem">
-<p>Properties in target TUV element:</p>
-<pre class="programlisting">&lt;prop type="created_at"&gt;1322746823589&lt;/prop&gt;
-&lt;prop type="created_by"&gt;Some name&lt;/prop&gt;
-&lt;prop type="modified_at"&gt;1323854662890&lt;/prop&gt;
-&lt;prop type="modified_by"&gt;Some name&lt;/prop&gt;
-&lt;prop type="project"&gt;Project name&lt;/prop&gt;
-&lt;prop type="client"&gt;59131&lt;/prop&gt;
-&lt;prop type="domain"&gt;6678&lt;/prop&gt;&lt;prop type="subdomain"&gt;5370&lt;/prop&gt;
-&lt;prop type="filename"&gt;File name&lt;/prop&gt;&lt;prop type="aligned"&gt;false&lt;/prop&gt;&lt;prop type="reviewed"&gt;false&lt;/prop&gt;</pre>
-</li>
-</ul></div>
-</div>
-<div class="glossary-definitions" style="display:none!important;"></div>
-</div></div>
-<div class="glossary-definitions" style="display:none!important;"></div>
-</div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
-<div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-1ba13326-b3ac-d06d-9e67-6fa0f017fa3c"></a>Edit Translation Memory Content</h2></div>
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-1ba13326-b3ac-d06d-9e67-6fa0f017fa3c"></a>Edit Translation Memory Content</h2></div></div>
+<div class="panel-body collapse" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-1ba13326-b3ac-d06d-9e67-6fa0f017fa3c_body">
 <p>Only Project Managers and Linguists with special user rights have the access to edit or delete the content of a translation memory in a specified language.</p>
 <p>To edit translation memory content, follow these steps:</p>
 <div class="procedure">
@@ -121,10 +24,10 @@
 </li>
 <li class="step">
 <p>Sort results by rearranging the language columns, and clicking on <span class="guimenu">Set up columns</span> to select what columns are visible.</p>
-<p>Hover over <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011917239/15eba52a7d16cc.png" style="" alt="TM_search_info.png"></span> to see details of the translation unit.</p>
+<p>Hover over <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011908860/15eba63f90bc80.png" style="" alt="TM_search_info.png"></span> to see details of the translation unit.</p>
 </li>
 <li class="step">
-<p>Double click on translation unit text to edit it and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011917259/15eba52a7d5323.png" style="" alt="TM_deleteunit.png"></span> to delete it.</p>
+<p>Double click on translation unit text to edit it and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011908880/15eba63f90db78.png" style="" alt="TM_deleteunit.png"></span> to delete it.</p>
 <div dir="ltr" class="caution">
 <h3 class="title">Caution</h3>
 <p>Editing translation units within a TM is permanent. There is no undo function.</p>
@@ -133,43 +36,13 @@
 <li class="step"><p>Click outside the editing field to save the edit.</p></li>
 </ol>
 </div>
-<div class="glossary-definitions" style="display:none!important;"></div>
-</div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
-<div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-c019d420-233d-73de-9ca3-9c1c6c2d5019"></a>Export a Translation Memory</h2></div>
-<p>Translation memories can be exported, allowing them to be edited or modified in external applications before being imported back into Memsource. Exported files contain <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014670152-Translation-Unit-Metadata" target="_blank" rel="noopener">Translation Unit Metadata</a>.</p>
-<p>To export a translation memory, follow these steps:</p>
-<div class="procedure">
-<a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_procedure-idm231763051615601"></a><ol class="procedure" type="1">
-<li class="step">
-<p>From a translation memory page, click <span class="guilabel">Export</span>.</p>
-<p>The <span class="guimenu">Export TMX/XLSX</span> window opens.</p>
-</li>
-<li class="step">
-<p>Select a format from the dropdown menu:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem">
-<p><span class="guimenu">TMX</span></p>
-<p>An exchange format for use in other CAT tools. Can also be used for editing content in external tools such as <a class="link" href="https://okapi-olifant.software.informer.com/3.0/" target="_blank" rel="noopener">Okapi Olifant</a>.</p>
-</li>
-<li class="listitem">
-<p><span class="guimenu">XLSX</span></p>
-<p>Select which parameters should be exported. If file is to be imported back to Memsource, it is best to export it with all of the parameters selected to ensure no loss of data.</p>
-</li>
-</ul></div>
-</li>
-<li class="step">
-<p>Click <span class="guilabel">Export</span>.</p>
-<p>File is downloaded to your system.</p>
-</li>
-</ol>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
-</div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
-<div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-3f2cd6b9-5e9a-3ec3-4bc7-98d799ea202b"></a>Edit Translation Memory Content Externally</h2></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-3f2cd6b9-5e9a-3ec3-4bc7-98d799ea202b"></a>Edit Translation Memory Content Externally</h2></div></div>
+<div class="panel-body collapse" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-3f2cd6b9-5e9a-3ec3-4bc7-98d799ea202b_body">
 <p>Translation Memories can be exported into a file and edited in an external program without restrictions. Administrators and Project Managers can then import the file back into Memsource.</p>
 <h3>
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_bridgehead-idm231764662068232"></a>Exported File Formats</h3>
@@ -183,9 +56,41 @@
 <p>An XML based file format for spreadsheet applications.</p>
 </li>
 </ul></div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
-<div class="titlepage"><h3 class="title">
-<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-d6faa376-2d18-62d2-e5a3-0347f9184ef8"></a>Edit Translation Memories in XLSX Files</h3></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-c019d420-233d-73de-9ca3-9c1c6c2d5019"></a>Export a Translation Memory</h3></div></div>
+<div class="panel-body collapse" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-c019d420-233d-73de-9ca3-9c1c6c2d5019_body"><div class="panel-inner">
+<p>Exported files contain <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014670152-Translation-Unit-Metadata" target="_blank" rel="noopener">Translation Unit Metadata</a>.</p>
+<p>To export a translation memory, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_procedure-idm231763051615601"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From a translation memory page, click <span class="guilabel">Export</span>.</p>
+<p>The <span class="guimenu">Export TMX/XLSX</span> window opens.</p>
+</li>
+<li class="step">
+<p>Select a format from the dropdown menu:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="guimenu">TMX</span></p></li>
+<li class="listitem">
+<p><span class="guimenu">XLSX</span></p>
+<p>Select which parameters should be exported. If file is to be imported back to Memsource, it is best to export it with all of the parameters selected to ensure no loss of data.</p>
+</li>
+</ul></div>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Export</span>.</p>
+<p>File is downloaded to your system.</p>
+</li>
+</ol>
+</div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-d6faa376-2d18-62d2-e5a3-0347f9184ef8"></a>Edit Translation Memories in XLSX Files</h3></div></div>
+<div class="panel-body collapse" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-d6faa376-2d18-62d2-e5a3-0347f9184ef8_body"><div class="panel-inner">
 <h4>
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_bridgehead-idm231764802906591"></a>TM Replacement</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>XLSX files can be edited and then imported back as new Translation Memories that replace the previous version. The old TM should be deleted as to not cause confusion.</p></li></ul></div>
@@ -285,13 +190,16 @@
 </li>
 </ol>
 </div>
+</div></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
-</div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
-<div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-b10c1176-83b0-84b2-c534-0f76b72d0ae7"></a>Import Content to a Translation Memory</h2></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-b10c1176-83b0-84b2-c534-0f76b72d0ae7"></a>Import Content to a Translation Memory</h2></div></div>
+<div class="panel-body collapse" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-b10c1176-83b0-84b2-c534-0f76b72d0ae7_body">
 <p>External data can be imported into translation memories.</p>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h3 class="title">
@@ -353,9 +261,10 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
-<div class="titlepage"><h3 class="title">
-<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-9e1580e6-ebd7-df61-4855-c383c6dbb847"></a>Import Content</h3></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-9e1580e6-ebd7-df61-4855-c383c6dbb847"></a>Import Content</h3></div></div>
+<div class="panel-body collapse" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-9e1580e6-ebd7-df61-4855-c383c6dbb847_body"><div class="panel-inner">
 <p>To import content into a TM, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_procedure-idm231771521879609"></a><ol class="procedure" type="1">
@@ -368,7 +277,7 @@
 <p>Apply options:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p><span class="guimenu">Remove tags</span> </p>
+<p><span class="guimenu">Remove tags</span></p>
 <p>Removes all of the tags imported from TMX files excepting (<code class="code">{1}</code> or <code class="code">&lt;2</code>}) Memsource tags in XLSX and MXLIFF.</p>
 </li>
 <li class="listitem">
@@ -378,7 +287,7 @@
 <p>A file with an <span class="emphasis"><em>EN_US</em></span> designation will not be imported into a TM designated with just <span class="emphasis"><em>EN</em></span> and not <span class="emphasis"><em>EN_US</em></span>.</p>
 </li>
 <li class="listitem">
-<p><span class="guimenu">Ignore not confirmed segments (MXLIFF)</span> </p>
+<p><span class="guimenu">Ignore not confirmed segments (MXLIFF)</span></p>
 <p>Prevents unconfirmed segments in an MXLIFF file from being imported into the TM.</p>
 </li>
 </ul></div>
@@ -386,17 +295,20 @@
 <li class="step">
 <p>Click <span class="guilabel">Import</span>.</p>
 <p>The window closes and the file is imported into the TM.</p>
-<p>If there is an error, <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011917279/15eba52a7d976e.png" style="" alt="Warning.png"></span> is show in the <span class="guimenu">Last Import</span> field of the translation memory page. Hover over the warning for error details.</p>
+<p>If there is an error, <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011908900/15eba63f90f93d.png" style="" alt="Warning.png"></span> is shown in the <span class="guimenu">Last Import</span> field of the translation memory page. Hover over the warning for error details.</p>
 </li>
 </ol>
 </div>
+</div></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
-</div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
-<div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-2f29d86e-56fa-3b2e-6342-59e00cbde4b1"></a>Align Documents to Create a Translation Memory</h2></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-2f29d86e-56fa-3b2e-6342-59e00cbde4b1"></a>Align Documents to Create a Translation Memory</h2></div></div>
+<div class="panel-body collapse" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-2f29d86e-56fa-3b2e-6342-59e00cbde4b1_body">
 <p>Previously translated texts can be converted into a translation memory even if not translated in any CAT tool. Both the original and the translated files are required and must have the same file format. The format must also be <a class="link" href="https://help.memsource.com/hc/en-us/articles/360000446911-Supported-File-Formats" target="_blank" rel="noopener">supported by Memsource</a>.</p>
 <p>Single file pairs can be aligned or batches of files (in ZIP folders).</p>
 <p>Files are imported into Memsource and segmented. The content will then be aligned and inserted into an XLSX file for download. The XLSX file can then be opened in a spreadsheet application for review and if correct, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360011103391-Importing-Content-to-a-Translation-Memory" target="_blank" rel="noopener">uploaded</a> as an addition to a TM or a new TM.</p>
@@ -409,7 +321,12 @@
 <div class="sidebar accordion accordion">
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_sidebar-idm23176301412062"></a><div class="accordion-icon"></div>
 <div class="panel panel-default">
-<div class="panel-heading"><div class="titlepage"></div></div>
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Single pair alignment</span>
+</div></div>
+</div>
 <div id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_sidebar-idm23176301412062_body" class="panel-body collapse">
 <p>To align a single pair, follow these steps:</p>
 <div class="procedure">
@@ -430,7 +347,12 @@
 <div class="sidebar accordion accordion">
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_sidebar-idm231763015166107"></a><div class="accordion-icon"></div>
 <div class="panel panel-default">
-<div class="panel-heading"><div class="titlepage"></div></div>
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Batch file alignment</span>
+</div></div>
+</div>
 <div id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_sidebar-idm231763015166107_body" class="panel-body collapse">
 <p>To align a batch of files in ZIP format, follow these steps:</p>
 <div class="procedure">
@@ -448,7 +370,8 @@
 </div>
 </div>
 </div>
-<div class="glossary-definitions" style="display:none!important;"></div>
 </div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
