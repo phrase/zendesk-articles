@@ -1,0 +1,11 @@
+<p>Memsource supports the translation of plural-sensitive segments. These are segments where a number is given (for example, an online store might have a notification saying “There are 6 items left”). However, in these kinds of segments, the number may change. If the number of items went down from 6 to 1, the word “items” would no longer be plural. Memsource supports the translation of these segments through the use of <em>Plural Forms.</em></p>
+<h2>Using Plural Forms</h2>
+<p>When plural forms are found in the Editor, they will automatically be associated together and presented to the Linguist. In this way, the Linguist will translate each variant of the plural before moving on. This works by having Linguists navigate through multiple segments, each with a variation of the plural form. When the cursor is placed in the segment, the Linguist will be able to see all plural forms of a word or phrase and navigate between them. All of these plural variants will be shown in the Editor as separate segments. The required form for the selected segment will be shown as the <em>Key </em>in the <em>Context Note</em>.</p>
+<h2>Tips and Tricks</h2>
+<ul>
+<li style="font-weight: 400;">When setting up your files, it is advisable to use the <em>Segment Key </em>as the context type.</li>
+<li style="font-weight: 400;">The language local and the plural category will become part of the context for pluralized strings. (See the sections highlighted in blue in the screenshot below.)</li>
+<li style="font-weight: 400;">If the <em>msgctxt </em>line is used in your file, the context string will become part of the context. (See the sections higlighted in red in the screenshot below.)</li>
+<li style="font-weight: 400;">TM and MT matches can also be used here. If a match is found, it will be suggested as usual, and the Linguist will be able to add it to the segment. This will be done after, for example, pre-translation to make the most use out of plural matches.</li>
+</ul>
+<p><img class="img250" src="https://help.memsource.com/hc/article_attachments/360033883232/mceclip0.png" alt="mceclip0.png"></p>

@@ -1,0 +1,42 @@
+<p>Tags represent non-translatable text. In some other CAT tools, they might be called placeholders. This non-translatable text can represent some variables or special formatting tags. It is very important to copy the tags from source to target so that the formatting and variables are preserved correctly in the exported target file.</p>
+<p>For most file formats, you can display the content of the tags by expanding them (by pressing <em>Ctrl+Shift+E</em> or going to the <strong>Edit </strong>menu, clicking on <strong>Tags </strong>and <strong>Expand Tags</strong>).</p>
+<p><img src="/hc//article_attachments/115004107631/824a578a1b32375effb4ae2ae47ab5486c9b6a18caaea3b8638dcfe54ed04206.png" alt=""></p>
+<h2>Tag Types</h2>
+<p>There are two types of tags—paired and unpaired tags:</p>
+<ol>
+<li>
+<strong>Paired tags</strong> come in a pair and represent formatting that spans across a section of text. For instance, a section of text in a segment might be in a different font than the rest, or a section of text is highlighted, etc. Paired tags can be inserted via selecting the text around which the paired tags should be inserted and hitting <em>F8</em>.<br> <img src="https://help.memsource.com/hc/article_attachments/115004107591/import-604181.jpg">
+</li>
+<li>
+<strong>Unpaired tags</strong> can represent, for instance, the position of a footnote in a segment or can indicate a joined segment. Unpaired tags are also inserted via <em>F8</em> in the Memsource Editor.<br> <img src="https://help.memsource.com/hc/article_attachments/115004107611/import-604182.jpg">
+</li>
+</ol>
+<p><strong>Joined Segments tags</strong> are a special kind of unpaired tag. Please see <a href="https://help.memsource.com/hc/en-us/articles/115003462071">Joining and Splitting Segments</a> for more details.</p>
+<h2>Working with tags in Memsource Editors</h2>
+<p>As mentioned above, it is important to keep tags in the target as well as in the source. If tags are missing in the target, Memsource will do its best to auto-complete them in the background when the completed target file is being generated. But this is not always possible, so you should always add tags manually. They should be inserted in such a way that their position and order correspond to the source as much as possible.</p>
+<h3>Insert tags to target</h3>
+<p>There are two options for inserting tags.</p>
+<ul>
+<li>Use Editor's menu Edit &gt; Tags and select the option you nee</li>
+<li>Use the shortcuts (described in the Editor's menu)</li>
+</ul>
+<p><img class="img450" title="Menu for tags" src="https://pages.memsource.com/hc/Editor_menu_tags.png" alt="Menu for tags"></p>
+<h3>Editing a Tag's Content</h3>
+<p>Sometimes, experienced users may need to edit the content of a tag (such as the <em>href</em> attributes in anchor tags).</p>
+<ol>
+<li>Press <em>CTRL+SHIFT+E</em> or click on <strong>Edit, </strong><strong>Tags, </strong>then <strong>Expand Tags</strong> to <a href="https://pages.memsource.com/hc/Tags-expanded.png" rel="noopener">visualize tag content</a>.</li>
+<li>In the Memsource Editor for the web, click on the tag you want to edit and start editing. In the desktop editor, click on the tag and then hit <em>F2</em> to edit it.</li>
+</ol>
+<p>The edited tag will be displayed in yellow color to indicate it is different from the source tag.</p>
+<p><img class="img450" title="Editting tag content from EN version of website to ES version." src="https://pages.memsource.com/hc/Editor_editTagContent.png" alt="Editting tag content"></p>
+<h3>Custom Tags</h3>
+<p>A user can add a custom tag or custom paired tags into the target. In the Editor's menu, select <strong>Edit, Tags,</strong> and choose <strong>Create Custom Tag</strong> or <strong>Create Custom Paired Tag</strong> and then edit the content of the tag as needed. A custom tag will be displayed as a yellow number (instead of the standard blue number).</p>
+<p><strong>Note:</strong> The adding of custom tags is available only for formats supporting tags in the completed file (such as HTML).</p>
+<h2>Quality Assurance</h2>
+<p>To check whether tags have been properly placed in all target segments, use the <a href="https://help.memsource.com/hc/en-us/articles/115003643072-Quality-Assurance-Pane" rel="noopener">Quality Assurance</a> feature in the Memsource Editor and make sure the <a href="https://help.memsource.com/hc/en-us/articles/115003484052-Quality-Assurance" rel="noopener">Quality Assurance Settings</a> in your Memsource project have been set up to check tags <em>(Tags/Formatting</em> and <em>Join tags {j}</em> must be selected).<br> <br>Missing or incorrect tags can prevent Memsource from exporting a valid translated document. The error will be displayed on the project page. If this happens, open the editor, run the QA check, and fix all <em>Tags/Formatting</em> errors.</p>
+<h2>Importing files with non-translatable text</h2>
+<h3>Convert to Memsource Tags</h3>
+<p>In most file types, Project managers can use the <strong>Convert to Memsource Tags</strong> option to convert certain parts of texts that should not be translated, such as [codes in square brackets], {variables}, codes containing numbers and letters (specified using regular expressions), any proper names, etc. to Memsource tags<strong>.</strong></p>
+<p>In this case, these will be replaced with non-paired tags, and thus, protected from translation.<br>Translators can use the <em>Ctrl+Shift+E</em> keyboard shortcut to display the content of tags in the Memsource Editor for better context.</p>
+<h3>Escaping Tags</h3>
+<p>Memsource is using curly brackets to mark the tags. If you have a file with a number in curly brackets, for example, {1}, and do not want to use the "Convert to Memsource tag" feature, such number will be automatically escaped in the Editor: \{1\} to stay as a plain translatable text and not a tag. The Completed file will have the number in its original, unescaped, version.</p>
