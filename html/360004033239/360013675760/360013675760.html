@@ -32,14 +32,40 @@
 <p>Click <span class="guilabel">Analyze</span>.</p>
 <p>The Analyze window opens.</p>
 </li>
-<li class="step"><p>Select an <span class="guimenu">Type</span> from the dropdown list.</p></li>
-<li class="step"><p>Provide a name if required.</p></li>
+<li class="step"><p>Select a <span class="guimenu">Type</span> from the dropdown list.</p></li>
+<li class="step">
+<p>Provide a name if required.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+<p>Available macros for Analysis naming:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p><code class="code">{projectName}</code></p></li>
+<li class="listitem">
+<p><code class="code">{sourceLang}</code></p>
+<p>Adds source language</p>
+</li>
+<li class="listitem">
+<p><code class="code">{targetLang}</code></p>
+<p>Adds target language. If multiple languages are analyzed, the language will be empty.</p>
+</li>
+<li class="listitem">
+<p><code class="code">{userName}</code></p>
+<p>Adds username of the assigned Linguist or Vendor. If multiple Linguists are assigned, the name will be empty.</p>
+</li>
+<li class="listitem"><p><code class="code">{workflow}</code></p></li>
+<li class="listitem"><p><code class="code">{innerId}</code></p></li>
+</ul></div>
+</li></ul></div>
+</li>
 <li class="step">
 <p>Select analysis options and click <span class="guilabel">Analyze</span>.</p>
 <p>The analysis, or analyses are added to the list.</p>
 </li>
 <li class="step"><p>Click on an analysis in the list to view it.</p></li>
 </ol>
+</div>
+<div dir="ltr" class="note">
+<h3 class="title">Note</h3>
+<p>Analysis options can be set when creating an analysis, at the <a class="link" href="https://help.memsource.com/hc/articles/360013675720#UUID-d2351b3d-37c1-e4e0-2048-bccb70b23993_UUID-1b4ea28a-d66f-0cf7-6a75-f04f8dc61a3e" title="Project Settings">project level</a>, or globally under Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012420860/15ecbcd7bb8c0c.png" style="" alt="Setup_gear.png"></span>.</p>
 </div>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
@@ -49,7 +75,7 @@
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-6c314b96-5f74-6cf0-790c-7b80c0799beb"></a>Default Analysis</h2></div></div>
 <div class="panel-body collapse" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-6c314b96-5f74-6cf0-790c-7b80c0799beb_body">
-<p>Default Analysis is the standard analysis run <span class="emphasis"><em>before</em></span> translation. It provides the baseline analysis of a job that can be used with the Post-editing Analysis to determine how much effort was put into translating that job. This baseline is also used the basis for generating Quotes for clients.</p>
+<p>Default Analysis is the standard analysis run on source segments <span class="emphasis"><em>before</em></span> translation. It provides the baseline analysis of a job that can be used with the Post-editing Analysis to determine how much effort was put into translating that job. This baseline is also used the basis for generating Quotes for clients.</p>
 <p>A breakdown of segments/words/character counts is produced and if used in a project, TM matches are identified along with non-translatable matches and <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360012527380#UUID-d22813f5-ca65-a373-f56d-75bf18a99635">Machine Translation Quality Estimation</a> (if enabled).</p>
 <p>Running a Default Analysis after translation produces incorrect analyses.</p>
 </div>
@@ -59,36 +85,36 @@
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-3c0ab630-301c-89a2-bbd3-c11109f7d36d"></a>Post-editing Analysis</h2></div></div>
 <div class="panel-body collapse" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-3c0ab630-301c-89a2-bbd3-c11109f7d36d_body">
-<p>Post-editing analysis indicates editing effort; how much editing the text required from a linguist or proofreader. It is based on the target and is run after post-editing is complete.</p>
+<p>Post-editing analysis is run on target segments and indicates editing effort; how much editing the text required from a linguist or proofreader. It is run after post-editing is complete.</p>
 <p>When a linguist clicks on an untranslated segment, the current highest translation memory match, machine translation, and/or non-translatable match is saved for that segment and is used in post-editing analysis.</p>
 <p>In projects with Revision in the workflow, the post-editing analysis is calculated as the difference between the translated text and the proofread text.</p>
 <p>Memsource post-editing analysis extends the traditional translation memory analysis to include machine translation (MT) and non-translatables (NT).</p>
 <h4>
 <a id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_bridgehead-idm4663436486292831727035227621"></a>Post-analysis Options</h4>
-<p>Post-editing options are used for calculating the post-editing effort required for matches from the translation memory (TM), non-translatables (NT) and machine translation (MT).</p>
-<p><span class="bold bold"><strong>Analyze TM post-editing enabled</strong></span></p>
+<p>Post-editing options are used for calculating the post-editing effort required for matches from the translation memory (TM), non-translatables (NT) and machine translation (MT).</p>
+<p> <span class="bold bold"><strong>Analyze TM post-editing enabled</strong></span> </p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>Intended for low-quality TM that contain high percent matches that require Linguist editing.</p></li>
+<li class="listitem"><p>Intended for low-quality TMs that contain high percent matches that require Linguist editing.</p></li>
 <li class="listitem"><p>Indicates post-editing effort for the TM.</p></li>
 <li class="listitem"><p>Contains only 100% matches in the analysis. In-context 101% matches from the TM have no effect on the calculation.</p></li>
 </ul></div>
-<p><span class="bold bold"><strong>Analyze TM post-editing disabled</strong></span></p>
+<p> <span class="bold bold"><strong>Analyze TM post-editing disabled</strong></span> </p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Intended for high-quality TM where matches should be edited as little as possible to reduce cost.</p></li>
 <li class="listitem"><p>Indicates both 101% and 100%.</p></li>
 <li class="listitem"><p>Indicates TM matches offered to the Linguist when the segment is opened (not the actual Linguist's post-editing effort).</p></li>
 <li class="listitem"><p>Indicates post-editing effort for machine translation and non-translatables.</p></li>
 </ul></div>
-<p><span class="bold bold"><strong>Analyze NT/MT post-editing enabled</strong></span></p>
+<p> <span class="bold bold"><strong>Analyze NT/MT post-editing enabled</strong></span> </p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>If the MT or NT suggestion was accepted without further editing it is presented as a 100% match in the analysis.</p></li>
 <li class="listitem"><p>If Linguist changes the MT, the match rate will be lower. The score-counting algorithm is the same as that used to calculate the score of translation memory fuzzy matches.</p></li>
-<li class="listitem"><p>Editing of an NT will cause the segment be presented as 0-49% NT.</p></li>
+<li class="listitem"><p>Editing of an NT will cause the segment to be presented as 0-49% NT.</p></li>
 </ul></div>
-<p><span class="bold bold"><strong>Analyze NT/MT post-editing disabled</strong></span></p>
+<p> <span class="bold bold"><strong>Analyze NT/MT post-editing disabled</strong></span> </p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>Entries from MT/NT without any estimated score will be considered TM 0%-49% matches. They will be indicated translated by the Linguist with the MT not considered.</p></li>
-<li class="listitem"><p>MTQE and Memsource Translate matches higher than 75% will be in the MT column in their respective matches.</p></li>
+<li class="listitem"><p>Entries from MT/NT without any estimated score will be considered TM 0%-49% matches. They will be indicated translated by the Linguist with the MT not considered.</p></li>
+<li class="listitem"><p>MTQE and Memsource Translate matches higher than 75% will be in the MT column in their respective matches.</p></li>
 </ul></div>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
@@ -100,7 +126,7 @@
 <div xml:lang="en" dir="ltr" class="section caution sub-topic" lang="en">
 <div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933" id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_UUID-c6f85993-1316-4167-bb0f-d4ea3798f0be"></a>Available for</h3></div>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Team, Ultimate and Enterprise Editions</p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Team, Ultimate and Enterprise editions</p></li></ul></div>
 <p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
@@ -151,7 +177,13 @@
 <a id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_bridgehead-idm4663436485336031728442534741"></a>Download the Analysis</h2>
 <p>To download an analysis, follow these steps:</p>
 <div class="procedure"><ol class="procedure" type="1">
-<li class="step"><p>Select a file type from the dropdown menu.</p></li>
+<li class="step">
+<p>Select a file type from the dropdown menu:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>CSV (Comma Separated Values) with or without Characters and readable with spreadsheet applications.</p></li>
+<li class="listitem"><p>LOG (Similar to SDL Trados format) and readable with most project management applications.</p></li>
+</ul></div>
+</li>
 <li class="step">
 <p>Click <span class="guilabel">Download</span>.</p>
 <p>The file is downloaded.</p>
@@ -159,7 +191,8 @@
 </ol></div>
 <p>These files can be imported into most project management software systems.</p>
 <h2>
-<a id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_bridgehead-idm4554783153131231728271029137"></a>Apply a Net Rate Scheme</h2>
+<a id="UUID-8fbddfa9-46be-cc58-cc4c-1519f4855933_bridgehead-idm4554783153131231728271029137"></a>Apply a <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003978132-Net-Rate-Schemes" target="_blank" rel="noopener">Net Rate Scheme</a>
+</h2>
 <p>You can apply a discount to words/characters/pages in an analysis. A discounted translation volume is immediately calculated and displayed directly in the analysis in the <span class="guimenu">Net Rate</span> row.</p>
 <p>To remove the Net Rate Scheme from the analysis, leave the field next to the Apply Net Rate button empty.</p>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
