@@ -15,8 +15,11 @@
 <li class="listitem"><p>Forms</p></li>
 <li class="listitem"><p>Landing pages</p></li>
 <li class="listitem"><p>Landing page templates</p></li>
+<li class="listitem"><p>Segmented dynamic content</p></li>
 </ul></div>
-<p>Segmentation is supported for Emails and Landing pages but not Snippets.</p>
+<p><span class="bold bold"><strong>Segmentation</strong></span></p>
+<p>Content from all segments is imported into one job for language-neutral segmentation (e.g. gender). Content from each segment is then imported into separate jobs for language-specific segmentation (e.g. preferred language). These translations are stored within the original document as segmented dynamic content.</p>
+<p>Mapping between segments and target languages is configured in the connector settings. Multiple segments can share the same target language.</p>
 <p><span class="bold bold"><strong>Template Restrictions</strong></span></p>
 <p>Localized templates and assets have the same name as the <code class="code">original-name [language]</code> (e.g. Black Friday Promo [de-de]). The localized asset references the localized version of the template provided the template in that language exists. Otherwise, it references the original template.</p>
 <p>Only approved templates can be referenced. If the template is localized, the connector automatically moves it to the approved state.</p>
@@ -57,7 +60,7 @@
 <a data-zd-article="UUID-c65fe7d4-eea4-531b-c33e-671d3358b5bd" id="UUID-c65fe7d4-eea4-531b-c33e-671d3358b5bd_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h2></div>
 <div class="procedure">
 <a id="UUID-c65fe7d4-eea4-531b-c33e-671d3358b5bd_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012104979/15ec22f7b6c4b5.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012490519/15eccb75a3ce06.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -81,6 +84,16 @@
 <li class="listitem">
 <p><span class="guimenu">Marketo API identity URL</span></p>
 <p>Enter the first part of the Marketo Identity URL</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Create translations</span> options:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>If not using language-specific segmentation to store target translations, select <span class="guimenu">as separate documents</span>.</p></li>
+<li class="listitem">
+<p>If using language-specific segmentation, select</p>
+<p><span class="guimenu">as segmented dynamic content</span>, provide <span class="guimenu">Segmentation name</span> and <span class="guimenu">New Segment</span> from the dropdown lists and indicate which segment contains the source content.</p>
+</li>
+</ul></div>
 </li>
 </ul></div>
 </li>

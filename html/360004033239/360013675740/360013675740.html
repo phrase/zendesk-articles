@@ -145,8 +145,8 @@
 <li class="listitem"><p>If a change in the source file is detected, the job in Memsource is updated.</p></li>
 <li class="listitem"><p>If the job that is being updated is opened in the Web Editor (i.e. someone is working on it), a notification is displayed to the user, and they are prompted to reload the job.</p></li>
 <li class="listitem"><p>Segments are updated based on the changes made in the source file.</p></li>
-<li class="listitem"><p>Unchanged segments are copied together with the translation in the target.</p></li>
-<li class="listitem"><p>The target is cleared for segments with the changed source. (The previous translation isn't lost because it's saved in the translation memory.)</p></li>
+<li class="listitem"><p>Before updating, unchanged segments are copied together with the translation in the target.</p></li>
+<li class="listitem"><p>The target is cleared for segments with the changed source. (The previous translation for confirmed segments isn't lost because it's saved in the translation memory.)</p></li>
 <li class="listitem"><p>Segments deleted from the source file are also deleted from the job in Memsource.</p></li>
 </ul></div>
 <p><span class="bold bold"><strong>Exporting Translations Back to the Repository:</strong></span></p>
@@ -154,24 +154,24 @@
 <li class="listitem"><p>The translation is periodically pushed back to the repository based on the frequency set in the <span class="guimenu">Continuous Job</span> settings.</p></li>
 <li class="listitem"><p>Translated target segments are exported only if they have been modified.</p></li>
 <li class="listitem"><p>Even unconfirmed modified segments are exported.</p></li>
+<li class="listitem"><p>Each target file is stored in a language-code subfolder (e.g. <span class="emphasis"><em>./en_us</em></span>). Multilingual files are stored in a subfolder with a name that is concatenation of all target language codes (e.g. <span class="emphasis"><em>./cs-de-zh_cn</em></span>)</p></li>
 </ul></div>
 <p><span class="bold bold"><strong>Restrictions:</strong></span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Only available for specified file formats.</p></li>
-<li class="listitem"><p>Multilingual format is not supported.</p></li>
 <li class="listitem"><p>The file must be uploaded from an online repository using a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012207959-Supported-Connectors-and-Plugins" target="_blank" rel="noopener">connector</a>.</p></li>
 </ul></div>
-<p>Continuous jobs are presented in the project page with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012403300/15ecbc4b39c8b4.png" style="" alt="con_job.png"></span>. The tooltip indicates when the job was last updated.</p>
+<p>Continuous jobs are presented in the project page with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012489699/15eccb11610736.png" style="" alt="con_job.png"></span>. The tooltip indicates when the job was last updated.</p>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-29d1a108-bf4f-799c-9ff5-6826433147c8" id="UUID-29d1a108-bf4f-799c-9ff5-6826433147c8_UUID-6e3505f3-63a0-a7c0-3cb4-02e4d1110357"></a>Continuous Job Supported File Formats</h3></div>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>RESX</p></li>
-<li class="listitem"><p>XML</p></li>
-<li class="listitem"><p>PO</p></li>
+<li class="listitem"><p>XML, Multilingual XML</p></li>
+<li class="listitem"><p>PO, Multilingual PO</p></li>
 <li class="listitem"><p>XLSX</p></li>
 <li class="listitem"><p>Properties</p></li>
-<li class="listitem"><p>CSV</p></li>
+<li class="listitem"><p>CSV, Multilingual CSV</p></li>
 <li class="listitem"><p>JSON</p></li>
 <li class="listitem"><p>YAML</p></li>
 <li class="listitem"><p>Android XML</p></li>
@@ -186,7 +186,7 @@
 <div class="procedure">
 <a id="UUID-29d1a108-bf4f-799c-9ff5-6826433147c8_procedure-idm231752676466681"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012403320/15ecbc4b3a403c.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section and click on <span class="guilabel">Continuous Job Settings</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012489719/15eccb1161286e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section and click on <span class="guilabel">Continuous Job Settings</span>.</p>
 <p>The <span class="guimenu">Continuous Job Settings</span> page opens.</p>
 </li>
 <li class="step">
