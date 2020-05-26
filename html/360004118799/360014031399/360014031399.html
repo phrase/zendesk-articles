@@ -1,0 +1,143 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section caution sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-96eabf1f-e1a1-696e-bd76-9771541793e5" id="UUID-20eb2bee-fd34-3878-faa7-487c54d6f553"></a>Available for</h2></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Ultimate and Enterprise editions</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>Memsource users are able to visualize data from their accounts through Kibana, an open-source data visualization workbench. Kibana allows you to visualize and explore all data indexed by our analytics data warehouse, and there is an almost endless number of queries that can be visualized using Kibana.</p>
+<p><a class="link" href="https://www.elastic.co/downloads/kibana" target="_blank" rel="noopener">Kibana</a> version 4.1.11 or later is required to process data from Memsource.</p>
+<h3>
+<a id="bridgehead-idm231809597167711"></a>Data Types That Can be Visualized</h3>
+<p>All visualizations created in Kibana can also be turned into CSV based tables containing the hard data behind.</p>
+<p>Some examples of data indexed through Kibana:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Project</strong></span></p>
+<p>Project creation date, last modification, created by, last modified by, source language, target languages, project settings, client, domain, subdomain, business unit, project status, due date, etc.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Jobs</strong></span></p>
+<p>Job creation date, last modification, created by, last modified by, source language, target language, assigned to linguist/vendor, due date, workflow step, file type, etc.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Analyses</strong></span></p>
+<p>Total wordcount, net wordcount, translation memory matches, machine translation matches, etc.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Costs</strong></span></p>
+<p>Costs per project, project margin, etc. (based on <a class="link linktextconsumer" href="https://help.memsource.com/document/preview/7433#UUID-95ab5b98-50d1-a2e5-ca91-e80e85131cbc">Price Lists</a>).</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>API</strong></span></p>
+<p>Summary of API usage, list and breakdown of API calls per period of time, etc.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Time Tracking</strong></span></p>
+<p>Collection of time-tracking stats (in ms) follows these principles and can be seen in both MXLIFF files and in Kibana:</p>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360012500099/15eccdd765603b.png" style="" alt="Time_Tracking.png"></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p>User clicks into segment #1:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>Counting of segment #1 thinking time starts</p></li>
+<li class="listitem"><p>Counting of segment #1 editing time starts</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>User starts editing segment #1:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>Counting of segment #1 thinking time is stopped</p></li>
+<li class="listitem"><p>Counting of segment #1 editing time continues</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>User clicks into segment #2:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; "><li class="listitem"><p>Counting of segment #1 editing time is stopped</p></li></ul></div>
+</li>
+<li class="listitem"><p>When a user re-enters segment #1, the counting starts again and the new times are added to the previous values. If edited upon re-entering, both times are updated. If there is no editing, times are not updated.</p></li>
+<li class="listitem"><p>The thinking and/or editing times are measured for each workflow step separately.</p></li>
+</ul></div>
+</li>
+</ul></div>
+<p><span class="phrase">Technical Support team</span></p>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-96eabf1f-e1a1-696e-bd76-9771541793e5" id="UUID-a77d13b9-ecaa-40da-4dd7-e4631feb08f1"></a>Memsource Installation Steps</h2></div>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012500119/15eccdd7659c13.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Analytics &amp;amp; Reporting</span> section and click on <span class="guilabel">Kibana</span>.</p>
+<p>The <span class="guimenu">Kibana Access</span> page opens.</p>
+</li>
+<li class="step"><p>Copy the unique <span class="guimenu">Kibana URL</span>.</p></li>
+</ol></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-96eabf1f-e1a1-696e-bd76-9771541793e5" id="UUID-c105c66b-a107-cdd8-e6e7-f0333e8119af"></a>Kibana Installation Steps</h2></div>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>Open the <span class="emphasis"><em>kibana.yml</em></span> configuration file from Kibana <span class="emphasis"><em>config</em></span> subfolder.</p></li>
+<li class="step"><p>Replace <span class="emphasis"><em>elasticsearch_url</em></span> value (usually <span class="emphasis"><em>http://localhost:9200</em></span>) with the URL generated in the Memsource steps.</p></li>
+<li class="step"><p>Ensure the <span class="emphasis"><em>kibana_index</em></span> value is set to <span class="emphasis"><em>.kibana</em></span></p></li>
+<li class="step"><p>Save the <span class="emphasis"><em>kibana.yml</em></span> file.</p></li>
+<li class="step">
+<p>Start Kibana from the the Kibana <span class="emphasis"><em>bin</em></span> subdirectory.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Windows: double-click <span class="bold bold"><strong>kibana.bat</strong></span></p></li>
+<li class="listitem"><p>Other O/S: double-click <span class="bold bold"><strong>kibana</strong></span> (other users).</p></li>
+</ul></div>
+</li>
+<li class="step">
+<p>Verify setup.</p>
+<p>The following is visible in the command prompt window:</p>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360012508480/15eccdd765c0a3.png" style="" alt="Kibana_Connected.png"></div>
+</li>
+<li class="step"><p>Enter <span class="emphasis"><em>localhost:5601</em></span> into the address bar of a browser to access the visualization workbench.</p></li>
+</ol></div>
+<div dir="ltr" class="important">
+<h3 class="title">Important</h3>
+<p>The command prompt window must stay open to maintain the connection to Kibana.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-96eabf1f-e1a1-696e-bd76-9771541793e5" id="UUID-47c7daf8-22ce-196d-30bc-36980aa5d0f0"></a>Kibana Configuration</h2></div>
+<p>Index patterns are required for visualization and are applied in Settings under the Indices menu. The following index patterns are currently available:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>com.memsource.web.analytics.data.job (job.dateCreated)</p></li>
+<li class="listitem"><p>com.memsource.web.analytics.data.jobpart (jobPart.dateCreated)</p></li>
+<li class="listitem"><p>com.memsource.web.analytics.data.analysis (jobPart.dateCreated)</p></li>
+<li class="listitem"><p>com.memsource.web.analytics.data.costs (jobPart.dateCreated)</p></li>
+<li class="listitem"><p>com.memsource.web.analytics.data.api (request.date)</p></li>
+<li class="listitem"><p>com.memsource.web.analytics.data.lqa (lqa.dateCreated)</p></li>
+</ul></div>
+<p>When creating indexes, the expression in brackets represent the recommended Time-field name for the given index. Any or all of the indexes available can be configured.</p>
+<p>Once the indexes are registered, data can be visualized through the Visualize tab.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-96eabf1f-e1a1-696e-bd76-9771541793e5" id="UUID-c0468b86-4a56-df00-728e-23049407f104"></a>Index Classifications</h2></div>
+<p><span class="bold bold"><strong>Job index</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Contains information about job sizes (words, pages etc.), who created the jobs, when they were created, filetypes, projects, and organizations they belong to.</p></li></ul></div>
+<p><span class="bold bold"><strong>Job Part index</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Jobs themselves do not have statuses or assigned users. This type of information is stored in terms of job parts (i.e. jobs in different workflow steps constitute different job parts). Otherwise, the same of data as in the Job index are available (filetype, project, organization etc.).</p></li></ul></div>
+<p><span class="bold bold"><strong>Analysis index</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Information about Analyzed Job Parts (divided into match categories) with and without Net Rate applied.</p></li></ul></div>
+<p><span class="bold bold"><strong>Costs index</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Costs for the Job Part (based on Price Lists).</p></li></ul></div>
+<p><span class="bold bold"><strong>API index</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Summary of API usage.</p></li></ul></div>
+<p><span class="bold bold"><strong>LQA index</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Breakdown of LQA evaluations entered for Job Parts based on defined categories, subcategories and severity.</p></li></ul></div>
+<div dir="ltr" class="tip">
+<h3 class="title">Tip</h3>
+<p>A selection of configuration samples</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
