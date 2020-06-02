@@ -24,13 +24,13 @@
 </li>
 <li class="step">
 <p>Sort results by rearranging the language columns, and clicking on <span class="guimenu">Set up columns</span> to select what columns are visible.</p>
-<p>Hover over <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011908860/15eba63f90bc80.png" style="" alt="TM_search_info.png"></span> to see details of the translation unit.</p>
+<p>Hover over <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012700519/15ed6057de1ca9.png" style="" alt="TM_search_info.png"></span> to see details of the translation unit.</p>
 </li>
 <li class="step">
-<p>Double click on translation unit text to edit it and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011908880/15eba63f90db78.png" style="" alt="TM_deleteunit.png"></span> to delete it.</p>
+<p>Double click on translation unit text to edit it and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012703660/15ed6057de5e1e.png" style="" alt="TM_deleteunit.png"></span> to delete it.</p>
 <div dir="ltr" class="caution">
 <h3 class="title">Caution</h3>
-<p>Editing translation units within a TM is permanent. There is no undo function.</p>
+<p>Editing translation units within a TM is permanent. There is no undo function. If performing major maintenance, export the TM in TMX format and save in ZIP format as a backup.</p>
 </div>
 </li>
 <li class="step"><p>Click outside the editing field to save the edit.</p></li>
@@ -49,7 +49,7 @@
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="bold bold"><strong>TMX</strong></span></p>
-<p>An exchange format for use in other CAT tools. Can also be used for editing content in external tools such as <a class="link" href="https://okapi-olifant.software.informer.com/3.0/" target="_blank" rel="noopener">Okapi Olifant</a>.</p>
+<p>An exchange format for use in other CAT tools. Can also be used for editing content in external tools such as <a class="link" href="https://okapi-olifant.software.informer.com/3.0/" target="_blank" rel="noopener">Okapi Olifant</a>.</p>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>XLSX</strong></span></p>
@@ -93,13 +93,13 @@
 <div class="panel-body collapse" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-d6faa376-2d18-62d2-e5a3-0347f9184ef8_body"><div class="panel-inner">
 <h4>
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_bridgehead-idm231764802906591"></a>TM Replacement</h4>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>XLSX files can be edited and then imported back as new Translation Memories that replace the previous version. The old TM should be deleted as to not cause confusion.</p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>XLSX files can be edited and then imported back into new Translation Memories that replace the previous version. The old TM should be deleted as to not cause confusion.</p></li></ul></div>
 <h4>
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_bridgehead-idm231764803443063"></a>TM Update</h4>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The file can be edited, with <code class="code">|update</code> or <code class="code">|delete</code> added to the segment's ID. This is imported back into the original TM.</p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The file can be edited with <code class="code">|update</code> or <code class="code">|delete</code> added to the segment's ID. These translation units will then be updated or deleted when the XLSX file is imported back into the TM.</p></li></ul></div>
 <h3>
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_bridgehead-idm231764808304843"></a>Deleting Multiple 100% Matches</h3>
-<p>A 100% match is a segment with the same source but different context. If segments don't require context (every source text has only one translation, regardless of the context in the file), the TM can be exported with no context and imported into a new TM.</p>
+<p>A 100% match is a segment with the same source but different context. If segments don't require context (every source text has only one translation, regardless of the context in the file), the TM can be exported with no context and imported into a new TM.</p>
 <p>Every duplicate segment in the XLSX file will be overwritten by the new version when imported back to Memsource.</p>
 <p>To delete multiple 100% matches, follow these steps:</p>
 <div class="procedure">
@@ -112,16 +112,16 @@
 <li class="step">
 <p>Deselect these options:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="emphasis"><em>Previous segment</em></span></p></li>
-<li class="listitem"><p><span class="emphasis"><em>Next segment</em></span></p></li>
-<li class="listitem"><p><span class="emphasis"><em>Segment key</em></span></p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Previous segment</em></span> </p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Next segment</em></span> </p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Segment key</em></span> </p></li>
 </ul></div>
 </li>
 <li class="step">
 <p>Click <span class="guilabel">Export</span>.</p>
 <p>File is downloaded to your system.</p>
 </li>
-<li class="step"><p><a class="link" href="https://help.memsource.com/hc/articles/360013766279#UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-2ac08b2e-0881-5ab4-07d1-2ea0e3fcfc95" title="Create a Translation Memory">Create</a> a new TM.</p></li>
+<li class="step"><p> <a class="link" href="https://help.memsource.com/hc/articles/360013766279#UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-2ac08b2e-0881-5ab4-07d1-2ea0e3fcfc95" title="Create a Translation Memory">Create</a> a new TM.</p></li>
 <li class="step"><p>Import the downloaded file from step 4 into the new TM.</p></li>
 <li class="step"><p>If no longer required. delete the old TM.</p></li>
 </ol>
@@ -139,14 +139,14 @@
 <li class="step">
 <p>Select these options:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="emphasis"><em>Previous segment</em></span></p></li>
-<li class="listitem"><p><span class="emphasis"><em>Next segment</em></span></p></li>
-<li class="listitem"><p><span class="emphasis"><em>Context key</em></span></p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Previous segment</em></span> </p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Next segment</em></span> </p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Context key</em></span> </p></li>
 <li class="listitem">
-<p><span class="emphasis"><em>Created by </em></span></p>
+<p> <span class="emphasis"><em>Created by </em></span> </p>
 <p>and/or</p>
 </li>
-<li class="listitem"><p><span class="emphasis"><em>Last Modified by</em></span></p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Last Modified by</em></span> </p></li>
 </ul></div>
 </li>
 <li class="step">
@@ -173,9 +173,9 @@
 <li class="step">
 <p>Select these options:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="emphasis"><em>Previous segment</em></span></p></li>
-<li class="listitem"><p><span class="emphasis"><em>Next segment</em></span></p></li>
-<li class="listitem"><p><span class="emphasis"><em>Context key</em></span></p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Previous segment</em></span> </p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Next segment</em></span> </p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Context key</em></span> </p></li>
 </ul></div>
 </li>
 <li class="step">
@@ -217,47 +217,47 @@
 <a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-da8b70da-54b3-7a0f-5764-027ba51b91a7"></a>Supported file types</h3></div>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p><span class="bold bold"><strong>TMX</strong></span></p>
-<p>An exchange format for use in other CAT tools. Can also be used for editing content in external tools such as <a class="link" href="https://okapi-olifant.software.informer.com/3.0/" target="_blank" rel="noopener">Okapi Olifant</a>.</p>
-<p>File must match the source language of the translation memory and at least one of target language. If multiple target languages are included, only those present in the translation memory will be imported.</p>
-<p>File version 1.4 and 1.4b supported.</p>
+<p> <span class="bold bold"><strong>TMX</strong></span> </p>
+<p>An exchange format for use in other CAT tools. Can also be used for editing content in external tools such as <a class="link" href="https://okapi-olifant.software.informer.com/3.0/" target="_blank" rel="noopener">Okapi Olifant</a>.</p>
+<p>File must match the source language of the translation memory and at least one of the target languages. If multiple target languages are included, only those present in the translation memory will be imported.</p>
+<p>TMX versions 1.4 and 1.4b are supported.</p>
 <p>TMX files exported from SDL Trados will not contain all attributes and the following will be changed:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p><span class="emphasis"><em>creationdate</em></span> will be converted to <span class="emphasis"><em>created_at</em></span></p></li>
-<li class="listitem"><p><span class="emphasis"><em>creationid</em></span> will be converted to <span class="emphasis"><em>created_by</em></span></p></li>
-<li class="listitem"><p><span class="emphasis"><em>changedate</em></span> will be converted to <span class="emphasis"><em>modified_at</em></span></p></li>
-<li class="listitem"><p><span class="emphasis"><em>changeid</em></span> will be converted to <span class="emphasis"><em>modified_by</em></span></p></li>
+<li class="listitem"><p> <span class="emphasis"><em>creationdate</em></span> will be converted to <span class="emphasis"><em>created_at</em></span> </p></li>
+<li class="listitem"><p> <span class="emphasis"><em>creationid</em></span> will be converted to <span class="emphasis"><em>created_by</em></span> </p></li>
+<li class="listitem"><p> <span class="emphasis"><em>changedate</em></span> will be converted to <span class="emphasis"><em>modified_at</em></span> </p></li>
+<li class="listitem"><p> <span class="emphasis"><em>changeid</em></span> will be converted to <span class="emphasis"><em>modified_by</em></span> </p></li>
 </ul></div>
-<p>TMX files exported from Worldserver will not contain all attributes and the following will be changed:</p>
+<p>TMX files exported from WorldServer will not contain all attributes and the following will be changed:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p><span class="emphasis"><em>creationdate</em></span> will be converted to <span class="emphasis"><em>created_at</em></span></p></li>
-<li class="listitem"><p><span class="emphasis"><em>changedate</em></span> will be converted to <span class="emphasis"><em>modified_at</em></span></p></li>
-<li class="listitem"><p><span class="emphasis"><em>x-idiom-source-ipath</em></span> will be converted to <span class="emphasis"><em>file</em></span></p></li>
+<li class="listitem"><p> <span class="emphasis"><em>creationdate</em></span> will be converted to <span class="emphasis"><em>created_at</em></span> </p></li>
+<li class="listitem"><p> <span class="emphasis"><em>changedate</em></span> will be converted to <span class="emphasis"><em>modified_at</em></span> </p></li>
+<li class="listitem"><p> <span class="emphasis"><em>x-idiom-source-ipath</em></span> will be converted to <span class="emphasis"><em>file</em></span> </p></li>
 </ul></div>
-<p>Segment is coded Worldserver TMX and can only be deduced.</p>
+<p>Segment context is coded into WorldServer TMX files and can only be deduced at best.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>MXLIFF</strong></span></p>
+<p> <span class="bold bold"><strong>MXLIFF</strong></span> </p>
 <p>Memsource bilingual XLIFF.</p>
 <p>MXLIFF files can be imported into a translation memory but this import feature has been designed as a backup solution.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>XLSX</strong></span></p>
+<p> <span class="bold bold"><strong>XLSX</strong></span> </p>
 <p>An XML based file format for spreadsheet applications.</p>
-<p>XLS and XLSX can be directly imported into a translation memory. Files should be formatted as lists of plain segments without tags and with the language code at the top of each column. Ensure the languages listed in the file correspond to the languages in the translation memory.</p>
-<p>Only use <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811-Supported-Languages" target="_blank" rel="noopener">supported language codes</a>.</p>
+<p>XLS and XLSX can be directly imported into a translation memory. Files should be formatted as lists of plain segments without tags and with the language code at the top of each column. Ensure the languages listed in the file correspond to the languages in the translation memory.</p>
+<p>Only use <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811-Supported-Languages" target="_blank" rel="noopener">supported language codes</a>.</p>
 <p>Duplicates within the file will be removed.</p>
-<p>Segments translated in Memsource are saved to the TM with context.</p>
-<p>Identical segments will not be duplicated unless they also have the same context.</p>
+<p>Segments translated in Memsource are saved to the TM with context.</p>
+<p>Identical segments will not be deduplicated unless they also have the same context.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>SDL WorldServer XLIFF</strong></span></p>
-<p>Bilingual files created in WorldServer.</p>
+<p> <span class="bold bold"><strong>SDL WorldServer XLIFF</strong></span> </p>
+<p>Bilingual files created in WorldServer.</p>
 </li>
 </ul></div>
 <div dir="ltr" class="caution">
 <h3 class="title">Caution</h3>
-<p>The <span class="emphasis"><em>created_by</em></span> and <span class="emphasis"><em>modified_by</em></span> attributes are associated with the Memsource Users database so only Memsource Usernames are supported. If a username does not correspond with a Memsource Username, the field will be imported to the TM as empty.</p>
+<p>The <span class="emphasis"><em>created_by</em></span> and <span class="emphasis"><em>modified_by</em></span> attributes are associated with the Memsource Users database so only Memsource Usernames are supported. If a username does not correspond with a Memsource Username, the field will be imported to the TM as empty.</p>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
@@ -270,7 +270,7 @@
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_procedure-idm231771521879609"></a><ol class="procedure" type="1">
 <li class="step">
 <p>From a <a class="link" href="https://help.memsource.com/hc/articles/360013766279#UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-bafe9a04-4afd-220a-d2e5-3063d57808bc" title="Translation Memory Page">translation memory page</a>, click <span class="guilabel">Import</span>.</p>
-<p>The <span class="guimenu">Import TMX/XLSX/MSLIFF/SDLIXLIFF (WorldServer)</span> window opens.</p>
+<p>The <span class="guimenu">Import TMX/XLSX/MXLIFF/SDLXLIFF (WorldServer)</span> window opens.</p>
 </li>
 <li class="step"><p>Click <span class="guilabel">Choose File</span> to add a file, or drag and drop the file to the window.</p></li>
 <li class="step">
@@ -278,7 +278,7 @@
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="guimenu">Remove tags</span></p>
-<p>Removes all of the tags imported from TMX files excepting (<code class="code">{1}</code> or <code class="code">&lt;2</code>}) Memsource tags in XLSX and MXLIFF.</p>
+<p>Removes all of the tags imported from TMX files excepting (<code class="code">{1}</code> or <code class="code">&lt;2}</code>) Memsource tags in XLSX and MXLIFF.</p>
 </li>
 <li class="listitem">
 <p><span class="guimenu">Strict locale matching</span></p>
@@ -295,7 +295,7 @@
 <li class="step">
 <p>Click <span class="guilabel">Import</span>.</p>
 <p>The window closes and the file is imported into the TM.</p>
-<p>If there is an error, <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360011908900/15eba63f90f93d.png" style="" alt="Warning.png"></span> is shown in the <span class="guimenu">Last Import</span> field of the translation memory page. Hover over the warning for error details.</p>
+<p>If there is an error, <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012703680/15ed6057dea3a3.png" style="" alt="Warning.png"></span> is shown in the <span class="guimenu">Last Import</span> field of the translation memory page. Hover over the warning for error details.</p>
 </li>
 </ol>
 </div>
