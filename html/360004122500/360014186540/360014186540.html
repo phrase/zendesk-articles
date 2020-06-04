@@ -1,0 +1,119 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section caution sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61" id="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61_UUID-20eb2bee-fd34-3878-faa7-487c54d6f553"></a>Available for</h2></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Ultimate and Enterprise editions</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>Single Sign-on (SSO) allows Memsource users to log in to Memsource via third-party applications. Memsource enables integrations with identity providers (IdPs) compliant with the SAML 2.0 protocol.</p>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61" id="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61_UUID-b44c40d6-39fa-fc2c-4b97-5508aab2bd16"></a>Enable Single Sign-On</h2></div>
+<p><span class="bold bold"><strong>Prerequisite:</strong></span> Administrator Login</p>
+<p>To enable Single Sign-On, follow these steps:</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012745800/15ed75a895376d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Single Sign-On</span> section and click on <span class="guilabel">Details</span>.</p>
+<p>The <span class="guimenu">Single Sign-On</span> page opens.</p>
+</li>
+<li class="step">
+<p>Select <span class="guimenu">Enable SSO for your organization</span>.</p>
+<p>Configuration details are presented.</p>
+</li>
+<li class="step">
+<p>Complete the following fields:</p>
+<p>The first five fields should be completed using information from an IdP provider. (For more information about configuring SSO for Onelogin, see <a class="link" href="https://onelogin.service-now.com/support" target="_blank" rel="noopener">OneLogin documentation</a>.)</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="guimenu">Certificate Fingerprint</span></p>
+<p>This is used to validate the authenticity of the IdP.Depending fingerprint generation, it is delimited by either colons or spaces. If authentication is not successful, switch the colons and spaces in the fingerprint to ensure it is correctly applied.</p>
+</li>
+<li class="listitem"><p><span class="guimenu">Certificate Fingerprint Algorithm</span></p></li>
+<li class="listitem">
+<p><span class="guimenu">Issuer URL</span></p>
+<p>This value is provided by the IdP to uniquely identify your domain.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">SAML 2.0 Endpoint (HTTP)</span></p>
+<p>This is the URL that Memsource will call to request a user login from the IdP. The IdP authenticates and logs in users.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">SLO Endpoint (HTTP)</span></p>
+<p>When users log out of Memsource, this URL is called to log them out of the IdP.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Landing URL (Optional)</span></p>
+<p>Choose the URL of the web page that users will see when they log out of Memsource.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Key User Identifier</span></p>
+<p>Select whether users will identify themselves using a <span class="guimenu">USERNAME</span> or an <span class="guimenu">EMAIL</span> address. Memsource requires a unique username by default, but users can opt to use the same email address multiple times. Choosing the <span class="guimenu">EMAIL</span> option will require users to use a unique email address.</p>
+</li>
+<li class="listitem"><p><span class="guimenu">Domain name</span></p></li>
+</ul></div>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>Settings are applied for the organization.</p>
+</li>
+</ol></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61" id="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61_UUID-79268ccb-73a0-0359-b4e0-4d4e4faa946b"></a>SCIM Configuration</h2></div>
+<p>To configure SCIM properties, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61_procedure-idm231812915157399"></a><ol class="procedure" type="1">
+<li class="step">
+<p>Select <span class="guimenu">Enable SCIM</span>.</p>
+<p>SCIM configuration details are presented.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Generate New Token</span>.</p>
+<p>The <span class="guimenu">SCIM Bearer Token</span> field is populated with a unique token.</p>
+</li>
+<li class="step">
+<p>Copy the token and the <span class="guimenu">SCIM Base URL</span>.</p>
+<p>These will be used in identity provider settings.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>Configuration is saved.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61" id="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61_UUID-a7fa64fe-310e-def4-669b-eeb160328c1f"></a>User Management</h2></div>
+<p>Options:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Allow users to change their login credentials</strong></span></p>
+<p>Uncheck this box to prevent users from editing their usernames, passwords, and emails. Can be used to force users to access Memsource only through SSO (as SSO uses a different authentication method).</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>New users mapped to</strong></span></p>
+<p>Sets default new user role for new users created via SSO. The Linguist role is selected by default.</p>
+</li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61" id="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61_UUID-58c6e8e5-b7bc-efa0-d680-86becae80acc"></a>Application Details</h2></div>
+<p><span class="guimenu">Organization ID</span> and the <span class="guimenu">Domain URL</span> can be used by an IdP to configure Memsource as the recipient application and to establish the connection.</p>
+<p>Some SSO providers require Entity ID / Metadata URL, ACS URL or SLS URL.</p>
+<p>If required, use:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong>Entity ID/Metadata URL: </strong></span>https://cloud.memsource.com/web/saml2Login/metadata/{orgId}</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>ACS URL:  </strong></span>https://cloud.memsource.com/web/saml2Login/sacs/{orgId}</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>(Optional) SLS (Single Logout Service) URL: </strong></span>https://cloud.memsource.com/web/saml2Login/ssls/{orgId}</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

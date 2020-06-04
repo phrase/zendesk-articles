@@ -1,0 +1,111 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>Memsource can calculate net rates for translation memories, machine translation, and non-translatables (NT).</p>
+<h3>
+<a id="UUID-a0df210b-1a94-3b28-a674-e580b358e53d_bridgehead-idm231807963047675"></a>Translation Memory Net Rates</h3>
+<p>Translation memory net rate schemes have four categories:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Repetition</strong></span></p>
+<p>A segment repeated in a document.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>In-context match</strong></span></p>
+<p>A segment which matches a segment already stored in the translation memory, including its context; the preceding and following segments or context keys match.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>100% match</strong></span></p>
+<p>A segment which matches a segment already stored in the translation memory.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Fuzzy match</strong></span></p>
+<p>A segment which partially matches a segment already stored in the translation memory. Fuzzy matches can range from 99% down to zero. Fuzzy matches below a 75% match rate are considered new words and are newly translated.</p>
+</li>
+</ul></div>
+<h3>
+<a id="UUID-a0df210b-1a94-3b28-a674-e580b358e53d_bridgehead-idm231807964570554"></a>Non-translatables Net Rates</h3>
+<p>Non-translatable net rate schemes have three categories:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>100% match</strong></span></p>
+<p>A segment identified as content that is unlikely requiring translation but may require checking by a translator.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>99% match</strong></span></p>
+<p>A segment identified as content that probably does not require translation, but should be checked by a translator.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Fuzzy match</strong></span></p>
+<p>For default analysis, NTs fall only into one of the categories mentioned above. If  post-edited, they can fall into fuzzy ranges in terms of Post-editing analysis.</p>
+</li>
+</ul></div>
+<h3>
+<a id="UUID-a0df210b-1a94-3b28-a674-e580b358e53d_bridgehead-idm231807966046793"></a>Machine Translation Net Rates</h3>
+<p>Memsource measures machine translation quality by comparing at a segment level a machine translation and the final post-edited version of that translation. The match score is calculated the same way as <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279-Translation-Memories-Overview" target="_blank" rel="noopener">translation memory</a> matches.</p>
+<p>After opening a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview" target="_blank" rel="noopener">post-editing analysis</a>, select a net rate scheme and the pages/words/characters are recalculated. The results are displayed in the Net Rate line.</p>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a0df210b-1a94-3b28-a674-e580b358e53d" id="UUID-a0df210b-1a94-3b28-a674-e580b358e53d_UUID-044eb286-fb5f-5e9d-5e8a-78ba116f9ce4"></a>Set up a Net Rate Scheme</h2></div>
+<p>Net rates are independent of financial information. The number of units for translation (pages, words, or characters) decreases based on the selected net rate scheme.</p>
+<p>Only Project Managers and Admins can setup Net Rate Schemes.</p>
+<p>To set up a Net Rate Scheme, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-a0df210b-1a94-3b28-a674-e580b358e53d_procedure-idm23180798167221"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012745020/15ed758464da0f.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Financials</span> section and click on <span class="guilabel">Net Rate Schemes</span>.</p>
+<p>The <span class="guimenu">Net Rate Schemes</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Net Rate Scheme</span> page opens.</p>
+</li>
+<li class="step">
+<p>Provide a name for the scheme.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Select <span class="guimenu">Default</span> radio button to make this scheme the default scheme.</p></li></ul></div>
+</li>
+<li class="step"><p>Update default values as required.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The scheme is added to the <span class="guimenu">Net Rate Schemes</span> page.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a0df210b-1a94-3b28-a674-e580b358e53d" id="UUID-a0df210b-1a94-3b28-a674-e580b358e53d_UUID-ca0b536a-762c-3f75-d0ca-fd85d982a8da"></a>Calculation Example</h2></div>
+<p>How a net rate scheme can be applied to TM matches.</p>
+<p>Net Rate Scheme settings:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>0% for 101% TM match</p></li>
+<li class="listitem"><p>10% for 100% TM match</p></li>
+<li class="listitem"><p>100% for less then 50% TM match</p></li>
+</ul></div>
+<p>Analyzed job has these matches:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>15 words in 101% TM match</p></li>
+<li class="listitem"><p>10 words in 100% TM match</p></li>
+<li class="listitem"><p>5 words in less then 50% TM match</p></li>
+</ul></div>
+<p>The calculation of number of word and the Net Rate percentage: 15 * 0 + 10 * 0.1 + 5 * 1 = 6</p>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360012743719/15ed758465184e.png" style="" alt="PR_analysis_NetRateExample.png"></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a0df210b-1a94-3b28-a674-e580b358e53d" id="UUID-a0df210b-1a94-3b28-a674-e580b358e53d_UUID-2613b9f2-4453-a4d0-e118-d681d45c2c72"></a>Apply a Net Rate Scheme</h2></div>
+<p>To apply a net rate scheme, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-a0df210b-1a94-3b28-a674-e580b358e53d_procedure-idm231807990957526"></a><ol class="procedure" type="1">
+<li class="step"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview" target="_blank" rel="noopener">Create a job</a> and generate a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview" target="_blank" rel="noopener">Default Analysis</a> for that job.</p></li>
+<li class="step"><p>Open the analysis.</p></li>
+<li class="step">
+<p>Select a net rate from the dropdown list and click <span class="guilabel">Apply Net Rate</span>.</p>
+<p>The net is applied and reflected in the table.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
