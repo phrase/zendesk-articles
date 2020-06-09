@@ -1,0 +1,44 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Launched automatically.</p></li>
+<li class="listitem"><p>When a Linguist sets a job status to <span class="emphasis"><em>Completed</em></span> in a project with multiple workflow steps, the Linguist in the next workflow step is notified.</p></li>
+</ul></div>
+<p>Type:</p>
+<pre class="programlisting">Next step ready
+</pre>
+<p>Suggested name:</p>
+<pre class="programlisting">Next step ready (en)
+</pre>
+<p>Suggested subject:</p>
+<pre class="programlisting">Project {project.name}: Job(s) Ready, You Can Start
+</pre>
+<p>Suggested body:</p>
+<pre class="programlisting">Dear {recipient.firstName},
+
+You have been assigned work in the {workflow.name} workflow step.
+We would like to let you know that you can start now.
+
+The linguist who was in charge of the preceding workflow step ({previousWorkflow.name})
+has just changed status to Completed for the following job(s):
+
+Project: {project.url}
+{jobInfo}
+File: {job.name}
+Changed to: {previousWorkflow.name} - {job.status}
+Language: {job.sourceLang} -&gt; {job.targetLang}
+Due: {job.dateDue}
+{/jobInfo}
+
+Job in the preceding workflow step still not completed? Read more:
+http://support.memsource.com/topic/preceding-workflow-step-not-completed
+
+Let me know, if you have any questions.
+
+Best regards,
+
+{sender.firstName} {sender.lastName}
+{sender.email}
+
+P.S. This email was generated automatically.</pre>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

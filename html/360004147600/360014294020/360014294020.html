@@ -1,0 +1,121 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>Email templates are used for the automatic notification of users such as notifying Linguists or Vendors about new jobs or notifying Project Managers when a job is marked as Completed.</p>
+<p>Template macros can be used the emails and CC or BCC email addresses can be added to send a copy to other users.</p>
+<p>To modify an email templates, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-45d0114d-7333-1233-2ea4-02f1a8545f2e_procedure-idm231833910771214"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012954060/15edf6daa3fd82.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Administration</span> section and click on <span class="guilabel">Email Templates</span>.</p>
+<p>The <span class="guimenu">Email Templates</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click on the name of a template.</p>
+<p>The <span class="guimenu">Edit Email Template</span> page opens.</p>
+</li>
+<li class="step">
+<p>Modify the template as required and click <span class="guilabel">Save</span>.</p>
+<p>The changes are applied to the selected template.</p>
+</li>
+</ol>
+</div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-45d0114d-7333-1233-2ea4-02f1a8545f2e" id="UUID-45d0114d-7333-1233-2ea4-02f1a8545f2e_UUID-e7b7a7d6-8db1-1940-524e-ae4ec2875252"></a>Supported Macros</h2></div></div>
+<div class="panel-body collapse" id="UUID-45d0114d-7333-1233-2ea4-02f1a8545f2e_UUID-e7b7a7d6-8db1-1940-524e-ae4ec2875252_body">
+<p>These can be used in <a class="link" href="#UUID-45d0114d-7333-1233-2ea4-02f1a8545f2e" title="Email Templates">email templates</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079-Automation-Widget" target="_blank" rel="noopener">Automation Widget</a> templates.</p>
+<p>Some macros are specific and can be used only in specific templates and in specific places. Test templates before using.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>{linguist.email}</p></li>
+<li class="listitem"><p>{linguist.firstName}</p></li>
+<li class="listitem"><p>{linguist.lastName}</p></li>
+<li class="listitem"><p>{linguist.userName}</p></li>
+<li class="listitem"><p>{sender.email}</p></li>
+<li class="listitem"><p>{sender.firstName}</p></li>
+<li class="listitem"><p>{sender.lastName}</p></li>
+<li class="listitem"><p>{sender.timezone}</p></li>
+<li class="listitem"><p>{sender.userName}</p></li>
+<li class="listitem"><p>{recipient.email}</p></li>
+<li class="listitem"><p>{recipient.firstName}</p></li>
+<li class="listitem"><p>{recipient.lastName}</p></li>
+<li class="listitem"><p>{recipient.timezone}</p></li>
+<li class="listitem"><p>{recipient.userName}</p></li>
+<li class="listitem"><p>{vendor.name}</p></li>
+<li class="listitem"><p>{buyer.name}</p></li>
+<li class="listitem"><p>{jobs.count}</p></li>
+<li class="listitem"><p>{job.number}</p></li>
+<li class="listitem"><p>{jobs.newStatus}</p></li>
+<li class="listitem"><p>{job.status}</p></li>
+<li class="listitem"><p>{job.wordCount}</p></li>
+<li class="listitem"><p>{project.id}</p></li>
+<li class="listitem"><p>{project.internalId}</p></li>
+<li class="listitem"><p>{project.client}</p></li>
+<li class="listitem"><p>{project.domain}</p></li>
+<li class="listitem"><p>{project.name}</p></li>
+<li class="listitem"><p>{project.owner}</p></li>
+<li class="listitem"><p>{project.owner.email}</p></li>
+<li class="listitem"><p>{project.status}</p></li>
+<li class="listitem"><p>{project.url}</p></li>
+<li class="listitem"><p>{quote.confirmUrl}</p></li>
+<li class="listitem"><p>{quote.price}</p></li>
+<li class="listitem"><p>{quote.targetLang}</p></li>
+<li class="listitem"><p>{automationWidget.submissionDate} | (previously: {instantQuote.submissionDate})</p></li>
+<li class="listitem"><p>{automationWidget.quote} | (previously: {instantQuote.price})</p></li>
+<li class="listitem"><p>{automationWidgetUser.email} | (previously: {instantQuoteUser.email})</p></li>
+<li class="listitem"><p>{automationWidgetPage.id} | (previously: {instantQuotePage.id})</p></li>
+<li class="listitem"><p>{automationWidgetPage.url} | (previously: {instantQuotePage.url})</p></li>
+<li class="listitem"><p>{jobBoardPosting.title}</p></li>
+<li class="listitem"><p>{jobBoardPosting.sourceLang}</p></li>
+<li class="listitem"><p>{jobBoardPosting.targetLang}</p></li>
+<li class="listitem"><p>{jobBoardPosting.wordsCount}</p></li>
+<li class="listitem"><p>{jobBoardResponse.wordRate}</p></li>
+<li class="listitem"><p>{jobBoardPosting.subject}</p></li>
+<li class="listitem"><p>{jobBoardPosting.dateClosed}</p></li>
+<li class="listitem"><p>{jobBoardPosting.dateDelivery}</p></li>
+<li class="listitem"><p>{jobBoardPosting.url}</p></li>
+<li class="listitem"><p>{jobBoardResponse.targetLang}</p></li>
+<li class="listitem"><p>{jobBoardResponse.url}</p></li>
+<li class="listitem"><p>{jobBoardResponse.name}</p></li>
+<li class="listitem"><p>{jobBoardResponse.email}</p></li>
+<li class="listitem"><p>{jobBoardResponse.total}</p></li>
+<li class="listitem"><p>{jobBoardResponse.profileUrl}</p></li>
+<li class="listitem"><p>{jobBoardResponse.note}</p></li>
+<li class="listitem"><p>{job.previousWorkflow.dateDue}</p></li>
+<li class="listitem"><p>{workflow.abbr}</p></li>
+<li class="listitem"><p>{workflow.name}</p></li>
+<li class="listitem"><p>{previousWorkflow.name}</p></li>
+<li class="listitem"><p>{system.url.passwordReset}</p></li>
+<li class="listitem"><p>{system.url}</p></li>
+<li class="listitem">
+<p>Macros related to translation jobs:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>{jobInfo}</p></li>
+<li class="listitem"><p>File: {job.name}</p></li>
+<li class="listitem"><p>Wordcount: {job.wordCount}</p></li>
+<li class="listitem"><p>Language: {job.sourceLang} -&amp;gt; {job.targetLang}</p></li>
+<li class="listitem"><p>Due: {job.dateDue}</p></li>
+<li class="listitem"><p>{/jobInfo}</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>Macros related to Automation Widgets Default Project name:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>{order.number}</p></li>
+<li class="listitem"><p>{order.email}</p></li>
+<li class="listitem"><p>{order.date}</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>Macros related to quotes:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>{quote.id}</p></li>
+<li class="listitem"><p>{quote.url}</p></li>
+<li class="listitem"><p>{quote.status}</p></li>
+<li class="listitem"><p>{quote.name}</p></li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

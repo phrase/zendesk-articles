@@ -1,0 +1,37 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Launched automatically.</p></li>
+<li class="listitem"><p>This email is sent when a Vendor replies to a job board offering.</p></li>
+</ul></div>
+<p>Type:</p>
+<pre class="programlisting"> New response from Job board 
+</pre>
+<p>Suggested name:</p>
+<pre class="programlisting"> New Response from Job Board (en) 
+</pre>
+<p>Suggested subject:</p>
+<pre class="programlisting"> Job Board: New Response to {jobBoardPosting.title}  
+</pre>
+<p>Suggested body:</p>
+<pre class="programlisting">Dear {recipient.firstName},
+
+You have received a new response from the Memsource job board.
+
+Project: {project.url}
+Target language: {jobBoardResponse.targetLang}
+All responses: {jobBoardResponse.url}
+
+Applicant name: {jobBoardResponse.name}
+Email: {jobBoardResponse.email}
+Wordcount: {jobBoardPosting.wordsCount}
+Word rate: {jobBoardResponse.wordRate}
+Total for the job: {jobBoardResponse.total}
+CV or LinkedIn profile: {jobBoardResponse.profileUrl}
+Note: {jobBoardResponse.note}
+
+To contact the applicant, simply reply to this email.
+
+To find out more about the job board, visit:
+<a class="link" href="http://wiki.memsource.com/wiki/Job_Board" target="_blank" rel="noopener">http://wiki.memsource.com/wiki/Job_Board</a></pre>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

@@ -1,0 +1,46 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Launched manually by a Project Manager by clicking on <span class="guilabel">Tools</span> and selecting <span class="guimenu">Email...</span> in a project, or sent automatically upon the creation of a new job that has the <span class="guimenu">Notify Linguist </span>option enabled.</p></li>
+<li class="listitem"><p>This email is sent to the Linguist(s) or Vendor(s), giving notification regarding the availability of new translation job(s).</p></li>
+</ul></div>
+<p>Type:</p>
+<pre class="programlisting">Job assigned</pre>
+<p>Suggested name:</p>
+<pre class="programlisting">New Work (en)
+</pre>
+<p>Suggested subject:</p>
+<pre class="programlisting">New Work
+</pre>
+<p>Suggested body:</p>
+<pre class="programlisting">Dear {linguist.firstName},
+
+We have new work for you:
+
+{jobInfo}
+File: {job.name}
+Language: {job.sourceLang} -&gt; {job.targetLang}
+Due: {job.dateDue}
+{/jobInfo}
+
+Sign in to MemSource to get started:
+{project.url}
+
+Let me know, if you have any questions.
+
+Best regards, 
+
+{sender.firstName} {sender.lastName}
+{sender.email}
+
+----------------------------------------------------------
+
+Getting Started Guide for Linguists:
+http://wiki.memsource.com/wiki/Getting_Started_Linguists
+
+Sign in at: {system.url}
+Username: {linguist.userName}
+
+If you do not have a password already, create it by clicking on this link:
+{system.url.passwordReset}</pre>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

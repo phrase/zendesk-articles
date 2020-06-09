@@ -1,0 +1,29 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>When a new user is added to an organization, an email will be sent to them automatically which contains their username and a link for creating a password. However, a Project Manager can also launch it manually by selecting a user in the Users page and clicking on the <span class="guilabel">Email login</span> button.</p></li>
+<li class="listitem"><p>An email with the user's username and the login link is sent. The user then generates a new password with the link provided.</p></li>
+</ul></div>
+<p>Type:</p>
+<pre class="programlisting">Login Info</pre>
+<p>Suggested name:</p>
+<pre class="programlisting">Login info (en)</pre>
+<p>Suggested subject:</p>
+<pre class="programlisting">Your Memsource Login Info</pre>
+<p>Suggested body:</p>
+<pre class="programlisting">Dear {recipient.firstName},
+
+I have created a user account for you in Memsource Cloud and this is
+your login info:
+
+Username: {recipient.userName}
+Sign in at: {system.url.passwordReset}
+(This will start the process of password creation.)
+
+Let me know, if you have any questions.
+
+Best regards,
+
+{sender.firstName} {sender.lastName}
+{sender.email}</pre>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
