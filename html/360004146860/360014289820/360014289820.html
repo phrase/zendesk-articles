@@ -1,0 +1,43 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>SDLXLIFF is an XML based file format specially developed for use in SDL Trados Studio. The files are bilingual and contain both the source and target document text.</p>
+<p>Importing SDLXLIFF files into a Memsource project is not recommended. These formats are proprietary and are best translated by SDL software. There may be minor or even major incompatibilities when translating Trados bilingual files in non-Trados software.</p>
+<p>Example:</p>
+<div class="informalexample">
+<a id="UUID-f72cef2c-af2e-4804-ef22-489628169886_example-idm231832069552275"></a><p>SDL Studio allows users to lock segments and tags to prevent any changes to them. If imported into Memsource, a file with locked segments or tags will trigger the warning <span class="guimenu">The file contains incorrectly locked tags. Modifying/adding locked tags may result in the SDLXLIFF becoming invalid</span>. If the file is to be translated in Memsource, it is recommended to do so without tags. The tags can be identified by performing a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800-Quality-Assurance-Overview" target="_blank" rel="noopener">QA check</a> with the <span class="guimenu">Expand Tags</span> option and if removed should allow SDL Studio to open the file.</p>
+</div>
+<p>Features of Memsource such as pseudo-translation checks are also lost when translating SDLXLIFF files.</p>
+<h3>
+<a id="UUID-f72cef2c-af2e-4804-ef22-489628169886_bridgehead-idm231825021122866"></a>File Types</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>.SDLXLIFF</p></li></ul></div>
+<h3>
+<a id="UUID-f72cef2c-af2e-4804-ef22-489628169886_bridgehead-idm231825021536098"></a>Import Options</h3>
+<p>Source and target language codes of the SDLXLIFF file must match exactly with the language codes the project. If the SDLXLIFF file has <span class="emphasis"><em>en-US</em></span> as a target language, <span class="emphasis"><em>English-United States</em></span> must be selected for the project target language and not <span class="emphasis"><em>English</em></span>. If not exact, Trados Studio may not process the file correctly.</p>
+<p>Only SDLXLIFF files from the target directory can be imported to and translated in Memsource. SDLXLIFF files from a source directory do not contain required information for translation. When imported, these files will not segment properly and exported translated files will be empty.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+<p><span class="guimenu">Save Confirmed Segments to TM on import</span></p>
+<p>Segments imported as <span class="emphasis"><em>Confirmed</em></span> are saved to the project <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279-Translation-Memories-Overview" target="_blank" rel="noopener">translation memory</a> in Write mode.</p>
+</li></ul></div>
+<h3>
+<a id="UUID-f72cef2c-af2e-4804-ef22-489628169886_bridgehead-idm231832044948669"></a>Import Segment Rules</h3>
+<p>Adding rules changes the default import settings. Rules can be combined or added and can be applied using the available form or manually. Custom SDLXLIFF states are supported. Separating arguments by a comma creates the <code class="code">AND</code> logical relationship, while a new line creates the <code class="code">OR</code> logical relationship.</p>
+<p>By default , all SDLXLIFF trans-units are imported. The status of all segments after import is not confirmed nor locked.</p>
+<p><span class="bold bold"><strong>Custom Import Settings</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Do not import segment when</p></li>
+<li class="listitem"><p>Set segment confirmed when</p></li>
+<li class="listitem"><p>Set segment confirmed when</p></li>
+</ul></div>
+<h3>
+<a id="UUID-f72cef2c-af2e-4804-ef22-489628169886_bridgehead-idm231832048089458"></a>Export Attributes Mapping</h3>
+<p>Adding rules changes the default import settings. Rules can be combined or added and can be applied using the available form or manually. Custom SDLXLIFF states are supported.</p>
+<p>By default, all SDLXLIFF trans-units in the exported target file will look identical to the source excepting that the target will be translated. To change the SDLXLIFF states, segment statuses can be mapped to SDLXLIFF states.</p>
+<p>If a source SDLXLIFF trans-unit is split into two or more segments these segments will have the attributes of the first segment once exported into target a SDLXLIFF trans-unit.</p>
+<p><span class="bold bold"><strong>Custom Export Settings</strong></span></p>
+<p>Specific target attributes can be mapped based on the following Memsource segment statuses:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Confirmed and locked</p></li>
+<li class="listitem"><p>Confirmed and not locked</p></li>
+<li class="listitem"><p>Not confirmed and locked</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

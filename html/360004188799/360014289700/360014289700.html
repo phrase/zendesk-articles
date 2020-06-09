@@ -1,0 +1,280 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>The regular expression (abbreviated as regex or regexp) is a sequence of characters that form a search pattern, mainly for use in pattern-matching with strings or string-matching. Functionality is similar to <span class="emphasis"><em>find and replace</em></span> operations with more complexity and specificity. See the <a class="link" href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="noopener">wikipedia</a> entry for a detailed description of Regexp and a table of used characters.</p>
+<p>Regexps can be used in the <span class="guimenu">Search and Replace</span> fields in the Memsource Editor for the <span class="guimenu">Convert to tags</span> feature in File Import Settings and for customizing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744119-Segmentation-Rules-Overview" target="_blank" rel="noopener">segmentation rules</a>.</p>
+<div dir="ltr" class="important">
+<h3 class="title">Important</h3>
+<p>Memsource supports <a class="link" href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html" target="_blank" rel="noopener">Java regexp</a>, but will reject complex regular expressions to protect the system from overload. Complex regexps are those with quantifiers (except possessives) on groups which contain other quantifiers (except possessives).</p>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-87e6e457-5857-dcdb-6fe6-6b9a9d323d91"></a>General Examples</h2></div>
+<p>Examples for converting text into tags when importing files and also for using regexp in the Memsource Editor for Search and Replace functions:</p>
+<div class="informaltable table-responsive"><table>
+<thead><tr>
+<th><p>Example</p></th>
+<th><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>&lt;[^&gt;]+&gt;</p></td>
+<td><p>represents &lt;html_tag&gt;</p></td>
+</tr>
+<tr>
+<td><p>\{[^\}]+\}</p></td>
+<td><p>represents {variable},</p></td>
+</tr>
+<tr>
+<td><p>\[[^\]]+\]</p></td>
+<td><p>represents [variable],</p></td>
+</tr>
+<tr>
+<td><p>\[\[.+?\]\]</p></td>
+<td><p>represents [[aa[11]bb]].</p></td>
+</tr>
+<tr>
+<td><p>\$[^\$]+\$</p></td>
+<td><p>represents $operator_Name1$.</p></td>
+</tr>
+<tr>
+<td><p>\d+</p></td>
+<td><p>represents numbers. Also, [0-9]+</p></td>
+</tr>
+<tr>
+<td><p>[A-Za-z0-9]</p></td>
+<td><p>represents any alphanumeric character.</p></td>
+</tr>
+<tr>
+<td><p>.+\@.+\..+</p></td>
+<td><p>email address name@domain.com</p></td>
+</tr>
+<tr>
+<td><p>\d{4}[-]\d{2}[-]\d{2}</p></td>
+<td><p>the date 2018-08-01</p></td>
+</tr>
+<tr>
+<td><p>\s$</p></td>
+<td><p>a whitespace at the end of the segment</p></td>
+</tr>
+<tr>
+<td><p>^\s</p></td>
+<td><p>a whitespace at the beginning of the segment</p></td>
+</tr>
+<tr>
+<td><p>\s\s</p></td>
+<td><p>a double whitespace</p></td>
+</tr>
+<tr>
+<td><p>^\d</p></td>
+<td><p>a digit at the beginning of the segment</p></td>
+</tr>
+<tr>
+<td><p>\w+\s\s\w+</p></td>
+<td><p>a double whitespace between words</p></td>
+</tr>
+<tr>
+<td><p>\s\n</p></td>
+<td><p>a newline preceded by any whitespace character</p></td>
+</tr>
+<tr>
+<td><p>\S\n</p></td>
+<td><p>a newline preceded by any non-whitespace character</p></td>
+</tr>
+<tr>
+<td><p>&lt;[^&gt;]+&gt;|\$[^=]+=</p></td>
+<td><p>converts php variables and html code ($svariable['name'] =)</p></td>
+</tr>
+<tr>
+<td><p>^\s*\'[^:]+:</p></td>
+<td><p>converts javascript's field key with added whitespaces at the beginning of the line ( 'key' :)</p></td>
+</tr>
+</tbody>
+</table></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-6d1151fd-a162-9b7e-8a9b-c22c567e8744"></a>TXT Import</h2></div>
+<p>Examples of regular expressions when importing a specific text:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<p><span class="emphasis"><em>## ErrorMessage ##1## The number must be higher then 0. ##Z## </em></span></p>
+<p>To import text between <span class="emphasis"><em>##1##</em></span> and <span class="emphasis"><em>##Z##</em></span> use regexp: <code class="code">(?&amp;lt;=##1## ).*(?= ##Z##)</code></p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>ErrorMessage ("The number must be higher then 0.")</em></span></p>
+<p>To import text between <span class="emphasis"><em>(" and ")</em></span> use regexp: <code class="code">(?&lt;=\(").*(?="\))</code></p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>'errorMessage' = 'The number must be higher than 0.'</em></span> </p>
+<p>To import text after the <span class="emphasis"><em>=</em></span> sign and between <span class="emphasis"><em>' and '</em></span> use regexp: <code class="code">(?&lt;=\= ').*(?=')</code></p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>msgstr ("The number must be higher than 0.")</em></span> </p>
+<p>To import msgstr strings in monolingual PO files using a TXT filter, use regexp: <code class="code">(?&lt;=msgstr ").*(?=")</code></p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em># Note: This is a note</em></span></p>
+<p>To exclude lines starting with <span class="emphasis"><em>#</em></span> use regexp: <code class="code">(^[^#].*)</code></p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>values '126', 'DCeT', 'Text (en)'</em></span></p>
+<p>To import only text in quotes and with <span class="emphasis"><em>(en)</em></span>, such as Text <span class="emphasis"><em>(en)</em></span>' use regexp: <code class="code">(?&lt;=')[^']*\(en\)(?=')</code></p>
+</li>
+</ol></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-3c0ed141-926c-3cd3-e56b-f2b653182605"></a>JSON Import</h2></div>
+<p>JSON structure example:</p>
+<pre class="programlisting">{
+"list": {
+	"id": "1",
+	"value": "text 1 for translation."
+	},
+"text": {
+	"id": "2",
+	"value": "text 2 for translation."
+	},
+"menu": {
+	"id": "3",
+	"value": "text 3 for translation."
+	 },"array": ["blue","green"],"arrays": [{        "color": "blue",        "title": "BLUE"
+         },         {        "color": "green",        "title": "GREEN"         }    ]}</pre>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>for importing every value regardless of the level, use: <code class="code">(^|.*/)value</code></p></li>
+<li class="listitem"><p>for importing only one value from a list use: <code class="code">list/value</code></p></li>
+<li class="listitem"><p>for importing a value from a list and/or menu use, the | (OR) operator: <code class="code">list/value|menu/value</code></p></li>
+<li class="listitem"><p>for importing only the first instance of a value from a menu, use: <code class="code">menu\[1\]/value</code></p></li>
+<li class="listitem"><p>for importing the content of a JSON array following a certain key, use: <code class="code">(^|.*/)array\[.*\]</code></p></li>
+<li class="listitem"><p>to import the content of a specific array of objects, use: <code class="code">(^|.*/)arrays\[.*\].*</code></p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-f74a3109-2a60-d147-e318-472b7108ad58"></a>YAML Import</h2></div>
+<p>YAML flie example:</p>
+<pre class="programlisting">title: A
+text: translate A
+categories:
+  title: B
+  text: translate B
+categories:
+  title: C
+  text: translate C
+categories:
+  content:
+      title: D
+      text: translate D</pre>
+<p>regexp for importing:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>only <span class="emphasis"><em>'translate A'</em></span> : <code class="code">text</code></p></li>
+<li class="listitem"><p>only <span class="emphasis"><em>'translate C'</em></span>: <code class="code">categories\[2\]/text</code></p></li>
+<li class="listitem"><p>only <span class="emphasis"><em>'translate D'</em></span>: <code class="code">categories\[\d+\]/content[\1\]/text</code></p></li>
+<li class="listitem"><p>all text: <code class="code">text|categories\[\d+\]/text|categories\[\d+\]/content[\d+\]/text</code></p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-96a71744-d1ca-a714-0687-c3edcccb3fb7"></a>Segmentation Rules</h2></div>
+<p><a class="link" href="http://okapi.sourceforge.net/Release/Shared/Help/regex.htm" target="_blank" rel="noopener">Okapi</a>, <a class="link" href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html" target="_blank" rel="noopener">Java</a> and <a class="link" href="http://www.regular-expressions.info/unicode.html" target="_blank" rel="noopener">Unicode</a> are used for segmentation rules in SRX files.</p>
+<p>Using regexp in SRX files is complex and at least a basic knowledge of regular expression use is recommended before attempting to work with them.</p>
+<p>Nobreak rules (Abbreviations etc.) and Break rules (End of the sentence with a dot, etc) are in SRX files.</p>
+<div class="informaltable table-responsive"><table>
+<thead><tr>
+<th><p>Example</p></th>
+<th><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>[\p{C}]</p></td>
+<td><p>Invisible control character.</p></td>
+</tr>
+<tr>
+<td><p>[\p{Z}]</p></td>
+<td><p>Whitespace</p></td>
+</tr>
+<tr>
+<td><p>[\p{Lu}]</p></td>
+<td><p>An uppercase letter that has a lowercase variant.</p></td>
+</tr>
+<tr>
+<td><p>[\p{N}]</p></td>
+<td><p>Any kind of numeric character.</p></td>
+</tr>
+<tr>
+<td><p>\Q ... \E</p></td>
+<td><p>Start and end of a quotation - (\QApprox.\E). This is used for Abbreviations.</p></td>
+</tr>
+<tr>
+<td><p>\t</p></td>
+<td><p>Tabulator</p></td>
+</tr>
+<tr>
+<td><p>\n</p></td>
+<td><p>Newline</p></td>
+</tr>
+<tr>
+<td><p>\u2029</p></td>
+<td><p>Paragraph separator</p></td>
+</tr>
+<tr>
+<td><p>\u200B</p></td>
+<td><p>Zero-width space</p></td>
+</tr>
+<tr>
+<td><p>\u3002</p></td>
+<td><p>Ideographic full stop</p></td>
+</tr>
+<tr>
+<td><p>\ufe52</p></td>
+<td><p>Small full stop</p></td>
+</tr>
+<tr>
+<td><p>\uff0e</p></td>
+<td><p>Fullwidth full stop</p></td>
+</tr>
+<tr>
+<td><p>\uff61</p></td>
+<td><p>Halfwidth ideographic full stop</p></td>
+</tr>
+<tr>
+<td><p>\ufe56</p></td>
+<td><p>Small question mark</p></td>
+</tr>
+<tr>
+<td><p>\uff1f</p></td>
+<td><p>Fullwidth question mark</p></td>
+</tr>
+<tr>
+<td><p>\u203c</p></td>
+<td><p>Double exclamation mark</p></td>
+</tr>
+<tr>
+<td><p>\u2048</p></td>
+<td><p>Question exclamation mark</p></td>
+</tr>
+<tr>
+<td><p>\u2762</p></td>
+<td><p>Heavy exclamation mark ornament</p></td>
+</tr>
+<tr>
+<td><p>\u2763</p></td>
+<td><p>Heavy heart exclamation mark ornament</p></td>
+</tr>
+<tr>
+<td><p>\ufe57</p></td>
+<td><p>Small exclamation mark</p></td>
+</tr>
+<tr>
+<td><p>\uff01</p></td>
+<td><p>Fullwidth exclamation mark</p></td>
+</tr>
+</tbody>
+</table></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

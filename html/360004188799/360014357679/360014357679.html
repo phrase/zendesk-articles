@@ -1,0 +1,38 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>Zip files are imported into Memsource with directory structure intact.</p>
+<h3>
+<a id="UUID-8f024270-e427-b27c-acd9-d548869bb57c_bridgehead-idm231833734516105"></a>Importing Zip Files</h3>
+<p>If a zip file is selected as a file for translation, all files with supported file formats are imported into the project. Unsupported file types are ignored with a warning message stating which files were not imported.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>A single file imported from a zip folder is downloaded in the original format, not as a zip file. Any folder structure of the original zip will is lost.</p></li>
+<li class="listitem"><p>Importing a zip file within a zip file is not supported</p></li>
+</ul></div>
+<h3>
+<a id="UUID-8f024270-e427-b27c-acd9-d548869bb57c_bridgehead-idm23183374048163"></a>Downloading Completed Files</h3>
+<p>To download jobs back to a zip file, select all jobs that were in the original zip file, and then click <span class="guilabel">Download</span>.  A zip file with the translated files is created with the folder structure of the original zip file.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Unsupported files are not added to the <span class="emphasis"><em>Completed</em></span> zip file.</p></li>
+<li class="listitem"><p>The Zip option is only be available when multiple files are selected.</p></li>
+<li class="listitem"><p>Single files are not exported as a zip file.</p></li>
+</ul></div>
+<h3>
+<a id="UUID-8f024270-e427-b27c-acd9-d548869bb57c_bridgehead-idm231833743178475"></a>Downloading Completed Files with Multiple Target Languages</h3>
+<p>There are three methods for downloading multiple target languages into a zip file:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p>Leave the default <a class="link" href="https://help.memsource.com/hc/en-us/articles/360002921512-Renaming-Files-and-Analyses" target="_blank" rel="noopener">File Renaming</a> pattern. All target files will be downloaded in the same folder (with specific target suffixes).</p></li>
+<li class="listitem"><p>Disable File Renaming in the Project. Target subfolders are created automatically.</p></li>
+<li class="listitem"><p>Specify a File Renaming pattern with <code class="code">/{targetLang}/</code> as a subfolder.</p></li>
+</ol></div>
+<h3>
+<a id="UUID-8f024270-e427-b27c-acd9-d548869bb57c_bridgehead-idm231833745714633"></a>Character Set</h3>
+<p>It may be necessary to specify the appropriate<a class="link" href="https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers?redirectedfrom=MSDN" target="_blank" rel="noopener"> character set</a> when importing zip files:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Character sets must be specified for text-type file formats such as .txt or .csv files. If not specified, Memsource assumes they are encoded in UTF-8.</p></li>
+<li class="listitem">
+<p>The encoding of file names in zip files should be specified. This may vary from the usual Windows encoding.</p>
+<p>Zip file names are encoded using a different encoding method than the actual files are. For example, IBM852 is typically used for Czech and IBM866 is typically used for Russian on Windows systems. This may vary depending on the producer of the zip file software.</p>
+<p>To select the character set when importing the zip file (creating a new job), click on Character Set - Encoding of the zipped file names and choose the appropriate character set. If the character set is incorrect, some file names (although not the actual files) may be misinterpreted during importation.</p>
+</li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

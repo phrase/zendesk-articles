@@ -1,0 +1,67 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p><span class="guimenu">Context Note</span>, <span class="guimenu">Context Key</span> and <span class="guimenu">Max. target length</span> are not processed files of more than 10 MB.</p>
+<h3>
+<a id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_bridgehead-idm231825021122866"></a>File Types</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>.JSON</p></li></ul></div>
+<h3>
+<a id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_bridgehead-idm231825021536098"></a>Import Options</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="guimenu">Use HTML subfilter</span></p>
+<p>Imports HTML tags contained in the file. Tags can then be used with HTML File Import Settings.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Convert to Memsource tags</span></p>
+<p>Apply <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expressions</a> to converting specified text to tags.</p>
+</li>
+<li class="listitem"><p>Import specific keys only (<a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">use regexp</a>)</p></li>
+<li class="listitem"><p>Exclude specific keys (use <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regexp</a>)</p></li>
+<li class="listitem">
+<p><span class="guimenu">Context note</span></p>
+<p>Matching content is displayed in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872139-Context-Information" target="_blank" rel="noopener">context notes</a>.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Max. target length</span></p>
+<p>Import elements or the maximum target length for each element.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Context key</span></p>
+<p>Constitutes TM context (101% matches) if applicable.</p>
+</li>
+</ul></div>
+<p>Example:</p>
+<p><code class="code">../note</code> and <code class="code">../length</code> used in import settings</p>
+<div class="informalexample">
+<a id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_example-idm231826985539374"></a><p>Settings:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="guimenu">Import specific keys only (use regexp)</span></p>
+<p><code class="code">.*/title|.*/description</code></p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Context note</span></p>
+<p><code class="code">../note</code></p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Max. target length</span></p>
+<p><code class="code">../length</code></p>
+</li>
+</ul></div>
+<pre class="programlisting">{
+"root":
+  [
+	{
+	"title":"text for translation 1",
+	"note": "note for text 1",
+	"length":13
+	},
+	{
+	"description":"text for translation 2",
+	"note": "note for text 2",
+	"length":16
+	}
+  ]
+}</pre>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

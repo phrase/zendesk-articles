@@ -1,0 +1,117 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>Tag content of source file can be visualized in the Editor by clicking <span class="guilabel">Expand Tags</span> under the <span class="guimenu">Tool</span> menu and edited by clicking <span class="keycap"><strong>F2</strong></span>.</p>
+<h3>
+<a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_bridgehead-idm231825021122866"></a>File Types</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>.XLF</p></li>
+<li class="listitem"><p>.XLIFF</p></li>
+<li class="listitem">
+<p><span class="bold bold"><strong>2.0 Only</strong></span></p>
+<p>Files with the file header <code class="code">&lt;xliff version="2.0"&gt;</code></p>
+</li>
+</ul></div>
+<h3>
+<a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_bridgehead-idm231825021536098"></a>Import Options</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="guimenu">Import &lt;note&gt;</span></p>
+<p>Data from the <code class="code">&lt;note&gt;</code> element will be displayed in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872139-Context-Information" target="_blank" rel="noopener">Context</a> window.</p>
+<p>Only a <code class="code">&lt;note&gt;</code> in a <code class="code">&lt;unit&gt;</code> is supported (according to XLIFF 2.0 standards).</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Save Confirmed Segments to TM on import</span></p>
+<p>Segments imported as <span class="emphasis"><em>Confirmed</em></span> are saved to the project <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279-Translation-Memories-Overview" target="_blank" rel="noopener">translation memory</a> in Write mode.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Segment XLIFF</span></p>
+<p>Standard segmentation is applied. If not selected, one element will be one segment. This may result in multiple sentences per segment.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Interpreting linebreak/pagebreak tags</span></p>
+<p>XLIFF linebreak and pagebreak tags create new segments.</p>
+</li>
+<li class="listitem"><p><span class="guimenu">Preserve whitespaces</span></p></li>
+<li class="listitem"><p><span class="guimenu">Copy source to empty target if segment is not imported</span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>2.0 Only</strong></span> <span class="guimenu">Represent text with attribute "translate=no" as non-translatable tags</span></p></li>
+<li class="listitem">
+<p><span class="bold bold"><strong>1.2 Only</strong></span> <span class="guimenu">Context note</span></p>
+<p>Context must be in either trans unit in elements context-group or context with context-type attributes.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>2.0 Only</strong></span> <span class="guimenu">Context key</span></p>
+<p>The context must be in the unit element or unit descendants. The base node (context node) for the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360001569871-XPath" target="_blank" rel="noopener">XPath</a> evaluation is the unit element. The default XPath is: @id.</p>
+</li>
+</ul></div>
+<h3>
+<a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_bridgehead-idm231831914819366"></a>Import Segment Rules</h3>
+<p>Adding rules changes the default import settings. Rules can be combined or added and can be applied using the available form or manually. Custom XLIFF states are supported. Separating arguments by a comma creates the <code class="code">AND</code> logical relationship, while a new line creates the <code class="code">OR</code> logical relationship.</p>
+<p>By default , all XLIFF trans-units are imported. If segmentation is performed, <code class="code">&lt;source&gt;</code> is segmented and <code class="code">&lt;seg-source&gt;</code> is not. The status of all segments after import is not confirmed nor locked.</p>
+<p><span class="bold bold"><strong>Custom Import Settings</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Do not import segment when</p></li>
+<li class="listitem"><p>Set segment confirmed when</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>1.2</strong></span> - Set segment locked when</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>2.0</strong></span> - Set segment confirmed when</p></li>
+</ul></div>
+<h3>
+<a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_bridgehead-idm231831923928425"></a>Export Attributes Mapping</h3>
+<p>Adding rules changes the default import settings. Rules can be combined or added and can be applied using the available form or manually. Custom XLIFF states are supported.</p>
+<p>By default, all XLIFF trans-units in the exported target file will look identical to the source excepting that the target will be translated. To change the XLIFF states, segment statuses can be mapped to XLIFF states.</p>
+<p>Example:</p>
+<div class="informalexample">
+<a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_example-idm231831929530369"></a><p><span class="emphasis"><em>New</em></span> to <span class="emphasis"><em>Translated</em></span> in the exported target XLIFF file.</p>
+</div>
+<p><span class="bold bold"><strong>Custom Export Settings</strong></span></p>
+<p>Specific target attributes can be mapped based on the following Memsource segment statuses:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Confirmed and locked</p></li>
+<li class="listitem"><p>Confirmed and not locked</p></li>
+<li class="listitem"><p>Not confirmed and locked</p></li>
+</ul></div>
+<h3>
+<a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_bridgehead-idm231831930815728"></a>Maximum Target Length</h3>
+<p>When a unit is divided into more segments, all segments will have the same maximum length property. This will be equal to the maximum for the unit.</p>
+<p>In this case, the following warning is returned after import:</p>
+<pre class="programlisting">A unit is split to more segments, the maximum length limit will be checked for each segment separately.</pre>
+<p><span class="bold bold"><strong>1.2</strong></span></p>
+<p>The attribute <code class="code">maxwidth</code> ican be used to specify maximum target length for translation in these conditions:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Maxwidth must be in a trans-unit element (not in a group).</p></li>
+<li class="listitem"><p>Size must be specified in <code class="code">size-unit="char"</code> or <code class="code">size-unit="percent"</code>.</p></li>
+<li class="listitem"><p>Only one segment in the trans-unit element. A warning is displayed if there are more segments in the trans-unit element.</p></li>
+</ul></div>
+<p><span class="bold bold"><strong>2.0</strong></span></p>
+<p>The maximum target length feature is supported only if:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>The file element contains <code class="code">slr:profiles</code> with <code class="code">generalProfile="xliff:codepoints"</code></p></li>
+<li class="listitem"><p>Unit in the file contains the <code class="code">sizeRestriction</code> attribute.</p></li>
+</ul></div>
+<p>The maximum value is then set as the maximum length property of the segment.</p>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df" id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_UUID-b81e49e7-d989-7129-05d3-fc7fb336c296"></a>Application Specific Settings</h2></div>
+<h3>
+<a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_bridgehead-idm23183194610515"></a>Wordpress XML</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="guimenu">XML</span></p>
+<p>XPath</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Elements &amp; attributes</span></p>
+<p><code class="code">//*[local-name()='encoded']|//description|//title</code></p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Elements (processed as HTML)</span></p>
+<p><code class="code">//*[local-name()='encoded']|//description|//title</code></p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Convert to Memsource tags</span></p>
+<p><code class="code">(\[[^\]]++\])++</code></p>
+</li>
+</ul></div>
+<p>Select <span class="guimenu">Preserve whitespaces</span> under <span class="guimenu">HTML</span> settings.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
