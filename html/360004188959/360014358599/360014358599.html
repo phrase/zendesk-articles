@@ -1,0 +1,198 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>XPath stands for XML Path Language. It can be used to navigate through elements and attributes in an XML document. If new to XPATH, please see the <a class="link" href="https://www.w3schools.com/xml/xpath_intro.asp" target="_blank" rel="noopener">XPath Tutorial</a> first and study the official <a class="link" href="https://www.w3.org/TR/1999/REC-xpath-19991116/" target="_blank" rel="noopener">XPATH documentation</a>.</p>
+<p>A subset of XPath 1.0 is supported with the following limitations:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Axis in step</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Supported</strong></span></p>
+<p>ancestor, ancestor-or-self, attribute, child, descendant, descendant-or-self</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Not supported</strong></span></p>
+<p>following, preceding, following-sibling, preceding-sibling, namespace</p>
+</li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>Predicate</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Supported</strong></span></p>
+<p>conditions on current node or ancestor nodes and its properties (attributes, namespaces)</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Not supported (for example)</strong></span></p>
+<p>position number, axis child::, descendant, descendant-or-self, following::, preceding::, following-sibling::, preceding-sibling::, function last()</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+<h3>
+<a id="UUID-54b85556-7db1-26d0-1dc5-0a9c983320f7_bridgehead-idm231832294823822"></a>Basic Rules</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Use <code class="code">/</code> and <code class="code">//</code> in paths</p></li>
+<li class="listitem"><p>Use single quotes <code class="code">‘ ‘</code> in names</p></li>
+<li class="listitem"><p>Use a pipe <code class="code">|</code> for joining the requests</p></li>
+<li class="listitem"><p>Names are case-sensitive: <code class="code">&lt;Body&gt;</code> is different from <code class="code">&lt;body&gt;</code></p></li>
+</ul></div>
+<h3>
+<a id="UUID-54b85556-7db1-26d0-1dc5-0a9c983320f7_bridgehead-idm23183229787838"></a>Examples</h3>
+<p><a class="link" href="https://help.memsource.com/hc/en-us/article_attachments/360015965472/xpath_example1.xml" target="_blank" rel="noopener">XPath Example 1</a> and <a class="link" href="https://help.memsource.com/hc/en-us/article_attachments/360016008671/xpath_example2.xml" target="_blank" rel="noopener">XPath example 2</a> (with namespace) are example files for the following:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<p>Import all elements and all attributes</p>
+<p><code class="code">//* | //@*</code></p>
+</li>
+<li class="listitem">
+<p>Import all elements and the value of attribute1</p>
+<p><code class="code">(&lt;elem1 attribute1="translate" attribute2="Do not translate"/&gt;)</code></p>
+<p><code class="code">//* | //@attribute1</code></p>
+</li>
+<li class="listitem">
+<p>Import all descendants of Child elements</p>
+<p><code class="code">//Child//*</code></p>
+</li>
+<li class="listitem">
+<p>Import an element lis and its descendants only if the attribute translate='true' </p>
+<p><code class="code">(&lt;lis translate="true"&gt;translate this&lt;/lis&gt;&lt;lis translate="false"&gt;do not translate this&lt;/lis&gt;)</code></p>
+<p><code class="code">//lis[@translate='true']/descendant-or-self::*</code></p>
+</li>
+<li class="listitem">
+<p>Import all elements and descendants if the element's attribute is translate='true'</p>
+<p><code class="code">//*[@translate='true']/descendant-or-self::*</code></p>
+</li>
+<li class="listitem">
+<p>Import value of the attribute Text in element Data</p>
+<p><code class="code">&lt;Data Text="Text for translation"&gt;</code></p>
+<p><code class="code">//data/@text</code></p>
+</li>
+<li class="listitem">
+<p>Import the <code class="code">&lt;mT:translation&gt;</code> element and its descendants, except element <code class="code">&lt;mT:ignore&gt;</code></p>
+<p><code class="code">//mT:translation/descendant-or-self::*[not(ancestor-or-self::mT:ignore)]</code></p>
+</li>
+<li class="listitem">
+<p>Exclude all elements with the attribute translate='false'</p>
+<p><code class="code">//*[not(@translate='false')]</code></p>
+</li>
+<li class="listitem">
+<p>Exclude elements 'lis' with the attribute translate='false'</p>
+<p><code class="code">(&lt;lis translate="false"&gt;Do not translate)</code></p>
+<p><code class="code">//*[not(self::lis[@translate='false'])]</code></p>
+</li>
+<li class="listitem">
+<p>Exclude elements 'lis' with the attribute translate='false' and their descentants</p>
+<p><code class="code">(&lt;lis translate="false"&gt;&lt;p&gt;Do not translate)</code></p>
+<p><code class="code">//*[not(ancestor-or-self::lis[@translate='false'])]</code></p>
+</li>
+<li class="listitem">
+<p>Exclude all elements containing 'link'</p>
+<p><code class="code">(&lt;menu1link&gt;&lt;tmenu41link&gt;)</code></p>
+<p><code class="code">//*[not(contains(name(),'link'))]</code></p>
+</li>
+<li class="listitem">
+<p>Exclude all elements if they or their ancestor have an attribute 'lis' containing 'link'</p>
+<p><code class="code">(&lt;ele lis=menu1link&gt;, &lt;mon lis=tmenu41link&gt;)</code></p>
+<p><code class="code">//*[not(ancestor-or-self::node()[contains(@lis, 'link')])]</code></p>
+</li>
+<li class="listitem">
+<p>import elements PT if their parent LANG has the attribute 'updated' with year 2015</p>
+<p><code class="code">(&lt;LANG updated="20150213T121526"&gt;&lt;PT&gt;'</code></p>
+<p><code class="code">//LANG[contains(@updated,'2015')]/PT</code></p>
+</li>
+<li class="listitem">
+<p>Import elements 'Description' and 'Name' only if they are not descendants of elements 'Definitions' or 'Types'</p>
+<p><code class="code">://*[not(ancestor-or-self::*[(name()='Definitions') or (name()='Types')])]/*</code></p>
+<p><code class="code">[(name()='Description') or (name()='Name')]</code></p>
+</li>
+<li class="listitem">
+<p>XML with namespace</p>
+<p><code class="code">&lt;root xmlns:xhtml="http://www.w3.org/1999/xhtml"&gt;&lt;Child&gt;&lt;Text&gt;translate this&lt;/Text&gt;&lt;/Child&gt;</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>import all elements in <code class="code">&lt;Child&gt;</code>:</p>
+<p><code class="code">//*[local-name()='Child']//*</code></p>
+</li>
+<li class="listitem">
+<p>import only elements <code class="code">&lt;Text&gt;</code> in <code class="code">&lt;Child&gt;</code>:</p>
+<p><code class="code">//*[local-name()='Child']/*[local-name()='Text']</code></p>
+</li>
+<li class="listitem">
+<p>import all elements under element <code class="code">&lt;CONTRACT&gt;</code>, if attribute <code class="code">&lt;CATEGORY&gt;</code> in <code class="code">&lt;CONTRACT&gt;</code> has the value <code class="code">&lt;ORIGINAL&gt;</code></p>
+<p><code class="code">://*[local-name()='CONTRACT' and @CATEGORY='ORIGINAL']//*</code></p>
+</li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>XML with namespace and attributes <code class="code">&lt;root&gt; </code><code class="code">xmlns:xhtml="http://www.w3.org/1999/xhtml"&lt;Child translate='1'&gt;translate this&lt;/Child&gt;</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><code class="code">import element &lt;Child&gt; if the attribute translate is 1://*[local-name()="Child"][@*[local-name()='translate']='1']</code></p></li>
+<li class="listitem"><p><code class="code">import all elements with the attribute translate=true://*[@*[local-name()='translate']='true']</code></p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>XML with namespace. Import the element target from element <code class="code">tu</code>, but not when the attribute id contains 'img' or 'extra':</p>
+<div class="orderedlist"><ol class="orderedlist" type="a">
+<li class="listitem">
+<p>File example:</p>
+<p><code class="code">&lt;tu id="pages|content|extra"&gt;&lt;ori xml:lang="en"&gt;Course one&lt;/ori&gt;&lt;target xml:lang="lang"&gt;Course one&lt;/target&gt;&lt;/tu&gt;</code></p>
+</li>
+<li class="listitem">
+<p>XPATH example:</p>
+<p><code class="code">//*[local-name()='tu' and not(contains(@id,'img') or contains(@id,'extra'))]/*[local-name()='target']</code></p>
+</li>
+</ol></div>
+</li>
+<li class="listitem">
+<p>Import all elements except <code class="code">&lt;comment&gt;</code> and <code class="code">&lt;lis&gt;</code> unless <code class="code">&lt;lis translate="true"&gt;</code> and their descendants:</p>
+<p><code class="code">//*[count(ancestor-or-self::node()[(name()='lis' and (not(@translate='true')) ) or name()='comment'])=0]</code></p>
+</li>
+<li class="listitem">
+<p>Import all elements except <code class="code">&lt;comment&gt;</code> and except elements with attribute <code class="code">&lt;... attribute2="Do not translate"&gt;</code> and their descendants:</p>
+<p><code class="code">//*[count(ancestor-or-self::node()[(@attribute2='Do not translate') or name()='comment'])=0]</code></p>
+</li>
+<li class="listitem">
+<p>Import values of attributes <code class="code">varName</code> and <code class="code">glossName</code> but only if their ancestors have attribute <code class="code">attribute1='translate'</code> or <code class="code">attribute1='edit'</code>:</p>
+<p><code class="code">//*[(self::node()[@attribute1='translate' or @attribute1='edit'])]//@*[local-name()='varName' or local-name()='glossName']</code></p>
+</li>
+<li class="listitem">
+<p>Import all elements and attributes except elements with the attribute <code class="code">Name= Back</code>, <code class="code">Menu</code>, or <code class="code">Time</code>:</p>
+<p><code class="code">//*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])] | //@*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])]</code></p>
+<p>In this case it could be better to import all and lock the attributes you don’t want to import (see following points.). Once the segments are Locked, you have to copy source to target in Editor in order to have original transferred to translation.</p>
+</li>
+<li class="listitem">
+<p>Lock all elements with the attribute <code class="code">Name</code> with values: <code class="code">Back</code>, <code class="code">Menu</code>, or <code class="code">Time</code> and their descendants:</p>
+<p><code class="code">//*[@Name='Back' or @Name='Menu' or @Name='Time']/descendant-or-self::*</code></p>
+</li>
+<li class="listitem">
+<p>Lock all attributes of <code class="code">Name</code> with values: <code class="code">Back</code>, <code class="code">Menu</code>, or <code class="code">Time</code> and their descendants</p>
+<p><code class="code">//*[@Name='Back' or @Name='Menu' or @Name='Time']//@*</code></p>
+</li>
+</ol></div>
+<p>Some external <a class="link" href="http://zvon.org/xxl/XPathTutorial/Output/examples.html" target="_blank" rel="noopener">examples</a>.</p>
+<h3>
+<a id="UUID-54b85556-7db1-26d0-1dc5-0a9c983320f7_bridgehead-idm231832347646571"></a>Context Note</h3>
+<p>Context notes can be imported into translated segments.</p>
+<p>There are three examples in this sample:</p>
+<pre class="programlisting">&lt;?xml version-"1.0" encoding="utf-8"?&gt;
+&lt;root&gt;
+&lt;element context1="Note in attribute of parentElement 1 - select ../@context1"&gt;
+&lt;field context2="Note in attribute 1 - select @context2" &gt;for translation1&lt;/field&gt;
+&lt;context3&gt;Note in element 1 - select ../context3&lt;/context3&gt;
+&lt;/element&gt;
+
+&lt;element context1="Note in attribute of parentElement 2"&gt;
+&lt;field context2="Note in attribute 2"&gt;for translation2&lt;/field&gt;
+&lt;context3&gt;Note in element 2&lt;/context3&gt;
+&lt;/element&gt;
+
+&lt;/root&gt;</pre>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Attribute in parent element (context 1): ../@context1</p></li>
+<li class="listitem"><p>Attribute in self element (context2): @context2</p></li>
+<li class="listitem"><p>Sibling element (context 3): ../context3</p></li>
+</ul></div>
+<p>If importing <code class="code">Elements&amp;Attributes: //*</code> the content of the context note will be imported to source segments as well. Exclude the context note elements/attributes from general import in Elements&amp;Attributes.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
