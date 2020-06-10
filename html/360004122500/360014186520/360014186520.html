@@ -4,7 +4,7 @@
 <div class="procedure">
 <a id="UUID-3da21e9f-2799-902c-ee48-0b717924289d_procedure-idm231808187532344"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012745780/15ed75a895376d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">File Renaming</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012987480/15ee07a758bbab.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">File Renaming</span>.</p>
 <p>The <span class="guimenu">File Renaming</span> page opens.</p>
 </li>
 <li class="step">
@@ -17,7 +17,13 @@
 </li>
 <li class="listitem">
 <p><code class="code">{fileName}</code></p>
-<p>Characters can be removed from the original file name by using a character position (starting from 0) to select part of the name. Examples <code class="code">{filename[2:6]}</code> or <code class="code">{filename[0:-3]}</code>.</p>
+<p>Characters can be removed from the original file name by using a character position (starting from 0) to select part of the name. Examples:</p>
+<div class="informalexample">
+<a id="UUID-3da21e9f-2799-902c-ee48-0b717924289d_example-idm231835366247205"></a><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p><code class="code">{filename[2:6]}</code> to keep the 3th to the 7th characters of the file name</p></li>
+<li class="listitem"><p><code class="code">{filename[0:-3]}</code> to cut off the last 2 characters.</p></li>
+</ul></div>
+</div>
 </li>
 <li class="listitem">
 <p><code class="code">{sourceLang}</code></p>
