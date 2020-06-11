@@ -1,0 +1,72 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>Most API calls require an authenticated Memsource user. The APIs do not use any special user accounts. Each API can be called on behalf of any existing user using their username and password.</p>
+<h3>
+<a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837113068445"></a>Token</h3>
+<p>Before calling any API that requires an authenticated user, call the <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/login" target="_blank" rel="noopener">auth/login</a> API to obtain an authentication token. The token is valid for 24 hours and can be used for all subsequent calls. Do not create a new token for every call. The obtained token is used as the query parameter 'token' in API calls.</p>
+<pre class="programlisting">https://cloud.memsource.com/web/api2/v1/auth/whoAmI?token=VrMkqzV4mVPWQelC51Cc5</pre>
+<h3>
+<a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837115452789"></a>OAuth 2.0</h3>
+<p>Use <a class="link" href="https://oauth.net/2/" target="_blank" rel="noopener">OAuth 2.0</a> in applications instead of sending tokens with each call.</p>
+<p>To establish the OAuth 2.0 connection, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_procedure-idm231837123913678"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360013049179/15ee238c63dfcd.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Registered OAuth Apps</span>.</p>
+<p>The <span class="guimenu">Registered OAuth Apps</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create OAuth App</span> page opens.</p>
+</li>
+<li class="step"><p>Provide a <span class="guimenu">Name</span>, <span class="guimenu">Redirect URI</span> (Callback) and an optional <span class="guimenu">Description</span>.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The <span class="guimenu">Registered OAuth Apps</span> page opens with the new connection in the list and an associated <span class="guimenu">Client ID</span>.</p>
+<p>The ID is used in the application that connects to Memsource to establish the connection. It is stored in the Memsource database and is used to pair requests with the proper requester.</p>
+</li>
+<li class="step">
+<p>Use these URLs with the generated Client ID for authorization:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Auth URL</strong></span></p>
+<p><span class="emphasis"><em>https://cloud.memsource.com/web/oauth/authorize</em></span></p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Token URL</strong></span></p>
+<p><span class="emphasis"><em>https://cloud.memsource.com/web/oauth/token</em></span></p>
+</li>
+</ul></div>
+</li>
+<li class="step">
+<p>When authorizing, use the Administrator account to log in and click <span class="guilabel">Allow</span>.</p>
+<p>The application is now linked with Memsource and the authentication API call will not be required.</p>
+</li>
+</ol>
+</div>
+<h3>
+<a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837207461388"></a>Asynchronous APIs</h3>
+<p>Asynchronous APIs should always be preferred to their synchronous counterparts. If calling synchronous APIs, there is a chance of receiving timeout expired responses when processing large batches of files or even a single large file. Synchronous APIs should only be used for small files and small scale Memsource integration.</p>
+<h3>
+<a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837208750473"></a>Polling</h3>
+<p>After calling an asynchronous API, an instant response is received including the identifier request. Use this identifier to check the status of the request by calling <a class="link" href="https://cloud.memsource.com/web/docs/api#tag/Async-Request" target="_blank" rel="noopener">getAsyncRequest</a> and checking the <span class="emphasis"><em>asyncResponse</em></span> field. This polling approach can lead to a number of <span class="emphasis"><em>getAsyncRequest</em></span> calls before receiving an <span class="emphasis"><em>asyncResponse</em></span> that is not null.</p>
+<h3>
+<a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837210920967"></a>Callbacks</h3>
+<p>As a response to the drawbacks of the polling approach to asynchronous requests, support for callbacks in all asynchronous APIs is supported. When calling an asynchronous request, specify a URL (in the <span class="emphasis"><em>callbackUrl</em></span> parameter) that is requested after the work initiated by the asynchronous request is complete.</p>
+<p>Callbacks are requested via HTTP POST calls and the data is passed on in the body encoded as JSON. The JSON object always contains:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Information about the asynchronous request (the same as when calling <span class="emphasis"><em>getAsyncRequest</em></span>).</p></li>
+<li class="listitem"><p>Detailed information about the result of the action such as a full analysis or job details.</p></li>
+</ul></div>
+<pre class="programlisting">{
+   "asyncRequest": {
+       ...
+  }
+ "analyse": {   
+   ...
+  }
+}</pre>
+<p>If a callback URL is not accessible, the request is repeated after 2, 4, 8, 16, and 30 minutes until 10 retries have failed.</p>
+<p>Your callback URL must respond with the 200 OK HTTP status code to be considered successful on our side.</p>
+<p>Callback URL must respond with the 200 OK HTTP status code to be considered successful.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

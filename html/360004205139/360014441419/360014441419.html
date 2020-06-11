@@ -1,0 +1,233 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>Webhooks are arbitrary URLs which handle HTTP POST requests allowing Memsource to notify 3rd-party systems about specified events.</p>
+<p>Memsource monitors if a webhook callback was successfully received. If a webhook reception fails 100 times, it is deactivated with a notification sent to Administrators of the account and the failure is noted on the specific webhook on the <span class="guimenu"><a class="link" href="#UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_UUID-74de1b04-e60d-bca7-f39a-57660b3fdf6b" title="Configure Webhooks">Webhooks</a></span> page..</p>
+<p>Webhooks can be selected for the following events:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Job status changed</p></li>
+<li class="listitem"><p>Job created</p></li>
+<li class="listitem"><p>Job assigned</p></li>
+<li class="listitem"><p>Job due date changed</p></li>
+<li class="listitem"><p>Project created</p></li>
+<li class="listitem"><p>Project status changed</p></li>
+<li class="listitem"><p>Project due date changed</p></li>
+<li class="listitem"><p>Project template created</p></li>
+<li class="listitem"><p>Project template changed</p></li>
+<li class="listitem"><p>Project template deleted</p></li>
+<li class="listitem"><p>Shared project assigned</p></li>
+<li class="listitem"><p>Project metadata updated</p></li>
+<li class="listitem"><p>Pre-translation finished</p></li>
+<li class="listitem"><p>Analysis created</p></li>
+<li class="listitem"><p>Continuous job updated</p></li>
+</ul></div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7" id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_UUID-74de1b04-e60d-bca7-f39a-57660b3fdf6b"></a>Configure Webhooks</h2></div>
+<p>To configure Webhooks, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_procedure-idm231837286887023"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360013049259/15ee238c63dfcd.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Webhooks</span>.</p>
+<p>The <span class="guimenu">Webhooks</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Webhook</span> page opens.</p>
+</li>
+<li class="step"><p>Enter URL.</p></li>
+<li class="step"><p>Select events.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The Webhook is added to the list on the <span class="guimenu">Webhooks</span> page.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7" id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_UUID-a2cea886-52d5-3b3c-f325-c230e74e4951"></a>Webhook Usage Example</h2></div></div>
+<div class="panel-body collapse" id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_UUID-a2cea886-52d5-3b3c-f325-c230e74e4951_body">
+<p>A website called <a class="link" href="https://requestbin.com/" target="_blank" rel="noopener">RequestBin</a> will provide a URL to used when creating a webhook.</p>
+<p>The next time a Job Status is changed or a Job is created in the Memsource account, the URL receives the appropriate response from the system. Actual usage can be more complex and the receiving of the response should be considered a signal for the connected application to perform certain actions.</p>
+<h3>
+<a id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_bridgehead-idm231837298823285"></a>Events</h3>
+<p>Examples of a job status change, a job assignment, job creation and when a job's due date is changed.</p>
+<p><span class="bold bold"><strong>Job status has changed</strong></span></p>
+<pre class="programlisting">{
+"jobParts": [
+  {
+    "id": 9,
+    "uid": "ipmdz5p0sagqcOYaijTZU2",
+    "internalId": "4",
+    "task": "SEfSaenvqFgctE1I0_dc1",
+    "fileName": "en.txt",
+    "targetLang": "af",
+    "workflowLevel": 1,
+    "status": "NEW",
+    "wordsCount": 2,
+    "beginIndex": 0,
+    "endIndex": 1,
+    "isParentJobSplit": false,
+    "dateDue": null,
+    "dateCreated": "2016-11-02T17:06:54Z",
+    "project": {
+      "id": 2
+    },
+    "assignedTo": [
+      {
+        "vendor": {
+          "id": 1,
+          "name": "Abc",
+          "vendorToken": "4-ifos0-CAqPo"
+        }
+      },
+      {
+        "linguist": {
+          "id": 3,
+          "firstName": "Admin",
+          "lastName": "Admin",
+          "userName": "admin",
+          "email": "admin@example.com",
+          "role": "ADMIN",
+          "timezone": "Europe/London",
+          "active": true,
+          "deleted": false,
+          "terminologist": false,
+          "dateCreated": "2016-10-11T07:43:22Z"
+        }
+      }
+    ]
+  }
+],
+"event": "JOB_STATUS_CHANGED"
+}</pre>
+<p><span class="bold bold"><strong>Job Assigned</strong></span></p>
+<pre class="programlisting">{
+"jobParts": [
+  {
+    "id": 9,
+    "uid": "ipmdz5p0sagqcOYaijTZU2",
+    "internalId": "4",
+    "task": "SEfSaenvqFgctE1I0_dc1",
+    "fileName": "en.txt",
+    "targetLang": "af",
+    "workflowLevel": 1,
+    "status": "NEW",
+    "wordsCount": 2,
+    "beginIndex": 0,
+    "endIndex": 1,
+    "isParentJobSplit": false,
+    "dateDue": null,
+    "dateCreated": "2016-11-02T17:06:54Z",
+    "project": {
+      "id": 2
+    },
+    "assignedTo": [
+      {
+        "vendor": {
+          "id": 1,
+          "name": "Abc",
+          "vendorToken": "4-ifos0-CAqPo"
+        }
+      },
+      {
+        "linguist": {
+          "id": 3,
+          "firstName": "Admin",
+          "lastName": "Admin",
+          "userName": "admin",
+          "email": "admin@example.com",
+          "role": "ADMIN",
+          "timezone": "Europe/London",
+          "active": true,
+          "deleted": false,
+          "terminologist": false,
+          "dateCreated": "2016-10-11T07:43:22Z"
+        }
+      }
+    ]
+  }
+],
+"event": "JOB_ASSIGNED"
+}</pre>
+<p><span class="bold bold"><strong>Job Created</strong></span></p>
+<pre class="programlisting">{
+ "jobParts": [
+   {
+     "id": 9,
+     "uid": "ipmdz5p0sagqcOYaijTZU2",
+     "internalId": "4",
+     "task": "SEfSaenvqFgctE1I0_dc1",
+     "fileName": "en.txt",
+     "targetLang": "af",
+     "workflowLevel": 1,
+     "status": "NEW",
+     "wordsCount": 2,
+     "beginIndex": 0,
+     "endIndex": 1,
+     "isParentJobSplit": false,
+     "dateDue": null,
+     "dateCreated": "2016-11-02T17:06:54Z",
+     "project": {
+       "id": 2
+     },
+     "assignedTo": [
+       {
+         "vendor": {
+           "id": 1,
+           "name": "Abc",
+           "vendorToken": "4-ifos0-CAqPo"
+         }
+       },
+       {
+         "linguist": {
+           "id": 3,
+           "firstName": "Admin",
+           "lastName": "Admin",
+           "userName": "admin",
+           "email": "admin@example.com",
+           "role": "ADMIN",
+           "timezone": "Europe/London",
+           "active": true,
+           "deleted": false,
+           "terminologist": false,
+           "dateCreated": "2016-10-11T07:43:22Z"
+         }
+       }
+     ]
+   }
+ ],
+ "event": "JOB_CREATED"
+}</pre>
+<p><span class="bold bold"><strong>Job Due Date Changed</strong></span></p>
+<pre class="programlisting">{
+  "jobParts": [
+    {
+      "id": 127865777,
+      "uid": "ElTXvXnNIHEN2xgL5sU2L2",
+      "internalId": "1",
+      "task": "LvkAHilgobApeoVm_dc4",
+      "fileName": "EU White Paper Edited.doc",
+      "targetLang": "de",
+      "workflowLevel": 1,
+      "status": "NEW",
+      "wordsCount": 204,
+      "beginIndex": 0,
+      "endIndex": 16,
+      "isParentJobSplit": false,
+      "dateDue": "2018-09-11T22:00:00Z",
+      "dateCreated": "2018-09-10T06:25:41Z",
+      "project": {
+        "id": 12277756,
+        "lastWorkflowLevel": 1
+      },
+      "assignedTo": []
+    }
+  ],
+  "event": "JOB_DUE_DATE_CHANGED"
+}</pre>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

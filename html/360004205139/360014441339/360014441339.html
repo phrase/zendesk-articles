@@ -1,0 +1,67 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>Our REST API sees application entities (projects, jobs, settings) as resources that can be retrieved, created, modified, and deleted. </p>
+<p>Every HTTP method represents an action:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>GET</strong></span></p>
+<p>Retrieves a resource, never changing the resource</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>POST</strong></span></p>
+<p>Creates a resource. POST is also used for operations that don’t fit into any of the four operations or have long or complex input—like searching translation memories or creating jobs.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>PUT</strong></span></p>
+<p>Updates the resource. Please note that the whole entity is required with all of its fields, not only those changed; not including it means it should be set to null.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>DELETE</strong></span></p>
+<p>Deletes the resource.</p>
+</li>
+</ul></div>
+<div dir="ltr" class="important">
+<h3 class="title">Important</h3>
+<p>Input and output data are usually in JSON format, UTF-8 encoded. For a file as request body content type <span class="emphasis"><em>application/octet-stream</em></span> or <span class="emphasis"><em>multipart/form-data</em></span> is used.</p>
+</div>
+<p>Entities use a flat structure when possible to maintain good response times. Instead of including whole child objects in answers, references that contain the ID, UID, and a few other attributes are contained. Either <span class="emphasis"><em>IDReference</em></span> or <span class="emphasis"><em>UidReferenc</em></span>e objects to refer to related entities are expected.</p>
+<p>All response lists are paged. Use the parameters <span class="emphasis"><em>pageNumber</em></span> and <span class="emphasis"><em>pageSize</em></span> to retrieve requested data. The maximum page size is 50.</p>
+<h3>
+<a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231835866804993"></a>Documentation</h3>
+<p>OpenAPI 3.0 is used for API documentation. <a class="link" href="https://generator.swagger.io/" target="_blank" rel="noopener">Swagger code generators</a> are recommended for client development.</p>
+<p>Raw documentation files:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://cloud.memsource.com/web/api/docs/json" target="_blank" rel="noopener">JSON</a></p></li>
+<li class="listitem"><p><a class="link" href="https://cloud.memsource.com/web/api/docs/json" target="_blank" rel="noopener">YAML</a></p></li>
+</ul></div>
+<h3>
+<a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231835870021945"></a>API Example</h3>
+<p><span class="bold bold"><strong>Get list of all translation memories</strong></span></p>
+<p><span class="bold bold"><strong>GET</strong></span></p>
+<p><span class="emphasis"><em>/web/api2/v1/transMemories</em></span></p>
+<p><span class="bold bold"><strong>Response</strong></span></p>
+<p>200</p>
+<pre class="programlisting">{    "pageNumber": 0,    "content": [        {            "internalId": 1,            "createdBy": {                "userName": "admin",                "id": "3",                "firstName": "Jan",                "lastName": "Janocko",                "role": "ADMIN",                "email": "jan.janocko@memsource.com"            },            "client": null,            "note": "not necessary to use in TM",            "dateCreated": "2018-01-09T14:07:46+0000",            "id": "1",            "targetLangs": [                "es",                "it"            ],            "subDomain": null,            "businessUnit": {                "id": "1",                "name": "First BU"            },            "sourceLang": "en",            "domain": null,            "name": "My new TM"        }    ],    "numberOfElements": 1,    "totalElements": 1,    "pageSize": 50,    "totalPages": 1}</pre>
+<p><span class="bold bold"><strong>Create new a translation memory</strong></span></p>
+<p><span class="bold bold"><strong>POST</strong></span></p>
+<p><span class="emphasis"><em>/web/api2/v1/transMemories</em></span></p>
+<pre class="programlisting">{{"name": "My new TM","sourceLang": "en","targetLangs": ["es", "it-IT"],"businessUnit": {"id": "1"},"note": "not necessary to use in TM"}</pre>
+<p><span class="bold bold"><strong>Response</strong></span></p>
+<p>201</p>
+<pre class="programlisting">{    "internalId": 1,    "createdBy": {        "userName": "admin",        "id": "3",        "firstName": "J",        "lastName": "Jan",        "role": "ADMIN",        "email": "jan.j@memsource.com"    },    "client": null,    "note": "not necessary to use in TM",    "dateCreated": "2018-01-09T14:07:46+0000",    "id": "1",    "targetLangs": [        "es",        "it"    ],    "subDomain": null,    "businessUnit": {        "id": "1",        "name": "First BU"    },    "sourceLang": "en",    "domain": null,    "name": "My new TM"}</pre>
+<h3>
+<a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231835873449365"></a>Error Handling</h3>
+<p>If there is a problem when handling an API request, the following <span class="emphasis"><em>JSON</em></span> structure will be returned. The error code will always be present; the detailed description may be null.</p>
+<pre class="programlisting">{ "errorCode": "InvalidArguments","errorDescription": "Required argument \"password\" of type \"string\" is missing."}</pre>
+<p>An error response can be detected by reading the HTTP status code of the response. If an error occurs, it will never be set to <span class="emphasis"><em>2xx</em></span>. The status code is 400 bad request, 401 or 403 for authentication or authorization problems. See the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360001418551-Memsource-Legacy-API-Error-Codes" target="_blank" rel="noopener">list of error codes</a> for details.</p>
+<h3>
+<a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231835875909314"></a>Reporting Problems</h3>
+<p>When reporting problem to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360029992831-Memsource-Technical-Support-Policy#contacting-support-0-3" target="_blank" rel="noopener">Memsource Technical Support</a>, includes the following in the report:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>API endpoint</p></li>
+<li class="listitem"><p>Request</p></li>
+<li class="listitem"><p>Time (and timezone)</p></li>
+<li class="listitem"><p>Response</p></li>
+<li class="listitem"><p>Memsource-Action-ID of the response</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
