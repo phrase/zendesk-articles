@@ -30,6 +30,7 @@
 <p>There are online <a class="external text" href="http://zvon.org/xxl/XPathTutorial/Output/examples.html" rel="nofollow">examples</a> which can help you to understand XPath better.</p>
 <p>For example, files in the attachment include XPath Example 1 and XPath example 2 (with namespace).</p>
 <ol>
+<ol>
 <li>
 <strong>Import all elements and all attributes</strong>
 <p>//* | //@*</p>
@@ -81,7 +82,7 @@
 <p>//LANG[contains(@updated,'2015')]/PT</p>
 </li>
 <li>
-<strong>Import elements 'Description' and 'Name' only if they are not descendants of elements 'Definitions' or 'Types':</strong><br><br>//*[not(ancestor-or-self::*[(name()='Definitions') or (name()='Types')])]/*[(name()='Description') or (name()='Name')]</li>
+<strong>Import elements 'Description' and 'Name' only if they are not descendants of elements 'Definitions' or 'Types':</strong><br> <br> //*[not(ancestor-or-self::*[(name()='Definitions') or (name()='Types')])]/*[(name()='Description') or (name()='Name')]</li>
 <li>
 <strong>XML with namespace</strong> &lt;root xmlns:xhtml="<a class="external free" href="http://www.w3.org/1999/xhtml" rel="nofollow">http://www.w3.org/1999/xhtml</a>"&gt; &lt;Child&gt;&lt;Text&gt;translate this&lt;/Text&gt;&lt;/Child&gt;
 <ul>
@@ -128,22 +129,16 @@
 <p>//*[count(ancestor-or-self::node()[(name()='lis' and (not(@translate='true')) ) or name()='comment'])=0]</p>
 </li>
 <li>
-<strong>Import all elements except &lt;comment&gt; and except elements with attribute &lt;... attribute2="Do not translate"&gt; and their descendants</strong>:<br><br>//*[count(ancestor-or-self::node()[(@attribute2='Do not translate') or name()='comment'])=0]<br><br>
-</li>
+<strong>Import all elements except &lt;comment&gt; and except elements with attribute &lt;... attribute2="Do not translate"&gt; and their descendants</strong>:<br> <br> //*[count(ancestor-or-self::node()[(@attribute2='Do not translate') or name()='comment'])=0]</li>
 <li>
-<strong>Import values of attributes 'varName' and 'glossName' but only if their ancestors have attribute attribute1='translate' or attribute1='edit'</strong>:<br><br>//*[(self::node()[@attribute1='translate' or @attribute1='edit'])]//@*[local-name()='varName' or local-name()='glossName']<br><br>
-</li>
+<strong>Import values of attributes 'varName' and 'glossName' but only if their ancestors have attribute attribute1='translate' or attribute1='edit'</strong>:<br> <br> //*[(self::node()[@attribute1='translate' or @attribute1='edit'])]//@*[local-name()='varName' or local-name()='glossName']</li>
 <li>
-<strong>Import all elements and attributes except elements with the attribute Name= Back, Menu, or Time<br></strong> <br>//*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])] | //@*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])]</li>
+<strong>Import all elements and attributes except elements with the attribute Name= Back, Menu, or Time<br></strong><br> //*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])] | //@*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])]</li>
 </ol>
-<dl>
-<dd>
-<dl>
-<dd>In this case it could be better to import all and lock the atributes you don’t want to import (see following points.). Once the segments are Locked, you have to copy source to target in Editor in order to have original transferred to translation.</dd>
-</dl>
-</dd>
-</dl>
-<ul>
+</ol>
+<p>In this case it could be better to import all and lock the atributes you don’t want to import (see following points.). Once the segments are Locked, you have to copy source to target in Editor in order to have original transferred to translation.</p>
+<ol>
+</ol><ul>
 <li>
 <strong>Lock all elements with the attribute Name with values: Back, Menu, or Time and their descendants</strong>
 <p>//*[@Name='Back' or @Name='Menu' or @Name='Time']/descendant-or-self::*</p>
@@ -153,6 +148,7 @@
 <p>//*[@Name='Back' or @Name='Menu' or @Name='Time']//@*</p>
 </li>
 </ul>
+
 <h2><span id="Multilingual_XML_with_namespace" class="mw-headline">Multilingual XML with Namespace</span></h2>
 <p>If your multilingual XML contains namespace,  the xpath could be the following: </p>
 <p><img class="img450" src="https://pages.memsource.com/hc/MultiXML_XPATH.png"></p>
