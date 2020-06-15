@@ -40,18 +40,91 @@
 <p><span class="emphasis"><em>/web/api2/v1/transMemories</em></span></p>
 <p><span class="bold bold"><strong>Response</strong></span></p>
 <p>200</p>
-<pre class="programlisting">{    "pageNumber": 0,    "content": [        {            "internalId": 1,            "createdBy": {                "userName": "admin",                "id": "3",                "firstName": "Jan",                "lastName": "Janocko",                "role": "ADMIN",                "email": "jan.janocko@memsource.com"            },            "client": null,            "note": "not necessary to use in TM",            "dateCreated": "2018-01-09T14:07:46+0000",            "id": "1",            "targetLangs": [                "es",                "it"            ],            "subDomain": null,            "businessUnit": {                "id": "1",                "name": "First BU"            },            "sourceLang": "en",            "domain": null,            "name": "My new TM"        }    ],    "numberOfElements": 1,    "totalElements": 1,    "pageSize": 50,    "totalPages": 1}</pre>
+<pre class="programlisting">{
+    "pageNumber": 0,
+    "content": [
+        {
+            "internalId": 1,
+            "createdBy": {
+                "userName": "admin",
+                "id": "3",
+                "firstName": "Jan",
+                "lastName": "Janocko",
+                "role": "ADMIN",
+                "email": "jan.janocko@memsource.com"
+            },
+            "client": null,
+            "note": "not necessary to use in TM",
+            "dateCreated": "2018-01-09T14:07:46+0000",
+            "id": "1",
+            "targetLangs": [
+                "es",
+                "it"
+            ],
+            "subDomain": null,
+            "businessUnit": {
+                "id": "1",
+                "name": "First BU"
+            },
+            "sourceLang": "en",
+            "domain": null,
+            "name": "My new TM"
+        }
+    ],
+    "numberOfElements": 1,
+    "totalElements": 1,
+    "pageSize": 50,
+    "totalPages": 1
+}</pre>
 <p><span class="bold bold"><strong>Create new a translation memory</strong></span></p>
 <p><span class="bold bold"><strong>POST</strong></span></p>
 <p><span class="emphasis"><em>/web/api2/v1/transMemories</em></span></p>
-<pre class="programlisting">{{"name": "My new TM","sourceLang": "en","targetLangs": ["es", "it-IT"],"businessUnit": {"id": "1"},"note": "not necessary to use in TM"}</pre>
+<pre class="programlisting">{{
+"name": "My new TM",
+"sourceLang": "en",
+"targetLangs": [
+"es", "it-IT"
+],
+"businessUnit": {
+"id": "1"
+},
+"note": "not necessary to use in TM"
+}</pre>
 <p><span class="bold bold"><strong>Response</strong></span></p>
 <p>201</p>
-<pre class="programlisting">{    "internalId": 1,    "createdBy": {        "userName": "admin",        "id": "3",        "firstName": "J",        "lastName": "Jan",        "role": "ADMIN",        "email": "jan.j@memsource.com"    },    "client": null,    "note": "not necessary to use in TM",    "dateCreated": "2018-01-09T14:07:46+0000",    "id": "1",    "targetLangs": [        "es",        "it"    ],    "subDomain": null,    "businessUnit": {        "id": "1",        "name": "First BU"    },    "sourceLang": "en",    "domain": null,    "name": "My new TM"}</pre>
+<pre class="programlisting">{
+    "internalId": 1,
+    "createdBy": {
+        "userName": "admin",
+        "id": "3",
+        "firstName": "J",
+        "lastName": "Jan",
+        "role": "ADMIN",
+        "email": "jan.j@memsource.com"
+    },
+    "client": null,
+    "note": "not necessary to use in TM",
+    "dateCreated": "2018-01-09T14:07:46+0000",
+    "id": "1",
+    "targetLangs": [
+        "es",
+        "it"
+    ],
+    "subDomain": null,
+    "businessUnit": {
+        "id": "1",
+        "name": "First BU"
+    },
+    "sourceLang": "en",
+    "domain": null,
+    "name": "My new TM"
+}</pre>
 <h3>
 <a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231835873449365"></a>Error Handling</h3>
 <p>If there is a problem when handling an API request, the following <span class="emphasis"><em>JSON</em></span> structure will be returned. The error code will always be present; the detailed description may be null.</p>
-<pre class="programlisting">{ "errorCode": "InvalidArguments","errorDescription": "Required argument \"password\" of type \"string\" is missing."}</pre>
+<pre class="programlisting">{ "errorCode": "InvalidArguments",
+"errorDescription": "Required argument \"password\" of type \"string\" is missing."
+}</pre>
 <p>An error response can be detected by reading the HTTP status code of the response. If an error occurs, it will never be set to <span class="emphasis"><em>2xx</em></span>. The status code is 400 bad request, 401 or 403 for authentication or authorization problems. See the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360001418551-Memsource-Legacy-API-Error-Codes" target="_blank" rel="noopener">list of error codes</a> for details.</p>
 <h3>
 <a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231835875909314"></a>Reporting Problems</h3>
