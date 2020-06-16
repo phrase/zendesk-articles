@@ -34,8 +34,9 @@
 <li class="listitem"><p><a class="link" href="https://cloud.memsource.com/web/api/docs/json" target="_blank" rel="noopener">YAML</a></p></li>
 </ul></div>
 <h3>
-<a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231835870021945"></a>API Example</h3>
-<p><span class="bold bold"><strong>Get list of all translation memories</strong></span></p>
+<a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231835870021945"></a>API Examples</h3>
+<h4>
+<a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231845921497415"></a>Get list of all translation memories</h4>
 <p><span class="bold bold"><strong>GET</strong></span></p>
 <p><span class="emphasis"><em>/web/api2/v1/transMemories</em></span></p>
 <p><span class="bold bold"><strong>Response</strong></span></p>
@@ -76,7 +77,8 @@
     "pageSize": 50,
     "totalPages": 1
 }</pre>
-<p><span class="bold bold"><strong>Create new a translation memory</strong></span></p>
+<h4>
+<a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231845923274198"></a>Create new a translation memory</h4>
 <p><span class="bold bold"><strong>POST</strong></span></p>
 <p><span class="emphasis"><em>/web/api2/v1/transMemories</em></span></p>
 <pre class="programlisting">{{
@@ -118,6 +120,34 @@
     "sourceLang": "en",
     "domain": null,
     "name": "My new TM"
+}</pre>
+<h4>
+<a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231845923919876"></a>Adding Files When Creating a Job</h4>
+<p>Add this file to the body of the request as a binary attachment. Ensure Memsource and the Content-Disposition headers are correctly inserted.</p>
+<p>Sample PHP from Postman:</p>
+<pre class="programlisting">&lt;?php
+
+$request = new HttpRequest();
+$request-&gt;setUrl('https://cloud.memsource.com/web/api2/v1/projects/%7BUID%20of%20your%20project%7D/jobs');
+$request-&gt;setMethod(HTTP_METH_POST);
+
+$request-&gt;setQueryData(array(
+'token' =&gt; 'Your token goes here'
+));
+
+$request-&gt;setHeaders(array(
+'postman-token' =&gt; 'ABC',
+'cache-control' =&gt; 'no-cache',
+'content-disposition' =&gt; 'filename*=UTF-8''Sample.txt',
+'memsource' =&gt; '{\\"targetLangs\\":[\\"de\\",\\"fr\\",\\"es\\"],\\"callbackUrl\\":\\"https://my-shiny-service.com/consumeCallback\\",\\"importSettings\\":{\\"uid\\":\\"WF0T1SfSHxII09yKr0dZh9\\"}}'
+));
+
+try {
+$response = $request-&gt;send();
+
+echo $response-&gt;getBody();
+} catch (HttpException $ex) {
+echo $ex;
 }</pre>
 <h3>
 <a id="UUID-04fdc2ea-b0a9-7508-637c-da6b33d527ec_bridgehead-idm231835873449365"></a>Error Handling</h3>
