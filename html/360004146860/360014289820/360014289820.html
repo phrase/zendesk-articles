@@ -3,7 +3,7 @@
 <p>Importing SDLXLIFF files into a Memsource project is not recommended. These formats are proprietary and are best translated by SDL software. There may be minor or even major incompatibilities when translating Trados bilingual files in non-Trados software.</p>
 <p>Example:</p>
 <div class="informalexample">
-<a id="UUID-f72cef2c-af2e-4804-ef22-489628169886_example-idm231832069552275"></a><p>SDL Studio allows users to lock segments and tags to prevent any changes to them. If imported into Memsource, a file with locked segments or tags will trigger the warning <span class="guimenu">The file contains incorrectly locked tags. Modifying/adding locked tags may result in the SDLXLIFF becoming invalid</span>. If the file is to be translated in Memsource, it is recommended to do so without tags. The tags can be identified by performing a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800-Quality-Assurance-Overview" target="_blank" rel="noopener">QA check</a> with the <span class="guimenu">Expand Tags</span> option and if removed should allow SDL Studio to open the file.</p>
+<a id="UUID-f72cef2c-af2e-4804-ef22-489628169886_example-idm231832069552275"></a><p>SDL Studio allows users to lock segments and tags to prevent any changes to them. If imported into Memsource, a file with locked segments or tags will trigger the warning <span class="guimenu">The file contains incorrectly locked tags. Modifying/adding locked tags may result in the SDLXLIFF becoming invalid</span>. If the file is to be translated in Memsource, it is recommended to do so without tags. The tags can be identified by performing a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800-Quality-Assurance-Overview" target="_blank" rel="noopener">QA check</a> with the <span class="guimenu">Expand Tags</span> option and if removed, should allow SDL Studio to open the file.</p>
 </div>
 <p>Features of Memsource such as pseudo-translation checks are also lost when translating SDLXLIFF files.</p>
 <h2>
@@ -20,12 +20,12 @@
 <h3>
 <a id="UUID-f72cef2c-af2e-4804-ef22-489628169886_bridgehead-idm231832044948669"></a>Import Segment Rules</h3>
 <p>Adding rules changes the default import settings. Rules can be combined or added and can be applied using the available form or manually. Custom SDLXLIFF states are supported. Separating arguments by a comma creates the <code class="code">AND</code> logical relationship, while a new line creates the <code class="code">OR</code> logical relationship.</p>
-<p>By default , all SDLXLIFF trans-units are imported. The status of all segments after import is not confirmed nor locked.</p>
+<p>By default , all SDLXLIFF trans-units are imported. The status of all segments after import is neither confirmed nor locked.</p>
 <p><span class="bold bold"><strong>Custom Import Settings</strong></span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Do not import segment when</p></li>
 <li class="listitem"><p>Set segment confirmed when</p></li>
-<li class="listitem"><p>Set segment confirmed when</p></li>
+<li class="listitem"><p>Set segment locked when</p></li>
 </ul></div>
 <h3>
 <a id="UUID-f72cef2c-af2e-4804-ef22-489628169886_bridgehead-idm231832048089458"></a>Export Attributes Mapping</h3>
