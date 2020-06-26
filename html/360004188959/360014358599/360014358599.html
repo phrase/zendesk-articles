@@ -159,8 +159,8 @@
 <li class="listitem">
 <p>Import all elements and attributes except elements with the attribute <code class="code">Name= Back</code>, <code class="code">Menu</code>, or <code class="code">Time</code>:</p>
 <p><code class="code">//*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])] | //@*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])]</code></p>
-<p>In this case it could be better to import all and lock the attributes you don’t want to import (see following points.). Once the segments are Locked, you have to copy source to target in Editor in order to have original transferred to translation.</p>
-</li>
+<p>In this case it may be better to import all and lock the attributes not required for import. Once segments are Locked, copy source to target in the editor in order to have the original transferred to translation.</p>
+<div class="orderedlist"><ol class="orderedlist" type="a">
 <li class="listitem">
 <p>Lock all elements with the attribute <code class="code">Name</code> with values: <code class="code">Back</code>, <code class="code">Menu</code>, or <code class="code">Time</code> and their descendants:</p>
 <p><code class="code">//*[@Name='Back' or @Name='Menu' or @Name='Time']/descendant-or-self::*</code></p>
@@ -168,6 +168,8 @@
 <li class="listitem">
 <p>Lock all attributes of <code class="code">Name</code> with values: <code class="code">Back</code>, <code class="code">Menu</code>, or <code class="code">Time</code> and their descendants</p>
 <p><code class="code">//*[@Name='Back' or @Name='Menu' or @Name='Time']//@*</code></p>
+</li>
+</ol></div>
 </li>
 </ol></div>
 <p>Some external <a class="link" href="http://zvon.org/xxl/XPathTutorial/Output/examples.html" target="_blank" rel="noopener">examples</a>.</p>
