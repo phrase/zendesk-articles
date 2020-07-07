@@ -1,0 +1,18 @@
+<p>There are several ways that morphology of the term can be handled in Memsource Termbase:</p>
+<ol>
+<li>Using Fuzzy or Exact match</li>
+<li>Separating stem of the word</li>
+<li>Using synonyms</li>
+</ol>
+<p><img class="img350" title="Term with Exact TB match" src="https://pages.memsource.com/hc/TB_term_attributes.png" alt="terms attributes"></p>
+<h2>Fuzzy Match Type</h2>
+<p>When the match type is <strong>Fuzzy</strong>, a suffix can be appended to a word and it will still get matched. For example:<em> "car"</em> will also match <em>"cars"</em>,<em> "game"</em> will also match <em>"games"</em>, etc. This is a simple morphology of added characters. This works well for words such as "agreement" since Memsource will also match longer words, like "agreements" to this term. The suffix can be 5 characters long. For agglutinative languages (Finnish, Turkish, Inuktitut, etc.), the suffix can be up to 20 characters long.</p>
+<p>By default, new terms will have their match type set to <strong>Fuzzy.</strong></p>
+<h2>Exact Match Type</h2>
+<p>Using a fuzzy match might not be suitable for some words, such as <em>"contract"</em> because<em> "contractor"</em> would be then incorrectly matched as well, so this term would be better with<em> Exact Match</em> settings<br> <br>The <em>Exact Match</em> is also recommended for abbreviation, for instance "AN" you may want to use an Exact match and also select the checkbox to make it Case sensitive. Then it will only match "AN" exactly, and not "an", "and" or "AND".</p>
+<h2>Terms with Rich Morphology</h2>
+<p>To improve matching for terms with rich morphology (for instance when part of the word changes), a boundary between the word stem (the part that does not change) and the suffix (the part that does change) can be defined by inserting a pipe character ("|"). This is especially useful for words whose endings can change. For example:<em> "biolog|y"</em> will also match <em>"biologic"</em>.</p>
+<h2>Synonyms</h2>
+<p>For some terms, the fuzzy or the stem mark will not work. For example "<em>leaf"</em> and "<em>leaves"</em> cannot be matched in one term. In such case, it is possible to use synonyms (see <a href="https://help.memsource.com/hc/en-us/articles/115003681851-Term-Bases#Create_a_New_Term_concept" target="_self">Create New Term Concept</a> for more details).</p>
+<p>For example creating term <em>"contract</em>" and its synonym<em> "contracts" </em>and setting them both to <strong>Exact</strong> match will recognize both forms of the word while ignoring the <em>"contractor"</em> that would be recognized with <strong>Fuzzy</strong> match.</p>
+<p><img class="img250" title="Adding synonym to a term" src="https://pages.memsource.com/hc/TB_add_term_synonym.png" alt="Adding synonym to a term"> </p>

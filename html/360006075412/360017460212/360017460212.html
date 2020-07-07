@@ -1,0 +1,58 @@
+<h2>Context of the segment</h2>
+<p>When working with 101% matches from a TM, it is possible to choose what context will be saved with each segment. This context then can be used to determine if the match in TM is 101% (in-context match) with the translated text or only 100% (the source text is a match, but the context of the new text is different. This is important when the context of the segment results in two different translation of the same original text.</p>
+<p>Example of context: female 'Project manager' is translated differently than male 'Project manager'. Both translations will be saved to the Translation memory and offered as 101% match only if the surrounding segments will also match.</p>
+<p><img class="img550" title="the same source with different context and two translations" src="https://pages.memsource.com/hc/TM_context_example.png"></p>
+<h2>3 Types of Context</h2>
+<ol>
+<li>Generally, the <em><strong>previous and next segments</strong></em> are saved with the translated segment.</li>
+<li>However, in some file formats, the <em><strong>segment key</strong></em> is more important than context (YAML, JSON, etc.).</li>
+<li>In some other cases, you might choose to ignore the context completely and save the segments with <em><strong>no context</strong></em>.</li>
+</ol>
+<p>The type of context which will be saved with the segment to your translation memory is set in the <strong>File Import Settings</strong> when the job is imported. Every file can be imported with different settings, which means that your translation memory can contain segments with different types of context.</p>
+<h2>File Import Settings</h2>
+<p>The <strong>Context and Optimization</strong> feature is set for each file imported as a new job in the <strong>File Import Settings</strong>. Please see our article on <a href="https://help.memsource.com/hc/en-us/articles/360002825692" rel="noopener">Creating a new job</a> for more details.</p>
+<p><img class="img350" title="TM Match Context and Optimization" src="https://pages.memsource.com/hc/FIS_TM_Match_Context.png" alt="FIS_TM_Match_Context.png"></p>
+<h3>Context Type</h3>
+<p><img class="img350" title="types of TM Match Context" src="https://pages.memsource.com/hc/FIS_TM_Match_ContextType.png" alt="FIS_TM_Match_ContextType.png"></p>
+<ul>
+<li>
+<strong>Automatic:</strong> The context type will be selected automatically based on the file type.</li>
+<ul>
+<li>Files imported with the context type "Segment Key": ANDROID_STRING, CHROME_JSON, DESKTOP_ENTRY, DTD, JAVA PROPERTIES, JOOMLA_INI, JSON*, MAC_STRINGS, MOZILLA_PROPERTIES, PHP, PLIST, PO (gettext), RESJSON, RESX, TS, XML_PROPERTIES, YAML*</li>
+<li>Other formats will be imported with the context type "Previous and next segment"</li>
+</ul>
+<li>
+<strong>Previous and next:</strong> Both the previous and next segment will be saved as context.</li>
+<li>
+<strong>Segment key:</strong> The segment key or the segment ID will be saved as context. This can be specified for the above mentioned "Segment key" file formats and also customized for:</li>
+<ul>
+<li>CSV, XML, Multilingual XML and Multilingual MS Excel files.</li>
+</ul>
+<li>
+<strong>No context: </strong>No context will be saved and translation will be always overwritten by the newest version.</li>
+</ul>
+<p>* See <a href="https://help.memsource.com/hc/en-us/articles/115003483412">Memsource Limits</a> for the context limits in YAML and JSON files.</p>
+<h3>TM Matching Optimization</h3>
+<p>The translation memory match can be further optimized for the imported jobs in the <strong>File Import Settings</strong>.</p>
+<p><img class="img350" title="TM Match Optimization" src="https://pages.memsource.com/hc/FIS_TM_MatchOptimization.png" alt="FIS_TM_MatchOptimization.png"></p>
+<ul>
+<li>
+<strong>P</strong><strong>revious O</strong><strong>R next segment context as 101%</strong>
+</li>
+<ul>
+<li>If a match with the TM context has the same previous <strong>or</strong> next segment, it will be offered as a 101% match. Otherwise, it will require both the previous <strong>and</strong> next segment to match.</li>
+</ul>
+<li>
+<strong>Ignore tag metadata </strong>(enabled by default)</li>
+<ul>
+<li>If the tag's metadata in the job is different then tag metadata in the TM, the difference will be ignored, the tag metadata from the job's original segment will be automatically added to the job's translated segment.</li>
+</ul>
+<li><strong>Penalize multiple 101% TM matches by 1%</strong></li>
+<ul>
+<li>Generally, the newest 101% match is found and displayed, but with this option, when more then one 101% with a different target (translation) is found, then all 101% matches are displayed as 100% with an arrow signaling the penalization.</li>
+<li>
+<strong>In Pre-translate:</strong> when the Pre-translation threshold is set to 101%, segments with multiple matches will not be pre-translated.</li>
+<li>
+<strong>In Analysis:</strong> segments with multiple 101% matches will be counted as 100% matches.</li>
+</ul>
+</ul>

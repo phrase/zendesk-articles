@@ -1,0 +1,48 @@
+<p>Data can be imported into a Memsource <a href="https://help.memsource.com/hc/en-us/articles/115003692212-Translation-Memories">translation memory</a>. To do this, open the <em>Translation Memories </em>page, select your TM, and click on the <strong>Import</strong> button.</p>
+<p>Supported file types:</p>
+<ol>
+<li>
+<strong>TMX </strong>- a standard exchange format supported by most CAT tools.</li>
+<li>
+<strong>MXLIFF</strong> - a special Memsource bilingual XLIFF.</li>
+<li>
+<strong>XLS</strong> - a specially formatted Excel file.</li>
+<li>
+<strong>SDL WorldServer XLIFF</strong> - available only for import, not for export.</li>
+</ol>
+<h2>Import Options</h2>
+<p>Once you click the<strong> Import </strong>button, you'll see a <em>File </em>field that you can use to drag and drop files to and a <strong>Browse </strong>button. You'll also see three checkboxes: <strong>Remove tags, Strict locale matching, </strong>and <strong>Ignore not confirmed segments.</strong></p>
+<p><img class="img350" title="Import external content to TM" src="https://pages.memsource.com/hc/TM_import.png" alt="TM_import"></p>
+<p><strong>Remove tags</strong> will remove all of the tags that were imported from TMX files. However, the special Memsource tags ({1} or &lt;2}) in XLSX and MXLIFF files will be preserved.</p>
+<p><strong>Strict locale matching</strong> will prevent the importing of a language if it has a different locale than the project. For instance, a file with an "EN_US" designation will not be imported into a TM with an "EN" designation.</p>
+<p>Selecting <strong>Ignore not confirmed segments (MXLIFF)</strong> applies only to import of MXLIFF and it will ensure that segments that were not confirmed in the MXLIFF file will not be imported into the TM.</p>
+<h2>Adding, Skipping, and Overwriting Segments:</h2>
+<p>When importing content into a TM that already contains segments, these segments will either be added as new segments, overwrite existing segments, or skipped altogether. If a segment has the same source, target, and context as a pre-existing segment, the new segment will be skipped and not added to the Memsource TM. If the new segment has the same source and context, but with a different target than another segment, the new segment will overwrite the pre-existing segment. All other segments will simply be added to the translation memory.</p>
+<h2>TM Import Errors</h2>
+<p>At times, you may receive an error during a TM import. By far, the most frequent reasons for import errors are non-corresponding languages, illegal characters, or other similar irregularities in the file which you attempted to import. There is also a limit to a size of the file (1GB). Please check your file to ensure the languages in your TM match with the languages in your project and that the formatting for each language is set up correctly.<br> <br> <img class="img450" title="An error message of the last import" src="https://pages.memsource.com/hc/TM_import_error_message.png" alt="TM_import_error_message"></p>
+<h2>TMX Import</h2>
+<p>In order to successfully use a TMX file, it has to match the source language of the translation memory and at least one of its target languages. When a TMX file includes multiple target languages, only those present in the translation memory will be imported. The TMX file version should be 1.4 or 1.4b, although Memsource should be able to import other versions as well.</p>
+<h3>SDL TMX Import</h3>
+<p>Using a TMX that has been exported from SDL Trados is supported in Memsource, but only <a href="https://help.memsource.com/hc/en-us/articles/360014670152">certain attributes</a> will be imported into your Memsouce TM. Please also note that the following changes will occur:</p>
+<ul>
+<li>"creationdate" will be converted to "created_at"</li>
+<li>"creationid" will be converted to "created_by"</li>
+<li>"changedate" will be converted to "modified_at"</li>
+<li>"changeid" will be converted to "modified_by"</li>
+</ul>
+<p><strong>Important:</strong> The attributes "created_by" and "modified_by" are connected to the Memsource Users database, and only Memsource Usernames are supported. If a given username does not correspond with a Memsource Username, the field will be imported to the TM as empty.</p>
+<h3>Worldserver TMX Import</h3>
+<p>A TMX created in Worldserver is also supported in Memsource with <a href="https://help.memsource.com/hc/en-us/articles/360014670152">limited attributes</a>. In addition, the following changes will occur:</p>
+<ul>
+<li>"creationdate" will be converted to "created_at"</li>
+<li>"changedate" will be converted to "modified_at"</li>
+<li>"x-idiom-source-ipath" will be converted to "file"</li>
+</ul>
+<p><strong>Note:</strong> A segment's context in the WS TMX is coded and therefore can be deduced only to some extent.</p>
+<h2>MXLIFF Import</h2>
+<p>MXLIFF files can be imported into the translation memory via the <strong>Import </strong>button as noted above. However, this import feature has been designed primarily for emergency situations. For example, when it is not possible to upload the MXLIFF back to the job directly via the Upload button in the project or via the Memsource Editor.</p>
+<h2>XLS Import</h2>
+<p>Excel files (XLS and XLSX) can be directly imported into the translation memory. Excel files should be formatted as lists of plain segments without tags and with the language code at the top of each column.</p>
+<p>Make sure the languages listed in the XLS correspond to the languages in the Memsource translation memory into which you plan to import the Excel file. Use only supported <a title="Supported Languages" href="https://help.memsource.com/hc/en-us/articles/115003929811-Supported-Languages">language codes</a> to identify the languages in your Excel file.</p>
+<p><img class="img250" title="XLSX file prepared for import to TM" src="https://pages.memsource.com/hc/TM_xls_import.png" alt="TM_xls_import"></p>
+<p>The duplicates within an XLSX file will be removed. Please note that segments translated in Memsource are saved to the TM with <a href="https://help.memsource.com/hc/en-us/articles/360017460212-TM-Match-Context-and-Optimization" target="_self">context</a>. Identical segments will not be deduplicated unless they also have the same context.</p>

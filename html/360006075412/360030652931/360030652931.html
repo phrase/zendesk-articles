@@ -1,0 +1,22 @@
+<h2>Analyzing MTQE Results</h2>
+<p>Once <a href="https://help.memsource.com/hc/en-us/articles/360016450971-Machine-Translation-Quality-Estimation-MTQE-" target="_self">MTQE</a> has been enabled and employed as part of your MT process, you may want to measure how accurate the MTQE scores are for your content and engine. While direct comparison between segment-level MTQE scores and post-editing analysis is not available, the following options provide ways for you to evaluate MTQE scores by both quantitative and qualitative measures.</p>
+<h2>Evaluating with Post-editing Analysis</h2>
+<p>The post-editing analysis shows the "editing effort"—that is, how much the Linguist or the Proofreader had to edit the text. For the post-editing analysis in projects with Machine Translation and MTQE, the results are calculated as the difference between the machine translation suggestions and the final text after the post-editing has been done.</p>
+<p><strong>Note:</strong> In order to be able to evaluate the results of the post-editing analysis, you should run a Default Analysis before the first step of the workflow to see how the MT matches are categorized into MTQE bands. To run a default analysis, select the job(s) from the <em>Project</em> page and click the <strong>Analyze</strong> button. Make sure to select <em>Include machine translation matches (Beta)</em> and then click <strong>Analyze.</strong></p>
+<p>To run the Post-editing Analysis, open the project, select one or more jobs, and click on the <strong>Analyze</strong> button. Change the <em>Type </em>to <strong>Post-editing, </strong>and click the <strong>Analyze MT post-editing</strong> checkbox along with other options as desired.</p>
+<p><img class="img450" src="https://pages.memsource.com/hc/PostEditingAnalysis.png"></p>
+<p>If the MT or NT suggestion was accepted without further editing (that is, the Linguist did not need to change it at all), it will come up as a 100% match in the analysis.</p>
+<p>If, on the other hand, the Linguist changes the MT, the match rate will be lower. The more the Linguist changes the segment, the lower the score will be. This is the same score-counting algorithm as the one we use to calculate the score of translation memory fuzzy matches.</p>
+<p><img class="img450" src="https://pages.memsource.com/hc/PostEditingAnalysis__WorkflowSteps.png"></p>
+<p>If your default analysis shows a high number of quality MT matches (75% or above), the post-editing analysis should reflect a correspondingly minimal to moderate amount of edits to the MT suggestions.</p>
+<h2>Evaluating the Segment Changes</h2>
+<p>If you want to dive deeper to evaluate the substance of the changes made during post-editing, you can create a workflow that will generate a report showing the changes on a segment-level. To do this, follow the steps below:</p>
+<ol>
+<li style="font-weight: 400;">Create a project with two Workflow steps (e.g. pre-translation and post-editing).</li>
+<li style="font-weight: 400;">In the first Workflow step, pre-translate the job with only MT. This will give you a snapshot of the matches to be used.</li>
+<li style="font-weight: 400;">In the second Workflow step, let the translator post-edit normally.</li>
+<li style="font-weight: 400;">Once the workflow is completed, you can run the post-editing analysis to see the edit distance between the two steps (the number of changes).</li>
+<li style="font-weight: 400;">To see the different versions of the segments, you can select the relevant jobs, then go to  <strong>Tools </strong>and select <strong>Export Workflow Changes.</strong>
+</li>
+</ol>
+<p><img class="img450" src="https://pages.memsource.com/hc/PostEditingAnalysis__WorkflowSteps.png"></p>

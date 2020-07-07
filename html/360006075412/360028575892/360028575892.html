@@ -1,0 +1,88 @@
+<p>Every term in a term base has a list of attributes that can be exported to or imported from TMX or Excel files. Some of these attributes can be edited directly in the term's setting or edited externally in the Excel or TMX file.</p>
+<p><strong>Note:</strong> The attributes of a term base (Client, Domain, etc.) have no effect on the individual term's attributes.</p>
+<h2>Excel Files</h2>
+<ul>
+<li>
+<strong>CID</strong> - Memsource Concept ID (needed for reimporting updated terms). The <em>term concept</em> includes the source and all its targets and synonyms.</li>
+<li><strong>concept_domain</strong></li>
+<li><strong>concept_subdomain</strong></li>
+<li><strong>concept_url</strong></li>
+<li><strong>concept_definition</strong></li>
+<li><strong>concept_note</strong></li>
+<li>
+<strong>TID</strong> - Memsource Term ID (needed for reimporting updated terms). The ID of the specific term in the specific language.</li>
+<li>
+<strong>{Language code}</strong> - a term's language code based on our <a href="https://help.memsource.com/hc/en-us/articles/115003929811-Supported-Languages">supported languages</a>.</li>
+<li>
+<strong>status</strong> - either <em>New</em> or <em>Approved</em>
+</li>
+<li>
+<strong>forbidden</strong> <em>- True </em>or<em> False</em>
+</li>
+<li>
+<strong>preferred</strong> - <em>True </em>or<em> False</em>
+</li>
+<li>
+<strong>case</strong> - meaning "case sensitive." The case can be either <em>True</em> or <em>False.</em>
+</li>
+<li>
+<strong>exact</strong> - meaning "exact match." This can be either <em>True</em> or<em> False</em>.</li>
+<li>
+<strong>note</strong> - only the target <em>note</em> will be displayed in the Editor</li>
+<li>
+<strong>usage</strong> - only the target usage will be displayed in the Editor</li>
+<li>
+<strong>POS  </strong>- Part of Speech</li>
+<li><strong>gender </strong></li>
+<li><strong>number</strong></li>
+<li><strong>short_translation </strong></li>
+<li><strong>term_type</strong></li>
+<li>
+<strong>created_by </strong> - only Memsource usernames are supported</li>
+<li>
+<strong>created_at</strong> - date and time of the term's creation</li>
+<li>
+<strong>modified_by</strong> - only Memsource usernames are supported</li>
+<li>
+<strong>modified_at</strong> - date and time of the last modification of the term</li>
+</ul>
+<h2>TBX Files</h2>
+<ul>
+<li>
+<strong> &lt;descrip type="conceptId"&gt;</strong> - Memsource Concept ID (needed for reimporting updated terms). The Term concept includes the source and all its targets and synonyms.</li>
+<li><strong>&lt;descrip type="conceptDefinition"&gt;</strong></li>
+<li><strong>&lt;descrip type="conceptDomain"&gt;</strong></li>
+<li><strong>&lt;descrip type="conceptNote"&gt;</strong></li>
+<li><strong>&lt;descrip type="conceptSubdomain"&gt;</strong></li>
+<li><strong>&lt;descrip type="conceptUrl"&gt;</strong></li>
+<li>
+<strong>&lt;langSet xml:lang="cs"&gt; </strong>- a term's language code based on <a href="https://help.memsource.com/hc/en-us/articles/115003929811-Supported-Languages">supported languages</a>.</li>
+<li>
+<strong>&lt;termNote type="termId"&gt;</strong> - Memsource Term ID (needed for reimporting updated terms). This is the ID of the specific term in the specific language.</li>
+<li>
+<strong>&lt;note&gt;</strong> - Term's note</li>
+<li><strong>&lt;termNote type="partOfSpeech"&gt;</strong></li>
+<li><strong>&lt;termNote type="grammaticalGender"&gt;</strong></li>
+<li><strong>&lt;termNote type="grammaticalNumber"&gt;</strong></li>
+<li><strong>&lt;termNote type="usageNote"&gt;</strong></li>
+<li>
+<strong>&lt;termNote type="forbidden"&gt;</strong> True or False</li>
+<li>
+<strong>&lt;termNote type="preferred"&gt;</strong> True or False</li>
+<li>
+<strong>&lt;termNote type="exactMatch"&gt;</strong> True or False</li>
+<li>
+<strong>&lt;termNote type="status"&gt;</strong> New or Approved</li>
+<li>
+<strong>&lt;termNote type="caseSensitive"&gt;</strong> True or False</li>
+<li>
+<strong>&lt;termNote type="createdBy"&gt;</strong> Memsource Username</li>
+<li>
+<strong>&lt;termNote type="createdAt"&gt;</strong> Unix time</li>
+<li>
+<strong>&lt;termNote type="lastModifiedBy"&gt;</strong> Memsource Username</li>
+<li>
+<strong>&lt;termNote type="lastModifiedAt"&gt; </strong>Unix time</li>
+<li><strong>&lt;termNote type="shortTranslation"&gt;</strong></li>
+<li><strong>&lt;termNote type="termType"&gt;</strong></li>
+</ul>

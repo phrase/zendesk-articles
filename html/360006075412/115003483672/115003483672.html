@@ -1,0 +1,45 @@
+<p>Memsource can be used to convert a previously translated text into a translation memory even if it was not translated in any CAT tool. In order to do this, you need to have both the original and the translated files, and they need to be in in the same format. They also need to be in a format that is supported by Memsource. Please see our <a href="https://help.memsource.com/hc/en-us/articles/360000446911-Supported-File-Formats">supported file formats</a>.</p>
+<p>It is possible to align single file pairs or batches of files (in ZIP folders).</p>
+<h2>Aligning Files</h2>
+<p>To launch the alignment dialogue window, select the TM to which you wish to import the content, and then click on the <strong>Align</strong> button.<br> <img class="img350" title="Align files" src="https://pages.memsource.com/hc/TM_align_button.png" alt="Align files"></p>
+<p>You will see two options: <em>1 source + 1 target file... </em>and <em>Multiple files...</em></p>
+<h3>1 Source + 1 Target File</h3>
+<p>Once you click <em>1 source + 1 target file..., </em>you'll see a window that asks you to upload both files.</p>
+<p><strong>Note:</strong> Depending on your settings, you may or may not have the <em>Segmentation rules </em>fields shown below.</p>
+<p><img class="img350" title="Select files for alignment" src="https://pages.memsource.com/hc/TM_align_select_files.png" alt="TM_align_select_files.png"></p>
+<ol>
+<li>Upload the <strong>original file</strong> (must be in the same language as the source language of the TM)</li>
+<li>You can select a <strong>custom segmentation</strong> for the original file if applicable (see more details in our <a href="https://help.memsource.com/hc/en-us/articles/115003483972-Segmentation">Segmentation</a> article).</li>
+<li>Select the <strong>Language</strong> of the translated file (if there is only one target language is available in the TM, it will be pre-selected).</li>
+<li>Upload the <strong>translated file</strong> (must be in the same language as the selected language of the TM)</li>
+<li>You can select a <strong>custom segmentation</strong> for the translated file if applicable.</li>
+<li>Click <strong>Align.</strong>
+</li>
+<li>
+<strong>Download the XLS file</strong> (see instructions below)</li>
+</ol>
+<p><strong>Important:</strong> Make sure you upload your files into the correct places. Memsource doesn't check the actual language of the imported files. If, for example, you upload English text into the Spanish language and vice versa, the alignment will be reversed.</p>
+<h3>Multiple Files</h3>
+<p>This option is useful for aligning multiple files at once. The file pairs (source/target) must have identical names and should be imported in a zip file with folders named <strong>"source"</strong> and <strong>"target"</strong> containing the corresponding files.<br> <img title="ZIP file structure" src="https://pages.memsource.com/hc/TM_align_zip_structure.png" alt="TM_align_zip_structure.png"></p>
+<p>The Align steps are very similar to the <em>1 source + 1 target file...</em> except now you have only one file to upload.</p>
+<ol>
+<li>Upload the <strong>ZIP file</strong>
+</li>
+<li>You can select a <strong>custom segmentation</strong> for the original files if applicable (see more details in our <a href="https://help.memsource.com/hc/en-us/articles/115003483972-Segmentation">Segmentation</a> article).</li>
+<li>Select the <strong>Language</strong> of the translated file (if there is only one target language is available in the TM, it will be pre-selected).</li>
+<li>You can select a <strong>custom segmentation</strong> for the translated files if applicable.</li>
+<li>Click <strong>Align.</strong>
+</li>
+<li>
+<strong>Download the XLS file</strong> (see instructions below)</li>
+</ol>
+<h2>Download the Results as an XLSX File</h2>
+<p>Whether you aligned two files or multiple files, once you click <strong>Align,</strong> the files will be imported into Memsource and segmented. The content will then be aligned and inserted into an XLSX file. This file will be offered for download (or automatically saved, depending on your web browser settings).<br> <img class="img350" title="Download XLSX" src="https://pages.memsource.com/hc/TM_align_download%20XLSX.png" alt="TM_align_download_XLSX.png"></p>
+<p>Save this file into your computer. Then, open it in Microsoft Excel or Libre Office and check the alignment.</p>
+<p>This XLSX file has the structure needed to import it directly into your Memsource TM. There are three columns marking the source language, target language, and the filename of the target file.</p>
+<p>The file can be further edited in MS Excel and then <a href="https://help.memsource.com/hc/en-us/articles/360011103391-Importing-Content-to-a-Translation-Memory">imported into the TM</a> using the <strong>Import</strong> button on the Translation Memory page.</p>
+<p><img class="img450" title="Aligned Excel sample" src="https://pages.memsource.com/hc/TM_align_xlsxSample.png" alt="TM_align_xlsxSample.png"></p>
+<h2>Recommendations</h2>
+<p>We recommend you create a separate translation memory for the aligned segments (it could even be called <em>Aligned TM</em>). This makes it much easier to distinguish between the segments originating from the alignment and the actual translation work.</p>
+<p>Also, you might find that the results of the alignment process are not quite satisfactory. This can be caused for a number of reasons—differences in content, incorrectly set segmentation, inconsistent formatting in the source and target files, etc.</p>
+<p>You can help your translators by adding the aligned Excel file as a reference to the project. This way, if translators get a match for their source text which obviously contains something incorrectly aligned in the target, they can open the MS Excel file attached as a reference. They could then look up the correct result in the target column (it will be located somewhere near the original segment).</p>

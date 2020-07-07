@@ -1,0 +1,27 @@
+<h2>Plural Rules</h2>
+<p>Each language has its own grammatical forms for singular and plural phrases. For example, while English has two forms (“one” and “other”, like “1 file” and “2 files”), other languages have one or even several forms (e.g. “one”, “few”, and “other”). This presents a challenge for localization. To address this, Memsource supports the translation of plural-sensitive strings. These strings must be translated using the plural forms based on the plural rules of the target language. These plural forms have to be defined in the source file.</p>
+<p>For example, the English string “There are %d% items left”, where %d% represents any number except 1, needs to be translated to Czech in two ways—the first for numbers 2, 3 or 4 (i.e. “few”) and the second for numbers 0, 5 and more (i.e. “other”). To learn more about plural rules, please read <a href="http://www.unicode.org/cldr/charts/27/supplemental/language_plural_rules.html" target="_blank" rel="noopener">this article</a>.</p>
+<p><strong>Please note:</strong></p>
+<ul>
+<li>Only PO files with specified plural-sensitive strings are supported at the moment. For more details about this file format, please see our <a href="https://help.memsource.com/hc/en-us/articles/360004660451" target="_self">PO File</a> article. More file formats will be added in the future.</li>
+<li>Currently, only plural rules for cardinal number types are supported.</li>
+</ul>
+<h2>Handling Files with Plural Forms in Memsource</h2>
+<h3>Importing Files into Memsource</h3>
+<p>When importing files with plural-sensitive strings into Memsource, the Segment Key should be used as the context type in the <strong>File Import Settings</strong>: <a href="https://help.memsource.com/hc/en-us/articles/360017460212" target="_self">TM Match Context and Optimization</a>. The language locale and the plural category become part of the context of such strings. This is needed for leveraging translation memory matches, avoiding false positives while running QA, and identifying repetitions.</p>
+<h3>Leveraging TM Matches</h3>
+<p>If there are multiple TM matches where the match percentage is the same and the source is the same, but where the Segment Key context is different, the match with the corresponding plural form will be suggested first in the CAT pane and pre-translated based on the preferences.</p>
+<h3>Quality Assurance Warnings</h3>
+<p>The fact that plural-sensitive strings can have a different context is also taken into account when running QA on a job with plural-sensitive strings. The warning “Identical source but different translation” is not given if segments with plural-sensitive strings (and a different context) are translated in a different way. And the warning “Identical translation but different source” is issued when the same translation is used for the same source with a different context.</p>
+<h3>Identifying Repetitions</h3>
+<p>Plural-sensitive strings which have the same source text are not considered repetitions in Analyses or in the Memsource Editor unless they have the same context.</p>
+<h2>Translating Files with Plural Forms</h2>
+<ul>
+<li>Once a file with plural-sensitive strings is imported into Memsource, the plural-sensitive strings are shown in all their forms, based on the target language plural rules, in separate segments in the Memsource Editor.</li>
+<li>The required plural form for the active segment is shown in the Context Note at the bottom of the Memsource Editor, where the Plural Category and the Plural Examples are specified.<br> <img class="img550" title="Plural Category and Plural Examples shown in the Context Note window." src="https://pages.memsource.com/hc/Editor_plurarSegmentsContext.png">
+</li>
+<li>The Context Note is always open when these segments are active to show the plural details required so that the translation is correct.</li>
+<li>The segments containing plural-sensitive strings have a blue "P" (for Plural) in the info column and the corresponding tooltip.</li>
+<li>It is possible to filter plural-sensitive segments using the Pluralized filter in the Segment Status filter options. They can also be filtered out using the Not Pluralized filter.</li>
+<li>Plural-sensitive segments cannot be split or joined.</li>
+</ul>

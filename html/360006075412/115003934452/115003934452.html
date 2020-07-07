@@ -1,0 +1,69 @@
+<p>Memsource offers integrations with many machine translation providers. It is possible to use machine translation via the <a href="https://help.memsource.com/hc/en-us/articles/360023356311">Memsource Translate</a> (Beta) solution or by setting up a direct connection with a Third-party MT engine.</p>
+<div class="callout callout--danger callout--dashed">
+<span class="callout__title">Important:</span> <a href="https://help.memsource.com/hc/en-us/articles/360012097192-Microsoft-with-Feedback-Deprecation">Microsoft Translator with Feedback</a> and Manage MT via Memsource have been deprecated.</div>
+<p>To access <strong>Machine Translation Engines settings:</strong></p>
+<ol class="list-colored">
+<li>Click on Setup (<span class="icon-sprite cog"> </span>).</li>
+<li>Scroll down to the <em>Integrations</em> section.</li>
+<li>Click on <em>Machine Translation Engines</em>.</li>
+</ol>
+<p>If purchasing characters directly through Google or Microsoft, set these engines up directly through the providers. </p>
+<p>Free characters provided by Microsoft Translator can still be used by disabling Memsource Translate and setting up the Microsoft Translator account.</p>
+<h2>Monitoring Character Usage</h2>
+<p>The <em>Settings</em> page presents a usage chart for MT engines associated with your account. Data for a specific engine can be viewed by deselecting the names of the other engines at the bottom of the chart. The chart only displays data from the last 30 days.</p>
+<p>By default, Project Managers can only see data related to projects they have created.<br> To see all data from all projects in an organization, have an Admin user follow these steps:</p>
+<ol class="list-colored">
+<li>Click on <strong>Users<br></strong>The list of Users is presented. </li>
+<li>Select the appropriate user and click <strong>Edit.<br></strong>The <em>Edit User</em> page opens.</li>
+<li>Select a viewing option under <em>Homepage Dashboards.</em>
+</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h2>Remaining Characters</h2>
+<p>Remaining characters are presented for all associated MT engines. If more Memsource Translate characters are required, <a href="https://help.memsource.com/hc/en-us/articles/360023356311#Purchasing_Memsource_Translate_Characters" target="_self">purchase more Memsource Translate characters</a>. If more Third-party characters are required, <a href="https://help.memsource.com/hc/en-us/articles/360016450971#Buying_Characters_" target="_self">purchase more MTQE characters</a>. </p>
+<h2>Third-party MT Engines </h2>
+<p>If Memsource Translate is not being used, <a href="https://help.memsource.com/hc/en-us/articles/360010708980-Supported-Third-Party-Machine-Translation-Engines" target="_blank" rel="noopener">Third-party machine translation engines</a> can be accessed via an API. If using Third-party MT in Memsource, ensure the terms and conditions of the given MT provider have been read and understood. </p>
+<p>To set up a new machine translation engine, have an Admin user follow these steps:</p>
+<ol class="list-colored">
+<li>Click on Setup (<span class="icon-sprite cog"> </span>).</li>
+<li>Scroll down to the <em>Integrations</em> section.</li>
+<li>Click on <strong>Machine Translation Engines</strong>.</li>
+<li>Click on <strong>Create</strong>.</li>
+<li>Select MT Engine type from the drop-down list.</li>
+<li>Fill in required fields as per MT Engine type</li>
+<li>Select options (not applicable to all MT Engine types)<br>
+<ul>
+<li>Include Tags </li>
+<li>Make Default</li>
+<li><a href="https://help.memsource.com/hc/en-us/articles/360016450971" target="_blank" rel="noopener">MT Quality Estimation</a></li>
+</ul>
+</li>
+<li>Click <strong>Save.<br></strong>New engine is added to list of <strong>Third-party Machine Translation Engines</strong>.</li>
+</ol>
+<p>Some machine translation engines are not for public use, and some are only accessible in specific Memsource editions. </p>
+<h2><span class="mw-headline">MT Engine Restrictions</span></h2>
+<h3><span id="Apertium" class="mw-headline">Amazon Translate</span></h3>
+<p>Does not support batch pre-translation. <span class="diff-removed">Segment-per-segment pre-translation is supported in the Memsource Editors.</span></p>
+<h3><span id="CrossLang" class="mw-headline">CrossLang</span></h3>
+<p>A proxy that can provide access to multiple MT engines (custom, generic, etc.). Due to engine limitations, does not support batch pre-translation and is not available in real-time mode. </p>
+<h3><span id="Globalese" class="mw-headline">Globalese</span></h3>
+<p>Can only be used for batch pre-translation with a limit of 500 segments in one batch (longer files will be split into multiple batches and sent for the translation separately). Segment-by-segment MT matches are not available.</p>
+<h3><span id="Globalese_NMT_.28Neural_Machine_Translation.29" class="mw-headline">Globalese NMT (Neural Machine Translation)</span></h3>
+<p>Can only be used for batch pre-translation with a limit of 500 segments per batch. (Longer files will be split into multiple batches and sent for the translation separately.) Segment-by-segment MT matches are not available.</p>
+<h3 id="h_8a632237-8e1a-416b-8871-1121a387af8c"><span id="Google_Translate" class="mw-headline">Google Translate</span></h3>
+<p>Google Translate API Key is required. </p>
+<p>Customized NMT models using AutoML Google Translate API are not supported.</p>
+<h3><span class="mw-headline">Jukkou MT </span></h3>
+<p>Only available for real-time translation in the Memsource Editor. Batch pre-translation is not supported.</p>
+<h3><span id="KantanMT" class="mw-headline">KantanMT</span></h3>
+<p>When connecting to the KantanMT engine, the KantanMT engine must be first started by Memsource (unless already running). Results may take a few minutes.</p>
+<h3>Microsoft Custom Translator</h3>
+<p>When creating or editing the Microsoft Custom Translator engine, <a href="https://www.microsoft.com/en-us/translator/business/trial/#get-started">set up an account with Microsoft and obtain an Azure Key</a>.</p>
+<h3 id="h_1cfd7a30-cf00-4c84-b7b2-c0da88268c91"><span id="Microsoft_Translator_.2F_Microsoft_Translator_Hub" class="mw-headline">Microsoft Translator / Microsoft Translator Hub</span></h3>
+<p>When creating or editing the Microsoft Translator <span id="Microsoft_Translator_.2F_Microsoft_Translator_Hub" class="mw-headline"> / Microsoft Translator Hub MT engine</span>, <a href="https://www.microsoft.com/en-us/translator/business/trial/#get-started">set up an account with Microsoft and obtain an Azure Key</a>..  </p>
+<h3><span id="NICT" class="mw-headline">NICT</span></h3>
+<p>Does not support batch pre-translation.</p>
+<h3><span id="Omniscien_Technologies" class="mw-headline">Omniscien Technologies</span></h3>
+<p>Only supported for batch pre-translation. Due to engine limitations, not available in a real-time mode. </p>
+<h3><span id="Tilde_MT" class="mw-headline">Tilde MT</span></h3>
+<p>When connecting to the Tilde MT engine, it must be first started by Memsource (unless already running). Results may take a few minutes.<br> Does not support  batch pre-translation.</p>
