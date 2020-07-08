@@ -1,0 +1,243 @@
+<p>Webhooks allow Memsource to notify 3rd-party systems about specified events. It is an arbitrary URL which handles HTTP POST requests.</p>
+<p>Webhooks can be selected for the following events:</p>
+<ul>
+<li>Job status changed</li>
+<li>Job created</li>
+<li>Job assigned</li>
+<li>Job due date changed</li>
+<li><label for="events-PROJECT_CREATED">Project created</label></li>
+<li><label for="events-PROJECT_STATUS_CHANGED">Project status changed</label></li>
+<li><label for="events-PROJECT_DUE_DATE_CHANGED">Project due date changed</label></li>
+<li>Project template created</li>
+<li>Project template changed</li>
+<li>Project template deleted</li>
+<li><label for="events-SHARED_PROJECT_ASSIGNED">Shared project assigned</label></li>
+<li><label for="events-PROJECT_METADATA_UPDATED">Project metadata updated</label></li>
+<li><label for="events-PRE_TRANSLATION_FINISHED">Pre-translation finished</label></li>
+<li><label for="events-ANALYSIS_CREATED">Analysis created</label></li>
+<li><label for="events-CONTINUOUS_JOB_UPDATED">Continuous job updated</label></li>
+</ul>
+<h2>Configure Webhooks</h2>
+<p>To configure Webhooks, follow these steps:</p>
+<ol class="list-colored">
+<li>From the <em>Setup</em> (<span class="icon-sprite cog"> </span>) page, scroll down to the <em>Integrations</em> section. Click on <strong>Webhooks</strong>.<br> The <em>Webhooks</em> page opens.</li>
+<li>Click <strong>New.<br></strong>The <em>Create Webhook</em> page opens.</li>
+<li>Enter URL.</li>
+<li>Select events.</li>
+<li>Click <strong>Save</strong>.</li>
+<li>The Webhook is added to the list on the <em>Webhooks</em> page.</li>
+</ol>
+<h2>Webhook functionality</h2>
+<p>Requests are treated in the same way as callbacks in <a style="background-color: #ffffff;" href="https://wiki.memsource.com/wiki/Memsource_API#Asynchronous_APIs">asynchronous APIs</a>. A JSON data structure is passed in the body of a POST request.</p>
+<div class="alert alert-green">
+<pre>{
+  event: "JOB_STATUS_CHANGED",
+  jobParts: [
+    ...
+  ]
+}</pre>
+</div>
+<h3>Webhook Errors</h3>
+<p>Memsource monitors if the webhook callback was successfully received. If the webhook reception fails 100 times, it will be automatically deactivated.</p>
+<ul>
+<li>A message will appear in the Memsource UI in <strong>Setup</strong> under <strong>Webhooks</strong>
+</li>
+<li>An email notification will be sent to all Admins of the Memsource account</li>
+</ul>
+<h3>Example</h3>
+<p>For the purpose of this example, we have used a website called <a href="https://requestbin.com/" target="_blank" rel="noopener">RequestBin</a>. The site will provide a URL link that can be used in Memsource Integrations section.<br> <img class="img450" title="Webhook instance in Memsource Setup" src="https://pages.memsource.com/hc/setup_webhook.png" alt="Webhook in Memsource Setup"></p>
+<p>The next time a Job Status is changed or a Job is created in the connected Memsource account, the URL will receive the appropriate response from the system.<br> Please note that this is a simple example of webhooks at work. The actual usage can be more complex and the receiving of the response should be considered a signal for the connected application to perform certain actions.</p>
+<h3><span id="Events" class="mw-headline">Events</span></h3>
+<p>Below, you'll see examples of what it looks like when a job status has changed, when a job has been assigned, when one has been created, and when the due date for a job has been changed.</p>
+<ul>
+<li>Job status has changed</li>
+</ul>
+<div class="alert alert-green">
+<pre>{
+"jobParts": [
+  {
+    "id": 9,
+    "uid": "ipmdz5p0sagqcOYaijTZU2",
+    "internalId": "4",
+    "task": "SEfSaenvqFgctE1I0_dc1",
+    "fileName": "en.txt",
+    "targetLang": "af",
+    "workflowLevel": 1,
+    "status": "NEW",
+    "wordsCount": 2,
+    "beginIndex": 0,
+    "endIndex": 1,
+    "isParentJobSplit": false,
+    "dateDue": null,
+    "dateCreated": "2016-11-02T17:06:54Z",
+    "project": {
+      "id": 2
+    },
+    "assignedTo": [
+      {
+        "vendor": {
+          "id": 1,
+          "name": "Abc",
+          "vendorToken": "4-ifos0-CAqPo"
+        }
+      },
+      {
+        "linguist": {
+          "id": 3,
+          "firstName": "Admin",
+          "lastName": "Admin",
+          "userName": "admin",
+          "email": "admin@example.com",
+          "role": "ADMIN",
+          "timezone": "Europe/London",
+          "active": true,
+          "deleted": false,
+          "terminologist": false,
+          "dateCreated": "2016-10-11T07:43:22Z"
+        }
+      }
+    ]
+  }
+],
+"event": "JOB_STATUS_CHANGED"
+}
+</pre>
+</div>
+<ul>
+<li>Job assigned</li>
+</ul>
+<div class="alert alert-green">
+<pre>{
+"jobParts": [
+  {
+    "id": 9,
+    "uid": "ipmdz5p0sagqcOYaijTZU2",
+    "internalId": "4",
+    "task": "SEfSaenvqFgctE1I0_dc1",
+    "fileName": "en.txt",
+    "targetLang": "af",
+    "workflowLevel": 1,
+    "status": "NEW",
+    "wordsCount": 2,
+    "beginIndex": 0,
+    "endIndex": 1,
+    "isParentJobSplit": false,
+    "dateDue": null,
+    "dateCreated": "2016-11-02T17:06:54Z",
+    "project": {
+      "id": 2
+    },
+    "assignedTo": [
+      {
+        "vendor": {
+          "id": 1,
+          "name": "Abc",
+          "vendorToken": "4-ifos0-CAqPo"
+        }
+      },
+      {
+        "linguist": {
+          "id": 3,
+          "firstName": "Admin",
+          "lastName": "Admin",
+          "userName": "admin",
+          "email": "admin@example.com",
+          "role": "ADMIN",
+          "timezone": "Europe/London",
+          "active": true,
+          "deleted": false,
+          "terminologist": false,
+          "dateCreated": "2016-10-11T07:43:22Z"
+        }
+      }
+    ]
+  }
+],
+"event": "JOB_ASSIGNED"
+}
+</pre>
+</div>
+<ul>
+<li>Job created</li>
+</ul>
+<div class="alert alert-green">
+<pre>{
+ "jobParts": [
+   {
+     "id": 9,
+     "uid": "ipmdz5p0sagqcOYaijTZU2",
+     "internalId": "4",
+     "task": "SEfSaenvqFgctE1I0_dc1",
+     "fileName": "en.txt",
+     "targetLang": "af",
+     "workflowLevel": 1,
+     "status": "NEW",
+     "wordsCount": 2,
+     "beginIndex": 0,
+     "endIndex": 1,
+     "isParentJobSplit": false,
+     "dateDue": null,
+     "dateCreated": "2016-11-02T17:06:54Z",
+     "project": {
+       "id": 2
+     },
+     "assignedTo": [
+       {
+         "vendor": {
+           "id": 1,
+           "name": "Abc",
+           "vendorToken": "4-ifos0-CAqPo"
+         }
+       },
+       {
+         "linguist": {
+           "id": 3,
+           "firstName": "Admin",
+           "lastName": "Admin",
+           "userName": "admin",
+           "email": "admin@example.com",
+           "role": "ADMIN",
+           "timezone": "Europe/London",
+           "active": true,
+           "deleted": false,
+           "terminologist": false,
+           "dateCreated": "2016-10-11T07:43:22Z"
+         }
+       }
+     ]
+   }
+ ],
+ "event": "JOB_CREATED"
+}</pre>
+</div>
+<ul>
+<li>Job due date changed</li>
+</ul>
+<div class="alert alert-green">
+<pre id="req-content" class="ng-binding">{
+  "jobParts": [
+    {
+      "id": 127865777,
+      "uid": "ElTXvXnNIHEN2xgL5sU2L2",
+      "internalId": "1",
+      "task": "LvkAHilgobApeoVm_dc4",
+      "fileName": "EU White Paper Edited.doc",
+      "targetLang": "de",
+      "workflowLevel": 1,
+      "status": "NEW",
+      "wordsCount": 204,
+      "beginIndex": 0,
+      "endIndex": 16,
+      "isParentJobSplit": false,
+      "dateDue": "2018-09-11T22:00:00Z",
+      "dateCreated": "2018-09-10T06:25:41Z",
+      "project": {
+        "id": 12277756,
+        "lastWorkflowLevel": 1
+      },
+      "assignedTo": []
+    }
+  ],
+  "event": "JOB_DUE_DATE_CHANGED"
+}</pre>
+</div>
