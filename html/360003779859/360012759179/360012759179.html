@@ -2,6 +2,34 @@
 <p>Earlier release notes can be found in the <a class="link" href="https://help.memsource.com/hc/en-us/sections/360001176392-Memsource" target="_blank" rel="noopener">archive</a>.</p>
 <div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-8846c8de-6568-d1bd-d204-02bf434cf355"></a>v20.14 - July 28, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-8846c8de-6568-d1bd-d204-02bf434cf355_body">
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview" target="_blank" rel="noopener">Jobs</a> in repositories are now indicated with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360014716459/15f19a637e7edd.svg" style="" alt="source_badge.svg"></span>. Path and connector type are presented in the tooltip.</p></li>
+<li class="listitem"><p>T-3MT has been added to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview" target="_blank" rel="noopener">supported MT engines</a>.</p></li>
+<li class="listitem"><p>Memsource Translate supports domain-based recommendation for more language pairs.</p></li>
+<li class="listitem"><p>MTQE now supports new language pairs.</p></li>
+</ul></div>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong>References</strong></span>: <span class="guimenu">More</span> is now presented as a clickable button for better visibility.</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>API</strong></span>: <span class="emphasis"><em>dateDue</em></span> was not being validated in <span class="emphasis"><em></em></span> <span class="emphasis"><em>editParts</em></span> calls. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106960-Marketo-Connector" target="_blank" rel="noopener">Marketo Connector</a>: Email assets were not visible in the repository. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106900-GitLab-Connector" target="_blank" rel="noopener">GitLab Connector</a>: Deleted jobs are being exported back to the repository. This has been fixed.</p></li>
+<li class="listitem"><p>SDLXLIFF was missing from the dropdown list for File Types when <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#create-a-job-0-1" target="_blank" rel="noopener">creating a new job</a>. This has been fixed.</p></li>
+<li class="listitem"><p>The <span class="guimenu">Light</span> color scheme generated a black highlight field. This has been fixed.</p></li>
+<li class="listitem"><p>Changes to a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289880-YAML" target="_blank" rel="noopener">YAML</a> file within a GIT repository was not correctly reflected in updated jobs. This has been fixed.</p></li>
+<li class="listitem"><p>The <code class="code">{recipient.timezone}</code> macro in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020-Email-Templates-Overview" target="_blank" rel="noopener">email templates</a> was not working correctly. This has been fixed.</p></li>
+<li class="listitem"><p>Cost center and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186440-Business-Units" target="_blank" rel="noopener">Business Unit</a> dropdown lists are not available when creating or editing projects if <span class="guimenu">Modify setup's server settings</span> is disabled. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-438c0ba6-fdbf-b457-38d7-60319f3863d3"></a>v20.13 - July 14, 2020</h2></div></div>
 <div class="panel-body collapse" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-438c0ba6-fdbf-b457-38d7-60319f3863d3_body">
 <h4>
@@ -10,21 +38,28 @@
 <li class="listitem">
 <p><span class="bold bold"><strong>Memsource Translate</strong></span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p>The new version of <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620479-Memsource-Translate" target="_blank" rel="noopener">Memsource Translate</a> comes with several updates. You can now personalize Memsource Translate by adding your own generic and customizable engines from the list of supported engines. Furthermore, Memsource Translate now selects the optimal engine for a given domain as well as language pair for jobs with English source.</p></li>
-<li class="listitem"><p>Supported generic engines: DeepL, Human Science, NpatMT, Yandex</p></li>
-<li class="listitem"><p>Supported customizable engines: Google AutoML, Microsoft Custom Translator, Systran PNMT</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620479-Memsource-Translate" target="_blank" rel="noopener">Memsource Translate</a> can be personalized by adding generic and customizable engines from the list of supported engines.</p></li>
+<li class="listitem"><p>The optimal engine is now selected for a given domain and language pair for jobs with an English source.</p></li>
+<li class="listitem">
+<p>Supported generic engines:</p>
+<p>DeepL, Human Science, NpatMT, Yandex</p>
+</li>
+<li class="listitem">
+<p>Supported customizable engines:</p>
+<p>Google AutoML, Microsoft Custom Translator, Systran PNMT</p>
+</li>
 </ul></div>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Update Source</strong></span></p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>It's possible to update a file previously imported to Memsource and have it pre-translated from project TMs. The older version of the same file is overwritten and cannot be restored. If a file submitted via automation widget is updated, the updated version will be delivered to the submitter. Further details are available <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#job-tools-0-4" target="_blank" rel="noopener">here</a>.</p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Files previously imported to Memsource <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#job-tools-0-4" target="_blank" rel="noopener">can be updated</a> and be pre-translated from project <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279-Translation-Memories-Overview" target="_blank" rel="noopener">TM</a>s. The older version of the same file is overwritten and cannot be restored. If a file submitted via automation widget is updated, the updated version will be delivered to the submitter.</p></li></ul></div>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Recalculate analysis</strong></span></p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Project Manager and Administrators can now manually recalculate word counts when a file is updated and the analysis becomes outdated. An outdated analysis has a warning icon with a tooltip in front of its name. Further details can be found <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview#recalculate-analysis-0-7" target="_blank" rel="noopener">here</a>.</p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Project Managers and Administrators can now <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview#recalculate-analysis-0-7" target="_blank" rel="noopener">manually recalculate</a> word counts when a file is updated and the analysis becomes outdated. An outdated analysis has a warning icon with a tooltip in front of its name.</p></li></ul></div>
 </li>
-<li class="listitem"><p>Project Managers and Administrators can now change the vendor in project templates</p></li>
-<li class="listitem"><p>Alexa Translations A.I. MT engine now supports batch pre-translation</p></li>
+<li class="listitem"><p>Project Managers and Administrators can now change the vendor in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project templates</a>.</p></li>
+<li class="listitem"><p>Alexa Translations A.I. MT engine now supports batch pre-translation.</p></li>
 </ul></div>
 <h4>
 <a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
