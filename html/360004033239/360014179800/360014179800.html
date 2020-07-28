@@ -3,7 +3,7 @@
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95" id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_UUID-c6f85993-1316-4167-bb0f-d4ea3798f0be"></a>Available for</h2></div>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Team, Ultimate and Enterprise editions</p></li></ul></div>
-<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <p>Using the Continuous Job feature, updated versions of an original file from a repository are uploaded to an existing project, overwriting the older version of the same file.</p>
@@ -18,6 +18,20 @@
 <li class="listitem"><p>The target is cleared for segments with the changed source. (The previous translation for confirmed segments isn't lost because it's saved in the translation memory.)</p></li>
 <li class="listitem"><p>Segments deleted from the source file are also deleted from the job in Memsource.</p></li>
 </ul></div>
+<p><span class="bold bold"><strong>Job Status Updates:</strong></span></p>
+<p>When the source file is updated, then:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>If the job status is <span class="emphasis"><em>Completed</em></span> or <span class="emphasis"><em>Delivered</em></span>, the status is updated to <span class="emphasis"><em>Emailed</em></span>.</p></li>
+<li class="listitem"><p>If status is <span class="emphasis"><em>Cancelled</em></span>, job content and status is unchanged.</p></li>
+<li class="listitem"><p>All other statuses stay unchanged.</p></li>
+<li class="listitem">
+<p>If a multi-step workflow is used, the status of each step is treated independently.</p>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<div class="informalexample">
+<a id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_example-idm231918402390748"></a><p>If the first step is <span class="emphasis"><em>Completed</em></span>, and the second <span class="emphasis"><em>Accepted</em></span>, after a file update the first step is set to <span class="emphasis"><em>Emailed</em></span>, while the second remains <span class="emphasis"><em>Accepted</em></span>.</p>
+</div>
+</li>
+</ul></div>
 <p><span class="bold bold"><strong>Exporting Translations Back to the Repository:</strong></span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>The translation is periodically pushed back to the repository based on the frequency set in the <span class="guimenu">Continuous Job</span> settings.</p></li>
@@ -31,7 +45,7 @@
 <li class="listitem"><p>Only available for specified file formats.</p></li>
 <li class="listitem"><p>The file must be uploaded from an online repository using a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012207959-Supported-Connectors-and-Plugins" target="_blank" rel="noopener">connector</a>.</p></li>
 </ul></div>
-<p>Continuous jobs are presented in the project page with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360014359580/15f0dadfb323bf.png" style="" alt="con_job.png"></span>. The tooltip indicates when the job was last updated.</p>
+<p>Continuous jobs are presented in the project page with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360014804119/15f1fe79c76b5f.png" style="" alt="con_job.png"></span>. The tooltip indicates when the job was last updated.</p>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95" id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_UUID-6e3505f3-63a0-a7c0-3cb4-02e4d1110357"></a>Continuous Job Supported File Formats</h2></div>
@@ -56,7 +70,7 @@
 <div class="procedure">
 <a id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_procedure-idm231752676466681"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360014351899/15f0dadfb35ce9.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section and click on <span class="guilabel">Continuous Job Settings</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360014804139/15f1fe79c7a9f8.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section and click on <span class="guilabel">Continuous Job Settings</span>.</p>
 <p>The <span class="guimenu">Continuous Job Settings</span> page opens.</p>
 </li>
 <li class="step">
