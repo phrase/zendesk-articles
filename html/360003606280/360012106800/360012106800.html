@@ -9,7 +9,7 @@
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-0a7ecc3d-e030-3753-a861-0b7478d16898"></a>Supported Versions</h2></div>
-<p>The Memsource Translation Plugin for Adobe Experience Manager follows the same product support periods as Adobe Experience Manager. See <a class="link" href="https://helpx.adobe.com/support/programs/eol-matrix.html" target="_blank" rel="noopener">https://helpx.adobe.com/support/programs/eol-matrix.html</a> for information on support periods.</p>
+<p>The Memsource Translation Plugin for Adobe Experience Manager follows the same product support periods as Adobe Experience Manager. See <a class="link" href="https://helpx.adobe.com/support/programs/eol-matrix.html" target="_blank" rel="noopener">https://helpx.adobe.com/support/programs/eol-matrix.html</a> for information on support periods.</p>
 <p>Once an Adobe Experience Manager version reaches end of core support, Memsource no longer maintains the plugin. The installer will be available but no further improvements or fixes will be implemented.</p>
 <div class="itemizedlist list-bullet"><ul class="itemizedlist list-bullet" style="list-style-type: disc; ">
 <li class="listitem list-bullet"><p>Plugin version 1.x supports 6.3</p></li>
@@ -43,7 +43,7 @@
 <p><span class="bold bold"><strong>Pre-requisite</strong></span>: Create an Adobe Experience Manager user with minimum permissions required to view unpublished pages.</p>
 <div class="procedure">
 <a id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360013989699/15f0408945466d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360014948019/15f23afeb5a0be.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -83,7 +83,7 @@
 <p>Create a Project Template configured to your needs.</p>
 <p>Under <span class="guimenu">Access and Security</span> set the <span class="guilabel">Allow loading external content in editors</span>.</p>
 <p>Apply the following <span class="guimenu">XML File Import Settings</span>:</p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360013976880/15f04089459261.png" style="" alt="content of the image was changed."></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360014965380/15f23afeb5e0f5.png" style="" alt="content of the image was changed."></div>
 </li>
 <li class="step">
 <p>Create a Service.</p>
@@ -97,6 +97,7 @@
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Select the service created in the previous step.</p></li>
 <li class="listitem"><p>Don't select the Adobe Experience Manager connector configuration in the Connectors combo.</p></li>
+<li class="listitem"><p>Use the <code class="code">{order.title}</code> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020#supported-macros-0-0" target="_blank" rel="noopener">macro</a> in the title field to represent the Adobe Experience Manager project title and <code class="code">{order.email}</code> to represent the email address of the Adobe Experience Manager submitter. If the email is not set, then the address associated with Memsource credentials that is applied in Adobe Experience Manager Cloud Services is used.</p></li>
 </ul></div>
 </li>
 </ol></div>
