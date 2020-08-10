@@ -14,6 +14,46 @@
 </ul></div>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-aabf3fe4-546b-c75f-30e1-3d5862b87902"></a>Translation Memory Quality</h2></div>
+<p>Translation memory (TM) is essential for producing consistent translations and can dramatically reduce translation costs. If a TM is not set up correctly and maintained, inconsistent and poor quality translations are produced.</p>
+<p>Follow these rules to improve TM quality:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<p><span class="bold bold"><strong>Choose trusted providers</strong></span></p>
+<p>Have a group of trusted providers (linguists/vendors) who deliver high-quality output that is saved to the master TM. When working with a provider for the first time or with someone whose output quality varies, consider using a secondary <span class="emphasis"><em>working</em></span> translation memory where they can commit segments and keep the master TM in read-only mode. Use the master TM in Read and Write mode in later workflow steps where review is performed.</p>
+<p>Preventing content of questionable quality from being included in a TM is easier than removing it later.</p>
+<p><span class="emphasis"><em>Suggested TM configuration:</em></span></p>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360015301560/15f31062da86ba.png" style="" alt="tm-vendor.png"></div>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Add <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872139-Context-Information" target="_blank" rel="noopener">context information</a> to source files</strong></span></p>
+<p>Context information allows linguists to better understand content they are translating and improves the quality of the translation. There are different options for providing context such as attaching assets as reference files to projects or adding them on the segment level. For file formats with context key and notes properties, information can be displayed on segment level in a CAT tool. Some editors can display animations and graphics from attached external links.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Lock segments with high-quality matches</strong></span></p>
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780-Pre-translation-Overview" target="_blank" rel="noopener">Pre-translating</a> content from translation memory and locking high-score matches (context matches) prevents unwanted changes in the TM. Excluding locked segments from analysis and quotes shared with a provider reduces translation volume and costs.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Perform <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800-Quality-Assurance-Overview" target="_blank" rel="noopener">quality assurance</a> and spell checks before confirming to TM</strong></span></p>
+<p>Misspellings, missing tags, incorrect punctuation are easily overlooked. Automated Quality Assurance (QA) checks help with this. Advanced QA checks are also able to verify if correct terminology has been used—ensuring translation consistency. Some tools enable segment-level QA which won’t allow the provider to confirm segments and save them into the TM if quality assurance errors have been found. In case segment-level QA is not available (and the check is performed at the end of the localization process), use the <span class="emphasis"><em>working</em></span> TM approach.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Perform <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012776020" target="_blank" rel="noopener">linguistic quality assurance</a> (LQA) evaluation</strong></span></p>
+<p>LQA evaluation is used to measure and qualify the translations and errors produced. It evaluates translation quality and provides constructive feedback to the provider.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Update your TMS with any changes that happen <span class="emphasis"><em>outside</em></span> of your translation management system.</strong></span></p>
+<p>If linguistic edits take place in the native format or in a content management system, they are not saved to the TM and will be overwritten by future submissions of the same content unless the TM is updated. In such a scenario, update the TM manually.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Close the feedback loop </strong></span></p>
+<p>Discuss the quality of delivered translations with the provider and allow them to see the changes made to their work. It is important to clarify expectations and review detected issues to avoid encountering them again in the future.</p>
+</li>
+</ol></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-2ac08b2e-0881-5ab4-07d1-2ea0e3fcfc95"></a>Create a Translation Memory</h2></div>
 <p>To create a Translation Memory, follow these steps:</p>
 <div class="procedure">
@@ -21,7 +61,7 @@
 <li class="step">
 <p>Translation Memories can be created from three places:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>Click the Translation Memories <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360014803659/15f1fe5687e169.png" style="" alt="Panel_plus.png"></span> in the panel menu.</p></li>
+<li class="listitem"><p>Click the Translation Memories <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015291039/15f31062daef02.png" style="" alt="Panel_plus.png"></span> in the panel menu.</p></li>
 <li class="listitem"><p>Click <span class="guilabel">New</span> from the <span class="guimenu">Translation Memories</span> page.</p></li>
 <li class="listitem"><p>Click <span class="guilabel">Create New</span> from the <span class="guimenu">Translation Memories</span> table on a project page.</p></li>
 </ul></div>
@@ -57,14 +97,15 @@
 <p>Clicking on a TM from the <span class="guimenu">Translation Memories</span> panel or a project page opens the translation memory page.</p>
 <p>Dependent on user rights:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>The attributes of a translation memory can be edited.</p></li>
-<li class="listitem"><p>A TM can be deleted. This moves the TM to the Recycle Bin where it will remain for 30 days.</p></li>
+<li class="listitem"><p>The attributes of a translation memory can be edited.</p></li>
+<li class="listitem"><p>A TM can be deleted. This moves the TM to the Recycle Bin where it will remain for 30 days.</p></li>
 <li class="listitem"><p>Content can be searched for individual entries requiring editing.</p></li>
-<li class="listitem"><p>Content can be imported from other TMs or other CAT tools.</p></li>
+<li class="listitem"><p>Content can be imported from other TMs or other CAT tools.</p></li>
 <li class="listitem"><p>Content of a TM can be exported for editing in another CAT tool and imported back into Memsource.</p></li>
 <li class="listitem"><p>Previously translated files can be aligned with their originals and imported to a new TM.</p></li>
 </ul></div>
 <p>The <span class="guimenu">Related Projects</span> table presents all projects a specific TM is associated with.</p>
+<p>Note that once added, target languages cannot be removed from a TM as long as: 1.) there is a single entry in the TM (even if only in the other target languages), or 2.) the TM is used in an existing project, or 3.) the TM is used in any Project Template.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
