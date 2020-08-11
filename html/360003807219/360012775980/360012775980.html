@@ -2,9 +2,9 @@
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-0d65fa6f-a518-11dc-7467-b46c79496b52" id="UUID-0d65fa6f-a518-11dc-7467-b46c79496b52_UUID-5fb9456c-e857-a963-771d-d44d216a8fa8"></a>Segmentation</h2></div>
-<p>Segmentation is the process that splits original texts into smaller parts. This improves the retrieval of previously translated text from a translation memory.</p>
-<p>Default segmentation rules in Memsource correspond with specifics of each supported language and can be customized.</p>
-<p>Jobs imported with bad segmentation such as poorly formatted Word files or the application of inappropriate segmentation customization can affect TM match values.</p>
+<p>Segmentation is the process that splits original texts into smaller parts. This improves the retrieval of previously translated text from a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279-Translation-Memories-Overview" target="_blank" rel="noopener">translation memory</a>. Segments are presented in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775880-Memsource-Editor-Overview" target="_blank" rel="noopener">editor</a> and can be <a class="link" href="https://help.memsource.com/hc/en-us/articles/360015577499-Filtering#filtering-in-memsource-editor-0-1" target="_blank" rel="noopener">filtered</a>.</p>
+<p>Default segmentation rules correspond with specifics of each supported language and can be customized.</p>
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#create-a-job-0-2" target="_blank" rel="noopener">Jobs imported</a> with bad segmentation such as poorly formatted document files or the application of inappropriate segmentation customization can affect TM match values.</p>
 <p><span class="bold bold"><strong>Example</strong></span>:</p>
 <div class="itemizedlist">
 <p>Good Segmentation:</p>
@@ -16,7 +16,10 @@
 <div class="itemizedlist">
 <p>Poor Segmentation</p>
 <ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="emphasis"><em>Translation memories with multilingual target languages are supported.</em></span> Match value of 100%.</p></li>
+<li class="listitem">
+<p><span class="emphasis"><em>Translation memories with multilingual target languages are supported.</em></span></p>
+<p>Match value of 100%.</p>
+</li>
 <li class="listitem">
 <p><span class="emphasis"><em>and can be used bidirectionally.</em></span></p>
 <p>Match value of 63%.</p>
@@ -60,13 +63,13 @@
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-0d65fa6f-a518-11dc-7467-b46c79496b52" id="UUID-0d65fa6f-a518-11dc-7467-b46c79496b52_UUID-8c2d36d9-41a8-b7df-ae02-9284c757eabc"></a>Confirming Segments</h2></div>
-<p>All segments in a job must be confirmed before a job can be set as Complete. Confirmation can be performed via keyboard shortcut, menu or clicking on <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012011780/15ebd22e80a6af.png" style="" alt="Red_X.png"></span> in the table.</p>
+<p>All segments in a job must be confirmed before a job can be set as Complete. Confirmation can be performed via keyboard shortcut, menu or clicking on <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015347719/15f32361ab0938.png" style="" alt="Red_X.png"></span> in the table.</p>
 <p>To confirm a segment, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-0d65fa6f-a518-11dc-7467-b46c79496b52_procedure-idm4646112683392031678741100827"></a><ol class="procedure" type="1">
 <li class="step">
 <p>Open a job in an editor.</p>
-<p>Segments are presented as unconfirmed <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012011780/15ebd22e80a6af.png" style="" alt="Red_X.png"></span>.</p>
+<p>Segments are presented as unconfirmed <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015347719/15f32361ab0938.png" style="" alt="Red_X.png"></span>.</p>
 </li>
 <li class="step">
 <p>Click on a segment to review.</p>
@@ -75,12 +78,13 @@
 <li class="step"><p>Review matches for accuracy and either accept or change.</p></li>
 <li class="step">
 <p>Confirm the segment.</p>
-<p>Segment is presented as confirmed <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012029739/15ebd22e80dfa7.png" style="" alt="green_check.png"></span>.</p>
+<p>Segment is presented as confirmed <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015349040/15f32361ab64b9.png" style="" alt="green_check.png"></span>.</p>
 <p>Editing a segment unconfirms that segment.</p>
 </li>
 <li class="step"><p>If required, run a <a class="link" href="https://help.memsource.com/hc/articles/360012872099#UUID-1865a53c-d82a-4b2e-6209-aa12c86b50d3" title="Quality Assurance Pane">QA check</a>.</p></li>
 </ol>
 </div>
+<p>Project Managers and Administrators can prevent Linguists and other Vendors from <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003460891-How-to-Be-Secure-with-Memsource" target="_blank" rel="noopener">editing locked segments</a>. If the option is disabled, Linguists will not be able to use <span class="keycap"><strong>F2</strong></span> to edit locked segments.</p>
 <p>Confirmation behavior can be modified in <a class="link" href="https://help.memsource.com/hc/articles/360012872059#UUID-4c833ac1-32c2-c1cb-2d80-b6411f03a8be_UUID-7a7fb24c-ee23-057b-8444-adb74d532665" title="CAT Pane Preferences">CAT Preferences</a>.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
@@ -106,27 +110,6 @@
 <li class="listitem"><p>Import a standard <a class="link" href="https://help.memsource.com/hc/en-us/articles/360004593692-XLIFF-2-0" target="_blank" rel="noopener">XLIFF</a> file as a new job with the <span class="guimenu">Save confirmed segments to TM on import</span> option selected in file import settings.</p></li>
 <li class="listitem"><p>Directly <a class="link" href="https://help.memsource.com/hc/en-us/articles/360011103391-Import-content-to-Translation-Memory#MXLIFF_Import" target="_blank" rel="noopener">import a bilingual MXLIFF</a> file into the TM.</p></li>
 </ul></div>
-<div class="glossary-definitions" style="display:none!important;"></div>
-</div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
-<div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-0d65fa6f-a518-11dc-7467-b46c79496b52" id="UUID-0d65fa6f-a518-11dc-7467-b46c79496b52_UUID-0c1b7d40-d2cd-f60b-193b-78058fd3670b"></a>Segment Filter and Sorting</h2></div>
-<p>Filtering and sorting of segments can help when working in large jobs.</p>
-<p>To use filtering and sorting, follow these steps:</p>
-<div class="procedure">
-<a id="UUID-0d65fa6f-a518-11dc-7467-b46c79496b52_procedure-idm4555253496505631679997819166"></a><ol class="procedure" type="1">
-<li class="step">
-<p>Click the <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012029759/15ebd22e811904.png" style="" alt="Menu_Triangle.png"></span> icon.</p>
-<p>The filter lists open.</p>
-</li>
-<li class="step">
-<p>Select filter requirements.</p>
-<p>Segments are instantly filtered.</p>
-</li>
-<li class="step"><p>Click the <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360012029759/15ebd22e811904.png" style="" alt="Menu_Triangle.png"></span> again to hide filter lists.</p></li>
-</ol>
-</div>
-<p>Multiple filter options can be combined, including the <span class="guimenu">Text</span> filter.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
