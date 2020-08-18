@@ -1,6 +1,6 @@
 <div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
-<p>The regular expression (abbreviated as regex or regexp) is a sequence of characters that form a search pattern, mainly for use in pattern-matching with strings or string-matching. Functionality is similar to <span class="emphasis"><em>find and replace</em></span> operations with more complexity and specificity. See the <a class="link" href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="noopener">wikipedia</a> entry for a detailed description of Regexp and a table of used characters.</p>
-<p>Regexps can be used in the <span class="guimenu">Search and Replace</span> fields in the Memsource Editor for the <span class="guimenu">Convert to tags</span> feature in File Import Settings and for customizing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744119-Segmentation-Rules-Overview" target="_blank" rel="noopener">segmentation rules</a>.</p>
+<p>The regular expression (abbreviated as regex or regexp) is a sequence of characters that form a search pattern mainly for use in pattern-matching with strings or string-matching. Functionality is similar to <span class="emphasis"><em>find and replace</em></span> operations with more complexity and specificity. See the <a class="link" href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="noopener">wikipedia</a> entry for a detailed description of Regexp and a table of used characters.</p>
+<p>Regexps can be used in the <span class="guimenu">Search and Replace</span> fields in the <a class="link" href="https://help.memsource.com/hc/en-us/sections/360003807219-Memsource-Editor" target="_blank" rel="noopener">editor</a> for the <span class="guimenu">Convert to tags</span> feature in <a class="link" href="https://help.memsource.com/hc/en-us/sections/360004146860-File-Import-Settings" target="_blank" rel="noopener">File Import Settings</a> and for customizing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744119-Segmentation-Rules-Overview" target="_blank" rel="noopener">segmentation rules</a>.</p>
 <div dir="ltr" class="important">
 <h3 class="title">Important</h3>
 <p>Memsource supports <a class="link" href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html" target="_blank" rel="noopener">Java regexp</a>, but will reject complex regular expressions to protect the system from overload. Complex regexps are those with quantifiers (except possessives) on groups which contain other quantifiers (except possessives).</p>
@@ -8,7 +8,7 @@
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-87e6e457-5857-dcdb-6fe6-6b9a9d323d91"></a>General Examples</h2></div>
-<p>Examples for converting text into tags when importing files and also for using regexp in the Memsource Editor for Search and Replace functions:</p>
+<p>Examples for converting text into tags when importing files and using regexp in the editor for Search and Replace functions:</p>
 <div class="informaltable table-responsive"><table>
 <thead><tr>
 <th><p>Example</p></th>
@@ -98,23 +98,23 @@
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem">
 <p><span class="emphasis"><em>## ErrorMessage ##1## The number must be higher then 0. ##Z## </em></span></p>
-<p>To import text between <span class="emphasis"><em>##1##</em></span> and <span class="emphasis"><em>##Z##</em></span> use regexp: <code class="code">(?&amp;lt;=##1## ).*(?= ##Z##)</code></p>
+<p>To import text between <span class="emphasis"><em>##1##</em></span> and <span class="emphasis"><em>##Z##</em></span> ,use regexp: <code class="code">(?&amp;lt;=##1## ).*(?= ##Z##)</code></p>
 </li>
 <li class="listitem">
 <p><span class="emphasis"><em>ErrorMessage ("The number must be higher then 0.")</em></span></p>
-<p>To import text between <span class="emphasis"><em>(" and ")</em></span> use regexp: <code class="code">(?&lt;=\(").*(?="\))</code></p>
+<p>To import text between <span class="emphasis"><em>(" and ")</em></span> , use regexp: <code class="code">(?&lt;=\(").*(?="\))</code></p>
 </li>
 <li class="listitem">
-<p><span class="emphasis"><em>'errorMessage' = 'The number must be higher than 0.'</em></span> </p>
-<p>To import text after the <span class="emphasis"><em>=</em></span> sign and between <span class="emphasis"><em>' and '</em></span> use regexp: <code class="code">(?&lt;=\= ').*(?=')</code></p>
+<p><span class="emphasis"><em>'errorMessage' = 'The number must be higher than 0.'</em></span></p>
+<p>To import text after the <span class="emphasis"><em>=</em></span> sign and between <span class="emphasis"><em>' and '</em></span> , use regexp: <code class="code">(?&lt;=\= ').*(?=')</code></p>
 </li>
 <li class="listitem">
-<p><span class="emphasis"><em>msgstr ("The number must be higher than 0.")</em></span> </p>
+<p><span class="emphasis"><em>msgstr ("The number must be higher than 0.")</em></span></p>
 <p>To import msgstr strings in monolingual PO files using a TXT filter, use regexp: <code class="code">(?&lt;=msgstr ").*(?=")</code></p>
 </li>
 <li class="listitem">
 <p><span class="emphasis"><em># Note: This is a note</em></span></p>
-<p>To exclude lines starting with <span class="emphasis"><em>#</em></span> use regexp: <code class="code">(^[^#].*)</code></p>
+<p>To exclude lines starting with <span class="emphasis"><em>#</em></span> , use regexp: <code class="code">(^[^#].*)</code></p>
 </li>
 <li class="listitem">
 <p><span class="emphasis"><em>values '126', 'DCeT', 'Text (en)'</em></span></p>
@@ -143,8 +143,8 @@
          },         {        "color": "green",        "title": "GREEN"         }    ]}</pre>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>for importing every value regardless of the level, use: <code class="code">(^|.*/)value</code></p></li>
-<li class="listitem"><p>for importing only one value from a list use: <code class="code">list/value</code></p></li>
-<li class="listitem"><p>for importing a value from a list and/or menu use, the | (OR) operator: <code class="code">list/value|menu/value</code></p></li>
+<li class="listitem"><p>for importing only one value from a list, use: <code class="code">list/value</code></p></li>
+<li class="listitem"><p>for importing a value from a list and/or menu, use the | (OR) operator: <code class="code">list/value|menu/value</code></p></li>
 <li class="listitem"><p>for importing only the first instance of a value from a menu, use: <code class="code">menu\[1\]/value</code></p></li>
 <li class="listitem"><p>for importing the content of a JSON array following a certain key, use: <code class="code">(^|.*/)array\[.*\]</code></p></li>
 <li class="listitem"><p>to import the content of a specific array of objects, use: <code class="code">(^|.*/)arrays\[.*\].*</code></p></li>
@@ -180,7 +180,7 @@ categories:
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-96a71744-d1ca-a714-0687-c3edcccb3fb7"></a>Segmentation Rules</h2></div>
 <p><a class="link" href="http://okapi.sourceforge.net/Release/Shared/Help/regex.htm" target="_blank" rel="noopener">Okapi</a>, <a class="link" href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html" target="_blank" rel="noopener">Java</a> and <a class="link" href="http://www.regular-expressions.info/unicode.html" target="_blank" rel="noopener">Unicode</a> are used for segmentation rules in SRX files.</p>
-<p>Using regexp in SRX files is complex and at least a basic knowledge of regular expression use is recommended before attempting to work with them.</p>
+<p>Using regexp in SRX files is complex and a basic knowledge of regular expression use is recommended before attempting to work with them.</p>
 <p>Nobreak rules (Abbreviations etc.) and Break rules (End of the sentence with a dot, etc) are in SRX files.</p>
 <div class="informaltable table-responsive"><table>
 <thead><tr>
