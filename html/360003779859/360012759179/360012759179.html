@@ -2,6 +2,35 @@
 <p>Earlier release notes can be found in the <a class="link" href="https://help.memsource.com/hc/en-us/sections/360001176392-Memsource" target="_blank" rel="noopener">archive</a>.</p>
 <div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-4b722486-f417-44af-8a3c-e3055e5705cb"></a>v20.16 - August 25, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-4b722486-f417-44af-8a3c-e3055e5705cb_body">
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Confirmed and unconfirmed target segments are now preserved even without pre-translation when updating a source file. Pre-translate checkbox was removed from the <span class="emphasis"><em>Update source</em></span> modal window.</p></li>
+<li class="listitem"><p>The <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289780-HTML" target="_blank" rel="noopener">HTML filter</a> now allows the specification of non-translatable inline elements. This is now similar to the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357739-XML-Extensible-Markup-Language-" target="_blank" rel="noopener">XML filter</a>.</p></li>
+<li class="listitem">
+<p><a class="link" href="https://cloud.memsource.com/web/docs/api" target="_blank" rel="noopener">API</a>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p><code class="code">POST /api2/v1/projectTemplates</code> endpoint now creates new independent instance of import settings for the project template.</p></li>
+<li class="listitem"><p>New <code class="code">GET /api2/v1/projectTemplates/{projectTemplateId}/importSetting</code> endpoint returns import settings associated with a project template.</p></li>
+</ul></div>
+</li>
+</ul></div>
+<h4>
+<a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Project managers cannot select a client for TM/TB if <span class="emphasis"><em>Access TMs/TBs of a selected client only</em></span> is used. This has been fixed.</p></li>
+<li class="listitem"><p>Parentheses are being inverted when used in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360015650120-Bidirectional-Text" target="_blank" rel="noopener">RTL languages</a>. This has been fixed.</p></li>
+<li class="listitem"><p>Translating ja- en with the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459" target="_blank" rel="noopener">Mirai engine</a> was triggering errors. This has been fixed.</p></li>
+<li class="listitem"><p>Source value formatting from <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760-Spreadsheets-MS-Excel-based-#multilingual-spreadsheet-files-0-2" target="_blank" rel="noopener">Multilingual XLSX</a> files were not propagating to target. This has been fixed.</p></li>
+<li class="listitem"><p><code class="code">Patch job</code> would not assign <code class="code">provider</code> if <code class="code">status</code> not specified. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-97ce1207-6509-a61b-ca1e-c37afb7d42a2"></a>v20.15 - August 11, 2020</h2></div></div>
 <div class="panel-body collapse" id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_UUID-97ce1207-6509-a61b-ca1e-c37afb7d42a2_body">
 <h4>
@@ -32,7 +61,7 @@
 <h4>
 <a id="UUID-9f6edd3b-12fc-f618-4383-1b681e1538bd_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview" target="_blank" rel="noopener">Jobs</a> in repositories are now indicated with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015313699/15f314bcf7c6ee.svg" style="" alt="source_badge.svg"></span>. Path and connector type are presented in the tooltip.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview" target="_blank" rel="noopener">Jobs</a> in repositories are now indicated with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015709539/15f3e9342a2f02.svg" style="" alt="source_badge.svg"></span>. Path and connector type are presented in the tooltip.</p></li>
 <li class="listitem"><p>T-3MT has been added to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview" target="_blank" rel="noopener">supported MT engines</a>.</p></li>
 <li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620479-Memsource-Translate" target="_blank" rel="noopener">Memsource Translate</a> supports domain-based recommendation for more language pairs.</p></li>
 <li class="listitem"><p>MTQE now supports new <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012527380-Machine-Translation-Quality-Estimation#mtqe-supported-language-pairs-0-5" target="_blank" rel="noopener">language pairs</a>.</p></li>
