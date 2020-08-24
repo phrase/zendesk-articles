@@ -1,20 +1,24 @@
 <div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
 <p>Each language has its own grammatical forms for singular and plural phrases.</p>
-<p>For example:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<p>Example:</p>
+<div class="informalexample">
+<a id="UUID-b37b3dfa-e8e8-204e-e0c9-f268bfae3510_example-idm231965101965791"></a><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>English has two forms: <span class="emphasis"><em>one</em></span> and <span class="emphasis"><em>other</em></span>, as in <span class="emphasis"><em>1 file</em></span> and <span class="emphasis"><em>2 file<span class="bold bold"><strong>s</strong></span></em></span>.</p></li>
 <li class="listitem"><p>Other languages may have one or even several forms: <span class="emphasis"><em>one</em></span>, <span class="emphasis"><em>few</em></span>, and <span class="emphasis"><em>other</em></span>.</p></li>
 </ul></div>
+</div>
 <p>This presents a challenge for localization.</p>
 <p>Memsource supports the translation of plural-sensitive strings. These strings must be translated using the plural forms based on the plural rules of the target language. These plural forms must be defined in the source file.</p>
-<p>For example:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<p>Example:</p>
+<div class="informalexample">
+<a id="UUID-b37b3dfa-e8e8-204e-e0c9-f268bfae3510_example-idm231965101263836"></a><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>The English string <span class="emphasis"><em>There are %d% items left</em></span>, where <span class="emphasis"><em>%d%</em></span> represents any number except 1.</p></li>
 <li class="listitem">
 <p>In Czech, this needs to to be translated in two ways.</p>
 <p>The first for numbers 2, 3 or 4 (i.e. <span class="emphasis"><em>few</em></span>) and the second for numbers 0, 5 and more (i.e. <span class="emphasis"><em>other</em></span>).</p>
 </li>
 </ul></div>
+</div>
 <p>To more information about plural rules, see this <a class="link" href="http://www.unicode.org/cldr/charts/27/supplemental/language_plural_rules.html" target="_blank" rel="noopener">article</a>.</p>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
@@ -26,7 +30,7 @@
 <div class="procedure">
 <a id="UUID-b37b3dfa-e8e8-204e-e0c9-f268bfae3510_procedure-idm23175110440539"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360014359640/15f0dadfb35ce9.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">TM Match Context and Optimization</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015771819/15f4370348ee2c.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">TM Match Context and Optimization</span>.</p>
 <p>The <span class="guimenu">TM Match Context and Optimization</span> page opens.</p>
 </li>
 <li class="step"><p>For the <span class="guimenu">Context Type</span>, select <span class="guilabel">Segment Key</span> from the dropdown list.</p></li>
