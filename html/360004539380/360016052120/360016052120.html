@@ -1,0 +1,257 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-ecd8aa5c-4f5b-f2d6-b7e6-f71d3ba8a769"></a>v20.16 - August 25, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-ecd8aa5c-4f5b-f2d6-b7e6-f71d3ba8a769_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+<p><a class="link" href="https://cloud.memsource.com/web/docs/api" target="_blank" rel="noopener">API</a>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p><code class="code">POST /api2/v1/projectTemplates</code> endpoint now creates new independent instance of import settings for the project template.</p></li>
+<li class="listitem"><p>New <code class="code">GET /api2/v1/projectTemplates/{projectTemplateId}/importSetting</code> endpoint returns import settings associated with a project template.</p></li>
+</ul></div>
+</li></ul></div>
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><code class="code">Patch job</code> would not assign <code class="code">provider</code> if <code class="code">status</code> not specified. This has been fixed.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-bc967d24-42d7-f784-2c91-723bd4dea588"></a>v20.15 - August 11, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-bc967d24-42d7-f784-2c91-723bd4dea588_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014441419" target="_blank" rel="noopener">Webhook</a> authentication is now supported.</p></li></ul></div>
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106860-Contentstack-Connector" target="_blank" rel="noopener">Contentstack</a> connector: Fields marked as non-localizable fields are still being localized. This has been fixed.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-41683178-daf3-f589-e3d0-14f3b3e69419"></a>v20.14 - July 28, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-41683178-daf3-f589-e3d0-14f3b3e69419_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong>API</strong></span>: <span class="emphasis"><em>dateDue</em></span> was not being validated in <span class="emphasis"><em></em></span> <span class="emphasis"><em>editParts</em></span> calls. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106960-Marketo-Connector" target="_blank" rel="noopener">Marketo Connector</a>: Email assets were not visible in the repository. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106900-GitLab-Connector" target="_blank" rel="noopener">GitLab Connector</a>: Deleted jobs are being exported back to the repository. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk-Connector" target="_blank" rel="noopener">Zendesk Connector</a>: Some file are being imported multiple times. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-fd716060-bc41-76cb-512b-ea3c54c92f50"></a>v20.13 - July 14, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-fd716060-bc41-76cb-512b-ea3c54c92f50_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist">
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_itemizedlist-idm33188780267922"></a><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold bold"><strong><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106960-Marketo-Connector" target="_blank" rel="noopener">Marketo Connector</a></strong></span>: Download fails if token is not found. This has been fixed.</p></li></ul>
+</div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-37ff6a47-b913-572e-2abe-fb4813c43173"></a>v20.12 -June 30, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-37ff6a47-b913-572e-2abe-fb4813c43173_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208019-Contentful-Connector" target="_blank" rel="noopener">Contentful</a>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>When browsing a repository, entities are grouped by content models.</p></li>
+<li class="listitem"><p>Support for <span class="emphasis"><em>Media Asset</em></span> translation.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208099-Git-Connector" target="_blank" rel="noopener">GIT</a>: Automated Project Creation can now export translations to a different branch.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-ea26a6e6-0d37-92be-413f-eb6da022daa7"></a>v20.11 - June 16, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-ea26a6e6-0d37-92be-413f-eb6da022daa7_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk-Connector" target="_blank" rel="noopener">Zendesk Connector</a>: Dynamic Content is not available for import. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208099-Git-Connector" target="_blank" rel="noopener">Git Connector</a>: Updated SSH key not being stored causing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800-Continuous-Jobs" target="_blank" rel="noopener">Continuous Jobs</a> not to be imported/exported. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-02c22523-8b19-d151-d8dd-9cd2321e8a16"></a>v20.10 - June 2, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-02c22523-8b19-d151-d8dd-9cd2321e8a16_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>New <a class="link" href="https://help.memsource.com/hc/en-us/articles/360004209771-Webhooks" target="_blank" rel="noopener">webhook</a> events has been added to notify of <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project template</a> creation, modification and deletion.</p></li>
+<li class="listitem"><p>A new <a class="link" href="https://help.memsource.com/hc/en-us/articles/360001398332-Memsource-REST-API-Technology" target="_blank" rel="noopener">API endpoint</a> allows the pre-translation of jobs in the case <span class="emphasis"><em>Copy Source to Target where empty</em></span> is required.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106960-Marketo-Connector" target="_blank" rel="noopener">Marketo connector</a>: Localized segmentation is now supported. Marketo segments names can be mapped to Memsource languages.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk connector</a>: A label-based workflow functionality has been added.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk connector</a>: An option to log debug information has been added.</p></li>
+</ul></div>
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208139-Google-Drive-Connector" target="_blank" rel="noopener">Google Drive connector</a>: Not all files and folders were being listed. This has been fixed.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-a9afa3e8-008d-589c-cf05-afbd7d84ca4c"></a>v20.9 - May 19, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-a9afa3e8-008d-589c-cf05-afbd7d84ca4c_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106960-Marketo-Connector" target="_blank" rel="noopener">Marketo</a>: Segmentation is now supported for Emails and Landing Pages.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk</a>: Authors can control when articles are ready for translation with new T<span class="guimenu">ranslate articles with label(s)</span> and <span class="guimenu">Add label on post-translation</span> options in the connector configuration.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/115003694732-Introduction-to-Memsource-REST-API" target="_blank" rel="noopener">API</a>: New parameter allows the exclusion of preview skeletons from MXLIFF files.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-58d89468-aef7-b5d2-d4d5-e3a48c0a7e34"></a>v20.8 - May 5, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-58d89468-aef7-b5d2-d4d5-e3a48c0a7e34_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk Connector</a>: Connector can now be set to remove the flag for translation when the flagged translation is complete.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-4fcdcaf2-0671-80c9-84d8-ef433c56c5e6"></a>v20.7 - April 21, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-4fcdcaf2-0671-80c9-84d8-ef433c56c5e6_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk</a>: New target languages added via Zendesk Guide are added to the connector from the Guide module instead of the Support module. This enables dynamic synchronization with the connector.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-0fcc3700-302f-8c15-5cdf-3d056a5912ef"></a>v20.6 - April 7, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-0fcc3700-302f-8c15-5cdf-3d056a5912ef_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk Connector</a> can specify that jobs are only created for articles that are flagged for translation.</p></li>
+<li class="listitem"><p>More project metadata filters (<span class="emphasis"><em>Owner</em></span>, <span class="emphasis"><em>Client</em></span>, <span class="emphasis"><em>Domain</em></span>, <span class="emphasis"><em>Subdomain</em></span>, <span class="emphasis"><em>Cost Center</em></span>, <span class="emphasis"><em>Business Unit</em></span> and <span class="emphasis"><em>Note</em></span>) have been added to the Project Templates API.</p></li>
+</ul></div>
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://cloud.memsource.com/web/docs/api" target="_blank" rel="noopener">REST API</a>: If a job is created without specific import settings, Global import settings are not applied. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk Connector</a>: Draft articles are being pushed to Published instead of Draft. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-a148d76b-b695-249c-12b4-3bda3892ef0a"></a>v20.5 - March 24, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-a148d76b-b695-249c-12b4-3bda3892ef0a_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Shared drives are now supported by the Google Drive connector.</p></li>
+<li class="listitem"><p>Contentful (field-level) Connector provides an optional Fallback language.</p></li>
+</ul></div>
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Selection of an <span class="guimenu">Entry import mode</span> for the Contentful (field-level) connector was not working in the UI. This has been fixed.</p></li>
+<li class="listitem"><p>Automated Project Creation not pulling the latest files when connected to a Git repository. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-2b63bcae-e3cb-1a7a-b435-df16215be623"></a>v20.4 - March 10, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-2b63bcae-e3cb-1a7a-b435-df16215be623_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Debugging log option added to Contentful connector configuration.</p></li>
+<li class="listitem"><p>Adobe Experience Manager Plugin now accepts digital assets for translation.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-3e096186-742d-2385-5807-32aa87c50e3f"></a>v20.3 - February 25, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-3e096186-742d-2385-5807-32aa87c50e3f_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Magento Connector has been updated (1.0.6). This updates helps with connection problems to Magento version 2.3.</p></li></ul></div>
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Contentful Connector:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Job fails due to API limit. This has been fixed.</p></li>
+<li class="listitem"><p>Entry-Level - restricted text values aren't pulled resulting in missing content. This has been fixed.</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>Adobe Experience Manager Connector:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>In-Context Preview not generated if multiple connectors are configured that only differ in port number. This has been fixed.</p></li></ul></div>
+</li>
+<li class="listitem">
+<p>Dropbox, FTP, BitBucket:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Changes in Continuous Jobs are not being automatically reflected in Memsource. This has been fixed.</p></li></ul></div>
+</li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-1dcd5cdc-2cfa-128a-7e81-61804451d491"></a>v20.2 - February 11, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-1dcd5cdc-2cfa-128a-7e81-61804451d491_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<p><span class="bold bold"><strong>Zendesk</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Translation requests are now based on 'last edited' date of content instead of 'last updated' date.</p></li></ul></div>
+<p><span class="bold bold"><strong>Connector Warning</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Connectors with open continuous jobs can be deleted with no warning. This has been changed and a warning is displayed.</p></li></ul></div>
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Stored default paths in GitLab are incorrect. This has been fixed.</p></li>
+<li class="listitem"><p>Problem with Magento Connector not making connections. This has been fixed.</p></li>
+<li class="listitem"><p>Contentful Connector (field-level) jobs failing due to API limit handling. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-11c55c18-6355-8ba3-304e-128dd7b79534" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-4d96b515-3e39-1345-de83-d99925b2be7d"></a>v19.26 - January 14, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_UUID-4d96b515-3e39-1345-de83-d99925b2be7d_body">
+<h4>
+<a id="UUID-11c55c18-6355-8ba3-304e-128dd7b79534_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>GitLab online repositories were not maintaining original states or the full path to the repository was altered. This has been fixed.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
