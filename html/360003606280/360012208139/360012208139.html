@@ -10,23 +10,23 @@
 <h4>
 <a id="UUID-cbe14184-fa32-f2bf-3941-6d98772ab3cf_bridgehead-idm231754334495742"></a>Google Docs Support</h4>
 <p>Google Docs, Google Sheets, and Google Slides use specialized file formats that Memsource does not support. The connector converts these file types to .docx, .xlsx, or .pptx, respectively, for processing. When a translation of any of those types of files is completed and uploaded back to Google Drive, they are automatically converted back into their native Google format.</p>
-<p>Google Drive cannot export Google Docs files over a certain size (approximately 10 MB). The error <span class="guimenu">The file is too large to be exported</span> is triggered and the job will not be created. In this case, download the file and upload it to Memsource manually.</p>
+<p>Google Drive cannot export Google Docs files over a certain size (approximately 10 MB). The error <span class="guimenu">The file is too large to be exported</span> is triggered and the job will not be created. In this case, download the file and upload it to Memsource manually.</p>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-cbe14184-fa32-f2bf-3941-6d98772ab3cf" id="UUID-cbe14184-fa32-f2bf-3941-6d98772ab3cf_UUID-9ff13540-9b0e-7c6d-081f-2cb39f857854"></a>Use Cases</h2></div>
 <p>There are a number of use cases for the connector:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>Project Managers can add files directly to projects from an online repository.</p></li>
-<li class="listitem"><p>Set up the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079-Automation-Widget" target="_blank" rel="noopener">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</p></li>
+<li class="listitem"><p>Project Managers can add files directly to projects from an online repository.</p></li>
+<li class="listitem"><p>Set up the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079-Automation-Widget" target="_blank" rel="noopener">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</p></li>
 <li class="listitem">
-<p>Use <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059-Automated-Project-Creation" target="_blank" rel="noopener">Automated Project Creation (APC)</a> to have Memsource automatically create new projects when a change in the <span class="bold bold"><strong>last modified date</strong></span> is detected for monitored files or a folder.</p>
+<p>Use <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059-Automated-Project-Creation" target="_blank" rel="noopener">Automated Project Creation (APC)</a> to have Memsource automatically create new projects when a change in the <span class="bold bold"><strong>last modified date</strong></span> is detected for monitored files or a folder.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
 <li class="listitem"><p>Selected files are imported the very first time APC runs. All files are imported when a folder is monitored.</p></li>
 <li class="listitem"><p>This connector supports absolute path setting.</p></li>
 </ul></div>
 </li>
-<li class="listitem"><p>Set up <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800-Continuous-Jobs" target="_blank" rel="noopener">Continuous Jobs </a>to have Memsource monitor selected files for changes.</p></li>
-<li class="listitem"><p>The <a class="link" href="https://cloud.memsource.com/web/docs/api#" target="_blank" rel="noopener">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014441419-Webhooks" target="_blank" rel="noopener">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</p></li>
+<li class="listitem"><p>Set up <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800-Continuous-Jobs" target="_blank" rel="noopener">Continuous Jobs </a>to have Memsource monitor selected files for changes.</p></li>
+<li class="listitem"><p>The <a class="link" href="https://cloud.memsource.com/web/docs/api#" target="_blank" rel="noopener">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014441419-Webhooks" target="_blank" rel="noopener">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</p></li>
 </ul></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
@@ -38,7 +38,7 @@
 <a data-zd-article="UUID-cbe14184-fa32-f2bf-3941-6d98772ab3cf" id="UUID-cbe14184-fa32-f2bf-3941-6d98772ab3cf_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h2></div>
 <div class="procedure">
 <a id="UUID-cbe14184-fa32-f2bf-3941-6d98772ab3cf_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360013989819/15f0408945466d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015876199/15f46575277fa8.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -47,14 +47,14 @@
 <p>Click <span class="guilabel">New</span>.</p>
 <p>The <span class="guimenu">Create Connector</span> page opens.</p>
 </li>
-<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to <span class="emphasis"><em>Google Drive</em></span>.</p></li>
+<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to            <span class="emphasis"><em>Google Drive</em></span>               .</p></li>
 <li class="step"><p>Select <span class="guimenu">Drive Type</span>.</p></li>
 <li class="step">
-<p>Click <span class="guilabel">Connect to Google Drive</span>.</p>
+<p>Click <span class="guilabel">Connect to Google Drive</span>.</p>
 <p>A Google authentication screen will appear where you can select your account.</p>
 </li>
 <li class="step">
-<p>Click on <span class="guilabel">Allow</span>.</p>
+<p>Click on <span class="guilabel">Allow</span>.</p>
 <p>A checkmark will appear in the connector setup if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</p>
 </li>
 <li class="step">
@@ -68,13 +68,17 @@
 </div>
 <div dir="ltr" class="tip">
 <h3 class="title">Tip</h3>
-<p>If you are unable to add an additional Google connector try the following steps:</p>
+<p>Currently, only one connector per Google Drive account (including its personal and shared drives) may have valid authentication at a time.</p>
+<p>If a <span class="emphasis"><em>My Drive</em></span> type connector and a <span class="emphasis"><em>Shared Drives</em></span> type connector are linked to the same Google account, only one of them will have valid authentication at a time.</p>
+<p>To switch between connectors, or to add an additional Google connector to the same account and force its authentication, the following steps:</p>
 <div class="procedure"><ol class="procedure" type="1">
 <li class="step"><p>Visit the Google Drive page.</p></li>
 <li class="step"><p>Click on the account (top right corner)</p></li>
-<li class="step"><p>Click <span class="bold bold"><strong>Security</strong></span> on the left, and scroll down to <span class="emphasis"><em>Third-party apps with account access</em></span>.</p></li>
-<li class="step"><p>Click on <span class="bold bold"><strong>Manage third-party access</strong></span>. If <span class="emphasis"><em>Memsource Connector</em></span> is listed here, delete it and recreate the Google Drive connector.</p></li>
+<li class="step"><p>Click <span class="bold bold"><strong>Security</strong></span> on the left, and scroll down to <span class="emphasis"><em>Third-party apps with account access</em></span>.</p></li>
+<li class="step"><p>Click on <span class="bold bold"><strong>Manage third-party access</strong></span>. If <span class="emphasis"><em>Memsource Connector</em></span> is listed here, delete it.</p></li>
+<li class="step"><p>Create a new connector to this Google Drive account with valid authentication.</p></li>
 </ol></div>
+<p>To switch authentication between your existing connectors, go to the inactive connector's setup page and press <span class="emphasis"><em>Re-connect to Google Drive.</em></span></p>
 </div>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
