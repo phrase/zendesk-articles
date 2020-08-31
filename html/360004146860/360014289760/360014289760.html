@@ -1,5 +1,5 @@
 <div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
-<p>Cells containing only numerals are skipped as it is assumed they do not contain data relevant to the import. In addition, Memsource extracts only cells that contain text as such and not the functions (e.g. CONCATENATE) that merges content of different cells together. The cells that contain function(s) technically do not have any content. They only contain that function.</p>
+<p>Cells containing only numerals and functions are skipped as it is assumed they do not contain data relevant to the import.</p>
 <p> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775960-In-Context-Preview" target="_blank" rel="noopener">In-context preview</a> can only be generated for a maximum of 200 columns in an imported file. Files with more than 200 columns will display the warning <span class="guimenu">In-context preview was not generated</span>. This limit does not apply to the columns that are marked <span class="emphasis"><em>Hidden</em></span> in the original file.</p>
 <h2>
 <a id="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041_bridgehead-idm231825021122866"></a>File Types</h2>
@@ -32,7 +32,7 @@
 </ul></div>
 </li>
 <li class="listitem">
-<p><span class="guimenu">Convert to Memsource tags</span></p>
+<p> <span class="guimenu">Convert to Memsource tags</span> </p>
 <p>Apply <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expressions</a> to convert specified text to tags.</p>
 </li>
 <li class="listitem">
@@ -43,7 +43,7 @@
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041" id="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041_UUID-fbb2cdf7-7f96-c8ec-36b3-5ac758c0b600"></a>Multilingual Spreadsheet Files</h2></div>
-<p>Multilingual files are imported as multiple bilingual jobs with languages mapped before import. They are represented with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015876779/15f465872d7251.png" style="" alt="multilingual_xlsx.png"></span> in the Jobs Table. If imported into several target languages, the <span class="emphasis"><em>Completed</em></span> file is composed of all target languages.</p>
+<p>Multilingual files are imported as multiple bilingual jobs with languages mapped before import. They are represented with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015997580/15f4cd6f4d1c67.png" style="" alt="multilingual_xlsx.png"></span> in the Jobs Table. If imported into several target languages, the <span class="emphasis"><em>Completed</em></span> file is composed of all target languages.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Hidden sheets are not processed.</p></li>
 <li class="listitem"><p>Dates and formulas where the displayed cell contents depend on the locale or the underlying values are not exposed for translation but automatically copied to the target columns.</p></li>
@@ -91,7 +91,7 @@
 <p>Sets the maximum length of the translation. For more columns, enter letters separated by commas with no spaces (<span class="emphasis"><em>I,J,K</em></span>).</p>
 </li>
 <li class="listitem">
-<p><span class="guimenu">Convert to Memsource tags</span></p>
+<p> <span class="guimenu">Convert to Memsource tags</span> </p>
 <p>Apply <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expressions</a> to convert specified text to tags.</p>
 </li>
 </ul></div>
