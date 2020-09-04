@@ -1,6 +1,6 @@
 <div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
 <p>Webhooks are arbitrary URLs which handle HTTP POST requests allowing Memsource to notify 3rd-party systems about specified events.</p>
-<p>Memsource monitors if a webhook callback was successfully received. If a webhook reception fails 100 times, it is deactivated with a notification sent to Administrators of the account and the failure is noted on the specific webhook on the <span class="guimenu"><a class="link" href="#UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_UUID-74de1b04-e60d-bca7-f39a-57660b3fdf6b" title="Configure Webhooks">Webhooks</a></span> page.</p>
+<p>Memsource monitors if a webhook callback was successfully received. If a webhook reception fails 3000 times, it is deactivated with a notification sent to Administrators of the account and the failure is noted on the specific webhook on the <span class="guimenu"> <a class="link" href="#UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_UUID-74de1b04-e60d-bca7-f39a-57660b3fdf6b" title="Configure Webhooks">Webhooks</a> </span> page. The retry mechanism has a maximum of 10 retries with the interval between retries being computed up to a maximum value of 30 minutes.</p>
 <p>Webhooks can be selected for the following events:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Job status changed</p></li>
@@ -26,19 +26,19 @@
 <div class="procedure">
 <a id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_procedure-idm231837286887023"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015352580/15f32496504c86.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Webhooks</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360016154859/15f51f86d0aaea.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Webhooks</span>.</p>
 <p>The <span class="guimenu">Webhooks</span> page opens.</p>
 </li>
 <li class="step">
-<p>Click <span class="guilabel">New</span>.</p>
-<p>The <span class="guimenu">Create Webhook</span> page opens.</p>
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Webhook</span> page opens.</p>
 </li>
 <li class="step"><p>Provide URL.</p></li>
 <li class="step"><p>Provide security token if required.</p></li>
 <li class="step"><p>Select events.</p></li>
 <li class="step">
 <p>Click <span class="guilabel">Save</span>.</p>
-<p>The Webhook is added to the list on the <span class="guimenu">Webhooks</span> page.</p>
+<p>The Webhook is added to the list on the <span class="guimenu">Webhooks</span> page.</p>
 </li>
 </ol>
 </div>
@@ -53,7 +53,7 @@
 <h3>
 <a id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_bridgehead-idm231837298823285"></a>Events</h3>
 <p>Examples of a job status change, a job assignment, job creation and when a job's due date is changed.</p>
-<p><span class="bold bold"><strong>Job status has changed</strong></span></p>
+<p> <span class="bold bold"><strong>Job status has changed</strong></span> </p>
 <pre class="programlisting">{
 "jobParts": [
   {
@@ -102,7 +102,7 @@
 ],
 "event": "JOB_STATUS_CHANGED"
 }</pre>
-<p><span class="bold bold"><strong>Job Assigned</strong></span></p>
+<p> <span class="bold bold"><strong>Job Assigned</strong></span> </p>
 <pre class="programlisting">{
 "jobParts": [
   {
@@ -151,7 +151,7 @@
 ],
 "event": "JOB_ASSIGNED"
 }</pre>
-<p><span class="bold bold"><strong>Job Created</strong></span></p>
+<p> <span class="bold bold"><strong>Job Created</strong></span> </p>
 <pre class="programlisting">{
  "jobParts": [
    {
@@ -200,7 +200,7 @@
  ],
  "event": "JOB_CREATED"
 }</pre>
-<p><span class="bold bold"><strong>Job Due Date Changed</strong></span></p>
+<p> <span class="bold bold"><strong>Job Due Date Changed</strong></span> </p>
 <pre class="programlisting">{
   "jobParts": [
     {
