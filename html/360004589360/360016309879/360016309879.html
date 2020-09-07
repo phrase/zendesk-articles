@@ -1,0 +1,466 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div xml:lang="en" dir="ltr" class="section caution sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-7406bf8f-8c9f-3069-f9be-4fe823e7e371"></a>Available for</h2></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Enterprise edition</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-0a7ecc3d-e030-3753-a861-0b7478d16898"></a>Supported Versions</h2></div>
+<p>The Memsource Translation Plugin for Adobe Experience Manager follows the same product support periods as Adobe Experience Manager. See <a class="link" href="https://helpx.adobe.com/support/programs/eol-matrix.html" target="_blank" rel="noopener">https://helpx.adobe.com/support/programs/eol-matrix.html</a> for information on support periods.</p>
+<p>Once an Adobe Experience Manager version reaches end of core support, Memsource no longer maintains the plugin. The installer will be available but no further improvements or fixes will be implemented.</p>
+<div class="itemizedlist list-bullet"><ul class="itemizedlist list-bullet" style="list-style-type: disc; ">
+<li class="listitem list-bullet"><p>Plugin version 1.x supports 6.3 (support ended on Apr 30th, 2020)</p></li>
+<li class="listitem list-bullet"><p>Plugin version 2.x supports 6.4 and 6.5.</p></li>
+<li class="listitem list-bullet"><p>Plugin version 3.x supports AEM as a Cloud Service.</p></li>
+</ul></div>
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360016052120" target="_blank" rel="noopener">Integration Release Notes</a></p>
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360016052120" target="_blank" rel="noopener">Integration Release Notes</a></p>
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360016052120" target="_blank" rel="noopener">Integration Release Notes</a></p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-177d5d67-2a57-3352-320c-0b24c8434e53"></a>Configure In-Context Preview</h2></div>
+<p>The In-context Preview feature offers a real-time preview of original or translated text in both the Memsource Editor for Web and Memsource Editor for Desktop.</p>
+<p>In order for Memsource to offer the real-time preview, it must have access to unpublished pages in an on-premise Adobe Experience Manager author node.</p>
+<p><span class="bold bold"><strong>Memsource Requirements:</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Pass through the enterprise firewall to access the on-premise Adobe Experience Manager installation</p></li>
+<li class="listitem"><p>Authenticate into the Adobe Experience Manager authoring environment</p></li>
+</ul></div>
+<p><span class="bold bold"><strong>Firewall Configuration for On-premise installation:</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Installation must be accessible from the following IP addresses:</p>
+<p><span class="emphasis"><em>34.243.87.13</em></span>, <span class="emphasis"><em>34.248.197.209</em></span>, <span class="emphasis"><em>108.129.22.31</em></span>, <span class="emphasis"><em>3.248.158.93</em></span></p>
+</li>
+<li class="listitem"><p>Domain name must be able to be resolved externally.</p></li>
+</ul></div>
+<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h3></div>
+<p><span class="bold bold"><strong>Pre-requisite</strong></span>: Create an Adobe Experience Manager user with minimum permissions required to view unpublished pages.</p>
+<div class="procedure">
+<a id="procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360016221439/15f562138b8a01.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step">
+<p>Click on <span class="guilabel">Connectors</span>.</p>
+<p>The <span class="guimenu">Connectors</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Connector</span> page opens.</p>
+</li>
+<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to <span class="emphasis"><em>Adobe Experience Manager Live Preview</em></span>                          .</p></li>
+<li class="step">
+<p>Enter the <span class="guilabel">Host</span>.</p>
+<p>Use the host address of the Adobe Experience Manager installation (e.g., <span class="emphasis"><em>https://aem-author.example.org/ or https://author-X-Y.adobeaemcloud.com/</em></span>).</p>
+<p>The domain name must be resolvable externally (not an intranet domain).</p>
+</li>
+<li class="step">
+<p>Enter the Username and Password.</p>
+<div dir="ltr" class="tip">
+<h3 class="title">Tip</h3>
+<p>Create a new user called <span class="emphasis"><em>memsource-preview</em></span> and add the user to the <span class="bold bold"><strong>Authors</strong></span> group.</p>
+</div>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The connector is added to the list on the Connectors page.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div dir="ltr" class="note">
+<h3 class="title">Note</h3>
+<p>Some HTML tags present a risk and the Memsource Editor removes them from this HTML when displaying the preview. This is to ensure user's data privacy and security.</p>
+<p>Examples of removed tags include <code class="code">FORM</code>, <code class="code">IFRAME</code>, <code class="code">SCRIPT</code>, <code class="code">SVG</code>, <code class="code">VIDEO</code>, <code class="code">EMBED</code>, <code class="code">OBJECT</code> or background-image CSS properties.</p>
+</div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-7f178d92-fcf1-1cb2-44d3-d697b06f026b"></a>Configure Translation Workflow</h2></div></div>
+<div class="panel-body collapse" id="UUID-7f178d92-fcf1-1cb2-44d3-d697b06f026b_body">
+<p>Memsource provides a highly-configurable workflow engine allowing associations with Adobe Experience Manager jobs, specific net rates schemes, due dates schemes, price lists, workflows steps and more.</p>
+<p>To configure Adobe Experience Manager job processing, follow these steps:</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step">
+<p>Create a Project Template configured to your needs.</p>
+<p>Under <span class="guimenu">Access and Security</span> set the <span class="guilabel">Allow loading external content in editors</span>.</p>
+<p>Apply the following <span class="guimenu">XML File Import Settings</span>:</p>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360016221459/15f562138bbee4.png" style="" alt="content of the image was changed."></div>
+</li>
+<li class="step">
+<p>Create a Service.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Select the same source and target languages as in Adobe Experience Manager.</p></li>
+<li class="listitem"><p>Select the project template configured in the previous step.</p></li>
+</ul></div>
+</li>
+<li class="step">
+<p>Create an Automation Widget.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Select the service created in the previous step.</p></li>
+<li class="listitem"><p>Don't select the Adobe Experience Manager connector configuration in the Connectors combo.</p></li>
+<li class="listitem"><p>Use the <code class="code">{order.title}</code> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020#supported-macros-0-0" target="_blank" rel="noopener">macro</a> in the title field to represent the Adobe Experience Manager project title and <code class="code">{order.email}</code> to represent the email address of the Adobe Experience Manager submitter. If the email is not set, then the address associated with Memsource credentials that is applied in Adobe Experience Manager Cloud Services is used.</p></li>
+</ul></div>
+</li>
+</ol></div>
+<p>To validate the Memsource configuration, follow these steps:</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>Open an incomplete Translation Project.</p></li>
+<li class="step"><p>Select <span class="guilabel">Export</span> from the <span class="guimenu">Job</span> tile menu.</p></li>
+<li class="step"><p>Find the XML file that contains the source text within the downloaded zip file.</p></li>
+<li class="step"><p>In Memsource, navigate to the <span class="guimenu">Automation Widget</span> used for the integration and open the listed URL.</p></li>
+<li class="step"><p>Complete the AW form, upload the XML file, validate the email and submit.</p></li>
+<li class="step"><p>Verify the new project was created from the Project template as configured.</p></li>
+</ol></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-b982dae6-561a-56d0-c432-244cb632976f"></a>Install the Plugin</h2></div></div>
+<div class="panel-body collapse" id="UUID-b982dae6-561a-56d0-c432-244cb632976f_body">
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-c746d6a4-e086-588f-9698-d48e0dc18cc8"></a>On-premise AEM</h3></div></div>
+<div class="panel-body collapse" id="UUID-c746d6a4-e086-588f-9698-d48e0dc18cc8_body"><div class="panel-inner"><div class="procedure"><ol class="procedure" type="1">
+<li class="step">
+<p>If migrating from 6.2 or 6.3 to 6.4 and above, remove all Legacy Cloud Services configurations from the Classic UI Admin tool <span class="emphasis"><em>(/miscadmin#/etc/cloudservices/memsource-translation</em></span>)</p>
+<p>All configurations disappear from Legacy Cloud Services &gt; Memsource Translation Plugin for AEM.</p>
+</li>
+<li class="step"><p>In <span class="guimenu">Tools</span>, <span class="guimenu">Deployment</span>, go to <span class="guilabel">Packages</span>.</p></li>
+<li class="step"><p>Uninstall previous version of the plugin, if applicable.</p></li>
+<li class="step"><p>Select <span class="guilabel">Upload package</span> and upload the installation file.</p></li>
+<li class="step"><p>Check <span class="guilabel">Force Upload</span> and submit.</p></li>
+</ol></div></div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-b945cd66-f62f-ba13-1bb8-76586ec7c71a"></a>AEM as a Cloud Service</h3></div></div>
+<div class="panel-body collapse" id="UUID-b945cd66-f62f-ba13-1bb8-76586ec7c71a_body"><div class="panel-inner"><div class="procedure"><ol class="procedure" type="1">
+<li class="step">
+<p>Add local filesystem based maven repository to the AEM cloud service project root <span class="emphasis"><em>pom.xml</em></span>:</p>
+<pre class="programlisting">&lt;repositories&gt;
+...
+  &lt;repository&gt;
+    &lt;id&gt;project.local&lt;/id&gt;
+    &lt;name&gt;project&lt;/name&gt;
+    &lt;url&gt;file:${maven.multiModuleProjectDirectory}/repository&lt;/url&gt;
+  &lt;/repository&gt;
+...
+&lt;/repositories&gt;</pre>
+</li>
+<li class="step">
+<p>Add Memsource Plugin dependency to <span class="emphasis"><em>all/pom.xml</em></span>:</p>
+<pre class="programlisting">&lt;dependency&gt;
+  &lt;groupId&gt;com.memsource&lt;/groupId&gt;
+  &lt;artifactId&gt;aem-memsource-plugin.all&lt;/artifactId&gt;
+  &lt;version&gt;X.X.X&lt;/version&gt;
+  &lt;type&gt;zip&lt;/type&gt;
+&lt;/dependency&gt;</pre>
+</li>
+<li class="step">
+<p>Add embedded block to <span class="emphasis"><em>all/pom.xml -&gt; filevault-package-maven-plugin</em></span> configuration:</p>
+<pre class="programlisting">...
+&lt;plugin&gt;
+  &lt;groupId&gt;org.apache.jackrabbit&lt;/groupId&gt;
+  &lt;artifactId&gt;filevault-package-maven-plugin&lt;/artifactId&gt;
+  &lt;extensions&gt;true&lt;/extensions&gt;
+  &lt;configuration&gt;
+  &lt;group&gt;my_packages&lt;/group&gt;
+  &lt;embeddeds&gt;
+   &lt;embedded&gt;
+     &lt;groupId&gt;com.memsource&lt;/groupId&gt;
+     &lt;artifactId&gt;aem-memsource-plugin.all&lt;/artifactId&gt;
+     &lt;type&gt;zip&lt;/type&gt;
+     &lt;target&gt;/apps/aem-memsource-plugin-packages/application/install&lt;/target&gt;
+   &lt;/embedded&gt;
+...</pre>
+</li>
+<li class="step">
+<p>Add the plugin to the local maven repository. Run the following command from AEM cloud service project root replacing <code class="code">{memsource.plugin.path}</code> placeholder with the path to the plugin (e.g. <code class="code">/tmp/aem-memsource-plugin.all-3.0.1.zip</code>):</p>
+<pre class="programlisting">mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile={memsource.plugin.path} -DlocalRepositoryPath=./repository/ -Dpackaging=zip
+</pre>
+</li>
+<li class="step">
+<p>Set the correct plugin version in <span class="emphasis"><em>all/pom.xml</em></span> (e.g. 3.0.1):</p>
+<pre class="programlisting">&lt;dependency&gt;
+  &lt;groupId&gt;com.memsource&lt;/groupId&gt;
+  &lt;artifactId&gt;aem-memsource-plugin.all&lt;/artifactId&gt;
+  &lt;version&gt;3.0.1&lt;/version&gt;
+  &lt;type&gt;zip&lt;/type&gt;
+&lt;/dependency&gt;
+</pre>
+</li>
+</ol></div></div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<p></p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-2c5712ee-dfe6-0716-edda-b1d8e93159a7"></a>Configure Adobe Experience Manager</h2></div></div>
+<div class="panel-body collapse" id="UUID-2c5712ee-dfe6-0716-edda-b1d8e93159a7_body">
+<p>Two configurations are required:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Tell the system that Memsource exists by adding it as a Translation Service Provider specifying how to connect to the TMS.</p></li>
+<li class="listitem"><p>Tell Adobe Experience Manager when and how Memsource is to be used by configuring Translation Integration Configuration. For example: use Memsource for high-visibility content, but a machine translation vendor for community content.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-71376bc7-34d5-8f78-6272-c8fa2c125ae2"></a>Add Memsource as a Translation Service Provider</h2></div></div>
+<div class="panel-body collapse" id="UUID-71376bc7-34d5-8f78-6272-c8fa2c125ae2_body">
+<p>Follow these steps:</p>
+<div class="sidebar accordion accordion">
+<a id="sidebar-idm4560688254288031669666090445"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Versions 6.4, 6.5</span>
+</div></div>
+</div>
+<div id="sidebar-idm4560688254288031669666090445_body" class="panel-body collapse">
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>In <span class="guimenu">Tools</span>, <span class="guimenu">General</span>, go to <span class="guimenu">Configuration Browser</span>.</p></li>
+<li class="step"><p>Create a configuration container for each Memsource service (e.g. one configuration for human translation and a separate configuration for machine-only translation).</p></li>
+<li class="step"><p>In <span class="guimenu">Cloud Services</span>, go to <span class="guimenu">Translation Cloud Services</span>.</p></li>
+<li class="step"><p>Expand the <span class="guimenu">conf</span> directory.</p></li>
+</ol></div>
+<p>The configuration containers created in the previous step are listed.</p>
+</div>
+</div>
+</div>
+<div class="sidebar accordion accordion">
+<a id="sidebar-idm4542979831084831669682190829"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Version 6.3</span>
+</div></div>
+</div>
+<div id="sidebar-idm4542979831084831669682190829_body" class="panel-body collapse"><div class="procedure">
+<a id="procedure-idm4545962284326431669682734668"></a><ul class="procedure"><li class="step"><p>In Tools, go to <span class="guimenu">Deployment</span>, click on <span class="guilabel">Cloud Services</span>, and navigate to <span class="guimenu">Memsource Translation Plugin for AEM</span>.</p></li></ul>
+</div></div>
+</div>
+</div>
+<p> <span class="bold bold"><strong>Create a new configuration and enter the following information:</strong></span> </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p> <span class="bold bold"><strong>Memsource Home URL</strong></span>: The default URL is <span class="emphasis"><em>https://cloud.memsource.com/web/</em></span> but can be different if you or the LSP is using a Custom URL.</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>Username</strong></span> and <span class="bold bold"><strong>Password</strong></span>.</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>Automation Widget</strong></span>: Select the Automation Widget prepared for use in Adobe Experience Manager. If using multiple Automation Widgets for different scenarios, set up multiple configurations.</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>Service</strong></span>: Select the service that governs the language setup of projects (orders) in Memsource as well as the Workflow setup of these Memsource projects.</p></li>
+<li class="listitem">
+<p> <span class="bold bold"><strong>Autocomplete Job</strong></span>: Select if the Adobe Experience Manager Translation Jobs is to skip the Review step.</p>
+<p>In version 6.5, equivalent configuration is available in translation project advanced settings.</p>
+</li>
+<li class="listitem"><p> <span class="bold bold"><strong>Adobe Experience Manager URL</strong></span>: Use the same host address of the installation used in the Memsource connector and append with <span class="emphasis"><em>/sites.html/content/</em></span> (e.g. <span class="emphasis"><em>https://aem-author.example.org/sites.html/content/</em></span>).</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-508e3e79-f11f-0aee-e1ce-21a6cf2a6a86"></a>Set up Translation Integration</h2></div></div>
+<div class="panel-body collapse" id="UUID-508e3e79-f11f-0aee-e1ce-21a6cf2a6a86_body">
+<p>When using the Memsource Translation Plugin for AEM, all files in the translation jobs are submitted for translation and thus returned from Memsource. Use the project <span class="emphasis"><em>Translation Integration</em></span> configuration to prevent non-translatable assets or reference materials from being included in the projects.</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step">
+<div class="sidebar accordion accordion">
+<a id="sidebar-idm4646117301536031669692431165"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Versions 6.4, 6.5</span>
+</div></div>
+</div>
+<div id="sidebar-idm4646117301536031669692431165_body" class="panel-body collapse"><p>In Tools, go to <span class="guimenu">Cloud Services</span>, click <span class="guilabel">Translation Cloud Services</span>.</p></div>
+</div>
+</div>
+<div class="sidebar accordion accordion">
+<a id="sidebar-idm4542980066262431669693338307"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Version 6.3</span>
+</div></div>
+</div>
+<div id="sidebar-idm4542980066262431669693338307_body" class="panel-body collapse"><p>In Tools, go to <span class="guimenu">Deployment</span>, click on Cloud Services, and select <span class="guilabel">Translation Integration</span>.</p></div>
+</div>
+</div>
+</li>
+<li class="step">
+<p>Create a new configuration specifically for translation in Memsource.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Ensure <span class="guimenu">Translate Component Strings</span> and <span class="guimenu">Translate Tags</span> are unchecked.</p></li>
+<li class="listitem"><p>Set <span class="guimenu">Translate page assets</span> to <span class="guilabel">Do not translate</span>.</p></li>
+<li class="listitem"><p>On the <span class="guimenu">Assets</span> Tab, set the <span class="guimenu">Translation Workflow</span> to <span class="guilabel">Do not translate</span>.</p></li>
+</ul></div>
+</li>
+<li class="step"><p>If a project still contains non-translatable assets or reference materials, mark and delete them directly in Memsource.</p></li>
+</ol></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-9a9fec07-34b4-6ba3-09e9-4fb5ba6f51cd"></a>Apply Translation Integration to Sites</h2></div></div>
+<div class="panel-body collapse" id="UUID-9a9fec07-34b4-6ba3-09e9-4fb5ba6f51cd_body">
+<p>Configure default Memsource Translation Provider with different parts of the site taxonomy. Configure the provider at the root node of the site. All descendant pages will inherit the setting. Override the setting at the node that should use different provider configuration (e.g. entire site uses human translation but the community section uses machine translation).</p>
+<p>To apply translation integration, follow these steps:</p>
+<div class="sidebar accordion accordion">
+<a id="sidebar-idm4575661821438431669696313903"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Versions 6.4, 6.5</span>
+</div></div>
+</div>
+<div id="sidebar-idm4575661821438431669696313903_body" class="panel-body collapse"><div class="procedure">
+<a id="procedure-idm457566182136003166969666822"></a><ul class="procedure"><li class="step"><p>On the <span class="guimenu">Advanced</span> Tab, select the newly created configuration as the Cloud Configuration.</p></li></ul>
+</div></div>
+</div>
+</div>
+<div class="sidebar accordion accordion">
+<a id="sidebar-idm4560692575328031669697270918"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Version 6.3</span>
+</div></div>
+</div>
+<div id="sidebar-idm4560692575328031669697270918_body" class="panel-body collapse"><div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>On the <span class="guimenu">Cloud Services Tab</span>, select the newly created configuration as the Translation Integration.</p></li>
+<li class="step">
+<p>Click on the <span class="guilabel">Add configuration</span> label and select the <span class="guilabel">Memsource Translation Plugin for AEM</span>.</p>
+<p>A dropdown menu is displayed with previously created configurations.</p>
+</li>
+<li class="step">
+<p>Select the configuration for use with this content.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>By default, all child pages inherit these settings. Adjust any page to use a different cloud configuration if required.</p></li></ul></div>
+</li>
+</ol></div></div>
+</div>
+</div>
+<p>When adding content from these pages, only translatable content will be added. If a project is created from the <span class="guimenu">References Panel</span>, it will be automatically set up to use the cloud configuration associated with the root page.</p>
+<p>Memsource Home URL: The default URL is <a class="link" href="https://cloud.memsource.com/web/" target="_blank" rel="noopener">https://cloud.memsource.com/web/</a> but can be different if you or the LSP is using a Custom URL.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-16fb77ae-7d18-f14e-9075-9848d5b634af"></a>Submit Content for Translation</h2></div></div>
+<div class="panel-body collapse" id="UUID-16fb77ae-7d18-f14e-9075-9848d5b634af_body">
+<p>To submit content for translation, create a translation project in Adobe Experience Manager. Projects can be created manually in the Projects section or use built-in workflows to minimize the effort.</p>
+<p>To prepare a project for submission to Memsource through the built-in workflows, follow these steps:</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>From the <span class="guimenu">Sites</span> view, navigate to the page, select it, and open the <span class="guimenu">References Panel</span>.</p></li>
+<li class="step"><p>Click <span class="guilabel">Language Copies</span> and expand the <span class="guilabel">Create &amp; Translate</span> section at the bottom of the rail.</p></li>
+<li class="step"><p>Select target languages, optionally uncheck the <span class="guilabel">Select all sub-pages</span>.</p></li>
+<li class="step">
+<p>Select the appropriate option from the Project dropdown:</p>
+<div class="sidebar accordion accordion">
+<a id="sidebar-idm4575661954035231669705205706"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Versions 6.4, 6.5</span>
+</div></div>
+</div>
+<div id="sidebar-idm4575661954035231669705205706_body" class="panel-body collapse">
+<p>Select <span class="guilabel">Create Multi-language Translation Project</span>.</p>
+<p>If there are multiple target languages, a separate project will be created for each language.</p>
+</div>
+</div>
+</div>
+<div class="sidebar accordion accordion">
+<a id="sidebar-idm4573163221417631669706847627"></a><div class="accordion-icon"></div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="titlepage"></div>
+<div><div class="sidebar-title">
+<span style="display:none;" class="formal-label"><span class="formal-label-text">sidebar</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Version 6.3</span>
+</div></div>
+</div>
+<div id="sidebar-idm4573163221417631669706847627_body" class="panel-body collapse"><p>Select <span class="guilabel">Create a new translation project</span>.</p></div>
+</div>
+</div>
+</li>
+<li class="step"><p>Enter project title and click <span class="guilabel">Create</span>.</p></li>
+<li class="step"><p>Navigate to the project in the <span class="guimenu">Projects</span> section and open it.</p></li>
+<li class="step">
+<p>Click the ellipsis on the first tile to open the Advanced project settings.</p>
+<p>If configured properly, configurations created in the steps above are referenced.</p>
+</li>
+<li class="step">
+<p>To submit a job to Memsource, select <span class="guilabel">Start</span> from the job tile menu.</p>
+<p>A new project will be created in Memsource within a few minutes.</p>
+<div dir="ltr" class="tip">
+<h3 class="title">Tip</h3>
+<p>Adobe Experience Manager polls for a job status update on a schedule that is configured in <span class="guimenu">Translation Platform Configuration</span> accessed via <span class="guimenu">Web Console</span>.</p>
+<p>Setting the <span class="guimenu">Scheduler Cron</span> property to run frequently (e.g. <code class="code">0 0/5 * * * ? *</code> triggers a translation job status refresh every 5 minutes).</p>
+<p>Refreshing the project detail page forces a pull.</p>
+</div>
+</li>
+<li class="step"><p>In Memsource, translate the product jobs and set their status to <span class="guimenu">Completed</span>.</p></li>
+<li class="step"><p>If not set automatically in Memsource project automation settings, set the project status to <span class="guimenu">Completed</span>.</p></li>
+<li class="step"><p>If the <span class="guimenu">Autocomplete Jobs</span> in the Memsource configuration is turned on, the Translation Job status will change to <span class="guimenu">Ready for Review</span> within minutes. The status then changes to <span class="guimenu">Completed</span>.</p></li>
+<li class="step">
+<p>If rejected, the job is submitted back to Memsource with comments. The job status in Memsource changes to <span class="emphasis"><em>Rejected</em></span> and the comments appear in the rejected job email. Format of the <span class="emphasis"><em>CMS Job Rejected</em></span> email can be customized in <span class="guimenu">Email Templates</span> settings.</p>
+<div dir="ltr" class="note">
+<h3 class="title">Note</h3>
+<p>Rejecting a job updates the status to <span class="emphasis"><em>Reject</em></span> for all workflow tasks.</p>
+</div>
+</li>
+<li class="step"><p>Once all files in the job are accepted, the status changes to <span class="emphasis"><em>Completed</em></span>.</p></li>
+</ol></div>
+<p>For more details on creating translation projects using the References Panel, see <a class="link" href="https://docs.adobe.com/content/help/en/experience-manager-64/administering/introduction/tc-manage.html" target="_blank" rel="noopener">Adobe documentation</a>.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-b8f07c09-c9f2-6a91-051d-3b1c0c9257b3" id="UUID-6417fe87-202a-0390-214d-e2afbf9acb9e"></a>Custom Language Mapping</h2></div></div>
+<div class="panel-body collapse" id="UUID-6417fe87-202a-0390-214d-e2afbf9acb9e_body">
+<p>To map Adobe Experience Manager languages to different languages in Memsource (e.g. zh to zh_tw), follow these steps.</p>
+<p>The mapping applies to both source and target languages.</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>Open CRXDE (<code class="code">/crx/de/index.jsp</code>).</p></li>
+<li class="step"><p>Browse to the <code class="code">/apps/memsource-connector/language-mapping/</code> folder.</p></li>
+<li class="step"><p>Create a new node.</p></li>
+<li class="step"><p>Use Adobe Experience Manager language code as the <span class="emphasis"><em>Name</em></span> (e.g. zh), keep <span class="emphasis"><em>Type: nt:unstructured</em></span>.</p></li>
+<li class="step">
+<p>Add property:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p> <span class="bold bold"><strong>Name</strong></span>: <span class="emphasis"><em>memsourceLanguage</em></span> </p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>Type</strong></span>: <span class="emphasis"><em>String</em></span> </p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>Value</strong></span>: Memsource language code (e.g. zh_tw)</p></li>
+</ul></div>
+</li>
+<li class="step"><p>Click <span class="guilabel">Save All</span>.</p></li>
+</ol></div>
+<p>Un-mapped language codes are sent to Memsource as they are.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
