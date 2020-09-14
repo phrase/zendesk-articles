@@ -40,10 +40,10 @@
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h3></div>
-<p> <span class="bold bold"><strong>Pre-requisite</strong></span>: Create an Adobe Experience Manager user with minimum permissions required to view unpublished pages.</p>
+<p><span class="bold bold"><strong>Pre-requisite</strong></span>: Create an Adobe Experience Manager user with minimum permissions required to view unpublished pages.</p>
 <div class="procedure">
 <a id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360016166879/15f521e1bbb175.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360016428799/15f5f1ab669b41.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -55,10 +55,16 @@
 <li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to <span class="emphasis"><em>Adobe Experience Manager Live Preview</em></span>                          .</p></li>
 <li class="step">
 <p>Enter the <span class="guilabel">Host</span>.</p>
-<p>Use the host address of the Adobe Experience Manager installation (e.g., <span class="emphasis"><em>https://aem-author.example.org/</em></span>).</p>
+<p>Use the host address of the Adobe Experience Manager installation (e.g., <span class="emphasis"><em>https://aem-author.example.org/ or https://author-X-Y.adobeaemcloud.com/</em></span>).</p>
 <p>The domain name must be resolvable externally (not an intranet domain).</p>
 </li>
-<li class="step"><p>Enter the Username and Password.</p></li>
+<li class="step">
+<p>Enter the Username and Password.</p>
+<div dir="ltr" class="tip">
+<h3 class="title">Tip</h3>
+<p>Create a new user called <span class="emphasis"><em>memsource-preview</em></span> and add the user to the <span class="bold bold"><strong>Authors</strong></span> group.</p>
+</div>
+</li>
 <li class="step">
 <p>Click <span class="guilabel">Save</span>.</p>
 <p>The connector is added to the list on the Connectors page.</p>
@@ -85,7 +91,7 @@
 <p>Create a Project Template configured to your needs.</p>
 <p>Under <span class="guimenu">Access and Security</span> set the <span class="guilabel">Allow loading external content in editors</span>.</p>
 <p>Apply the following <span class="guimenu">XML File Import Settings</span>:</p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360016166899/15f521e1bbf924.png" style="" alt="content of the image was changed."></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360016419280/15f5f1ab670be7.png" style="" alt="content of the image was changed."></div>
 </li>
 <li class="step">
 <p>Create a Service.</p>
@@ -117,8 +123,12 @@
 </div></div>
 <div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-c746d6a4-e086-588f-9698-d48e0dc18cc8"></a>Install the Plugin</h2></div></div>
-<div class="panel-body collapse" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-c746d6a4-e086-588f-9698-d48e0dc18cc8_body"><div class="procedure"><ol class="procedure" type="1">
+<a data-zd-article="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-b982dae6-561a-56d0-c432-244cb632976f"></a>Install the Plugin</h2></div></div>
+<div class="panel-body collapse" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-b982dae6-561a-56d0-c432-244cb632976f_body">
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-c746d6a4-e086-588f-9698-d48e0dc18cc8"></a>On-premise AEM</h3></div></div>
+<div class="panel-body collapse" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-c746d6a4-e086-588f-9698-d48e0dc18cc8_body"><div class="panel-inner"><div class="procedure"><ol class="procedure" type="1">
 <li class="step">
 <p>If migrating from 6.2 or 6.3 to 6.4 and above, remove all Legacy Cloud Services configurations from the Classic UI Admin tool <span class="emphasis"><em>(/miscadmin#/etc/cloudservices/memsource-translation</em></span>)</p>
 <p>All configurations disappear from Legacy Cloud Services &gt; Memsource Translation Plugin for AEM.</p>
@@ -127,7 +137,71 @@
 <li class="step"><p>Uninstall previous version of the plugin, if applicable.</p></li>
 <li class="step"><p>Select <span class="guilabel">Upload package</span> and upload the installation file.</p></li>
 <li class="step"><p>Check <span class="guilabel">Force Upload</span> and submit.</p></li>
-</ol></div></div>
+</ol></div></div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-b945cd66-f62f-ba13-1bb8-76586ec7c71a"></a>AEM as a Cloud Service</h3></div></div>
+<div class="panel-body collapse" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-b945cd66-f62f-ba13-1bb8-76586ec7c71a_body"><div class="panel-inner"><div class="procedure"><ol class="procedure" type="1">
+<li class="step">
+<p>Add local filesystem based maven repository to the AEM cloud service project root <span class="emphasis"><em>pom.xml</em></span>:</p>
+<pre class="programlisting">&lt;repositories&gt;
+...
+  &lt;repository&gt;
+    &lt;id&gt;project.local&lt;/id&gt;
+    &lt;name&gt;project&lt;/name&gt;
+    &lt;url&gt;file:${maven.multiModuleProjectDirectory}/repository&lt;/url&gt;
+  &lt;/repository&gt;
+...
+&lt;/repositories&gt;</pre>
+</li>
+<li class="step">
+<p>Add Memsource Plugin dependency to <span class="emphasis"><em>all/pom.xml</em></span>:</p>
+<pre class="programlisting">&lt;dependency&gt;
+  &lt;groupId&gt;com.memsource&lt;/groupId&gt;
+  &lt;artifactId&gt;aem-memsource-plugin.all&lt;/artifactId&gt;
+  &lt;version&gt;X.X.X&lt;/version&gt;
+  &lt;type&gt;zip&lt;/type&gt;
+&lt;/dependency&gt;</pre>
+</li>
+<li class="step">
+<p>Add embedded block to <span class="emphasis"><em>all/pom.xml -&gt; filevault-package-maven-plugin</em></span> configuration:</p>
+<pre class="programlisting">...
+&lt;plugin&gt;
+  &lt;groupId&gt;org.apache.jackrabbit&lt;/groupId&gt;
+  &lt;artifactId&gt;filevault-package-maven-plugin&lt;/artifactId&gt;
+  &lt;extensions&gt;true&lt;/extensions&gt;
+  &lt;configuration&gt;
+  &lt;group&gt;my_packages&lt;/group&gt;
+  &lt;embeddeds&gt;
+   &lt;embedded&gt;
+     &lt;groupId&gt;com.memsource&lt;/groupId&gt;
+     &lt;artifactId&gt;aem-memsource-plugin.all&lt;/artifactId&gt;
+     &lt;type&gt;zip&lt;/type&gt;
+     &lt;target&gt;/apps/aem-memsource-plugin-packages/application/install&lt;/target&gt;
+   &lt;/embedded&gt;
+...</pre>
+</li>
+<li class="step">
+<p>Add the plugin to the local maven repository. Run the following command from AEM cloud service project root replacing <code class="code">{memsource.plugin.path}</code> placeholder with the path to the plugin (e.g. <code class="code">/tmp/aem-memsource-plugin.all-3.0.1.zip</code>):</p>
+<pre class="programlisting">mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile={memsource.plugin.path} -DlocalRepositoryPath=./repository/ -Dpackaging=zip
+</pre>
+</li>
+<li class="step">
+<p>Set the correct plugin version in <span class="emphasis"><em>all/pom.xml</em></span> (e.g. 3.0.1):</p>
+<pre class="programlisting">&lt;dependency&gt;
+  &lt;groupId&gt;com.memsource&lt;/groupId&gt;
+  &lt;artifactId&gt;aem-memsource-plugin.all&lt;/artifactId&gt;
+  &lt;version&gt;3.0.1&lt;/version&gt;
+  &lt;type&gt;zip&lt;/type&gt;
+&lt;/dependency&gt;
+</pre>
+</li>
+</ol></div></div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+</div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div></div>
 <div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
