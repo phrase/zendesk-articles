@@ -14,7 +14,7 @@
 <p>To enable Single Sign-On, follow these steps:</p>
 <div class="procedure"><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015389019/15f337fe8314c3.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Single Sign-On</span> section and click on <span class="guilabel">Details</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360016449840/15f5f692e1ab7d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Single Sign-On</span> section and click on <span class="guilabel">Details</span>.</p>
 <p>The <span class="guimenu">Single Sign-On</span> page opens.</p>
 </li>
 <li class="step">
@@ -23,11 +23,11 @@
 </li>
 <li class="step">
 <p>Complete the following fields:</p>
-<p>The first five fields should be completed using information from an IdP provider. (For more information about configuring SSO for OneLogin, see <a class="link" href="https://onelogin.service-now.com/support" target="_blank" rel="noopener">OneLogin documentation</a>.)</p>
+<p>The first five fields should be completed using information from an IdP. (For more information about configuring SSO for OneLogin, see <a class="link" href="https://onelogin.service-now.com/support" target="_blank" rel="noopener">OneLogin documentation</a>.)</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p> <span class="guimenu">Certificate Fingerprint</span> </p>
-<p>This is used to validate the authenticity of the IdP. Depending fingerprint generation, it is delimited by either colons or spaces. If authentication is not successful, switch the colons and spaces in the fingerprint to ensure it is correctly applied.</p>
+<p>This is used to validate the authenticity of the IdP. Depending on fingerprint generation, it is delimited by either colons or spaces. If authentication is not successful, switch the colons and spaces in the fingerprint to ensure it is correctly applied.</p>
 </li>
 <li class="listitem"><p> <span class="guimenu">Certificate Fingerprint Algorithm</span> </p></li>
 <li class="listitem">
@@ -44,7 +44,7 @@
 </li>
 <li class="listitem">
 <p> <span class="guimenu">Landing URL (Optional)</span> </p>
-<p>Choose the URL of the web page that users will see when they log out of Memsource.</p>
+<p>Choose the URL of the web page that users will see when they log out of Memsource, e.g. a list of applications available to them in the IdP.</p>
 </li>
 <li class="listitem">
 <p> <span class="guimenu">Key User Identifier</span> </p>
@@ -89,6 +89,7 @@
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61" id="UUID-07e59ede-a1ec-3512-3e4f-f5d2cf0ecd61_UUID-a7fa64fe-310e-def4-669b-eeb160328c1f"></a>User Management</h2></div>
+<p>Note: If SSO is enabled in your organization, emails sent to any newly created users will not include a password generation link as the main means of access to Memsource is via SSO.</p>
 <p>Options:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
@@ -97,7 +98,7 @@
 </li>
 <li class="listitem">
 <p> <span class="bold bold"><strong>New users mapped to</strong></span> </p>
-<p>Sets default new user role for new users created via SSO. The Linguist role is selected by default.</p>
+<p>Sets default user role for new users created via SSO. The Linguist role is selected by default.</p>
 </li>
 </ul></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
