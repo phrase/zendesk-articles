@@ -23,10 +23,10 @@
 </li>
 <li class="step">
 <p>Sort results by rearranging the language columns, and clicking on <span class="guimenu">Set up columns</span> to select what columns are visible.</p>
-<p>Hover over <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015772539/15f4373579fd3f.png" style="" alt="TM_search_info.png"></span> to see details of the translation unit.</p>
+<p>Hover over <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360017455480/15f83ece12306a.png" style="" alt="TM_search_info.png"></span> to see details of the translation unit.</p>
 </li>
 <li class="step">
-<p>Double click on translation unit text to edit it and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015772559/15f437357a4740.png" style="" alt="TM_deleteunit.png"></span> to delete it.</p>
+<p>Double click on translation unit text to edit it and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360017451999/15f83ece12860c.png" style="" alt="TM_deleteunit.png"></span> to delete it.</p>
 <div dir="ltr" class="caution">
 <h3 class="title">Caution</h3>
 <p>Editing translation units within a TM is permanent. There is no undo function. If performing major maintenance, export the TM in TMX format and save in ZIP format as a backup.</p>
@@ -90,7 +90,7 @@
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>XLSX files can be edited and then imported back into new Translation Memories that replace the previous version. The old TM should be deleted as to not cause confusion.</p></li></ul></div>
 <h4>
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_bridgehead-idm231764803443063"></a>TM Update</h4>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The file can be edited with <code class="code">|update</code> or <code class="code">|delete</code> added to the segment's ID. These translation units will then be updated or deleted when the XLSX file is imported back into the TM.</p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The file can be edited with <code class="code">|update</code> or <code class="code">|delete</code> added to the segment's ID. These translation units will then be updated or deleted when the XLSX file is imported back into the TM. Duplicates created with the update function cannot be automatically removed and must be deleted manually. If duplicates are found, an error message is displayed.</p></li></ul></div>
 <h3>
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_bridgehead-idm231764808304843"></a>Deleting Multiple 100% Matches</h3>
 <p>A 100% match is a segment with the same source but different context. If segments don't require context (every source text has only one translation, regardless of the context in the file), the TM can be exported with no context and imported into a new TM.</p>
@@ -214,13 +214,13 @@
 <li class="step"><p>Remove the old TM from the project (keep as a backup).</p></li>
 <li class="step"><p>From the Job Table, select all earlier jobs that require updating.</p></li>
 <li class="step">
-<p>Click <span class="guilabel">Pre-translate</span> and select <span class="guimenu">Delete All Translations</span>.</p>
+<p>Click <span class="guilabel">Pre</span> <span class="guilabel">-translate</span> and select <span class="guimenu">Delete All Translations</span>.</p>
 <p>Verify the deletion.</p>
 </li>
-<li class="step"><p>Select the same jobs again, click <span class="guilabel">Pre-translate</span> and select <span class="guimenu">Pre-translate Where Empty</span>.</p></li>
+<li class="step"><p>Select the same jobs again, click <span class="guilabel">Pre</span> <span class="guilabel">-translate</span> and select <span class="guimenu">Pre</span> <span class="guimenu">-translate Where Empty</span>.</p></li>
 <li class="step"><p>Set the pre-translation threshold to 100% and set all 100% non-translatable matches be confirmed.</p></li>
 <li class="step">
-<p>Click <span class="guilabel">Pre-translate</span>.</p>
+<p>Click <span class="guilabel">Pre</span> <span class="guilabel">-translate</span>.</p>
 <p>New translations are applied to the earlier work.</p>
 </li>
 </ol>
@@ -326,7 +326,7 @@
 <li class="step">
 <p>Click <span class="guilabel">Import</span>.</p>
 <p>The window closes and the file is imported into the TM.</p>
-<p>If there is an error, <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015772579/15f437357a92c8.png" style="" alt="Warning.png"></span> is shown in the <span class="guimenu">Last Import</span> field of the translation memory page. Hover over the warning for error details.</p>
+<p>If there is an error, <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360017452019/15f83ece12e258.png" style="" alt="Warning.png"></span> is shown in the <span class="guimenu">Last Import</span> field of the translation memory page. Hover over the warning for error details.</p>
 </li>
 </ol>
 </div>
