@@ -1,12 +1,10 @@
 <div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
-<p><a class="link" href="http://pology.nedohodnik.net/doc/user/en_US/ch-poformat.html" target="_blank" rel="noopener">PO gettext</a> is an internationalization and localization (i18n) system commonly used for writing multilingual programs on Unix-like computer operating systems.</p>
+<p><a class="link" href="http://pology.nedohodnik.net/doc/user/en_US/ch-poformat.html" target="_blank" rel="noopener">PO gettext</a> is an internationalization and localization (i18n) system commonly used for writing multilingual programs on Unix-like computer operating systems.</p>
 <p>Valid PO files are bilingual, where <span class="emphasis"><em>msgid</em></span> contains source text and <span class="emphasis"><em>msgstr</em></span> contains target text.</p>
 <p>Example:</p>
-<div class="informalexample">
-<a id="UUID-86d5edfa-d9cc-5129-f8e7-edba94cd8413_example-idm231826903264027"></a><pre class="programlisting">#: src/name.c:36
+<pre class="programlisting">#: src/name.c:36
 msgid "My name is %s.\n"
 msgstr "Je m'appelle %s.\n"</pre>
-</div>
 <h2>
 <a id="UUID-86d5edfa-d9cc-5129-f8e7-edba94cd8413_bridgehead-idm231825021122866"></a>File Types</h2>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>.PO</p></li></ul></div>
@@ -45,7 +43,7 @@ msgstr "Je m'appelle %s.\n"</pre>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="guimenu">Export multi-line strings</span></p>
-<p>Selected by default and improves the handling of PO files with <code class="code">\n</code> tags.)</p>
+<p>Selected by default and improves the handling of PO files with <code class="code">\n</code> tags by adding actual line breaks in the exported PO file.</p>
 </li>
 <li class="listitem">
 <p><span class="guimenu">Convert to Memsource tags</span></p>
@@ -66,18 +64,18 @@ msgstr "Je m'appelle %s.\n"</pre>
 </ul></div>
 <h3>
 <a id="UUID-86d5edfa-d9cc-5129-f8e7-edba94cd8413_bridgehead-idm231826904167079"></a>Plural Form</h3>
-<p>PO Gettext allows the localization of <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675840" target="_blank" rel="noopener">Plural Forms</a>.</p>
+<p>PO Gettext allows the localization of <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675840" target="_blank" rel="noopener">Plural Forms</a>.</p>
 <p>PO GNU Gettext only supports plural forms with integer numbers. Decimal number form such as <span class="emphasis"><em>1.5 points</em></span> is not supported.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>The original file has to contain <span class="emphasis"><em>msgid_plural</em></span> string as well as the singular <span class="emphasis"><em>msgid</em></span>.</p></li>
-<li class="listitem"><p>The plural rules specification (the formula) defined in the file's header is used to generate plural forms. If there is no such specification, the standard <a class="link" href="http://cldr.unicode.org/index/charts" target="_blank" rel="noopener">Unicode CLDR Plural Rules</a> based on the target languages will be used for the job import.</p></li>
-<li class="listitem"><p>The file must be imported with the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279#translation-memory-match-context-0-4" target="_blank" rel="noopener">Segment Key Context</a> in order to use the Plurals functionality properly.</p></li>
+<li class="listitem"><p>The original file has to contain <span class="emphasis"><em>msgid_plural</em></span> string as well as the singular <span class="emphasis"><em>msgid</em></span>.</p></li>
+<li class="listitem"><p>The plural rules specification (the formula) defined in the file's header is used to generate plural forms. If there is no such specification, the standard <a class="link" href="http://cldr.unicode.org/index/charts" target="_blank" rel="noopener">Unicode CLDR Plural Rules</a> based on the target languages will be used for the job import.</p></li>
+<li class="listitem"><p>The file must be imported with the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279#translation-memory-match-context-0-4" target="_blank" rel="noopener">Segment Key Context</a> in order to use the Plurals functionality properly.</p></li>
 <li class="listitem"><p>The target locale and the plural form of the segment will be used as the segment's Context Key and saved to the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279" target="_blank" rel="noopener">TM</a>.</p></li>
-<li class="listitem"><p>The string <span class="emphasis"><em>msgctxt</em></span>, if present in the original file, is added to the segment's Context Key and saved to the TM. It is also be displayed in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872139-Context-Information" target="_blank" rel="noopener">Context Note</a> window.</p></li>
+<li class="listitem"><p>The string <span class="emphasis"><em>msgctxt</em></span>, if present in the original file, is added to the segment's Context Key and saved to the TM. It is also be displayed in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872139-Context-Information" target="_blank" rel="noopener">Context Note</a> window. In case <span class="emphasis"><em>msgctxt</em></span> is empty, only <span class="emphasis"><em>msgstr</em></span> keyword is used and saved.</p></li>
 </ul></div>
 <div class="example">
 <a id="UUID-86d5edfa-d9cc-5129-f8e7-edba94cd8413_example-idm231826925837796"></a><div class="example-title">
-<span class="formal-label"><span class="formal-label-text">Example</span><span class="formal-number"> 1</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Unspecified plural in PO Gettext file</span>
+<span class="formal-label"><span class="formal-label-text">Example</span><span class="formal-number"> 1</span><span class="formal-label-delimiter">. </span></span><span class="formal-title"><span class="bold bold">Unspecified plural in PO Gettext file</span></span>
 </div>
 <div class="example-contents">
 <p>If imported to German and Arabic, the German target file will have only two plural forms while the Arabic target file will have six. The correct Plural Rule will be automatically used for each target language, and the job will be imported with a language-specific number of plural forms.</p>
@@ -90,12 +88,12 @@ msgstr ""
 #:ui/gui/409
 msgctxt "GUI|Installation"
 msgid "%d _storage device selected"
-msgid_plural "%d _storage devices selected" </pre>
+msgid_plural "%d _storage devices selected" </pre>
 </div>
 </div>
 <br class="example-break"><div class="example">
 <a id="UUID-86d5edfa-d9cc-5129-f8e7-edba94cd8413_example-idm23182692782248"></a><div class="example-title">
-<span class="formal-label"><span class="formal-label-text">Example</span><span class="formal-number"> 2</span><span class="formal-label-delimiter">. </span></span><span class="formal-title">Specified Plural Rule for the Czech language in the header</span>
+<span class="formal-label"><span class="formal-label-text">Example</span><span class="formal-number"> 2</span><span class="formal-label-delimiter">. </span></span><span class="formal-title"><span class="bold bold">Specified Plural Rule for the Czech language in the header</span></span>
 </div>
 <div class="example-contents">
 <p>This file will always have 3 plural forms even when imported to German or Arabic.</p>
