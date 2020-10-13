@@ -1,5 +1,5 @@
-<div class="section top-level-topic zd-article section" dir="ltr" lang="en">
-<p>This is a simple API scenario with sample API calls and instructions on how to chain them together to complete a simple action using only Memsource APIs. Options that can be set via the APIs are extensive. Consult the respective sections of our <a class="link" href="https://cloud.memsource.com/web/docs/api" target="_blank" rel="noopener">REST API documentation</a> to find out more about all available options.</p>
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>This is a simple API scenario with sample API calls and instructions on how to chain them together to complete a simple action using only Memsource APIs. Options that can be set via the APIs are extensive. Consult the respective sections of our <a class="link" href="https://cloud.memsource.com/web/docs/api" target="_blank" rel="noopener">REST API documentation</a> to find out more about all available options.</p>
 <h3>
 <a id="UUID-30680640-736a-b005-c89c-e1a92b38976b_bridgehead-idm231835593409019"></a>Scenario</h3>
 <p><span class="bold bold"><strong>Authentication:</strong></span></p>
@@ -9,30 +9,27 @@
 <p><span class="bold bold"><strong>Translation:</strong></span></p>
 <p>The actual translation work will be performed outside of the API scenario (in any of the Editors).</p>
 <p><span class="bold bold"><strong>API Function:</strong></span></p>
-<p>Once the assignment is finished (marked as Completed by Linguist),</p>
-<p>the project's status is set to Completed and the finished document is downloaded from the project.</p>
+<p>Once the assignment is finished (marked as Completed by Linguist),</p>
+<p>the project's status is set to Completed and the finished document is downloaded from the project.</p>
 <h3>
 <a id="UUID-30680640-736a-b005-c89c-e1a92b38976b_bridgehead-idm231835603903879"></a>Methodology</h3>
 <p>Each individual REST API call has an appropriate method listed. Using an incorrect method (e.g. GET instead of POST in the project creation call) results in an unsuccessful API call.</p>
 <h3>
 <a id="UUID-30680640-736a-b005-c89c-e1a92b38976b_bridgehead-idm231835612218314"></a>Step 1: Authentication</h3>
 <p>There are two authentication methods:</p>
-<div class="orderedlist">
-<ol class="orderedlist" type="1">
+<div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem">
-<p>Authentication API call: </p>
+<p>Authentication API call:</p>
 <p>This call generates an authentication token that is valid for 24 hours. The token then needs to be inserted into all the following APIs. This validates the users and allows them to perform any other actions in the account.</p>
 </li>
 <li class="listitem">
-<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360001398672-Memsource-REST-API-Authentication#OAuth_2.0" target="_blank" rel="noopener">oAuth 2.0</a>: </p>
-<p>oAuth 2.0 allows users to validate a certain application in Memsource, which consequently allows its continuous communication with Memsource without the need for further authentication.</p>
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360001398672-Memsource-REST-API-Authentication#OAuth_2.0" target="_blank" rel="noopener">oAuth 2.0</a>:</p>
+<p>oAuth 2.0 allows users to validate a certain application in Memsource, which consequently allows its continuous communication with Memsource without the need for further authentication.</p>
 </li>
-</ol>
-</div>
+</ol></div>
 <p>For the scenario, the first method will be used. The generated token is required for all following API calls and will not be listed in example parameters.</p>
 <p>Use the <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/login" target="_blank" rel="noopener">Login</a> API for authentication with required parameters. In this case, <span class="emphasis"><em>username</em></span> and <span class="emphasis"><em>password</em></span> are required.</p>
-<div class="itemizedlist">
-<ul class="itemizedlist" style="list-style-type: disc;">
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="bold bold"><strong>Method</strong></span></p>
 <p>POST</p>
@@ -49,22 +46,20 @@
 <p><span class="bold bold"><strong>Response</strong></span></p>
 <p>Authentication token.</p>
 </li>
-</ul>
-</div>
+</ul></div>
 <h3>
 <a id="UUID-30680640-736a-b005-c89c-e1a92b38976b_bridgehead-idm231835619706324"></a>Step 2: Project Creation, Import, and Assignment</h3>
 <h4>
 <a id="UUID-30680640-736a-b005-c89c-e1a92b38976b_bridgehead-idm231835620512916"></a>Project Creation</h4>
-<p>Useg the <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/createProject" target="_blank" rel="noopener">Projects</a> API call to create a project with the mandatory parameters <span class="emphasis"><em>name</em></span>, <span class="emphasis"><em>sourceLang</em></span>, and <span class="emphasis"><em>targetLangs</em></span>.</p>
-<div class="itemizedlist">
-<ul class="itemizedlist" style="list-style-type: disc;">
+<p>Useg the <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/createProject" target="_blank" rel="noopener">Projects</a> API call to create a project with the mandatory parameters <span class="emphasis"><em>name</em></span>, <span class="emphasis"><em>sourceLang</em></span>, and <span class="emphasis"><em>targetLangs</em></span>.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="bold bold"><strong>Method</strong></span></p>
 <p>POST</p>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Request URL</strong></span></p>
-<p> https://cloud.memsource.com/web/api2/v1/projects?token=Authentication token</p>
+<p>https://cloud.memsource.com/web/api2/v1/projects?token=Authentication token</p>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Request body</strong></span></p>
@@ -72,24 +67,23 @@
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Response</strong></span></p>
-<p>Project UID (e.g. KmtNyVlz1skQd2aMVEipp7)</p>
+<p>Project UID (e.g. KmtNyVlz1skQd2aMVEipp7)</p>
 </li>
-</ul>
-</div>
+</ul></div>
 <h4>
 <a id="UUID-30680640-736a-b005-c89c-e1a92b38976b_bridgehead-idm231835625464518"></a>Job Creation</h4>
 <p>With the UID from the last call, new jobs can be added directly into the newly created project using <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/createJob" target="_blank" rel="noopener">Create Job</a>.</p>
-<p>The expression <code class="code">{projectUid}</code> serves as a placeholder in the request URL where the obtained Project UID is inserted. With the Create Job API call, the <span class="emphasis"><em>Headers</em></span> of the request must be changed to match the ones required by Memsource (in other calls, Postman automatically adds appropriate headers to the request).</p>
-<p>All the import parameters need to be inserted into a custom <span class="emphasis"><em>Memsource</em></span> header.</p>
-<p>The <span class="emphasis"><em>Content-Disposition</em></span> header must include the filename in a pre-defined format in order for Memsource to correctly process the import request.</p>
-<div class="itemizedlist">
-<ul class="itemizedlist" style="list-style-type: disc;">
+<p>The expression <code class="code">{projectUid}</code> serves as a placeholder in the request URL where the obtained Project UID is inserted. With the Create Job API call, the <span class="emphasis"><em>Headers</em></span> of the request must be changed to match the ones required by Memsource (in other calls, Postman automatically adds appropriate headers to the request).</p>
+<p>All the import parameters need to be inserted into a custom <span class="emphasis"><em>Memsource</em></span> header.</p>
+<p>The <span class="emphasis"><em>Content-Disposition</em></span> header must include the filename in a pre-defined format in order for Memsource to correctly process the import request.</p>
+<p>To import a source file, go to the body, select <span class="guimenu">binary</span> and the <span class="guimenu">Select File</span> option appears.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="bold bold"><strong>Method</strong></span></p>
 <p>POST</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Request URL</strong></span></p>
+<p><span class="bold bold"><strong>Request URL</strong></span></p>
 <p><span class="emphasis"><em>https://cloud.memsource.com/web/api2/v1/projects/KmtNyVlz1skQd2aMVEipp7/jobs?token=Authentication token</em></span></p>
 </li>
 <li class="listitem">
@@ -108,73 +102,64 @@
 <p><span class="bold bold"><strong>Response</strong></span></p>
 <p>Job UID (e.g. dOYgeXzAdAbj4xFjuEVZP2)</p>
 </li>
-</ul>
-</div>
-<p>This call can also include assignments as an optional parameter. If this parameter is not included, a separate call (<a class="link" href="https://cloud.memsource.com/web/docs/api#operation/editPart" target="_blank" rel="noopener">/api2/v1/projects/{projectUid}/jobs/{jobUid}</a>) is used for the purpose of task assignment.</p>
+<li class="listitem"><p>AsyncRequest UID</p></li>
+</ul></div>
+<p>Use <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/getAsyncRequest" target="_blank" rel="noopener">/api2/v1/async/{asyncRequestId}</a> to check that the job was successfully created and that it can be worked with.</p>
+<p>To assign providers to the job (unless assigned directly in the Create job call) use <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/editPart" target="_blank" rel="noopener">/api2/v1/projects/{projectUid}/jobs/{jobUid}</a> endpoint.</p>
 <p>The ID of the Provider that is inserted in the call can be obtained in two ways:</p>
 <p>To retrieve the ID from the Memsource application, follow these steps:</p>
 <div class="procedure">
-<a id="UUID-30680640-736a-b005-c89c-e1a92b38976b_procedure-idm33183575673574"></a>
-<ol class="procedure" type="1">
+<a id="UUID-30680640-736a-b005-c89c-e1a92b38976b_procedure-idm33183575673574"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360013541100/15ef58ceb11ada.png" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Administration</span> section and click on <span class="guilabel">Users</span> or click <span class="guilabel">Users</span> in the sidebar.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360017491500/15f853b38e5d6b.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Administration</span> section and click on <span class="guilabel">Users</span> or click <span class="guilabel">Users</span> in the sidebar.</p>
 <p>The <span class="guimenu">Users</span> page opens.</p>
 </li>
-<li class="step">
-<p>Click on the and copy the URL from the browser.</p>
-</li>
-<li class="step">
-<p>Use this URL as the ID for that user.</p>
-</li>
+<li class="step"><p>Click on the and copy the URL from the browser.</p></li>
+<li class="step"><p>Use this URL as the ID for that user.</p></li>
 </ol>
 </div>
 <p>Use the <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/getListOfUsersFiltered" target="_blank" rel="noopener">List users</a> API call.</p>
-<p>This API call does not require any specific parameters, and it will return a list of all users in the account. The response contains both usernames and IDs. An optional parameter, <span class="emphasis"><em>userName</em></span>, can be added to the query allowing you to list only users with specific usernames.</p>
+<p>This API call does not require any specific parameters, and it will return a list of all users in the account. The response contains both usernames and IDs. An optional parameter, <span class="emphasis"><em>userName</em></span>, can be added to the query allowing you to list only users with specific usernames.</p>
 <h4>
 <a id="UUID-30680640-736a-b005-c89c-e1a92b38976b_bridgehead-idm231835705731959"></a>Notify Assigned Users</h4>
-<p>The job UID can then be used as an optional parameter in <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/notifyAssigned" target="_blank" rel="noopener">/api2/v1/projects/{projectUid}/jobs/notifyAssigned</a> along with the <span class="emphasis"><em>emailTemplate</em></span> parameter representing the ID of the email template to be used. This can be obtained from the Memsource UI or by using <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/listOrgEmailTemplates" target="_blank" rel="noopener">/api2/v1/emailTemplates</a>.</p>
-<div class="itemizedlist">
-<ul class="itemizedlist" style="list-style-type: disc;">
+<p>The job UID can then be used as an optional parameter in <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/notifyAssigned" target="_blank" rel="noopener">/api2/v1/projects/{projectUid}/jobs/notifyAssigned</a> along with the <span class="emphasis"><em>emailTemplate</em></span> parameter representing the ID of the email template to be used. This can be obtained from the Memsource UI or by using <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/listOrgEmailTemplates" target="_blank" rel="noopener">/api2/v1/emailTemplates</a>.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="bold bold"><strong>Request URL</strong></span></p>
-<p>https://cloud.memsource.com/web/api2/v1/projects/KmtNyVlz1skQd2aMVEipp7/jobs/notifyAssigned?token=Authentication token</p>
+<p>https://cloud.memsource.com/web/api2/v1/projects/KmtNyVlz1skQd2aMVEipp7/jobs/notifyAssigned?token=Authentication token</p>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Response</strong></span></p>
 <p>Empty</p>
 </li>
-</ul>
-</div>
+</ul></div>
 <p>This is where the translator would start to work in their account just as if the Memsource UI was being used. After the job is finished, the PM in charge receives a notification, and the next part of the scenario is initiated. A callback can be intercepted via <a class="link" href="https://help.memsource.com/hc/en-us/articles/360004209771-Webhooks" target="_blank" rel="noopener">webhooks</a> to automatically start the next part of the scenario but this will not be addressed in this example.</p>
 <h3>
 <a id="UUID-30680640-736a-b005-c89c-e1a92b38976b_bridgehead-idm231835727316902"></a>Part 3: Download Translated File, Set Project to Completed</h3>
-<p>The API call <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/completedFile" target="_blank" rel="noopener">/api2/v1/projects/{projectUid}/jobs/{jobUid}/targetFile</a> with the parameter <span class="emphasis"><em>jobUid</em></span> can be used to retrieve the translated content.</p>
-<div class="itemizedlist">
-<ul class="itemizedlist" style="list-style-type: disc;">
+<p>The API call <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/completedFile" target="_blank" rel="noopener">/api2/v1/projects/{projectUid}/jobs/{jobUid}/targetFile</a> with the parameter <span class="emphasis"><em>jobUid</em></span> can be used to retrieve the translated content.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="bold bold"><strong>Method</strong></span></p>
 <p>GET</p>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Request URL</strong></span></p>
-<p><span class="emphasis"><em>https://cloud.memsource.com/web/api2/v1/projects/KmtNyVlz1skQd2aMVEipp7/jobs/dOYgeXzAdAbj4xFjuEVZP2/targetFile?token=Authentication token</em></span></p>
+<p><span class="emphasis"><em>https://cloud.memsource.com/web/api2/v1/projects/KmtNyVlz1skQd2aMVEipp7/jobs/dOYgeXzAdAbj4xFjuEVZP2/targetFile?token=Authentication token</em></span></p>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Response</strong></span></p>
 <p>Binary response with the completed file itself</p>
 </li>
-</ul>
-</div>
-<p>Once the job in the project is completed, use the <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/setProjectStatus" target="_blank" rel="noopener">/api2/v1/projects/{projectUid}/setStatus</a> with the mandatory parameters <span class="emphasis"><em>project</em></span> and <span class="emphasis"><em>status</em></span> to change the status of the entire project to <span class="emphasis"><em>Completed</em></span>. This change is a manual one, but if Project Status Automation is used, the status will be changed automatically. It is also possible to wait for a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360004209771-Webhooks" target="_blank" rel="noopener">webhook</a> and initiate other actions based on the callback received.</p>
-<div class="itemizedlist">
-<ul class="itemizedlist" style="list-style-type: disc;">
+</ul></div>
+<p>Once the job in the project is completed, use the <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/setProjectStatus" target="_blank" rel="noopener">/api2/v1/projects/{projectUid}/setStatus</a> with the mandatory parameters <span class="emphasis"><em>project</em></span> and <span class="emphasis"><em>status</em></span> to change the status of the entire project to <span class="emphasis"><em>Completed</em></span>. This change is a manual one, but if Project Status Automation is used, the status will be changed automatically. It is also possible to wait for a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360004209771-Webhooks" target="_blank" rel="noopener">webhook</a> and initiate other actions based on the callback received.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="bold bold"><strong>Method</strong></span></p>
 <p>POST</p>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Request URL</strong></span></p>
-<p><span class="emphasis"><em>https://cloud.memsource.com/web/api2/v1/projects/KmtNyVlz1skQd2aMVEipp7/setStatus?token=Authentication token</em></span></p>
+<p><span class="emphasis"><em>https://cloud.memsource.com/web/api2/v1/projects/KmtNyVlz1skQd2aMVEipp7/setStatus?token=Authentication token</em></span></p>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Request body</strong></span></p>
@@ -184,8 +169,6 @@
 <p><span class="bold bold"><strong>Response</strong></span></p>
 <p>Empty</p>
 </li>
-</ul>
-</div>
-<p> </p>
-<div class="glossary-definitions" style="display: none!important;"> </div>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
 </div>
