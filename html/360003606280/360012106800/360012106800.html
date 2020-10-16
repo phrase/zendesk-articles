@@ -16,7 +16,7 @@
 <li class="listitem list-bullet"><p>Plugin version 2.x supports 6.4 and 6.5.</p></li>
 <li class="listitem list-bullet"><p>Plugin version 3.x supports AEM as a Cloud Service.</p></li>
 </ul></div>
-<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360016052120" target="_blank" rel="noopener">Integration Release Notes</a></p>
+<p> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360016052120" target="_blank" rel="noopener">Integration Release Notes</a> </p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
@@ -43,7 +43,7 @@
 <p><span class="bold bold"><strong>Pre-requisite</strong></span>: Create an Adobe Experience Manager user with minimum permissions required to view unpublished pages.</p>
 <div class="procedure">
 <a id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360016628499/15f64872fb9234.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360017653320/15f89a103a728c.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -91,7 +91,7 @@
 <p>Create a Project Template configured to your needs.</p>
 <p>Under <span class="guimenu">Access and Security</span> set the <span class="guilabel">Allow loading external content in editors</span>.</p>
 <p>Apply the following <span class="guimenu">XML File Import Settings</span>:</p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360016621480/15f64872fbb986.png" style="" alt="content of the image was changed."></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360017657219/15f89a103aa109.png" style="" alt="content of the image was changed."></div>
 </li>
 <li class="step">
 <p>Create a Service.</p>
@@ -457,8 +457,12 @@
 </div></div>
 <div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-6417fe87-202a-0390-214d-e2afbf9acb9e"></a>Custom Language Mapping</h2></div></div>
-<div class="panel-body collapse" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-6417fe87-202a-0390-214d-e2afbf9acb9e_body">
+<a data-zd-article="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-5c1b7960-9edd-fdd1-85ed-47bbe9d2692d"></a>Custom Language Mapping</h2></div></div>
+<div class="panel-body collapse" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-5c1b7960-9edd-fdd1-85ed-47bbe9d2692d_body">
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-6417fe87-202a-0390-214d-e2afbf9acb9e"></a>On-premise AEM</h3></div></div>
+<div class="panel-body collapse" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-6417fe87-202a-0390-214d-e2afbf9acb9e_body"><div class="panel-inner">
 <p>To map Adobe Experience Manager languages to different languages in Memsource (e.g. zh to zh_tw), follow these steps.</p>
 <p>The mapping applies to both source and target languages.</p>
 <div class="procedure"><ol class="procedure" type="1">
@@ -469,14 +473,55 @@
 <li class="step">
 <p>Add property:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p> <span class="bold bold"><strong>Name</strong></span>: <span class="emphasis"><em>memsourceLanguage</em></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>Type</strong></span>: <span class="emphasis"><em>String</em></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>Value</strong></span>: Memsource language code (e.g. zh_tw)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>Name</strong></span>: <span class="emphasis"><em>memsourceLanguage</em></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>Type</strong></span>: <span class="emphasis"><em>String</em></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>Value</strong></span>: Memsource language code (e.g. zh_tw)</p></li>
 </ul></div>
 </li>
 <li class="step"><p>Click <span class="guilabel">Save All</span>.</p></li>
 </ol></div>
 <p>Un-mapped language codes are sent to Memsource as they are.</p>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-b1e498ba-35ff-e63e-15c7-2a3661e147ca"></a>AEM as a Cloud Service</h3></div></div>
+<div class="panel-body collapse" id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_UUID-b1e498ba-35ff-e63e-15c7-2a3661e147ca_body"><div class="panel-inner">
+<p>To add language mapping in AEM Cloud Services, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_procedure-idm232056571382959"></a><ol class="procedure" type="1">
+<li class="step"><p>Create a <code class="code">.content.xml</code> file in the <code class="code">/conf/aem-memsource-plugin/language-mapping/</code> folder.</p></li>
+<li class="step">
+<p>Open the created file and copy the following into it:</p>
+<pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:Folder"/&gt;</pre>
+</li>
+<li class="step"><p>Create a <code class="code">.content.xml</code> file in the <code class="code">/conf/aem-memsource-plugin/language-mapping/</code> folder.</p></li>
+<li class="step">
+<p>Open the created file and copy the following into it:</p>
+<pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="nt:unstructured"
+          memsourceLanguage="zh_cn"&gt;
+&lt;/jcr:root&gt;&lt;?xml version="1.0" encoding="UTF-8"?&gt;</pre>
+</li>
+<li class="step">
+<p>Add the paths created in previous steps to the <code class="code">filter.xml</code> file found at <code class="code">ui.content/src/main/content/META-INF/vault/filter.xml</code>:</p>
+<pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;workspaceFilter version="1.0"&gt;
+...
+    &lt;filter root="/conf/aem-memsource-plugin" mode="update"/&gt;
+    &lt;filter root="/conf/aem-memsource-plugin/language-mapping" mode="update"/&gt;
+&lt;/workspaceFilter&gt;</pre>
+</li>
+</ol>
+</div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<p></p>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div></div>
