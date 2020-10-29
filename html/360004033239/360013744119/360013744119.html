@@ -45,7 +45,7 @@
 <div class="procedure">
 <a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747554516301"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015866400/15f4660734942e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018072279/15f9a6a4a05c9e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
 <p>The <span class="guimenu">Segmentation</span> page opens.</p>
 </li>
 <li class="step">
@@ -55,8 +55,8 @@
 <li class="step">
 <p>Select format:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="bold bold"><strong>XLSX</strong></span> provides an abbreviation list.</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>SRX</strong></span> provides regular expression rules.</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>XLSX</strong></span> provides an abbreviation list.</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>SRX</strong></span> provides regular expression rules.</p></li>
 </ul></div>
 </li>
 <li class="step"><p>Select a language from the dropdown list.</p></li>
@@ -66,6 +66,16 @@
 </li>
 </ol>
 </div>
+<p>To download a segmentation rule that you uploaded previously:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018072279/15f9a6a4a05c9e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
+<p>The <span class="guimenu">Segmentation</span> page opens.</p>
+</li>
+<li class="listitem"><p>Click on the <span class="guilabel">Settings </span>icon on the right and choose <span class="guilabel">Customize columns</span>: <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018056300/15f9a6a4a0852d.png" style="max-width: 273px; " alt="customize-segmentation-columns.png"></span> </p></li>
+<li class="listitem"><p>Enable the <span class="guilabel">Filename </span>column</p></li>
+<li class="listitem"><p>Click on a filename to download a pre-saved rule.</p></li>
+</ol></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
@@ -112,14 +122,14 @@
 <li class="listitem"><p>Removing an abbreviation from the list (the text will be segmented).</p></li>
 </ul></div>
 <p>These rules are <span class="emphasis"><em>character-based</em></span>; only a single character can be used as segment separator. Group of characters (for example: &lt;p&gt;) cannot be used as a segment separator.</p>
-<p>To edit the SRX file, follow these steps:</p>
+<p>To edit an SRX file, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747605636608"></a><ol class="procedure" type="1">
 <li class="step"><p>Open the file in a text editor such as <a class="link" href="https://notepad-plus-plus.org/downloads/" target="_blank" rel="noopener">Notepad ++</a>.</p></li>
 <li class="step">
 <p>Edit using <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expressions</a> or remove the inner segmentation completely.</p>
 <p>Example:</p>
-<div class="mediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015885179/15f4660734cc2d.png" style="" alt="BreakRules_Example.png"></div>
+<div class="mediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018056320/15f9a6a4a0b5b1.png" style="" alt="BreakRules_Example.png"></div>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><code class="code">&lt;rule break="no"&gt;</code></p>
@@ -147,7 +157,7 @@
 <div class="procedure">
 <a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747706104723"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360015866400/15f4660734942e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018072279/15f9a6a4a05c9e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
 <p>The <span class="guimenu">Segmentation</span> page opens.</p>
 </li>
 <li class="step">
@@ -224,7 +234,7 @@
 <p>If all inner segmentation is removed leaving only the basic segmentation based on the Cell, then there are only two segments: <span class="emphasis"><em>Peter! Wait!</em></span> and <span class="emphasis"><em>Hello</em></span>.</p>
 <p>Edit the SRX file to remove all the default segmentation rules, i. e. the code between <code class="code">&lt;!-- break rules --&gt;</code> and <code class="code">&lt;/languagerule&gt;</code>.</p>
 <p>Example:</p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360015885199/15f4660734f3ff.png" style="" alt="1cell-1segment-srx.png"></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360018072299/15f9a6a4a0ef5e.png" style="" alt="1cell-1segment-srx.png"></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
