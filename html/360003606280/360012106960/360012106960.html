@@ -23,6 +23,15 @@
 <p><span class="bold bold"><strong>Template Restrictions</strong></span></p>
 <p>Localized templates and assets have the same name as the <code class="code">original-name [language]</code> (e.g. Black Friday Promo [de-de]). The localized asset references the localized version of the template provided the template in that language exists. Otherwise, it references the original template.</p>
 <p>Only approved templates can be referenced. If the template is localized, the connector automatically moves it to the approved state.</p>
+<p><span class="bold bold"><strong>Excluding Modules from Translation</strong></span></p>
+<p>To exclude Marketo modules from translation add data-translate attributed to the module's first HTML tag and set the respective variable that controls its visibility either to false, 0, none, or hidden.</p>
+<p>Example:</p>
+<div class="informalexample">
+<a id="UUID-c65fe7d4-eea4-531b-c33e-671d3358b5bd_example-idm232079333605161"></a><pre class="programlisting">&lt;div class="mktoText" id="leftsidebar" mktoname="Left Sidebar"&gt;
+  &lt;h3 data-translate="${leftSitebar}"&gt;This heading will be excluded&lt;/h3&gt;
+  &lt;p&gt;This paragraph will be excluded too&lt;/p&gt;
+&lt;/div&gt;</pre>
+</div>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-c65fe7d4-eea4-531b-c33e-671d3358b5bd" id="UUID-c65fe7d4-eea4-531b-c33e-671d3358b5bd_UUID-9ff13540-9b0e-7c6d-081f-2cb39f857854"></a>Use Cases</h2></div>
@@ -60,7 +69,7 @@
 <a data-zd-article="UUID-c65fe7d4-eea4-531b-c33e-671d3358b5bd" id="UUID-c65fe7d4-eea4-531b-c33e-671d3358b5bd_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h2></div>
 <div class="procedure">
 <a id="UUID-c65fe7d4-eea4-531b-c33e-671d3358b5bd_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360016580699/15f631eaf21a62.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018264839/15fa1097591a8d.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
