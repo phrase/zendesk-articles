@@ -1,0 +1,40 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>To further improve the security and resilience of Memsource services, access to Memsource through the HTTP protocol will be disabled and access will only be available through the HTTPS protocol. Secure HTTPS has been supported in Memsource APIs and UI for many years but there are still a few customers using the insecure HTTP protocol. The use of HTTPS ensures all data transferred between Memsource and clients is encrypted during transit, using TLS 1.2 or 1.3 protocols. Use of HTTPS when accessing APIs and the UI is a crucial element guaranteeing data confidentiality and integrity.</p>
+<p>Timeline:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>September 2020 </strong></span></p>
+<p>Initial warning to Memsource customers and users</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>November 2020</strong></span></p>
+<p>Secondary warning to customers still accessing Memsource through HTTP</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>December 10, 2020</strong></span></p>
+<p>HTTP access deprecated</p>
+</li>
+</ul></div>
+<p>To prepare for deprecation:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Memsource Editor for Desktop</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p><a class="link" href="https://www.memsource.com/download/" target="_blank" rel="noopener">Download the latest version</a></p></li>
+<li class="listitem"><p>From the <span class="guimenu">Tools</span> menu, select <span class="guimenu">Preferences</span> and <span class="guimenu">Login</span>. Enter <span class="emphasis"><em>https://cloud.memsource.com</em></span> in the <span class="guimenu">Server</span> field.</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>APIs</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Replace <span class="emphasis"><em>http://</em></span> with <span class="emphasis"><em>https://</em></span> in all the URL paths of Memsource API calls.</p></li>
+<li class="listitem"><p>Ensure that used libraries support <a class="link" href="https://tools.ietf.org/html/rfc5246" target="_blank" rel="noopener">TLS 1.2</a> or <a class="link" href="https://tools.ietf.org/html/rfc8446" target="_blank" rel="noopener">TLS 1.3</a> protocol and the <a class="link" href="https://tools.ietf.org/html/rfc6066" target="_blank" rel="noopener">SNI</a> (Server Name Indication) extension of the TLS protocol. SNI was added to the TLS standard in 2003 and thus all but very old implementations should support it.</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Custom domains</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>If you have a custom domain set up without an HTTPS certificate, please get in touch with Memsource <a class="link" href="https://get-help.memsource.com" target="_blank" rel="noopener">support</a> or use the standard <span class="emphasis"><em>https://cloud.memsource.com</em></span> domain.</p></li></ul></div>
+</li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
