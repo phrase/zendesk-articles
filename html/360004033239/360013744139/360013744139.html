@@ -8,7 +8,7 @@
 </div>
 <p>Workflow represents the life cycle of a document in the translation process; a sequence of consecutive steps which lead to a desired output.</p>
 <p>Workflow steps have a hierarchical structure determined by their order when set up. When a segment is confirmed in a workflow step, it is propagated to a higher workflow step. As long as it remains unconfirmed and unedited, changes to that segment are propagated from the lower workflow step. Once the segment is edited or confirmed in the higher workflow step, changes from the lower workflow steps are not propagated.</p>
-<p>The workflow feature enables the design of custom workflow steps for a project and then assign specific Linguists to them. This role is recorded in the Linguist's user profile and when a Project Manager is assigning Linguists to new projects, Linguists previously used for a specific workflow step are offered as relevant.</p>
+<p>The workflow feature enables the design of custom workflow steps for a project and then assign specific Linguists to them. This role is recorded in the linguist's user profile and when a project manager is assigning linguists to new projects, Linguists previously used for a specific workflow step are offered as relevant.</p>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-9d3d5a00-dd8e-b704-1ed3-54d78b7d133a" id="UUID-9d3d5a00-dd8e-b704-1ed3-54d78b7d133a_UUID-f310bc82-80ab-5ac1-1de0-b17f92f6bb8d"></a>Setup Workflow Steps</h2></div>
@@ -18,7 +18,7 @@
 <div class="procedure">
 <a id="UUID-9d3d5a00-dd8e-b704-1ed3-54d78b7d133a_procedure-idm4554783296184031738834045145"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018755219/15fb4bbcc6aa24.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Workflow Steps</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018978560/15fbe5c3259ba8.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Workflow Steps</span>.</p>
 <p>The <span class="guimenu">Workflow Steps</span> page opens.</p>
 </li>
 <li class="step">
@@ -50,7 +50,7 @@
 <p>The <span class="guimenu">Edit Project</span> page opens.</p>
 </li>
 <li class="step">
-<p>Expand <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018755239/15fb4bbcc81e80.png" style="" alt="Settings_expand.png"></span> the <span class="guimenu">Workflow</span> settings.</p>
+<p>Expand <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018978580/15fbe5c326ec8d.png" style="" alt="Settings_expand.png"></span> the <span class="guimenu">Workflow</span> settings.</p>
 <p>Workflow settings displayed.</p>
 </li>
 <li class="step">
@@ -75,7 +75,7 @@
 <li class="step">
 <p>Click <span class="guilabel">Upload</span>.</p>
 <p>The file appears in the <span class="guimenu">File handover</span> column and is available for download from the job table or from a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079-Automation-Widget" target="_blank" rel="noopener">widget</a>.</p>
-<p>Click <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018718120/15fb4bbcc86bd9.png" style="" alt="Red_X.png"></span> to remove the file.</p>
+<p>Click <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018978600/15fbe5c327340d.png" style="" alt="Red_X.png"></span> to remove the file.</p>
 </li>
 </ol>
 </div>
@@ -96,10 +96,11 @@
 <p>When assigning a job to a Linguist or Vendor in the first workflow step, they can be <a class="link" href="https://help.memsource.com/hc/articles/360013675740#UUID-29d1a108-bf4f-799c-9ff5-6826433147c8_UUID-1601e4ba-40df-d962-11d4-e2ef301430f1" title="Job Tools">manually notified by email</a> or automatically when the job is imported to the <a class="link" href="https://help.memsource.com/hc/articles/360013675720#UUID-d2351b3d-37c1-e4e0-2048-bccb70b23993" title="Project Overview">project</a>.</p>
 <p>Linguists assigned in higher steps are automatically notified the moment the job in the previous step is set to <span class="guimenu">Completed</span>. Upon notification, the proofreader starts to work immediately after the translation is completed. If defined, Linguists are notified when the next step is passed or if the job is rejected.</p>
 <h4>
-<a id="UUID-9d3d5a00-dd8e-b704-1ed3-54d78b7d133a_bridgehead-idm4646577682984031739055095163"></a>Tight deadlines</h4>
-<p>When working with a tight deadline, a Revision can be started before the Translation is complete but this is to be done cautiously.</p>
+<a id="UUID-9d3d5a00-dd8e-b704-1ed3-54d78b7d133a_bridgehead-idm4646577682984031739055095163"></a>Tight deadlines (Concurrent steps)</h4>
+<p>When working with a tight deadline, a revision can be started before the translation is complete but this is to be done cautiously.</p>
 <p>If a job has not been completed in the preceding workflow step, the confirmation indicator in the editor is red with the warning message <span class="guimenu">Preceding workflow step not completed</span>.</p>
-<p>The reviser can ignore the warning and carefully go ahead with the Revision but <span class="emphasis"><em>only with segments confirmed by the translator</em></span>. If the reviser changes a segment that has not been confirmed in the preceding workflow step (in this case, Translation), changes by the translator will not be propagated to the Revision step afterward. See <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872059-CAT-Pane#cat-pane-preferences-0-6" target="_blank" rel="noopener">CAT preferences</a> for more information.</p>
+<p>The reviser can ignore the warning and carefully go ahead with the revision but <span class="emphasis"><em>only with segments confirmed by the translator</em></span>. If the reviser changes a segment that has not been confirmed in the preceding workflow step (in this case, translation), changes by the translator will not be propagated to the revision step afterward.</p>
+<p>The option to allow linguists to start a workflow step before the preceding step has been completed is set in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014479359-Access-and-Security" target="_blank" rel="noopener">Access and Security</a>. See <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872059-CAT-Pane#cat-pane-preferences-0-6" target="_blank" rel="noopener">CAT preferences</a> for editor settings.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
