@@ -23,10 +23,10 @@
 </li>
 <li class="step">
 <p>Sort results by rearranging the language columns, and clicking on <span class="guimenu">Set up columns</span> to select what columns are visible.</p>
-<p>Hover over <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018125620/15f9bbad4802db.png" style="" alt="TM_search_info.png"></span> to see details of the translation unit.</p>
+<p>Hover over <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360019188879/15fc4ebf800055.png" style="" alt="TM_search_info.png"></span> to see details of the translation unit.</p>
 </li>
 <li class="step">
-<p>Double click on translation unit text to edit it and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018156979/15f9bbad48462b.png" style="" alt="TM_deleteunit.png"></span> to delete it.</p>
+<p>Double click on translation unit text to edit it and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360019188899/15fc4ebf804ca8.png" style="" alt="TM_deleteunit.png"></span> to delete it.</p>
 <div dir="ltr" class="caution">
 <h3 class="title">Caution</h3>
 <p>Editing translation units within a TM is permanent. There is no undo function. If performing major maintenance, export the TM in TMX format and save in ZIP format as a backup.</p>
@@ -239,7 +239,8 @@
 <p>When importing content into a TM that already contains segments, this content is added as new segments, overwrites existing segments, or is skipped.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>If a segment has the same source, target, and context as a pre-existing segment, the new segment will be skipped and not added to the TM.</p></li>
-<li class="listitem"><p>If the new segment has the same source and context, but with a different target than another segment, the new segment will overwrite the pre-existing segment.</p></li>
+<li class="listitem"><p>If the new segment has the same source and context, but with a different target than another segment, the new segment will overwrite the pre-existing segment. This is also applied if no context is available.</p></li>
+<li class="listitem"><p>Segments without context information and identical source but different target will be deduplicated on import.</p></li>
 <li class="listitem"><p>All other segments are added to the translation memory.</p></li>
 </ul></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
@@ -326,7 +327,7 @@
 <li class="step">
 <p>Click <span class="guilabel">Import</span>.</p>
 <p>The window closes and the file is imported into the TM.</p>
-<p>If there is an error, <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018156999/15f9bbad487a97.png" style="" alt="Warning.png"></span> is shown in the <span class="guimenu">Last Import</span> field of the translation memory page. Hover over the warning for error details.</p>
+<p>If there is an error, <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360019188919/15fc4ebf809cbf.png" style="" alt="Warning.png"></span> is shown in the <span class="guimenu">Last Import</span> field of the translation memory page. Hover over the warning for error details.</p>
 </li>
 </ol>
 </div>
