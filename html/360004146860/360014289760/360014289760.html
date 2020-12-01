@@ -1,6 +1,6 @@
 <div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
 <p>Cells containing only numerals and functions are skipped as it is assumed they do not contain data relevant to the import.</p>
-<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775960-In-Context-Preview" target="_blank" rel="noopener">In-context preview</a> can only be generated for a maximum of 200 columns in an imported file. Files with more than 200 columns will display the warning <span class="guimenu">In-context preview was not generated</span>. This limit does not apply to the columns that are marked <span class="emphasis"><em>Hidden</em></span> in the original file.</p>
+<p> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775960-In-Context-Preview" target="_blank" rel="noopener">In-context preview</a> can only be generated for a maximum of 200 columns in an imported file. Files with more than 200 columns will display the warning <span class="guimenu">In-context preview was not generated</span>. This limit does not apply to the columns that are marked <span class="emphasis"><em>Hidden</em></span> in the original file.</p>
 <h2>
 <a id="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041_bridgehead-idm231825021122866"></a>File Types</h2>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -16,23 +16,24 @@
 <h2>
 <a id="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041_bridgehead-idm231825021536098"></a>Import Options</h2>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="guimenu">Cell flow</span></p></li>
-<li class="listitem"><p><span class="guimenu">Import comments</span></p></li>
-<li class="listitem"><p><span class="guimenu">Import sheet names</span></p></li>
+<li class="listitem"><p> <span class="guimenu">Cell flow</span> </p></li>
+<li class="listitem"><p> <span class="guimenu">Import comments</span> </p></li>
+<li class="listitem"><p> <span class="guimenu">Import sheet names</span> </p></li>
 <li class="listitem">
-<p><span class="guimenu">Import hidden columns, hidden rows, and hidden sheets</span></p>
+<p> <span class="guimenu">Import hidden columns, hidden rows, and hidden sheets</span> </p>
 <p>By default, hidden content is not imported.</p>
 </li>
 <li class="listitem">
-<p><span class="guimenu">Import other text</span></p>
+<p> <span class="guimenu">Import other text</span> </p>
 <p>Extract special values/names/attributes of the file which are not usually translatable.</p>
 </li>
 <li class="listitem">
-<p><span class="guimenu">Process HTML code</span></p>
+<p> <span class="guimenu">Process HTML code</span> </p>
 <p>In cases where file contains HTML tags (<code class="code">&lt;b&gt;</code>, <code class="code">&lt;span&gt;</code>, etc.)</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p>Disables options other than <span class="guimenu">Convert to Memsource tags</span></p></li>
+<li class="listitem"><p>Disables options other than <span class="guimenu">Convert to Memsource tags</span> </p></li>
 <li class="listitem"><p>HTML Import Settings cannot be used to edit the default settings.</p></li>
+<li class="listitem"><p>Cell flow "Rows, left to right" is applied</p></li>
 </ul></div>
 </li>
 <li class="listitem">
@@ -40,16 +41,14 @@
 <p>Apply <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expressions</a> to convert specified text to tags.</p>
 </li>
 <li class="listitem">
-<p><span class="guimenu">Import selected columns</span></p>
+<p> <span class="guimenu">Import selected columns</span> </p>
 <p>Enter a comma separated list of columns, e.g. A,C,Q</p>
 </li>
 </ul></div>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
-<div class="titlepage"><h2 class="title"><a data-zd-article="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041" id="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041_UUID-fbb2cdf7-7f96-c8ec-36b3-5ac758c0b600"></a></h2></div>
-<div dir="ltr" class="section sub-topic">
-<div class="titlepage"><h3 class="title">
-<a data-zd-article="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041" id="idm269"></a>Multilingual Spreadsheet Files</h3></div>
-<p>Multilingual files are imported as multiple bilingual jobs with languages mapped before import. They are represented with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360016228260/15f56456a6c2a8.png" style="" alt="multilingual_xlsx.png"></span> in the Jobs Table. If imported into several target languages, the <span class="emphasis"><em>Completed</em></span> file is composed of all target languages.</p>
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041" id="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041_UUID-fbb2cdf7-7f96-c8ec-36b3-5ac758c0b600"></a>Multilingual Spreadsheet Files</h2></div>
+<p>Multilingual files are imported as multiple bilingual jobs with languages mapped before import. They are represented with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360019236959/15fc5e6f74e829.png" style="" alt="multilingual_xlsx.png"></span> in the Jobs Table. If imported into several target languages, the <span class="emphasis"><em>Completed</em></span> file is composed of all target languages.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Hidden sheets are not processed.</p></li>
 <li class="listitem"><p>Dates and formulas where the displayed cell contents depend on the locale or the underlying values are not exposed for translation but automatically copied to the target columns.</p></li>
@@ -59,13 +58,18 @@
 </ul></div>
 <h3>
 <a id="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041_bridgehead-idm33182508075578"></a>Import Options</h3>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<div class="itemizedlist">
+<div dir="ltr" class="caution">
+<h3 class="title">Caution</h3>
+<p>Separators other than commas are not supported and will trigger errors.</p>
+</div>
+<ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="guimenu">Use HTML subfilter</span></p>
 <p>Imports HTML tags contained in the file. Tags can then be used with HTML File Import Settings. Paragraph tags <code class="code">&lt;p&gt;</code> will create new segments even if <span class="guimenu">Segment Multilingual XLS</span> is unselected.</p>
 </li>
 <li class="listitem">
-<p> <span class="guimenu">Segment multilingual XLS</span> </p>
+<p><span class="guimenu">Segment multilingual XLS</span></p>
 <p>Text is segmented by a general <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744119-Segmentation-Rules-Overview" target="_blank" rel="noopener">segmentation rule</a> rather than one segment per cell.</p>
 <div dir="ltr" class="caution">
 <h3 class="title">Caution</h3>
@@ -77,7 +81,7 @@
 <p>Use lowercase or capital letters. For more columns, enter letters separated by commas with no spaces (<span class="emphasis"><em>A,D,G</em></span>).</p>
 </li>
 <li class="listitem">
-<p> <span class="guimenu">Target (column)</span> </p>
+<p><span class="guimenu">Target (column)</span></p>
 <p>There is one column for each target language. For more columns, enter letters separated by commas with no spaces (<span class="emphasis"><em>B,E,H</em></span>).</p>
 </li>
 <li class="listitem">
@@ -100,11 +104,7 @@
 <p><span class="guimenu">Convert to Memsource tags</span></p>
 <p>Apply <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expressions</a> to convert specified text to tags.</p>
 </li>
-</ul></div>
-<h3>
-<a id="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041_bridgehead-idm33182508075578"></a> <span class="bold bold"><strong>Common errors on export:</strong></span> </h3>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p> <span class="bold bold"><strong>Unable to download file: </strong></span>There is an issue with tags or formatting in one of the files in target language. Open each job in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775920-Memsource-Editor-for-Web-Overview" target="_blank" rel="noopener">Editor for Web</a>, then choose Document and Preview Translation. If the preview cannot be generated, this means that there is an issue with tags or their order. Run QA and fix any tag errors.</p></li></ul></div>
-<div class="glossary-definitions" style="display:none!important;"></div>
+</ul>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
