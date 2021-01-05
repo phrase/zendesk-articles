@@ -1,0 +1,637 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div dir="ltr" class="tip">
+<h3 class="title">
+<a id="tip-idm33197065024292"></a>Tip</h3>
+<p>Click <span class="guilabel">Follow</span> in the upper right corner to receive notification when new notes are released.</p>
+</div>
+<p>Earlier release notes can be found in the <a class="link" href="https://help.memsource.com/hc/en-us/sections/360001176392-Memsource" target="_blank" rel="noopener">archive</a>. Integrations (<a class="link" href="https://help.memsource.com/hc/en-us/sections/360004539380-Integrations" target="_blank" rel="noopener">API and Connectors/Plugins</a>) have their own release notes.</p>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-9fc20134-ce97-5d84-eb99-d3800c0e066d"></a>v20.24 - December 15, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-9fc20134-ce97-5d84-eb99-d3800c0e066d_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>There is now an option to import headers and footers in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289740" target="_blank" rel="noopener">word processor files</a> for translation.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview#supported-third-party-machine-translation-engines-0-7" target="_blank" rel="noopener">Google AutoML</a> engines now support labels that are sent with each translation request.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013978379" target="_blank" rel="noopener">Project manager</a> access to projects, project templates, TMs and TBs can now be restricted to multiple clients instead of just one.</p></li>
+<li class="listitem"><p>ICU messages can now be parsed when importing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF 1.2, XLIFF 2.0</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289820" target="_blank" rel="noopener">SDLXLIFF</a>, MQXLIFF and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357839" target="_blank" rel="noopener">JSON</a> files.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">Automated Project Creation</a>: <span class="guimenu">Download</span> &gt; <span class="guimenu">Export to Online Repository</span> exports jobs to the target folder that is configured in APC settings</p></li>
+<li class="listitem"><p>API analytics index related features has been deprecated (api statistics and the API <code class="code">api/vX/analytics/</code> endpoint).</p></li>
+<li class="listitem"><p>A xsl stylesheet can now be uploaded together with <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF 1.2 and XLIFF 2.0</a> files to generate <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775960" target="_blank" rel="noopener">in-context preview</a>.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775880" target="_blank" rel="noopener">Editor</a> version now indicates an <span class="emphasis"><em>outdated</em></span> status.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289860-CSV-Comma-Separated-Values-#multilingual-csv-file-0-2" target="_blank" rel="noopener">Multilingual CSV</a> with EOL:CRLF: translation is placed in different rows and extra empty rows are inserted. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800" target="_blank" rel="noopener">Continuous Job</a> import schedule not running as specified. This has been fixed.</p></li>
+<li class="listitem">
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">APC</a>:</p>
+<p>Inclusion of subfolders to be monitored not working with Git. This has been fixed.</p>
+<p>Monitored <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208139" target="_blank" rel="noopener">Google Drive</a> folder is not sending files to the processed folder. This has been fixed.</p>
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675720" target="_blank" rel="noopener">Projects</a> are not created when include subfolders option is selected. This has been fixed.</p>
+</li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775960" target="_blank" rel="noopener">In-context preview</a> for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357719" target="_blank" rel="noopener">.pptx</a> files is not being generated. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013978379-Project-Manager-Overview" target="_blank" rel="noopener">Project owner</a> cannot be changed in an existing project. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106800" target="_blank" rel="noopener">AEM</a>: In-context preview is not generated for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357859" target="_blank" rel="noopener">.DITA</a> files. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800" target="_blank" rel="noopener">Continuous Jobs</a> does not export translations after a segment change as expected, but after the job is completed. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-2c61c6d5-bc3b-ea69-f764-b3e6ef9fbbda"></a>v20.23 - December 1, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-2c61c6d5-bc3b-ea69-f764-b3e6ef9fbbda_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Language codes are now included in the table header in exported <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013696880" target="_blank" rel="noopener">bilingual DOCX</a> files.</p></li>
+<li class="listitem"><p>More regional English locales have been added to the list of <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811" target="_blank" rel="noopener">supported languages</a>.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Importing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289820" target="_blank" rel="noopener">SDLXLIFF</a> files triggered an error. This has been fixed.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-77caf7b7-6ac2-09dc-641e-54e7d8cd9f99"></a>v20.22 - November 17, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-77caf7b7-6ac2-09dc-641e-54e7d8cd9f99_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Changes in locked segments of a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013696880" target="_blank" rel="noopener">bilingual DOCX</a> are ignored when the file is uploaded back to Memsource.</p></li>
+<li class="listitem"><p>The value of <code class="code">category</code> attribute of a <code class="code">&lt;note&gt;</code> element in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF 2.0</a> is now displayed in the context note in the editors.</p></li>
+<li class="listitem"><p>It is now possible to exclude page numbers from the import of <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357759" target="_blank" rel="noopener">IDML</a> files.</p></li>
+<li class="listitem"><p>The multi select in the UI has been redesigned.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013978379" target="_blank" rel="noopener">Project Managers</a> can now select which <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800#list-of-qa-checks-0-3" target="_blank" rel="noopener">QA checks</a> are applied by the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800" target="_blank" rel="noopener">Instant QA</a> functionality.</p></li>
+<li class="listitem"><p>Setting an import and export segment status for fuzzy strings is now possible for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289920-PO-gettext-" target="_blank" rel="noopener">PO files</a>.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Encoded HTML entities in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF</a> are lost on import. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013978379" target="_blank" rel="noopener">Project Managers</a> are receiving irrelevant <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020" target="_blank" rel="noopener">email notifications</a> from <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675720" target="_blank" rel="noopener">projects</a> not owned by them. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289980" target="_blank" rel="noopener">RESX</a> converter is removing spaces during import. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013918760" target="_blank" rel="noopener">Linguist</a> cannot set job to <span class="emphasis"><em>Completed</em></span> after <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872099-Quality-Assurance-Pane#mitigating-qa-warnings-0-2" target="_blank" rel="noopener">QA warnings</a> are resolved. This has been fixed.</p></li>
+<li class="listitem"><p>The <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675720-Project-Overview#project-dashboard-0-1" target="_blank" rel="noopener">progress bar</a> is not indicating the progress of a job in a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">workflow</a>. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013918720-User-Roles-Overview#users-page-0-1" target="_blank" rel="noopener">Users page</a> indicating more jobs in progressed than actually assigned. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-f9b3501e-62c8-2762-55ea-202af9c93d6a"></a>v20.21 - November 3, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-f9b3501e-62c8-2762-55ea-202af9c93d6a_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>For security reasons, the URL column in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">automation widget</a> now displays the full URL instead of a link.</p></li>
+<li class="listitem"><p>Context key definition is now supported for the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289840" target="_blank" rel="noopener">TXT</a> file format.</p></li>
+<li class="listitem"><p>There is a new option to <span class="guimenu">Update language declaration in completed files</span> in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289780" target="_blank" rel="noopener">HTML</a> files.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675820" target="_blank" rel="noopener">Job Board</a> has been deprecated.</p></li>
+<li class="listitem"><p>There is a new option to <span class="guimenu">Exclude code elements</span> from <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357919" target="_blank" rel="noopener">MD</a> files.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800" target="_blank" rel="noopener">Continuous Jobs</a> can now be manually exported to online repositories.</p></li>
+<li class="listitem"><p>A Markdown (MD) subfilter has been added to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289880" target="_blank" rel="noopener">YAML</a> import settings. It's now possible to select from two mutually exclusive subfilters.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Unedited NT/MT fuzzy match <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800" target="_blank" rel="noopener">QA warnings</a> were being displayed on 2nd+ repetitions. This has been fixed.</p></li>
+<li class="listitem"><p>When creating a new <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250359" target="_blank" rel="noopener">quote</a>, the analysis is not pre-selected based on the provider. This has been fixed.</p></li>
+<li class="listitem"><p>It was not possible to stop <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744239-Sharing-Overview#sharing-projects-0-2" target="_blank" rel="noopener">sharing</a> a project with a vendor. This has been fixed.</p></li>
+<li class="listitem"><p>HTML href with macro not working in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020" target="_blank" rel="noopener">email templates</a>. This has been fixed.</p></li>
+<li class="listitem"><p>Newly created <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013918760" target="_blank" rel="noopener">linguist</a> users could view other users from their organization. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-f91fb5c8-2642-eb98-1f99-740f67cc5d56"></a>v20.20 - October 20, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-f91fb5c8-2642-eb98-1f99-740f67cc5d56_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800-Continuous-Jobs" target="_blank" rel="noopener">Continuous Job</a> settings are now available at <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675720" target="_blank" rel="noopener">Project</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119" target="_blank" rel="noopener">Project Template</a> levels.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800-Continuous-Jobs" target="_blank" rel="noopener">Continuous Job</a> tracks and presents the history of individual runs for each job.</p></li>
+<li class="listitem"><p>Sign-up and login page has been redesigned.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">Automated Project Creation</a> is not generating all instant quotes. This has been fixed.</p></li>
+<li class="listitem"><p>Tab in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459" target="_blank" rel="noopener">Machine Translation</a> settings was incorrectly labelled. This has been fixed.</p></li>
+<li class="listitem"><p>Completed <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289880" target="_blank" rel="noopener">YAML</a> files do not contain original formatting. This has been fixed.</p></li>
+<li class="listitem"><p>Older <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014167260" target="_blank" rel="noopener">MXLIFF</a> files could not be imported into a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279" target="_blank" rel="noopener">TM</a>. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-bf29e4c3-629e-304a-8a48-08814edc0777"></a>v20.19 - October 6, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-bf29e4c3-629e-304a-8a48-08814edc0777_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Tooltips with full names are displayed on hover for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project templates</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744239-Sharing-Overview" target="_blank" rel="noopener">buyers</a>.</p></li>
+<li class="listitem"><p>Additional steps that are not part of the standard <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">workflow</a> such as DTP, PM fees, etc. can now be added to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250359" target="_blank" rel="noopener">quotes</a>. These steps are billed by hour.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800-Quality-Assurance-Overview#list-of-qa-checks-0-2" target="_blank" rel="noopener">QA checks</a> are thematically grouped and ordered alphabetically in the Quality Assurance section to give users better overview and control on the page.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012112860-Due-Date-Schemes" target="_blank" rel="noopener">Due date</a> time set in a project reverts to UTC +2 when edited. This has been fixed.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-6d372177-2b06-dc31-4bce-0be777dffd9c"></a>v20.18 - September 22, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-6d372177-2b06-dc31-4bce-0be777dffd9c_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>References to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012527380-Machine-Translation-Quality-Estimation" target="_blank" rel="noopener">MTQE</a> have been unified in the UI.</p></li>
+<li class="listitem"><p>Ubiqus NMT can be added to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620479-Memsource-Translate" target="_blank" rel="noopener">Memsource Translate</a> as a generic MT engine</p></li>
+<li class="listitem"><p>Class III <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview#supported-third-party-machine-translation-engines-0-4" target="_blank" rel="noopener">MT engine</a> was renamed to Rozetta T-4OO.</p></li>
+<li class="listitem"><p>T-3MT MT engine was renamed to Rozetta T-3MT.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF 1.2 / XLIFF 2.0</a> / <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289820" target="_blank" rel="noopener">SDLXLIFF</a> rule/mapping input fields are not automatically expanded when adding more than two lines using the dropdowns and the <span class="keycap"><strong>Add</strong></span> button on the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#create-a-job-0-3" target="_blank" rel="noopener">New Job</a> page. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139-Workflow-Overview#export-workflow-changes-0-5" target="_blank" rel="noopener">Export Workflow Changes</a> wasn't being applied to all jobs in a project with multiple workflows and 50+ jobs. This has been fixed.</p></li>
+<li class="listitem"><p>Numbers are not <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780-Pre-translation-Overview" target="_blank" rel="noopener">pre-translated</a> correctly in JA-ZH jobs. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013918760-Linguist-Overview" target="_blank" rel="noopener">Linguists</a> cannot search <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279-Translation-Memories-Overview" target="_blank" rel="noopener">Translation Memories</a> in the Linguist portal. This has been fixed.</p></li>
+<li class="listitem"><p>Linguists cannot <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#change-job-status-0-1" target="_blank" rel="noopener">set jobs</a> to <span class="emphasis"><em>Completed</em></span> due to nonexistent QA warnings. This has been fixed.</p></li>
+<li class="listitem"><p>Cell flow option was not available for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760-Spreadsheets-MS-Excel-based-" target="_blank" rel="noopener">importing spreadsheet files</a> settings. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-78322cff-072f-c6be-d09c-90fd9fe61696"></a>v20.17 - September 8, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-78322cff-072f-c6be-d09c-90fd9fe61696_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Tilde <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview" target="_blank" rel="noopener">MT</a> now supports batch pre-translation.</p></li>
+<li class="listitem"><p>Existing translations can now be overwritten when batch <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780-Pre-translation-Overview" target="_blank" rel="noopener">pre-translating</a> a file.</p></li>
+<li class="listitem"><p> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014358599-XPath" target="_blank" rel="noopener">XPath</a> can now be used to define <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799-XLIFF-1-2-and-2-0-XML-Localization-Interchange-File-Format-#import-segment-rules-0-2" target="_blank" rel="noopener">Import Segment Rules</a> for XLIFF 1.2</p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Import other text</em></span> option added to file import settings for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289740-Word-Processor-Documents-MS-Word-based-" target="_blank" rel="noopener">Documents</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357719-Slides-MS-PowerPoint-based-" target="_blank" rel="noopener">Slides</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760-Spreadsheets-MS-Excel-based-" target="_blank" rel="noopener">Spreadsheets</a>.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Mapping of Simplified/Traditional Chinese was not correct for all <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview" target="_blank" rel="noopener">MT engines</a>. This has been fixed.</p></li>
+<li class="listitem"><p>Two tooltips were being displayed in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project templates</a> menu. This has been fixed.</p></li>
+<li class="listitem"><p>Chrome <span class="emphasis"><em>Autofill</em></span> function is affecting Memsource edit forms. This has been fixed.</p></li>
+<li class="listitem"><p>Deleting an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020-Email-Templates-and-Automation-Widget-Macros" target="_blank" rel="noopener">email template</a> triggers an error. This has been fixed.</p></li>
+<li class="listitem"><p> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872099-Quality-Assurance-Pane" target="_blank" rel="noopener">QA spelling warnings</a> marked to be ignored appear as new warnings when QA is rerun. This has been fixed.</p></li>
+<li class="listitem"><p>Updating credentials with the AutoML <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview" target="_blank" rel="noopener">MT engine</a> causes an error. This has been fixed.</p></li>
+<li class="listitem"><p>When a Vendor opens project settings of a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744239-Sharing-Overview#sharing-projects-0-2" target="_blank" rel="noopener">shared project</a>, the <span class="guimenu">Cost Center</span> column disappears. This has been fixed.</p></li>
+<li class="listitem"><p>The <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview#configure-third-party-mt-engines-0-3" target="_blank" rel="noopener">Edit Machine Translation Engine</a> page for T-3MT had incorrect spacing. This has been fixed.</p></li>
+<li class="listitem"><p>If an already confirmed <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775980-Segments" target="_blank" rel="noopener">segment</a> was modified and re-confirmed later, the time of the creation of the segment was changed, This has been fixed.</p></li>
+<li class="listitem"><p>With CJK languages, translation is not offered in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872059-CAT-Pane" target="_blank" rel="noopener">CAT pane</a> unless match is identical. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-4b722486-f417-44af-8a3c-e3055e5705cb"></a>v20.16 - August 25, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-4b722486-f417-44af-8a3c-e3055e5705cb_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Confirmed and unconfirmed target segments are now preserved even without pre-translation when updating a source file. Pre-translate checkbox was removed from the <span class="emphasis"><em>Update source</em></span> modal window.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139-Workflow-Overview#file-handover-0-3" target="_blank" rel="noopener">Final versions</a> of translated files modified outside of Memsource can now be added to a job. The addition of a final version to the job maintains the workflow in Memsource.</p></li>
+<li class="listitem"><p>The <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289780-HTML" target="_blank" rel="noopener">HTML filter</a> now allows the specification of non-translatable inline elements. This is now similar to the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357739-XML-Extensible-Markup-Language-" target="_blank" rel="noopener">XML filter</a>.</p></li>
+<li class="listitem">
+<p><a class="link" href="https://cloud.memsource.com/web/docs/api" target="_blank" rel="noopener">API</a>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p><code class="code">POST /api2/v1/projectTemplates</code> endpoint now creates new independent instance of import settings for the project template.</p></li>
+<li class="listitem"><p>New <code class="code">GET /api2/v1/projectTemplates/{projectTemplateId}/importSetting</code> endpoint returns import settings associated with a project template.</p></li>
+</ul></div>
+</li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Project managers cannot select a client for TM/TB if <span class="emphasis"><em>Access TMs/TBs of a selected client only</em></span> is used. This has been fixed.</p></li>
+<li class="listitem"><p>Parentheses are being inverted when used in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360015650120-Bidirectional-Text" target="_blank" rel="noopener">RTL languages</a>. This has been fixed.</p></li>
+<li class="listitem"><p>Translating ja- en with the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459" target="_blank" rel="noopener">Mirai engine</a> was triggering errors. This has been fixed.</p></li>
+<li class="listitem"><p>Source value formatting from <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760-Spreadsheets-MS-Excel-based-#multilingual-spreadsheet-files-0-2" target="_blank" rel="noopener">Multilingual XLSX</a> files were not propagating to target. This has been fixed.</p></li>
+<li class="listitem"><p><code class="code">Patch job</code> would not assign <code class="code">provider</code> if <code class="code">status</code> not specified. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-97ce1207-6509-a61b-ca1e-c37afb7d42a2"></a>v20.15 - August 11, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-97ce1207-6509-a61b-ca1e-c37afb7d42a2_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>When <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744239-Sharing-Overview#sharing-jobs-0-8" target="_blank" rel="noopener">shared jobs</a> change status, the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059-Automated-Project-Creation" target="_blank" rel="noopener">project status</a> is now updated as well.</p></li>
+<li class="listitem"><p>Analysis can now be <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview#download-the-analysis-0-9" target="_blank" rel="noopener">downloaded</a> in JSON format.</p></li>
+<li class="listitem"><p>The <span class="guimenu">Vendor</span> field in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project templates</a> can now be edited allowing the selection of vendor from a drop-down list and the ability to change the vendor.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview" target="_blank" rel="noopener">Systran PNMT machine translation engine</a> now has engine status available.</p></li>
+<li class="listitem"><p>Date values, concatenate and simple formulas from <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760-Spreadsheets-MS-Excel-based-#multilingual-spreadsheet-files-0-2" target="_blank" rel="noopener">multilingual XLSX files</a> are now copied to target columns.</p></li>
+<li class="listitem"><p>Additional profiles for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview#configure-third-party-mt-engines-0-4" target="_blank" rel="noopener">customizable MT engines</a> can now be removed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014441419" target="_blank" rel="noopener">Webhook</a> authentication is now supported.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Trailing spaces cause false internal 100% match in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview" target="_blank" rel="noopener">analysis</a> if followed by a tag. This has been fixed.</p></li>
+<li class="listitem"><p>Mapping of Simplified and Tradition Chinese in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620479-Memsource-Translate" target="_blank" rel="noopener">Memsource Translate</a> was incorrect. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106860-Contentstack-Connector" target="_blank" rel="noopener">Contentstack</a> connector: Fields marked as non-localizable fields are still being localized. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-8846c8de-6568-d1bd-d204-02bf434cf355"></a>v20.14 - July 28, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-8846c8de-6568-d1bd-d204-02bf434cf355_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview" target="_blank" rel="noopener">Jobs</a> in repositories are now indicated with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360020429720/15ff423587b9c8.svg" style="" alt="source_badge.svg"></span>. Path and connector type are presented in the tooltip.</p></li>
+<li class="listitem"><p>T-3MT has been added to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview" target="_blank" rel="noopener">supported MT engines</a>.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620479-Memsource-Translate" target="_blank" rel="noopener">Memsource Translate</a> supports domain-based recommendation for more language pairs.</p></li>
+<li class="listitem"><p>MTQE now supports new <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012527380-Machine-Translation-Quality-Estimation#mtqe-supported-language-pairs-0-5" target="_blank" rel="noopener">language pairs</a>.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong>References</strong></span>: <span class="guimenu">More</span> is now presented as a clickable button for better visibility.</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>API</strong></span>: <span class="emphasis"><em>dateDue</em></span> was not being validated in <span class="emphasis"><em></em></span> <span class="emphasis"><em>editParts</em></span> calls. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106960-Marketo-Connector" target="_blank" rel="noopener">Marketo Connector</a>: Email assets were not visible in the repository. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106900-GitLab-Connector" target="_blank" rel="noopener">GitLab Connector</a>: Deleted jobs are being exported back to the repository. This has been fixed.</p></li>
+<li class="listitem"><p>SDLXLIFF was missing from the dropdown list for File Types when <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#create-a-job-0-1" target="_blank" rel="noopener">creating a new job</a>. This has been fixed.</p></li>
+<li class="listitem"><p>The <span class="guimenu">Light</span> color scheme generated a black highlight field. This has been fixed.</p></li>
+<li class="listitem"><p>Changes to a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289880-YAML" target="_blank" rel="noopener">YAML</a> file within a GIT repository was not correctly reflected in updated jobs. This has been fixed.</p></li>
+<li class="listitem"><p>The <code class="code">{recipient.timezone}</code> macro in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020-Email-Templates-Overview" target="_blank" rel="noopener">email templates</a> was not working correctly. This has been fixed.</p></li>
+<li class="listitem"><p>Cost center and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186440-Business-Units" target="_blank" rel="noopener">Business Unit</a> dropdown lists are not available when creating or editing projects if <span class="guimenu">Modify setup's server settings</span> is disabled. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk-Connector" target="_blank" rel="noopener">Zendesk Connector</a>: Some file are being imported multiple times. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-438c0ba6-fdbf-b457-38d7-60319f3863d3"></a>v20.13 - July 14, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-438c0ba6-fdbf-b457-38d7-60319f3863d3_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Memsource Translate</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620479-Memsource-Translate" target="_blank" rel="noopener">Memsource Translate</a> can be personalized by adding generic and customizable engines from the list of supported engines.</p></li>
+<li class="listitem"><p>The optimal engine is now selected for a given domain and language pair for jobs with an English source.</p></li>
+<li class="listitem">
+<p>Supported generic engines:</p>
+<p>DeepL, Human Science, NpatMT, Yandex</p>
+</li>
+<li class="listitem">
+<p>Supported customizable engines:</p>
+<p>Google AutoML, Microsoft Custom Translator, Systran PNMT</p>
+</li>
+</ul></div>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Update Source</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Files previously imported to Memsource <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#job-tools-0-4" target="_blank" rel="noopener">can be updated</a> and be pre-translated from project <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279-Translation-Memories-Overview" target="_blank" rel="noopener">TM</a>s. The older version of the same file is overwritten and cannot be restored. If a file submitted via automation widget is updated, the updated version will be delivered to the submitter.</p></li></ul></div>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Recalculate analysis</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Project Managers and Administrators can now <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview#recalculate-analysis-0-7" target="_blank" rel="noopener">manually recalculate</a> word counts when a file is updated and the analysis becomes outdated. An outdated analysis has a warning icon with a tooltip in front of its name.</p></li></ul></div>
+</li>
+<li class="listitem"><p>Project Managers and Administrators can now change the vendor in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project templates</a>.</p></li>
+<li class="listitem"><p>Alexa Translations A.I. MT engine now supports batch pre-translation.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist">
+<a id="itemizedlist-idm33188780267922"></a><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><span class="bold bold"><strong><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106960-Marketo-Connector" target="_blank" rel="noopener">Marketo Connector</a></strong></span>: Download fails if token is not found. This has been fixed.</p></li>
+<li class="listitem"><p>LEN formulas in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760-Spreadsheets-MS-Excel-based-#multilingual-spreadsheet-files-0-2" target="_blank" rel="noopener">multilingual XLSX</a> files are incorrectly presented in preview. This has been fixed.</p></li>
+<li class="listitem"><p>The Add/Set buttons are functioning like save when editing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project templates</a>. This has been fixed.</p></li>
+</ul>
+</div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-2c0c44d1-d83c-fbc4-e717-f7ae7fb5480f"></a>v20.12 -June 30, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-2c0c44d1-d83c-fbc4-e717-f7ae7fb5480f_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#jobs-table-0-0" target="_blank" rel="noopener">Jobs Table</a>: Hovering over the ellipses (<span class="guimenu">...</span>) reveals the connector and source path of jobs imported from a repository.</p></li>
+<li class="listitem">
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208019-Contentful-Connector" target="_blank" rel="noopener">Contentful</a>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>When browsing a repository, entities are grouped by content models.</p></li>
+<li class="listitem"><p>Support for <span class="emphasis"><em>Media Asset</em></span> translation.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208099-Git-Connector" target="_blank" rel="noopener">GIT</a>: Automated Project Creation can now export translations to a different branch.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-273a3f28-8a13-d648-59a5-43ec416d0655"></a>v20.11 - June 16, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-273a3f28-8a13-d648-59a5-43ec416d0655_body">
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Some .DOTX files (MS Word template) contain broken content control links after translating. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk-Connector" target="_blank" rel="noopener">Zendesk Connector</a>: Dynamic Content is not available for import. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208099-Git-Connector" target="_blank" rel="noopener">Git Connector</a>: Updated SSH key not being stored causing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800-Continuous-Jobs" target="_blank" rel="noopener">Continuous Jobs</a> not to be imported/exported. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-91ff9d22-219e-12bc-54ef-b7646de833eb"></a>v20.10 - June 2, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-91ff9d22-219e-12bc-54ef-b7646de833eb_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>New <a class="link" href="https://help.memsource.com/hc/en-us/articles/360004209771-Webhooks" target="_blank" rel="noopener">webhook</a> events has been added to notify of <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project template</a> creation, modification and deletion.</p></li>
+<li class="listitem"><p>A new <a class="link" href="https://help.memsource.com/hc/en-us/articles/360001398332-Memsource-REST-API-Technology" target="_blank" rel="noopener">API endpoint</a> allows the pre-translation of jobs in the case <span class="emphasis"><em>Copy Source to Target where empty</em></span> is required.</p></li>
+<li class="listitem"><p>The <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059-Automated-Project-Creation" target="_blank" rel="noopener">Automated Project Creation</a> page now has a <span class="guilabel">Check now</span> button allowing users to immediately check the status of the monitored repository.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106960-Marketo-Connector" target="_blank" rel="noopener">Marketo connector</a>: Localized segmentation is now supported. Marketo segments names can be mapped to Memsource languages.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk connector</a>: A label-based workflow functionality has been added.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk connector</a>: An option to log debug information has been added.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>When filtering languages in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766299-Term-Base-Overview" target="_blank" rel="noopener">term base</a> (filtering terms), the <span class="guimenu">Select all</span> option doesn't react. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208139-Google-Drive-Connector" target="_blank" rel="noopener">Google Drive connector</a>: Not all files and folders were being listed. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-70c9f22d-6ce0-03b0-e4a2-9484101dbc12"></a>v20.9 - May 19, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-70c9f22d-6ce0-03b0-e4a2-9484101dbc12_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106960-Marketo-Connector" target="_blank" rel="noopener">Marketo</a>: Segmentation is now supported for Emails and Landing Pages.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk</a>: Authors can control when articles are ready for translation with new T<span class="guimenu">ranslate articles with label(s)</span> and <span class="guimenu">Add label on post-translation</span> options in the connector configuration.</p></li>
+<li class="listitem"><p><span class="emphasis"><em>Hour</em></span> is now available as a billing unit when creating a <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003692492-Costs-Quotes" target="_blank" rel="noopener">Quote</a> and is represented in reports.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/115003694732-Introduction-to-Memsource-REST-API" target="_blank" rel="noopener">API</a>: New parameter allows the exclusion of preview skeletons from MXLIFF files.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Filtering of <a class="link" href="https://help.memsource.com/hc/en-us/articles/360010485559-Multilingual-CSV-file" target="_blank" rel="noopener">multilingual CSV</a> files was not working. This has been fixed.</p></li>
+<li class="listitem"><p>XML files imported as <a class="link" href="https://help.memsource.com/hc/en-us/articles/360004593932-DITA" target="_blank" rel="noopener">DITA</a> are appended with <code class="code">xmlns:ditaarch</code>. This has been fixed.</p></li>
+<li class="listitem"><p>Using the URL instead of the host address when creating a connection to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview" target="_blank" rel="noopener">PangeaMT</a> causes an error. A tooltip has been implemented to warn users of the difference.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483672-Aligning-Documents-to-Create-a-Translation-Memory" target="_blank" rel="noopener">Aligning documents for a TM</a> is timing out or ending in an error. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-88366671-96c6-dd6d-be8f-6b0f92d899a0"></a>v20.8 - May 5, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-88366671-96c6-dd6d-be8f-6b0f92d899a0_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Memsource now supports <a class="link" href="https://help.memsource.com/hc/en-us/articles/360004593932-DITA" target="_blank" rel="noopener">DITA</a> 1.3</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk Connector</a>: Connector can now be set to remove the flag for translation when the flagged translation is complete.</p></li>
+<li class="listitem"><p>Help button functionality has been improved to provide more relevant content.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-8438eab2-94f2-fce6-fca2-2b15faf88501"></a>v20.7 - April 21, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-8438eab2-94f2-fce6-fca2-2b15faf88501_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk</a>: New target languages added via Zendesk Guide are added to the connector from the Guide module instead of the Support module. This enables dynamic synchronization with the connector.</p></li></ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/115003681851-Term-Bases" target="_blank" rel="noopener">Term bases</a> exported from <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003461731-Roles-Available-in-Memsource" target="_blank" rel="noopener">Guest accounts</a> are empty. This has been fixed.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-95fbc7a2-783a-5f07-e86f-3a1662f04862"></a>v20.6 - April 7, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-95fbc7a2-783a-5f07-e86f-3a1662f04862_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk Connector</a> can specify that jobs are only created for articles that are flagged for translation.</p></li>
+<li class="listitem"><p>More project metadata filters (<span class="emphasis"><em>Owner</em></span>, <span class="emphasis"><em>Client</em></span>, <span class="emphasis"><em>Domain</em></span>, <span class="emphasis"><em>Subdomain</em></span>, <span class="emphasis"><em>Cost Center</em></span>, <span class="emphasis"><em>Business Unit</em></span> and <span class="emphasis"><em>Note</em></span>) have been added to the Project Templates API.</p></li>
+<li class="listitem"><p>Ubiqus NMT is now available as a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview" target="_blank" rel="noopener">Machine Translation</a> Engine.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>POPUP element is not imported for translation from an RC file. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://cloud.memsource.com/web/docs/api" target="_blank" rel="noopener">REST API</a>: If a job is created without specific import settings, Global import settings are not applied. This has been fixed.</p></li>
+<li class="listitem"><p>Project <a class="link" href="https://help.memsource.com/hc/en-us/articles/360002826872-Analysis" target="_blank" rel="noopener">analysis</a> settings gets overwritten with settings from latest analysis settings. This has been fixed.</p></li>
+<li class="listitem"><p>Hidden text in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360004586932-MS-Word" target="_blank" rel="noopener">MS Word</a> files is being imported when it is specified not to be. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012107020-Zendesk" target="_blank" rel="noopener">Zendesk Connector</a>: Draft articles are being pushed to Published instead of Draft. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-cac7f1fa-1536-bc6d-14c8-bca4deec1741"></a>v20.5 - March 24, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-cac7f1fa-1536-bc6d-14c8-bca4deec1741_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>LQA data from Analytics can now be provided by the Analytics API.</p></li>
+<li class="listitem"><p>LIST Last Login Date endpoint added to Memsource APIs.</p></li>
+<li class="listitem"><p>Mirai MT setup includes additional Mirai MT optional configuration fields.</p></li>
+<li class="listitem"><p>Shared drives are now supported by the Google Drive connector.</p></li>
+<li class="listitem"><p>Contentful (field-level) Connector provides an optional Fallback language.</p></li>
+<li class="listitem"><p>Various UI improvements.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Cost centers are not propagated from Project Templates when created via the Automation Widget or Automated Project Creation. This has been fixed.</p></li>
+<li class="listitem"><p>Selection of an <span class="guimenu">Entry import mode</span> for the Contentful (field-level) connector was not working in the UI. This has been fixed.</p></li>
+<li class="listitem"><p>Automated Project Creation not pulling the latest files when connected to a Git repository. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-fc853047-9345-8962-39e5-1333e1fb7266"></a>v20.4 - March 10, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-fc853047-9345-8962-39e5-1333e1fb7266_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Amazon Translate now available for Memsource Translate.</p></li>
+<li class="listitem"><p>Project page has a new filter allowing filtering of projects by status.</p></li>
+<li class="listitem"><p>PO files now have options for defining translatable and non-translatable inline elements on upload.</p></li>
+<li class="listitem"><p>IP address ranges specified for access are now validated before being saved.</p></li>
+<li class="listitem"><p>Debugging log option added to Contentful connector configuration.</p></li>
+<li class="listitem"><p>Adobe Experience Manager Plugin now accepts digital assets for translation.</p></li>
+<li class="listitem"><p>SDL BeGlobal Machine Translation Engine has been updated to support the latest version of the Cloud MT API.</p></li>
+<li class="listitem"><p>Brunei Malay language now supported.</p></li>
+<li class="listitem">
+<p>For newly created organizational accounts default options have changed to increase efficiency.</p>
+<p><span class="bold bold"><strong>ON</strong></span> by default:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Pre-translate on job creation</p></li>
+<li class="listitem"><p>Set project to Assigned once all jobs are Accepted</p></li>
+<li class="listitem"><p>Set project to Completed once all jobs are Completed</p></li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-5682cee8-a062-4b37-3234-4549ae32abdd"></a>v20.3 - February 25, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-5682cee8-a062-4b37-3234-4549ae32abdd_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Magento Connector has been updated (1.0.6). This updates helps with connection problems to Magento version 2.3.</p></li></ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Contentful Connector:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Job fails due to API limit. This has been fixed.</p></li>
+<li class="listitem"><p>Entry-Level - restricted text values aren't pulled resulting in missing content. This has been fixed.</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>Adobe Experience Manager Connector:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>In-Context Preview not generated if multiple connectors are configured that only differ in port number. This has been fixed.</p></li></ul></div>
+</li>
+<li class="listitem">
+<p>Dropbox, FTP, BitBucket:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Changes in Continuous Jobs are not being automatically reflected in Memsource. This has been fixed.</p></li></ul></div>
+</li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-8f525962-27ed-07fc-7c08-39165a50a4b4"></a>v20.2 - February 11, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-8f525962-27ed-07fc-7c08-39165a50a4b4_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<p><span class="bold bold"><strong>Jobs View</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Project owner is now visible in the Jobs View and can be used as a filter.</p></li>
+<li class="listitem"><p>Project ID is now a customizable column and can be used to sort and filter.</p></li>
+</ul></div>
+<p><span class="bold bold"><strong>Password Security</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>PM no longer creates or can see another user's password. Password management is only in the hands of the user.</p></li>
+<li class="listitem"><p>When batch importing users, passwords column is not required and ignored.</p></li>
+</ul></div>
+<p>New languages added to Memsource</p>
+<div class="informaltable table-responsive"><table>
+<thead><tr>
+<th><p>Code</p></th>
+<th><p>Language</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>fr_dz</p></td>
+<td><p>French (Algerian)</p></td>
+</tr>
+<tr>
+<td><p>mam</p></td>
+<td><p>Mam</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><span class="bold bold"><strong>Zendesk</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Translation requests are now based on 'last edited' date of content instead of 'last updated' date.</p></li></ul></div>
+<p><span class="bold bold"><strong>New Languages Supported in <a class="link" href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html" target="_blank" rel="noopener">Amazon Translate</a></strong></span></p>
+<p><span class="bold bold"><strong>Connector Warning</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Connectors with open continuous jobs can be deleted with no warning. This has been changed and a warning is displayed.</p></li></ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Memsource employee names could be found in the properties of exported bilingual .docx files. This has been fixed.</p></li>
+<li class="listitem"><p>Pre-translations exported to bilingual .docx contain incorrect fonts and languages. This has been fixed.</p></li>
+<li class="listitem"><p>With trusted network configured on Access and Security, not all jobs are accessible to view in Memsource Editor for Web. This has been fixed.</p></li>
+<li class="listitem"><p>Search Shared Space was not working for projects with shared jobs. This has been fixed.</p></li>
+<li class="listitem"><p>Stored default paths in GitLab are incorrect. This has been fixed.</p></li>
+<li class="listitem"><p>Problem with Magento Connector not making connections. This has been fixed.</p></li>
+<li class="listitem"><p>Contentful Connector (field-level) jobs failing due to API limit handling. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-0a505f78-1851-7f75-a129-c01eff6fd939"></a>v20.1 - January 28, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-0a505f78-1851-7f75-a129-c01eff6fd939_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Linguist Portal Job View: Translation jobs assigned to the linguist are presented in a table with acceptance buttons and filtering options.</p></li>
+<li class="listitem"><p>Added support for <span class="emphasis"><em>npatMT</em></span> MT engine.</p></li>
+<li class="listitem"><p>Added support for <span class="emphasis"><em>Kodesha</em></span> MT engine.</p></li>
+<li class="listitem"><p><span class="emphasis"><em>Search shared space</em></span> functionality improved to increase search speed.</p></li>
+<li class="listitem"><p>Added support for Adobe Experience Manager 6.5</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>If Modify TBs is disabled for Guest users, View TBs and Approve terms functions do not work. This has been fixed.</p></li>
+<li class="listitem"><p>Analysis created via API ignore the naming macro. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-a12f4c93-374f-015b-4875-dcd0992e3067" id="UUID-5aa2bf11-559b-8334-e4f7-070dca9bfe70"></a>v19.26 - January 14, 2020</h2></div></div>
+<div class="panel-body collapse" id="UUID-5aa2bf11-559b-8334-e4f7-070dca9bfe70_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Trusted IP Addresses can now be assigned to specific user roles.</p></li></ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>GitLab online repositories were not maintaining original states or the full path to the repository was altered. This has been fixed.</p></li>
+<li class="listitem"><p>If 'Include Tags' is selected for Google AutoML, parts between the tags are translated instead of whole segments. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
