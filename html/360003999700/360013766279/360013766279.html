@@ -1,16 +1,17 @@
 <div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
-<p>A translation memory (TM) is a database of previously translated text and is a key component of CAT tools. Text is split into smaller segments (usually sentences or titles) during <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483972-Segmentation" target="_blank" rel="noopener">segmentation</a>. The original segment and its translation are then saved into the translation memory as a <span class="emphasis"><em>translation unit</em></span>.</p>
+<p>A translation memory (TM) is a database of previously translated text and is a key component of CAT tools. Text is split into smaller segments (usually sentences or titles) during <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483972-Segmentation" target="_blank" rel="noopener">segmentation</a>. The original segment and its translation are then saved into the translation memory as a <span class="emphasis"><em>translation unit</em></span> when that segment is confirmed by a user in an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775880" target="_blank" rel="noopener">editor</a>.</p>
+<p>Segments that are automatically confirmed based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780" target="_blank" rel="noopener">pre-translation</a> settings are not saved as they are already in the selected TM but context is added to the existing TM.</p>
 <p>A TM can have several target languages but only one source language and can be used in multiple projects simultaneously.</p>
-<p>There are two main benefits to using a TM:</p>
+<p>Two main benefits to using a TM:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>A TM allows for the reuse of translations. This speeds up the translation process and reduces costs.</p></li>
 <li class="listitem"><p>A TM helps to ensure translation consistency. This is important when a client has more than one translator working on a project</p></li>
 </ul></div>
 <p>While the use of translation memories is highly recommended, there are some limitations:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>While there are no specific limits to how many target languages a TM can have or how many translation units can be saved in a TM, very large TMs (with millions of segments) slow down the performance of searches, pre-translation or analysis and can be difficult to maintain and edit.</p></li>
+<li class="listitem"><p>While there are no specific limits to how many target languages a TM can have or how many translation units can be saved in a TM, very large TMs (millions of segments) slow down the performance of searches, pre-translation or <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760" target="_blank" rel="noopener">analysis</a> and can be difficult to maintain and edit.</p></li>
 <li class="listitem"><p>File size is limited to 1 GB for exporting and importing. A project can have multiple TMs, so it is always better to have a few smaller, well managed TMs than one very large one.</p></li>
-<li class="listitem"><p>A maximum of 10 translation memories can be assigned to project/language pair.</p></li>
+<li class="listitem"><p>A maximum of 10 translation memories can be assigned to any project/language pair.</p></li>
 </ul></div>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
@@ -23,7 +24,7 @@
 <p>Have a group of trusted providers (linguists/vendors) who deliver high-quality output that is saved to the master TM. When working with a provider for the first time or with someone whose output quality varies, consider using a secondary <span class="emphasis"><em>working</em></span> translation memory where they can commit segments and keep the master TM in read-only mode. Use the master TM in Read and Write mode in later workflow steps where review is performed.</p>
 <p>Preventing content of questionable quality from being included in a TM is easier than removing it later.</p>
 <p><span class="emphasis"><em>Suggested TM configuration:</em></span></p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360018156959/15f9bbad476d59.png" style="" alt="tm-vendor.png"></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360020439319/15ff4154948cdf.png" style="" alt="tm-vendor.png"></div>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Add <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872139-Context-Information" target="_blank" rel="noopener">context information</a> to source files</strong></span></p>
@@ -61,7 +62,7 @@
 <li class="step">
 <p>Translation Memories can be created from three places:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>Click the Translation Memories <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018125600/15f9bbad47b644.png" style="" alt="Panel_plus.png"></span> in the panel menu.</p></li>
+<li class="listitem"><p>Click the Translation Memories <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360020439339/15ff415494e894.png" style="" alt="Panel_plus.png"></span> in the panel menu.</p></li>
 <li class="listitem"><p>Click <span class="guilabel">New</span> from the <span class="guimenu">Translation Memories</span> page.</p></li>
 <li class="listitem"><p>Click <span class="guilabel">Create New</span> from the <span class="guimenu">Translation Memories</span> table on a project page.</p></li>
 </ul></div>
@@ -154,24 +155,24 @@
 <p>The first selected TM is automatically selected for Write mode. This can be changed if required. Filter can be used to search for TMs by name, ID number or client name.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p> <span class="bold bold"><strong> <span class="guimenu">Read</span> </strong></span> </p>
-<p>Analysis, Pre-translate and the Editor can access the content of the TM selected as <span class="guimenu">Read</span>. Unchecking the <span class="guimenu">Read</span> checkbox unassigns the TM from the project. TMs with reversed source and target languages can be assigned as <span class="guimenu">Read-only</span> </p>
+<p><span class="bold bold"><strong><span class="guimenu">Read</span></strong></span></p>
+<p>Analysis, Pre-translate and the Editor can access the content of the TM selected as <span class="guimenu">Read</span>. Unchecking the <span class="guimenu">Read</span> checkbox unassigns the TM from the project. TMs with reversed source and target languages can be assigned as <span class="guimenu">Read-only</span></p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong> <span class="guimenu">Write</span> </strong></span> </p>
+<p><span class="bold bold"><strong><span class="guimenu">Write</span></strong></span></p>
 <p>Any segments confirmed in an editor or <a class="link linktextconsumer" href="https://help.memsource.com/document/preview/4621#UUID-1601e4ba-40df-d962-11d4-e2ef301430f1">uploaded</a> are saved into the TM.</p>
 <p>Not required and a maximum of two <span class="guimenu">Write</span> TMs per language and Workflow step in a project.</p>
 </li>
 <li class="listitem">
-<p> <span class="guimenu"> <span class="bold bold"><strong>Source Language</strong></span> </span> </p>
+<p><span class="guimenu"><span class="bold bold"><strong>Source Language</strong></span></span></p>
 <p>Source language of saved TMs is displayed.</p>
 </li>
 <li class="listitem">
-<p> <span class="guimenu"> <span class="bold bold"><strong>Target Languages</strong></span> </span> </p>
+<p><span class="guimenu"><span class="bold bold"><strong>Target Languages</strong></span></span></p>
 <p>Shows all target languages associated with a TM whether used in current project or not.</p>
 </li>
 <li class="listitem">
-<p> <span class="guimenu"> <span class="bold bold"><strong>Penalty (%)</strong></span> </span> </p>
+<p><span class="guimenu"><span class="bold bold"><strong>Penalty (%)</strong></span></span></p>
 <p>Set the penalty percentage for TM matches in Analysis, Pre-translate and an editor.</p>
 </li>
 </ul></div>
@@ -182,8 +183,9 @@
 </li>
 </ol>
 </div>
-<p>If no longer needed or relevant, the TM can be unassigned. First, you need to access the overview of TMs attached to the Project. To do so, repeat Step 1 and 2 of the guide above. There, remove the check marks from the TM you want to unassign. After you click on <span class="emphasis"><em>Save</em></span>, the TM will disappear from your Project overview.</p>
-<p>Relevant TMs are displayed first and ordering is based on the Client, Domain, Subdomain and user rights of the Project Manager.</p>
+<p>If no longer needed or relevant, TMs can be unassigned by deselecting them from the <span class="guimenu">Translation Memories</span> table and clicking <span class="guilabel">Save</span>.</p>
+<p>Penalty values can also be edited in the <span class="guimenu">Translation Memories</span> table.</p>
+<p>Relevant TMs are displayed first and order is based on the Client, Domain, Subdomain and user rights of the Project Manager.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
@@ -193,45 +195,45 @@
 <p>Context is used to determine if the match in TM is:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p><span class="bold bold"><strong>101% </strong></span></p>
+<p> <span class="bold bold"><strong>101% </strong></span> </p>
 <p>An in-context match.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>100% </strong></span></p>
+<p> <span class="bold bold"><strong>100% </strong></span> </p>
 <p>Source text is a match, but context of the new text is different.</p>
 </li>
 </ul></div>
 <p>This becomes important when the context of the segment results in two different translations of the same original text.</p>
 <div class="informalexample">
-<p><span class="bold bold"><strong>Example:</strong></span></p>
+<p> <span class="bold bold"><strong>Example:</strong></span> </p>
 <p>In Czech, a female 'Project manager' is translated differently than a male 'Project manager'.</p>
 <p>If surrounding segments create context that can be used to identify the difference, both translations are saved to the Translation Memory and are presented as a 101% match when the same context is provided.</p>
 </div>
 <h3>
 <a id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_bridgehead-idm231771943041696"></a>Context Types</h3>
-<p>The type of context which will be saved with the segment to the translation memory is set in <span class="guimenu">File Import Settings</span> when the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360002825692-Create-New-Jobs" target="_blank" rel="noopener">job is imported</a>. Every file can be imported with different settings.</p>
+<p>The type of context which will be saved with the segment to the translation memory is set in <span class="guimenu">File Import Settings</span> when the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360002825692-Create-New-Jobs" target="_blank" rel="noopener">job is imported</a>. Every file can be imported with different settings.</p>
 <p>A translation memory can contain segments with different types of context:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p><span class="bold bold"><strong>Automatic</strong></span></p>
+<p> <span class="bold bold"><strong>Automatic</strong></span> </p>
 <p>Context type will be selected automatically based on the file type.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p>Files imported with the context type <span class="emphasis"><em>Segment Key</em></span>: ANDROID_STRING, CHROME_JSON, DESKTOP_ENTRY, DTD, JAVA PROPERTIES, JOOMLA_INI, <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483412" target="_blank" rel="noopener">JSON</a>, MAC_STRINGS, MOZILLA_PROPERTIES, PHP, PLIST, PO (gettext), RESJSON, RESX, TS, XML_PROPERTIES, <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483412" target="_blank" rel="noopener">YAML</a></p></li>
+<li class="listitem"><p>Files imported with the context type <span class="emphasis"><em>Segment Key</em></span>: ANDROID_STRING, CHROME_JSON, DESKTOP_ENTRY, DTD, JAVA PROPERTIES, JOOMLA_INI, <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483412" target="_blank" rel="noopener">JSON</a>, MAC_STRINGS, MOZILLA_PROPERTIES, PHP, PLIST, PO (gettext), RESJSON, RESX, TS, XML_PROPERTIES, <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483412" target="_blank" rel="noopener">YAML</a> </p></li>
 <li class="listitem"><p>Other formats will be imported with the context type <span class="emphasis"><em>Previous and next segment</em></span>.</p></li>
 </ul></div>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Previous and Next Segments </strong></span></p>
+<p> <span class="bold bold"><strong>Previous and Next Segments </strong></span> </p>
 <p>Both the previous and next segment will be saved as context.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Segment Key</strong></span></p>
+<p> <span class="bold bold"><strong>Segment Key</strong></span> </p>
 <p>The segment key or the segment ID will be saved as context. This can be specified for the above mentioned <span class="emphasis"><em>Segment key</em></span> file formats and also customized for: CSV, XML, Multilingual XML and Multilingual MS Excel files.</p>
-<p>In some file formats, the segment key is more important than context (YAML, JSON, etc.).</p>
+<p>In some file formats, the segment key is more important than context (YAML, JSON, etc.).</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>No Context </strong></span></p>
-<p>If context can be ignored no context will be saved and the translation will always overwritten by the newest version.</p>
+<p> <span class="bold bold"><strong>No Context </strong></span> </p>
+<p>If context can be ignored no context will be saved and the translation will always be overwritten by the most recently modified version.</p>
 <p>No Context is also applied when the provided context is not found.</p>
 <p>Example:</p>
 <div class="informalexample">
@@ -310,7 +312,7 @@
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-82a39631-b1e5-ec9e-c57f-497c93f8e6a9"></a>Translation Unit Metadata</h2></div></div>
 <div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-82a39631-b1e5-ec9e-c57f-497c93f8e6a9_body">
-<p>A translation unit (TU) is a source segment and the target segments for all languages grouped together and saved into a translation memory.</p>
+<p>A translation unit (TU) is a source segment and the target segments for all languages grouped together and saved into a translation memory. It's not possible to save multiple target versions in the same language, there can be only one target segment per selected language.</p>
 <p>When a segment/TU is saved, pre-defined attributes or metadata are automatically added to the source and/or target of the TU in the translation memory.</p>
 <div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h3 class="title">
@@ -323,7 +325,10 @@
 <p><span class="bold bold"><strong>Created by</strong></span> - target segment.</p>
 <p>Only Memsource Usernames are supported.</p>
 </li>
-<li class="listitem"><p><span class="bold bold"><strong>Last modified (date/time)</strong></span> - target segment</p></li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Last modified (date/time)</strong></span> - target segment</p>
+<p>Only the latest version of the target segment is saved to TM. This attribute marks the time when the latest version was saved.</p>
+</li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Last modified by</strong></span> - target segment.</p>
 <p>Only Memsource Usernames are supported.</p>
@@ -334,20 +339,20 @@
 <p>This is the Client as set in the project when the translation was created.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Domain</strong></span> - target segment</p>
+<p><span class="bold bold"><strong>Domain</strong></span> - target segment</p>
 <p>This is the Domain as set in the project when the translation was created.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Subdomain</strong></span> - target segment</p>
+<p><span class="bold bold"><strong>Subdomain</strong></span> - target segment</p>
 <p>This is the Subdomain as set in the project when the translation was created.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>File</strong></span> - target segments</p>
+<p><span class="bold bold"><strong>File</strong></span> - target segments</p>
 <p>Name of the file where the translation was created.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Context</strong></span> - source segment</p>
-<p>This is the <span class="emphasis"><em>Previous segment</em></span>, <span class="emphasis"><em>Next segment</em></span> or <span class="emphasis"><em>Segment key</em></span>, depending on the <span class="guimenu">File Import Settings</span> when the job was created.</p>
+<p><span class="bold bold"><strong>Context</strong></span> - source segment</p>
+<p>This is the <span class="emphasis"><em>Previous segment</em></span>, <span class="emphasis"><em>Next segment</em></span> or <span class="emphasis"><em>Segment key</em></span>, depending on the <span class="guimenu">File Import Settings</span> when the job was created.</p>
 </li>
 </ul></div>
 <p>Translation Memory attributes (<span class="emphasis"><em>Domain</em></span>, <span class="emphasis"><em>Client</em></span>, <span class="emphasis"><em>Business Unit</em></span>, etc.) have no effect on translation unit metadata.</p>
@@ -358,7 +363,7 @@
 <div class="panel-heading"><div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-db8ccb28-747b-2658-e77b-a6ec1f28e8d0"></a>TMX Format</h3></div></div>
 <div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-db8ccb28-747b-2658-e77b-a6ec1f28e8d0_body"><div class="panel-inner">
-<p>For importing and exporting the content of a translation memory using the TMX format, the following metadata is supported:</p>
+<p>For importing and exporting the content of a translation memory using the TMX format, the following metadata is supported:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p>Properties in the source TUV element:</p>
@@ -387,28 +392,28 @@
 <div class="panel-heading"><div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-7180f4b1-e603-e161-300e-fc51943253a1"></a>XLSX Format</h3></div></div>
 <div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-7180f4b1-e603-e161-300e-fc51943253a1_body"><div class="panel-inner">
-<p>For importing and exporting the content of a translation memory using the XLSX format, the following metadata is supported:</p>
+<p>For importing and exporting the content of a translation memory using the XLSX format, the following metadata is supported:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="bold bold"><strong>ID</strong></span> - Memsource internal ID</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>{source language code}</strong></span> - for example 'en' or 'en_us'</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>prev</strong></span> - text of the previous segment</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>next</strong></span> - text of the following segment</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>seg_key</strong></span> - text of the context key</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>mdata</strong></span> - metadata of Memsource tags</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>{target language code}</strong></span> - en or en_us</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>created_by</strong></span> - Memsource Username</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>created_at</strong></span> - in format 2017.07.07 14:39:52,000</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>modified_by</strong></span> - Memsource Username</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>modified_at</strong></span> - in format 2017.07.07 14:39:52,000</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>client</strong></span> - Memsource ID (number)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>project</strong></span> - Memsource ID (number)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>domain</strong></span> - Memsource ID (number)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>subdomain</strong></span> - Memsource ID (number)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>note</strong></span> - text (external use only, not visible in Memsource)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>reviewed</strong></span> - true/false (external use only, not visible in Memsource)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>aligned</strong></span> - true/false (external use only, not visible in Memsource)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>filename</strong></span> - the name of the original file (test.docx)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>mdata</strong></span> - metadata of Memsource tags</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>ID</strong></span> - Memsource internal ID</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>{source language code}</strong></span> - for example 'en' or 'en_us'</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>prev</strong></span> - text of the previous segment</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>next</strong></span> - text of the following segment</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>seg_key</strong></span> - text of the context key</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>mdata</strong></span> - metadata of Memsource tags</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>{target language code}</strong></span> - en or en_us</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>created_by</strong></span> - Memsource Username</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>created_at</strong></span> - in format 2017.07.07 14:39:52,000</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>modified_by</strong></span> - Memsource Username</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>modified_at</strong></span> - in format 2017.07.07 14:39:52,000</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>client</strong></span> - Memsource ID (number)</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>project</strong></span> - Memsource ID (number)</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>domain</strong></span> - Memsource ID (number)</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>subdomain</strong></span> - Memsource ID (number)</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>note</strong></span> - text (external use only, not visible in Memsource)</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>reviewed</strong></span> - true/false (external use only, not visible in Memsource)</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>aligned</strong></span> - true/false (external use only, not visible in Memsource)</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>filename</strong></span> - the name of the original file (test.docx)</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>mdata</strong></span> - metadata of Memsource tags</p></li>
 </ul></div>
 <p>The order of the columns reflects the attributes of the source segment and the attributes of the target segment.</p>
 </div></div>
