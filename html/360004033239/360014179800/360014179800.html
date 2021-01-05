@@ -10,7 +10,7 @@
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95" id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_UUID-1d6f549f-d012-5270-29f2-91761b2c70af"></a>Continuous Localization</h2></div>
 <p>Continuous localization helps in projects and jobs that have incremental changes and require a continuous delivery of updated translated texts. It is the integration of the localization workflow into the development process instead of the tradition of it happening after the development process. As an example, in the software development environment, updated text strings are automatically handed off to the TMS and processed in time with the release cycle.</p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360018072159/15f9a6a49f1152.png" style="" alt="Continuous_Localization.png"></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360020466099/15ff488625019e.png" style="" alt="Continuous_Localization.png"></div>
 <div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95" id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_UUID-4ec24b52-e7a8-cd45-4284-43370c9d0bb7"></a>Continuous Jobs vs Continuous Projects</h3></div></div>
@@ -104,15 +104,19 @@
 <li class="listitem"><p>If a multi-step workflow is used, only changes in last workflow step are exported; the status of previous steps must be set to Completed but the step from which the changes are exported does not.</p></li>
 <li class="listitem"><p>Each target file is stored in a language-code subfolder (e.g. <span class="emphasis"><em>./en_us</em></span>). Multilingual files are stored in a subfolder with a name that is concatenation of all target language codes (e.g. <span class="emphasis"><em>./cs-de-zh_cn</em></span>)</p></li>
 </ul></div>
+<p><span class="bold bold"><strong>Re-importing:</strong></span></p>
+<div class="itemizedlist">
+<a id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_itemizedlist-idm33219675980976"></a><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_listitem-idm31609837990490"></a>If at least one selected job is from a remote (connector) file, they can be re-imported from the <span class="guimenu">Download</span> menu on the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#jobs-table-0-2" target="_blank" rel="noopener">jobs table</a>.</p></li></ul>
+</div>
 <p><span class="bold bold"><strong>Restrictions:</strong></span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Only available for specified file formats.</p></li>
 <li class="listitem"><p>The file must be uploaded from an online repository using a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012207959-Supported-Connectors-and-Plugins" target="_blank" rel="noopener">connector</a>.</p></li>
 </ul></div>
-<p>Continuous jobs are presented in the project page with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018072179/15f9a6a4a008ee.png" style="" alt="con_job.png"></span>. The tooltip indicates when the job was last updated.</p>
+<p>Continuous jobs are presented in the project page with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360020466119/15ff4886256166.png" style="" alt="con_job.png"></span>. The tooltip indicates when the job was last updated.</p>
 <div dir="ltr" class="note">
 <h3 class="title">Note</h3>
-<p>If there are problems with a continuous job, hovering over the ellipses <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018072199/15f9a6a4a0361d.png" style="" alt="ellipses.png"></span> displays job information. Click <span class="guilabel">See history</span> to display a detailed history of the job to help troubleshoot where and when the problem may have occurred.</p>
+<p>If there are problems with a continuous job, hovering over the ellipses <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360020453720/15ff488625cd30.png" style="" alt="ellipses.png"></span> displays job information. Click <span class="guilabel">See history</span> to display a detailed history of the job to help troubleshoot where and when the problem may have occurred.</p>
 </div>
 <div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
 <div class="titlepage"><h2 class="title">
@@ -142,7 +146,7 @@
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="bold bold"><strong>Globally</strong></span></p>
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018056260/15f9a6a4a05c9e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section and click on <span class="guilabel">Continuous Job Settings</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360020466139/15ff48862619b2.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section and click on <span class="guilabel">Continuous Job Settings</span>.</p>
 <p>The <span class="guimenu">Continuous Job Settings</span> page opens.</p>
 </li>
 <li class="listitem">
