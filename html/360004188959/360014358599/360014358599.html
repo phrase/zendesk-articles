@@ -1,10 +1,12 @@
-<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div class="section top-level-topic zd-article section" dir="ltr" lang="en">
 <p>XPath stands for XML Path Language. It can be used to navigate through elements and attributes in an XML document. If new to XPATH, please see the <a class="link" href="https://www.w3schools.com/xml/xpath_intro.asp" target="_blank" rel="noopener">XPath Tutorial</a> first and study the official <a class="link" href="https://www.w3.org/TR/1999/REC-xpath-19991116/" target="_blank" rel="noopener">XPATH documentation</a>.</p>
 <p>A subset of XPath 1.0 is supported with the following limitations:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc;">
 <li class="listitem">
 <p>Axis in step</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: circle;">
 <li class="listitem">
 <p><span class="bold bold"><strong>Supported</strong></span></p>
 <p>ancestor, ancestor-or-self, attribute, child, descendant, descendant-or-self</p>
@@ -13,11 +15,13 @@
 <p><span class="bold bold"><strong>Not supported</strong></span></p>
 <p>following, preceding, following-sibling, preceding-sibling, namespace</p>
 </li>
-</ul></div>
+</ul>
+</div>
 </li>
 <li class="listitem">
 <p>Predicate</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: circle;">
 <li class="listitem">
 <p><span class="bold bold"><strong>Supported</strong></span></p>
 <p>conditions on current node or ancestor nodes and its properties (attributes, namespaces)</p>
@@ -26,21 +30,34 @@
 <p><span class="bold bold"><strong>Not supported (for example)</strong></span></p>
 <p>position number, axis child::, descendant, descendant-or-self, following::, preceding::, following-sibling::, preceding-sibling::, function last()</p>
 </li>
-</ul></div>
+</ul>
+</div>
 </li>
-</ul></div>
+</ul>
+</div>
 <h3>
 <a id="UUID-54b85556-7db1-26d0-1dc5-0a9c983320f7_bridgehead-idm231832294823822"></a>Basic Rules</h3>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>Use <code class="code">/</code> and <code class="code">//</code> in paths</p></li>
-<li class="listitem"><p>Use single quotes <code class="code">‘ ‘</code> in names</p></li>
-<li class="listitem"><p>Use a pipe <code class="code">|</code> for joining the requests</p></li>
-<li class="listitem"><p>Names are case-sensitive: <code class="code">&lt;Body&gt;</code> is different from <code class="code">&lt;body&gt;</code></p></li>
-</ul></div>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc;">
+<li class="listitem">
+<p>Use <code class="code">/</code> and <code class="code">//</code> in paths</p>
+</li>
+<li class="listitem">
+<p>Use single quotes <code class="code">‘ ‘</code> in names</p>
+</li>
+<li class="listitem">
+<p>Use a pipe <code class="code">|</code> for joining the requests</p>
+</li>
+<li class="listitem">
+<p>Names are case-sensitive: <code class="code">&lt;Body&gt;</code> is different from <code class="code">&lt;body&gt;</code></p>
+</li>
+</ul>
+</div>
 <h3>
 <a id="UUID-54b85556-7db1-26d0-1dc5-0a9c983320f7_bridgehead-idm23183229787838"></a>Examples</h3>
-<p><a class="link" href="https://help.memsource.com/hc/en-us/article_attachments/360015965472/xpath_example1.xml" target="_blank" rel="noopener">XPath Example 1</a> and <a class="link" href="https://help.memsource.com/hc/en-us/article_attachments/360016008671/xpath_example2.xml" target="_blank" rel="noopener">XPath example 2</a> (with namespace) are example files for the following:</p>
-<div class="orderedlist"><ol class="orderedlist" type="1">
+<p><a class="link" href="https://help.memsource.com/hc/en-us/article_attachments/360021012760/xpath_example1.xml" target="_blank" rel="noopener">XPath Example 1</a> and <a class="link" href="https://help.memsource.com/hc/en-us/article_attachments/360021015739/xpath_example2.xml" target="_blank" rel="noopener">XPath example 2</a> (with namespace) are example files for the following:</p>
+<div class="orderedlist">
+<ol class="orderedlist" type="1">
 <li class="listitem">
 <p>Import all elements and all attributes</p>
 <p><code class="code">//* | //@*</code></p>
@@ -109,7 +126,8 @@
 <li class="listitem">
 <p>XML with namespace</p>
 <p><code class="code">&lt;root xmlns:xhtml="http://www.w3.org/1999/xhtml"&gt;&lt;Child&gt;&lt;Text&gt;translate this&lt;/Text&gt;&lt;/Child&gt;</code></p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc;">
 <li class="listitem">
 <p>import all elements in <code class="code">&lt;Child&gt;</code>:</p>
 <p><code class="code">//*[local-name()='Child']//*</code></p>
@@ -122,18 +140,26 @@
 <p>import all elements under element <code class="code">&lt;CONTRACT&gt;</code>, if attribute <code class="code">&lt;CATEGORY&gt;</code> in <code class="code">&lt;CONTRACT&gt;</code> has the value <code class="code">&lt;ORIGINAL&gt;</code></p>
 <p><code class="code">://*[local-name()='CONTRACT' and @CATEGORY='ORIGINAL']//*</code></p>
 </li>
-</ul></div>
+</ul>
+</div>
 </li>
 <li class="listitem">
 <p>XML with namespace and attributes <code class="code">&lt;root&gt; </code><code class="code">xmlns:xhtml="http://www.w3.org/1999/xhtml"&lt;Child translate='1'&gt;translate this&lt;/Child&gt;</code></p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><code class="code">import element &lt;Child&gt; if the attribute translate is 1://*[local-name()="Child"][@*[local-name()='translate']='1']</code></p></li>
-<li class="listitem"><p><code class="code">import all elements with the attribute translate=true://*[@*[local-name()='translate']='true']</code></p></li>
-</ul></div>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc;">
+<li class="listitem">
+<p><code class="code">import element &lt;Child&gt; if the attribute translate is 1://*[local-name()="Child"][@*[local-name()='translate']='1']</code></p>
+</li>
+<li class="listitem">
+<p><code class="code">import all elements with the attribute translate=true://*[@*[local-name()='translate']='true']</code></p>
+</li>
+</ul>
+</div>
 </li>
 <li class="listitem">
 <p>XML with namespace. Import the element target from element <code class="code">tu</code>, but not when the attribute id contains 'img' or 'extra':</p>
-<div class="orderedlist"><ol class="orderedlist" type="a">
+<div class="orderedlist">
+<ol class="orderedlist" type="a">
 <li class="listitem">
 <p>File example:</p>
 <p><code class="code">&lt;tu id="pages|content|extra"&gt;&lt;ori xml:lang="en"&gt;Course one&lt;/ori&gt;&lt;target xml:lang="lang"&gt;Course one&lt;/target&gt;&lt;/tu&gt;</code></p>
@@ -142,7 +168,8 @@
 <p>XPATH example:</p>
 <p><code class="code">//*[local-name()='tu' and not(contains(@id,'img') or contains(@id,'extra'))]/*[local-name()='target']</code></p>
 </li>
-</ol></div>
+</ol>
+</div>
 </li>
 <li class="listitem">
 <p>Import all elements except <code class="code">&lt;comment&gt;</code> and <code class="code">&lt;lis&gt;</code> unless <code class="code">&lt;lis translate="true"&gt;</code> and their descendants:</p>
@@ -160,7 +187,8 @@
 <p>Import all elements and attributes except elements with the attribute <code class="code">Name= Back</code>, <code class="code">Menu</code>, or <code class="code">Time</code>:</p>
 <p><code class="code">//*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])] | //@*[not(ancestor-or-self::node()[@Name='Back' or @Name='Menu' or @Name='Time'])]</code></p>
 <p>In this case it may be better to import all and lock the attributes not required for import. Once segments are Locked, copy source to target in the editor in order to have the original transferred to translation.</p>
-<div class="orderedlist"><ol class="orderedlist" type="a">
+<div class="orderedlist">
+<ol class="orderedlist" type="a">
 <li class="listitem">
 <p>Lock all elements with the attribute <code class="code">Name</code> with values: <code class="code">Back</code>, <code class="code">Menu</code>, or <code class="code">Time</code> and their descendants:</p>
 <p><code class="code">//*[@Name='Back' or @Name='Menu' or @Name='Time']/descendant-or-self::*</code></p>
@@ -169,9 +197,11 @@
 <p>Lock all attributes of <code class="code">Name</code> with values: <code class="code">Back</code>, <code class="code">Menu</code>, or <code class="code">Time</code> and their descendants</p>
 <p><code class="code">//*[@Name='Back' or @Name='Menu' or @Name='Time']//@*</code></p>
 </li>
-</ol></div>
+</ol>
+</div>
 </li>
-</ol></div>
+</ol>
+</div>
 <p>Some external <a class="link" href="http://zvon.org/xxl/XPathTutorial/Output/examples.html" target="_blank" rel="noopener">examples</a>.</p>
 <h3>
 <a id="UUID-54b85556-7db1-26d0-1dc5-0a9c983320f7_bridgehead-idm231832347646571"></a>Context Note</h3>
@@ -190,11 +220,19 @@
 &lt;/element&gt;
 
 &lt;/root&gt;</pre>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>Attribute in parent element (context 1): ../@context1</p></li>
-<li class="listitem"><p>Attribute in self element (context2): @context2</p></li>
-<li class="listitem"><p>Sibling element (context 3): ../context3</p></li>
-</ul></div>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc;">
+<li class="listitem">
+<p>Attribute in parent element (context 1): ../@context1</p>
+</li>
+<li class="listitem">
+<p>Attribute in self element (context2): @context2</p>
+</li>
+<li class="listitem">
+<p>Sibling element (context 3): ../context3</p>
+</li>
+</ul>
+</div>
 <p>If importing <code class="code">Elements&amp;Attributes: //*</code> the content of the context note will be imported to source segments as well. Exclude the context note elements/attributes from general import in Elements&amp;Attributes.</p>
-<div class="glossary-definitions" style="display:none!important;"></div>
+<div class="glossary-definitions" style="display: none!important;"> </div>
 </div>
