@@ -1,0 +1,52 @@
+<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<p>A Memsource API is required to integrate Memsource with any 3rd-party software. Full API functionality is available to all paid subscriptions but there are daily limits on API calls depending on edition:</p>
+<div class="informaltable table-responsive"><table>
+<thead><tr>
+<th><p>Edition</p></th>
+<th><p>Max. Daily API Calls</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>Ultimate &amp; Enterprise</p></td>
+<td><p>No limit</p></td>
+</tr>
+<tr>
+<td><p>Team</p></td>
+<td><p>2000</p></td>
+</tr>
+<tr>
+<td><p>Team Start</p></td>
+<td><p>1000</p></td>
+</tr>
+<tr>
+<td><p>Personal (unpaid)</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>If integration between Memsource and a 3rd-party system such as XTRF, Plunet or another similar system via the APIs, take into account the daily limit on API calls of the chosen edition. The limit may be exceeded in the middle of a workday and no further calls will be accepted by Memsource. If the daily call limit of the chosen edition is insufficient, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186480-Purchasing-a-Memsource-Subscription#add-to-or-change-subscription-0-0" target="_blank" rel="noopener">upgrading</a> to Ultimate edition is recommended.</p>
+<h3>
+<a id="UUID-afc47099-8ca3-435d-339c-b9d081a7f1cc_bridgehead-idm231837252819793"></a>How API Calls are Counted</h3>
+<p>An API request can be mapped to multiple API calls in Memsource and in such a case each of these calls is counted separately.</p>
+<p>Example:</p>
+<div class="informalexample">
+<a id="UUID-afc47099-8ca3-435d-339c-b9d081a7f1cc_example-idm231837253638048"></a><p>If a request uses up 5 API calls, an organization subscribed to the Team edition can submit such requests 400 times a day before reaching the limit (400*5=2000).</p>
+</div>
+<p>Some components of Memsource use APIs, but these are integral parts of the system and are not counted towards the limits. These include:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775880-Memsource-Editor-Overview" target="_blank" rel="noopener">Memsource Editor</a></p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/categories/360002119659-Memsource-Mobile" target="_blank" rel="noopener">Memsource Mobile</a></p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012207959-Supported-Connectors-and-Plugins" target="_blank" rel="noopener">Connectors</a></p></li>
+</ul></div>
+<h3>
+<a id="UUID-afc47099-8ca3-435d-339c-b9d081a7f1cc_bridgehead-idm231837254411875"></a>Exceeded Limit</h3>
+<p>Limits are checked every 30 minutes and reset at 0:00 GMT. The API response when the limit is exceeded is <span class="emphasis"><em>ApiLimitReached</em></span>. Once the limit of the API calls has been reached, no further calls will be accepted by the system. </p>
+<h3>
+<a id="UUID-afc47099-8ca3-435d-339c-b9d081a7f1cc_bridgehead-idm231837260249248"></a>Actions Consisting of Multiple Calls</h3>
+<p>The system only accepts calls received before the daily limit was exceeded.</p>
+<p>Example:</p>
+<div class="informalexample">
+<a id="UUID-afc47099-8ca3-435d-339c-b9d081a7f1cc_example-idm231837260984455"></a><p>An organization uses 5 calls to perform a certain action and the completed action would have used 2002 calls. If this occurs, the system only accepts the 2000th call and the action would remain incomplete.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
