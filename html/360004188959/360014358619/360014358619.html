@@ -1,11 +1,11 @@
-<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
 <p>The regular expression (abbreviated as regex or regexp) is a sequence of characters that form a search pattern mainly for use in pattern-matching with strings or string-matching. Functionality is similar to <span class="emphasis"><em>find and replace</em></span> operations with more complexity and specificity. See the <a class="link" href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="noopener">wikipedia</a> entry for a detailed description of Regexp and a table of used characters.</p>
 <p>Regexps can be used in the <span class="guimenu">Search and Replace</span> fields in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775900-Memsource-Editor-for-Desktop-Overview" target="_blank" rel="noopener">Editor for Desktop</a>, for the <span class="guimenu">Convert to tags</span> feature in <a class="link" href="https://help.memsource.com/hc/en-us/sections/360004146860-File-Import-Settings" target="_blank" rel="noopener">File Import Settings</a> and for customizing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744119-Segmentation-Rules-Overview" target="_blank" rel="noopener">segmentation rules</a>.</p>
 <div dir="ltr" class="important">
 <h3 class="title">Important</h3>
 <p>Memsource supports <a class="link" href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html" target="_blank" rel="noopener">Java regexp</a>, but will reject complex regular expressions to protect the system from overload. Complex regexps are those with quantifiers (except possessives) on groups which contain other quantifiers (except possessives).</p>
 </div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-87e6e457-5857-dcdb-6fe6-6b9a9d323d91"></a>General Examples</h2></div>
 <p>Examples for converting text into tags when importing files and using regexp in the editor for Search and Replace functions:</p>
@@ -91,39 +91,43 @@
 </table></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-6d1151fd-a162-9b7e-8a9b-c22c567e8744"></a>TXT Import</h2></div>
 <p>Examples of regular expressions when importing a specific text:</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem">
-<p><span class="emphasis"><em>## ErrorMessage ##1## The number must be higher then 0. ##Z## </em></span></p>
-<p>To import text between <span class="emphasis"><em>##1##</em></span> and <span class="emphasis"><em>##Z##</em></span> ,use regexp: <code class="code">(?&lt;=##1## ).*(?= ##Z##)</code></p>
+<p> <span class="emphasis"><em>## ErrorMessage ##1## The number must be higher then 0. ##Z## </em></span> </p>
+<p>To import text between <span class="emphasis"><em>##1##</em></span> and <span class="emphasis"><em>##Z##</em></span> ,use regexp: <code class="code">(?&lt;=##1## ).*(?= ##Z##)</code> </p>
 </li>
 <li class="listitem">
-<p><span class="emphasis"><em>ErrorMessage ("The number must be higher then 0.")</em></span></p>
-<p>To import text between <span class="emphasis"><em>(" and ")</em></span> , use regexp: <code class="code">(?&lt;=\(").*(?="\))</code></p>
+<p> <span class="emphasis"><em>ErrorMessage ("The number must be higher then 0.")</em></span> </p>
+<p>To import text between <span class="emphasis"><em>(" and ")</em></span> , use regexp: <code class="code">(?&lt;=\(").*(?="\))</code> </p>
 </li>
 <li class="listitem">
-<p><span class="emphasis"><em>'errorMessage' = 'The number must be higher than 0.'</em></span></p>
-<p>To import text after the <span class="emphasis"><em>=</em></span> sign and between <span class="emphasis"><em>' and '</em></span> , use regexp: <code class="code">(?&lt;=\= ').*(?=')</code></p>
+<p> <span class="emphasis"><em>'errorMessage' = 'The number must be higher than 0.'</em></span> </p>
+<p>To import text after the <span class="emphasis"><em>=</em></span> sign and between <span class="emphasis"><em>' and '</em></span> , use regexp: <code class="code">(?&lt;=\= ').*(?=')</code> </p>
 </li>
 <li class="listitem">
-<p><span class="emphasis"><em>msgstr ("The number must be higher than 0.")</em></span></p>
-<p>To import msgstr strings in monolingual PO files using a TXT filter, use regexp: <code class="code">(?&lt;=msgstr ").*(?=")</code></p>
+<p> <span class="emphasis"><em>errorMessage</em></span> = "<span class="emphasis"><em>this is to be translated</em></span>"</p>
+<p>To import text after the = sign and between '<span class="emphasis"><em>and</em></span>' use regexp: <code class="code">(?&lt;=\= ").*(?=")</code> </p>
 </li>
 <li class="listitem">
-<p><span class="emphasis"><em># Note: This is a note</em></span></p>
-<p>To exclude lines starting with <span class="emphasis"><em>#</em></span> , use regexp: <code class="code">(^[^#].*)</code></p>
+<p> <span class="emphasis"><em>msgstr ("The number must be higher than 0.")</em></span> </p>
+<p>To import msgstr strings in monolingual PO files using a TXT filter, use regexp: <code class="code">(?&lt;=msgstr ").*(?=")</code> </p>
 </li>
 <li class="listitem">
-<p><span class="emphasis"><em>values '126', 'DCeT', 'Text (en)'</em></span></p>
-<p>To import only text in quotes and with <span class="emphasis"><em>(en)</em></span>, such as Text <span class="emphasis"><em>(en)</em></span>' use regexp: <code class="code">(?&lt;=')[^']*\(en\)(?=')</code></p>
+<p> <span class="emphasis"><em># Note: This is a note</em></span> </p>
+<p>To exclude lines starting with <span class="emphasis"><em>#</em></span> , use regexp: <code class="code">(^[^#].*)</code> </p>
+</li>
+<li class="listitem">
+<p> <span class="emphasis"><em>values '126', 'DCeT', 'Text (en)'</em></span> </p>
+<p>To import only text in quotes and with <span class="emphasis"><em>(en)</em></span>, such as Text <span class="emphasis"><em>(en)</em></span>' use regexp: <code class="code">(?&lt;=')[^']*\(en\)(?=')</code> </p>
 </li>
 </ol></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-3c0ed141-926c-3cd3-e56b-f2b653182605"></a>JSON Import</h2></div>
 <p>JSON structure example:</p>
@@ -151,7 +155,7 @@
 </ul></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-f74a3109-2a60-d147-e318-472b7108ad58"></a>YAML Import</h2></div>
 <p>YAML flie example:</p>
@@ -176,7 +180,7 @@ categories:
 </ul></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba" id="UUID-1798230a-4caa-efdb-c365-0cc4f58132ba_UUID-96a71744-d1ca-a714-0687-c3edcccb3fb7"></a>Segmentation Rules</h2></div>
 <p> <a class="link" href="http://okapi.sourceforge.net/Release/Shared/Help/regex.htm" target="_blank" rel="noopener">Okapi</a>, <a class="link" href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html" target="_blank" rel="noopener">Java</a> and <a class="link" href="http://www.regular-expressions.info/unicode.html" target="_blank" rel="noopener">Unicode</a> are used for segmentation rules in SRX files.</p>
