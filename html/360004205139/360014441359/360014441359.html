@@ -1,9 +1,12 @@
-<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
 <p>Most API calls require an authenticated Memsource user. The APIs do not use any special user accounts. Each API can be called on behalf of any existing user using their username and password.</p>
 <h3>
 <a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837113068445"></a>Token</h3>
-<p>Before calling any API that requires an authenticated user, call the <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/login" target="_blank" rel="noopener">auth/login</a> API to obtain an authentication token. The token is valid for 24 hours and can be used for all subsequent calls. Do not create a new token for every call. The obtained token is used as the query parameter 'token' in API calls.</p>
-<pre class="programlisting">https://cloud.memsource.com/web/api2/v1/auth/whoAmI?token=VrMkqzV4mVPWQelC51Cc5</pre>
+<p>Before calling any API that requires an authenticated user, call the <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/login" target="_blank" rel="noopener">auth/login</a> API to obtain an authentication token. The token is valid for 24 hours and can be used for all subsequent calls. Do not create a new token for every call. The obtained token needs to be used in the <code class="code">ApiToken</code> header in subsequent API calls.</p>
+<p>Example:</p>
+<div class="informalexample">
+<a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_example-idm232258979260881"></a><p><code class="code">ApiToken VrMkqzV4mVPWQelC51Cc5</code></p>
+</div>
 <h3>
 <a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837115452789"></a>OAuth 2.0</h3>
 <p>Use <a class="link" href="https://oauth.net/2/" target="_blank" rel="noopener">OAuth 2.0</a> in applications instead of sending tokens with each call.</p>
@@ -11,7 +14,7 @@
 <div class="procedure">
 <a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_procedure-idm231837123913678"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360013541080/15ef58ceb11ada.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Registered OAuth Apps</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360021918820/16023a65e5ba2c.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Registered OAuth Apps</span>.</p>
 <p>The <span class="guimenu">Registered OAuth Apps</span> page opens.</p>
 </li>
 <li class="step">
