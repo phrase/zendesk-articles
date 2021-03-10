@@ -24,7 +24,7 @@
 <p>Have a group of trusted providers (linguists/vendors) who deliver high-quality output that is saved to the master TM. When working with a provider for the first time or with someone whose output quality varies, consider using a secondary <span class="emphasis"><em>working</em></span> translation memory where they can commit segments and keep the master TM in read-only mode. Use the master TM in Read and Write mode in later workflow steps where review is performed.</p>
 <p>Preventing content of questionable quality from being included in a TM is easier than removing it later.</p>
 <p><span class="emphasis"><em>Suggested TM configuration:</em></span></p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360022248099/1602b81a137064.png" style="" alt="tm-vendor.png"></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360023520119/16048757745fbd.png" style="" alt="tm-vendor.png"></div>
 </li>
 <li class="listitem">
 <p><span class="bold bold"><strong>Add <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872139-Context-Information" target="_blank" rel="noopener">context information</a> to source files</strong></span></p>
@@ -325,38 +325,39 @@
 <div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-3ed4a0e4-04f7-1bef-a127-8d5d5867fd1e_body"><div class="panel-inner">
 <p>These attributes can be saved with the target segment or source segment as indicated:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="bold bold"><strong>Created (date/time)</strong></span> - target segment</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>Created (date/time)</strong></span> - target segment</p></li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Created by</strong></span> - target segment.</p>
+<p> <span class="bold bold"><strong>Created by</strong></span> - target segment.</p>
 <p>Only Memsource Usernames are supported.</p>
+<p>When a non-empty segment is first confirmed by a user other than the segment's original author, the <span class="guilabel">Created by</span> field will be populated with the original author's username, and the user confirming the segment will be added to the <span class="guilabel">Last modified by</span> field.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Last modified (date/time)</strong></span> - target segment</p>
+<p> <span class="bold bold"><strong>Last modified (date/time)</strong></span> - target segment</p>
 <p>Only the latest version of the target segment is saved to TM. This attribute marks the time when the latest version was saved.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Last modified by</strong></span> - target segment.</p>
+<p> <span class="bold bold"><strong>Last modified by</strong></span> - target segment.</p>
 <p>Only Memsource Usernames are supported.</p>
 </li>
-<li class="listitem"><p><span class="bold bold"><strong>Project</strong></span> - target segment</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>Project</strong></span> - target segment</p></li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Client</strong></span> - target segment.</p>
+<p> <span class="bold bold"><strong>Client</strong></span> - target segment.</p>
 <p>This is the Client as set in the project when the translation was created.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Domain</strong></span> - target segment</p>
+<p> <span class="bold bold"><strong>Domain</strong></span> - target segment</p>
 <p>This is the Domain as set in the project when the translation was created.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Subdomain</strong></span> - target segment</p>
+<p> <span class="bold bold"><strong>Subdomain</strong></span> - target segment</p>
 <p>This is the Subdomain as set in the project when the translation was created.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>File</strong></span> - target segments</p>
+<p> <span class="bold bold"><strong>File</strong></span> - target segments</p>
 <p>Name of the file where the translation was created.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Context</strong></span> - source segment</p>
+<p> <span class="bold bold"><strong>Context</strong></span> - source segment</p>
 <p>This is the <span class="emphasis"><em>Previous segment</em></span>, <span class="emphasis"><em>Next segment</em></span> or <span class="emphasis"><em>Segment key</em></span>, depending on the <span class="guimenu">File Import Settings</span> when the job was created.</p>
 </li>
 </ul></div>
