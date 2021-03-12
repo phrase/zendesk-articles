@@ -43,7 +43,7 @@
 <p><span class="bold bold"><strong>Pre-requisite</strong></span>: Create an Adobe Experience Manager user with minimum permissions required to view unpublished pages.</p>
 <div class="procedure">
 <a id="UUID-1d3896f4-caaa-d1e4-0a22-30f8a55e3eca_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360023504660/160487b153d84b.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360023647020/1604b4943ccf06.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -99,7 +99,7 @@
 <p>Create a Project Template configured to your needs.</p>
 <p>Under <span class="guimenu">Access and Security</span> set the <span class="guilabel">Allow loading external content in editors</span>.</p>
 <p>Apply the following <span class="guimenu">XML File Import Settings</span>:</p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360023524279/160487b1541504.png" style="" alt="content of the image was changed."></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360023647040/1604b4943d05a0.png" style="" alt="content of the image was changed."></div>
 </li>
 <li class="step">
 <p>Create a Service.</p>
@@ -506,14 +506,14 @@
 &lt;jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="sling:Folder"/&gt;</pre>
 </li>
-<li class="step"><p>Create a <code class="code">.content.xml</code> file in the <code class="code">/conf/aem-memsource-plugin/language-mapping/</code> folder.</p></li>
+<li class="step"><p>Create a <code class="code">.content.xml</code> file in the <code class="code">/conf/aem-memsource-plugin/language-mapping/zh-cn</code> folder.</p></li>
 <li class="step">
 <p>Open the created file and copy the following into it:</p>
 <pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="nt:unstructured"
           memsourceLanguage="zh_cn"&gt;
-&lt;/jcr:root&gt;&lt;?xml version="1.0" encoding="UTF-8"?&gt;</pre>
+&lt;/jcr:root&gt;</pre>
 </li>
 <li class="step">
 <p>Add the paths created in previous steps to the <code class="code">filter.xml</code> file found at <code class="code">ui.content/src/main/content/META-INF/vault/filter.xml</code>:</p>
