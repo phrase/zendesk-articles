@@ -1,0 +1,74 @@
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section caution sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-d11cf532-a08e-5226-3c63-83a69235c61f" id="UUID-93ce65b0-7753-6afd-84cb-de61643cd928"></a>Available for</h2></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>All paid editions</p></li></ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>Amazon S3 (Amazon Simple Storage Service) is a service that provides object storage through a web service interface. Amazon S3 can be employed to store any type of object, which allows for uses like storage for Internet applications, backup and recovery, disaster recovery, data archives, data lakes for analytics, and hybrid cloud storage. When connected, access is given to all buckets.</p>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-d11cf532-a08e-5226-3c63-83a69235c61f" id="UUID-9ff13540-9b0e-7c6d-081f-2cb39f857854"></a>Use Cases</h2></div>
+<p>There are a number of use cases for the connector:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Project Managers can add files directly to projects from an online repository.</p></li>
+<li class="listitem"><p>Set up the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079-Automation-Widget" target="_blank" rel="noopener">Automation Widget</a> allowing Submitters to add files to requests directly from the online repository.</p></li>
+<li class="listitem">
+<p>Use <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059-Automated-Project-Creation" target="_blank" rel="noopener">Automated Project Creation (APC)</a> to have Memsource automatically create new projects when a change in the <span class="bold bold"><strong>last modified date</strong></span> is detected for monitored files or a folder.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Selected files are imported the very first time APC runs. All files are imported when a folder is monitored.</p></li>
+<li class="listitem"><p>This connector supports absolute path setting.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>Set up <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800-Continuous-Jobs" target="_blank" rel="noopener">Continuous Jobs </a>to have Memsource monitor selected files for changes.</p></li>
+<li class="listitem"><p>The <a class="link" href="https://cloud.memsource.com/web/docs/api#" target="_blank" rel="noopener">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014441419-Webhooks" target="_blank" rel="noopener">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-d11cf532-a08e-5226-3c63-83a69235c61f" id="UUID-e77e98b2-43ad-893c-aa7a-98751950fbaf"></a>Amazon S3 Settings</h2></div>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>Login to the AWS console.</p></li>
+<li class="step"><p>Navigate to <span class="guimenu">Identify and Access Management (IAM)</span>.</p></li>
+<li class="step"><p>Select user for access.</p></li>
+<li class="step"><p>Click the <span class="guilabel">Security credentials</span> tab.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Create access key</span>.</p>
+<p>The <span class="guimenu">Create access key</span> window opens.</p>
+</li>
+<li class="step"><p>Copy both the <span class="guimenu">Access key ID</span> and the <span class="guimenu">Secret access key</span>. The IS and the key are used in Memsource settings.</p></li>
+</ol></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-d11cf532-a08e-5226-3c63-83a69235c61f" id="UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h2></div>
+<div class="procedure">
+<a id="procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360023750180/16050640491ff8.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step">
+<p>Click on <span class="guilabel">Connectors</span>.</p>
+<p>The <span class="guimenu">Connectors</span> page opens.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">New</span>.</p>
+<p>The <span class="guimenu">Create Connector</span> page opens.</p>
+</li>
+<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to                           <span class="guimenu">Amazon S3</span>.</p></li>
+<li class="step"><p>Provide <span class="guimenu">Access key ID</span>.</p></li>
+<li class="step"><p>Provide <span class="guimenu">Secret access key</span>.</p></li>
+<li class="step">
+<a id="step-idm33231759100140"></a><p>Click <span class="guilabel">Test connection</span>.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>If successful, a small checkmark appears next to the <span class="guimenu">Connect to Amazon S3</span> button.</p></li></ul></div>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save</span>.</p>
+<p>The connector is added to the list on the Connectors page.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
