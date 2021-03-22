@@ -20,7 +20,7 @@
 <div class="procedure">
 <a id="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c_procedure-idm231749430927827"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360023732559/1604f4bd3d84a4.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Quality</span> section and click on <span class="guilabel">Quality Assurance</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360023988779/160585843ae567.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Quality</span> section and click on <span class="guilabel">Quality Assurance</span>.</p>
 <p>The <span class="guimenu">Quality Assurance</span> page opens.</p>
 </li>
 <li class="step">
@@ -93,16 +93,18 @@
 </tr></thead>
 <tbody>
 <tr>
+<td><p><span class="bold bold"><strong>Linguistic</strong></span></p></td>
+<td><p>Selects all linguistic checks</p></td>
+<td><p></p></td>
+</tr>
+<tr>
 <td><p>Empty target</p></td>
 <td><p>The target contains no characters or tags.</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr>
-<td><p>Trailing punctuation</p></td>
-<td>
-<p>Trailing punctuation is different in the source and target.</p>
-<p>For example, the source ends with "." but the target does not or vice-versa.</p>
-</td>
+<td><p>Extra numbers in target</p></td>
+<td><p>There are no extra numbers in the target.</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr>
@@ -115,10 +117,23 @@
 <td><p>Yes (with batch confirmations)</p></td>
 </tr>
 <tr>
-<td><p>Newer version in a preceding workflow step available</p></td>
+<td><p>Leading and trailing spaces</p></td>
+<td><p>There is a leading or trailing space in the target but not in the source.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Maximum target segment length in % of source</p></td>
 <td>
-<p>Checks whether newer versions of segments exist in preceding Workflow steps.</p>
-<p>For example, a translator has modified a segment in the Translation Workflow step after it was revised in the Revision Workflow step.</p>
+<p>The target segment length is greater than the given parameter (default 130%).</p>
+<p>This setting is independent of the option above, i. e. it may show warnings even if the target segment complies with the limits set in <span class="guilabel">Maximum target segment length in characters</span> or the source file.</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Maximum target segment length in characters</p></td>
+<td>
+<p>The target segment length is greater than the given parameter (default 100000).</p>
+<p>If the source file contains max. target segment length information (which is imported via the job settings and applied by enabling the <span class="guilabel">Max. target length as set during job creation</span> option), that will override this check.</p>
 </td>
 <td><p>Yes</p></td>
 </tr>
@@ -131,35 +146,81 @@
 <td><p>Yes</p></td>
 </tr>
 <tr>
-<td><p>Repeated words</p></td>
-<td><p>Two or more adjacent words in the target are identical.</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr>
 <td><p>Multiple spaces</p></td>
 <td><p>There are multiple spaces in the target but not in the source.</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr>
-<td><p>Leading and trailing spaces</p></td>
-<td><p>There is a leading or trailing space in the target but not in the source.</p></td>
+<td><p>Repeated words</p></td>
+<td><p>Two or more adjacent words in the target are identical.</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr>
-<td><p>Tags &amp; formatting</p></td>
+<td><p>Spelling</p></td>
+<td><p>The target contains misspelled words.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Target text identical with source one</p></td>
+<td><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>This is a QA check for text copied from the source to the target.</p></li>
+<li class="listitem"><p>No warning will be displayed for segments containing only plain numbers, tags, or non-translatable characters.</p></li>
+<li class="listitem"><p>Segments translated using the Memsource Non-translatables feature are ignored in this QA check.</p></li>
+</ul></div></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Trailing punctuation</p></td>
 <td>
-<p>Tags/formatting are missing or invalid, or there are missing or redundant line breaks.</p>
-<p>Example: the source contains "{1} {2}" but the target reads "{1}".</p>
+<p>Trailing punctuation is different in the source and target.</p>
+<p>For example, the source ends with "." but the target does not or vice-versa.</p>
 </td>
 <td><p>Yes</p></td>
 </tr>
 <tr>
-<td><p>Inconsistent tag content</p></td>
+<td><p>Unedited NT/MT fuzzy match</p></td>
+<td><p>A fuzzy NT/MT match has been confirmed without being edited.</p></td>
+<td><p>No</p></td>
+</tr>
+<tr>
+<td><p>Unedited TM fuzzy match</p></td>
+<td><p>A fuzzy TM match has been confirmed without being edited.</p></td>
+<td><p>No</p></td>
+</tr>
+<tr>
+<td><p><span class="bold bold"><strong>Terminology</strong></span></p></td>
+<td><p>Selects all terminology checks</p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p>Forbidden terms without a source</p></td>
+<td><p>This is based only on target terms with no source term.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Not allowed</p></td>
 <td>
-<p>The tag content between the source and its corresponding target tag differ.</p>
-<p>For example, the source shows <code class="code">&lt;a href="http://bbc.co.uk"&gt;</code> but the target contains <code class="code">&lt;"http://"&gt;</code></p>
+<p>The target contains strings that are not allowed. Characters, or alternatively, utf-8 codes, can be entered as strings that are <span class="emphasis"><em>not allowed</em></span>.</p>
+<p>Numerous strings can be entered if separated by commas.</p>
+<p>Strings are case-sensitive.</p>
 </td>
 <td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Terminology</p></td>
+<td>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>The terms (with status Approved) in the source do not have a corresponding term translation (status New or Approved) in the target.</p></li>
+<li class="listitem"><p>A forbidden term is used for the translation. (Forbidden terms in the source are ignored.)</p></li>
+</ul></div>
+<p>Only terms within the source will be checked.</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p><span class="bold bold"><strong>Formatting and tags</strong></span></p></td>
+<td><p>Selects all formatting and tags checks.</p></td>
+<td><p></p></td>
 </tr>
 <tr>
 <td><p>Empty tag content</p></td>
@@ -170,10 +231,19 @@
 <td><p>Yes</p></td>
 </tr>
 <tr>
-<td><p>Tags-joined segments</p></td>
+<td><p>Inconsistent tag content</p></td>
 <td>
-<p>The number of {j} tags is different in the source and target.</p>
-<p>For example, the source is "xxx{j}yyy" but the target is "xxx yyy".</p>
+<p>The tag content between the source and its corresponding target tag differ.</p>
+<p>For example, the source shows <code class="code">&lt;a href="http://bbc.co.uk"&gt; </code>but the target contains <code class="code">&lt;"http://"&gt;</code></p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Nested tags</p></td>
+<td>
+<p>Paired tags in the target are misplaced.</p>
+<p>For example, there is {1&gt;{2&gt;abc&lt;2}{3&gt;abc&lt;3}{4&gt;&lt;4}&lt;1} in the source and {1&gt;{2&gt;abc&lt;2}{3&gt;abc{4&gt;&lt;3}&lt;4}&lt;1} in the target.</p>
+<p>This option is disabled by default, but it is important to enable it for projects with <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760" target="_blank" rel="noopener">spreadsheet</a> files.</p>
 </td>
 <td><p>Yes</p></td>
 </tr>
@@ -186,10 +256,18 @@
 <td><p>Yes</p></td>
 </tr>
 <tr>
-<td><p>Nested tags</p></td>
+<td><p>Tags &amp; formatting</p></td>
 <td>
-<p>Paired tags in the target are misplaced.</p>
-<p>For example, there is {1&gt;{2&gt;abc&lt;2}{3&gt;abc&lt;3}{4&gt;&lt;4}&lt;1} in the source and {1&gt;{2&gt;abc&lt;2}{3&gt;abc{4&gt;&lt;3}&lt;4}&lt;1} in the target. This option is disabled by default, but it is important to enable it for projects with Excel files.</p>
+<p>Tags/formatting are missing or invalid, or there are missing or redundant line breaks.</p>
+<p>Example: the source contains "{1} {2}" but the target reads "{1}".</p>
+</td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Tags-joined segments</p></td>
+<td>
+<p>The number of {j} tags is different in the source and target.</p>
+<p>For example, the source is "xxx{j}yyy" but the target is "xxx yyy".</p>
 </td>
 <td><p>Yes</p></td>
 </tr>
@@ -202,24 +280,16 @@
 <td><p>Yes</p></td>
 </tr>
 <tr>
-<td><p>Terminology</p></td>
+<td><p><span class="bold bold"><strong>Workflow</strong></span></p></td>
+<td><p>Selects all workflow checks.</p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p>Newer version in a preceding workflow step available</p></td>
 <td>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>The terms (with status <span class="emphasis"><em>Approved</em></span>) in the source do not have a corresponding term translation (status <span class="emphasis"><em>New</em></span> or <span class="emphasis"><em>Approved</em></span>) in the target.</p></li>
-<li class="listitem"><p>A forbidden term is used for the translation. (Forbidden terms in the source are ignored.)</p></li>
-</ul></div>
-<p>Only terms within the source will be checked</p>
+<p>Checks whether newer versions of segments exist in preceding Workflow steps.</p>
+<p>For example, a translator has modified a segment in the Translation Workflow step after it was revised in the Revision Workflow step.</p>
 </td>
-<td><p>Yes</p></td>
-</tr>
-<tr>
-<td><p>Forbidden terms without a source</p></td>
-<td><p>This is based only on target terms with no source term.</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr>
-<td><p>Spelling</p></td>
-<td><p>The target contains misspelled words.</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr>
@@ -233,58 +303,9 @@
 <td><p>No</p></td>
 </tr>
 <tr>
-<td><p>Maximum target segment length in characters</p></td>
-<td>
-<p>The target segment length is greater than the given parameter (default 100000).</p>
-<p>If the source file contains max. target segment length information (which is imported via the job settings and applied by enabling the <span class="guilabel">Max. target length as set during job creation</span> option), that will override this check.</p>
-</td>
-<td><p>Yes</p></td>
-</tr>
-<tr>
-<td><p>Maximum target segment length in % of source</p></td>
-<td>
-<p>The target segment length is greater than the given parameter (default 130%).</p>
-<p>This setting is independent of the option above, i. e. it may show warnings even if the target segment complies with the limits set in <span class="guilabel">Maximum target segment length in characters</span> or the source file.</p>
-</td>
-<td><p>Yes</p></td>
-</tr>
-<tr>
-<td><p>Not allowed</p></td>
-<td>
-<p>The target contains strings that are not allowed. Characters, or alternatively, utf-8 codes, can be entered as strings that are <span class="emphasis"><em>not allowed</em></span>.</p>
-<p>Numerous strings can be entered if separated by commas.</p>
-<p>Strings are case-sensitive.</p>
-</td>
-<td><p>Yes</p></td>
-</tr>
-<tr>
-<td><p>Target text identical with source one</p></td>
+<td><p><span class="bold bold"><strong>Custom checks</strong></span></p></td>
 <td><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>This is a QA check for text copied from the source to the target.</p></li>
-<li class="listitem"><p>No warning will be displayed for segments containing only plain numbers, tags, or non-translatable characters.</p></li>
-<li class="listitem"><p>Segments translated using the Memsource Non-translatables feature are ignored in this QA check.</p></li>
-</ul></div></td>
-<td><p>Yes</p></td>
-</tr>
-<tr>
-<td><p>Unedited TM fuzzy match</p></td>
-<td><p>A fuzzy TM match has been confirmed without being edited.</p></td>
-<td><p>No</p></td>
-</tr>
-<tr>
-<td><p>Unedited NT/MT fuzzy match</p></td>
-<td><p>A fuzzy NT/MT match has been confirmed without being edited.</p></td>
-<td><p>No</p></td>
-</tr>
-<tr>
-<td><p>Extra numbers in target</p></td>
-<td><p>The target contains an extra number that the source does not.</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr>
-<td><p>Custom checks</p></td>
-<td><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>This section can be used to define checks based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014358619" target="_blank" rel="noopener">regular expressions</a> as well as descriptions that will be displayed in the editor when such an issue is identified.</p></li>
+<li class="listitem"><p>Used to define checks based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014358619" target="_blank" rel="noopener">regular expressions</a> as well as descriptions that will be displayed in the editor when such an issue is identified.</p></li>
 <li class="listitem"><p>Multiple conditions can be set using the <span class="guilabel">Add</span> button.</p></li>
 <li class="listitem"><p>Memsource checks whether the counts of the regexp matches differ between the source and the target text.</p></li>
 </ul></div></td>
