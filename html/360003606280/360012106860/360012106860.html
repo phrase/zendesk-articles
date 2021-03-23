@@ -48,7 +48,7 @@
 <a data-zd-article="UUID-2a3ccb15-4dd0-2ca9-44fb-e3151394d011" id="UUID-2a3ccb15-4dd0-2ca9-44fb-e3151394d011_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h2></div>
 <div class="procedure">
 <a id="UUID-2a3ccb15-4dd0-2ca9-44fb-e3151394d011_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360023651859/1604b2d11c9f46.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360024019360/1605992cce87a6.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -57,12 +57,13 @@
 <p>Click <span class="guilabel">New</span>.</p>
 <p>The <span class="guimenu">Create Connector</span> page opens.</p>
 </li>
-<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to      <span class="emphasis"><em>Contentstack</em></span>                     .</p></li>
-<li class="step"><p>Enter the <span class="guilabel">Username</span>, <span class="guilabel">Password</span>, and the <span class="guilabel">API key</span> obtained from the Contentstack site.</p></li>
+<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to      <span class="emphasis"><em>Contentstack</em></span>                      .</p></li>
+<li class="step"><p>Select <span class="guimenu">Authentication method</span>.</p></li>
+<li class="step"><p>If using <span class="guimenu">Management token</span> authorization, enter <span class="guilabel">Stack API key</span> and <span class="guilabel">Management token</span> obtained from the Contentstack site. If using <span class="guimenu">User's Authtoken</span>, enter the <span class="guilabel">Username</span>, <span class="guilabel">Password</span>, and the <span class="guilabel">API key</span>.</p></li>
 <li class="step"><p>Apply <span class="guimenu">Translate URL</span> and <span class="guimenu">Translate tags</span> options if required.</p></li>
 <li class="step">
 <p>Provide <span class="guimenu">Translate to languages specified in (APC)</span>.</p>
-<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">Automated Project Creation</a> will only creates jobs for languages, specified by codes in the given field and specified by a unique ID (e.g. target_languages). Codes can be followed by language names as long as they are separated by a comma (e.g. <span class="emphasis"><em>de-DE German (Germany)</em></span>).</p>
+<p> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">Automated Project Creation</a> will only creates jobs for languages, specified by codes in the given field and specified by a unique ID (e.g. target_languages). Codes can be followed by language names as long as they are separated by a comma (e.g. <span class="emphasis"><em>de-DE German (Germany)</em></span>).</p>
 <p>Language codes are case insensitive and can use either _ or formatting - (e.g. <span class="emphasis"><em>de_de</em></span>, <span class="emphasis"><em>de-de</em></span>, <span class="emphasis"><em>de-DE</em></span>).</p>
 </li>
 <li class="step"><p>Select <span class="guimenu">Source language</span>.</p></li>
@@ -74,22 +75,22 @@
 <li class="step">
 <p>Select Contentstack workflows.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-<p><span class="guimenu">Translate articles from</span>:</p>
+<p> <span class="guimenu">Translate articles from</span>:</p>
 <p>The connector monitors articles in the selected stage (e.g. Translate). The author can apply this label to articles when ready for translation.</p>
 </li></ul></div>
-<p><span class="bold bold"><strong>Upon import from Contentstack:</strong></span></p>
+<p> <span class="bold bold"><strong>Upon import from Contentstack:</strong></span> </p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-<p><span class="guimenu">Set source articles to </span></p>
+<p> <span class="guimenu">Set source articles to </span> </p>
 <p>The connector advances the workflow to the selected stage (e.g. Translation in Progress) when the source articles are downloaded from Contentstack.</p>
 </li></ul></div>
-<p><span class="bold bold"><strong>Upon export to Contentstack:</strong></span></p>
+<p> <span class="bold bold"><strong>Upon export to Contentstack:</strong></span> </p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p><span class="guimenu">Set source articles to</span></p>
+<p> <span class="guimenu">Set source articles to</span> </p>
 <p>The connector sets the workflow stage of the source articles to the selected stage (e.g. Translations Completed) when the translation is exported to Contentstack.</p>
 </li>
 <li class="listitem">
-<p><span class="guimenu">Set translated articles to </span></p>
+<p> <span class="guimenu">Set translated articles to </span> </p>
 <p>The connector sets the workflow stage of the article translations to the selected stage (e.g. Translation ready for Review) when the translation is exported to Contentstack. Reviewers can use the label to filter articles in the Contentstack UI.</p>
 </li>
 </ul></div>

@@ -20,7 +20,7 @@
 <div class="procedure">
 <a id="UUID-74933f63-b713-23f4-c288-7f19a9d6de8c_procedure-idm231749430927827"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360023988779/160585843ae567.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Quality</span> section and click on <span class="guilabel">Quality Assurance</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360024036159/160599b7174487.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Quality</span> section and click on <span class="guilabel">Quality Assurance</span>.</p>
 <p>The <span class="guimenu">Quality Assurance</span> page opens.</p>
 </li>
 <li class="step">
@@ -94,7 +94,7 @@
 <tbody>
 <tr>
 <td><p><span class="bold bold"><strong>Linguistic</strong></span></p></td>
-<td><p>Selects all linguistic checks</p></td>
+<td><p>Selects all linguistic checks.</p></td>
 <td><p></p></td>
 </tr>
 <tr>
@@ -193,8 +193,19 @@
 <td><p></p></td>
 </tr>
 <tr>
-<td><p>Forbidden terms without a source</p></td>
+<td><p>Forbidden terms</p></td>
 <td><p>This is based only on target terms with no source term.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Missing terms</p></td>
+<td>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>The terms (with status Approved) in the source do not have a corresponding term translation (status New or Approved) in the target.</p></li>
+<li class="listitem"><p>A forbidden term is used for the translation. (Forbidden terms in the source are ignored.)</p></li>
+</ul></div>
+<p>Only terms within the source will be checked.</p>
+</td>
 <td><p>Yes</p></td>
 </tr>
 <tr>
@@ -203,17 +214,6 @@
 <p>The target contains strings that are not allowed. Characters, or alternatively, utf-8 codes, can be entered as strings that are <span class="emphasis"><em>not allowed</em></span>.</p>
 <p>Numerous strings can be entered if separated by commas.</p>
 <p>Strings are case-sensitive.</p>
-</td>
-<td><p>Yes</p></td>
-</tr>
-<tr>
-<td><p>Terminology</p></td>
-<td>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>The terms (with status Approved) in the source do not have a corresponding term translation (status New or Approved) in the target.</p></li>
-<li class="listitem"><p>A forbidden term is used for the translation. (Forbidden terms in the source are ignored.)</p></li>
-</ul></div>
-<p>Only terms within the source will be checked.</p>
 </td>
 <td><p>Yes</p></td>
 </tr>
