@@ -1,4 +1,4 @@
-<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
 <p>Webhooks are arbitrary URLs which handle HTTP POST requests allowing Memsource to notify 3rd-party systems about specified events.</p>
 <p>Memsource monitors if a webhook callback was successfully received. If a webhook reception fails 3000 times, it is deactivated with a notification sent to Administrators of the account and the failure is noted on the specific webhook on the <span class="guimenu"><a class="link" href="#UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_UUID-74de1b04-e60d-bca7-f39a-57660b3fdf6b" title="Configure Webhooks">Webhooks</a></span> page. The retry mechanism has a maximum of 10 retries with the interval between retries being computed up to a maximum value of 30 minutes.</p>
 <p>Webhooks can be selected for the following events:</p>
@@ -19,15 +19,16 @@
 <li class="listitem"><p>Pre-translation finished</p></li>
 <li class="listitem"><p>Analysis created</p></li>
 <li class="listitem"><p>Continuous job updated</p></li>
+<li class="listitem"><p>Update target</p></li>
 </ul></div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7" id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_UUID-74de1b04-e60d-bca7-f39a-57660b3fdf6b"></a>Configure Webhooks</h2></div>
 <p>To configure Webhooks, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_procedure-idm231837286887023"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360019905559/15fd85bf547c4e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Webhooks</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360024761939/1606ec7bde5744.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Webhooks</span>.</p>
 <p>The <span class="guimenu">Webhooks</span> page opens.</p>
 </li>
 <li class="step">
@@ -45,7 +46,7 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section accordion sub-topic" lang="en"><div class="panel panel-default">
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7" id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_UUID-a2cea886-52d5-3b3c-f325-c230e74e4951"></a>Webhook Usage Examples</h2></div></div>
 <div class="panel-body collapse" id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_UUID-a2cea886-52d5-3b3c-f325-c230e74e4951_body">
