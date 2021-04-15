@@ -1,0 +1,841 @@
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<p>The datastore running aggregation queries is built on top of <a class="link" href="https://www.elastic.co/elasticsearch/" target="_blank" rel="noopener">Elasticsearch</a> (currently version 1.7.x). Elasticsearch provides real-time searches and aggregation capabilities with the Analytics API forming a thin, security-enhanced layer on top of it. Elasticsearch query and aggregation language is used in the examples.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>The language used in the <span class="emphasis"><em>filter</em></span> field of the query JSON is described in the <a class="link" href="https://www.elastic.co/guide/en/elasticsearch/reference/1.7/query-dsl-filters.html" target="_blank" rel="noopener">Elasticsearch Query DSL</a> documentation.</p></li>
+<li class="listitem"><p>The language used in the <span class="emphasis"><em>aggregations</em></span> field of the query JSON is fully described in the <a class="link" href="https://www.elastic.co/guide/en/elasticsearch/reference/1.7/search-aggregations.html" target="_blank" rel="noopener">Elasticsearch Aggregations</a> documentation.</p></li>
+</ul></div>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232293521231526"></a>Indexes</h3>
+<p>Different types of data live in different indexes. For example, <span class="emphasis"><em>job</em></span> data lives in the <span class="emphasis"><em>jobPart</em></span> index, and <span class="emphasis"><em>costs</em></span> data lives in the <span class="emphasis"><em>costs</em></span> index. Required data can be specified by specifying the index in the aggregation API endpoint URL.</p>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232293532105469"></a>Parent-Child Documents</h3>
+<p>Parts of the information about a job live in two different documents in the Elasticsearch DB. These documents are in a <span class="emphasis"><em>parent-child</em></span> relationship. For example, information about a job's project lives in the parent document, while information about the job itself lives in the child document. Depending on the information required, aggregations are either before the data parent-child aggregation or after it but the data aggregation itself should be present in all queries.</p>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338" id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_UUID-adf150af-3d5c-ad87-b806-d0108eb478c2"></a>Index Data Models</h2></div></div>
+<div class="panel-body collapse" id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_UUID-adf150af-3d5c-ad87-b806-d0108eb478c2_body">
+<h2>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295212528234"></a>Common Data</h2>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm23229521279822"></a>Analysis</h3>
+<pre class="programlisting">{
+  "id": string,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "innerId": number,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean,
+  "trashedBy": &lt;User&gt;,
+  "type": string
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295213267834"></a>Assignment</h3>
+<pre class="programlisting">{
+  "name": string,
+  "linguist": &lt;User&gt;,
+  "vendor": &lt;Vendor&gt;
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm23229521377641"></a>Automation Widget</h3>
+<pre class="programlisting">{
+  "id": string,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean,
+  "urlId": string
+}</pre>
+<h4>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295219889864"></a>Buyer</h4>
+<pre class="programlisting">{
+  "id": string,
+  "name": string
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295220449948"></a>Client</h3>
+<pre class="programlisting">{
+  "id": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "externalId": string,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean,
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm23229522097115"></a>CostCenter</h3>
+<pre class="programlisting">{
+  "id": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean,
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295221518268"></a>Domain</h3>
+<pre class="programlisting">{
+  "id": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295222060533"></a>Job</h3>
+<pre class="programlisting">{
+  "id": string,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "extension": string,
+  "fileName": string,
+  "groupCount": number,
+  "innerId": "1",
+  "languagePair": string,
+  "lastModified": Date,
+  "localePair": string,
+  "sourceLanguage": string,
+  "sourceLocale": string,
+  "tags": string[],
+  "targetLanguage": string,
+  "targetLocale": string",
+  "taskId": string,
+  "trashed": boolean,
+  "trashedBy": &lt;User&gt;,
+  "uid": string
+}</pre>
+<h4>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295222622656"></a>JobPart</h4>
+<pre class="programlisting">{
+  "id": "19",
+  "assignedTo": &lt;Assignment&gt;,
+  "beginIndex": number,
+  "buyer": &lt;Buyer&gt;,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDue": Date,
+  "endIndex": number,
+  "groupCount": number,
+  "innerId": string,
+  "lastModified": Date,
+  "level": number,
+  "status": string,
+  "tags": [],
+  "uid": string,
+  "workflowStep": &lt;WorkflowStep&gt;
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295223113914"></a>MtEngine</h3>
+<pre class="programlisting">{
+  "id": string,
+  "deleted": boolean,
+  "default_: boolean,
+  "includeTags": boolean,
+  "name": string,
+  "tags": string[],
+  "type": string,
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295223595569"></a>NetRateScheme</h3>
+<pre class="programlisting">{
+  "id": string,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "default_": boolean,
+  "deleted": boolean,
+  "externalId": string,
+  "name": string,
+  "tags": string[],
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295224096994"></a>PriceList</h3>
+<pre class="programlisting">{
+  "id": string,
+  "createdBy": &lt;User&gt;,
+  "currency": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "default_": boolean,
+  "deleted": boolean,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean,
+  "unit": string
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295224704296"></a>Project</h3>
+<pre class="programlisting">{
+  "id": string,
+  "buyer": &lt;Buyer&gt;,
+  "client": &lt;Client&gt;,
+  "costCenter": &lt;CostCenter&gt;,
+  "createdBy": &lt;User&gt;,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateDue": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "domain": &lt;Domain&gt;,
+  "innerId": number,
+  "languagePairs": string[],
+  "localePairs": string[],
+  "mtEngine": &lt;MtEngine&gt;,
+  "name": string,
+  "note": string,
+  "owner": &lt;User&gt;,
+  "sourceLanguage": string,
+  "sourceLocale": string,
+  "status": string,
+  "subDomain": &lt;SubDomain&gt;,
+  "tags": string[],
+  "targetLanguages": string[],
+  "targetLocales": string[],
+  "trashed": boolean,
+  "trashedBy": &lt;User&gt;,
+  "uid": string,
+  "vendor": &lt;Vendor&gt;
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295225243345"></a>Quote</h3>
+<pre class="programlisting">{
+  "id": string,
+  "createdBy: &lt;User&gt;,
+  "currency": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "innerId": string,
+  "name": string,
+  "status": string,
+  "tags": string[],
+  "trashed": boolean,
+  "trashedBy": &lt;User&gt;,
+  "unit": string
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295225689451"></a>Service</h3>
+<pre class="programlisting">{
+  "id": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "name": string,
+  "publicName": string,
+  "tags": string[],
+  "trashed": boolean,
+  "type": string
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295226122376"></a>SubDomain</h3>
+<pre class="programlisting">{
+  "id": string,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "name": string,
+  "tags": string[],
+  "trashed": boolean
+}</pre>
+<h4>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295226562534"></a>User</h4>
+<pre class="programlisting">{
+  "id": number,
+  "active": boolean,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "email": string,
+  "firstName": string,
+  "fullName": string,
+  "innerId": number,
+  "jobTitle": string,
+  "lastName": string,
+  "locale": string,
+  "note": string,
+  "role": string,
+  "tags": string[],
+  "timeZone": string,
+  "trashed": boolean,
+  "userName": string
+}</pre>
+<h4>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295226906892"></a>Vendor</h4>
+<pre class="programlisting">{
+  "id": string,
+  "candidate": boolean,
+  "dateCreated": Date,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "deleted": boolean,
+  "tags": string[],
+  "token": string,
+  "trashed": boolean
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295227285833"></a>WorkflowStep</h3>
+<pre class="programlisting">{
+  "id": string,
+  "abbreviation": string,
+  "dateDeleted": Date,
+  "dateTrashed": Date,
+  "name": string,
+  "order": number,
+  "tags": string[],
+  "trashed": boolean
+}</pre>
+<h2>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295227859568"></a>Analysis Index</h2>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295228024799"></a>Data Aggregation</h3>
+<pre class="programlisting">"data": {
+  "children": {
+    "type": "analysisType"
+  }
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295228790597"></a>Parent Document</h3>
+<pre class="programlisting">{
+  "automationWidget": &lt;AutomationWidget&gt;,
+  "project": &lt;Project&gt;,
+  "service": &lt;Service&gt;
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295229202242"></a>Child Document</h3>
+<pre class="programlisting">{
+  "analysis": &lt;Analysis&gt;,
+  "jobPart": &lt;JobPart&gt;,
+  "job": &lt;Job&gt;,
+  "netRateScheme": &lt;NetRateScheme&gt;,
+
+  "priority": number,
+  "data": {
+    "mt": {
+      "match0": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match100": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match50": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match75": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match85": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match95": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      }
+    },
+    "repetitions": {
+      "characters": number,
+      "pages": number,
+      "percent": number,
+      "segments": number,
+      "words": number
+    },
+    "tm": {
+      "match0": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match100": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match101": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match50": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match75": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match85": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      },
+      "match95": {
+        "characters": number,
+        "pages": number,
+        "percent": number,
+        "segments": number,
+        "words": number
+      }
+    },
+    "total": {
+      "characters": number,
+      "pages": number,
+      "percent": number,
+      "segments": number,
+      "words": number
+    }
+  }
+}</pre>
+<h2>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295229771244"></a>API Index</h2>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295230042134"></a>Data Aggregation</h3>
+<pre class="programlisting">"data": {
+  "children": {
+    "type": "apiType"
+  }
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295230914077"></a>Parent Document</h3>
+<pre class="programlisting">{
+  "user": &lt;User&gt;
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295231408247"></a>Child Document</h3>
+<pre class="programlisting">{
+  "request": {
+    "date": Date,
+    "host": string,
+    "ipv4": string,
+    "ipv6": string,
+    "location": string,
+    "method": string
+  },
+  "response": {
+    "date": Date,
+    "duration": number,
+    "status": number
+  },
+  "api": {
+    "action": string,
+    "asynch": boolean,
+    "type": string,
+    "uri": string,
+    "ver": string
+  }
+}</pre>
+<h2>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295231914922"></a>Costs Index</h2>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295232130613"></a>Data Aggregation</h3>
+<pre class="programlisting">"data": {
+  "children": {
+    "type": "costsType"
+  }
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295232594052"></a>Parent Document</h3>
+<pre class="programlisting">{
+  "automationWidget": &lt;AutomationWidget&gt;,
+  "project": &lt;Project&gt;,
+  "service": &lt;Service&gt;
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295233080895"></a>Child Document</h3>
+<pre class="programlisting">{
+  "analysis": &lt;Analysis&gt;,
+  "job": &lt;Job&gt;,
+  "jobPart": &lt;JobPart&gt;,
+  "netRateScheme": &lt;NetRateScheme&gt;,
+  "priceList": &lt;PriceList&gt;,
+  "quote": &lt;Quote&gt;,
+  "workflowStep": &lt;WorkflowStep&gt;,
+  
+  "priority": number,
+  "data": {
+    "mt": {
+      "match0": number,
+      "match100": number,
+      "match50": number,
+      "match75": number,
+      "match85": number,
+      "match95": number
+    },
+    "repetitions": number,
+    "tm": {
+      "match0": number,
+      "match100": number,
+      "match101": number,
+      "match50": number,
+      "match75": number,
+      "match85": number,
+      "match95": number
+    },
+    "total": number
+  }
+}</pre>
+<h2>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295233539196"></a>jobPart Index</h2>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295233909767"></a>Data Aggregation</h3>
+<pre class="programlisting">"data": {
+  "children": {
+    "type": "jobPartType"
+  }
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295234358714"></a>Parent Document</h3>
+<pre class="programlisting">{
+  "automationWidget": &lt;AutomationWidget&gt;,
+  "project": &lt;Project&gt;,
+  "service": &lt;Service&gt;
+}</pre>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm23229523478132"></a>Child Document</h3>
+<pre class="programlisting">{
+  "job": &lt;Job&gt;,
+  "jobPart": &lt;JobPart&gt;
+
+  "data": {
+    "counts": {
+      "chars": {
+      "total": number,
+      "confirmed": number,
+      "notConfirmed": number,
+      "locked": number,
+      "notLocked": number,
+      "confirmedAndLocked": number,
+      "notConfirmedAndLocked": number,
+      "completed": number,
+      "notCompleted": number
+    },
+    "groups": {
+      "total": number
+    },
+    "segments": {
+      "total": number,
+      "confirmed": number,
+      "notConfirmed": number,
+      "locked": number,
+      "notLocked": number,
+      "confirmedAndLocked": number,
+      "notConfirmedAndLocked": number,
+      "completed": number,
+      "notCompleted": number,
+      "mt": {
+        "postEdited": number,
+        "relevant": number,
+        "notRelevant": number
+      },
+      "qa": {
+        "checked": number,
+        "notChecked": number
+      }
+    },
+    "words": {
+      "total": number,
+      "confirmed": number,
+      "notConfirmed": number,
+      "locked": number,
+      "notLocked": number,
+      "confirmedAndLocked": number,
+      "notConfirmedAndLocked": number,
+      "completed": number,
+      "notCompleted": number
+    },
+    "qa": {
+      "warnings": number,
+      "ignoredWarnings": number,
+      "notIgnoredWarnings": number
+    }
+  }
+}</pre>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338" id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_UUID-63aba01d-2871-265e-1308-2973da3e6070"></a>Examples</h2></div></div>
+<div class="panel-body collapse" id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_UUID-63aba01d-2871-265e-1308-2973da3e6070_body">
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>HTTP requests are run in Postman.</p></li>
+<li class="listitem"><p>Login to Memsource through a PM or Admin account, and obtain a login token using a login API.</p></li>
+<li class="listitem"><p>POST requests to <code class="code">api/v3/analytics/jobPart?token=&amp;lt;your_login_token&amp;gt;</code></p></li>
+</ul></div>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232293597702756"></a>Total Number of Jobs</h3>
+<p>Query</p>
+<pre class="programlisting">{
+  "aggregations": {
+    "data": {
+      "children": {
+        "type": "jobPartType"
+      }
+    }
+  }
+}</pre>
+<p>Response</p>
+<pre class="programlisting">{
+  "hits": {
+    "total": 359
+  },
+  "aggregations": {
+    "data": {
+      "doc_count": 14417
+    }
+  }
+}</pre>
+<p>Under the <span class="emphasis"><em>aggregations</em></span> field, the <span class="emphasis"><em>data</em></span> aggregation responded with 14,417 matching documents shown in the <span class="emphasis"><em>doc_count</em></span> field.</p>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295174174309"></a>Total Number of Source Words</h3>
+<p>Query</p>
+<pre class="programlisting">{
+  "aggregations": {
+    "data": {
+      "children": {
+        "type": "jobPartType"
+      },
+      "aggs": {
+        "wordCount": {
+          "sum": {
+            "field": "data.volume.words"
+          }
+        }
+      }
+    }
+  }
+}</pre>
+<p>Response</p>
+<pre class="programlisting">{
+  "hits": {
+    "total": 359
+  },
+  "aggregations": {
+    "data": {
+      "doc_count": 14417,
+      "wordCount": {
+        "value": 6893067
+      }
+    }
+  }
+}</pre>
+<h4>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295179092777"></a>Total Number of Source Words Divided by Target Language</h4>
+<p>Query</p>
+<pre class="programlisting">{
+  "aggregations": {
+    "data": {
+      "children": {
+        "type": "jobPartType"
+      },
+      "aggs": {
+        "byTargetLanguage": {
+          "terms": {
+            "field": "job.targetLanguage",
+            "size": 3
+          },
+          "aggs": {
+            "wordCount": {
+              "sum": {
+                "field": "data.volume.words"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</pre>
+<p>Response</p>
+<pre class="programlisting">{
+  "hits": {
+    "total": 359
+  },
+  "aggregations": {
+    "data": {
+      "byTargetLanguage": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 10071,
+        "buckets": [
+          {
+            "doc_count": 1835,
+            "wordCount": {
+              "value": 702721
+            },
+            "key": "cs"
+          },
+          {
+            "doc_count": 1491,
+            "wordCount": {
+              "value": 2602529
+            },
+            "key": "de"
+          },
+          {
+            "doc_count": 1020,
+            "wordCount": {
+              "value": 92676
+            },
+            "key": "fi"
+          }
+        ]
+      },
+      "doc_count": 14417
+    }
+  }
+}</pre>
+<p>The <span class="emphasis"><em>buckets</em></span> entity is shown in the response. When the analytics module is asked to split the data by some category, the result is represented as a list of buckets. Each bucket contains a key that defines what data this bucket represents (in this case a target language) and a value (other aggregations) specific just to this part of the data set.</p>
+<h3>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295182347495"></a>Total Number of Jobs Divided by Project Status</h3>
+<p>Query</p>
+<pre class="programlisting">{
+  "aggregations": {
+    "projectStatus": {
+      "terms": {
+        "field": "project.status"
+      },
+      "aggs": {
+        "data": {
+          "children": {
+            "type": "jobPartType"
+          }
+        }
+      }
+    }
+  }
+}</pre>
+<p>Reponse</p>
+<pre class="programlisting">{
+  "hits": {
+    "total": 359
+  },
+  "aggregations": {
+    "projectStatus": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "doc_count": 326,
+          "data": {
+            "doc_count": 14318
+          },
+          "key": "NEW"
+        },
+        {
+          "doc_count": 31,
+          "data": {
+            "doc_count": 89
+          },
+          "key": "COMPLETED"
+        },
+        {
+          "doc_count": 1,
+          "data": {
+            "doc_count": 4
+          },
+          "key": "ASSIGNED"
+        },
+        {
+          "doc_count": 1,
+          "data": {
+            "doc_count": 6
+          },
+          "key": "DECLINED_BY_VENDOR"
+        }
+      ]
+    }
+  }
+}</pre>
+<p>The Analytics module has been told to split the data by project status before the <span class="emphasis"><em>data</em></span> aggregation.</p>
+<h4>
+<a id="UUID-23db9244-8d17-94cc-6e48-9f9f3f602338_bridgehead-idm232295185075027"></a>Total Number of Jobs From New Projects</h4>
+<p>Query</p>
+<pre class="programlisting">{
+  "filter": {
+    "term": {
+      "project.status": "NEW"
+    }
+  },
+  "aggregations": {
+    "data": {
+      "children": {
+        "type": "jobPartType"
+      }
+    }
+  }
+}</pre>
+<p>Reponse</p>
+<pre class="programlisting">{
+  "hits": {
+    "total": 326
+  },
+  "aggregations": {
+    "data": {
+      "doc_count": 14318
+    }
+  }
+}</pre>
+<p>The <span class="emphasis"><em>filter</em></span> field is used in the query. This narrows down the data before following aggregations.</p>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
