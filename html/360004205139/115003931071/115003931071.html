@@ -1,0 +1,118 @@
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<h2>
+<a id="UUID-bd5f52fd-1eb9-236a-874b-dd26df134723_bridgehead-idm4633721496404832379684922777"></a>Request Parameters</h2>
+<div class="informaltable table-responsive">
+<a id="UUID-bd5f52fd-1eb9-236a-874b-dd26df134723_table-idm4640490401203232379685672499"></a><table xml:id="UUID-bd5f52fd-1eb9-236a-874b-dd26df134723_table-idm4640490401203232379685672499">
+<thead><tr>
+<th><p>Data Type</p></th>
+<th><p>Sample Value</p></th>
+<th><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>charset</p></td>
+<td><p>windows-1250</p></td>
+<td><p>Any supported <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014441399" target="_blank" rel="noopener">character set</a>.</p></td>
+</tr>
+<tr>
+<td><p>currency</p></td>
+<td><p>EUR</p></td>
+<td><p>Any <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014376900" target="_blank" rel="noopener">supported currency</a>.</p></td>
+</tr>
+<tr>
+<td><p>datetime</p></td>
+<td><p>2012-07-30 17:30</p></td>
+<td><p>Date and time in yyyy-MM-dd HH:mm format. The UTC timezone is always used when reading the date.</p></td>
+</tr>
+<tr>
+<td><p>domain(type)</p></td>
+<td><p>348</p></td>
+<td><p>Identifier (<span class="emphasis"><em>ID property</em></span>) of a domain object of the specified type. For example, when creating a project, id (e.g., 348) is returned in the JSON structure. This identifier can be later used to change the status of the project by setting the <span class="emphasis"><em>project=348</em></span> parameter.</p></td>
+</tr>
+<tr>
+<td><p>enum(name)</p></td>
+<td><p></p></td>
+<td><p>A value from a fixed set of values. Each set of values (<span class="emphasis"><em>enum</em></span>) has a name. <a class="link" href="https://en.wikipedia.org/wiki/Enumerated_type" target="_blank" rel="noopener">Enums</a> are always case-insensitive.</p></td>
+</tr>
+<tr>
+<td><p>file</p></td>
+<td><p></p></td>
+<td><p>Binary data. The whole request has to be sent in <a class="link" href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.2" target="_blank" rel="noopener">multipart/form-data</a> format. <a class="link" href="https://help.memsource.com/hc/en-us/articles/360019085451" target="_blank" rel="noopener">Examples</a> of code in Java and C++.</p></td>
+</tr>
+<tr>
+<td><p>exfile</p></td>
+<td><p></p></td>
+<td><p>Compatible with the <code class="code">file</code> type. It also accepts handles from File AP.</p></td>
+</tr>
+<tr>
+<td><p>jsonObject(type)</p></td>
+<td><p>{ 'id': 'xyz' }</p></td>
+<td><p>An object of the specified type (represented using JSON notation). See below for a description of particular types.</p></td>
+</tr>
+<tr>
+<td><p>jsonObjectList(type)</p></td>
+<td><p>[{ 'id': 'xyz' }]</p></td>
+<td><p>A list of objects of the specified type (represented using JSON notation).</p></td>
+</tr>
+<tr>
+<td><p>lang</p></td>
+<td><p>en</p></td>
+<td><p>Any supported <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811-Supported-Languages" target="_blank" rel="noopener">language code</a>.</p></td>
+</tr>
+<tr>
+<td><p>list(type)</p></td>
+<td><p></p></td>
+<td><p>A list of values of another type. When calling an API action, the list is defined using the same parameter name multiple times (e.g., <code class="code">param=value1&amp;amp;param=value2</code>).</p></td>
+</tr>
+<tr>
+<td><p>string</p></td>
+<td><p>My Project</p></td>
+<td><p>The sequence of characters (UTF-8 encoded).</p></td>
+</tr>
+<tr>
+<td><p>task</p></td>
+<td><p><span class="emphasis"><em>RiYnxBD0xBY1lwhf1</em></span></p></td>
+<td><p>An identifier of a translation task. More job parts (if they were created by splitting the parent job part) may share the same task.</p></td>
+</tr>
+<tr>
+<td><p>map(type, type)</p></td>
+<td><p></p></td>
+<td><p>A map of keys and values of a given type. When calling an API action, the map is defined using the same parameter name multiple times (e.g., <code class="code">map.key1=value1&amp;map.key2=value2</code>).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>
+<a id="UUID-bd5f52fd-1eb9-236a-874b-dd26df134723_bridgehead-idm4581831056049632379704728302"></a>Response</h2>
+<p>The body of an HTTP may contain these data types:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>JSON</strong></span></p>
+<p>Data structure (UTF-8 encoded). Each API call returning JSON contains an example of a response.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>binary</strong></span></p>
+<p>Binary data.</p>
+</li>
+</ul></div>
+<h2>
+<a id="UUID-bd5f52fd-1eb9-236a-874b-dd26df134723_bridgehead-idm4668860056232032379705908384"></a>Task vs. Job Part</h2>
+<h4>
+<a id="UUID-bd5f52fd-1eb9-236a-874b-dd26df134723_bridgehead-idm4668860044352032379708393171"></a>Task</h4>
+<p>A task represents one translation job (i.e. file to be translated) in one target language. If one job is uploaded in more target languages, an independent task is created for every target language.</p>
+<p>If a job is translated in multiple workflows, each workflow shares the same task but differs in workflow level. (This is why some API calls have two arguments for task and level.) A task identifier is composed of alphanumeric characters (e.g., <span class="emphasis"><em>RiYnxBD0xBY1lwhf1</em></span>) while a level is identified by an integer (usually 1-10). The first level in each project that uses workflows always has identifier 1.</p>
+<p>Jobs split into multiple parts will have the same task ID, and the parameter <code class="code">isParentJobSplit</code> will be <span class="emphasis"><em>true</em></span>.</p>
+<h4>
+<a id="UUID-bd5f52fd-1eb9-236a-874b-dd26df134723_bridgehead-idm4581830773848032379708199399"></a>Job Part</h4>
+<p>A <span class="emphasis"><em>jobPart</em></span> represents a job per target language(s) and workflow steps. For instance, a single file imported to a project with 2 workflow steps and 3 target languages will result in 6 <span class="emphasis"><em>jobParts</em></span>. Each <span class="emphasis"><em>jobPart</em></span> can be assigned to a different Linguist or have a different due date or status.</p>
+<p>Each <span class="emphasis"><em>jobPart</em></span> can be also split into multiple <span class="emphasis"><em>jobParts</em></span> which will get their own <span class="emphasis"><em>jobPart ID</em></span>. A <span class="emphasis"><em>jobPart</em></span> is always unique.</p>
+<h2>
+<a id="UUID-bd5f52fd-1eb9-236a-874b-dd26df134723_bridgehead-idm4581830793651232379710440028"></a>Object Types (used in JSON parameters)</h2>
+<pre class="programlisting">TagMetadata {
+  string id
+  string type
+  string content
+  string transAttributes
+}</pre>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>

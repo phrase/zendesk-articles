@@ -1,0 +1,43 @@
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<p>A file's data type is used to post binary data into various API calls. Every API call that contains at least one argument of type file has to meet the following requirements:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>HTTP POST method must be used.</p></li>
+<li class="listitem"><p>Multipart/form-data request as described in <a class="link" href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.2" target="_blank" rel="noopener">HTML specs</a> must be formed.</p></li>
+</ul></div>
+<h2>
+<a id="UUID-05b9a40e-88ec-9f5e-b156-0c1785f4de4a_bridgehead-idm4530174031916832379734226911"></a>Examples</h2>
+<h4>
+<a id="UUID-05b9a40e-88ec-9f5e-b156-0c1785f4de4a_bridgehead-idm4581830657209632379735258541"></a>Java HttpClient</h4>
+<pre class="programlisting">HttpClient httpclient = new DefaultHttpClient(); 
+HttpPost httpPost = new HttpPost(webServerUrl);
+MultipartEntity reqEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE, null, Charset.forName("UTF-8"));
+StringBody taskPart;
+StringBody formatPart;
+StringBody saveToTransMemoryPart;
+StringBody setCompletedPart;
+ByteArrayBody fileContentPart;
+// ... fill variables with data ... //
+
+reqEntity.addPart("task", taskPart);
+reqEntity.addPart("format", formatPart);
+reqEntity.addPart("saveToTransMemory", saveToTransMemoryPart);
+reqEntity.addPart("setCompleted", setCompletedPart);
+reqEntity.addPart("bilingualFile", fileContentPart);
+httpPost.setEntity(reqEntity);</pre>
+<h4>
+<a id="UUID-05b9a40e-88ec-9f5e-b156-0c1785f4de4a_bridgehead-idm4530174306800032379735920819"></a>C++ Qt</h4>
+<pre class="programlisting">QHttpMultiPart* multiPartData = new QHttpMultiPart( QHttpMultiPart::FormDataType );
+QBuffer* buffer = new QBuffer( multiPartData );
+buffer-&gt;open( QIODevice::WriteOnly );
+// ... fill buffer with data ... //
+writer.writeTo( buffer );
+buffer-&gt;close();
+
+QHttpPart filePart;
+filePart.setHeader( QNetworkRequest::ContentTypeHeader, QVariant( "application/octet-stream" ) );
+filePart.setHeader( QNetworkRequest::ContentDispositionHeader, QVariant( QString( "form-data; name=\"bilingualFile\"; filename=\"" ) + model-&gt;getFileInfos()[0].original + "\"" ) );
+buffer-&gt;open( QIODevice::ReadOnly );
+filePart.setBodyDevice( buffer );
+multiPartData-&gt;append( filePart );</pre>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
