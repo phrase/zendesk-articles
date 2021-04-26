@@ -1,5 +1,5 @@
-<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-5fb9456c-e857-a963-771d-d44d216a8fa8"></a>Segmentation</h2></div>
 <p>Segmentation is the process that splits original texts into smaller parts. This improves the retrieval of previously translated text from a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279-Translation-Memories-Overview" target="_blank" rel="noopener">translation memory</a>. Segments are presented in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775880-Memsource-Editor-Overview" target="_blank" rel="noopener">editor</a> and can be <a class="link" href="https://help.memsource.com/hc/en-us/articles/360015577499-Filtering#filtering-in-memsource-editor-0-1" target="_blank" rel="noopener">filtered</a>.</p>
@@ -28,24 +28,28 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-35436dda-8c7d-4b66-2c71-83db2a0602fd"></a>Customize Segmentation Rules</h2></div>
 <p>Customized segmentation rules can be applied to <a class="link" href="https://help.memsource.com/hc/articles/360013675740#UUID-29d1a108-bf4f-799c-9ff5-6826433147c8" title="Jobs Overview">jobs</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project templates</a>. When set as primary, they are applied to all new jobs imported for that source language.</p>
-<p>There are two types of segmentation rules: </p>
+<p>There are two types of segmentation rules:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>Abbreviations to the XLSX file</p></li>
-<li class="listitem"><p>Regular expression of SRX files</p></li>
+<li class="listitem"><p>Abbreviations to the XLSX file</p></li>
+<li class="listitem"><p>Regular expression of SRX files</p></li>
 </ul></div>
 <p>To use customized rules, download default rules, modify them, upload the modified file and apply them to specified jobs.</p>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div dir="ltr" class="caution">
+<h3 class="title">Caution</h3>
+<p>When adding custom segmentation rules for a space-less CJK source language (while a target language will be one using spaces as a word delimiter), make sure to add leading or trailing spaces to the target segments split by the custom rule to delimit words in the translation. While this happens automatically in segments formed by the default segmentation rules, no spaces are added in manually split segments or those formed by additional custom segmentation rules.</p>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-6ee31788-709c-9599-46ad-e762a84e4a62"></a>Download Default Segmentation Rules</h3></div>
 <p>To download the default segmentation rules, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747554516301"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018072279/15f9a6a4a05c9e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360025510500/160865f224ef51.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
 <p>The <span class="guimenu">Segmentation</span> page opens.</p>
 </li>
 <li class="step">
@@ -69,16 +73,16 @@
 <p>To download a segmentation rule that you uploaded previously:</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018072279/15f9a6a4a05c9e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360025510500/160865f224ef51.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
 <p>The <span class="guimenu">Segmentation</span> page opens.</p>
 </li>
-<li class="listitem"><p>Click on the <span class="guilabel">Settings </span>icon on the right and choose <span class="guilabel">Customize columns</span>: <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018056300/15f9a6a4a0852d.png" style="max-width: 273px; " alt="customize-segmentation-columns.png"></span> </p></li>
+<li class="listitem"><p>Click on the <span class="guilabel">Settings </span>icon on the right and choose <span class="guilabel">Customize columns</span>: <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360025510520/160865f2251fb6.png" style="max-width: 273px; " alt="customize-segmentation-columns.png"></span> </p></li>
 <li class="listitem"><p>Enable the <span class="guilabel">Filename </span>column</p></li>
 <li class="listitem"><p>Click on a filename to download a pre-saved rule.</p></li>
 </ol></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-0c79b942-b2d6-e95b-edf6-d36c035ea3b1"></a>Edit Abbreviations in an XLSX File</h3></div>
 <p>Abbreviations can be specified for individual languages after which new segments should not be created.</p>
@@ -89,17 +93,17 @@
 <p>Change the contents with the following formatting:</p>
 <p>The XLSX file must have two columns with no headings.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="bold bold"><strong>Column 1</strong></span>: Abbreviation to be specified</p></li>
+<li class="listitem"><p> <span class="bold bold"><strong>Column 1</strong></span>: Abbreviation to be specified</p></li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Column 2</strong></span>: Specification of segmentation behavior</p>
+<p> <span class="bold bold"><strong>Column 2</strong></span>: Specification of segmentation behavior</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
 <li class="listitem">
-<p><span class="bold bold"><strong>ABBR_UPPER_NUM</strong></span></p>
-<p>A new segment is <span class="emphasis"><em>not</em></span> be created if the abbreviation is followed by white-space and then by a number, a symbol (math, currency signs, dingbats, etc.) or a word with the first letter in upper case.</p>
+<p> <span class="bold bold"><strong>ABBR_UPPER_NUM</strong></span> </p>
+<p>A new segment is <span class="emphasis"><em>not</em></span> be created if the abbreviation is followed by white-space and then by a number, a symbol (math, currency signs, dingbats, etc.) or a word with the first letter in upper case.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>ABBR_NUM</strong></span></p>
-<p>A new segment will <span class="emphasis"><em>not</em></span> be created if the abbreviation is followed by white-space and then by a number.</p>
+<p> <span class="bold bold"><strong>ABBR_NUM</strong></span> </p>
+<p>A new segment will <span class="emphasis"><em>not</em></span> be created if the abbreviation is followed by white-space and then by a number.</p>
 </li>
 </ul></div>
 </li>
@@ -109,10 +113,10 @@
 </ol></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-b6497a13-1aef-bcbd-427c-a4a5f36e9f2e"></a>Edit Regular Expressions in an SRX File</h3></div>
-<p>Editing SRX files is a complex process suitable only for users experienced in using Regular Expressions. </p>
+<p>Editing SRX files is a complex process suitable only for users experienced in using Regular Expressions.</p>
 <p>There are several rules that can be changed in an SRX file:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Import text from an XLSX file without segmentation; one cell is equal to one segment.</p></li>
@@ -127,20 +131,20 @@
 <a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747605636608"></a><ol class="procedure" type="1">
 <li class="step"><p>Open the file in a text editor such as <a class="link" href="https://notepad-plus-plus.org/downloads/" target="_blank" rel="noopener">Notepad ++</a>.</p></li>
 <li class="step">
-<p>Edit using <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expressions</a> or remove the inner segmentation completely.</p>
+<p>Edit using <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expressions</a> or remove the inner segmentation completely.</p>
 <p>Example:</p>
-<div class="mediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018056320/15f9a6a4a0b5b1.png" style="" alt="BreakRules_Example.png"></div>
+<div class="mediaobject"><img src="https://help.memsource.com/hc/article_attachments/360025515259/160865f2256e1d.png" style="" alt="BreakRules_Example.png"></div>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p><code class="code">&lt;rule break="no"&gt;</code></p>
+<p> <code class="code">&lt;rule break="no"&gt;</code> </p>
 <p>The list of rules, where the segment will not be broken. I.E. a list of abbreviations</p>
 </li>
 <li class="listitem">
-<p><code class="code">&lt;rule&gt; &lt;beforebreak&gt;</code></p>
+<p> <code class="code">&lt;rule&gt; &lt;beforebreak&gt;</code> </p>
 <p>A regular expression for a character before a break (for example, at the end of a sentence ". ? ! :"). If you, for example, don't want segment text after a colon, simply delete <code class="code">:</code> from every <code class="code">&lt;rule&gt;&lt;beforebreak&gt;</code> code.</p>
 </li>
 <li class="listitem">
-<p><code class="code">&lt;rule&gt; &lt;afterbreak&gt;</code></p>
+<p> <code class="code">&lt;rule&gt; &lt;afterbreak&gt;</code> </p>
 <p>A regular expression for a character after a break (for example, at the start of a new sentence; a space and capital letter).</p>
 </li>
 </ul></div>
@@ -150,14 +154,14 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-bcef4801-0d79-b6f9-e757-52ef5161f164"></a>Upload New Segmentation Rules</h3></div>
 <p>To upload modified or new segmentation rules, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747706104723"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360018072279/15f9a6a4a05c9e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360025510500/160865f224ef51.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
 <p>The <span class="guimenu">Segmentation</span> page opens.</p>
 </li>
 <li class="step">
@@ -180,7 +184,7 @@
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-85a78d12-725e-750f-6e43-0f10caf2197e"></a>Use Custom Segmentation Rules on Job Import</h3></div>
 <p>To use custom rules on a job import, follow these steps:</p>
@@ -192,14 +196,14 @@
 </li>
 <li class="step"><p>Select the modified rules from the <span class="guimenu">Source segmentation rules</span> dropdown list.</p></li>
 <li class="step">
-<p>Click <span class="guilabel">Create</span>.</p>
+<p>Click <span class="guilabel">Create</span>.</p>
 <p>The job is created and added to the list using the specified segmentation rules.</p>
 </li>
 </ol>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" dir="ltr" class="section img-thumbnail sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section img-thumbnail sub-topic">
 <div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-0bb19ddd-b9a4-b0a0-5916-e6ad58572ef8"></a>Changing Segmentation Example (1 Cell 1 Segment)</h3></div>
 <p>This is how to remove all <span class="emphasis"><em>inner</em></span> segmentation rules from an SRX file leaving only the basic segmentation of the whole paragraph, element, or cell being applied. This segmentation rule can be applied to every file type (MS Word, XML, HTML, Excel, etc.).</p>
@@ -234,7 +238,8 @@
 <p>If all inner segmentation is removed leaving only the basic segmentation based on the Cell, then there are only two segments: <span class="emphasis"><em>Peter! Wait!</em></span> and <span class="emphasis"><em>Hello</em></span>.</p>
 <p>Edit the SRX file to remove all the default segmentation rules, i. e. the code between <code class="code">&lt;!-- break rules --&gt;</code> and <code class="code">&lt;/languagerule&gt;</code>.</p>
 <p>Example:</p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360018072299/15f9a6a4a0ef5e.png" style="" alt="1cell-1segment-srx.png"></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360025510540/160865f225c054.png" style="" alt="1cell-1segment-srx.png"></div>
+<p>In case it still does not work, it can be caused by cascading. In such case, the solution is to open the edited SRX file in Notepad++, see the two attributes of <code class="code">header</code> element and change both to <code class="code">no</code>.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
