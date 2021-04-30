@@ -97,32 +97,32 @@
 <p>Examples of regular expressions when importing a specific text:</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem">
-<p> <span class="emphasis"><em>## ErrorMessage ##1## The number must be higher then 0. ##Z## </em></span> </p>
-<p>To import text between <span class="emphasis"><em>##1##</em></span> and <span class="emphasis"><em>##Z##</em></span> ,use regexp: <code class="code">(?&lt;=##1## ).*(?= ##Z##)</code> </p>
+<p><span class="emphasis"><em>## ErrorMessage ##1## The number must be higher than 0. ##Z## </em></span></p>
+<p>To import text between <span class="emphasis"><em>##1##</em></span> and <span class="emphasis"><em>##Z##</em></span> ,use regexp: <code class="code">(?&lt;=##1## ).*(?= ##Z##)</code></p>
 </li>
 <li class="listitem">
-<p> <span class="emphasis"><em>ErrorMessage ("The number must be higher then 0.")</em></span> </p>
-<p>To import text between <span class="emphasis"><em>(" and ")</em></span> , use regexp: <code class="code">(?&lt;=\(").*(?="\))</code> </p>
+<p><span class="emphasis"><em>ErrorMessage ("The number must be higher than 0.")</em></span></p>
+<p>To import text between <span class="emphasis"><em>(" and ")</em></span> , use regexp: <code class="code">(?&lt;=\(").*(?="\))</code></p>
 </li>
 <li class="listitem">
-<p> <span class="emphasis"><em>'errorMessage' = 'The number must be higher than 0.'</em></span> </p>
-<p>To import text after the <span class="emphasis"><em>=</em></span> sign and between <span class="emphasis"><em>' and '</em></span> , use regexp: <code class="code">(?&lt;=\= ').*(?=')</code> </p>
+<p><span class="emphasis"><em>'errorMessage' = 'The number must be higher than 0.'</em></span></p>
+<p>To import text after the <span class="emphasis"><em>=</em></span> sign and between <span class="emphasis"><em>' and '</em></span> , use regexp: <code class="code">(?&lt;=\= ').*(?=')</code></p>
 </li>
 <li class="listitem">
-<p> <span class="emphasis"><em>errorMessage</em></span> = "<span class="emphasis"><em>this is to be translated</em></span>"</p>
-<p>To import text after the = sign and between '<span class="emphasis"><em>and</em></span>' use regexp: <code class="code">(?&lt;=\= ").*(?=")</code> </p>
+<p><span class="emphasis"><em>errorMessage</em></span> = "<span class="emphasis"><em>this is to be translated</em></span>"</p>
+<p>To import text after the = sign and between '<span class="emphasis"><em>and</em></span>' use regexp: <code class="code">(?&lt;=\= ").*(?=")</code></p>
 </li>
 <li class="listitem">
-<p> <span class="emphasis"><em>msgstr ("The number must be higher than 0.")</em></span> </p>
-<p>To import msgstr strings in monolingual PO files using a TXT filter, use regexp: <code class="code">(?&lt;=msgstr ").*(?=")</code> </p>
+<p><span class="emphasis"><em>msgstr ("The number must be higher than 0.")</em></span></p>
+<p>To import msgstr strings in monolingual PO files using a TXT filter, use regexp: <code class="code">(?&lt;=msgstr ").*(?=")</code></p>
 </li>
 <li class="listitem">
-<p> <span class="emphasis"><em># Note: This is a note</em></span> </p>
-<p>To exclude lines starting with <span class="emphasis"><em>#</em></span> , use regexp: <code class="code">(^[^#].*)</code> </p>
+<p><span class="emphasis"><em># Note: This is a note</em></span></p>
+<p>To exclude lines starting with <span class="emphasis"><em>#</em></span> , use regexp: <code class="code">(^[^#].*)</code></p>
 </li>
 <li class="listitem">
-<p> <span class="emphasis"><em>values '126', 'DCeT', 'Text (en)'</em></span> </p>
-<p>To import only text in quotes and with <span class="emphasis"><em>(en)</em></span>, such as Text <span class="emphasis"><em>(en)</em></span>' use regexp: <code class="code">(?&lt;=')[^']*\(en\)(?=')</code> </p>
+<p><span class="emphasis"><em>values '126', 'DCeT', 'Text (en)'</em></span></p>
+<p>To import only text in quotes and with <span class="emphasis"><em>(en)</em></span>, such as Text <span class="emphasis"><em>(en)</em></span>' use regexp: <code class="code">(?&lt;=')[^']*\(en\)(?=')</code></p>
 </li>
 </ol></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
