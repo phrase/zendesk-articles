@@ -29,21 +29,32 @@
 <a data-zd-article="UUID-53d95c01-b0c5-aae5-dff5-68dcc38c3ea1" id="UUID-53d95c01-b0c5-aae5-dff5-68dcc38c3ea1_UUID-ff30b569-36ed-05bd-d32e-abfc84472435"></a>Using Tags</h2></div>
 <p>Incorrect tagging can lead to improper translations. If tags are missing in the target, Memsource attempts to auto-complete when the completed target file is being generated. If missing or incorrect, add tags manually to the target and in as close a position and order as possible when compared to the source.</p>
 <h3>
+<a id="UUID-53d95c01-b0c5-aae5-dff5-68dcc38c3ea1_bridgehead-idm4570799775678432395285857809"></a>Tags in source</h3>
+<p>If tags are removed from a source, QA can not correctly check it against the target. A <span class="guimenu">Can't download file with missing tags...</span> error is presented on file export with no QA tag warnings.</p>
+<p>If this occurs, follow these steps:</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>Export the job to a bilingual TMX file.</p></li>
+<li class="step"><p>Import the TMX file into a temporary TM.</p></li>
+<li class="step"><p>Re-import the original file.</p></li>
+<li class="step"><p>Pre-translate the new job using the temporary <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279" target="_blank" rel="noopener">TM</a>.</p></li>
+<li class="step"><p>Check the pre-translation results, and run <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872099" target="_blank" rel="noopener">QA</a> against the new job with <span class="guimenu">Formatting and tags</span> enabled.</p></li>
+<li class="step"><p>If successful, the temporary TM can be populated by confirming the segments and it can be imported into the main TM.</p></li>
+</ol></div>
+<h3>
 <a id="UUID-53d95c01-b0c5-aae5-dff5-68dcc38c3ea1_bridgehead-idm4544653257100831699330310712"></a>Inserting tags to targets</h3>
 <p>Tags are inserted through either the Edit menu or keyboard shortcuts <span class="keycap"><strong>F8</strong></span> or <span class="keycap"><strong>CTRL+ALT+</strong></span># to specifically number the tag and <span class="keycap"><strong>Ctrl+,</strong></span> to insert by section.</p>
 <h3>
 <a id="UUID-53d95c01-b0c5-aae5-dff5-68dcc38c3ea1_bridgehead-idm4646117115776031699334043414"></a>Editing Tag Content</h3>
-<p>As in the example of a hyperlink that required adaptation to a target, tag content can be edited.</p>
 <p>To edit target tag content, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-53d95c01-b0c5-aae5-dff5-68dcc38c3ea1_procedure-idm4544653200457631699340954643"></a><ol class="procedure" type="1">
 <li class="step">
-<p>Either press <span class="keycap"><strong>CTRL+SHIFT+E</strong></span> in the web editor, <span class="keycap"><strong>Ctrl+Shift+T</strong></span> in the desktop editor or from the <span class="guimenu">Edit</span> menu, select <span class="guilabel">Tags</span> and then <span class="guilabel">Expand Tags</span>. <span class="keycap"><strong>F2</strong></span> also works in the desktop editor.</p>
+<p>Press <span class="keycap"><strong>CTRL+SHIFT+E</strong></span> in the web editor, <span class="keycap"><strong>Ctrl+Shift+T</strong></span> or <span class="keycap"><strong>F2</strong></span> in the desktop editor or from the <span class="guimenu">Edit</span> menu, select <span class="guilabel">Tags</span> , <span class="guilabel">Expand Tags</span>.</p>
 <p>Tag content is presented.</p>
 </li>
 <li class="step">
-<p>Select tag to be edited and click on it to make changes.</p>
-<p>The edited tag is displayed in yellow to indicate difference from source tag.</p>
+<p>Click a tag to be edited.</p>
+<p>Edited tags are displayed in yellow to indicate differences from a source tag.</p>
 </li>
 </ol>
 </div>
@@ -52,8 +63,8 @@
 <p>To insert a custom tag or custom paired tag into the target:</p>
 <div class="itemizedlist">
 <a id="UUID-53d95c01-b0c5-aae5-dff5-68dcc38c3ea1_procedure-idm4546006786520031699350079984"></a><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-<p>From the <span class="guimenu">Edit</span> menu, select <span class="guilabel">Tags</span> and then <span class="guilabel">Create Custom Tag</span> or <span class="guilabel">Create Custom Paired Tag</span>.</p>
-<p>Custom tag is displayed as yellow instead of blue.</p>
+<p>From the <span class="guimenu">Edit</span> menu, select <span class="guilabel">Tags</span> , <span class="guilabel">Create Custom Tag</span> or <span class="guilabel">Create Custom Paired Tag</span>.</p>
+<p>The custom tag is displayed as yellow instead of blue.</p>
 </li></ul>
 </div>
 <p>Custom tags can only be added to file formats supporting tags in the completed file (such as HTML).</p>
@@ -66,14 +77,14 @@
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-53d95c01-b0c5-aae5-dff5-68dcc38c3ea1" id="UUID-53d95c01-b0c5-aae5-dff5-68dcc38c3ea1_UUID-81c7e2ab-47af-78c2-08d1-1d7d26c55d38"></a>Importing with Tags</h2></div>
-<p>As tags are used to mark parts of a text with different formatting most of these format changes are obvious. Common tags would be different fonts, font sizes, or colors. Some tags, such as style changes, are minor and not as visible.</p>
-<p>Imported files may contain many of these unseen tags and may generate the <span class="guimenu">TOO_LARGE_INPUT: Too large tag metadata of source text of segment no. ...</span> error due to too much metadata.</p>
-<p>This regularly occurs with the import of PDF files that have been converted to text formats.</p>
+<p>As tags are used to mark parts of a text with different formatting most of these format changes are obvious. Common tags are different fonts, font sizes, or colors. Some tags, such as style changes, are minor and may not be as visible.</p>
+<p>If a file type has options for how tags are imported, they are defined in <a class="link" href="https://help.memsource.com/hc/en-us/sections/360004146860-File-Import-Settings" target="_blank" rel="noopener">File Import Settings</a> when <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview" target="_blank" rel="noopener">creating a job</a>.</p>
+<p>Imported files containing many unseen tags may generate the <span class="guimenu">TOO_LARGE_INPUT: Too large tag metadata of source text of segment no. ...</span> error due to too much metadata. This easily occurs with the import of complex file types such as PDF that have been converted to text formats.</p>
 <p>When importing text files it is suggested:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>If converting a PDF file using an OCR program, save it as plain or unformatted text. Open the file in a text editor to apply required formatting such as adjusting fonts, font size, colors, columns, spacing, etc.</p></li>
+<li class="listitem"><p>If converting a PDF file using an OCR program, save as plain or unformatted text. Open the file in a text editor to apply required formatting such as adjusting fonts, font size, colors, columns, spacing, etc.</p></li>
 <li class="listitem"><p>There are a number of tools available for cleaning text files of extra code. <a class="link" href="http://asap-traduction.com/CodeZapper" target="_blank" rel="noopener">CodeZapper</a> is recommended.</p></li>
-<li class="listitem"><p>Use the <span class="guimenu">Minimize number of tags</span> option when importing text files. This can be found in the MS Word section under File Import Settings when creating a new job in Memsource. This option tries to remove all tags that considered unnecessary from the source text imported for translation. This is an automated process and sometimes may remove required formatting. If using this option, ensure that the completed file is compared against the original document.</p></li>
+<li class="listitem"><p>Use the <span class="guimenu">Minimize number of tags</span> option when importing text files. This option attempts to remove all tags considered unnecessary from the source text imported for translation. This is an automated process and may remove required formatting. If using this option, compare the completed file with the original document to ensure required formatting is in place.</p></li>
 </ul></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
