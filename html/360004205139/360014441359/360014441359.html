@@ -2,10 +2,11 @@
 <p>Most API calls require an authenticated Memsource user. The APIs do not use any special user accounts. Each API can be called on behalf of any existing user using their username and password.</p>
 <h3>
 <a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837113068445"></a>Token</h3>
-<p>Before calling any API that requires an authenticated user, call the <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/login" target="_blank" rel="noopener">auth/login</a> API to obtain an authentication token. The token is valid for 24 hours and can be used for all subsequent calls. Do not create a new token for every call. The obtained token needs to be used in the <code class="code">Authorization</code> header in subsequent API calls.</p>
-<p>Example:</p>
+<p>Before calling any API that requires an authenticated user, call the <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/login" target="_blank" rel="noopener">auth/login</a> API to obtain an authentication token. The token is valid for 24 hours and can be used for all subsequent calls. Do not create a new token for every call.</p>
+<p>In subsequent API calls, the obtained token is used in the <code class="code">Authorization</code> header. The header value field is introduced with <code class="code">ApiToken</code> followed by a space and the token itself.</p>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
 <div class="informalexample">
-<a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_example-idm232258979260881"></a><p><code class="code">ApiToken VrMkqzV4mVPWQelC51Cc5</code></p>
+<a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_example-idm232258979260881"></a><p><code class="code">ApiToken OKTiI2V7QqRDu0HADR2Fk2b9hCteI1pT06bOSk5OD8HSc3oCOHMzIgVtOtLV65hi</code></p>
 </div>
 <h3>
 <a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837115452789"></a>OAuth 2.0</h3>
@@ -14,7 +15,7 @@
 <div class="procedure">
 <a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_procedure-idm231837123913678"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360025335259/1607fc347a82fe.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Registered OAuth Apps</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360026789199/160b479f4aba32.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Registered OAuth Apps</span>.</p>
 <p>The <span class="guimenu">Registered OAuth Apps</span> page opens.</p>
 </li>
 <li class="step">
@@ -48,10 +49,10 @@
 </div>
 <h3>
 <a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837207461388"></a>Asynchronous APIs</h3>
-<p>Asynchronous APIs should always be preferred to their synchronous counterparts. If calling synchronous APIs, there is a chance of receiving timeout expired responses when processing large batches of files or even a single large file. Synchronous APIs should only be used for small files and small scale Memsource integration.</p>
+<p>Asynchronous APIs should always be preferred to their synchronous counterparts. If calling synchronous APIs, there is a chance of receiving timeout expired responses when processing large batches of files or even a single large file. Synchronous APIs should only be used for small files and small scale Memsource integration.</p>
 <h3>
 <a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837208750473"></a>Polling</h3>
-<p>After calling an asynchronous API, an instant response is received including the identifier request. Use this identifier to check the status of the request by calling <a class="link" href="https://cloud.memsource.com/web/docs/api#tag/Async-Request" target="_blank" rel="noopener">getAsyncRequest</a> and checking the <span class="emphasis"><em>asyncResponse</em></span> field. This polling approach can lead to a number of <span class="emphasis"><em>getAsyncRequest</em></span> calls before receiving an <span class="emphasis"><em>asyncResponse</em></span> that is not null.</p>
+<p>After calling an asynchronous API, an instant response is received including the identifier request. Use this identifier to check the status of the request by calling <a class="link" href="https://cloud.memsource.com/web/docs/api#tag/Async-Request" target="_blank" rel="noopener">getAsyncRequest</a> and checking the <span class="emphasis"><em>asyncResponse</em></span> field. This polling approach can lead to a number of <span class="emphasis"><em>getAsyncRequest</em></span> calls before receiving an <span class="emphasis"><em>asyncResponse</em></span> that is not null.</p>
 <h3>
 <a id="UUID-defec9d5-9389-b64c-d5af-e89ec55ad95b_bridgehead-idm231837210920967"></a>Callbacks</h3>
 <p>As a response to the drawbacks of the polling approach to asynchronous requests, support for callbacks in all asynchronous APIs is supported. When calling an asynchronous request, specify a URL (in the <span class="emphasis"><em>callbackUrl</em></span> parameter) that is requested after the work initiated by the asynchronous request is complete.</p>
