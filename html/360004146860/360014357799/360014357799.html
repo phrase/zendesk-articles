@@ -10,19 +10,19 @@
 <li class="listitem"><p>.XLF</p></li>
 <li class="listitem"><p>.XLIFF</p></li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>2.0 Only</strong></span> </p>
-<p>Files with the file header <code class="code">&lt;xliff version="2.0"&gt;</code> </p>
+<p><span class="bold bold"><strong>2.0 Only</strong></span></p>
+<p>Files with the file header <code class="code">&lt;xliff version="2.0"&gt;</code></p>
 </li>
 </ul></div>
 <h2>
 <a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_bridgehead-idm231825021536098"></a>Import Options</h2>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p> <span class="guimenu">Parse ICU messages</span> </p>
+<p><span class="guimenu">Parse ICU messages</span></p>
 <p>ICU messages are automatically converted to Memsource tags. Files with ICU messages cannot contain any inline elements.</p>
 </li>
 <li class="listitem">
-<p> <span class="guimenu">Import &lt;note&gt;</span> </p>
+<p><span class="guimenu">Import &lt;note&gt;</span></p>
 <p>Data from the <code class="code">&lt;note&gt;</code> element will be displayed in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872139-Context-Information" target="_blank" rel="noopener">Context</a> window.</p>
 <p>Only a <code class="code">&lt;note&gt;</code> in a <code class="code">&lt;unit&gt;</code> is supported (according to XLIFF 2.0 standards).</p>
 </li>
@@ -31,31 +31,39 @@
 <p>Segments imported as <span class="emphasis"><em>Confirmed</em></span> are saved to the project <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279-Translation-Memories-Overview" target="_blank" rel="noopener">translation memory</a> in Write mode.</p>
 </li>
 <li class="listitem">
-<p> <span class="guimenu">Segment XLIFF</span> </p>
+<p><span class="guimenu">Segment XLIFF</span></p>
 <p>Standard segmentation is applied. If not selected, one element will be one segment. This may result in multiple sentences per segment. If selected but one element is still one segment, the reason can be that the attribute <span class="emphasis"><em>canResegment="no"</em></span> is present in the file. To push the segmentation, change it to <span class="emphasis"><em>"yes"</em></span>.</p>
 <p>If the <span class="bold bold"><strong>target</strong></span> segment is empty, the text in the <span class="bold bold"><strong>source</strong></span> element is segmented. This behavior cannot be changed by enabling/disabling the <span class="guimenu">Segment XLIFF</span> option or adjusting segmentation rules.</p>
 </li>
 <li class="listitem">
-<p> <span class="guimenu">Interpret linebreak/pagebreak tags</span> </p>
+<p><span class="guimenu">Interpret linebreak/pagebreak tags</span></p>
 <p>XLIFF linebreak and pagebreak tags create new segments.</p>
 </li>
-<li class="listitem"><p> <span class="guimenu">Preserve whitespaces</span> </p></li>
-<li class="listitem"><p> <span class="guimenu">Copy source to empty target if segment is not imported</span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>2.0 Only</strong></span> <span class="guimenu">Represent text with attribute "translate=no" as non-translatable tags</span> </p></li>
+<li class="listitem"><p><span class="guimenu">Preserve whitespaces</span></p></li>
+<li class="listitem"><p><span class="guimenu">Copy source to empty target if segment is not imported</span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>2.0 Only</strong></span> <span class="guimenu">Represent text with attribute "translate=no" as non-translatable tags</span></p></li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>1.2 Only</strong></span> <span class="guimenu">Context note</span> </p>
+<p><span class="bold bold"><strong>1.2 Only</strong></span> <span class="guimenu">Context note</span></p>
 <p>Context must be in either trans unit in elements context-group or context with context-type attributes.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>2.0 Only</strong></span> <span class="guimenu">Context key</span> </p>
+<p><span class="bold bold"><strong>2.0 Only</strong></span> <span class="guimenu">Context key</span></p>
 <p>The context must be in the unit element or unit descendants. The base node (context node) for the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360001569871-XPath" target="_blank" rel="noopener">XPath</a> evaluation is the unit element. The default XPath is: @id.</p>
+</li>
+<li class="listitem">
+<p><span class="guimenu">Convert to character entities</span></p>
+<p>Comma-separated list of character references required in the output file.</p>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<div class="informalexample">
+<a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_example-idm464751886639043245049297467"></a><p><code class="code">&amp;#160;,&amp;amp;#x3A3;</code>).</p>
+</div>
 </li>
 </ul></div>
 <h3>
 <a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_bridgehead-idm231831914819366"></a>Import Segment Rules</h3>
 <p>Adding rules changes the default import settings. Rules can be combined or added and can be applied using the available form or manually. Custom XLIFF states are supported. Separating arguments by a comma creates the <code class="code">AND</code> logical relationship, while a new line creates the <code class="code">OR</code> logical relationship. <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014358599-XPath" target="_blank" rel="noopener">Xpath</a> can also be used in rules.</p>
 <p>By default , all XLIFF trans-units are imported. If segmentation is performed, <code class="code">&lt;source&gt;</code> is segmented and <code class="code">&lt;seg-source&gt;</code> is not. The status of all segments after import is not confirmed nor locked.</p>
-<p> <span class="bold bold"><strong>Custom Import Settings</strong></span> </p>
+<p><span class="bold bold"><strong>Custom Import Settings</strong></span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Do not import segment when</p></li>
 <li class="listitem"><p>Set segment confirmed when</p></li>
@@ -67,9 +75,9 @@
 <p>By default, all XLIFF trans-units in the exported target file will look identical to the source excepting that the target will be translated. To change the XLIFF states, segment statuses can be mapped to XLIFF states.</p>
 <p>Example:</p>
 <div class="informalexample">
-<a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_example-idm231831929530369"></a><p> <span class="emphasis"><em>New</em></span> to <span class="emphasis"><em>Translated</em></span> in the exported target XLIFF file.</p>
+<a id="UUID-b038a777-c415-d5c2-43ab-641dcf2ec2df_example-idm231831929530369"></a><p><span class="emphasis"><em>New</em></span> to <span class="emphasis"><em>Translated</em></span> in the exported target XLIFF file.</p>
 </div>
-<p> <span class="bold bold"><strong>Custom Export Settings</strong></span> </p>
+<p><span class="bold bold"><strong>Custom Export Settings</strong></span></p>
 <p>Specific target attributes can be mapped based on the following Memsource segment statuses:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Confirmed and locked</p></li>
@@ -82,7 +90,7 @@
 <p>When a unit is divided into more segments, all segments will have the same maximum length property. This will be equal to the maximum for the unit.</p>
 <p>In this case, the following warning is returned after import:</p>
 <pre class="programlisting">A unit is split to more segments, the maximum length limit will be checked for each segment separately.</pre>
-<p> <span class="bold bold"><strong>1.2</strong></span> </p>
+<p><span class="bold bold"><strong>1.2</strong></span></p>
 <p>The attribute <code class="code">maxwidth</code> can be used to specify maximum target length for translation in these conditions:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Maxwidth must be in a trans-unit element (not in a group).</p></li>
@@ -92,10 +100,10 @@
 <p>A warning is displayed if there are more segments in the trans-unit element.</p>
 </li>
 </ul></div>
-<p> <span class="bold bold"><strong>2.0</strong></span> </p>
+<p><span class="bold bold"><strong>2.0</strong></span></p>
 <p>The maximum target length feature is supported only if:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>The file element contains <code class="code">slr:profiles</code> with <code class="code">generalProfile="xliff:codepoints"</code> </p></li>
+<li class="listitem"><p>The file element contains <code class="code">slr:profiles</code> with <code class="code">generalProfile="xliff:codepoints"</code></p></li>
 <li class="listitem"><p>Unit in the file contains the <code class="code">sizeRestriction</code> attribute.</p></li>
 </ul></div>
 <p>The maximum value is then set as the maximum length property of the segment.</p>
