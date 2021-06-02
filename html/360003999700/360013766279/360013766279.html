@@ -1,11 +1,12 @@
 <div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
-<p>A translation memory (TM) is a database of previously translated text and is a key component of CAT tools. Text is split into smaller segments (usually sentences or titles) during <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483972-Segmentation" target="_blank" rel="noopener">segmentation</a>. The original segment and its translation are then saved into the translation memory as a <span class="emphasis"><em>translation unit</em></span> when that segment is confirmed by a user in an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775880" target="_blank" rel="noopener">editor</a>.</p>
+<p>A translation memory (TM) is a database of previously translated text and is a key component of CAT tools. Text is split into smaller segments (usually sentences or titles) during <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003483972-Segmentation" target="_blank" rel="noopener">segmentation</a>. The original segment and its translation are then saved into the translation memory as a <span class="emphasis"><em>translation unit</em></span> when that segment is confirmed by a user in an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775880" target="_blank" rel="noopener">editor</a>.</p>
 <p>Segments that are automatically confirmed based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780" target="_blank" rel="noopener">pre-translation</a> settings are not saved as they are already in the selected TM but context is added to the existing TM.</p>
 <p>A TM can have several target languages but only one source language and can be used in multiple projects simultaneously.</p>
-<p>Two main benefits to using a TM:</p>
+<p>Three main benefits to using a TM:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>A TM allows for the reuse of translations. This speeds up the translation process and reduces costs.</p></li>
-<li class="listitem"><p>A TM helps to ensure translation consistency. This is important when a client has more than one translator working on a project</p></li>
+<li class="listitem"><p>A TM allows for the reuse of translations. This speeds up the translation process and reduces costs.</p></li>
+<li class="listitem"><p>A TM helps to ensure translation consistency. This is important when a client has more than one translator working on a project</p></li>
+<li class="listitem"><p>A TM serves as a long-term backup when the project or job is no longer available. It is strongly recommended that linguists confirm each segment they have put any effort into before moving on to another segment to ensure the effort is not lost.</p></li>
 </ul></div>
 <p>While the use of translation memories is highly recommended, there are some limitations:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -20,34 +21,34 @@
 <p>Follow these rules to improve TM quality:</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem">
-<p><span class="bold bold"><strong>Choose trusted providers</strong></span></p>
+<p> <span class="bold bold"><strong>Choose trusted providers</strong></span> </p>
 <p>Have a group of trusted providers (linguists/vendors) who deliver high-quality output that is saved to the master TM. When working with a provider for the first time or with someone whose output quality varies, consider using a secondary <span class="emphasis"><em>working</em></span> translation memory where they can commit segments and keep the master TM in read-only mode. Use the master TM in Read and Write mode in later workflow steps where review is performed.</p>
 <p>Preventing content of questionable quality from being included in a TM is easier than removing it later.</p>
-<p><span class="emphasis"><em>Suggested TM configuration:</em></span></p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360023520119/16048757745fbd.png" style="" alt="tm-vendor.png"></div>
+<p> <span class="emphasis"><em>Suggested TM configuration:</em></span> </p>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360026876080/160b71b1727704.png" style="" alt="tm-vendor.png"></div>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Add <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872139-Context-Information" target="_blank" rel="noopener">context information</a> to source files</strong></span></p>
+<p> <span class="bold bold"><strong>Add <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872139-Context-Information" target="_blank" rel="noopener">context information</a> to source files</strong></span> </p>
 <p>Context information allows linguists to better understand content they are translating and improves the quality of the translation. There are different options for providing context such as attaching assets as reference files to projects or adding them on the segment level. For file formats with context key and notes properties, information can be displayed on segment level in a CAT tool. Some editors can display animations and graphics from attached external links.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Lock segments with high-quality matches</strong></span></p>
-<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780-Pre-translation-Overview" target="_blank" rel="noopener">Pre-translating</a> content from translation memory and locking high-score matches (context matches) prevents unwanted changes in the TM. Excluding locked segments from analysis and quotes shared with a provider reduces translation volume and costs.</p>
+<p> <span class="bold bold"><strong>Lock segments with high-quality matches</strong></span> </p>
+<p> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780-Pre-translation-Overview" target="_blank" rel="noopener">Pre-translating</a> content from translation memory and locking high-score matches (context matches) prevents unwanted changes in the TM. Excluding locked segments from analysis and quotes shared with a provider reduces translation volume and costs.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Perform <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800-Quality-Assurance-Overview" target="_blank" rel="noopener">quality assurance</a> and spell checks before confirming to TM</strong></span></p>
+<p> <span class="bold bold"><strong>Perform <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800-Quality-Assurance-Overview" target="_blank" rel="noopener">quality assurance</a> and spell checks before confirming to TM</strong></span> </p>
 <p>Misspellings, missing tags, incorrect punctuation are easily overlooked. Automated Quality Assurance (QA) checks help with this. Advanced QA checks are also able to verify if correct terminology has been used—ensuring translation consistency. Some tools enable segment-level QA which won’t allow the provider to confirm segments and save them into the TM if quality assurance errors have been found. In case segment-level QA is not available (and the check is performed at the end of the localization process), use the <span class="emphasis"><em>working</em></span> TM approach.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Perform <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012776020" target="_blank" rel="noopener">linguistic quality assurance</a> (LQA) evaluation</strong></span></p>
+<p> <span class="bold bold"><strong>Perform <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012776020" target="_blank" rel="noopener">linguistic quality assurance</a> (LQA) evaluation</strong></span> </p>
 <p>LQA evaluation is used to measure and qualify the translations and errors produced. It evaluates translation quality and provides constructive feedback to the provider.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Update your TMS with any changes that happen <span class="emphasis"><em>outside</em></span> of your translation management system.</strong></span></p>
+<p> <span class="bold bold"><strong>Update your TMS with any changes that happen <span class="emphasis"><em>outside</em></span> of your translation management system.</strong></span> </p>
 <p>If linguistic edits take place in the native format or in a content management system, they are not saved to the TM and will be overwritten by future submissions of the same content unless the TM is updated. In such a scenario, update the TM manually.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Close the feedback loop </strong></span></p>
+<p> <span class="bold bold"><strong>Close the feedback loop </strong></span> </p>
 <p>Discuss the quality of delivered translations with the provider and allow them to see the changes made to their work. It is important to clarify expectations and review detected issues to avoid encountering them again in the future.</p>
 </li>
 </ol></div>
@@ -117,7 +118,7 @@
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-092e04ad-68d7-166b-c339-cedaf1d8e45f"></a>Edit Translation Memory Attributes</h2></div>
 <p>The attributes in a translation memory allow users to group, filter, and sort them. Attributes can also be used to restrict or allow access to guests, restricted Project Managers or users with limited users.</p>
-<p>Attributes do not apply to translation units stored in that TM. </p>
+<p>Attributes do not apply to translation units stored in that TM.</p>
 <p>To edit translation memory attributes, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_procedure-idm231761292469468"></a><ol class="procedure" type="1">
@@ -251,14 +252,14 @@
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-98135ffb-4d58-e58b-7cda-b173d3e9ea8e"></a>Optimize Translation Memory Matches</h2></div>
-<p>The translation memory match can be further optimized for the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360002825692-Create-New-Jobs" target="_blank" rel="noopener">imported jobs</a> in the File Import Settings:</p>
+<p>The translation memory match can be further optimized for the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360002825692-Create-New-Jobs" target="_blank" rel="noopener">imported jobs</a> in the File Import Settings:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p><span class="guimenu">Previous OR next segment context as 101% </span></p>
-<p>If context matches in either the previous <span class="emphasis"><em>or</em></span> the next segment, it will be offered as a 101% match. Default requires both the previous and next segment to match.</p>
+<p> <span class="guimenu">Previous OR next segment context as 101% </span> </p>
+<p>If context matches in either the previous <span class="emphasis"><em>or</em></span> the next segment, it will be offered as a 101% match. Default requires both the previous and next segment to match.</p>
 </li>
 <li class="listitem">
-<p><span class="guimenu">Ignore tag metadata</span> (enabled by default)</p>
+<p> <span class="guimenu">Ignore tag metadata</span> (enabled by default)</p>
 <p>If the tag's metadata in the job is different then tag metadata in the TM, the difference will be ignored. The tag metadata from the job's original segment will be automatically added to the job's translated segment.</p>
 <p>Example:</p>
 <div class="informalexample">
@@ -266,11 +267,11 @@
 </div>
 </li>
 <li class="listitem">
-<p><span class="guimenu">Penalize multiple 101% TM matches by 1% </span></p>
+<p> <span class="guimenu">Penalize multiple 101% TM matches by 1% </span> </p>
 <p>When more than one 101% with a different target (translation) is found, then all 101% matches are displayed as 100% with an arrow signaling the penalization.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
 <li class="listitem">
-<p>In <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360013675780#UUID-a982e5f9-9aa2-434f-116c-17b822d35343">Pre-translate</a></p>
+<p>In <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360013675780#UUID-a982e5f9-9aa2-434f-116c-17b822d35343">Pre-translate</a> </p>
 <p>If the Pre-translation threshold is set to 101%, segments with multiple matches will not be pre-translated.</p>
 </li>
 <li class="listitem">
@@ -289,9 +290,9 @@
 <p>To batch update a translation memory in a spreadsheet editor, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_procedure-idm231776751751831"></a><ol class="procedure" type="1">
-<li class="step"><p><a class="link" href="https://help.memsource.com/hc/articles/360013696840#UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-c019d420-233d-73de-9ca3-9c1c6c2d5019" title="Export a Translation Memory">Export a TM to XLSX</a> and ensure it is <a class="link" href="https://help.memsource.com/hc/articles/360013696840#UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-b10c1176-83b0-84b2-c534-0f76b72d0ae7" title="Import Content to a Translation Memory">formatted correctly for import</a>.</p></li>
+<li class="step"><p> <a class="link" href="https://help.memsource.com/hc/articles/360013696840#UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-c019d420-233d-73de-9ca3-9c1c6c2d5019" title="Export a Translation Memory">Export a TM to XLSX</a> and ensure it is <a class="link" href="https://help.memsource.com/hc/articles/360013696840#UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-b10c1176-83b0-84b2-c534-0f76b72d0ae7" title="Import Content to a Translation Memory">formatted correctly for import</a>.</p></li>
 <li class="step"><p>Open the file in an editor.</p></li>
-<li class="step"><p>Insert two additional columns between the <span class="guimenu">*ID*</span> column and the first language column.</p></li>
+<li class="step"><p>Insert two additional columns between the <span class="guimenu">*ID*</span> column and the first language column.</p></li>
 <li class="step"><p>Keeping the ID information in column A, remove the <span class="guimenu">*ID*</span> column label and place it in column C.</p></li>
 <li class="step"><p>Fill the cells in column B with the word <span class="emphasis"><em>update</em></span>.</p></li>
 <li class="step">
