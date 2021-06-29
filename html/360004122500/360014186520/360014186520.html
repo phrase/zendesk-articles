@@ -4,7 +4,7 @@
 <div class="procedure">
 <a id="UUID-3da21e9f-2799-902c-ee48-0b717924289d_procedure-idm231808187532344"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4403014271762/160daaf9fc82b4.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">File Renaming</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4403049492754/160db33fbb37e7.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">File Renaming</span>.</p>
 <p>The <span class="guimenu">File Renaming</span> page opens.</p>
 </li>
 <li class="step">
@@ -32,46 +32,20 @@
 <li class="listitem"><div class="itemizedlist">
 <p>Use these macros to represent target language.</p>
 <ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p><code class="code">{targetLang}</code></p></li>
-<li class="listitem"><p><code class="code">{targetLangName}</code></p></li>
+<li class="listitem"><p><code class="code">{targetLang}</code> Based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811" target="_blank" rel="noopener">Memsource language codes</a>.</p></li>
+<li class="listitem"><p><code class="code">{targetLangName}</code> Based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811" target="_blank" rel="noopener">Memsource language names</a>.</p></li>
 <li class="listitem">
 <p><code class="code">{targetLangRFC}</code></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
 <li class="listitem"><p>Examples: <code class="code">es</code>, <code class="code">en-US</code>, <code class="code">az-Latn-AZ</code></p></li>
 <li class="listitem"><p>Based on <a class="link" href="https://datatracker.ietf.org/doc/html/rfc5646" target="_blank" rel="noopener">RFC 5646</a></p></li>
-<li class="listitem">
-<p>To programmatically convert Memsource languages codes to RFC:</p>
-<div class="procedure">
-<a id="UUID-3da21e9f-2799-902c-ee48-0b717924289d_procedure-idm4579326132376032497269029187"></a><ol class="procedure" type="1">
-<li class="step"><p>Replace <code class="code">_</code> with <code class="code">-</code>.</p></li>
-<li class="step"><p>Convert with the regexp (in PCRE format): <code class="code">^([a-z]{2,})(?:(-[a-z])([a-z]+))?-(?:([a-z]{2})|([a-z])([a-z]{2,})|([0-9]{3}))$</code></p></li>
-</ol>
-</div>
-</li>
-<li class="listitem"><p>Conversion <a class="link" href="https://regex101.com/r/9arsWr/1" target="_blank" rel="noopener">example</a>.</p></li>
 </ul></div>
 </li>
 <li class="listitem">
 <p><code class="code">{targetLangAndroid}</code></p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
-<li class="listitem"><p>Examples: <code class="code">es</code>, <code class="code">en-rUS</code></p></li>
-<li class="listitem"><p>To derive the tags programmatically, convert with the regexp (in PCRE format): <code class="code">-([A-Z]{2})$</code></p></li>
-<li class="listitem"><p>Conversion <a class="link" href="https://regex101.com/r/N6xuSe/1" target="_blank" rel="noopener">example</a>.</p></li>
-</ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; "><li class="listitem"><p>Examples: <code class="code">es</code>, <code class="code">en-rUS</code></p></li></ul></div>
 </li>
-<li class="listitem">
-<p><code class="code">{targetLangAndroidBCP}</code></p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
-<li class="listitem"><p>Examples: <code class="code">b+es</code>, <code class="code">b+en+US</code></p></li>
-<li class="listitem">
-<p>To derive the tags programmatically:</p>
-<div class="procedure"><ol class="procedure" type="1">
-<li class="step"><p>Prefix the RFC regexp with <code class="code">b+</code>.</p></li>
-<li class="step"><p>Replace <code class="code">-</code> with <code class="code">+</code>.</p></li>
-</ol></div>
-</li>
-</ul></div>
-</li>
+<li class="listitem"><p><code class="code">{targetLangAndroidBCP}</code></p></li>
 </ul>
 </div></li>
 <li class="listitem"><p><code class="code">{workflow}</code></p></li>
