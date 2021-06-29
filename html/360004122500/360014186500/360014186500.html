@@ -1,5 +1,5 @@
-<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
-<div xml:lang="en" dir="ltr" class="section caution sub-topic" lang="en">
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section caution sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-57c78462-458b-cc16-fd64-bf052b015217" id="UUID-57c78462-458b-cc16-fd64-bf052b015217_UUID-20eb2bee-fd34-3878-faa7-487c54d6f553"></a>Available for</h2></div>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Ultimate and Enterprise editions</p></li></ul></div>
@@ -12,7 +12,7 @@
 <p>LQA profiles are assigned when setting up the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">workflow</a> for a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675720" target="_blank" rel="noopener">project</a>.</p>
 <p><span class="bold bold"><strong>Use Case:</strong></span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Marketing texts don’t require literal translation while legal texts should be very precise. Marketing content could be assigned an 0.5 weight to <span class="emphasis"><em>Omission</em></span> errors but legal text could have a 2.0 weight assigned to the same error.</p></li></ul></div>
-<div xml:lang="en" dir="ltr" class="section sub-topic" lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-57c78462-458b-cc16-fd64-bf052b015217" id="UUID-57c78462-458b-cc16-fd64-bf052b015217_UUID-fbe194d5-4671-d60e-97c3-4c52252681ec"></a>Create an LQA Profile</h2></div>
 <p>Administrators and Project Managers with unlimited user rights can customize types of <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012776020" target="_blank" rel="noopener">Language Quality Assessment</a> warnings applied in projects.</p>
@@ -20,7 +20,7 @@
 <div class="procedure">
 <a id="UUID-57c78462-458b-cc16-fd64-bf052b015217_procedure-idm231812893666893"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360020723539/15fff0e9615db3.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Quality</span> section and click on <span class="guilabel">Language Quality Assessment (LQA)</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4403029624722/160dab030ad952.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Quality</span> section and click on <span class="guilabel">Language Quality Assessment (LQA)</span>.</p>
 <p>The <span class="guimenu">Language Quality Assessment</span> page opens.</p>
 </li>
 <li class="step">
@@ -31,8 +31,9 @@
 <li class="step"><p>Select error categories/subcategories based on <a class="link" href="https://www.taus.net/qt21-project#harmonized-error-typology" target="_blank" rel="noopener">the harmonized DQF-MQM typology</a> and indicate importance by adjusting weights . The default weight is 1.0.</p></li>
 <li class="step">
 <p>Assign <span class="guimenu">Penalty points per severity</span>.</p>
-<p>These are used in scoring translations and multiplied by error's weight. Recommended penalty values are 0 - Neutral, 1 - Minor, 5 - Major and 10 - Critical.</p>
+<p>These are used in scoring translations and are multiplied according to the error's weight. Recommended penalty values are 0 - Neutral, 1 - Minor, 5 - Major and 10 - Critical.</p>
 </li>
+<li class="step"><p>Provide a <span class="guimenu">Pass/Fail threshold</span>.</p></li>
 <li class="step">
 <p>Click <span class="guilabel">Create profile</span>.</p>
 <p>Profile is added to the <span class="guimenu">LQA profiles</span> table.</p>

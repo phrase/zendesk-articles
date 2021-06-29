@@ -28,7 +28,7 @@
 <div class="procedure">
 <a id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_procedure-idm4573163243731231650971943354"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360024014219/16058a5828f305.png" style="" alt="Setup_gear.png"></span> page, click <span class="guilabel">Automated Project Creation</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4403014269842/160daaf7024095.png" style="" alt="Setup_gear.png"></span> page, click <span class="guilabel">Automated Project Creation</span>.</p>
 <p>The <span class="guimenu">Automated Project Creation</span> page opens.</p>
 </li>
 <li class="step">
@@ -110,7 +110,51 @@
 </div>
 <p>Specify the folder name in the <span class="guimenu">Target Subfolder Path</span>:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p>Use <code class="code">{targetLang}</code> macro to represent target language.</p></li>
+<li class="listitem">
+<p>Use these macros to represent target language.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p><code class="code">{targetLang}</code></p></li>
+<li class="listitem"><p><code class="code">{targetLangName}</code></p></li>
+<li class="listitem">
+<p><code class="code">{targetLangRFC}</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Examples: <code class="code">es</code>, <code class="code">en-US</code>, <code class="code">az-Latn-AZ</code></p></li>
+<li class="listitem"><p>Based on <a class="link" href="https://datatracker.ietf.org/doc/html/rfc5646" target="_blank" rel="noopener">RFC 5646</a></p></li>
+<li class="listitem">
+<p>To programmatically convert Memsource languages codes to RFC:</p>
+<div class="procedure">
+<a id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_procedure-idm4579326132376032497269029187"></a><ol class="procedure" type="1">
+<li class="step"><p>Replace <code class="code">_</code> with <code class="code">-</code>.</p></li>
+<li class="step"><p>Convert with the regexp (in PCRE format): <code class="code">^([a-z]{2,})(?:(-[a-z])([a-z]+))?-(?:([a-z]{2})|([a-z])([a-z]{2,})|([0-9]{3}))$</code></p></li>
+</ol>
+</div>
+</li>
+<li class="listitem"><p>Conversion <a class="link" href="https://regex101.com/r/9arsWr/1" target="_blank" rel="noopener">example</a>.</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p><code class="code">{targetLangAndroid}</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Examples: <code class="code">es</code>, <code class="code">en-rUS</code></p></li>
+<li class="listitem"><p>To derive the tags programmatically, convert with the regexp (in PCRE format): <code class="code">-([A-Z]{2})$</code></p></li>
+<li class="listitem"><p>Conversion <a class="link" href="https://regex101.com/r/N6xuSe/1" target="_blank" rel="noopener">example</a>.</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p><code class="code">{targetLangAndroidBCP}</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Examples: <code class="code">b+es</code>, <code class="code">b+en+US</code></p></li>
+<li class="listitem">
+<p>To derive the tags programmatically:</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>Prefix the RFC regexp with <code class="code">b+</code>.</p></li>
+<li class="step"><p>Replace <code class="code">-</code> with <code class="code">+</code>.</p></li>
+</ol></div>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</li>
 <li class="listitem">
 <p>Subfolders can be created within the source folder.</p>
 <p>Available for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208219-Microsoft-Azure-Connector" target="_blank" rel="noopener">Azure</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208079-FTP-Connector" target="_blank" rel="noopener">FTP</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208259-SFTP-Connector" target="_blank" rel="noopener">SFTP</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208039-Dropbox-Connector" target="_blank" rel="noopener">Dropbox</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208139-Google-Drive-Connector" target="_blank" rel="noopener">Google Drive</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106840-Box-Connector" target="_blank" rel="noopener">Box</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208239-Microsoft-OneDrive-Connector" target="_blank" rel="noopener">OneDrive</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208099-Git-Connector" target="_blank" rel="noopener">Git</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208119-GitHub-Connector" target="_blank" rel="noopener">GitHub</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106900-GitLab-Connector" target="_blank" rel="noopener">GitLab</a>, and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012207979-Bitbucket-Cloud-Connector" target="_blank" rel="noopener">Bitbucket Cloud</a>.</p>

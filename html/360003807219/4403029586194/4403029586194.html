@@ -1,0 +1,81 @@
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<p>Only available in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">workflow</a> steps in which LQA is enabled.</p>
+<div dir="ltr" class="note">
+<h3 class="title">Note</h3>
+<p>Previously created LQA annotations in the comments functionality are no longer supported. Recreate them after starting the assessment for them to count towards LQA scores.</p>
+</div>
+<p>When evaluating content quality, different rules may be required for different content types or clients. Some content may need to have precise terminology and others may need to follow locale convention or be precise with target length and markup. Errors may also require different severities or assigned weights.</p>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-9bfa4b5c-9bdc-ae9a-51e8-32126336ba05" id="UUID-9bfa4b5c-9bdc-ae9a-51e8-32126336ba05_UUID-dcdc131c-f5cb-a016-ed4a-503b299f6d61"></a>Add an LQA Evaluation</h2></div>
+<p>To add an evaluation, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-9bfa4b5c-9bdc-ae9a-51e8-32126336ba05_procedure-idm4646117337824031690760810356"></a><ol class="procedure" type="1">
+<li class="step"><p>Select the LQA tab and click <span class="guilabel">Start assessment</span>.</p></li>
+<li class="step">
+<p>Select a segment.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>To evaluate a particular piece of text, select the text inside the segment.</p></li></ul></div>
+</li>
+<li class="step">
+<p>Click the flag icon <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4403014230034/160daae0e6b84b.png" style="" alt="lqa_flag.png"></span>next to the segment. </p>
+<p>The <span class="guilabel">LQA</span> tab opens and selected text is highlighted within the segment.</p>
+</li>
+<li class="step">
+<p>Select an <span class="guimenu">Error Category</span>, <span class="guimenu">Severity</span> and an optional description. </p>
+<p>Repeat this step to add more evaluations.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Flag issue</span>.</p>
+<p>LQA evaluation is added and can be edit, replied to or deleted from the <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4403014230418/160daae0e6096a.png" style="" alt="vertical_dot.png"></span> menu.</p>
+</li>
+<li class="step">
+<p>Click <span class="guilabel">Save LQA</span>.</p>
+<p>Evaluations are added to the <span class="guimenu">LQA</span> tab.</p>
+</li>
+</ol>
+</div>
+<p>Segments with LQA evaluations are identified with a solid flag icon <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4403014230802/160daae0e70656.png" style="" alt="solid_lqa_flag.png"></span>.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-9bfa4b5c-9bdc-ae9a-51e8-32126336ba05" id="UUID-9bfa4b5c-9bdc-ae9a-51e8-32126336ba05_UUID-fb31abac-d6e0-b9a1-6760-2a58b52a9af1"></a>LQA Assessments</h2></div>
+<p>To generate the LQA assessment, click <span class="guilabel">Finish</span> in the LQA tab. Overall feedback can be optionally applied.</p>
+<p>A score will be calculated and a result will be displayed based on the pass/fail threshold set in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186500-Language-Quality-Assessment-LQA-#lqa-profiles-0-1" target="_blank" rel="noopener">LQA profile</a>. The score and the result are displayed in the LQA tab and on the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675720-Project-Overview#jobs-table-0-2" target="_blank" rel="noopener">jobs table</a> in the LQA score column if LQA is enabled for that workflow step. </p>
+<p><span class="bold bold"><strong>Scoring example:</strong></span></p>
+<div class="informalexample">
+<a id="UUID-9bfa4b5c-9bdc-ae9a-51e8-32126336ba05_example-idm4529652627118432498867170512"></a><p>A text of 500 words is set to fail LQA when it contains 1 critical <span class="emphasis"><em>Accuracy</em></span> error and 1 minor <span class="emphasis"><em>Grammar</em></span> error. The <span class="emphasis"><em>Accuracy</em></span> error is given a weight of 2.0 and <span class="emphasis"><em>Grammar</em></span> a weight of 1.0. Critical severity is penalized with 10 points and minor severity with 1 penalty point.</p>
+<div class="procedure">
+<a id="UUID-9bfa4b5c-9bdc-ae9a-51e8-32126336ba05_procedure-idm4653299653019232498867923603"></a><ol class="procedure" type="1">
+<li class="step">
+<p>Count the number of issues for each error category and multiply by respective severity weight and error weight:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Accuracy penalties = number of critical errors x critical error penalty x accuracy weight = 1 x 10 x 2.0 = 20 penalty points</p></li>
+<li class="listitem"><p>Grammar penalties = number of minor errors x minor error penalty x grammar weight = 1 x 1 x 1.0 = 1 penalty point</p></li>
+</ul></div>
+</li>
+<li class="step">
+<p>Add up the penalties:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Penalty total = Accuracy penalties + Grammar penalties = 20 + 1 = 21</p></li></ul></div>
+</li>
+<li class="step">
+<p>Calculate the pass/fail score, using the MQM scoring model [<span class="emphasis"><em>Score = 1 - Penalty total/Wordcount</em></span>]:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Score = 1 - Penalty total/Wordcount = 1 - 21/500 = 0.958</p></li></ul></div>
+</li>
+<li class="step">
+<p>Present the score result as a percentage:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Score % = 0.958 x 100 = 95.8</p></li></ul></div>
+</li>
+<li class="step">
+<p>Enter Score % as your pass/fail threshold:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Your pass/fail threshold is 95.8 %</p></li></ul></div>
+</li>
+</ol>
+</div>
+</div>
+<p>LQA issues in the LQA tab can be sorted by segment, severity, error category, and modification date. The scorecard can also be downloaded from the LQA tab once the job is set to complete.</p>
+<p>Clicking on the results in the jobs table opens a scorecard window with options to send the scorecard by email or export as a spreadsheet (XLXS) file. Right-click on more than one selected job to have the option to download multiple scorecards.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
