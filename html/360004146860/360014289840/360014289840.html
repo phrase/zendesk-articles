@@ -17,6 +17,26 @@
 <p><span class="guimenu">Context key</span></p>
 <p>Specify a context key that is saved with the segment to the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279-Translation-Memories-Overview" target="_blank" rel="noopener">Translation Memory</a> and used for match context.</p>
 </li>
+<li class="listitem">
+<p><span class="guimenu">Use regexp capturing groups</span></p>
+<p>With this option enabled, only the grouped parts of the regular expressions in the above fields will be processed.</p>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<div class="informalexample">
+<a id="UUID-122e1802-eae9-d766-29da-9504a7d63d3c_example-idm4578641720004832516596367464"></a><p>If the TXT file contains this string:</p>
+<p><code class="code">xyz, First value, abc, Second value</code></p>
+<p>and</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Translatable text regexp is: <code class="code">^[^,]+, ([^,]+), [^,]+, ([^,]+)$</code></p></li>
+<li class="listitem"><p>Translatable text regexp is: <code class="code">^[^,]+, ([^,]+), [^,]+, ([^,]+)$</code></p></li>
+</ul></div>
+<p>then</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>1st segment will be <code class="code">First value</code> with context key <code class="code">xyz</code></p></li>
+<li class="listitem"><p>2nd segment will be <code class="code">Second value</code> with context key <code class="code">abc</code></p></li>
+</ul></div>
+</div>
+<p>This option does not affect the functionality of Convert to Memsource tags, i. e. using groups in that field will not limit the tag conversion to the grouped code part.</p>
+</li>
 </ul></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>

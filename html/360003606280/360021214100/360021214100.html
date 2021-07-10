@@ -92,7 +92,7 @@
 <p><span class="guimenu">Update existing project:</span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
 <li class="listitem"><p>If there was no update to source or target segments in Figma, then both source and target are populated in the job and the segment is confirmed.</p></li>
-<li class="listitem"><p>If target was updated, but source wasn't, then the segment is populated but unconfirmed.</p></li>
+<li class="listitem"><p>If target was updated, but source wasn't, then the segment is populated but unconfirmed. If reviewed segments also require confirmation, add <code class="code">state=reviewed</code> to <span class="guimenu">Set segment confirmed when</span> in the XLIFF 2.0 file filter configuration.</p></li>
 <li class="listitem"><p>If the source changed, then the source is populated with the updated entry but target is empty.</p></li>
 </ul></div>
 </li>
