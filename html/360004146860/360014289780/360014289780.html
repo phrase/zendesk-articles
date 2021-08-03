@@ -1,6 +1,14 @@
-<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
 <p>Tag content of source file can be visualized in the Editor by clicking <span class="guilabel">Expand Tags</span> under the <span class="guimenu">Tool</span> menu and edited by clicking <span class="keycap"><strong>F2</strong></span>.</p>
 <p>All elements have at least the following translatable attributes: <span class="emphasis"><em>title</em></span>, <span class="emphasis"><em>aria-label</em></span>, <span class="emphasis"><em>aria-valuetext</em></span>.</p>
+<p>Non standard html tags are:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="emphasis"><em>ignored</em></span> - separate paragraphs are created when <span class="guimenu">Convert non-HTML tags to Memsource tags</span> is set to false.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Standard ignored html tags: <code class="code">base</code>, <code class="code">basefont</code>, <code class="code">canvas</code>, <code class="code">colgroup</code>, <code class="code">frameset</code>, <code class="code">link</code>, <code class="code">object</code>, <code class="code">script</code>, <code class="code">style</code></p></li></ul></div>
+</li>
+<li class="listitem"><p>Imported as single (non-translatable) inline tags when <span class="guimenu">Convert non-HTML tags to Memsource tags</span> is true</p></li>
+</ul></div>
 <p>Some elements have more attributes: <code class="code">&lt;img&gt;</code> has <span class="emphasis"><em>alt</em></span>, but <code class="code">&lt;a&gt;</code> does not as <span class="emphasis"><em>alt</em></span> is not a standard attribute for <code class="code">&lt;a&gt;</code>. </p>
 <p>See <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank" rel="noopener">HTML elements reference</a> for standard attributes and use of <a class="link" href="https://www.w3schools.com/html/html_entities.asp" target="_blank" rel="noopener">HTML entities</a>.</p>
 <h2>
@@ -20,7 +28,7 @@
 </li>
 <li class="listitem"><p><span class="guimenu">Preserve whitespaces</span></p></li>
 <li class="listitem">
-<p><span class="guimenu">Update language declaration in completed files</span> </p>
+<p><span class="guimenu">Update language declaration in completed files</span></p>
 <p>All language declarations in the completed HTML files are updated with a <a class="link" href="https://www.w3schools.com/tags/ref_language_codes.asp" target="_blank" rel="noopener">proper language code</a>.</p>
 </li>
 <li class="listitem">
