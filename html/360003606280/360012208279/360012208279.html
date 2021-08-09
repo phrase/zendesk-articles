@@ -55,18 +55,24 @@
 <p>To enable the Rest API, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_procedure-idm4616737252214431619883176797"></a><ol class="procedure" type="1">
-<li class="step"><p>In the file <code class="code">{SITECORE_ROOT}Website\App_Config\Include\Sitecore.ItemWebApi.config</code> set <code class="code">itemwebapi.mode</code> and <code class="code">itemwebapi.access</code>.</p></li>
 <li class="step">
-<p>Restart the server/service:</p>
+<p>In the file <code class="code">{SITECORE_ROOT}Website\App_Config\Include\Sitecore.ItemWebApi.config</code> set <code class="code">itemwebapi.mode</code> and <code class="code">itemwebapi.access</code>:</p>
 <pre class="programlisting">&lt;site name="website"&gt;
     &lt;patch:attribute name="itemwebapi.mode"&gt;StandardSecurity&lt;/patch:attribute&gt;
     &lt;patch:attribute name="itemwebapi.access"&gt;ReadWrite&lt;/patch:attribute&gt;
-    &lt;patch:attribute name="itemwebapi.allowanonymousaccess"&gt;false&lt;/patch:attribute&gt;
 &lt;/site&gt;</pre>
 </li>
 <li class="step">
 <p>Set the security policies:</p>
-<p>In the file <code class="code">{SITECORE_ROOT}Website\App_Config\Include\Sitecore.Services.Client.config</code> set the value <code class="code">Sitecore.Services.SecurityPolicy</code> from <code class="code">Sitecore.Services.Infrastructure.Web.Http.Security.ServicesLocalOnlyPolicy, Sitecore.Services.Infrastructure</code>to <code class="code">Sitecore.Services.Infrastructure.Web.Http.Security.ServicesOnPolicy, Sitecore.Services.Infrastructure</code>.</p>
+<p>In the file <code class="code">{SITECORE_ROOT}Website\App_Config\Include\Sitecore.Services.Client.config</code> set the value <code class="code">Sitecore.Services.SecurityPolicy</code> to <code class="code">Sitecore.Services.Infrastructure.Web.Http.Security.ServicesOnPolicy, Sitecore.Services.Infrastructure</code>.</p>
+</li>
+<li class="step"><p>Restart the server/service.</p></li>
+<li class="step">
+<p>Open<code class="code">/sitecore/admin/showconfig.aspx</code> and validate that the configuration was correctly applied:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Item REST API enabled: <code class="code">&lt;site name="website" itemwebapi.mode="StandardSecurity" itemwebapi.access="ReadWrite" patch:source="Sitecore.ItemWebApi.config"/&gt;</code></p></li>
+<li class="listitem"><p>Security policy applied: <code class="code">&lt;setting name="Sitecore.Services.SecurityPolicy" value="Sitecore.Services.Infrastructure.Web.Http.Security.ServicesOnPolicy, Sitecore.Services.Infrastructure" patch:source="Sitecore.Services.Client.config"/&gt;</code></p></li>
+</ul></div>
 </li>
 </ol>
 </div>
@@ -89,7 +95,7 @@
 <a data-zd-article="UUID-5e8515e4-94aa-2905-6667-d48e88429263" id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h2></div>
 <div class="procedure">
 <a id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4403432744850/160e695bbadc77.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4404909247890/16110be3aac94a.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
