@@ -23,10 +23,10 @@
 </li>
 <li class="step">
 <p>Sort results by rearranging the language columns, and clicking on <span class="guimenu">Set up columns</span> to select what columns are visible.</p>
-<p>Hover over <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360026876100/160b71b172e7a2.png" style="" alt="TM_search_info.png"></span> to see details of the translation unit.</p>
+<p>Hover over <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4405009412370/1611368cadd9af.png" style="" alt="TM_search_info.png"></span> to see details of the translation unit.</p>
 </li>
 <li class="step">
-<p>Double click on translation unit text to edit it and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360026876120/160b71b17330f9.png" style="" alt="TM_deleteunit.png"></span> to delete it.</p>
+<p>Double click on translation unit text to edit it and <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4405009412754/1611368cae12d2.png" style="" alt="TM_deleteunit.png"></span> to delete it.</p>
 <div dir="ltr" class="caution">
 <h3 class="title">Caution</h3>
 <p>Editing translation units within a TM is permanent. There is no undo function. If performing major maintenance, export the TM in TMX format and save in ZIP format as a backup.</p>
@@ -87,10 +87,14 @@
 <a data-zd-article="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32" id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_UUID-d6faa376-2d18-62d2-e5a3-0347f9184ef8"></a>Edit Translation Memories in XLSX Files</h3></div>
 <h4>
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_bridgehead-idm231764802906591"></a>TM Replacement</h4>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>XLSX files can be edited and then imported back into new Translation Memories that replace the previous version. The old TM should be deleted as to not cause confusion.</p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>XLSX files can be edited and then imported back into new translation memories that replace the previous version. The old TM should be deleted as to not cause confusion.</p></li></ul></div>
 <h4>
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_bridgehead-idm231764803443063"></a>TM Update</h4>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The file can be edited with <code class="code">|update</code> or <code class="code">|delete</code> added to the segment's ID. These translation units will then be updated or deleted when the XLSX file is imported back into the TM. Duplicates created with the update function cannot be automatically removed and must be deleted manually. If duplicates are found, an error message is displayed.</p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+<p>The file can be edited with <code class="code">|update</code> or <code class="code">|delete</code> added to the segment's ID. Marked translation units will then be updated or deleted when the XLSX file is imported back into the TM.</p>
+<p>Duplicates created with the update function cannot be automatically removed and must be deleted manually; an error message is displayed if duplicates are found.</p>
+<p>If exporting an XLSX file without context, just edit the translation. If segments are marked with <code class="code">|update</code> and imported back, these segments will be imported as new.</p>
+</li></ul></div>
 <h3>
 <a id="UUID-33ff7cd8-f1da-c784-3141-5883c39dfc32_bridgehead-idm231764808304843"></a>Deleting Multiple 100% Matches</h3>
 <p>A 100% match is a segment with the same source but different context. If segments don't require context (every source text has only one translation, regardless of the context in the file), the TM can be exported with no context and imported into a new TM.</p>
@@ -327,7 +331,7 @@
 <li class="step">
 <p>Click <span class="guilabel">Import</span>.</p>
 <p>The window closes and the file is imported into the TM.</p>
-<p>If there is an error, <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360026885739/160b71b1737606.png" style="" alt="Warning.png"></span> is shown in the <span class="guimenu">Last Import</span> field of the translation memory page. Hover over the warning for error details.</p>
+<p>If there is an error, <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4405002686226/1611368cae4a69.png" style="" alt="Warning.png"></span> is shown in the <span class="guimenu">Last Import</span> field of the translation memory page. Hover over the warning for error details.</p>
 </li>
 </ol>
 </div>
