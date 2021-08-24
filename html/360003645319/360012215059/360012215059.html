@@ -22,13 +22,17 @@
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6" id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_UUID-f7eb992a-6e9e-45a6-8129-3142ca2e29a1"></a>Set up Automation Rules</h2></div>
-<p> <span class="bold bold"><strong>Prerequisites:</strong></span> </p>
+<p><span class="bold bold"><strong>Prerequisites:</strong></span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>At least one <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360012207959#UUID-2aebdc84-c474-f68d-92e3-a50eb8966572">connector</a> and one <a class="link" href="https://help.memsource.com/hc/articles/360012215099#UUID-f021f3f3-3659-b700-c1a6-421cf8ce5b5b" title="Services">service</a> in a Memsource account.</p></li></ul></div>
+<div dir="ltr" class="note">
+<h3 class="title">Note</h3>
+<p>When the service is created, ensure either <span class="guilabel">Analyses only</span> or <span class="guilabel">Analyses and quotes</span> is selected and the <span class="guimenu">Use naming defined in the project template's settings</span> option is deselected in the <span class="guimenu">Financials</span> section. An error will occur if <span class="guilabel">None</span> is selected.</p>
+</div>
 <p>Follow these steps:</p>
 <div class="procedure">
 <a id="UUID-2558de58-eb7e-d298-f22a-d41dd17b1de6_procedure-idm4573163243731231650971943354"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4404380060562/16100f7927eded.png" style="" alt="Setup_gear.png"></span> page, click <span class="guilabel">Automated Project Creation</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4405593045522/16124e80ce607f.png" style="" alt="Setup_gear.png"></span> page, click <span class="guilabel">Automated Project Creation</span>.</p>
 <p>The <span class="guimenu">Automated Project Creation</span> page opens.</p>
 </li>
 <li class="step">
@@ -37,7 +41,7 @@
 </li>
 <li class="step"><p>Provide a name for the APC.</p></li>
 <li class="step"><p>Set active/inactive status.</p></li>
-<li class="step"><p>Select <span class="guimenu">Run as <a class="link" href="https://help.memsource.com/hc/en-us/articles/360016584619" target="_blank" rel="noopener">Continuous Project</a> </span> if required.</p></li>
+<li class="step"><p>Select <span class="guimenu">Run as <a class="link" href="https://help.memsource.com/hc/en-us/articles/360016584619" target="_blank" rel="noopener">Continuous Project</a></span> if required.</p></li>
 <li class="step">
 <p>Choose the <span class="guilabel">Remote Folder</span> to monitor for new or updated content.</p>
 <p>The contents of the folder are listed</p>
@@ -59,7 +63,7 @@
 <p>Designate a <span class="guimenu">Processed subfolder</span>.</p>
 <p>Files imported to Memsource are moved to this folder providing visibility on which files are being processed. If disabled, source files stay in their original folder.</p>
 <p>If this option is disabled and File Renaming is not used, original documents can be overwritten by their translations (depending on repository).</p>
-<p> <span class="guimenu">Filename Pattern (regex)</span> lets customers define a <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expression</a> to filter out files to be monitored within the folder.</p>
+<p><span class="guimenu">Filename Pattern (regex)</span> lets customers define a <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expression</a> to filter out files to be monitored within the folder.</p>
 </li>
 <li class="step"><p>Set a frequency for how often Memsource should check for new content in the designated folder.</p></li>
 <li class="step"><p>Choose required <span class="guimenu">Service</span>.</p></li>
