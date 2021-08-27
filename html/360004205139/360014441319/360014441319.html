@@ -5,8 +5,8 @@
 <li class="listitem"><p>Development of a translator's workbench. Memsource Editor is built on top of public APIs.</p></li>
 <li class="listitem"><p>Creation of a brand new tool or service which uses Memsource in its backend.</p></li>
 </ul></div>
-<h3>
-<a id="UUID-449f8e5a-e097-a24a-5daa-461e62f77337_bridgehead-idm23183579250793"></a>Developer Edition</h3>
+<h2>
+<a id="UUID-449f8e5a-e097-a24a-5daa-461e62f77337_bridgehead-idm23183579250793"></a>Developer Edition</h2>
 <p>To start using Memsource REST APIs, <a class="link" href="https://cloud.memsource.com/web/organization/signup?e=DEVELOPER" target="_blank" rel="noopener">sign up</a> for the Memsource Developer edition. This free edition is designed to be used as a sandbox for API development. Users can use <a class="link" href="https://www.postman.com/" target="_blank" rel="noopener">Postman</a> to learn about and test Memsource APIs.</p>
 <p>Developer edition restrictions:</p>
 <p>Developers may use this edition for development and testing purposes only. <a class="link" href="https://help.memsource.com/hc/en-us/articles/360029992831-Memsource-Technical-Support-Policy#contacting-support-0-3" target="_blank" rel="noopener">Contact Memsource Technical Support</a> if you need these limits increased or modified.</p>
@@ -16,8 +16,8 @@
 <li class="listitem"><p>A maximum of 1 Administrator user and 1 Linguist user</p></li>
 </ul></div>
 <p>Memsource REST API documentation is available on a <a class="link" href="https://cloud.memsource.com/web/docs/api" target="_blank" rel="noopener">dedicated site</a>. It is automatically generated and can be downloaded and exported.</p>
-<h3>
-<a id="UUID-449f8e5a-e097-a24a-5daa-461e62f77337_bridgehead-idm231835794201498"></a>Basic Workflow</h3>
+<h2>
+<a id="UUID-449f8e5a-e097-a24a-5daa-461e62f77337_bridgehead-idm231835794201498"></a>Basic Workflow</h2>
 <p>Memsource procedures and workflow must be understood before using Memsource APIs. It is recommended to be familiar with a procedure in the Memsource application before implementing the related API.</p>
 <p>The basic workflow is:</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
@@ -26,5 +26,30 @@
 <li class="listitem"><p>Upload your file for translation to the project (also called creating a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview" target="_blank" rel="noopener">job</a> in Memsource).</p></li>
 <li class="listitem"><p>You can then <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview" target="_blank" rel="noopener">analyze</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780-Pre-translation-Overview" target="_blank" rel="noopener">pre-translate</a> or assign the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview" target="_blank" rel="noopener">job</a> to a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013918760-Linguist-Overview" target="_blank" rel="noopener">Linguist</a>.</p></li>
 </ol></div>
+<h2>
+<a id="UUID-449f8e5a-e097-a24a-5daa-461e62f77337_bridgehead-idm231837207461388"></a>Asynchronous APIs</h2>
+<p>Asynchronous APIs should always be preferred to their synchronous counterparts. If calling synchronous APIs, there is a chance of receiving timeout expired responses when processing large batches of files or even a single large file. Synchronous APIs should only be used for small files and small scale Memsource integration.</p>
+<h2>
+<a id="UUID-449f8e5a-e097-a24a-5daa-461e62f77337_bridgehead-idm231837208750473"></a>Polling</h2>
+<p>After calling an asynchronous API, an instant response is received including the identifier request. Use this identifier to check the status of the request by calling <a class="link" href="https://cloud.memsource.com/web/docs/api#tag/Async-Request" target="_blank" rel="noopener">getAsyncRequest</a> and checking the <span class="emphasis"><em>asyncResponse</em></span> field. This polling approach can lead to a number of <span class="emphasis"><em>getAsyncRequest</em></span> calls before receiving an <span class="emphasis"><em>asyncResponse</em></span> that is not null.</p>
+<h2>
+<a id="UUID-449f8e5a-e097-a24a-5daa-461e62f77337_bridgehead-idm231837210920967"></a>Callbacks</h2>
+<p>As a response to the drawbacks of the polling approach to asynchronous requests, support for callbacks in all asynchronous APIs is supported. When calling an asynchronous request, specify a URL (in the <span class="emphasis"><em>callbackUrl</em></span> parameter) that is requested after the work initiated by the asynchronous request is complete.</p>
+<p>Callbacks are requested via HTTP POST calls and the data is passed on in the body encoded as JSON. The JSON object always contains:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Information about the asynchronous request (the same as when calling <span class="emphasis"><em>getAsyncRequest</em></span>).</p></li>
+<li class="listitem"><p>Detailed information about the result of the action such as a full analysis or job details.</p></li>
+</ul></div>
+<pre class="programlisting">{
+   "asyncRequest": {
+       ...
+  }
+ "analyse": {   
+   ...
+  }
+}</pre>
+<p>If a callback URL is not accessible, the request is repeated after 2, 4, 8, 16, and 30 minutes until 10 retries have failed.</p>
+<p>Your callback URL must respond with the 200 OK HTTP status code to be considered successful on our side.</p>
+<p>Callback URL must respond with the 200 OK HTTP status code to be considered successful.If the Include subfolders option is selected in API:</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
