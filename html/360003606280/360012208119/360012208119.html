@@ -19,6 +19,13 @@
 <p>Use <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059-Automated-Project-Creation" target="_blank" rel="noopener">Automated Project Creation (APC)</a> to have Memsource automatically create new projects when a change in <span class="bold bold"><strong>file size</strong></span> is detected in monitored files or a folder.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
 <li class="listitem"><p>Selected files are imported the very first time APC runs. All files are imported when a folder is monitored.</p></li>
+<li class="listitem">
+<p>When the Include subfolders option is selected in APC:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>APC creates a new project if there is a change in any file directly in the monitored folder or its subfolders</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360016584619" target="_blank" rel="noopener">CP</a> creates/updates new project/job if there is a change in any file directly in the monitored folder OR its subfolders</p></li>
+</ul></div>
+</li>
 <li class="listitem"><p>Use the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208099-Git-Connector" target="_blank" rel="noopener">Git connector</a> if you need to monitor an entire subdirectory.</p></li>
 <li class="listitem"><p>This connector supports absolute path setting. Target translation files can be stored only in the same branch as the source file.</p></li>
 </ul></div>
@@ -47,7 +54,7 @@
 <a data-zd-article="UUID-ed5e26df-5f02-6c62-aeb2-8cda7d3944c6" id="UUID-ed5e26df-5f02-6c62-aeb2-8cda7d3944c6_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h2></div>
 <div class="procedure">
 <a id="UUID-ed5e26df-5f02-6c62-aeb2-8cda7d3944c6_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4403669351058/160ed202946ad4.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4406225937298/16135baee2c5aa.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
