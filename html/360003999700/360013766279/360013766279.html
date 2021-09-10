@@ -25,7 +25,7 @@
 <p>Have a group of trusted providers (linguists/vendors) who deliver high-quality output that is saved to the master TM. When working with a provider for the first time or with someone whose output quality varies, consider using a secondary <span class="emphasis"><em>working</em></span> translation memory where they can commit segments and keep the master TM in read-only mode. Use the master TM in Read and Write mode in later workflow steps where review is performed.</p>
 <p>Preventing content of questionable quality from being included in a TM is easier than removing it later.</p>
 <p> <span class="emphasis"><em>Suggested TM configuration:</em></span> </p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360026876080/160b71b1727704.png" style="" alt="tm-vendor.png"></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/4406428502674/1613b15f0b313c.png" style="" alt="tm-vendor.png"></div>
 </li>
 <li class="listitem">
 <p> <span class="bold bold"><strong>Add <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872139-Context-Information" target="_blank" rel="noopener">context information</a> to source files</strong></span> </p>
@@ -314,16 +314,15 @@
 <p>Appending the ID with the word <span class="emphasis"><em>delete</em></span> instead of <span class="emphasis"><em>update</em></span> will delete those segments on import.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
-<div class="panel-heading"><div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-82a39631-b1e5-ec9e-c57f-497c93f8e6a9"></a>Translation Unit Metadata</h2></div></div>
-<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-82a39631-b1e5-ec9e-c57f-497c93f8e6a9_body">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-82a39631-b1e5-ec9e-c57f-497c93f8e6a9"></a>Translation Unit Metadata</h2></div>
 <p>A translation unit (TU) is a source segment and the target segments for all languages grouped together and saved into a translation memory. It's not possible to save multiple target versions in the same language, there can be only one target segment per selected language.</p>
 <p>When a segment/TU is saved, pre-defined attributes or metadata are automatically added to the source and/or target of the TU in the translation memory.</p>
 <div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-3ed4a0e4-04f7-1bef-a127-8d5d5867fd1e"></a>Memsource TU Attribute Metadata</h3></div></div>
-<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-3ed4a0e4-04f7-1bef-a127-8d5d5867fd1e_body"><div class="panel-inner">
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-3ed4a0e4-04f7-1bef-a127-8d5d5867fd1e_body">
 <p>These attributes can be saved with the target segment or source segment as indicated:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p> <span class="bold bold"><strong>Created (date/time)</strong></span> - target segment</p></li>
@@ -363,13 +362,13 @@
 </li>
 </ul></div>
 <p>Translation Memory attributes (<span class="emphasis"><em>Domain</em></span>, <span class="emphasis"><em>Client</em></span>, <span class="emphasis"><em>Business Unit</em></span>, etc.) have no effect on translation unit metadata.</p>
-</div></div>
+</div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div></div>
 <div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-db8ccb28-747b-2658-e77b-a6ec1f28e8d0"></a>TMX Format</h3></div></div>
-<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-db8ccb28-747b-2658-e77b-a6ec1f28e8d0_body"><div class="panel-inner">
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-db8ccb28-747b-2658-e77b-a6ec1f28e8d0_body">
 <p>For importing and exporting the content of a translation memory using the TMX format, the following metadata is supported:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
@@ -392,13 +391,13 @@
 &lt;prop type="filename"&gt;File name&lt;/prop&gt;&lt;prop type="aligned"&gt;false&lt;/prop&gt;&lt;prop type="reviewed"&gt;false&lt;/prop&gt;</pre>
 </li>
 </ul></div>
-</div></div>
+</div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div></div>
 <div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h3 class="title">
 <a data-zd-article="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-7180f4b1-e603-e161-300e-fc51943253a1"></a>XLSX Format</h3></div></div>
-<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-7180f4b1-e603-e161-300e-fc51943253a1_body"><div class="panel-inner">
+<div class="panel-body collapse" id="UUID-f0e3604f-bdd4-302a-36fa-b030b9f47f21_UUID-7180f4b1-e603-e161-300e-fc51943253a1_body">
 <p>For importing and exporting the content of a translation memory using the XLSX format, the following metadata is supported:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p> <span class="bold bold"><strong>ID</strong></span> - Memsource internal ID</p></li>
@@ -423,11 +422,10 @@
 <li class="listitem"><p> <span class="bold bold"><strong>mdata</strong></span> - metadata of Memsource tags</p></li>
 </ul></div>
 <p>The order of the columns reflects the attributes of the source segment and the attributes of the target segment.</p>
-</div></div>
-<div class="glossary-definitions" style="display:none!important;"></div>
-</div></div>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>

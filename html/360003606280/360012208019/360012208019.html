@@ -46,7 +46,7 @@
 <a data-zd-article="UUID-04a21362-dc76-060b-dc60-0bde0a953c50" id="UUID-04a21362-dc76-060b-dc60-0bde0a953c50_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h2></div>
 <div class="procedure">
 <a id="UUID-04a21362-dc76-060b-dc60-0bde0a953c50_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4406219277586/16135baee2c5aa.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4406420618770/1613b144e25f90.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -64,11 +64,20 @@
 <p>The entry-level connector automatically traverses the entire hierarchy of nested content.</p>
 </li>
 <li class="listitem">
-<p><span class="bold bold"><strong>Contentful</strong></span></p>
+<p><span class="bold bold"><strong>Contentful (Field-Level)</strong></span></p>
 <p>Select how the field-level connector should import nested content.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p>Selected entry only - only content that's explicitly selected when adding content from the online repository or when a change is detected by Automated Project Creation is imported for translation.</p></li>
-<li class="listitem"><p>Import referenced entries - the connector traverses the entire hierarchy of nested content and imports all translatable fields for translation.</p></li>
+<li class="listitem">
+<p><span class="guimenu">Selected entry only</span> </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>Content that is explicitly selected when adding from the repository is imported.</p></li>
+<li class="listitem"><p>Changes detected by <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">APC</a> are imported for translation.</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>Import referenced entries</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; "><li class="listitem"><p>The connector traverses the entire hierarchy of nested content and imports all translatable fields for translation.</p></li></ul></div>
+</li>
 </ul></div>
 <p>Select <span class="guimenu">Use fallback Language</span> if required.</p>
 <p>Select a <span class="guimenu">Source Language fallback</span> from the dropdown list if required.</p>
