@@ -1,0 +1,17 @@
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<p>The right hand drop down of <span class="guimenu">Articles related to....</span>:</p>
+<div class="mediaobject"><img src="https://help.memsource.com/hc/article_attachments/4407009257618/1614890d2341d5.png" style="" alt="Related_articles_menu.png"></div>
+<p>The menu is defined in <a class="link" href="https://github.com/Memsource/zendesk-theme/blob/master/templates/article_page.hbs" target="_blank" rel="noopener"><code class="code">article_page.hbs</code></a> maintained in the templates folder of the zendesk-theme directory on GitHub. The specific class is <code class="code">div class="related-to-label"</code>. If access is required, contact <a class="link" href="mailto:michal.kebrt@memsource.com" target="_blank">Michal Kebrt</a>.</p>
+<p>The content is defined with <a class="link" href="https://memsource.zendesk.com/agent/admin/dynamic_content" target="_blank" rel="noopener">dynamic content</a> items; each category having its own item.</p>
+<p>Articles are assigned categories using an applied taxonomy in Paligo. When published, taxonomies are applied as labels on the HC articles.</p>
+<p>To create a new category, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-a3c426d4-de0c-c580-9423-39b80069fc3c_procedure-idm4534107049739232642552755572"></a><ol class="procedure" type="1">
+<li class="step"><p>Add the class to the <code class="code">article_page.hbs</code> file copying the format of the existing classes.</p></li>
+<li class="step"><p>Create the dynamic content item using the same formatting as the existing items.</p></li>
+<li class="step"><p>Create the taxonomy in Paligo and apply it to the required articles.</p></li>
+<li class="step"><p>Publish the articles.</p></li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
