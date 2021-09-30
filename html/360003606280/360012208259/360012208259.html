@@ -35,7 +35,7 @@
 <a data-zd-article="UUID-0abc6c55-1c9e-935e-7d19-8181eed2431e" id="UUID-0abc6c55-1c9e-935e-7d19-8181eed2431e_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h2></div>
 <div class="procedure">
 <a id="UUID-0abc6c55-1c9e-935e-7d19-8181eed2431e_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4406620051730/16140b58550756.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4407518848786/1615596b077bc5.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -48,11 +48,14 @@
 <li class="step">
 <p>Provide the following information:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><span class="emphasis"><em>Host</em></span> name. Does not include the protocol (e.g. files.example.com).</p></li>
-<li class="listitem"><p><span class="emphasis"><em>Port</em></span> number (default setting is 22).</p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Host</em></span> name. Does not include the protocol (e.g. files.example.com).</p></li>
+<li class="listitem"><p> <span class="emphasis"><em>Port</em></span> number (default setting is 22).</p></li>
 <li class="listitem"><p>SFTP <span class="emphasis"><em>Username</em></span>.</p></li>
 <li class="listitem"><p>SFTP <span class="emphasis"><em>Password</em></span>.</p></li>
-<li class="listitem"><p>SSH <span class="emphasis"><em>key</em></span>.</p></li>
+<li class="listitem">
+<p>SSH <span class="emphasis"><em>key</em></span>.</p>
+<p>Only legacy PEM private key format is supported when using the SSH key for authentication. Use the <span class="emphasis"><em>-m</em></span> PEM option when generating the SSH key with ssh-keygen.</p>
+</li>
 <li class="listitem"><p>SSH <span class="emphasis"><em>passphrase</em></span>.</p></li>
 </ul></div>
 </li>
