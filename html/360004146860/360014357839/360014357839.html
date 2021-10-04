@@ -32,39 +32,409 @@
 <p>Constitutes TM context (101% matches) if applicable.</p>
 </li>
 </ul></div>
-<p>Example:</p>
-<p><code class="code">../note</code> and <code class="code">../length</code> used in import settings</p>
-<div class="informalexample">
-<a id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_example-idm231826985539374"></a><p>Settings:</p>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-2a16ed0d-9084-f3bc-c9a6-b8ea1d7d0d87"></a>Simple JSON</h2></div></div>
+<div class="panel-body collapse" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-2a16ed0d-9084-f3bc-c9a6-b8ea1d7d0d87_body">
+<p>JSON is short for JavaScript Object Notation. Although originally designed only for JavaScript, it became a standard exchange file format in parallel with XML, YAML, Properties, etc. JSON consists of key-value pairs wrapped in curly brackets. A value can either be a string, a number, or an object (namely one or more key-value pairs wrapped in curly brackets). Simple JSON is just a JSON file with most of its values being plain strings except for pluralization purposes. In this case, strings placed as values will be the ones that end up being translated.</p>
+<h4>
+<a id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_bridgehead-idm459346776230723266677105553"></a>Recommended Import Settings</h4>
+<p>JSON array is a list of name-value pairs enclosed in square brackets []. JSON object is a list of name-value pairs enclosed in curly braces {}</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p><span class="guimenu">Import specific keys only (use regexp)</span></p>
-<p><code class="code">.*/title|.*/description</code></p>
+<p>Import specific keys only (use regexp): <code class="code">simple_key|nested.deeply.key</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>To import all values of the array following the <span class="emphasis"><em>sample_collection</em></span> key: <code class="code">(^|.*/)sample_collection\[.*\]</code></p></li>
+<li class="listitem"><p>To import all values of the object following the <span class="emphasis"><em>pluralized_key</em></span> key: <code class="code">(^|.*/)pluralized_key/.*</code></p></li>
+</ul></div>
 </li>
+<li class="listitem"><p>Exclude specific keys only (use regexp): <code class="code">unverified_key</code></p></li>
 <li class="listitem">
-<p><span class="guimenu">Context note</span></p>
-<p><code class="code">../note</code></p>
-</li>
-<li class="listitem">
-<p><span class="guimenu">Max. target length</span></p>
-<p><code class="code">../length</code></p>
+<p>Context key:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>For having the value of the <span class="emphasis"><em>key_with_description</em></span> key, use: <code class="code">../key_with_description</code></p></li>
+<li class="listitem"><p>If not specified or missing, it is formed by parent key/child key</p></li>
+<li class="listitem"><p>JSON keys such as <span class="emphasis"><em>boolean_key</em></span> cannot be set as Context key.</p></li>
+</ul></div>
 </li>
 </ul></div>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
 <pre class="programlisting">{
-"root":
-  [
-	{
-	"title":"text for translation 1",
-	"note": "note for text 1",
-	"length":13
-	},
-	{
-	"description":"text for translation 2",
-	"note": "note for text 2",
-	"length":16
-	}
-  ]
+  "boolean_key": "--- true\n",
+  "empty_string_translation": "",
+  "key_with_description": "Check it out! This key has a description! (At least in some formats)",
+  "key_with_line-break": "This translations contains\na line-break.",
+  "nested.deeply.key": "Wow, this key is nested even deeper.",
+  "nested.key": "This key is nested inside a namespace.",
+  "null_translation": null,
+  "pluralized_key": {
+    "one": "Only one pluralization found.",
+    "other": "Wow, you have %s pluralizations!",
+    "zero": "You have no pluralization."
+  },
+  "sample_collection": [
+    "first item",
+    "second item",
+    "third item"
+  ],
+  "simple_key": "Just a simple key with a simple message.",
+  "unverified_key": "This translation is not yet verified and waits for it. (In some formats we also export this status)"
 }</pre>
 </div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-0406291e-d96c-325c-372b-a1ddc82d6d6f"></a>Nested JSON</h2></div></div>
+<div class="panel-body collapse" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-0406291e-d96c-325c-372b-a1ddc82d6d6f_body">
+<p>Nested JSON is simply a JSON file with a fairly big portion of its values being other JSON objects. Compared with Simple JSON, Nested JSON provides higher clarity in that it decouples objects into different layers, making it easier to maintain.</p>
+<h4>
+<a id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_bridgehead-idm4539832830654432666790860111"></a>Recommended Import Settings</h4>
+<p>JSON array is a list of name-value pairs enclosed in square brackets []. JSON object is a list of name-value pairs enclosed in curly braces {}</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Import specific keys only (use regexp): <code class="code">key_with_line-break|simple_key</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>To import the value of the array following the <span class="emphasis"><em>sample_collection</em></span> key: <code class="code">(^|.*/)sample_collection\[.*\]</code></p></li>
+<li class="listitem"><p>To import all values of the object following the <span class="emphasis"><em>pluralized_key</em></span> key: <code class="code">(^|.*/)pluralized_key/.*</code></p></li>
+<li class="listitem"><p>To import the value of the first <span class="emphasis"><em>key</em></span> key: <code class="code">nested/deeply/ke</code>y</p></li>
+<li class="listitem"><p>To import the value of the second <span class="emphasis"><em>key</em></span> key: <code class="code">nested/ke</code>y</p></li>
+<li class="listitem"><p>To import the value of the <span class="emphasis"><em>key</em></span> key regardless of level: <code class="code">(^|.*/)key</code></p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>Exclude specific keys only (use regexp): <code class="code">unverified_key</code></p></li>
+<li class="listitem">
+<p>Context key:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>For having the value of the key <span class="emphasis"><em>key_with_description</em></span>, use: <code class="code">../key_with_description</code></p></li>
+<li class="listitem"><p>If not specified or missing, it is formed by parent key/child key</p></li>
+<li class="listitem"><p>JSON keys such as <span class="emphasis"><em>boolean_key</em></span> cannot be set as Context key.</p></li>
+</ul></div>
+</li>
+</ul></div>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<pre class="programlisting">{
+  "boolean_key": "--- true\n",
+  "empty_string_translation": "",
+  "key_with_description": "Check it out! This key has a description! (At least in some formats)",
+  "key_with_line-break": "This translations contains\na line-break.",
+  "nested": {
+    "deeply": {
+      "key": "Wow, this key is nested even deeper."
+    },
+    "key": "This key is nested inside a namespace."
+  },
+  "null_translation": null,
+  "pluralized_key": {
+    "one": "Only one pluralization found.",
+    "other": "Wow, you have %s pluralizations!",
+    "zero": "You have no pluralization."
+  },
+  "sample_collection": [
+    "first item",
+    "second item",
+    "third item"
+  ],
+  "simple_key": "Just a simple key with a simple message.",
+  "unverified_key": "This translation is not yet verified and waits for it. (In some formats we also export this status)"
+}</pre>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-1e47b021-7a52-ee80-6504-8df828220d81"></a>React-Intl Simple JSON</h2></div></div>
+<div class="panel-body collapse" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-1e47b021-7a52-ee80-6504-8df828220d81_body">
+<p>React-Intl is a JavaScript library designed to simplify internationalization (i18n) and (localization) primarily for applications developed in React. By default, React-Intl uses .js files to store its localized content.</p>
+<h4>
+<a id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_bridgehead-idm4593467442044832666741542596"></a>Recommended Import Settings</h4>
+<p>JSON array is a list of name-value pairs enclosed in square brackets []</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Import specific keys only (use regexp): <code class="code">key_with_line-break|nested.deeply.key</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>To import all values of the array following the <span class="emphasis"><em>sample_collection</em></span> key: <code class="code">(^|.*/)sample_collection\[.*\]</code></p></li></ul></div>
+</li>
+<li class="listitem"><p>Exclude specific keys only (use regexp): <code class="code">unverified_key</code></p></li>
+<li class="listitem">
+<p>Context key:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>For having the value of the <span class="emphasis"><em>key_with_description</em></span> key, use: <code class="code">../key_with_description</code></p></li>
+<li class="listitem"><p>If not specified or missing, it is formed by parent key/child key</p></li>
+<li class="listitem"><p>JSON keys such as <span class="emphasis"><em>boolean_key</em></span> cannot be set as Context key.</p></li>
+</ul></div>
+</li>
+</ul></div>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<pre class="programlisting">{
+  "boolean_key": "--- true\n",
+  "empty_string_translation": "",
+  "key_with_description": "Check it out! This key has a description! (At least in some formats)",
+  "key_with_line-break": "This translations contains\na line-break.",
+  "nested.deeply.key": "I'm a deeply nested key.",
+  "nested.key": "This key is nested inside a namespace.",
+  "null_translation": null,
+  "pluralized_key.one": "Only one kitten found.",
+  "pluralized_key.other": "Wow, you have %s kittens!",
+  "pluralized_key.zero": "You have no kittens.",
+  "sample_collection": [
+    "first item",
+    "second item",
+    "third item"
+  ],
+  "simple_key": "Simple key, simple message, so simple.",
+  "unverified_key": "This translation is not yet verified and waits for it. (In some formats we also export this status)"
+}</pre>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-a4a45027-eb98-f8cf-a23e-f69d62013a0b"></a>React-Intl Nested JSON</h2></div></div>
+<div class="panel-body collapse" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-a4a45027-eb98-f8cf-a23e-f69d62013a0b_body">
+<p>React-Intl is a JavaScript library designed to simplify internationalization (i18n) and (localization) primarily for applications developed in React. By default, React-Intl uses .js files to store its localized content.</p>
+<h4>
+<a id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_bridgehead-idm4531453374510432666757828221"></a>Recommended Import Settings</h4>
+<p>JSON array is a list of name-value pairs enclosed in square brackets []. JSON object is a list of name-value pairs enclosed in curly braces {}</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Import specific keys only (use regexp): k<code class="code">ey_with_line-break|simple_key</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>To import all values of the array following the <span class="emphasis"><em>sample_collection </em></span>key: <code class="code">(^|.*/)sample_collection\[.*\]</code></p></li>
+<li class="listitem"><p>To import all values of the object following the <span class="emphasis"><em>pluralized_key</em></span> key: <code class="code">(^|.*/)pluralized_key/.*</code></p></li>
+<li class="listitem"><p>To import the value of the first <span class="emphasis"><em>key</em></span> key: <code class="code">nested/deeply/key</code></p></li>
+<li class="listitem"><p>To import the value of the second <span class="emphasis"><em>key</em></span> key: <code class="code">nested/key</code></p></li>
+<li class="listitem"><p>To import the value of the <span class="emphasis"><em>key</em></span> key regardless of level: <code class="code">(^|.*/)key</code></p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>Exclude specific keys only (use regexp): <code class="code">unverified_key</code></p></li>
+<li class="listitem">
+<p>Context key:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>For having the value of the <span class="emphasis"><em>key_with_description</em></span> key, use: <code class="code">../key_with_description</code></p></li>
+<li class="listitem"><p>If not specified or missing, it is formed by parent key/child key</p></li>
+<li class="listitem"><p>JSON keys such as <span class="emphasis"><em>boolean_key</em></span> cannot be set as Context key.</p></li>
+</ul></div>
+</li>
+</ul></div>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<pre class="programlisting">{
+  "boolean_key": "--- true\n",
+  "empty_string_translation": "",
+  "key_with_description": "Check it! This key has a description! (At least in some formats it does)",
+  "key_with_line-break": "This translations contains\na line-break.",
+  "nested": {
+    "deeply": {
+      "key": "Hey, this key is nested even deeper."
+    },
+    "key": "This key is nested inside a namespace."
+  },
+  "null_translation": null,
+  "pluralized_key": {
+    "one": "Only one pluralization found.",
+    "other": "Wow, you have %s pluralizations!",
+    "zero": "You have no pluralization."
+  },
+  "sample_collection": [
+    "first item",
+    "second item",
+    "third item"
+  ],
+  "simple_key": "A simple key with a simple message.",
+  "unverified_key": "Translation is not yet verified and waits for it. (In some formats we also export this status)"
+}</pre>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-1f83b779-86e9-3f0b-e2fd-43a4967c9625"></a>Chrome JSON i18n</h2></div></div>
+<div class="panel-body collapse" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-1f83b779-86e9-3f0b-e2fd-43a4967c9625_body">
+<p>Localized strings for Chrome extensions are stored in a JSON file often named <span class="emphasis"><em>messages.json</em></span>. Chrome JSON files have a slightly different structure than JSON files used for localization on other platforms. For Chrome JSON, strings that need translation are placed in the sub-key <code class="code">message</code> nested under each unit key-value pair. A <code class="code">description</code> may also be added to each key-value pair.</p>
+<h4>
+<a id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_bridgehead-idm4593467514401632666727865942"></a>Recommended Import Settings</h4>
+<p>JSON object is a list of name-value pairs enclosed in curly braces {}.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Import specific keys only (use regexp): .<code class="code">*/message|.*/content</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>To import only the first value of the <span class="emphasis"><em>message</em></span> key: <code class="code">prompt_for_name/message</code></p></li>
+<li class="listitem"><p>To import all values of the object following the <span class="emphasis"><em>user</em></span> key: <code class="code">.*/user/.*</code></p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>Exclude specific keys only (use regexp): <code class="code">.*/example</code></p></li>
+<li class="listitem">
+<p>Context note:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>For having the value of the <span class="emphasis"><em>description</em></span> key: <code class="code">../description</code></p></li>
+<li class="listitem"><p>If not specified or missing, it is formed by parent key/child key</p></li>
+<li class="listitem"><p>JSON key such as <span class="emphasis"><em>prompt_for_name</em></span> cannot be set as Context note.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>Convert to Memsource tags: <code class="code">\$[^\$]+\$</code></p></li>
+</ul></div>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<pre class="programlisting">{
+  "prompt_for_name": {
+    "message": "What's your name?",
+    "description": "Ask for the user's name"
+  },
+  "hello": {
+    "message": "Hello, $USER$",
+    "description": "Greet the user",
+    "placeholders": {
+      "user": {
+        "content": "$1",
+        "example": "Cira"
+      }
+    }
+  },
+  "bye": {
+    "message": "Goodbye, $USER$. Come back to $OUR_SITE$ soon!",
+    "description": "Say goodbye to the user",
+    "placeholders": {
+      "our_site": {
+        "content": "Example.com"
+      },
+      "user": {
+        "content": "$1",
+        "example": "Cira"
+      }
+    }
+  }
+}</pre>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-7808950b-b1d8-0b90-2163-814bad366bf0"></a>Go i18n JSON</h2></div></div>
+<div class="panel-body collapse" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-7808950b-b1d8-0b90-2163-814bad366bf0_body">
+<p>Go-i18n is an internationalization library designed for Golang. Its supported localization file formats include JSON, YAML, TOML, etc. JSON files used by go-i18n are different from those of other localization/internationalization platforms in that go-18n JSON often exists as a JSON array consisting of a series JSON objects. Each JSON object represents a string that needs translation identified by keys such as <code class="code">ID</code>.</p>
+<h4>
+<a id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_bridgehead-idm4531453312169632666776450031"></a>Recommended Import Settings</h4>
+<p>JSON object is a list of name-value pairs enclosed in curly braces {}.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Import specific keys only (use regexp): .<code class="code">*/translation</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>To import all values of the object following the <span class="emphasis"><em>translation</em></span> key: <code class="code">.*/translation/.*</code></p></li>
+<li class="listitem"><p>To import only values of the second object following the <span class="emphasis"><em>translation</em></span> key: <code class="code">.*\[2\]/translation/.*</code></p></li>
+<li class="listitem"><p>To import the value of one key of the object following the <span class="emphasis"><em>translation</em></span> key: <code class="code">.*/translation/one</code></p></li>
+<li class="listitem"><p>To import the value of one key in the <span class="emphasis"><em>5th translation</em></span> key: <code class="code">.*\[5\]/translation/one</code></p></li>
+<li class="listitem"><p>To import the value of other keys in objects following the <span class="emphasis"><em>translation</em></span> key: <code class="code">(^|.*/)translation/other</code></p></li>
+<li class="listitem"><p>To import the value of other key in the 2nd object following the <span class="emphasis"><em>translation</em></span> key: <code class="code">.*\[2\]/translation/othe</code>r</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>Exclude specific keys only (use regexp): <code class="code">.*/other</code></p></li>
+<li class="listitem">
+<p>Context key:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>For having the value of the <span class="emphasis"><em>id</em></span> key, use: <code class="code">../id</code></p></li>
+<li class="listitem"><p>If not specified or missing, it is formed by parent key/child key</p></li>
+<li class="listitem"><p>JSON keys such as <span class="emphasis"><em>one</em></span> cannot be set as Context key.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>Convert to Memsource tags: <code class="code">\{\{[^\}]+\}\}</code></p></li>
+</ul></div>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<pre class="programlisting">[
+{
+    "id": "d_days",
+    "translation": {
+      "one": "{{.Count}} day",
+      "other": "{{.Count}} days"
+    }
+  },
+  {
+    "id": "my_height_in_meters",
+    "translation": {
+      "one": "I am {{.Count}} meter tall.",
+      "other": "I am {{.Count}} meters tall."
+    }
+  },
+  {
+    "id": "person_greeting",
+    "translation": "Hello {{.Person}}"
+  },
+  {
+    "id": "person_unread_email_count",
+    "translation": {
+      "one": "{{.Person}} has {{.Count}} unread email.",
+      "other": "{{.Person}} has {{.Count}} unread emails."
+    }
+  },
+  {
+    "id": "person_unread_email_count_timeframe",
+    "translation": {
+      "one": "{{.Person}} has {{.Count}} unread email in the past {{.Timeframe}}.",
+      "other": "{{.Person}} has {{.Count}} unread emails in the past {{.Timeframe}}."
+    }
+  },
+  {
+    "id": "program_greeting",
+    "translation": "Hello world"
+  },
+  {
+    "id": "your_unread_email_count",
+    "translation": {
+      "one": "You have {{.Count}} unread email.",
+      "other": "You have {{.Count}} unread emails."
+    }
+  }
+]</pre>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-c78a212f-6cfc-dee4-f31b-538ba8432b05"></a>i18n-node-2 JSON</h2></div></div>
+<div class="panel-body collapse" id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_UUID-c78a212f-6cfc-dee4-f31b-538ba8432b05_body">
+<p>I18n-node-2 is a library based on Node.js that works with Express.js. I18n-node-2 integrates with applications by providing immediate string extraction. i18n-node-2 is all that is required to wrap strings pending translation with the default _(“…”) method. While running, i18n-node-2 automatically generates multiple JSON files depending on predefined locales. I18n-node-2 uses the auto-generated JSON format to store translatable data. Prior to translation, perform a sanity check of the files. As i18n-node-2 supports pluralization, ensure all variables remain unchanged during translation.</p>
+<h4>
+<a id="UUID-1b641ee1-77e1-c2c7-edf9-e23dbe1952d8_bridgehead-idm4593467421318432666799272394"></a>Recommended Import Settings</h4>
+<p>JSON array is a list of name-value pairs enclosed in square brackets []. JSON object is a list of name-value pairs enclosed in curly braces {}</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Import specific keys only (use regexp): <code class="code">simple_key|nested.deeply.key</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>To import all values of the array following the <span class="emphasis"><em>sample_collection</em></span> key: <code class="code">(^|.*/)sample_collection\[.*\]</code></p></li>
+<li class="listitem"><p>To import all values of the object following the <span class="emphasis"><em>pluralized_key</em></span> key: <code class="code">(^|.*/)pluralized_key/.*</code></p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>Exclude specific keys only (use regexp): <code class="code">unverified_key</code></p></li>
+<li class="listitem">
+<p>Context key:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>For having the value of the <span class="emphasis"><em>key_with_description</em></span> key, use: <code class="code">../key_with_description</code></p></li>
+<li class="listitem"><p>If not specified or missing, it is formed by parent key/child key</p></li>
+<li class="listitem"><p>JSON keys such as <span class="emphasis"><em>boolean_key</em></span> cannot be set as Context key.</p></li>
+</ul></div>
+</li>
+</ul></div>
+<p><span class="bold bold"><strong>Example:</strong></span></p>
+<pre class="programlisting">{
+  "boolean_key": "--- true\n",
+  "empty_string_translation": "",
+  "key_with_description": "Check it out! This key has a description! (At least in some formats)",
+  "key_with_line-break": "This translations contains\na line-break.",
+  "nested.deeply.key": "I'm a deeply nested key.",
+  "nested.key": "This key is nested inside a namespace.",
+  "null_translation": null,
+  "pluralized_key": {
+    "one": "Only one pluralization found.",
+    "other": "Wow, you have %s pluralizations!",
+    "zero": "You have no pluralization."
+  },
+  "sample_collection": [
+    "first item",
+    "second item",
+    "third item"
+  ],
+  "simple_key": "simple key, simple message, so simple.",
+  "unverified_key": "This translation is not yet verified and waits for it. (In some formats we also export this status)"
+}</pre>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
