@@ -11,6 +11,10 @@
 <li class="listitem"><p>Articles, Sections, and Categories in the Guide module.</p></li>
 <li class="listitem"><p>Dynamic text in the Support module.</p></li>
 </ul></div>
+<div dir="ltr" class="note">
+<h3 class="title">Note</h3>
+<p>The connector always imports the published version of the document even if there is a newer draft. The draft if only imported if the published version is missing.</p>
+</div>
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c" id="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c_UUID-9ff13540-9b0e-7c6d-081f-2cb39f857854"></a>Use Cases</h2></div>
@@ -24,29 +28,6 @@
 </li>
 <li class="listitem"><p>The <a class="link" href="https://cloud.memsource.com/web/docs/api#" target="_blank" rel="noopener">Connector API</a> can be used to automate steps otherwise performed manually through the UI. <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014441419-Webhooks" target="_blank" rel="noopener">Webhooks</a> can be used to have Memsource notify 3rd party systems about certain events (for example, a job status change).</p></li>
 </ul></div>
-<div class="glossary-definitions" style="display:none!important;"></div>
-</div>
-<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
-<div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c" id="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c_UUID-f0877ed9-ff16-444c-7b34-821f15d72179"></a>Article Workflow Recommendations</h2></div>
-<h3>
-<a id="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c_bridgehead-idm231811145801301"></a>Translating Source Articles</h3>
-<p>To allow article authors to manually trigger translations:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Configure the connector to monitor articles with a specific label (e.g. translate). The author applies this label to articles when ready for translation.</p></li></ul></div>
-<p>To notify the author when the article translation is complete:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Configure the connector to add a label (e.g. review-<code class="code">{targetLang}</code>) when the translation is pushed to Zendesk. Reviewers can use the label to filter articles in the Zendesk UI.</p></li></ul></div>
-<p>Combine the above with <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059-Automated-Project-Creation" target="_blank" rel="noopener">Automated Project Creation</a> (APC) to maximize automation.</p>
-<h3>
-<a id="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c_bridgehead-idm231811152137027"></a>Submitting for Re-translations</h3>
-<p>To allow reviewers to submit existing translation for an update:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>Configure the connector to create translations for flagged articles. The reviewer will set the flag for translation to trigger a new job in Memsource.</p></li>
-<li class="listitem"><p>Select how jobs will be created by APC.</p></li>
-</ul></div>
-<div dir="ltr" class="note">
-<h3 class="title">Note</h3>
-<p>If the connector is configured to monitor articles with a specific label, beyond flagging the translation, the article also needs to be tagged with that specific label in order for APC to identify it.</p>
-</div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
@@ -75,7 +56,7 @@
 </div>
 <div class="procedure">
 <a id="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4406714602898/1614206a1bdcf1.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4407769815314/1615d4df427b97.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -87,7 +68,6 @@
 <li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to                           <span class="emphasis"><em>Zendesk</em></span> .</p></li>
 <li class="step"><p>Enter the <span class="guilabel">Host prefix</span>.</p></li>
 <li class="step"><p>In the <span class="guimenu">Translate articles with label field</span>, specify a label that flags an article to be processed by the connector. If specified, only articles with this label will be processed.</p></li>
-<li class="step"><p>In the <span class="guimenu">Add label on post-translation</span> field, specify a label that the connector will add to articles after translation. The <code class="code">{targetLang}</code> macro is supported.</p></li>
 <li class="step"><p>Select how jobs will be created.</p></li>
 <li class="step"><p>Select how to save translations.</p></li>
 <li class="step"><p>Define article workflow.</p></li>
@@ -106,6 +86,29 @@
 </ol>
 </div>
 <p>If a default project, branch, and folder is required when connecting, open the connector configuration and click the <span class="guilabel">Select Remote Folder</span> button to set it.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c" id="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c_UUID-f0877ed9-ff16-444c-7b34-821f15d72179"></a>Article Workflow Recommendations</h2></div>
+<h3>
+<a id="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c_bridgehead-idm231811145801301"></a>Translating Source Articles</h3>
+<p>To allow article authors to manually trigger translations:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the <span class="guimenu">Zendesk articles workflow</span>, configure the connector to monitor articles by adding a specific label (e.g. translate) to the <span class="guimenu">Translate articles with label</span> field. The author applies this label to articles when ready for translation.</p></li></ul></div>
+<p>To notify the author when the article translation is complete:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the <span class="guimenu">Zendesk articles workflow</span>, configure the connector to add a label (e.g. review-<code class="code">{targetLang}</code>) in the <span class="guimenu">Upon import to Zendesk</span> field. Reviewers can use the label to filter articles in the Zendesk UI.</p></li></ul></div>
+<p>Combine the above with <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059-Automated-Project-Creation" target="_blank" rel="noopener">Automated Project Creation</a> (APC) to maximize automation.</p>
+<h3>
+<a id="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c_bridgehead-idm231811152137027"></a>Submitting for Re-translations</h3>
+<p>To allow reviewers to submit existing translation for an update:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Configure the connector to create translations for flagged articles. The reviewer will set the flag for translation to trigger a new job in Memsource.</p></li>
+<li class="listitem"><p>Select how jobs will be created by APC.</p></li>
+</ul></div>
+<div dir="ltr" class="note">
+<h3 class="title">Note</h3>
+<p>If the connector is configured to monitor articles with a specific label, beyond flagging the translation, the article also needs to be tagged with that specific label in order for APC to identify it.</p>
+</div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
