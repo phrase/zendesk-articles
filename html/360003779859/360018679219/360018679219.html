@@ -7,6 +7,97 @@
 <p><a id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_para-idm33218804230082"></a>Earlier release notes can be found in the <a class="link" href="https://help.memsource.com/hc/en-us/sections/360001176392-Memsource" target="_blank" rel="noopener">archive</a>. Integrations (<a class="link" href="https://help.memsource.com/hc/en-us/sections/360004539380-Integrations" target="_blank" rel="noopener">API and Connectors/Plugins</a>) have their own release notes.</p>
 <div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a" id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_UUID-a6afd799-5533-a901-2905-be64b8e360ef"></a>v21.20 - October 19, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_UUID-a6afd799-5533-a901-2905-be64b8e360ef_body">
+<h4>
+<a id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+<p>The following locales have been added to the UI:</p>
+<div class="informaltable table-responsive">
+<a id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_table-idm4613160100889632684187196194"></a><table xml:id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_table-idm4613160100889632684187196194">
+<thead><tr>
+<th><p>Code</p></th>
+<th><p>Name</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>ace_latn</p></td>
+<td><p>Acehnese (Latin)</p></td>
+</tr>
+<tr>
+<td><p>ace_arab</p></td>
+<td><p>Acehnese (Arabic)</p></td>
+</tr>
+<tr>
+<td><p>bjn_latn</p></td>
+<td><p>Banjar (Latin)</p></td>
+</tr>
+<tr>
+<td><p>bjn_arab</p></td>
+<td><p>Banjar (Arabic)</p></td>
+</tr>
+<tr>
+<td><p>fur</p></td>
+<td><p>Friulian</p></td>
+</tr>
+<tr>
+<td><p>lij</p></td>
+<td><p>Ligurian</p></td>
+</tr>
+<tr>
+<td><p>lmo</p></td>
+<td><p>Lombard</p></td>
+</tr>
+<tr>
+<td><p>min_latn</p></td>
+<td><p>Minangkabau (Latin)</p></td>
+</tr>
+<tr>
+<td><p>min_arab</p></td>
+<td><p>Minangkabau (Arabic)</p></td>
+</tr>
+<tr>
+<td><p>mos</p></td>
+<td><p>Mossi</p></td>
+</tr>
+<tr>
+<td><p>tum_latn</p></td>
+<td><p>Tumbuka (Latin)</p></td>
+</tr>
+<tr>
+<td><p>vec</p></td>
+<td><p>Venetian</p></td>
+</tr>
+<tr>
+<td><p>nan_tw</p></td>
+<td><p>Southern Min (Taiwan)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li></ul></div>
+<h4>
+<a id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289940" target="_blank" rel="noopener">iOS <code class="code">.strings</code></a> filter turns <code class="code">%\s.+</code> strings into <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872159" target="_blank" rel="noopener">tags</a>. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872159-Tags-in-Memsource#custom-tags-0-5" target="_blank" rel="noopener">Custom tags</a> populated from <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279" target="_blank" rel="noopener">TM</a> are empty and uneditable if the target tag number is different from the source. This has been fixed.</p></li>
+<li class="listitem"><p>The error message provides the incorrect limit when importing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014290600" target="_blank" rel="noopener">ZIP</a> files larger than 100 MB. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215099" target="_blank" rel="noopener">Services</a> could only be created new and not be updated. This has been fixed.</p></li>
+<li class="listitem"><p>When importing an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF</a> file as <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357739-XML-Extensible-Markup-Language-#multilingual-xml-0-5" target="_blank" rel="noopener">Multilingual XML</a>, confirmed non-empty target segments were saved into TM even with <span class="guimenu">Save confirmed segments to TM on import</span> disabled. This has been fixed.</p></li>
+<li class="listitem"><p>The indicated editing time for TM matches in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview#post-editing-analysis-0-5" target="_blank" rel="noopener">post-editing analysis</a> was incorrect. This has been fixed.</p></li>
+<li class="listitem">
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014376880" target="_blank" rel="noopener">API</a>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p><code class="code">dateModified</code> property in <span class="guimenu">Get</span> project template call response is in Unix epoch time format. This has been fixed.</p></li>
+<li class="listitem"><p>There was a mismatch in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012527380" target="_blank" rel="noopener">NT matches</a> between what is written in the <a class="link" href="https://cloud.memsource.com/web/docs/api" target="_blank" rel="noopener">API documentation</a> and API response. This has been fixed.</p></li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a" id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_UUID-1039576b-f371-77e3-70d0-42cef2308564"></a>v21.19 - October 5, 2021</h2></div></div>
 <div class="panel-body collapse" id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_UUID-1039576b-f371-77e3-70d0-42cef2308564_body">
 <h4>
