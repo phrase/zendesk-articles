@@ -56,7 +56,7 @@
 </div>
 <div class="procedure">
 <a id="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4407769815314/1615d4df427b97.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4408340457874/1616d22f363037.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
@@ -94,9 +94,11 @@
 <h3>
 <a id="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c_bridgehead-idm231811145801301"></a>Translating Source Articles</h3>
 <p>To allow article authors to manually trigger translations:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the <span class="guimenu">Zendesk articles workflow</span>, configure the connector to monitor articles by adding a specific label (e.g. translate) to the <span class="guimenu">Translate articles with label</span> field. The author applies this label to articles when ready for translation.</p></li></ul></div>
-<p>To notify the author when the article translation is complete:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the <span class="guimenu">Zendesk articles workflow</span>, configure the connector to add a label (e.g. review-<code class="code">{targetLang}</code>) in the <span class="guimenu">Upon import to Zendesk</span> field. Reviewers can use the label to filter articles in the Zendesk UI.</p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the <span class="guimenu">Zendesk articles workflow</span>, configure the connector to monitor articles by adding a specific label (e.g. <span class="emphasis"><em>translate</em></span>) to the <span class="guimenu">Translate articles with label</span> field. The author applies this label to articles when ready for translation. The label is automatically removed to prevent repeated import of the article.</p></li></ul></div>
+<p>To notify the author when article translation has started:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the <span class="guimenu">Zendesk articles workflow</span>, configure the connector to add a label (e.g. <span class="emphasis"><em>in translation</em></span>) in the <span class="guimenu">Upon import from Zendesk</span> field. This allows article authors can see when the article was pulled to Memsource for translation.</p></li></ul></div>
+<p>To notify the author when article translation is complete:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the <span class="guimenu">Zendesk articles workflow</span>, configure the connector to add a label (e.g. <span class="emphasis"><em>review-</em></span><code class="code">{targetLang}</code>) in the <span class="guimenu">Upon import to Zendesk</span> field. Reviewers then use the applied label to filter articles in the Zendesk UI.</p></li></ul></div>
 <p>Combine the above with <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059-Automated-Project-Creation" target="_blank" rel="noopener">Automated Project Creation</a> (APC) to maximize automation.</p>
 <h3>
 <a id="UUID-576328d5-e74d-a6d1-b90f-efbe08d1ad0c_bridgehead-idm231811152137027"></a>Submitting for Re-translations</h3>
