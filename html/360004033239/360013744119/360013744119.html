@@ -31,13 +31,13 @@
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00" id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_UUID-35436dda-8c7d-4b66-2c71-83db2a0602fd"></a>Customize Segmentation Rules</h2></div>
-<p>Customized segmentation rules can be applied to <a class="link" href="https://help.memsource.com/hc/articles/360013675740#UUID-29d1a108-bf4f-799c-9ff5-6826433147c8" title="Jobs Overview">jobs</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project templates</a>. When set as primary, they are applied to all new jobs imported for that source language.</p>
+<p>Customized segmentation rules can be applied to <a class="link" href="https://help.memsource.com/hc/articles/360013675740#UUID-29d1a108-bf4f-799c-9ff5-6826433147c8" title="Jobs Overview">jobs</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">project templates</a>. If a project requires a customized segmentation rule, a template will need to be created for that project. When set as primary, customized segmentation rules are applied to all new jobs imported for that source language.</p>
 <p>There are two types of segmentation rules:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Abbreviations to the XLSX file</p></li>
 <li class="listitem"><p>Regular expression of SRX files</p></li>
 </ul></div>
-<p>To use customized rules, download default rules, modify them, upload the modified file and apply them to specified jobs.</p>
+<p>To use customized rules, download the default rules, modify them, upload the modified file and then apply them to specified jobs.</p>
 <div dir="ltr" class="caution">
 <h3 class="title">Caution</h3>
 <p>When adding custom segmentation rules for a space-less CJK source language (while a target language will be one using spaces as a word delimiter), make sure to add leading or trailing spaces to the target segments split by the custom rule to delimit words in the translation. While this happens automatically in segments formed by the default segmentation rules, no spaces are added in manually split segments or those formed by additional custom segmentation rules.</p>
@@ -49,7 +49,7 @@
 <div class="procedure">
 <a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747554516301"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360025510500/160865f224ef51.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4408661261330/161764761eb074.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
 <p>The <span class="guimenu">Segmentation</span> page opens.</p>
 </li>
 <li class="step">
@@ -73,10 +73,10 @@
 <p>To download a segmentation rule that you uploaded previously:</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360025510500/160865f224ef51.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4408661261330/161764761eb074.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
 <p>The <span class="guimenu">Segmentation</span> page opens.</p>
 </li>
-<li class="listitem"><p>Click on the <span class="guilabel">Settings </span>icon on the right and choose <span class="guilabel">Customize columns</span>: <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360025510520/160865f2251fb6.png" style="max-width: 273px; " alt="customize-segmentation-columns.png"></span> </p></li>
+<li class="listitem"><p>Click on the <span class="guilabel">Settings </span>icon on the right and choose <span class="guilabel">Customize columns</span>: <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4408661261714/161764761eed86.png" style="max-width: 273px; " alt="customize-segmentation-columns.png"></span> </p></li>
 <li class="listitem"><p>Enable the <span class="guilabel">Filename </span>column</p></li>
 <li class="listitem"><p>Click on a filename to download a pre-saved rule.</p></li>
 </ol></div>
@@ -133,7 +133,7 @@
 <li class="step">
 <p>Edit using <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003930072-Regexp" target="_blank" rel="noopener">regular expressions</a> or remove the inner segmentation completely.</p>
 <p>Example:</p>
-<div class="mediaobject"><img src="https://help.memsource.com/hc/article_attachments/360025515259/160865f2256e1d.png" style="" alt="BreakRules_Example.png"></div>
+<div class="mediaobject"><img src="https://help.memsource.com/hc/article_attachments/4408661262226/161764761f27ba.png" style="" alt="BreakRules_Example.png"></div>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p> <code class="code">&lt;rule break="no"&gt;</code> </p>
@@ -161,7 +161,7 @@
 <div class="procedure">
 <a id="UUID-92e08bfb-5771-47c8-1c50-aff5f02fbc00_procedure-idm231747706104723"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/360025510500/160865f224ef51.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4408661261330/161764761eb074.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Segmentation</span>.</p>
 <p>The <span class="guimenu">Segmentation</span> page opens.</p>
 </li>
 <li class="step">
@@ -238,7 +238,7 @@
 <p>If all inner segmentation is removed leaving only the basic segmentation based on the Cell, then there are only two segments: <span class="emphasis"><em>Peter! Wait!</em></span> and <span class="emphasis"><em>Hello</em></span>.</p>
 <p>Edit the SRX file to remove all the default segmentation rules, i. e. the code between <code class="code">&lt;!-- break rules --&gt;</code> and <code class="code">&lt;/languagerule&gt;</code>.</p>
 <p>Example:</p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/360025510540/160865f225c054.png" style="" alt="1cell-1segment-srx.png"></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/4408667659154/16176476202311.png" style="" alt="1cell-1segment-srx.png"></div>
 <p>In case it still does not work, it can be caused by cascading. In such case, the solution is to open the edited SRX file in Notepad++, see the two attributes of <code class="code">header</code> element and change both to <code class="code">no</code>.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
