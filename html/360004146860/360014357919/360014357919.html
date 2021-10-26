@@ -1,4 +1,4 @@
-<div dir="ltr" class="section top-level-topic zd-article section" lang="en" xml:lang="en">
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
 <h2>
 <a id="UUID-52bff693-6c3f-0c99-ccbb-f1ee681db1e6_bridgehead-idm231825021122866"></a>File Types</h2>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -34,7 +34,14 @@
 <li class="listitem">
 <p><span class="guimenu">Non-translatable blocks</span></p>
 <p>Define sections in the file that should not be imported.</p>
+<p>Example:</p>
+<div class="informalexample">
+<a id="UUID-52bff693-6c3f-0c99-ccbb-f1ee681db1e6_example-idm232317962143377"></a><p>Element name: <code class="code">notrans</code>.</p>
+<p>Code: <code class="code">&lt;notrans&gt;Chrysler&lt;/notrans&gt; entered three factory prepared &lt;notrans&gt;Dodge Shadows&lt;/notrans&gt; to the event in 1985. All three vehicles retired in the first day of the three day &lt;notrans&gt;Olympus&lt;/notrans&gt; rally.</code></p>
+<p>Result: Chrysler は、1985年に工場で準備された3台の Dodge Shadows に参加しました。3台の車両はすべて3日間の Olympus ラリーの初日にリタイアしました。</p>
+</div>
 </li>
+<li class="listitem"><p></p></li>
 <li class="listitem">
 <p><span class="guimenu">Don't escape characters</span></p>
 <p>A list of characters that shouldn't be escaped in the completed file (for instance, <span class="emphasis"><em>#</em></span>,<span class="emphasis"><em>[</em></span>,<span class="emphasis"><em>&lt;</em></span> ).</p>
