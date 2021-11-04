@@ -22,7 +22,7 @@
 <p>To access Machine Translation Engines settings, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-09fdfc72-566d-41fe-8404-bacd298fd701_procedure-idm4622002725910431631787669964"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4409036626066/1617f8aef98af3.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4409272319634/16183a15b6819e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step"><p>Click on <span class="guilabel">Machine Translation Engines</span>.</p></li>
 </ol>
 </div>
@@ -62,7 +62,7 @@
 <p>To set up a new machine translation engine, have an Admin user follow these steps:</p>
 <div class="procedure">
 <a id="UUID-09fdfc72-566d-41fe-8404-bacd298fd701_procedure-idm4589028011339231631972778811"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4409036626066/1617f8aef98af3.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4409272319634/16183a15b6819e.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
 <li class="step">
 <p>Click on <span class="guilabel">Machine Translation Engines</span>.</p>
 <p>The <span class="guimenu">Machine Translation Engine</span> page opens.</p>
@@ -92,6 +92,61 @@
 </ol>
 </div>
 <p>Some machine translation engines are not for public use, and some are only accessible in specific Memsource editions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-09fdfc72-566d-41fe-8404-bacd298fd701" id="UUID-09fdfc72-566d-41fe-8404-bacd298fd701_UUID-27df1b19-d9af-a441-fa46-e6338ab2ae37"></a>MT Data Cleaning</h2></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section caution sub-topic">
+<div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-09fdfc72-566d-41fe-8404-bacd298fd701" id="UUID-09fdfc72-566d-41fe-8404-bacd298fd701_UUID-7406bf8f-8c9f-3069-f9be-4fe823e7e371"></a>Available for</h3></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Enterprise edition</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>Raw data can be filtered and extracted from translation memories for use in training custom machine translation engines via an API.</p>
+<h4>
+<a id="UUID-09fdfc72-566d-41fe-8404-bacd298fd701_bridgehead-idm4631258657704032720239625394"></a>API documentation</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://cloud.memsource.com/web/docs/api#operation/exportCleanedTMs" target="_blank" rel="noopener">Extract cleaned translation memory</a></p></li>
+<li class="listitem"><p><a class="link" href="https://cloud.memsource.com/web/docs/api#operation/downloadCleanedTM" target="_blank" rel="noopener">Download cleaned TM</a></p></li>
+</ul></div>
+<h4>
+<a id="UUID-09fdfc72-566d-41fe-8404-bacd298fd701_bridgehead-idm4631258551019232720231182052"></a>Data cleaning process:</h4>
+<div class="procedure">
+<a id="UUID-09fdfc72-566d-41fe-8404-bacd298fd701_procedure-idm4659050189113632720226451755"></a><ol class="procedure" type="1">
+<li class="step"><p>Raw data from specified locale pairs is downloaded from translation memories.</p></li>
+<li class="step">
+<p>Data is filtered.</p>
+<p>Segments with the same source and target are discarded along with tags and data is de-duplicated.</p>
+<p>Filtering is more relaxed for CJK languages.</p>
+</li>
+<li class="step">
+<p>10% of the data with the lowest semantic similarity between the source and the target is removed.</p>
+<p>The ratio of discarded data may be defined using <code class="code">preserveRatio</code>.</p>
+</li>
+<li class="step"><p>Data is converted to TXT/TSV based on the <code class="code">outputFormat</code> setting.</p></li>
+</ol>
+</div>
+<h4>
+<a id="UUID-09fdfc72-566d-41fe-8404-bacd298fd701_bridgehead-idm4659050097632032720231534398"></a>Cleaning criteria:</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Minimum/maximum length</strong></span></p>
+<p>Each segment requires at least 5 characters and at least 3 letters in any alphabet/script. The segment must be shorter than 1000 characters. Non-conforming segments are discarded</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Length ratio</strong></span></p>
+<p>Language specific.</p>
+<p>Ratio of source segment length vs. target segment length (and vice versa) cannot be larger than 2.</p>
+<p><span class="emphasis"><em>Example:</em></span></p>
+<p>If the source segment has 30 characters and the target has 70 characters, the segment pair will be discarded.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>LASER score</strong></span></p>
+<p>Segment pairs that pass initial checks are scored using the <a class="link" href="https://github.com/facebookresearch/LASER" target="_blank" rel="noopener">LASER</a> metric and sorted according to the score; segment pairs scoring more than 90% are are kept. LASER automatically detects whether sentences in two different languages are similar. This check is mainly targeted at misaligned/noisy TM entries.</p>
+</li>
+</ul></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">

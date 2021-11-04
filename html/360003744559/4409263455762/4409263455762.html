@@ -1,0 +1,159 @@
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<p>MT Glossaries ensures terminology is handled correctly by MT engines. They function in a similar manner to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766299" target="_blank" rel="noopener">term bases</a> but are used by machine translation engines instead of linguists. Terms added to a glossary are applied by the machine translation engine before being seen by the linguist. This means that the terms provided are consistently and always substituted and typically include product names, ambiguous or borrowed words.</p>
+<h3>
+<a id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_bridgehead-idm4543262672081632718830337735"></a>Use cases</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="bold bold"><strong>Product names</strong></span> </p>
+<p><span class="emphasis"><em>Google Home</em></span> must translate to <span class="emphasis"><em>Google Home</em></span>.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Ambiguous words</strong></span></p>
+<p>The word <span class="emphasis"><em>bat</em></span> can mean a piece of sports equipment or an animal. If translating words about sports, use a glossary to feed the Cloud Translation API the sports translation of <span class="emphasis"><em>bat</em></span> and not the translation for the animal.</p>
+</li>
+<li class="listitem">
+<p><span class="bold bold"><strong>Borrowed words</strong></span></p>
+<p><span class="emphasis"><em>Bouillabaisse</em></span> in French translates to <span class="emphasis"><em>bouillabaisse</em></span> in English. The English language borrowed the word from the French in the 19th century. An English speaker lacking French cultural context may not know that bouillabaisse is a fish stew dish. A glossary can override a translation so that <span class="emphasis"><em>bouillabaisse</em></span> from French translates to <span class="emphasis"><em>fish stew</em></span> in English.</p>
+</li>
+</ul></div>
+<p>Glossaries are not supported by all machine translation engines and are only available through Memsource Translate. If supported, this will be indicated in the machine translation profile along with the supported glossary languages.</p>
+<div dir="ltr" class="note">
+<h3 class="title">Note</h3>
+<p>Depending on file size, it can take up to 15 minutes until a glossary is attached.</p>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff" id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_UUID-64f4e1b5-7137-c475-5d04-9f08a8d32e1c"></a>Create a Glossary</h2></div>
+<p>To add a glossary, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_procedure-idm4615937576080032715061279235"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From the <span class="guimenu">Memsource Translate</span> page, click <span class="guilabel">Add glossary</span>.</p>
+<p>The <span class="guimenu">New glossary</span> window opens.</p>
+</li>
+<li class="step"><p>Provide a <span class="guimenu">Glossary name</span>.</p></li>
+<li class="step"><p>Select languages for the glossary.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Create</span>.</p>
+<p>The new glossary page opens.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff" id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_UUID-4fa7c27f-494f-9c3d-8354-7c19c1a84d2a"></a>Attach a Glossary to an MT Profile</h2></div>
+<p>To use a glossary, it must be attached to an existing MT Profile.</p>
+<p>To attach a glossary, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_procedure-idm4615937671300832715090211068"></a><ol class="procedure" type="1">
+<li class="step"><p>From the <span class="guimenu">Memsource Translate</span> page, click on the machine translation profile that requires a glossary.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Attach glossary</span>.</p>
+<p>The search or select window opens.</p>
+</li>
+<li class="step"><p>Search for or select from the dropdown list the required glossary or glossaries.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Attach</span>.</p>
+<p>The selection is added to a list of glossaries attached to the profile.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff" id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_UUID-48bb1987-e4fc-f0d4-aacf-90665f111fe1"></a>Add a Term</h2></div>
+<p>To add a term, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_procedure-idm4615937580081632715065841931"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From a glossary page, click <span class="guilabel">New</span>.</p>
+<p>The new term pane opens with empty fields for all languages in the glossary.</p>
+</li>
+<li class="step"><p>Fill in terms for each language.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Add</span>.</p>
+<p>The new term is added to the glossary.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff" id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_UUID-c8c9a26f-61ed-b427-2b03-9e2f229c9e96"></a>Imports Term to a Glossary</h2></div>
+<p>External terminology (or glossary) files can be imported in Excel (XLSX) or TBX file formats. The size limit for a file that can be uploaded is 1GB.</p>
+<h4>
+<a id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_bridgehead-idm4599016691489632715082321169"></a>XLSX File Preparation</h4>
+<p>XLSX files must be formatted in specific manner before being imported.</p>
+<p>To prepare the file, follow these steps:</p>
+<div class="procedure"><ol class="procedure" type="1">
+<li class="step"><p>In the XLSX file, organize all terms into columns with each column representing one language.</p></li>
+<li class="step">
+<p>In the first row, apply the <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811-Languages-Supported-in-Memsource#supported-language-table-0-1" target="_blank" rel="noopener">language code</a> for each language.</p>
+<p><span class="bold bold"><strong>Example</strong></span>:</p>
+<div class="informalexample">
+<a id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_example-idm231773659746488"></a><div class="informaltable table-responsive">
+<a id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_table-idm231773659895561"></a><table width="100%" xml:id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_table-idm231773659895561">
+<thead>
+<tr>
+<td></td>
+<td><p>A</p></td>
+<td><p>B</p></td>
+<td><p>C</p></td>
+</tr>
+<tr>
+<td><p>1</p></td>
+<td><p><span class="bold bold"><strong>en</strong></span></p></td>
+<td valign="middle"><p><span class="bold bold"><strong>de_de</strong></span></p></td>
+<td><p><span class="bold bold"><strong>it</strong></span></p></td>
+</tr>
+<tr>
+<td><p>2</p></td>
+<td><p>Agreement</p></td>
+<td><p>Abkommen</p></td>
+<td><p>accordo</p></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>3</p></td>
+<td><p>Joint Committee</p></td>
+<td><p>Gemischte Kommission</p></td>
+<td><p>Commissione mista</p></td>
+</tr>
+<tr>
+<td><p>4</p></td>
+<td><p>Federal Council</p></td>
+<td><p>Bundesrat</p></td>
+<td><p>Consiglio federale</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li class="step"><p>Save the file.</p></li>
+</ol></div>
+<h4>
+<a id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_bridgehead-idm4599016654006432715084549849"></a>File Import</h4>
+<p>To import terms to a glossary, follow these steps:</p>
+<div class="procedure">
+<a id="UUID-833d493e-b4a9-4e05-52ea-152b49e083ff_procedure-idm4615937668680032715085099042"></a><ol class="procedure" type="1">
+<li class="step">
+<p>From a glossary page, click <span class="guilabel">Import</span>.</p>
+<p>The <span class="guimenu">Import TBX/XLSX</span> window opens.</p>
+</li>
+<li class="step"><p>Click <span class="guilabel">Choose File</span> and select a file to import.</p></li>
+<li class="step">
+<p>Click <span class="guilabel">Import</span>.</p>
+<p>Terms from the selected file are added to the glossary.</p>
+</li>
+</ol>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
