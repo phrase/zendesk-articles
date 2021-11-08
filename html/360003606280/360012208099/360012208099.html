@@ -42,42 +42,46 @@
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-6a6bb220-dd9e-9427-3528-ab7f25d78f17" id="UUID-6a6bb220-dd9e-9427-3528-ab7f25d78f17_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h2></div>
-<div class="procedure">
-<a id="UUID-6a6bb220-dd9e-9427-3528-ab7f25d78f17_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4406620045074/16140b58550756.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
-<li class="step">
+<div class="itemizedlist">
+<a id="UUID-6a6bb220-dd9e-9427-3528-ab7f25d78f17_procedure-idm4594738095393631609442408568"></a><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4409557108754/1618902efa09f0.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="listitem">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
 </li>
-<li class="step">
+<li class="listitem">
 <p>Click <span class="guilabel">New</span>.</p>
 <p>The <span class="guimenu">Create Connector</span> page opens.</p>
 </li>
-<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to         <span class="emphasis"><em>Git</em></span>                   .</p></li>
-<li class="step">
+<li class="listitem"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to         <span class="emphasis"><em>Git</em></span>                   .</p></li>
+<li class="listitem">
 <p>Enter the repository address into the <span class="guilabel">Repository URI</span> field.</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
 <li class="listitem"><p>The repository address is the connection string used to clone the repository (e.g. <span class="emphasis"><em>git@gitlab.com:joe.doe/my-repo.git</em></span>)</p></li>
 <li class="listitem"><p>In order for Memsource Cloud to access the repository, it has to be reachable from the Internet.</p></li>
 </ul></div>
 </li>
-<li class="step">
-<p>For https access enter the <span class="guilabel">Username</span> and <span class="guilabel">Password or Personal Access Token</span> , if basic authentication is not supported (e.g. GitHub).</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>For SSH access load the <span class="guilabel">SSH key</span> and optionally enter the <span class="guilabel">SSH passphrase</span>.</p></li>
-<li class="listitem"><p>If using SSH key, the <span class="guimenu">Repository URI</span> starts with <span class="bold bold"><strong>git@</strong></span>.</p></li>
-<li class="listitem"><p>Only legacy PEM private key format is supported when using the SSH key for authentication. Use the <span class="emphasis"><em>-m</em></span> PEM option when generating the SSH key with ssh-keygen.</p></li>
+<li class="listitem">
+<p>Select an <span class="guimenu">Authentication method</span>.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>For <span class="guimenu">Password</span> access enter the <span class="guilabel">Username</span> and <span class="guilabel">Password or Personal Access Token</span> , if basic authentication is not supported (e.g. GitHub).</p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem">
+<p>For <span class="guimenu">Private key</span> access load the <span class="guilabel">Private key</span> and optionally enter the <span class="guilabel">Private key passphrase</span>.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>If using a private key, the <span class="guimenu">Repository URI</span> starts with <span class="bold bold"><strong>git@</strong></span>.</p></li>
+<li class="listitem"><p>Only legacy PEM private key format is supported when using the private key for authentication. Use the <span class="emphasis"><em>-m</em></span> PEM option when generating the private key.</p></li>
 </ul></div>
+</li></ul></div>
 </li>
-<li class="step">
+<li class="listitem"><p>Provide a <span class="guimenu">Commit message</span> if required.</p></li>
+<li class="listitem">
 <p>Click <span class="guilabel">Test connection</span>.</p>
 <p>A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</p>
 </li>
-<li class="step">
+<li class="listitem">
 <p>Click <span class="guilabel">Save</span>.</p>
 <p>The connector is added to the list on the Connectors page.</p>
 </li>
-</ol>
+</ul>
 </div>
 <p>If a default project, branch, and folder is required when connecting, open the connector configuration and click the <span class="guilabel">Select Remote Folder</span> button to set it.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
