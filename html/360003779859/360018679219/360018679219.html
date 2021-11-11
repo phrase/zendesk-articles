@@ -7,6 +7,38 @@
 <p><a id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_para-idm33218804230082"></a>Earlier release notes can be found in the <a class="link" href="https://help.memsource.com/hc/en-us/sections/360001176392-Memsource" target="_blank" rel="noopener">archive</a>. Integrations (<a class="link" href="https://help.memsource.com/hc/en-us/sections/360004539380-Integrations" target="_blank" rel="noopener">API and Connectors/Plugins</a>) have their own release notes.</p>
 <div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
 <div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a" id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_UUID-697d441a-2eb3-5ef8-5c44-557186ca6a4e"></a>v21.22 - November 16, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_UUID-697d441a-2eb3-5ef8-5c44-557186ca6a4e_body">
+<h4>
+<a id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>The <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">automation widget</a> now has the option to <span class="guimenu">Authorize user to access widget URL</span>.</p></li>
+<li class="listitem"><p>Import options are now displayed when importing a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289840" target="_blank" rel="noopener">TXT</a> file.</p></li>
+<li class="listitem"><p><span class="guimenu">Convert to Memsource tags</span> option now available for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF</a> files.</p></li>
+<li class="listitem"><p>Patterns returned in RelayState for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186540" target="_blank" rel="noopener">SSO</a> are now ignored.</p></li>
+</ul></div>
+<h4>
+<a id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">APC</a>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Relative path with <code class="code">../{targetLang}</code> does not work with <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208139" target="_blank" rel="noopener">Google Drive Connector</a>. This has been fixed.</p></li>
+<li class="listitem"><p>When running <code class="code">Force import</code> with APCs using filename pattern <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014358619" target="_blank" rel="noopener">regexp</a>, the regular expression was ignored and all files were imported. This has been fixed.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>The <span class="guimenu">Set unassigned job to completed once previous workflow step is completed</span> option in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744239" target="_blank" rel="noopener">shared jobs</a> was setting jobs in secondary <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">workflow</a> steps to <span class="emphasis"><em>Completed</em></span>. This has been fixed.</p></li>
+<li class="listitem"><p>In monolingual <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289860" target="_blank" rel="noopener">CSV</a> files, straight quotes added to a target become delimiters. This has been fixed.</p></li>
+<li class="listitem"><p>Trailing line breaks were doubled (or lost) in SRT files on export. This has been fixed.</p></li>
+<li class="listitem"><p>When trying to delete a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250379" target="_blank" rel="noopener">Net rate scheme</a>, an error message occurred. This has been fixed.</p></li>
+<li class="listitem"><p>When a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744239" target="_blank" rel="noopener">Vendor</a> was selected as a provider for jobs created via <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">Automation Widget</a>, the Net rate scheme and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250399" target="_blank" rel="noopener">Price list</a> to generate analyses and quotes was not taken into consideration from the Vendor's settings. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012207959" target="_blank" rel="noopener">Connector</a> cannot be deleted if ghost <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800" target="_blank" rel="noopener">Continuous Jobs</a> (still running after deletion) are related to it. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a" id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_UUID-500fb8b9-b319-b82a-cbdf-1c9ae57f1dbe"></a>v21.21 - November 2, 2021</h2></div></div>
 <div class="panel-body collapse" id="UUID-4b3d94fc-85ed-b920-1b5a-ef8bcbea1b3a_UUID-500fb8b9-b319-b82a-cbdf-1c9ae57f1dbe_body">
 <h4>
