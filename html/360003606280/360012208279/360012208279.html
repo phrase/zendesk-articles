@@ -50,6 +50,26 @@
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The <span class="emphasis"><em>Default Language</em></span> set in the Sitecore server must be the same language as the source language in the Memsource account.</p></li></ul></div>
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-5e8515e4-94aa-2905-6667-d48e88429263" id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_UUID-177d5d67-2a57-3352-320c-0b24c8434e53"></a>Configure In-Context Preview</h2></div>
+<p>The In-context Preview feature offers a real-time preview of original or translated text in both the Memsource Editor for Web and Memsource Editor for Desktop.</p>
+<p>In order for Memsource to offer the real-time preview, it must have access to unpublished pages in an on-premise author node.</p>
+<p><span class="bold bold"><strong>Memsource Requirements:</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Pass through the enterprise firewall to access the on-premise installation.</p></li>
+<li class="listitem"><p>Authenticate into the authoring environment.</p></li>
+</ul></div>
+<p><span class="bold bold"><strong>Firewall Configuration for On-premise installation:</strong></span></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Installation must be accessible from the following IP addresses:</p>
+<p><span class="emphasis"><em>34.243.87.13</em></span>, <span class="emphasis"><em>34.248.197.209</em></span>, <span class="emphasis"><em>108.129.22.31</em></span>, <span class="emphasis"><em>3.248.158.93</em></span></p>
+</li>
+<li class="listitem"><p>Domain name must be able to be resolved externally.</p></li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-5e8515e4-94aa-2905-6667-d48e88429263" id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_UUID-ddb652df-e3b9-92e9-5288-0eedc445a32f"></a>Sitecore Settings</h2></div>
 <p>In order to set up the connector, the Sitecore Administrator must enable SSL and the Rest API.</p>
 <p>To enable the Rest API, follow these steps:</p>
@@ -93,33 +113,33 @@
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-5e8515e4-94aa-2905-6667-d48e88429263" id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_UUID-8895afe8-180b-47ca-e2ba-ea7a8e77a1ea"></a>Memsource Settings</h2></div>
-<div class="procedure">
-<a id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_procedure-idm4594738095393631609442408568"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4406620052114/16140b58550756.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
-<li class="step">
+<div class="itemizedlist">
+<a id="UUID-5e8515e4-94aa-2905-6667-d48e88429263_procedure-idm4594738095393631609442408568"></a><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4410093007122/161935e79df4a2.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section.</p></li>
+<li class="listitem">
 <p>Click on <span class="guilabel">Connectors</span>.</p>
 <p>The <span class="guimenu">Connectors</span> page opens.</p>
 </li>
-<li class="step">
+<li class="listitem">
 <p>Click <span class="guilabel">New</span>.</p>
 <p>The <span class="guimenu">Create Connector</span> page opens.</p>
 </li>
-<li class="step"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to                          <span class="emphasis"><em>Sitecore</em></span>  .</p></li>
-<li class="step"><p>Enter the Sitecore URL, including the protocol.</p></li>
-<li class="step"><p>Enter the Username and Password.</p></li>
-<li class="step">
+<li class="listitem"><p>Provide a name for the connection and change the <span class="guilabel">Type</span> to                          <span class="emphasis"><em>Sitecore</em></span>  .</p></li>
+<li class="listitem"><p>Enter the Sitecore URL, including the protocol.</p></li>
+<li class="listitem"><p>Enter the Username and Password.</p></li>
+<li class="listitem">
 <p>Select the <span class="guilabel">Source Language</span>.</p>
 <p>Source language must match the default language in Sitecore.</p>
 </li>
-<li class="step">
+<li class="listitem">
 <p>Click <span class="guilabel">Test connection</span>.</p>
 <p>A checkmark will appear if the connection was successful. A red exclamation point will appear if it wasn't. Mouse over the icon to see additional details.</p>
 </li>
-<li class="step">
+<li class="listitem">
 <p>Click <span class="guilabel">Save</span>.</p>
 <p>The connector is added to the list on the Connectors page.</p>
 </li>
-</ol>
+</ul>
 </div>
 <p>If a default project, branch, and folder is required when connecting, open the connector configuration and click the <span class="guilabel">Select Remote Folder</span> button to set it.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
