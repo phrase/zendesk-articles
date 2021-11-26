@@ -49,25 +49,25 @@
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041" id="UUID-0bd7f485-b138-b8c8-a188-41f38f5b1041_UUID-fbb2cdf7-7f96-c8ec-36b3-5ac758c0b600"></a>Multilingual Spreadsheet Files</h2></div>
-<p>Multilingual files are imported as multiple bilingual jobs with languages mapped before import. They are represented with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4409087203346/16180ee41a0705.png" style="" alt="multilingual_xlsx.png"></span> in the Jobs Table. If imported into several target languages, the <span class="emphasis"><em>Completed</em></span> file is composed of all target languages.</p>
+<p>Multilingual files are imported as multiple bilingual jobs with languages mapped before import. They are represented with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4410884096786/161a0929209fde.png" style="" alt="multilingual_xlsx.png"></span> in the Jobs Table. If imported into several target languages, the <span class="emphasis"><em>Completed</em></span> file is composed of all target languages.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Hidden sheets are not processed.</p></li>
 <li class="listitem"><p>Merged cells in target columns are not supported.</p></li>
-<li class="listitem"><p>Dates and formulas where the displayed cell contents depend on the locale or the underlying values are not exposed for translation but automatically copied to the target columns.</p></li>
+<li class="listitem"><p>Dates and formulas where the displayed cell contents depend on the locale or the underlying values (f.e. "boolean values" TRUE or FALSE) are not exposed for translation but automatically copied to the target columns. Tip: to expose such values, you need to format cells in the source MS Excel file as Text before the value is inserted.</p></li>
 <li class="listitem"><p>Files are converted to XML on import. Most formatting, graphs and images are lost. Files with conditional formatting rules are not imported.</p></li>
 <li class="listitem"><p>Some files cannot be converted to multilingual files due to software packages or versions of those packages.</p></li>
 <li class="listitem"><p>When <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview" target="_blank" rel="noopener">creating a job</a>, if the file has standard Memsource <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811-Languages-Supported-in-Memsource#supported-language-table-0-1" target="_blank" rel="noopener">standard language codes</a> in the first row, it will be auto-detected as multilingual and be imported as separate jobs. Auto-detection is not applied to jobs imported from repositories</p></li>
 <li class="listitem">
-<p>Although QA does not return tag and formatting errors, export may fail with a <span class="guimenu">Could not be generated: exported file cannot be opened</span> error message. This can happen due to a different tag order on the target side which is revealed by adding <a class="link" href="https://drops.memsource.com/4gu2nld5" target="_blank" rel="noopener">custom QA checks</a>.</p>
+<p>Although QA does not return tag and formatting errors, export may fail with a File c<span class="guimenu">ould not be generated</span> error message. This can happen due to a different tag order on the target side which is revealed by adding <a class="link" href="https://drops.memsource.com/4gu2nld5" target="_blank" rel="noopener">custom QA checks</a>.</p>
 <p>The entries in the fields are the same for the source and the target.</p>
 <p>for <code class="code">Tags order (unpaired)</code>:</p>
-<p> <code class="code">^.*\{1\}.*\{2\}.*$</code> </p>
-<p> <code class="code">^.*\{1\}.*\{2\}.*\{3\}.*$</code> </p>
-<p> <code class="code">^.*\{1\}.*\{2\}.*\{3\}.*\{4\}.*$</code> </p>
+<p><code class="code">^.*\{1\}.*\{2\}.*$</code></p>
+<p><code class="code">^.*\{1\}.*\{2\}.*\{3\}.*$</code></p>
+<p><code class="code">^.*\{1\}.*\{2\}.*\{3\}.*\{4\}.*$</code></p>
 <p>for <code class="code">Tags order (paired)</code>:</p>
-<p> <code class="code">^.*\{1\&gt;.*\&lt;1\}.*\{2\&gt;.*\&lt;2\}.*$</code> </p>
-<p> <code class="code">^.*\{1\&gt;.*\&lt;1\}.*\{2\&gt;.*\&lt;2\}.*\{3\&gt;.*\&lt;3\}.*$</code> </p>
-<p> <code class="code">^.*\{1\&gt;.*\&lt;1\}.*\{2\&gt;.*\&lt;2\}.*\{3\&gt;.*\&lt;3\}.*\{4\&gt;.*\&lt;4\}$</code> </p>
+<p><code class="code">^.*\{1\&gt;.*\&lt;1\}.*\{2\&gt;.*\&lt;2\}.*$</code></p>
+<p><code class="code">^.*\{1\&gt;.*\&lt;1\}.*\{2\&gt;.*\&lt;2\}.*\{3\&gt;.*\&lt;3\}.*$</code></p>
+<p><code class="code">^.*\{1\&gt;.*\&lt;1\}.*\{2\&gt;.*\&lt;2\}.*\{3\&gt;.*\&lt;3\}.*\{4\&gt;.*\&lt;4\}$</code></p>
 </li>
 </ul></div>
 <h3>
@@ -83,7 +83,7 @@
 <p>Imports HTML tags contained within the file. Tags can then be used with <span class="guimenu">HTML File Import Settings</span>. Paragraph tags <code class="code">&lt;p&gt;</code> create new segments even if <span class="guimenu">Segment Multilingual XLS</span> is not selected. When using the HTML subfilter, other options are disabled.</p>
 </li>
 <li class="listitem">
-<p> <span class="guimenu">Segment multilingual XLS</span> </p>
+<p><span class="guimenu">Segment multilingual XLS</span></p>
 <p>Text is segmented by a general <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744119-Segmentation-Rules-Overview" target="_blank" rel="noopener">segmentation rule</a> rather than one segment per cell.</p>
 <div dir="ltr" class="caution">
 <h3 class="title">Caution</h3>
@@ -99,7 +99,7 @@
 <p>Use lowercase or capital letters. For more columns, enter letters separated by commas with no spaces (<span class="emphasis"><em>A,D,G</em></span>).</p>
 </li>
 <li class="listitem">
-<p> <span class="guimenu">Target (column)</span> </p>
+<p><span class="guimenu">Target (column)</span></p>
 <p>There is one column for each target language. For more columns, enter letters separated by commas with no spaces (<span class="emphasis"><em>B,E,H</em></span>).</p>
 </li>
 <li class="listitem">
