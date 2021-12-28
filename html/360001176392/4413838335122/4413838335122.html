@@ -1,0 +1,731 @@
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<div dir="ltr" class="tip">
+<h3 class="title">
+<a id="tip-idm33218804216528"></a>Tip</h3>
+<p>Click <span class="guilabel">Follow</span> in the upper right corner to receive notification when new notes are released.</p>
+</div>
+<p><a id="para-idm33218804230082"></a>Earlier release notes can be found in the <a class="link" href="https://help.memsource.com/hc/en-us/sections/360001176392-Memsource" target="_blank" rel="noopener">archive</a>. Integrations (<a class="link" href="https://help.memsource.com/hc/en-us/sections/360004539380-Integrations" target="_blank" rel="noopener">API and Connectors/Plugins</a>) have their own release notes.</p>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-7489e8a9-19df-6f10-bad4-eb3552178291"></a>v21.24 - December 14, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-7489e8a9-19df-6f10-bad4-eb3552178291_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>If an account expires and there are many TMs/TBs, administrators now only receive one email notification.</p></li>
+<li class="listitem"><p>Relevant webhooks can now be received for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675720-Project-Overview#access-security-0-14" target="_blank" rel="noopener">specified projects</a>.</p></li>
+<li class="listitem"><p>When <span class="guilabel">Authorize user to access Widget URL</span> was turned on in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079-Automation-Widget-AW-#set-up-automation-widget-0-3" target="_blank" rel="noopener">Automation Widget settings</a>, only Admins, PMs, Guests and Submitters were able to use Automation Widget. This is now allowed for Linguists as well when using the Automation Widget URL (Linguists do not have access to the homepage).</p></li>
+<li class="listitem"><p>The <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014441419" target="_blank" rel="noopener">webhooks</a> list page now shows warnings for webhook calls not being delivered, a history of all calls, sends a test webhook and webhooks can be disabled or enabled.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>In EPUB files, special characters in XHTML filenames were causing a generic import error. This has been fixed.</p></li>
+<li class="listitem"><p>When imported from a ZIP folder, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">APC</a> does not export the completed job back to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208259" target="_blank" rel="noopener">SFTP</a> online repositories. This has been fixed.</p></li>
+<li class="listitem"><p>When importing from <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208079" target="_blank" rel="noopener">FTP</a>, the file path is added to the file name. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-46c09a07-aab8-f5dc-8fa4-81977c9a43da"></a>v21.23 - November 30, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-46c09a07-aab8-f5dc-8fa4-81977c9a43da_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>It's now possible to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#job-tools-0-8" target="_blank" rel="noopener">update source multilingual files</a> or multiple files with a newer version. When updating a multilingual file, all language copies will be updated.</p></li>
+<li class="listitem"><p>The max limit for severity penalty in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186500-Language-Quality-Assessment-LQA-#create-an-lqa-profile-0-2" target="_blank" rel="noopener">LQA profiles</a> has been increased to 100,000.00 points.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Hidden leading/trailing HTML tags <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013337780" target="_blank" rel="noopener">are shown</a> in the <span class="guimenu">Changes in Workflow Step</span> view. This has been fixed.</p></li>
+<li class="listitem"><p><span class="guimenu"><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#job-tools-0-8" target="_blank" rel="noopener">Update Target</a></span> and <span class="guimenu"><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#job-tools-0-8" target="_blank" rel="noopener">Update Source</a></span> functionality causes an <span class="emphasis"><em>unsupported file type</em></span> error with <a class="link" href="https://help.memsource.com/hc/en-us/articles/360021664240" target="_blank" rel="noopener">custom file types</a>. This has been fixed.</p></li>
+<li class="listitem"><p>If a project was created using <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">AW</a>, the quote generated for a vendor did not use the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250379" target="_blank" rel="noopener">net rate scheme</a> set for the vendor (it was only applied for analysis). This has been fixed.</p></li>
+<li class="listitem"><p>It's not possible to save <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775980" target="_blank" rel="noopener">segments</a> inside jobs belonging to undeleted projects. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-697d441a-2eb3-5ef8-5c44-557186ca6a4e"></a>v21.22 - November 16, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-697d441a-2eb3-5ef8-5c44-557186ca6a4e_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>The <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">automation widget</a> now has the option to <span class="guimenu">Authorize user to access widget URL</span>.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360021664240" target="_blank" rel="noopener">Custom file types</a> based on TXT that are defined by filename and extension can be automatically detected and imported.</p></li>
+<li class="listitem"><p><span class="guimenu">Convert to Memsource tags</span> option now available for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF</a> files.</p></li>
+<li class="listitem"><p>Patterns returned in RelayState for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186540" target="_blank" rel="noopener">SSO</a> are now ignored.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">APC</a>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Relative path with <code class="code">../{targetLang}</code> does not work with <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208139" target="_blank" rel="noopener">Google Drive Connector</a>. This has been fixed.</p></li>
+<li class="listitem"><p>When running <code class="code">Force import</code> with APCs using filename pattern <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014358619" target="_blank" rel="noopener">regexp</a>, the regular expression was ignored and all files were imported. This has been fixed.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>The <span class="guimenu">Set unassigned job to completed once previous workflow step is completed</span> option in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744239" target="_blank" rel="noopener">shared jobs</a> was setting jobs in secondary <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">workflow</a> steps to <span class="emphasis"><em>Completed</em></span>. This has been fixed.</p></li>
+<li class="listitem"><p>In monolingual <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289860" target="_blank" rel="noopener">CSV</a> files, straight quotes added to a target become delimiters. This has been fixed.</p></li>
+<li class="listitem"><p>Trailing line breaks were doubled (or lost) in SRT files on export. This has been fixed.</p></li>
+<li class="listitem"><p>When trying to delete a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250379" target="_blank" rel="noopener">Net rate scheme</a>, an error message occurred. This has been fixed.</p></li>
+<li class="listitem"><p>When a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744239" target="_blank" rel="noopener">Vendor</a> was selected as a provider for jobs created via <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">Automation Widget</a>, the Net rate scheme and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250399" target="_blank" rel="noopener">Price list</a> to generate analyses and quotes was not taken into consideration from the Vendor's settings. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012207959" target="_blank" rel="noopener">Connector</a> cannot be deleted if ghost <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800" target="_blank" rel="noopener">Continuous Jobs</a> (still running after deletion) are related to it. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-500fb8b9-b319-b82a-cbdf-1c9ae57f1dbe"></a>v21.21 - November 2, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-500fb8b9-b319-b82a-cbdf-1c9ae57f1dbe_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>There are now more options which translations are to be deleted when removing segments from a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780" target="_blank" rel="noopener">pre-translation</a>.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/4408717947538" target="_blank" rel="noopener">Asciidoc</a> format is now supported.</p></li>
+<li class="listitem"><p>Entries in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800" target="_blank" rel="noopener">Continuous Job</a> history that represent no change are purged after two weeks.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Applying the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289780" target="_blank" rel="noopener">HTML</a> filter to an imported <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760" target="_blank" rel="noopener">spreadsheet</a> file with hidden content is not working correctly. This has been fixed.</p></li>
+<li class="listitem"><p>Entering Japanese characters in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775920" target="_blank" rel="noopener">web editor</a> results some characters being dropped. This has been fixed.</p></li>
+<li class="listitem"><p>Neutral severity of <a class="link" href="https://help.memsource.com/hc/en-us/articles/4403029586194" target="_blank" rel="noopener">LQA scorecard</a> doesn't change according to value set in LQA profile. This has been fixed.</p></li>
+<li class="listitem"><p><span class="guimenu"><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294120" target="_blank" rel="noopener">Quote ready</a></span> email notification was not sent to the Submitter while being logged in. This has been fixed.</p></li>
+<li class="listitem"><p>When <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012776020" target="_blank" rel="noopener">comments</a> to an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357739" target="_blank" rel="noopener">XML</a> file are not closed, a false <span class="guimenu">XLIFF tags</span> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800" target="_blank" rel="noopener">QA</a> warning is presented. This has been fixed.</p></li>
+<li class="listitem"><p>It was not possible to save segments nor download completed files in jobs inside <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744299" target="_blank" rel="noopener">undeleted</a> projects . This has been fixed.</p></li>
+<li class="listitem"><p><code class="code">✓</code> and <code class="code">—</code> characters are not imported and exported consistently from <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357839" target="_blank" rel="noopener">JSON</a> files. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">APC</a>: Forced imports not triggered manually still appears in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360019987259" target="_blank" rel="noopener">Notifications</a>. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-a6afd799-5533-a901-2905-be64b8e360ef"></a>v21.20 - October 19, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-a6afd799-5533-a901-2905-be64b8e360ef_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+<p>The following locales have been added to the UI:</p>
+<div class="informaltable table-responsive">
+<a id="table-idm4613160100889632684187196194"></a><table xml:id="table-idm4613160100889632684187196194">
+<thead><tr>
+<th><p>Code</p></th>
+<th><p>Name</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>ace_latn</p></td>
+<td><p>Acehnese (Latin)</p></td>
+</tr>
+<tr>
+<td><p>ace_arab</p></td>
+<td><p>Acehnese (Arabic)</p></td>
+</tr>
+<tr>
+<td><p>bjn_latn</p></td>
+<td><p>Banjar (Latin)</p></td>
+</tr>
+<tr>
+<td><p>bjn_arab</p></td>
+<td><p>Banjar (Arabic)</p></td>
+</tr>
+<tr>
+<td><p>fur</p></td>
+<td><p>Friulian</p></td>
+</tr>
+<tr>
+<td><p>lij</p></td>
+<td><p>Ligurian</p></td>
+</tr>
+<tr>
+<td><p>lmo</p></td>
+<td><p>Lombard</p></td>
+</tr>
+<tr>
+<td><p>min_latn</p></td>
+<td><p>Minangkabau (Latin)</p></td>
+</tr>
+<tr>
+<td><p>min_arab</p></td>
+<td><p>Minangkabau (Arabic)</p></td>
+</tr>
+<tr>
+<td><p>mos</p></td>
+<td><p>Mossi</p></td>
+</tr>
+<tr>
+<td><p>tum_latn</p></td>
+<td><p>Tumbuka (Latin)</p></td>
+</tr>
+<tr>
+<td><p>vec</p></td>
+<td><p>Venetian</p></td>
+</tr>
+<tr>
+<td><p>nan_tw</p></td>
+<td><p>Southern Min (Taiwan)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li></ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289940" target="_blank" rel="noopener">iOS <code class="code">.strings</code></a> filter turns <code class="code">%\s.+</code> strings into <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872159" target="_blank" rel="noopener">tags</a>. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872159-Tags-in-Memsource#custom-tags-0-5" target="_blank" rel="noopener">Custom tags</a> populated from <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279" target="_blank" rel="noopener">TM</a> are empty and uneditable if the target tag number is different from the source. This has been fixed.</p></li>
+<li class="listitem"><p>The error message provides the incorrect limit when importing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014290600" target="_blank" rel="noopener">ZIP</a> files larger than 100 MB. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215099" target="_blank" rel="noopener">Services</a> could only be created new and not be updated. This has been fixed.</p></li>
+<li class="listitem"><p>When importing an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF</a> file as <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357739-XML-Extensible-Markup-Language-#multilingual-xml-0-5" target="_blank" rel="noopener">Multilingual XML</a>, confirmed non-empty target segments were saved into TM even with <span class="guimenu">Save confirmed segments to TM on import</span> disabled. This has been fixed.</p></li>
+<li class="listitem"><p>The indicated editing time for TM matches in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview#post-editing-analysis-0-5" target="_blank" rel="noopener">post-editing analysis</a> was incorrect. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-1039576b-f371-77e3-70d0-42cef2308564"></a>v21.19 - October 5, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-1039576b-f371-77e3-70d0-42cef2308564_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p> <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003843132-Data-Storage#project-storage-0-2" target="_blank" rel="noopener">Projects that are inactive for 6 months</a> are no longer disabled for new jobs. Projects are now automatically moved to the recycle bin after 12 months of inactivity.</p></li>
+<li class="listitem">
+<p>The following locales have been added to the UI:</p>
+<div class="informaltable table-responsive">
+<a id="table-idm453808690507363265966805016"></a><table xml:id="table-idm453808690507363265966805016">
+<thead><tr>
+<th><p>Code</p></th>
+<th><p>Name</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>ak_gh</p></td>
+<td><p>Akan (Ghana)</p></td>
+</tr>
+<tr>
+<td><p>ba_ru</p></td>
+<td><p>Bashkir (Russia)</p></td>
+</tr>
+<tr>
+<td><p>cnr</p></td>
+<td><p>Montenegrin</p></td>
+</tr>
+<tr>
+<td><p>cnr_cyrl</p></td>
+<td><p>Montenegrin (Cyrillic)</p></td>
+</tr>
+<tr>
+<td><p>cnr_latn</p></td>
+<td><p>Montenegrin (Latin)</p></td>
+</tr>
+<tr>
+<td><p>dje</p></td>
+<td><p>Zarma</p></td>
+</tr>
+<tr>
+<td><p>ee_gh</p></td>
+<td><p>Ewe (Ghana)</p></td>
+</tr>
+<tr>
+<td><p>fj_fj</p></td>
+<td><p>Fijian (Fiji)</p></td>
+</tr>
+<tr>
+<td><p>kab</p></td>
+<td><p>Kabyle</p></td>
+</tr>
+<tr>
+<td><p>kab_latn_dz</p></td>
+<td><p>Kabyle (Latin, Algeria)</p></td>
+</tr>
+<tr>
+<td><p>kr_latn</p></td>
+<td><p>Kanuri (Latin)</p></td>
+</tr>
+<tr>
+<td><p>mfi_cm</p></td>
+<td><p>Wandala (Cameroon)</p></td>
+</tr>
+<tr>
+<td><p>ndc</p></td>
+<td><p>Ndau</p></td>
+</tr>
+<tr>
+<td><p>quy</p></td>
+<td><p>Ayacucho Quechua</p></td>
+</tr>
+<tr>
+<td><p>quz</p></td>
+<td><p>Cusco Quechua</p></td>
+</tr>
+<tr>
+<td><p>rhg_rohg</p></td>
+<td><p>Rohingya (Hanifi)</p></td>
+</tr>
+<tr>
+<td><p>rhg_beng</p></td>
+<td><p>Rohingya (Bangla)</p></td>
+</tr>
+<tr>
+<td><p>rw_rw</p></td>
+<td><p>Kinyarwanda (Rwanda)</p></td>
+</tr>
+<tr>
+<td><p>sm_ws</p></td>
+<td><p>Samoan (Samoa)</p></td>
+</tr>
+<tr>
+<td><p>st_za</p></td>
+<td><p>Southern Sotho (South Africa)</p></td>
+</tr>
+<tr>
+<td><p>ts_za</p></td>
+<td><p>Tsonga (South Africa)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-1106ceec-dd8a-1b9b-e04f-40724f3d9939"></a>v21.18 - September 21, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-1106ceec-dd8a-1b9b-e04f-40724f3d9939_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>New column <span class="guimenu">Created by</span> was added to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360015577499-Filtering#filtering-in-memsource-0-0" target="_blank" rel="noopener">customized columns</a> on the project list page. This column is checked by default for Submitter (not checked for remaining user types).</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013978399" target="_blank" rel="noopener">Submitter</a> is now able to display projects created by other Submitters using the same <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">automation widget</a>. Select <span class="guimenu">View projects created by other Submitters</span> checkbox in Submitters' settings to activate.</p></li>
+<li class="listitem"><p>User can now disable public widget url when editing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079-Automation-Widget-AW-" target="_blank" rel="noopener">automation widget</a> settings.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Job status <a class="link" href="https://help.memsource.com/hc/en-us/articles/360015577499-Filtering#filtering-in-memsource-editor-0-1" target="_blank" rel="noopener">filters</a> <span class="emphasis"><em>-1: completed / -1: not completed</em></span> are not returning correct results. This has been fixed.</p></li>
+<li class="listitem"><p>When uploading an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014167260-MXLIFF-Files" target="_blank" rel="noopener">MXLIFF</a> file, the error message <span class="guimenu">source edits prohibited by owner</span> is triggered even if the source edits are allowed in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675720-Project-Overview#project-settings-0-9" target="_blank" rel="noopener">project settings</a>. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279-Translation-Memories-Overview" target="_blank" rel="noopener">TM</a> search indexes translation units overwritten in different <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139-Workflow-Overview" target="_blank" rel="noopener">workflow</a> steps. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-14f40cb0-4fa9-0334-3e79-10a62e5d0861"></a>v21.17 - September 7, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-14f40cb0-4fa9-0334-3e79-10a62e5d0861_body">
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013918740" target="_blank" rel="noopener">Administrators</a> converted from <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013978379" target="_blank" rel="noopener">Project Managers</a> retained the restrictions of Project Manager. This has been fixed.</p></li>
+<li class="listitem"><p>When <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250879" target="_blank" rel="noopener">new password</a> policy was not followed, the error message did not inform the user that a special character is missing. This has been fixed.</p></li>
+<li class="listitem"><p>The <span class="guilabel">Select</span> button in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279" target="_blank" rel="noopener">TM</a> section of <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119" target="_blank" rel="noopener">Project template</a> settings does not open a pop-up window to select a TM. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-384e4447-d194-f3e8-5940-53b86526bb3e"></a>v21.16 - August 24, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-384e4447-d194-f3e8-5940-53b86526bb3e_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>It's now possible to replace the root element containing the source language with target language code in completed <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289880-YAML" target="_blank" rel="noopener">YAML</a> files. There are four language code standards to choose from: Memsource, RFC, Android, Android BCP.</p></li></ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>There were performance issues when a user wanted to assign analyses to multiple providers. This has been fixed.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-6ce075d4-62b1-f1d9-c1c2-192dd1763179"></a>v21.15 - August 10, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-6ce075d4-62b1-f1d9-c1c2-192dd1763179_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>When the email address of a user is changed by anybody other than that user (potential security issue), an email notification will be sent to the user.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250879" target="_blank" rel="noopener">Passwords</a> must now follow a strong password policy.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014479359" target="_blank" rel="noopener">Trusted IP</a>: When the IP address was specified, users were not able to reach the system. This has been fixed.</p></li>
+<li class="listitem">
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview#supported-third-party-machine-translation-engines-0-7" target="_blank" rel="noopener">Tencent MT</a>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Only content with less than 4000 characters is being <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780" target="_blank" rel="noopener">pre-translated</a>. This has been fixed.</p></li>
+<li class="listitem"><p>Only supports simplified Chinese <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811-Languages-Supported-in-Memsource#supported-language-table-0-1" target="_blank" rel="noopener">language codes</a> but was being applied to traditional codes as well. This has been fixed.</p></li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-81c39b3f-84b0-9b4f-02fe-d948354ae569"></a>v21.14 - July 27, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-81c39b3f-84b0-9b4f-02fe-d948354ae569_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>User can now propagate name of the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview" target="_blank" rel="noopener">Analysis</a> from a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">Project Template</a> called by the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215099-Services" target="_blank" rel="noopener">Service</a> used in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079-Automation-Widget-AW-" target="_blank" rel="noopener">Automation Widget</a>.</p></li>
+<li class="listitem">
+<p>Additional <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811-Languages-Supported-in-Memsource#supported-language-table-0-1" target="_blank" rel="noopener">languages</a> are now supported.</p>
+<p>English (Switzerland) <span class="bold bold"><strong>en_ch</strong></span></p>
+<p>English (Macau) <span class="bold bold"><strong>en_mo</strong></span></p>
+<p>English (Mexico) <span class="bold bold"><strong>en_mx</strong></span></p>
+<p>English (Slovenia) <span class="bold bold"><strong>en_si</strong></span></p>
+<p>English (Thailand) <span class="bold bold"><strong>en_th</strong></span></p>
+<p>Cornish <span class="bold bold"><strong>cor</strong></span></p>
+<p>Portuguese (International) <span class="bold bold"><strong>pt_001</strong></span></p>
+<p>Qʼeqchiʼ <span class="bold bold"><strong>kek</strong></span></p>
+<p>Santali <span class="bold bold"><strong>sat</strong></span></p>
+<p>Tagalog (Philippines) <span class="bold bold"><strong>tl_ph</strong></span></p>
+<p>Waray <span class="bold bold"><strong>war</strong></span></p>
+</li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Projects that were not submitted via an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079-Automation-Widget-AW-" target="_blank" rel="noopener">Automation Widget</a> were displayed under Related projects in TM/TB. This has been fixed.</p></li>
+<li class="listitem"><p>When a project was created via an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079-Automation-Widget-AW-" target="_blank" rel="noopener">Automation Widget</a> using a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119-Project-Templates" target="_blank" rel="noopener">Project Template</a> with some <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186500-Language-Quality-Assessment-LQA-" target="_blank" rel="noopener">LQA</a> steps enabled, the LQA steps were disabled in the created project. This has been fixed.</p></li>
+<li class="listitem"><p>It was not possible to subscribe, extend or upgrade <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186480-Purchasing-a-Memsource-Subscription" target="_blank" rel="noopener">subscriptions</a>. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289740" target="_blank" rel="noopener">MS Word</a> files with restricted fonts could not be imported. This has been fixed.</p></li>
+<li class="listitem"><p>Strings located after hidden conditional text in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357759-IDML-Adobe-InDesign-" target="_blank" rel="noopener">IDML files</a> were not displayed in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775960-In-Context-Preview" target="_blank" rel="noopener">in-context preview</a>. This has been fixed.</p></li>
+<li class="listitem"><p>Update target <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014441419-Webhooks" target="_blank" rel="noopener">webhook</a> did not return number of duplicates found. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-0091d27c-9ce6-4d77-810d-f8aa8458b596"></a>v21.13 - July 13, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-0091d27c-9ce6-4d77-810d-f8aa8458b596_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">Automated Project Creation</a> can now be forced to import all monitored files, even if they haven't changed.</p></li>
+<li class="listitem"><p>All changed strings using <span class="guimenu"><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#job-tools-0-8" target="_blank" rel="noopener">Update target</a></span> can be optionally pushed to relevant TMs.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Images are missing from imported <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289800" target="_blank" rel="noopener">MIF</a> files. This has been fixed.</p></li>
+<li class="listitem"><p>Buyers are able to discover the name of a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744239" target="_blank" rel="noopener">vendor's vendor</a>. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289740" target="_blank" rel="noopener">DOC/DOCX</a> files containing legacy <code class="code">o:gfxdata</code> attributes failed on import. This has been fixed.</p></li>
+<li class="listitem"><p>Valid <span class="guimenu">Incorrectly nested tags</span> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872099-Quality-Assurance-QA-Pane#mitigating-qa-warnings-0-2" target="_blank" rel="noopener">QA warnings</a> are shown in the wrong segment. This has been fixed.</p></li>
+<li class="listitem"><p><span class="guimenu">Next step ready</span> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020" target="_blank" rel="noopener">email message</a> is not sent to the linguist if previous workflow completes the job via mobile.</p></li>
+<li class="listitem"><p>PM with restricted rights to access projects/TM/TB/PT of only one <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186440" target="_blank" rel="noopener">business unit</a> can select any BU. This has been fixed.</p></li>
+<li class="listitem"><p>Information about <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013918780" target="_blank" rel="noopener">Guest</a> users is missing from the tooltip. This has been fixed.</p></li>
+<li class="listitem"><p>When deleting a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279" target="_blank" rel="noopener">TM</a> assigned in the <span class="guimenu">Write</span> mode, the next TM in line automatically inherited the <span class="guimenu">Write</span> mode. This has been fixed.</p></li>
+<li class="listitem"><p>Confirmed segments were not saved to TM in some <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF</a> files. This has been fixed.</p></li>
+<li class="listitem"><p>Assigned providers were being deleted during multiple <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760" target="_blank" rel="noopener">analyses</a> edits. This has been fixed.</p></li>
+<li class="listitem"><p>An <span class="guimenu">Instant Quote Ready</span> email was sent when a project was created via an Automation widget even with <span class="guimenu">Don't create analyses and quotes</span> disabled in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215099" target="_blank" rel="noopener">service</a>. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186500" target="_blank" rel="noopener">LQA</a> was being turned off for already existing projects with one LQA <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">workflow</a> step enabled. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-9b2a55e1-dcfb-0e84-d554-ee318e615e19"></a>v21.12 - June 29, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-9b2a55e1-dcfb-0e84-d554-ee318e615e19_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>New target pathname macros ( <code class="code">{targetLangName}</code>, <code class="code">{targetLangRFC}</code>, <code class="code">{targetLangAndroid}</code> and <code class="code">{targetLangAndroidBCP}</code>) are supported by <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186520" target="_blank" rel="noopener">file renaming</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800" target="_blank" rel="noopener">continuous job</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">APC</a> target subfolder path fields.</p></li>
+<li class="listitem"><p>Translatable inline elements can now be defined in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289780" target="_blank" rel="noopener">HTML import options</a>.</p></li>
+<li class="listitem">
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/4403029586194" target="_blank" rel="noopener">LQA</a> has been improved with these features:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Setting pass/fail thresholds in profiles.</p></li>
+<li class="listitem"><p>Enabling LQA in projects.</p></li>
+<li class="listitem"><p>Calculating LQA scores and presenting them in the UI.</p></li>
+<li class="listitem"><p>Download of LQA scorecard for sharing purposes.</p></li>
+</ul></div>
+</li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>The color of lines are changing when importing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289800" target="_blank" rel="noopener">MIF (Adobe FrameMaker)</a> files. This has been fixed.</p></li>
+<li class="listitem"><p>Hidden sheets in multilingual <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760" target="_blank" rel="noopener">spreadsheet files</a> are being exposed when imported. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">APC</a> is ignoring file type settings in some linked <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119" target="_blank" rel="noopener">project templates</a>. This has been fixed.</p></li>
+<li class="listitem"><p>When <span class="guimenu">Email notifications</span> is turned off and <span class="guimenu">Notify job owner when job status is changed</span> is turned on <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014479359" target="_blank" rel="noopener">for a project</a>, the user receives notifications. This has been fixed.</p></li>
+<li class="listitem"><p>In <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF</a> 1.2 files, contents that started with a whitespace followed by a tag were not imported and were added before the translation on export. This has been fixed.</p></li>
+<li class="listitem"><p>XML entities were converted to symbols when double-clicked on <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279" target="_blank" rel="noopener">TM</a> entry. This has been fixed.</p></li>
+<li class="listitem"><p>In addition to relevant <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013978419" target="_blank" rel="noopener">user rights</a>, the <span class="guimenu">Modify setup's server settings</span> permission was necessary for a PM user to be able to export TMs using API. This has been fixed.</p></li>
+<li class="listitem"><p>Project template settings were being modified by the automation widget and APC. This has been fixed.</p></li>
+<li class="listitem"><p>Concept metadata was not being <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013696860-Modify-Term-Bases#export-term-base-for-modification-0-11" target="_blank" rel="noopener">exported from TB</a>. This has been fixed.</p></li>
+<li class="listitem"><p>Some non-translatable categories (0-95%) were not included in <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003693572" target="_blank" rel="noopener">homepage analytics</a>. This has been fixed.</p></li>
+<li class="listitem"><p>Import of <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357839" target="_blank" rel="noopener">JSON</a>s with <code class="code">#</code> characters used as number placeholders was failing. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760" target="_blank" rel="noopener">Analyses</a> assigned to providers for jobs created via AW/APC are not correctly formatted in default analysis. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-79cc3285-ac65-e167-f36f-809cb5e9107b"></a>v21.11 - June 15, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-79cc3285-ac65-e167-f36f-809cb5e9107b_body">
+<h4>
+<a id="bridgehead-idm4594031401867232466587463402"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Bilingual files (XLIFF, PO, TBX, TMX, TTX, TS) are no longer supported for <span class="guimenu">Update target</span>.</p></li>
+<li class="listitem"><p>Tencent is now available as a fully managed <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459" target="_blank" rel="noopener">MT engine</a>.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Projects that were not submitted via an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">Automation Widget</a> were listed in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760" target="_blank" rel="noopener">Analysis</a> / <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250359" target="_blank" rel="noopener">Quote</a> reports. This has been fixed.</p></li>
+<li class="listitem"><p>Character counts of emoji characters were interpreted differently by the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800-Quality-Assurance-QA-Overview#list-of-qa-checks-0-3" target="_blank" rel="noopener">QA check</a> (and spreadsheet LEN function) and the status bar counter/segment text highlighting. This has been fixed.</p></li>
+<li class="listitem"><p>Changes in some non-translatable elements in XML files were not updated by the <span class="guimenu"><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800-Continuous-Jobs-CJ-#import-continuous-jobs-to-a-project-0-6" target="_blank" rel="noopener">Reimport from Online repository</a></span> feature. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-d05f2ad8-0b4b-72ed-99d2-5846fc3e8b74"></a>v21.10 - June 1, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-d05f2ad8-0b4b-72ed-99d2-5846fc3e8b74_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Characters can now be converted to character entities in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF 1.2 and XLIFF 2.0</a> import settings.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014358619" target="_blank" rel="noopener">Regexp</a> values added to to <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800" target="_blank" rel="noopener">QA</a> section in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675720-Project-Overview#quality-assurance-0-13" target="_blank" rel="noopener">project settings</a> are now validated. <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800#list-of-qa-checks-0-3" target="_blank" rel="noopener">QA checks</a> can no longer be saved with invalid regexp.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775980" target="_blank" rel="noopener">Segments</a> that appear to be unlocked are not until page reloaded. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013918760" target="_blank" rel="noopener">Linguists</a> deleted from <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119" target="_blank" rel="noopener">project templates </a>continue to receive job notifications. This has been fixed.</p></li>
+<li class="listitem"><p>Exact <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872079" target="_blank" rel="noopener">search</a> does not work with words followed by <code class="code">&lt;</code>. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-7bd2a753-0411-1907-d708-44db497a5475"></a>v21.9 - May 18, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-7bd2a753-0411-1907-d708-44db497a5475_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360021664240" target="_blank" rel="noopener">Custom file types</a> based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357739" target="_blank" rel="noopener">XML</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289780" target="_blank" rel="noopener">HTML</a> or <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357839" target="_blank" rel="noopener">JSON</a> that are defined by filename and extension can be automatically detected and imported into Memsource.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289860-CSV-Comma-Separated-Values-#multilingual-csv-file-0-2" target="_blank" rel="noopener">Multilingual CSV</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760-Spreadsheets-MS-Excel-based-#multilingual-spreadsheet-files-0-2" target="_blank" rel="noopener">multilingual spreadsheet</a> files are now detected automatically if the files have Memsource standard language codes in the first row. Selecting Multilingual CSV and Multilingual MS Excel as file types is no longer required and can be left as Auto-detect.</p></li>
+<li class="listitem"><p>Notifications are created for failed pre-translation of jobs in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360016584619" target="_blank" rel="noopener">Continuous Project</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800" target="_blank" rel="noopener">Continuous Job</a>, and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">Automated Project Creation</a>.</p></li>
+<li class="listitem"><p>Transliteration can be provided for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780-Pre-translation-Overview#pseudo-translation-0-1" target="_blank" rel="noopener">pseudo-translations</a>.</p></li>
+<li class="listitem"><p>For pseudo-translations with a segment key, a pseudo-string to be prepended with a numerical hash value of the segment key can be provided.</p></li>
+<li class="listitem"><p><code class="code">{fileName}</code> macro can now be used when naming <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760" target="_blank" rel="noopener">analysis</a>. If more files/jobs are used for analysis, the <code class="code">{fileName}</code> will be empty.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>There was no <span class="guilabel">Sign out</span> button on the <span class="guimenu">Subscription expired</span> page. This is fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760" target="_blank" rel="noopener">Multilingual spreadsheets</a>: line breaks and formatting are not preserved in the completed file. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-aa0fc082-8f54-30b3-17c7-0acb23efcc11"></a>v21.8 - May 4, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-aa0fc082-8f54-30b3-17c7-0acb23efcc11_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>New <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775980" target="_blank" rel="noopener">segments</a> and words in new segments are aggregated in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#jobs-table-0-2" target="_blank" rel="noopener">job tooltip</a> every time a source file is updated.</p></li>
+<li class="listitem"><p>HTML subfilter can now be used when parsing ICU messages in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357839" target="_blank" rel="noopener">JSON</a>.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>When opening large numbers of <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#jobs-table-0-2" target="_blank" rel="noopener">jobs</a> (&gt;290), a web error occurred. There is now a warning message and opening more than 290 jobs in the editor is disabled.</p></li>
+<li class="listitem"><p>Relevancy is modified on <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740#create-a-job-0-4" target="_blank" rel="noopener">linguist assignment</a> instead of job completion by a linguist. This has been fixed.</p></li>
+<li class="listitem"><p>The tooltip next to the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760" target="_blank" rel="noopener">analysis</a> name field contained an incorrect link. This has been fixed.</p></li>
+<li class="listitem"><p>The tooltip for the <span class="guimenu">Parse ICU messages</span> option under <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF 1.2 / XLIFF 2.0</a> import settings provided vague information. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-c9baa5f5-4ce5-e1e8-c71a-b30153859ccf"></a>v21.7 - April 20, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-c9baa5f5-4ce5-e1e8-c71a-b30153859ccf_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760" target="_blank" rel="noopener">Analyses</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250359" target="_blank" rel="noopener">quotes</a> automatically created using the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">automation widget</a> can now be turned off.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780" target="_blank" rel="noopener">Pre-translation</a> finished <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014441419" target="_blank" rel="noopener">webhook</a> returns errors and warnings.</p></li>
+<li class="listitem"><p>Non-empty target <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775980" target="_blank" rel="noopener">segments</a> can be confirmed and/or locked after import for multilingual <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760-Spreadsheets-MS-Excel-based-#multilingual-spreadsheet-files-0-2" target="_blank" rel="noopener">XLSX</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289860-CSV-Comma-Separated-Values-#multilingual-csv-file-0-2" target="_blank" rel="noopener">CSV</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357739-XML-Extensible-Markup-Language-#multilingual-xml-0-5" target="_blank" rel="noopener">XML</a>. Confirmed segments can also be saved to a translation memory attached to a project.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>When <a class="link" href="https://help.memsource.com/hc/en-us/articles/360015577499" target="_blank" rel="noopener">filtering</a> jobs in a project by the target language and selecting <span class="guimenu">Select all jobs</span> (meaning all filtered jobs), all jobs (all target languages) in the project are exported. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#change-job-status-0-1" target="_blank" rel="noopener">Accepting jobs</a> assigned to multiple users as an <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013918740" target="_blank" rel="noopener">Administrator</a> from within the editors triggers an error message. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">APC</a>: Multiple incoming target languages are causing sync errors with some connectors. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766279" target="_blank" rel="noopener">TM</a> remained <span class="emphasis"><em>read/write</em></span> when later set as <span class="emphasis"><em>read-only</em></span> for a particular <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">workflow</a> step. This has been fixed.</p></li>
+<li class="listitem"><p>Searching in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744279" target="_blank" rel="noopener">archived projects</a> did not work. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-213678aa-a7b6-d57e-6716-d5c00327a27b"></a>v21.6 - April 6, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-213678aa-a7b6-d57e-6716-d5c00327a27b_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Wordpress <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF</a> file type was renamed to Drupal/WordPress XLIFF. No change in functionality was introduced.</p></li>
+<li class="listitem"><p>Login page for <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186540" target="_blank" rel="noopener">SSO</a> has been redesigned for clarity.</p></li>
+<li class="listitem"><p>User can <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#job-tools-0-7" target="_blank" rel="noopener">update translations</a> using the <span class="guimenu">Update target</span> feature, which enables the upload of offline files and the update of target segments and TM.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289880" target="_blank" rel="noopener">YAML</a>: There are problems with rendering multilines and spaces. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289740" target="_blank" rel="noopener">DOCX</a>: Tagified strings lose formatting in the exported document. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357799" target="_blank" rel="noopener">XLIFF</a>: ICU parser is inserting custom placeholders in the target segment. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-a10f1249-2bac-9090-102f-9b00899e5e57"></a>v21.5 - March 23, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-a10f1249-2bac-9090-102f-9b00899e5e57_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800" target="_blank" rel="noopener">QA</a> check terminology has been updated.</p></li>
+<li class="listitem"><p>Unification of capitalization across <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview#configure-third-party-mt-engines-0-6" target="_blank" rel="noopener">machine translation engine </a>values.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250379" target="_blank" rel="noopener">Net Rate Scheme</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014250399" target="_blank" rel="noopener">Price lists</a> are not being propagated to the <span class="guimenu">Financials</span> settings of a project. This has been fixed.</p></li>
+<li class="listitem"><p>There was an issue with custom <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620479-Memsource-Translate#machine-translation-profiles-0-3" target="_blank" rel="noopener">Memsource Translate profiles</a> which prevented users from disabling all machine translation engines. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-78e4a72e-419f-0394-300d-bcc148e3b2d7"></a>v21.4 - March 9, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-78e4a72e-419f-0394-300d-bcc148e3b2d7_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760-Analysis-Overview#post-editing-analysis-0-5" target="_blank" rel="noopener">Post-editing analysis</a> can be automatically generated after updating a source.</p></li>
+<li class="listitem"><p>Additional <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811-Languages-Supported-in-Memsource#supported-language-table-0-1" target="_blank" rel="noopener">languages</a> are now supported.</p></li>
+<li class="listitem"><p><span class="guilabel">en_ja</span> has been deprecated and replaced with <span class="guilabel">en_jp</span>. Projects with older resources can still use <span class="guilabel">en_ja</span>, but all new resources use <span class="guilabel">en_jp</span>.</p></li>
+<li class="listitem"><p>A new <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">Workflow automation</a> option in projects and project templates makes it possible to automatically complete unassigned workflow steps after the previous step is completed. In case of a split job, all parts must be completed in order to automatically complete following unassigned steps.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Text in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289760" target="_blank" rel="noopener">.XLSX</a> files that are hidden in merged cells is not imported with the HTML subfilter. This has been fixed.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-953399f4-e8fc-aa0b-23ce-a4ca5e8cb8b8"></a>v21.3 - February 23, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-953399f4-e8fc-aa0b-23ce-a4ca5e8cb8b8_body">
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>In some <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459" target="_blank" rel="noopener">translation engines</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872159" target="_blank" rel="noopener">tags</a> were being included in translations when Include Tags is set to FALSE. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014186500" target="_blank" rel="noopener">LQA profile</a> is not being saved to projects if the organization has only one <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">workflow</a> step. This has been fixed.</p></li>
+<li class="listitem"><p>Search bar does not support the Autofill Form Data feature. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-8b2cccfa-83cc-0c78-67e6-c5b92783fff2"></a>v21.2 - February 9, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-8b2cccfa-83cc-0c78-67e6-c5b92783fff2_body">
+<h4>
+<a id="bridgehead-idm232248989958955"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>New design of application shell. Header information was moved to left pane.</p></li></ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>A rejected <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740" target="_blank" rel="noopener">job</a> did not activate the Linguist's user deactivated account in the previous <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">workflow</a> step. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013918760" target="_blank" rel="noopener">Linguists</a> are not able to add terms to to a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013766299" target="_blank" rel="noopener">TB</a> from the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775920" target="_blank" rel="noopener">Editor for Web</a>. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#job-tools-0-7" target="_blank" rel="noopener">Updating the source</a> changes the target language of the updated job. This has been fixed.</p></li>
+<li class="listitem"><p><span class="guimenu">Select MT engine per target language</span> is ignored in projects created with <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">Automation widgets</a>. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744239" target="_blank" rel="noopener">Vendor's Linguist and PM user</a> were unable to add and view comments in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012775920" target="_blank" rel="noopener">Editor for Web</a> in certain <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013744139" target="_blank" rel="noopener">workflow</a> steps. This has been fixed.</p></li>
+<li class="listitem"><p>Errors are being triggered when using <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">automation widgets</a> with some services. This has been fixed.</p></li>
+<li class="listitem"><p>Fuzzy status is ignored if there are more parameters on the same line when importing <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289920" target="_blank" rel="noopener">PO (gettext)</a>. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-2c64c1a5-d8a2-1b5e-4f0a-8e4093254a92"></a>v21.1 - January 26, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-2c64c1a5-d8a2-1b5e-4f0a-8e4093254a92_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Terms can now be <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013696860" target="_blank" rel="noopener">imported into a term base</a> with metadata if the metadata is defined in the account (e.g., client, domain). Metadata must be defined before import.</p></li>
+<li class="listitem"><p>Non-translatable inline elements defined in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014289780" target="_blank" rel="noopener">HTML</a> filter are no longer case sensitive.</p></li>
+<li class="listitem"><p>Files can now be manually re-imported from online repositories.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012620459-Machine-Translation-Overview#supported-third-party-machine-translation-engines-0-7" target="_blank" rel="noopener">Rozetta T-3MT</a> cannot process jobs with the <code class="code">&lt;</code> character. This has been fixed.</p></li>
+<li class="listitem"><p><span class="guimenu">Project status changed</span> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014441419" target="_blank" rel="noopener">webhook</a> is not sent after status is automatically changed. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-ef40c867-5e80-79e0-6cf3-cda7c9782bf5"></a>v20.26 - January 12, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-ef40c867-5e80-79e0-6cf3-cda7c9782bf5_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>LQA profiles are now available allowing different LQA settings for different customers and content types.</p></li>
+<li class="listitem"><p>Special characters can no longer be used in <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013918720-User-Roles-Overview#create-a-user-0-2" target="_blank" rel="noopener">user names</a>.</p></li>
+</ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Slides from some <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014357719" target="_blank" rel="noopener">.pptx</a> files were not being imported. This has been fixed.</p></li></ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-cbe942a7-be26-5205-68f5-50894dda22fd" id="UUID-a7103505-a248-e200-54ad-cf211182083f"></a>v20.25 - January 5, 2021</h2></div></div>
+<div class="panel-body collapse" id="UUID-a7103505-a248-e200-54ad-cf211182083f_body">
+<h4>
+<a id="bridgehead-idm4519399546328031689006091686"></a>New Features and Improvements</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800" target="_blank" rel="noopener">Continuous jobs</a> can be manually re-imported from online repositories.</p></li></ul></div>
+<h4>
+<a id="bridgehead-idm4575661951388831689007650434"></a>Fixed Bugs</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Incorrect link in <span class="emphasis"><em>Job Assigned</em></span> <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020" target="_blank" rel="noopener">email template</a>. This has been fixed.</p></li>
+<li class="listitem"><p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014179800" target="_blank" rel="noopener">Continuous job</a> cannot be exported to a target subfolder path in a different branch in a GitHub repository. This has been fixed.</p></li>
+</ul></div>
+</div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
