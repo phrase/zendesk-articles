@@ -1,4 +1,113 @@
 <div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
-<p></p>
+<h3>
+<a id="UUID-b838521c-9508-c236-2ca7-6bbf71d2f80c_bridgehead-idm4483122483065632716735393763"></a>Supported Analysis macros:</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>projectName</p></li>
+<li class="listitem"><p>workflow</p></li>
+<li class="listitem"><p>sourceLang</p></li>
+<li class="listitem"><p>targetLang</p></li>
+<li class="listitem"><p>targetLangName</p></li>
+<li class="listitem"><p>targetLangRFC</p></li>
+<li class="listitem"><p>targetLangAndroid</p></li>
+<li class="listitem"><p>targetLangAndroidBCP</p></li>
+<li class="listitem"><p>userName</p></li>
+<li class="listitem"><p>innerId</p></li>
+<li class="listitem"><p>fileName</p></li>
+</ul></div>
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215079" target="_blank" rel="noopener">Automation Widget</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215059" target="_blank" rel="noopener">Automated Project Creation</a>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Default analysis name <code class="code">Instant Quote - ${language} - ${service.publicName}</code> (if <span class="guimenu">Use naming defined in project template's settings</span> is turned off in the particular Service)</p></li></ul></div>
+<p>REST API endpoint to create an analysis:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The name pattern can be provided in the API request.</p></li></ul></div>
+<p>A new analysis is also created during the update source process. The name pattern is applied automatically.</p>
+<h3>
+<a id="UUID-b838521c-9508-c236-2ca7-6bbf71d2f80c_bridgehead-idm4483122494436832716735757051"></a>Supported Job macros:</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>projectName</p></li>
+<li class="listitem"><p>workflow</p></li>
+<li class="listitem"><p>sourceLang</p></li>
+<li class="listitem"><p>targetLang</p></li>
+<li class="listitem"><p>targetLangName</p></li>
+<li class="listitem"><p>targetLangRFC</p></li>
+<li class="listitem"><p>targetLangAndroid</p></li>
+<li class="listitem"><p>targetLangAndroidBCP</p></li>
+<li class="listitem"><p>userName</p></li>
+<li class="listitem"><p>fileName</p></li>
+<li class="listitem"><p>sourceFileName</p></li>
+<li class="listitem"><p>path</p></li>
+<li class="listitem"><p>status</p></li>
+<li class="listitem"><p>assignee</p></li>
+<li class="listitem"><p>date</p></li>
+<li class="listitem"><p>time</p></li>
+<li class="listitem"><p>jobCreateTime</p></li>
+</ul></div>
+<p>Export to online repository:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The pattern is automatically applied in the background.</p></li></ul></div>
+<h3>
+<a id="UUID-b838521c-9508-c236-2ca7-6bbf71d2f80c_bridgehead-idm4615937669780832716754477931"></a>Supported commit message macros:</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>projectName</p></li>
+<li class="listitem"><p>workflow</p></li>
+<li class="listitem"><p>sourceLang</p></li>
+<li class="listitem"><p>targetLang</p></li>
+<li class="listitem"><p>targetLangName</p></li>
+<li class="listitem"><p>targetLangRFC</p></li>
+<li class="listitem"><p>targetLangAndroid</p></li>
+<li class="listitem"><p>targetLangAndroidBCP</p></li>
+<li class="listitem"><p>userName</p></li>
+<li class="listitem"><p>fileName</p></li>
+<li class="listitem"><p>sourceFileName</p></li>
+<li class="listitem"><p>status</p></li>
+<li class="listitem"><p>assignee</p></li>
+<li class="listitem"><p>date</p></li>
+<li class="listitem"><p>time</p></li>
+<li class="listitem"><p>jobCreateTime</p></li>
+</ul></div>
+<h3>
+<a id="UUID-b838521c-9508-c236-2ca7-6bbf71d2f80c_bridgehead-idm45990166899712327167559003"></a>Supported pull request branch macros:</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>projectName</p></li>
+<li class="listitem"><p>workflow</p></li>
+<li class="listitem"><p>sourceLang</p></li>
+<li class="listitem"><p>targetLang</p></li>
+<li class="listitem"><p>targetLangName</p></li>
+<li class="listitem"><p>targetLangRFC</p></li>
+<li class="listitem"><p>targetLangAndroid</p></li>
+<li class="listitem"><p>targetLangAndroidBCP</p></li>
+<li class="listitem"><p>userName</p></li>
+<li class="listitem"><p>fileName</p></li>
+<li class="listitem"><p>sourceFileName</p></li>
+<li class="listitem"><p>status</p></li>
+<li class="listitem"><p>assignee</p></li>
+<li class="listitem"><p>date</p></li>
+<li class="listitem"><p>time</p></li>
+<li class="listitem"><p>jobCreateTime</p></li>
+</ul></div>
+<h3>
+<a id="UUID-b838521c-9508-c236-2ca7-6bbf71d2f80c_bridgehead-idm4483120969827232716756734373"></a>Supported target subfolder path macros:</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>targetLang</p></li>
+<li class="listitem"><p>targetLangName</p></li>
+<li class="listitem"><p>targetLangRFC</p></li>
+<li class="listitem"><p>targetLangAndroid</p></li>
+<li class="listitem"><p>targetLangAndroidBCP</p></li>
+</ul></div>
+<h3>
+<a id="UUID-b838521c-9508-c236-2ca7-6bbf71d2f80c_bridgehead-idm4599016607193632716757635743"></a>Supported Zendesk export label macros:</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>targetLang</p></li></ul></div>
+<h3>
+<a id="UUID-b838521c-9508-c236-2ca7-6bbf71d2f80c_bridgehead-idm4483121936776032716758428635"></a>Supported Marketo variables macros:</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>targetLang</p></li>
+<li class="listitem"><p>targetLangDir</p></li>
+</ul></div>
+<h3>
+<a id="UUID-b838521c-9508-c236-2ca7-6bbf71d2f80c_bridgehead-idm4483122716478432716759161947"></a>Supported APC/AW project name macros:</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><code class="code">{order.number}</code></p></li>
+<li class="listitem"><p><code class="code">{order.email}</code></p></li>
+<li class="listitem"><p><code class="code">{order.title}</code></p></li>
+<li class="listitem"><p><code class="code">{filename}</code></p></li>
+<li class="listitem"><p><code class="code">{order.date}</code></p></li>
+</ul></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>

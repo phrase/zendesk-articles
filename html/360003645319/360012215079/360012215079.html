@@ -60,7 +60,7 @@
 <p>If providers are to be used, ensure the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215119" target="_blank" rel="noopener">project template</a> for the service includes them.</p>
 <div class="procedure">
 <a id="UUID-895c1049-1178-6c17-109b-55bc8b33a361_procedure-idm4479625699929631652743748814"></a><ol class="procedure" type="1">
-<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4412412485010/161b844dd313ea.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section and click on <span class="guilabel">Automation Widgets</span>. The <span class="guimenu">Automation Widgets</span> page opens.</p></li>
+<li class="step"><p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4414506677650/161d54fabe94fc.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section and click on <span class="guilabel">Automation Widgets</span>. The <span class="guimenu">Automation Widgets</span> page opens.</p></li>
 <li class="step">
 <p>Click <span class="guilabel">New</span>.</p>
 <p>The <span class="guimenu">Create Automation Widget</span> page opens.</p>
@@ -70,10 +70,18 @@
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="guilabel">Name</span></p>
-<p>Provide a name for the widget. This name will not be displayed in the widget itself.</p>
+<p>Provide a name for the widget. This name will not be displayed in the widget itself.</p>
 </li>
 <li class="listitem"><p><span class="guilabel">Disable public widget URL</span></p></li>
-<li class="listitem"><p><span class="guilabel">Authorize user to access widget URL</span></p></li>
+<li class="listitem">
+<p><span class="guilabel">Authorize user to access widget URL</span></p>
+<p>Lock access to the widget URL to only users within the organization with a Memsource account.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>If the user is already logged in to the correct organization, their access to the URL will be granted.</p></li>
+<li class="listitem"><p>If the user is logged in with the wrong account, their access to the URL will be denied.</p></li>
+<li class="listitem"><p>If the user is not logged in, they will be redirected to login page.</p></li>
+</ul></div>
+</li>
 <li class="listitem">
 <p><span class="guilabel">Service</span></p>
 <p>Select the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012215099-Services" target="_blank" rel="noopener">services</a> that this widget will perform.</p>
@@ -84,17 +92,17 @@
 </li>
 <li class="listitem">
 <p><span class="guilabel">Default Project Title</span></p>
-<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020-Email-Templates-and-Automation-Widget-Macros#supported-email-and-automation-widget-macros-0-1" target="_blank" rel="noopener">Template macros</a>, such as {order.number}, {order.email} and {order.date} can be used to create project names.</p>
+<p><a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020-Email-Templates-and-Automation-Widget-Macros#supported-email-and-automation-widget-macros-0-1" target="_blank" rel="noopener">Template macros</a>, such as {order.number}, {order.email} and {order.date} can be used to create project names.</p>
 </li>
 <li class="listitem">
 <p><span class="guilabel">Allow users to specify Project Name</span></p>
-<p>Choose whether users should be able to set a project title themselves from the widget page, or if a default name should be applied.</p>
+<p>Choose whether users should be able to set a project title themselves from the widget page, or if a default name should be applied.</p>
 </li>
 <li class="listitem"><p><span class="guilabel">Assign Widget to new Submitters</span></p></li>
 <li class="listitem">
 <p><span class="guilabel">Connectors</span></p>
 <p>Select <a class="link linktextconsumer" href="https://help.memsource.com/hc/articles/360012207959#UUID-2aebdc84-c474-f68d-92e3-a50eb8966572">connectors</a> that Submitters can use.</p>
-<p>Submitters must sign in to the Memsource Client Portal to use connectors; they are not available to anonymous Submitters.</p>
+<p>Submitters must sign in to the Memsource Client Portal to use connectors; they are not available to anonymous Submitters.</p>
 </li>
 <li class="listitem"><p><span class="guilabel">Default Project Owner</span></p></li>
 <li class="listitem"><p><span class="guilabel">Widget UI Language</span></p></li>
@@ -102,20 +110,20 @@
 <p><span class="guilabel">Welcome Message</span></p>
 <p>This message will be shown to users accessing the site. The following HTML elements and attributes are supported:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p><span class="bold bold"><strong>&lt;b&gt;</strong></span>, <span class="bold bold"><strong>&lt;strong&gt;</strong></span>, <span class="bold bold"><strong>&lt;u&gt;</strong></span>, <span class="bold bold"><strong>&lt;i&gt;</strong></span>, <span class="bold bold"><strong>&lt;em&gt;</strong></span>, <span class="bold bold"><strong>&lt;p&gt;</strong></span>, <span class="bold bold"><strong>&lt;br&gt;</strong></span> (supported attributes: <span class="bold bold"><strong>title</strong></span>, <span class="bold bold"><strong>style</strong></span>, <span class="bold bold"><strong>class</strong></span>)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>&lt;img&gt;</strong></span> (supported attributes: <span class="bold bold"><strong>title</strong></span>, <span class="bold bold"><strong>style</strong></span>, <span class="bold bold"><strong>class</strong></span>, <span class="bold bold"><strong>src</strong></span>, <span class="bold bold"><strong>alt</strong></span>, <span class="bold bold"><strong>width</strong></span>, <span class="bold bold"><strong>height</strong></span>)</p></li>
-<li class="listitem"><p><span class="bold bold"><strong>&lt;a&gt;</strong></span> (supported attributes: <span class="bold bold"><strong>title</strong></span>, <span class="bold bold"><strong>style</strong></span>, <span class="bold bold"><strong>class</strong></span>, <span class="bold bold"><strong>href</strong></span>, <span class="bold bold"><strong>target</strong></span>)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;b&gt;</strong></span>, <span class="bold bold"><strong>&lt;strong&gt;</strong></span>, <span class="bold bold"><strong>&lt;u&gt;</strong></span>, <span class="bold bold"><strong>&lt;i&gt;</strong></span>, <span class="bold bold"><strong>&lt;em&gt;</strong></span>, <span class="bold bold"><strong>&lt;p&gt;</strong></span>, <span class="bold bold"><strong>&lt;br&gt;</strong></span> (supported attributes: <span class="bold bold"><strong>title</strong></span>, <span class="bold bold"><strong>style</strong></span>, <span class="bold bold"><strong>class</strong></span>)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;img&gt;</strong></span> (supported attributes: <span class="bold bold"><strong>title</strong></span>, <span class="bold bold"><strong>style</strong></span>, <span class="bold bold"><strong>class</strong></span>, <span class="bold bold"><strong>src</strong></span>, <span class="bold bold"><strong>alt</strong></span>, <span class="bold bold"><strong>width</strong></span>, <span class="bold bold"><strong>height</strong></span>)</p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;a&gt;</strong></span> (supported attributes: <span class="bold bold"><strong>title</strong></span>, <span class="bold bold"><strong>style</strong></span>, <span class="bold bold"><strong>class</strong></span>, <span class="bold bold"><strong>href</strong></span>, <span class="bold bold"><strong>target</strong></span>)</p></li>
 </ul></div>
 </li>
 </ul></div>
 </li>
 <li class="step">
 <p><span class="guilabel">Email Templates</span></p>
-<p>Select any required <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020-Email-Templates-and-Automation-Widget-Macros#email-templates-overview-0-0" target="_blank" rel="noopener">email templates</a>.</p>
+<p>Select any required <a class="link" href="https://help.memsource.com/hc/en-us/articles/360014294020-Email-Templates-and-Automation-Widget-Macros#email-templates-overview-0-0" target="_blank" rel="noopener">email templates</a>.</p>
 </li>
 <li class="step">
 <p><span class="guilabel">IFrame &amp; Appearance</span></p>
-<p>Modify the IFrame HTML Code and customize the widget itself.</p>
+<p>Modify the IFrame HTML Code and customize the widget itself.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="guimenu">IFrame HTML Code</span></p>
