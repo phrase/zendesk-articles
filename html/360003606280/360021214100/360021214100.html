@@ -77,7 +77,7 @@
 </li>
 <li class="listitem">
 <p><span class="guimenu">Retrieve page translations</span></p>
-<p>If the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#job-status-0-0" target="_blank" rel="noopener">job status</a> is <span class="emphasis"><em>Complete</em></span>, pulls translated page from Memsource and changes the status to <span class="emphasis"><em>Delivered</em></span>. If the job is in any other state, that state is maintained after the pull.</p>
+<p>If the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#job-status-0-0" target="_blank" rel="noopener">job status</a> is <span class="emphasis"><em>Completed</em></span>, pulls translated page from Memsource and changes the status to <span class="emphasis"><em>Delivered</em></span>. If the job is in any other state, that state is maintained after the pull.</p>
 <div dir="ltr" class="note">
 <h3 class="title">Note</h3>
 <p>If strings are not visible on the translated pages (especially for non-Western languages), it is likely due to missing characters sets in the used font. Switch to a font that supports the given language.</p>
@@ -92,8 +92,9 @@
 <p><span class="guimenu">Update existing project:</span></p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
 <li class="listitem"><p>If there was no update to source or target segments in Figma, then both source and target are populated in the job and the segment is confirmed.</p></li>
-<li class="listitem"><p>If target was updated, but source wasn't, then the segment is populated but unconfirmed. If reviewed segments also require confirmation, add <code class="code">state=reviewed</code> to <span class="guimenu">Set segment confirmed when</span> in the XLIFF 2.0 file filter configuration.</p></li>
+<li class="listitem"><p>If target was updated, but source wasn't, then the segment is populated but unconfirmed. If reviewed segments also require confirmation, add <code class="code">state=reviewed</code> to <span class="guimenu">Set segment confirmed when</span> in the XLIFF 2.0 file filter configuration.</p></li>
 <li class="listitem"><p>If the source changed, then the source is populated with the updated entry but target is empty.</p></li>
+<li class="listitem"><p>The status of the updated job is changed to <span class="emphasis"><em>Emailed</em></span>.</p></li>
 </ul></div>
 </li>
 <li class="listitem">
