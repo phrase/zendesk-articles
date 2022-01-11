@@ -4,7 +4,7 @@
 <div class="procedure">
 <a id="UUID-3da21e9f-2799-902c-ee48-0b717924289d_procedure-idm231808187532344"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4414977156242/161dd3577aeab8.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Completed file name and export path</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4414979139346/161dd53e50f1cc.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Completed file name and export path</span>.</p>
 <p>The <span class="guimenu">Completed file name and export path</span> page opens.</p>
 </li>
 <li class="step">
@@ -83,26 +83,53 @@
 </li>
 <li class="step">
 <p>Provide macro for <span class="guimenu">Export online repository files to</span>.</p>
-<p>Supported macros:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+<p>If specific files are monitored, then select <span class="guilabel">Target language subfolder</span> for <span class="guimenu">Export completed files to</span>.</p>
+<p>Specify the folder name in the <span class="guimenu">Target Subfolder Path</span>:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p>Use these macros to represent target language.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
 <li class="listitem"><p><code class="code">{targetLang}</code> Based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811" target="_blank" rel="noopener">Memsource language codes</a>.</p></li>
 <li class="listitem"><p><code class="code">{targetLangName}</code> Based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811" target="_blank" rel="noopener">Memsource language names</a>.</p></li>
 <li class="listitem">
 <p><code class="code">{targetLangRFC}</code></p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Examples: <code class="code">es</code>, <code class="code">en-US</code>, <code class="code">az-Latn-AZ</code></p></li>
 <li class="listitem"><p>Based on <a class="link" href="https://datatracker.ietf.org/doc/html/rfc5646" target="_blank" rel="noopener">RFC 5646</a></p></li>
 </ul></div>
 </li>
 <li class="listitem">
 <p><code class="code">{targetLangAndroid}</code></p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Examples: <code class="code">es</code>, <code class="code">en-rUS</code></p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Examples: <code class="code">es</code>, <code class="code">en-rUS</code></p></li></ul></div>
 </li>
 <li class="listitem">
 <p><code class="code">{targetLangAndroidBCP}</code></p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Examples: <code class="code">b+es</code>, <code class="code">b+en+US</code></p></li></ul></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Examples: <code class="code">b+es</code>, <code class="code">b+en+US</code></p></li></ul></div>
 </li>
 </ul></div>
+</li>
+<li class="listitem">
+<p>Subfolders can be created within the source folder.</p>
+<p>Available for <a class="link" href="https://help.memsource.com/hc/en-us/articles/4402383925906" target="_blank" rel="noopener">Amazon S3</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208219-Microsoft-Azure-Connector" target="_blank" rel="noopener">Azure</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208079-FTP-Connector" target="_blank" rel="noopener">FTP</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208259-SFTP-Connector" target="_blank" rel="noopener">SFTP</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208039-Dropbox-Connector" target="_blank" rel="noopener">Dropbox</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208139-Google-Drive-Connector" target="_blank" rel="noopener">Google Drive</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106840-Box-Connector" target="_blank" rel="noopener">Box</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208239-Microsoft-OneDrive-Connector" target="_blank" rel="noopener">OneDrive</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208099-Git-Connector" target="_blank" rel="noopener">Git</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012208119-GitHub-Connector" target="_blank" rel="noopener">GitHub</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106900-GitLab-Connector" target="_blank" rel="noopener">GitLab</a>, and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012207979-Bitbucket-Cloud-Connector" target="_blank" rel="noopener">Bitbucket Cloud</a>.</p>
+</li>
+<li class="listitem">
+<p>For some repositories, an absolute path is available. Begin your path with / to indicate the absolute path.</p>
+<p>Available for Amazon S3, Azure, FTP, SFTP, Dropbox, Google Drive, Box, OneDrive, Git, GitHub, GitLab, and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012106980-Microsoft-SharePoint-Online-Connector" target="_blank" rel="noopener">SharePoint</a>. When using Git connector, the leading / is followed by the branch name, and then by the root of the repository where .git folder is located. If the branch doesn’t exist, it will be created by Memsource. When using other Git-based connectors (e.g. GitLab), the leading slash is followed by the root of the repository where .git folder is located.</p>
+</li>
+<li class="listitem"><p>Use <code class="code">..</code> to refer to the parent folder.</p></li>
+</ul></div>
+<div dir="ltr" class="tip">
+<h3 class="title">Tip</h3>
+<p><span class="bold bold"><strong>Examples</strong></span></p>
+<p>If the source file is <code class="code">/files/loc/ui.properties</code> and the target langauge is German (Germany):</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p><code class="code">translations/{targetLang}</code> will create <span class="emphasis"><em>/files/loc/translations/de_de</em></span></p></li>
+<li class="listitem"><p><code class="code">/files-{targetLang}/loc</code> will create <span class="emphasis"><em>/files-de_de/loc/&lt;filename&gt;</em></span></p></li>
+<li class="listitem"><p><code class="code">../{targetLang}</code> will create <span class="emphasis"><em>/files/de_de/&lt;filename&gt;</em></span></p></li>
+</ul></div>
+</div>
+</li></ul></div>
 </li>
 <li class="step">
 <p>Click <span class="guilabel">Save</span>.</p>
