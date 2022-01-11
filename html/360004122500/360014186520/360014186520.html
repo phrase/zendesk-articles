@@ -1,14 +1,14 @@
 <div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
-<p>File renaming automates the renaming of downloaded (translated) files.</p>
-<p>To bulk rename downloaded files, follow these steps:</p>
+<p>Automate the renaming and target of downloaded (translated) files.</p>
+<p>Follow these steps:</p>
 <div class="procedure">
 <a id="UUID-3da21e9f-2799-902c-ee48-0b717924289d_procedure-idm231808187532344"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4403049664914/160db37d822c7a.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">File Renaming</span>.</p>
-<p>The <span class="guimenu">File Renaming</span> page opens.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4414977156242/161dd3577aeab8.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Project Settings</span> section and click on <span class="guilabel">Completed file name and export path</span>.</p>
+<p>The <span class="guimenu">Completed file name and export path</span> page opens.</p>
 </li>
 <li class="step">
-<p>Apply required macro. Macro names are case-sensitive.</p>
+<p>Apply <span class="guimenu">Rename completed files to</span> macro if required. Macro names are case-sensitive.</p>
 <p>Supported macros:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
@@ -30,7 +30,8 @@
 <p>Adds source language</p>
 </li>
 <li class="listitem">
-<p>Use these macros to represent target language:</p>
+<p>Use these macros to represent target language</p>
+<p>Target language macros for multilingual files are a concatenation of all target language codes (e.g. <code class="code">./cs-de-zh_cn</code>):</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
 <li class="listitem"><p><code class="code">{targetLang}</code> Based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811" target="_blank" rel="noopener">Memsource language codes</a>.</p></li>
 <li class="listitem"><p><code class="code">{targetLangName}</code> Based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811" target="_blank" rel="noopener">Memsource language names</a>.</p></li>
@@ -77,6 +78,29 @@
 </li>
 <li class="listitem"><p>Changing extensions does not change the format itself; renaming 'docx' to 'xlsx' does not change a text file into a spreadsheet file.</p></li>
 </ul></div>
+</li>
+</ul></div>
+</li>
+<li class="step">
+<p>Provide macro for <span class="guimenu">Export online repository files to</span>.</p>
+<p>Supported macros:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><code class="code">{targetLang}</code> Based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811" target="_blank" rel="noopener">Memsource language codes</a>.</p></li>
+<li class="listitem"><p><code class="code">{targetLangName}</code> Based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811" target="_blank" rel="noopener">Memsource language names</a>.</p></li>
+<li class="listitem">
+<p><code class="code">{targetLangRFC}</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Examples: <code class="code">es</code>, <code class="code">en-US</code>, <code class="code">az-Latn-AZ</code></p></li>
+<li class="listitem"><p>Based on <a class="link" href="https://datatracker.ietf.org/doc/html/rfc5646" target="_blank" rel="noopener">RFC 5646</a></p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p><code class="code">{targetLangAndroid}</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Examples: <code class="code">es</code>, <code class="code">en-rUS</code></p></li></ul></div>
+</li>
+<li class="listitem">
+<p><code class="code">{targetLangAndroidBCP}</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Examples: <code class="code">b+es</code>, <code class="code">b+en+US</code></p></li></ul></div>
 </li>
 </ul></div>
 </li>

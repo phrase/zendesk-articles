@@ -1,7 +1,7 @@
 <div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
 <p>Webhooks are arbitrary URLs which handle HTTP POST requests allowing Memsource to notify 3rd-party systems about specified events.</p>
 <p>Memsource monitors if a webhook callback was successfully received. If a webhook reception fails 3000 times, it is deactivated with a notification sent to Administrators of the account and the failure is noted on the specific webhook on the <span class="guimenu"><a class="link" href="#UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_UUID-74de1b04-e60d-bca7-f39a-57660b3fdf6b" title="Configure Webhooks">Webhooks</a></span> page. The retry mechanism has a maximum of 10 retries with the interval between retries being computed up to a maximum value of 30 minutes.</p>
-<p>Webhooks can be disabled/enabled, tested, or deleted from the webhooks page by hovering over individual webhooks and clicking <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4414401046162/161d40b0fa381f.png" style="" alt="ellipses.png"></span> to access the menu. The <span class="guimenu">History</span> function provides an overview of calls over the previous 14 days and failed webhooks can be replayed.</p>
+<p>Webhooks can be disabled/enabled, tested, or deleted from the webhooks page by hovering over individual webhooks and clicking <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4414963216274/161dd2f15a676c.png" style="" alt="ellipses.png"></span> to access the menu. The <span class="guimenu">History</span> function provides an overview of calls over the previous 14 days and failed webhooks can be replayed.</p>
 <div dir="ltr" class="important">
 <h3 class="title">
 <a id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_important-idm33238019126008"></a>Important</h3>
@@ -26,6 +26,8 @@
 <li class="listitem"><p>Project metadata updated</p></li>
 <li class="listitem"><p>Pre-translation finished</p></li>
 <li class="listitem"><p>Analysis created</p></li>
+<li class="listitem"><p>Job deleted</p></li>
+<li class="listitem"><p>Project deleted</p></li>
 </ul></div>
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
@@ -34,7 +36,7 @@
 <div class="procedure">
 <a id="UUID-40a29dba-f348-9d68-ab04-cbe16e62cdd7_procedure-idm231837286887023"></a><ol class="procedure" type="1">
 <li class="step">
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4414413581458/161d40b0fa0ff7.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Webhooks</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4414963216786/161dd2f15a4003.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Integrations</span> section and click on <span class="guilabel">Webhooks</span>.</p>
 <p>The <span class="guimenu">Webhooks</span> page opens.</p>
 </li>
 <li class="step">
