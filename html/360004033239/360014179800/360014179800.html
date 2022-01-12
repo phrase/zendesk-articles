@@ -10,12 +10,64 @@
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95" id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_UUID-1d6f549f-d012-5270-29f2-91761b2c70af"></a>Continuous Localization</h2></div>
 <p>Continuous localization helps in projects and jobs that have incremental changes and require a continuous delivery of updated translated texts. It is the integration of the localization workflow into the development process instead of the tradition of it happening after the development process. As an example, in the software development environment, updated text strings are automatically handed off to the TMS and processed in time with the release cycle.</p>
-<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/4414969129618/161dd2e0ecb7da.png" style="" alt="Continuous_Localization.png"></div>
-<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
-<div class="titlepage"><h3 class="title">
-<a data-zd-article="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95" id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_UUID-4ec24b52-e7a8-cd45-4284-43370c9d0bb7"></a>Continuous Jobs vs Continuous Projects</h3></div>
-<div class="glossary-definitions" style="display:none!important;"></div>
+<div class="mediaobject img-thumbnail"><img src="https://help.memsource.com/hc/article_attachments/4415056095250/161de7a5d1a87c.png" style="" alt="Continuous_Localization.png"></div>
+<div xml:lang="en" lang="en" dir="ltr" class="section accordion sub-topic"><div class="panel panel-default">
+<div class="panel-heading"><div class="titlepage"><h3 class="title">
+<a data-zd-article="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95" id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_UUID-4ec24b52-e7a8-cd45-4284-43370c9d0bb7"></a>Continuous Jobs vs Continuous Projects</h3></div></div>
+<div class="panel-body collapse" id="UUID-670aedb6-e1de-dd55-bcdf-d2d002120a95_UUID-4ec24b52-e7a8-cd45-4284-43370c9d0bb7_body">
+<p>Continuous jobs and continuous projects do not have the same abilities.</p>
+<div class="informaltable table-responsive"><table width="100%">
+<thead><tr>
+<th><p>Feature</p></th>
+<th><p>Continuous Jobs</p></th>
+<th><p>Continuous Projects</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>Monitors</p></td>
+<td><p>Single Files</p></td>
+<td><p>A folder of files</p></td>
+</tr>
+<tr>
+<td><p>Single project</p></td>
+<td><p>Files from different repositories and locations</p></td>
+<td><p>One folder in one repository (excepting Git and Sitecore when multiple folders can be monitored)</p></td>
+</tr>
+<tr>
+<td><p>File types</p></td>
+<td><p>Limited</p></td>
+<td><p>All</p></td>
+</tr>
+<tr>
+<td><p>Workflows</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Unchanged segments carried forward to updated file</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Pre-translation</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+</tr>
+<tr>
+<td><p>Due date calculations</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr>
+<td><p>Analyses/Quotes</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+</tr>
+</tbody>
+</table></div>
 </div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <p>Using the Continuous Jobs feature, updated versions of an original file from a repository are uploaded to an existing project, overwriting the older version of the same file.</p>
@@ -82,10 +134,10 @@
 <li class="listitem"><p>Only available for specified file formats.</p></li>
 <li class="listitem"><p>The file must be uploaded from an online repository using a <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012207959-Supported-Connectors-and-Plugins" target="_blank" rel="noopener">connector</a>.</p></li>
 </ul></div>
-<p>Continuous jobs are presented in the project page with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4414976471698/161dd2e0ed0183.png" style="" alt="con_job.png"></span>. The tooltip indicates when the job was last updated.</p>
+<p>Continuous jobs are presented in the project page with <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4415064491666/161de7a5d1f0e7.png" style="" alt="con_job.png"></span>. The tooltip indicates when the job was last updated.</p>
 <div dir="ltr" class="note">
 <h3 class="title">Note</h3>
-<p>If there are problems with a continuous job, hovering over the ellipses <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4414969130002/161dd2e0ed445e.png" style="" alt="ellipses.png"></span> displays job information. Click <span class="guilabel">See history</span> to display a detailed history of the job to help troubleshoot where and when the problem may have occurred.</p>
+<p>If there are problems with a continuous job, hovering over the ellipses <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4415056095634/161de7a5d2371f.png" style="" alt="ellipses.png"></span> displays job information. Click <span class="guilabel">See history</span> to display a detailed history of the job to help troubleshoot where and when the problem may have occurred.</p>
 </div>
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
@@ -135,7 +187,7 @@
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <p><span class="bold bold"><strong>Globally</strong></span></p>
-<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4414963146258/161dd2e0ed830c.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section and click on <span class="guilabel">Continuous Job Settings</span>.</p>
+<p>From the Setup <span class="inlinemediaobject"><img src="https://help.memsource.com/hc/article_attachments/4415070184210/161de7a5d28244.png" style="" alt="Setup_gear.png"></span> page, scroll down to the <span class="guimenu">Automation</span> section and click on <span class="guilabel">Continuous Job Settings</span>.</p>
 <p>The <span class="guimenu">Continuous Job Settings</span> page opens.</p>
 </li>
 <li class="listitem">
