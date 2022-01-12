@@ -48,20 +48,64 @@
 </div>
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-06ed129b-85be-2781-c82c-0019b9d2405e" id="UUID-06ed129b-85be-2781-c82c-0019b9d2405e_UUID-938dc44c-c4e7-19ed-8e68-c3c2ed662fb1"></a>Default analysis</h2></div>
+<a data-zd-article="UUID-06ed129b-85be-2781-c82c-0019b9d2405e" id="UUID-06ed129b-85be-2781-c82c-0019b9d2405e_UUID-938dc44c-c4e7-19ed-8e68-c3c2ed662fb1"></a>Default Analysis</h2></div>
 <p>The results of a default analysis of files that contain more than 100,000 segments are only approximate.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
-<a data-zd-article="UUID-06ed129b-85be-2781-c82c-0019b9d2405e" id="UUID-06ed129b-85be-2781-c82c-0019b9d2405e_UUID-3eccc068-7b91-17b7-e0f3-f77ef4e0cc63"></a>In-context preview</h2></div>
+<a data-zd-article="UUID-06ed129b-85be-2781-c82c-0019b9d2405e" id="UUID-06ed129b-85be-2781-c82c-0019b9d2405e_UUID-3eccc068-7b91-17b7-e0f3-f77ef4e0cc63"></a>In-context Preview</h2></div>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>The in-context preview in Memsource Editor for MS Excel or Multilingual MS Excel has a limit of 200 columns or 5000 rows in the original file. This limit excludes hidden columns or rows.</p></li>
-<li class="listitem"><p> <a class="link" href="https://en.wikipedia.org/wiki/Office_Open_XML" target="_blank" rel="noopener">Office Open XML</a> Word documents (default format of MS Office documents since 2007) with any XML zipped inside larger than 20 MB, will not generate in-context preview. This restriction also applies to older formats as Memsource converts them to Office Open XML upon import.</p></li>
+<li class="listitem"><p><a class="link" href="https://en.wikipedia.org/wiki/Office_Open_XML" target="_blank" rel="noopener">Office Open XML</a> Word documents (default format of MS Office documents since 2007) with any XML zipped inside larger than 20 MB, will not generate in-context preview. This restriction also applies to older formats as Memsource converts them to Office Open XML upon import.</p></li>
 <li class="listitem"><p>In-context preview cannot be generated for .pptx or .docx files of over 100 MB.</p></li>
 <li class="listitem"><p>In-context preview for .pptx files is limited to files with a maximum of 50 slides.</p></li>
 <li class="listitem"><p>CMS in-context preview has a limit of 5,000 segments.</p></li>
 </ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-06ed129b-85be-2781-c82c-0019b9d2405e" id="UUID-06ed129b-85be-2781-c82c-0019b9d2405e_UUID-395f158f-a09e-de29-226f-9f1c3604d8dd"></a>Async Requests</h2></div>
+<p>The most resource demanding actions in Memsource are called <span class="emphasis"><em>Async Requests</em></span> as they are executed asynchronously. This includes <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675740-Jobs-Overview#create-a-job-0-4" target="_blank" rel="noopener">creation of new jobs</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675780" target="_blank" rel="noopener">pre-translations</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675760" target="_blank" rel="noopener">analyses</a>, TM <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013696840#export-a-translation-memory-0-4" target="_blank" rel="noopener">exports</a> and <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013696840#import-content-to-a-translation-memory-0-10" target="_blank" rel="noopener">imports</a>, <a class="link" href="https://help.memsource.com/hc/en-us/articles/360013675800" target="_blank" rel="noopener">QA</a>, etc.</p>
+<p>Limits for the maximum number of concurrently running (submitted and not yet completed) async requests in each edition:</p>
+<div class="informaltable table-responsive"><table width="100%">
+<thead><tr>
+<th><p>Edition</p></th>
+<th><p>Limit</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>Personal</p></td>
+<td><p>50</p></td>
+</tr>
+<tr>
+<td><p>Developer</p></td>
+<td><p>50</p></td>
+</tr>
+<tr>
+<td><p>Teamstart</p></td>
+<td><p>100</p></td>
+</tr>
+<tr>
+<td><p>Academic</p></td>
+<td><p>100</p></td>
+</tr>
+<tr>
+<td><p>Team</p></td>
+<td><p>200</p></td>
+</tr>
+<tr>
+<td><p>Ultimate</p></td>
+<td><p>500</p></td>
+</tr>
+<tr>
+<td><p>Enterprise</p></td>
+<td><p>2000</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>If limits are exceeded when submitting a new async request, the 429 HTTP response will be returned. The <code class="code">async/status</code> API <a class="link" href="https://cloud.memsource.com/web/docs/api#operation/getCurrentLimitStatus" target="_blank" rel="noopener">endpoint</a> is available to monitor the current number of running async requests and their limits.</p>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div class="glossary-definitions" style="display:none!important;"></div>
