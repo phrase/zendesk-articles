@@ -1,5 +1,5 @@
 <div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
-<p>External terminology (or glossary) files can be imported into a Memsource term base in Excel or TBX file formats. The size limit for a file that can be uploaded is 1GB.</p>
+<p>External terminology (or glossary) files can be imported in Excel (XLSX) or TBX file formats. The size limit for a file that can be uploaded is 1GB.</p>
 <p>To import content, follow these steps:</p>
 <div class="procedure">
 <a id="UUID-fa4abf98-d465-b858-6909-9568a8b3290c_procedure-idm231773607363801"></a><ol class="procedure" type="1">
@@ -11,7 +11,7 @@
 <p>Choose a file to import:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p> <a class="link" href="#UUID-fa4abf98-d465-b858-6909-9568a8b3290c_UUID-de0fbab2-4fd5-dcee-3b11-5d24b1f43be3" title="Prepare XLSX for Import to a Term Base">XLSX</a> </p>
+<p><a class="link" href="#UUID-fa4abf98-d465-b858-6909-9568a8b3290c_UUID-de0fbab2-4fd5-dcee-3b11-5d24b1f43be3" title="Prepare XLSX for Import to a Term Base">XLSX</a></p>
 <p>An XML based file format for spreadsheet applications.</p>
 <p>XLSX is the easiest way to import terms into a term base. A plain list of terms can be imported, but more complex terminology imports are also supported (import of synonyms, morphology, terms with various attributes, etc.).</p>
 </li>
@@ -24,8 +24,8 @@
 <li class="step">
 <p>Select options:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p> <span class="guimenu">Create new terms </span> </p></li>
-<li class="listitem"><p> <span class="guimenu">Update existing terms</span> </p></li>
+<li class="listitem"><p><span class="guimenu">Create new terms </span></p></li>
+<li class="listitem"><p><span class="guimenu">Update existing terms</span></p></li>
 <li class="listitem">
 <p><span class="guimenu">Strict locale matching</span></p>
 <p>Prevents the import of a language if it has a different locale than the project.</p>
@@ -46,81 +46,81 @@
 <p>Term metadata such as <span class="guilabel">forbidden</span>, <span class="guilabel">preferred</span>, <span class="guilabel">case</span> or <span class="guilabel">exact</span> are stored as boolean (TRUE/FALSE) values in Excel. Based on your Windows locale settings, you may find these values in your language in the XLSX export (e. g. WAHR/FALSCH for German). When editing a Term Base in Excel, please follow the pattern and type these values in your language – so that Excel can recognize them – to maintain file integrity. For other columns, use English values as stated below.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p> <span class="bold bold"><strong>CID</strong></span> </p>
-<p>Memsource Concept ID (needed for reimport of updated terms). The term concept includes the source and all its targets and synonyms.</p>
+<p><span class="bold bold"><strong>CID</strong></span></p>
+<p>Memsource Concept ID. The term concept includes the source and all its targets and synonyms.</p>
 </li>
-<li class="listitem"><p> <span class="bold bold"><strong>concept_domain</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>concept_subdomain</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>concept_url</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>concept_definition</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>concept_note</strong></span> </p></li>
+<li class="listitem"><p><span class="bold bold"><strong>concept_domain</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>concept_subdomain</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>concept_url</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>concept_definition</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>concept_note</strong></span></p></li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>TID</strong></span> </p>
-<p>Memsource Term ID (needed for reimport of updated terms). The ID of the specific term in the specific language.</p>
+<p><span class="bold bold"><strong>TID</strong></span></p>
+<p>Memsource Term ID. The ID of the specific term in the specific language.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>{Language code}</strong></span> </p>
+<p><span class="bold bold"><strong>{Language code}</strong></span></p>
 <p>A term's language code based on <a class="link" href="https://help.memsource.com/hc/en-us/articles/115003929811-Languages-Supported-in-Memsource#supported-language-table-0-1" target="_blank" rel="noopener">our supported languages</a>.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>status</strong></span> </p>
+<p><span class="bold bold"><strong>status</strong></span></p>
 <p>Either New or Approved.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>forbidden</strong></span> </p>
+<p><span class="bold bold"><strong>forbidden</strong></span></p>
 <p>True or False.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>preferred</strong></span> </p>
+<p><span class="bold bold"><strong>preferred</strong></span></p>
 <p>True or False.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>case</strong></span> </p>
+<p><span class="bold bold"><strong>case</strong></span></p>
 <p>Meaning <span class="emphasis"><em>case sensitive</em></span>. The case can be either True or False.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>exact</strong></span> </p>
+<p><span class="bold bold"><strong>exact</strong></span></p>
 <p>Meaning <span class="emphasis"><em>exact match</em></span>. This can be either True (for fuzzy match) or False.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>note</strong></span> </p>
+<p><span class="bold bold"><strong>note</strong></span></p>
 <p>Only the target note will be displayed in the Editor.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>usage</strong></span> </p>
+<p><span class="bold bold"><strong>usage</strong></span></p>
 <p>Only the target usage will be displayed in the Editor.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>POS</strong></span> </p>
+<p><span class="bold bold"><strong>POS</strong></span></p>
 <p>Part of Speech; values can be Adjective, Noun, Verb, or Adverb.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>gender</strong></span> </p>
+<p><span class="bold bold"><strong>gender</strong></span></p>
 <p>Values can be Masculine, Feminine or Neutral.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>number</strong></span> </p>
+<p><span class="bold bold"><strong>number</strong></span></p>
 <p>Values can be Singular, Plural or Uncountable.</p>
 </li>
-<li class="listitem"><p> <span class="bold bold"><strong>short_translation</strong></span> </p></li>
+<li class="listitem"><p><span class="bold bold"><strong>short_translation</strong></span></p></li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>term_type</strong></span> </p>
+<p><span class="bold bold"><strong>term_type</strong></span></p>
 <p>Values can be Full_form, Short_form, Acronym, Abbreviation, Phrase, or Variant.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>created_by</strong></span> </p>
+<p><span class="bold bold"><strong>created_by</strong></span></p>
 <p>Only Memsource usernames are supported</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>created_at</strong></span> </p>
+<p><span class="bold bold"><strong>created_at</strong></span></p>
 <p>Date and time of the term creation</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>modified_by</strong></span> </p>
+<p><span class="bold bold"><strong>modified_by</strong></span></p>
 <p>Only Memsource usernames are supported</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>modified_at</strong></span> </p>
+<p><span class="bold bold"><strong>modified_at</strong></span></p>
 <p>Date and time of the last modification of the term</p>
 </li>
 </ul></div>
@@ -128,75 +128,75 @@
 <a id="UUID-fa4abf98-d465-b858-6909-9568a8b3290c_bridgehead-idm23177537873504"></a>TBX Files</h3>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;descrip type="conceptId"&gt;</strong></span> </p>
+<p><span class="bold bold"><strong>&lt;descrip type="conceptId"&gt;</strong></span></p>
 <p>Memsource Concept ID (needed for reimporting updated terms). The Term concept includes the source and all its targets and synonyms.</p>
 </li>
-<li class="listitem"><p> <span class="bold bold"><strong>&lt;descrip type="conceptDefinition"&gt;</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>&lt;descrip type="conceptDomain"&gt;</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>&lt;descrip type="conceptNote"&gt;</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>&lt;descrip type="conceptSubdomain"&gt;</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>&lt;descrip type="conceptUrl"&gt;</strong></span> </p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;descrip type="conceptDefinition"&gt;</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;descrip type="conceptDomain"&gt;</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;descrip type="conceptNote"&gt;</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;descrip type="conceptSubdomain"&gt;</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;descrip type="conceptUrl"&gt;</strong></span></p></li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;langSet xml:lang="cs"&gt;</strong></span> </p>
+<p><span class="bold bold"><strong>&lt;langSet xml:lang="cs"&gt;</strong></span></p>
 <p>A term's language code based on supported languages.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;termNote type="termId"&gt;</strong></span> </p>
+<p><span class="bold bold"><strong>&lt;termNote type="termId"&gt;</strong></span></p>
 <p>Memsource Term ID (needed for reimporting updated terms). This is the ID of the specific term in the specific language.</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;note&gt;</strong></span> </p>
+<p><span class="bold bold"><strong>&lt;note&gt;</strong></span></p>
 <p>Term's note</p>
 </li>
-<li class="listitem"><p> <span class="bold bold"><strong>&lt;termNote type="partOfSpeech"&gt;</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>&lt;termNote type="grammaticalGender"&gt;</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>&lt;termNote type="grammaticalNumber"&gt;</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>&lt;termNote type="usageNote"&gt;</strong></span> </p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;termNote type="partOfSpeech"&gt;</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;termNote type="grammaticalGender"&gt;</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;termNote type="grammaticalNumber"&gt;</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;termNote type="usageNote"&gt;</strong></span></p></li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;termNote type="forbidden"&gt; </strong></span> </p>
+<p><span class="bold bold"><strong>&lt;termNote type="forbidden"&gt; </strong></span></p>
 <p>True or False</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;termNote type="preferred"&gt; </strong></span> </p>
+<p><span class="bold bold"><strong>&lt;termNote type="preferred"&gt; </strong></span></p>
 <p>True or False</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;termNote type="exactMatch"&gt; </strong></span> </p>
+<p><span class="bold bold"><strong>&lt;termNote type="exactMatch"&gt; </strong></span></p>
 <p>True or False</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;termNote type="status"&gt; </strong></span> </p>
+<p><span class="bold bold"><strong>&lt;termNote type="status"&gt; </strong></span></p>
 <p>New or Approved</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;termNote type="caseSensitive"&gt; </strong></span> </p>
+<p><span class="bold bold"><strong>&lt;termNote type="caseSensitive"&gt; </strong></span></p>
 <p>True or False</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;termNote type="createdBy"&gt; </strong></span> </p>
+<p><span class="bold bold"><strong>&lt;termNote type="createdBy"&gt; </strong></span></p>
 <p>Memsource Username</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;termNote type="createdAt"&gt; </strong></span> </p>
+<p><span class="bold bold"><strong>&lt;termNote type="createdAt"&gt; </strong></span></p>
 <p>Unix time</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;termNote type="lastModifiedBy"&gt; </strong></span> </p>
+<p><span class="bold bold"><strong>&lt;termNote type="lastModifiedBy"&gt; </strong></span></p>
 <p>Memsource Username</p>
 </li>
 <li class="listitem">
-<p> <span class="bold bold"><strong>&lt;termNote type="lastModifiedAt"&gt; </strong></span> </p>
+<p><span class="bold bold"><strong>&lt;termNote type="lastModifiedAt"&gt; </strong></span></p>
 <p>Unix time</p>
 </li>
-<li class="listitem"><p> <span class="bold bold"><strong>&lt;termNote type="shortTranslation"&gt;</strong></span> </p></li>
-<li class="listitem"><p> <span class="bold bold"><strong>&lt;termNote type="termType"&gt;</strong></span> </p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;termNote type="shortTranslation"&gt;</strong></span></p></li>
+<li class="listitem"><p><span class="bold bold"><strong>&lt;termNote type="termType"&gt;</strong></span></p></li>
 </ul></div>
 <div class="glossary-definitions" style="display:none!important;"></div>
 </div>
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-fa4abf98-d465-b858-6909-9568a8b3290c" id="UUID-fa4abf98-d465-b858-6909-9568a8b3290c_UUID-de0fbab2-4fd5-dcee-3b11-5d24b1f43be3"></a>Prepare XLSX for Import to a Term Base</h2></div>
-<p>XLSX files must be formatted in specific manner before being imported into a Term Base.</p>
+<p>XLSX files must be formatted in specific manner before being imported.</p>
 <p>To prepare the file, follow these steps:</p>
 <div class="procedure"><ol class="procedure" type="1">
 <li class="step"><p>In the XLSX file, organize all terms into columns with each column representing one language.</p></li>
@@ -294,7 +294,7 @@
 <div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
 <div class="titlepage"><h2 class="title">
 <a data-zd-article="UUID-fa4abf98-d465-b858-6909-9568a8b3290c" id="UUID-fa4abf98-d465-b858-6909-9568a8b3290c_UUID-0136b10f-0412-b871-67f0-45464a636fe5"></a>TBX Import Format</h2></div>
-<p>Memsource also supports the TBX format for terminology imports (and exports). The TBX standard is a "loose" standard. If a TBX file is imported from another CAT tool, some metadata may not get imported.</p>
+<p>Memsource also supports the TBX format for terminology imports (and exports). The TBX standard is considered a loose standard. If a TBX file is imported from another CAT tool, some metadata may not get imported.</p>
 <p>See <a class="link" href="https://help.memsource.com/hc/en-us/articles/360028575892-Term-Metadata-in-a-Term-Base" target="_blank" rel="noopener">Term Metadata in Term Base</a> for more details.</p>
 <p>If importing terminology between two Memsource term bases, use the TBX format. Inside the Memsource environment, data will be correctly imported.</p>
 <p>SDL Trados uses a special TBX.XML format and it has <a class="link" href="https://help.memsource.com/hc/en-us/articles/360019554271-importing-TBX-xml-from-SDL-Trados" target="_blank" rel="noopener">different specifications</a> for import.</p>
