@@ -1,100 +1,70 @@
-<div class="section top-level-topic zd-article section" dir="ltr" lang="en">
-<div class="section sub-topic" dir="ltr" lang="en">
-<div class="titlepage">
-<h2 class="title">
-<a id="UUID-e06dac7a-9b8f-8dc2-12b4-e2473e7455ec" data-zd-article="UUID-d783aae5-767e-eb4a-b67b-5dd1c12d69c6"></a>Introduction</h2>
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4" id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_UUID-e06dac7a-9b8f-8dc2-12b4-e2473e7455ec"></a>Introduction</h2></div>
+<p>How machine translation and artificial intelligence is used at Memsource and how it relates to data privacy and processing.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<p>This article explains how machine translation and artificial intelligence is used at Memsource and how it relates to data privacy and processing.</p>
-<div class="glossary-definitions" style="display: none!important;"> </div>
-</div>
-<div class="section sub-topic" dir="ltr" lang="en">
-<div class="titlepage">
-<h2 class="title">
-<a id="UUID-6e5b807c-edb7-0f0a-8f9b-bc1c67d60c73" data-zd-article="UUID-d783aae5-767e-eb4a-b67b-5dd1c12d69c6"></a>Data Privacy and Security</h2>
-</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4" id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_UUID-6e5b807c-edb7-0f0a-8f9b-bc1c67d60c73"></a>Data Privacy and Security</h2></div>
 <h3>
-<a id="bridgehead-idm231991025749872"></a>Data in Machine Learning Models</h3>
+<a id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_bridgehead-idm231991025749872"></a>Data in Machine Learning Models</h3>
 <p>Data uploaded by Memsource clients (including metadata) can potentially be used for training machine learning models. This data is not shared with other users, nor is it possible to extract it from the models as they do not produce any content.</p>
-<p>All content is treated as if containing personal information, so all data for ML is handled in accordance with the rules imposed by <a class="link linktextconsumer" href="https://help.memsource.com/hc/en-us/articles/360003638611" target="_self" rel="undefined">GDPR</a>. Client data (or anyone's data) is not resold for profit. This data can't be reconstructed or reverse engineered. None of the AI features generate any textual content, only the labeling of content with metadata (e.g. MT quality category, non-translatable, etc).</p>
+<p>All content is treated as if containing personal information, so all data for ML is handled in accordance with the rules imposed by <a class="link" href="https://help.memsource.com/hc/en-us/articles/360003638611" target="_blank" rel="noopener">GDPR</a>. Client data (or anyone's data) is not resold for profit. This data can't be reconstructed or reverse engineered. None of the AI features generate any textual content, only the labeling of content with metadata (e.g. MT quality category, non-translatable, etc).</p>
 <p>When training models, all relevant data is aggregated from Memsource and models are constructed from it. After no more than 90 days (as required by GDPR), all data is deleted and only the models remain. These models do not contain customer data, as they do not store sentences. The neural network model is a complex mathematical formula that calculates a quality score based on the source sentence and its translation. Training the model involves adjusting the parameters of the formula until it provides desired results.</p>
 <h3>
-<a id="bridgehead-idm23199102648954"></a>Data Anonymization</h3>
+<a id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_bridgehead-idm23199102648954"></a>Data Anonymization</h3>
 <p>Training data is processed by the machine learning algorithm to create (train) a model. This model is used in the feature to predict non-translatables, MT quality (MTQE) or to recommend an optimal MT engine.</p>
 <p>While the training data may contain personal data, the resulting model does not. Any personal data is anonymized during the training process.</p>
 <h4>
-<a id="bridgehead-idm231991027125036"></a>Machine Learning Models and New Content</h4>
+<a id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_bridgehead-idm231991027125036"></a>Machine Learning Models and New Content</h4>
 <p>When new content is processed with MT a numerical representation is created, fed to the formula and a score is calculated. If identical to training sentences, it indicates the formula is already optimized to generate the correct translation.</p>
 <p>The formula is designed to learn and identify patterns in data; to generalize. It will, for example, learn that when it sees <span class="emphasis"><em>cat</em></span> in the English source, the MT should contain <span class="emphasis"><em>gatto</em></span> in Italian to be considered good. MT that doesn't contain it is bad. These learned patterns are then applied to any newly submitted sentences and MT output.</p>
-<div class="glossary-definitions" style="display: none!important;"> </div>
+<div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div class="section sub-topic" dir="ltr" lang="en">
-<div class="titlepage">
-<h2 class="title">
-<a id="UUID-75ce6abc-ff87-04d6-0635-607d49134050" data-zd-article="UUID-d783aae5-767e-eb4a-b67b-5dd1c12d69c6"></a>Machine Learning</h2>
-</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4" id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_UUID-75ce6abc-ff87-04d6-0635-607d49134050"></a>Machine Learning</h2></div>
 <p>For general information on the engines supported by Memsource, their performance, and factors to consider when getting started with machine translation, see these resources:</p>
-<div class="itemizedlist">
-<ul class="itemizedlist" style="list-style-type: disc;">
-<li class="listitem">
-<p><a class="link" href="https://www.memsource.com/blog/2020/03/12/a-beginners-guide-to-machine-translation/" target="_blank" rel="noopener">A Beginner's Guide to Machine Translation</a></p>
-</li>
-<li class="listitem">
-<p><a class="link" href="https://try.memsource.com/mt-report/" target="_blank" rel="noopener">Memsource Machine Translation Report</a></p>
-</li>
-<li class="listitem">
-<p><a class="link" href="https://go.memsource.com/mt-ebook" target="_blank" rel="noopener">Memsource e-book: Unlock the Potential of Machine Translation</a></p>
-</li>
-</ul>
-</div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="https://www.memsource.com/blog/2020/03/12/a-beginners-guide-to-machine-translation/" target="_blank" rel="noopener">A Beginner's Guide to Machine Translation</a></p></li>
+<li class="listitem"><p><a class="link" href="https://try.memsource.com/mt-report/" target="_blank" rel="noopener">Memsource Machine Translation Report</a></p></li>
+<li class="listitem"><p><a class="link" href="https://go.memsource.com/mt-ebook" target="_blank" rel="noopener">Memsource e-book: Unlock the Potential of Machine Translation</a></p></li>
+</ul></div>
 <h3>
-<a id="bridgehead-idm231991031213221"></a>Data Security and Privacy with MT Providers</h3>
+<a id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_bridgehead-idm231991031213221"></a>Data Security and Privacy with MT Providers</h3>
 <p>When submitting source content to machine translation providers, Memsource encrypts the data in transit. When processed by the MT engine, the data is subject to the MT providers terms of service and privacy policies.</p>
-<div class="glossary-definitions" style="display: none!important;"> </div>
+<div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div class="section sub-topic" dir="ltr" lang="en">
-<div class="titlepage">
-<h2 class="title">
-<a id="UUID-1fd90a47-b5a3-a291-262f-3a0a355fd249" data-zd-article="UUID-d783aae5-767e-eb4a-b67b-5dd1c12d69c6"></a>MTQE</h2>
-</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4" id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_UUID-1fd90a47-b5a3-a291-262f-3a0a355fd249"></a>MTQE</h2></div>
 <h3>
-<a id="bridgehead-idm231991033324534"></a>MTQE Calculation</h3>
-<div class="itemizedlist">
-<ul class="itemizedlist" style="list-style-type: disc;">
-<li class="listitem">
-<p>Memsource collects training data from already-processed segments (source, MT output, postedit).</p>
-</li>
-<li class="listitem">
-<p>Based on the similarity between MT output and post-edit, a quality category is calculated (100, 99, 75, 0).</p>
-</li>
-<li class="listitem">
-<p>The similarity is calculated using a combination of an in-house metric, which is partially based on <span class="emphasis"><em>chrf3</em></span> (a popular MT evaluation metric).</p>
-</li>
-<li class="listitem">
-<p>The tuples are fed (source, MT output, score) into a deep neural network and taught to predict the quality category. One neural net per language pair is in use.</p>
-</li>
-<li class="listitem">
-<p>In production, the neural net gets a source sentence and the MT output as input, and it predicts the most probable quality category.</p>
-</li>
-</ul>
-</div>
+<a id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_bridgehead-idm231991033324534"></a>MTQE Calculation</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Memsource collects training data from already-processed segments (source, MT output, postedit).</p></li>
+<li class="listitem"><p>Based on the similarity between MT output and post-edit, a quality category is calculated (100, 99, 75, 0).</p></li>
+<li class="listitem"><p>The similarity is calculated using a combination of an in-house metric, which is partially based on <span class="emphasis"><em>chrf3</em></span> (a popular MT evaluation metric).</p></li>
+<li class="listitem"><p>The tuples are fed (source, MT output, score) into a deep neural network and taught to predict the quality category. One neural net per language pair is in use.</p></li>
+<li class="listitem"><p>In production, the neural net gets a source sentence and the MT output as input, and it predicts the most probable quality category.</p></li>
+</ul></div>
 <h3>
-<a id="bridgehead-idm231991036969542"></a>chrf3 vs BLUE or TER</h3>
+<a id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_bridgehead-idm231991036969542"></a>chrf3 vs BLUE or TER</h3>
 <p>Better results has been observed with <span class="emphasis"><em>chrf3</em></span>, and it is more reliable when scoring individual sentences. It also handles various language types, such as morphologically rich languages or CJK languages.</p>
 <h4>
-<a id="bridgehead-idm231991038737077"></a>No MTQE scores</h4>
+<a id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_bridgehead-idm231991038737077"></a>No MTQE scores</h4>
 <p>If a score is not provided, the segment is likely not worth post-editing but it may also mean that the model may not be confident enough to answer. Separating these two situations is in development.</p>
-<div class="glossary-definitions" style="display: none!important;"> </div>
+<div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div class="section sub-topic" dir="ltr" lang="en">
-<div class="titlepage">
-<h2 class="title">
-<a id="UUID-82c32b8f-446c-5ea7-db93-d48b7da0e4dc" data-zd-article="UUID-d783aae5-767e-eb4a-b67b-5dd1c12d69c6"></a>Memsource Translate</h2>
-</div>
+<div xml:lang="en" lang="en" dir="ltr" class="section sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4" id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_UUID-82c32b8f-446c-5ea7-db93-d48b7da0e4dc"></a>Memsource Translate</h2></div>
 <h4>
-<a id="bridgehead-idm23199104155697"></a>Defining and Identifying Domains</h4>
+<a id="UUID-80046271-c232-9b4a-2074-3b50ca74e1a4_bridgehead-idm23199104155697"></a>Defining and Identifying Domains</h4>
 <p>Memsource collects training data from existing segments. An algorithm is applied that identifies different domains making up the training data. Although obtained automatically, the detected domains correspond well to standardized domains (e.g. <span class="emphasis"><em>medical</em></span>, <span class="emphasis"><em>travel/hospitality</em></span>, <span class="emphasis"><em>software</em></span>, etc).</p>
 <p>For each language pair and domain, the performance of machine translation engines is monitored. When a new document is uploaded for translation, the model detects which of these domains are present. The most relevant domain is selected (e.g. If a document is 60% legal and 40% medical, it is categorized as <span class="emphasis"><em>legal</em></span>) and the current best engine for the legal domain and corresponding language pair is recommended.</p>
-<div class="glossary-definitions" style="display: none!important;"> </div>
+<div class="glossary-definitions" style="display:none!important;"></div>
 </div>
-<div class="glossary-definitions" style="display: none!important;"> </div>
+<div class="glossary-definitions" style="display:none!important;"></div>
 </div>
