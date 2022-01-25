@@ -1,0 +1,173 @@
+<div lang="en" dir="ltr" class="section top-level-topic zd-article section" xml:lang="en">
+<div xml:lang="en" lang="en" dir="ltr" class="section caution sub-topic">
+<div class="titlepage"><h2 class="title">
+<a data-zd-article="UUID-8f48b5c6-6ed0-d21d-0765-eeb4cb6772c7" id="UUID-8f48b5c6-6ed0-d21d-0765-eeb4cb6772c7_UUID-20eb2bee-fd34-3878-faa7-487c54d6f553"></a>Available for</h2></div>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Ultimate and Enterprise editions</p></li></ul></div>
+<p>Get in touch with <a class="link" href="https://www.memsource.com/demo/" target="_blank" rel="noopener">Sales</a> for licensing questions.</p>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
+<p>TMs added to a project can be prioritized for relevancy and importance. Based on priority, files are pre-translated and suggestions are proposed in the <a class="link" href="https://help.memsource.com/hc/en-us/articles/360012872059" target="_blank" rel="noopener">CAT pane</a> during translation.</p>
+<h3>
+<a id="UUID-8f48b5c6-6ed0-d21d-0765-eeb4cb6772c7_bridgehead-idm454453421706403278766680632"></a>Projects</h3>
+<p>TM sequence if manual prioritization is not set:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>First WRITE TM added to the project.</p></li>
+<li class="listitem"><p>Second WRITE TM (if defined) added.</p></li>
+<li class="listitem"><p>First READ TM added followed by further READ TMs (if defined).</p></li>
+</ul></div>
+<p>If manually prioritized and saved, sequencing follows the saved order.</p>
+<h4>
+<a id="UUID-8f48b5c6-6ed0-d21d-0765-eeb4cb6772c7_bridgehead-idm4609582188801632787670389475"></a>Use Cases</h4>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>If a different configuration is set for the same TM (<span class="emphasis"><em>Translation</em></span> step has TM with 1% penalty, while <span class="emphasis"><em>Review</em></span> step uses a 5% penalty) and</p>
+<p><span class="guimenu">All Workflow steps</span> is selected, both penalties cannot be displayed.</p>
+<p>Fallback default values:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>READ mode</p></li>
+<li class="listitem"><p><span class="guimenu">Apply to 101% matches only</span> not selected</p></li>
+<li class="listitem"><p>Define priority order off (WRITE is sorted first and then according to position).</p></li>
+<li class="listitem"><p>Penalty 0%</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>A project with two workflow steps, <span class="emphasis"><em>Translation</em></span> and <span class="emphasis"><em>Review</em></span>.</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<p>From the <span class="guimenu">Select Translation memories for:</span> window, select <span class="guilabel">Individual workflow steps</span> then <span class="guilabel">Continue</span>. Only set <span class="bold bold"><strong>TM_A</strong></span> in WRITE mode with a 1% penalty for the <span class="guimenu">Translation</span> workflow step.</p>
+<p>Save the settings.</p>
+</li>
+<li class="listitem">
+<p>Go back to the <span class="guimenu">Select Translation memories for:</span> window and select <span class="guilabel">All workflow steps</span>. A message appears stating any changes will overwrite current settings as <span class="guilabel">All workflow steps</span> is selected and settings for individual languages / workflow steps will be lost.</p>
+<p>It is recommended to configure TMs for <span class="emphasis"><em>all</em></span> languages and workflow steps before configuring TMs for <span class="emphasis"><em>individual</em></span> languages and <span class="emphasis"><em>individual</em></span> workflow steps.</p>
+</li>
+</ol></div>
+</li>
+<li class="listitem"><p>Three prioritized TMs: 1) <span class="bold bold"><strong>TM_A</strong></span>, 2) <span class="bold bold"><strong>TM_B</strong></span>, 3) <span class="bold bold"><strong>TM_C</strong></span>. Segment from a job has a match in all three TMs - <span class="bold bold"><strong>TM_A</strong></span> has 95%, <span class="bold bold"><strong>TM_B</strong></span> 99% and <span class="bold bold"><strong>TM_C</strong></span> 100% match. Even if <span class="bold bold"><strong>TM_C</strong></span> has the lowest priority, the 100% match from this TM will be used for pre-translation and will be offered at the first position in the CAT pane; the highest matches are always given higher priority.</p></li>
+</ul></div>
+<h3>
+<a id="UUID-8f48b5c6-6ed0-d21d-0765-eeb4cb6772c7_bridgehead-idm4556665086969632787734591684"></a>Project templates</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Configuration from projects is maintained but also configurable in the Project template page.</p></li>
+<li class="listitem"><p>TM configuration/priority is displayed for every workflow step under the Workflow column in Translation memories section. If there is no workflow step mentioned, TM is then applied to all workflow steps</p></li>
+</ul></div>
+<h3>
+<a id="UUID-8f48b5c6-6ed0-d21d-0765-eeb4cb6772c7_bridgehead-idm4609582087512032787824392437"></a>Shared jobs</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Vendor can prioritize only owned TMs (Buyer TMs is not visible in Vendor prioritization window)</p></li>
+<li class="listitem"><p>Buyer can prioritize only owned TMs (Vendor TMs are not visible in Buyer prioritization window)</p></li>
+<li class="listitem">
+<p>If no prioritization defined:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p>Displayed to Buyer:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>Buyer's WRITE (if more TMs with WRITE mode, the one added first has highest priority)</p></li>
+<li class="listitem"><p>Buyer's READ (if more TMs with READ mode, the one added first has highest priority)</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>Displayed to Vendor</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>Buyer's WRITE</p></li>
+<li class="listitem"><p>Vendor's WRITE</p></li>
+<li class="listitem"><p>Buyer's READ</p></li>
+<li class="listitem"><p>Vendor's READ</p></li>
+</ul></div>
+</li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>If only Buyer prioritizes:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p>Displayed to Buyer:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; "><li class="listitem"><p>Buyer's TMs according to priority</p></li></ul></div>
+</li>
+<li class="listitem">
+<p>Displayed to Vendor:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>Buyer's TMs according to priority</p></li>
+<li class="listitem"><p>Vendor's WRITE</p></li>
+<li class="listitem"><p>Vendor's READ</p></li>
+</ul></div>
+</li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>If only Vendor prioritizes:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p>Displayed to Buyer:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>Buyer's WRITE</p></li>
+<li class="listitem"><p>Buyer's READ</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>Displayed to Vendor:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>Vendor's TMs  according to priority</p></li>
+<li class="listitem"><p>Buyer's WRITE</p></li>
+<li class="listitem"><p>Buyer's READ</p></li>
+</ul></div>
+</li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>If both prioritize:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<p>What is displayed to Buyer</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; "><li class="listitem"><p>Buyer TMs  according to priority</p></li></ul></div>
+</li>
+<li class="listitem">
+<p>What is displayed to Vendor</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
+<li class="listitem"><p>Buyer TMs  according to priority</p></li>
+<li class="listitem"><p>Vendor TMs  according to priority</p></li>
+</ul></div>
+</li>
+</ul></div>
+</li>
+</ul></div>
+<h3>
+<a id="UUID-8f48b5c6-6ed0-d21d-0765-eeb4cb6772c7_bridgehead-idm4556634856244832787838460942"></a>Shared projects</h3>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Vendor can prioritize only owned TMs (Buyer TMs is not visible in Vendor prioritization window)</p></li>
+<li class="listitem"><p>Buyer can prioritize only owned TMs (Vendor TMs are not visible in Buyer prioritization window)</p></li>
+<li class="listitem">
+<p>If no prioritization defined:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Buyer's WRITE (if more TMs with WRITE mode, the one positioned higher has highest priority)</p></li>
+<li class="listitem"><p>Vendor's WRITE (if more TMs with WRITE mode, the one positioned higher has highest priority)</p></li>
+<li class="listitem"><p>Buyer's READ (if more TMs with READ mode, the one positioned higher has highest priority)</p></li>
+<li class="listitem"><p>Vendor's READ (if more TMs with READ mode, the one positioned higher has highest priority)</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>If only Buyer prioritizes:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Buyer TMs according to priority</p></li>
+<li class="listitem"><p>Vendor's WRITE</p></li>
+<li class="listitem"><p>Vendor's READ</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>If only Vendor prioritizes:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Vendor TMs according to priority</p></li>
+<li class="listitem"><p>Buyer's WRITE</p></li>
+<li class="listitem"><p>Buyer's READ</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>If both prioritize:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Buyer TMs  according to priority</p></li>
+<li class="listitem"><p>Vendor TMs  according to priority</p></li>
+</ul></div>
+</li>
+</ul></div>
+<div class="glossary-definitions" style="display:none!important;"></div>
+</div>
